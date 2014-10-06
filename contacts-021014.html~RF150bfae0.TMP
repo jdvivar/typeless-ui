@@ -233,7 +233,7 @@
 			</div>
 			
 			<div class="wrapper wrapper-content animated fadeIn" >
-				<div id="card-view">
+				<div id="card-view" style="display:none">
 					<div class="row cards">
 						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
 							<div class="contact-box m-r m-b" >
@@ -1778,7 +1778,7 @@
 					<a class="btn btn-white btn-rounded btn-block" href="#" id="more-contacts"><i class="fa fa-arrow-down m-r"></i>Show more</a>
 				</div>
 			
-				<div id="list-view" style="display:none">
+				<div id="list-view" style="">
 					<table class="table table-hover va-middle">
 						<thead>
 							<tr>
@@ -2026,7 +2026,7 @@
 			$('#toggle-cards').click(function(e) {
 				
 				if (!$(this).hasClass('active')) {
-					$('#list-view').fadeOut('fast',function(){
+					$('#list-view').fadeOut('slow',null,function(){
 						$('#card-view').fadeIn('slow');
 						});
 					}
@@ -2042,9 +2042,7 @@
 			$('#toggle-list').click(function(e) {
 				
 				if (!$(this).hasClass('active')) {
-					$('#card-view').fadeOut('fast',function(){
-						$('#list-view').fadeIn('slow');
-						});
+					
 					}
 				
                 $('#toggle-cards').removeClass('active');
