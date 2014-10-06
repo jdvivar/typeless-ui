@@ -577,7 +577,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 
 .navbar-fixed-top {
   background: #fff;
-  min-width:1024px;
+  min-width:1009px;
   transition-duration: 0.5s;
   border-bottom: 1px solid #e7eaec !important;
 }
