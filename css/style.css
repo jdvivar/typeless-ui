@@ -53,7 +53,7 @@ h5 {
 }
 
 .top-search{
-  width: 419px;
+  width: 400px;
   margin-left:15px;
 }
 
@@ -61,7 +61,7 @@ h5 {
 /* this is the most elegant solution I could come up with :) */
 @-moz-document url-prefix() {
     .top-search {
-		width: 419px;
+		width: 390px;
         float: left;
 		margin-left: 0px;
     }
@@ -189,11 +189,38 @@ div.cards {
 	font-size: 1.1em;
 }
 
+.profile-details span {
+	display:inline-block;
+}
+
 .whitesmoke-box {
 	background-color: whitesmoke;
 	display: inline-block;
 	border: 1px solid #dddddd;
 	border-radius: 5px;
+}
+
+/* radioactive buttons! */
+
+@-webkit-keyframes greenPulse {
+  from { -webkit-box-shadow: 0 0 9px #333; }
+  50% {  -webkit-box-shadow: 0 0 18px #91bd09; }
+  to { -webkit-box-shadow: 0 0 9px #333; }
+}
+
+.radioactive {
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 3;
+}
+
+.contenteditable-style {
+	padding: 0 4px;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 }
 
 .grow {
@@ -1990,7 +2017,7 @@ body.boxed-layout #wrapper {
 }
 a:hover,
 a:focus {
-  /* text-decoration: none; */
+  text-decoration: none;
   color:inherit;
 }
 

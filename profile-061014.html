@@ -118,7 +118,7 @@
 		</ul>
         
         <button class="btn btn-default m-t m-r pull-right btn-responsive" type="button"><i class="fa fa-plus f-w"></i><span class="m-l">New contact</span></button>
-        <button class="btn m-t m-r pull-right btn-responsive" type="button"><i class="fa fa-share-alt f-w"></i><span class="m-l">Share contacts</span></button>
+        <button class="btn m-t m-r pull-right btn-responsive" type="button"><i class="fa fa-share-alt f-w"></i><span class="m-l">Share this contact</span></button>
 
 	</nav>
 				
@@ -171,7 +171,12 @@
 			<div class="row wrapper white-bg page-heading">
             	<span id="tools" style="">
 				
-					<button class="btn btn-sm btn-outline btn-success m-t" type="button"><i class="fa fa-share-alt f-w m-r-sm"></i>Share contact</button>
+					<button class="btn btn-sm btn-outline btn-info m-t show-on-full hide-on-limited hide-on-editable" type="button" id="edit-btn">
+						<i class="fa fa-pencil m-r-sm"></i>Edit
+					</button>
+					<button class="btn btn-sm btn-outline btn-success m-t show-on-editable hide-on-full hide-on-limited" type="button" id="save-btn"><i class="fa fa-cloud-upload m-r-sm"></i>Save</button>
+					
+				
 					<button class="btn btn-sm btn-outline btn-danger m-t m-l pull-right" type="button"><i class="fa fa-trash f-w m-r-sm"></i>Delete contact</button>
 					
 					<div class="btn-group m-t pull-right">
@@ -182,14 +187,17 @@
 						<li><a href="#" id="editable-view">Editable</a></li>
 						<li><a href="#" id="full-view">Full access</a></li>
 						<li><a href="#" id="limited-view">Limited access</a></li>
+						<li><a href="#" id="initial-view">Initial "show everything"</a></li>
 					  </ul>
 					</div>
 				</span>
             </div>
 			
 			<div class="row no-margins" id="alerts-row">
-
-				
+				<!-- <div class="alert alert-info fade in alert-dismissable m-t m-b alert-sm show-on-editable hide-on-full hide-on-limited">
+					<button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+					<i class="fa fa-info-circle f-w m-r-sm"></i>You can edit with one click anything.
+				</div>	 -->			
 				
 			</div>
 			
@@ -199,19 +207,22 @@
 						<img class="img-circle img-responsive" src="img/funny-girl-hairs-square.jpg"></img>
 					</div>
 					<div class="col-lg-9 col-md-8 col-sm-6">
-						<span class="profile-name">Virginia Madsen</span><br>
-						<span class="profile-job text-muted">Fashion designer</span>						
-						<span class="profile-job text-muted m-l-xl"><i class="fa fa-map-marker m-r-sm"></i>Barcelona, Spain</span>
+						
+						<span >
+							<span class="contentEditable profile-name ">Virginia Madsen</span><br>
+							<span class="contentEditable profile-job text-muted ">Fashion designer</span>						
+							<span class="contentEditable profile-job text-muted m-l-xl "><i class="fa fa-map-marker m-r-sm"></i>Barcelona, Spain</span>
+						</span>
 					
-						<div class="row m-t-lg m-b hide-on-limited show-on-full hide-on-editable" >
+						<div class="row m-t-lg m-b hide-on-limited show-on-full show-on-editable" >
 							<div class="col-sm-1" >
 								<i class="fa fa-envelope fa-2x m-t-xs"></i>
 							</div>
 							<div class="col-sm-5 col-lg-4" >
 								<p class="profile-details">
-									<a href="mailto:virginia@panteon.org">virginia@panteon.org</a><br>
-									<a href="mailto:virginia.madsen@gmail.com">virginia.madsen@gmail.com</a><br>
-									<a href="mailto:fairy1980@hotmail.pt">fairy1980@hotmail.pt</a><br>
+									<a class="contentEditable" href="mailto:virginia@panteon.org">virginia@panteon.org</a><span class="contentEditable label m-l-sm">WORK</span><br>
+									<a class="contentEditable" href="mailto:virginia.madsen@gmail.com">virginia.madsen@gmail.com</a><br>
+									<a class="contentEditable" href="mailto:fairy1980@hotmail.pt">fairy1980@hotmail.pt</a><br>
 								</p>
 							</div>
 							<div class="col-sm-1" >
@@ -219,8 +230,8 @@
 							</div>
 							<div class="col-sm-5 col-lg-4" >
 								<p class="profile-details">
-									<a href="tel:+34657456259">+34 657 456 259</a> <br>
-									<a href="tel:+447477334762">+44 7477 334 762</a> <br>
+									<a class="contentEditable" href="tel:+34657456259">+34 657 456 259</a><span class="contentEditable label m-l-sm">LANDLINE</span><br>
+									<a class="contentEditable" href="tel:+447477334762">+44 7477 334 762</a><span class="contentEditable label m-l-sm">MOBILE</span><br>
 								</p>
 							</div>
 						</div>
@@ -230,7 +241,7 @@
 						</div>
 						
 						<div class="whitesmoke-box p-xs m-t m-b show-on-limited hide-on-editable hide-on-full">
-							<i class="fa fa-lock m-r-sm"></i> Virginia is not in your contacts list. Try requesting Virginia's contacts to someone  who has them from the list below.
+							<i class="fa fa-lock m-r-sm"></i> Virginia is not in your contacts list. Try requesting Virginia's contact details to someone who has them from the list below.
 						</div>
 						
 					</div>
@@ -256,9 +267,9 @@
     </div>
 	
 	<div id="notify-wrapper">
-		<span class="m-t-sm" style="display:none" id="timeout-alert">
+		<span class="m-t-sm" style="display:none" id="saving-alert">
 			<div class="alert alert-success">
-				Deleted 3 contacts. I'll close myself in 5s. <a class="alert-link" href="#">Undo</a>
+				Saving changes... <a class="alert-link" href="#"><i class="fa fa-undo m-r-xs"></i>Undo</a>
 			</div>
 		</span>
 	</div>
@@ -277,7 +288,7 @@
 			
 			// change views through editable, full & limited
 			
-			$('#editable-view').click(function(e) {
+			$('#editable-view,#edit-btn').click(function(e) {
 				$('.hide-on-editable').hide();
 				$('.show-on-editable').show();
             });
@@ -287,10 +298,34 @@
 				$('.show-on-limited').show();
             });
 			
-			$('#full-view').click(function(e) {
+			$('#full-view,#save-btn').click(function(e) {
                 $('.hide-on-full').hide();
 				$('.show-on-full').show();
             });
+			
+			$('#initial-view').click(function(e) {
+                $('.hide-on-editable').show();
+                $('.hide-on-limited').show();
+                $('.hide-on-full').show();
+            });
+			
+			$('#save-btn').click(function(e) {
+				showNotification();
+				$('.contentEditable').removeClass('contenteditable-style');
+				$('.contentEditable').attr('contenteditable','false');
+			});
+			
+			$('#edit-btn').click(function(e) {
+				$('.contentEditable').addClass('contenteditable-style');
+				$('.contentEditable').attr('contenteditable','true');
+			});
+			
+			function showNotification(){
+				$('#saving-alert').fadeIn('slow');
+				$('#saving-alert').css('display','inline-block');
+				
+				setTimeout(function(){$('#saving-alert').fadeOut('slow');}, 5000);
+			}
 						
         });
     </script>
