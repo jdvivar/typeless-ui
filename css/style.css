@@ -2384,7 +2384,7 @@ code {
   border-color: #e7eaec;
   border-image: none;
   border-style: solid solid none;
-  border-width: 4px 0px 0;
+  border-width: 4px 1px 1px;
   color: inherit;
   margin-bottom: 0;
   padding: 14px 15px 7px;
@@ -2397,8 +2397,8 @@ code {
   padding: 15px 20px 20px 20px;
   border-color: #e7eaec;
   border-image: none;
-  border-style: solid solid none;
-  border-width: 1px 0px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
 }
 table.table-mail tr td {
   padding: 12px;
