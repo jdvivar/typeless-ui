@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Virginia Madsen | Typeless.</title>
+    <title>Satish Jayakumar | Typeless.</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -214,17 +214,19 @@
 						<div class="m-t-xl  hide-on-editable show-on-full show-on-limited">
 																			
 							<h4>Notes
-								<small class="m-l-sm pull-right">
+								<small class="m-l-sm m-t-xs pull-right">
 									<i class="fa fa-lock"></i> Notes always remain private.
 								</small>
 							</h4>
 						
-							<div class="well m-t">
+							<div class="well m-t m-b-xs" id="well-notes">
 								Met him through Max, talks too much, sometimes says interesting things.
 							</div>
+							<a class="btn btn-xs btn-white" id="edit-notes"><i class="fa fa-pencil"></i> Edit</a>
+							<a class="btn btn-xs btn-primary btn-outline" id="save-notes" style="display:none"><i class="fa fa-cloud-upload"></i> Save</a>
 														
 						</div>
-						<div class="m-t-lg  hide-on-editable show-on-full show-on-limited">
+						<div class="m-t-lg  hide-on-editable show-on-full hide-on-limited">
 																			
 							<h4>Also known as... </h4>
 							<h4><small class="m-b-sm">
@@ -242,7 +244,9 @@
 					<div class="col-lg-9 col-md-8 col-sm-6">
 						
 						<span >
-							<span class="contentEditable profile-name ">Satish Jayakumar</span><br>
+							<span class="contentEditable profile-name ">Satish Jayakumar</span>
+							<span class="badge badge-primary" style="position:absolute"><i class="fa fa-check-circle" ></i> Verified</span>
+							<br>
 							<span class="contentEditable profile-job text-muted ">Fashion designer</span>						
 							<span class="contentEditable profile-job text-muted m-l-xl "><i class="fa fa-map-marker m-r-sm"></i>Barcelona, Spain</span>
 						</span>
@@ -284,7 +288,7 @@
 										<a class="contentEditable" href="tel:+447477334762">+44 7477 334 762</a>
 										<br>										
 									</div>
-									<button type="button" class="btn btn-xs btn-white show-more-items">Show 1 more</button>
+									<button type="button" class="btn btn-xs btn-white m-t-xs show-more-items">Show more</i></button>
 									<div class="profile-details more-items" style="display:none">
 										<span class="contentEditable label label-fixed m-r-sm">OTHER</span>
 										<a class="contentEditable" href="tel:+447477334762">+44 7477 334 762</a>
@@ -567,6 +571,24 @@
 					$('#more-details').fadeOut('fast');
 					});
             });
+			
+			// when click on edit notes button
+			
+			$('#edit-notes').click(function(e) {
+                $(this).fadeOut('fast', function(){
+					$('#save-notes').fadeIn('slow');
+					});
+				$('#well-notes').attr('contenteditable','true').focus();
+            });
+			
+			// when click on edit notes button
+			
+			$('#save-notes').click(function(e) {
+				$('#well-notes').attr('contenteditable','false');				
+				$(this).fadeOut('fast', function(){
+					$('#edit-notes').fadeIn('slow');
+					});
+			});
 			
         });
     </script>
