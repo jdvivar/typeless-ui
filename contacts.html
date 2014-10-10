@@ -1923,7 +1923,51 @@
 			
 			// Every time I select a card, the number goes up
 			var selected = 0;
-			$(".contact-box input:checkbox").
+			$(".contact-box input:checkbox").change(function(){
+				
+				if ($(this).is(":checked")) {
+					// coming from 0, change context
+					if (selected==0) {
+						$("#share-contacts-btn").addClass("radioactive");
+					}
+					selected++;
+					changeContextToSelected(selected);
+
+					console.log("checking, "+selected);
+				}
+				else {
+					// going to 0, change context
+					if (selected==1) {
+						$("#share-contacts-btn").removeClass("radioactive");
+						changeContextToAll();
+						selected--;
+					}
+					else {
+						selected--;
+						changeContextToSelected(selected);
+					}
+					console.log("unchecking, "+selected);
+				}
+				
+				// TO-DO
+				if (selected==0)
+					changeModalToAll()
+				else
+					changeModalToSelected();
+			});
+			
+			function changeContextToSelected(num){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share "+num+" contacts</span>");
+			};
+			function changeContextToAll(){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+			};
+			
+			function glowButton(id){
+				$(id).addClass("radioactive");
+			};
 		
 			// Space after contacts, so user see how more contacts are added
 			$('#space-after').height($('#space-after').width()/8);

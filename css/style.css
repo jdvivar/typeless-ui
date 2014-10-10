@@ -213,15 +213,15 @@ div.cards {
 /* radioactive buttons! */
 
 @-webkit-keyframes greenPulse {
-  from { -webkit-box-shadow: 0 0 9px #333; }
-  50% {  -webkit-box-shadow: 0 0 18px #91bd09; }
-  to { -webkit-box-shadow: 0 0 9px #333; }
+  from { -webkit-box-shadow: 0 0 5px white; }
+  50% {  -webkit-box-shadow: 0 0 10px gray; }
+  to { -webkit-box-shadow: 0 0 5px white; }
 }
 
 .radioactive {
   -webkit-animation-name: greenPulse;
   -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: 3;
+  -webkit-animation-iteration-count: 2;
 }
 
 .contenteditable-style {
