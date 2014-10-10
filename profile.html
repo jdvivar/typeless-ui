@@ -18,6 +18,10 @@
 
 <body>
 
+	<span id="modal-windows">
+		<!-- loaded dinamically -->
+	</span>
+
 	<div id="notify-wrapper">
 		<span class="m-t-sm" style="display:none" id="saving-alert">
 			<div class="alert alert-success">
@@ -25,8 +29,6 @@
 			</div>
 		</span>
 	</div>
-	
-	
 	
 	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
 		<!-- loaded dinamically -->
@@ -260,7 +262,7 @@
 										<img alt="image" class="img-circle" src="img/a4.jpg">
 									</a>
 									<div class="media-body ">									
-										<strong>Chris Overtunk</strong> has <span class="badge">1</span> phone and <span class="badge">1</span> number.
+										<strong>Chris Overtunk</strong> has <span class="badge badge-success">1</span> phone and <span class="badge badge-success">1</span> number.
 										<div class="actions">
 											<a class="btn btn-xs btn-success btn-outline request"><i class="fa fa-link m-r-xs"></i>Request details</a>
 											<span class="text-muted sending" style="display:none">Sending request...</span>
@@ -277,7 +279,7 @@
 										<img alt="image" class="img-circle" src="img/a2.jpg">
 									</a>
 									<div class="media-body ">									
-										<strong>Aldo Zanon</strong> has <span class="badge">2</span> additional phones.
+										<strong>Aldo Zanon</strong> has <span class="badge badge-success">2</span> additional phones.
 										<div class="actions">
 											<a class="btn btn-xs btn-success btn-outline request"><i class="fa fa-link m-r-xs"></i>Request details</a>
 											<span class="text-muted sending" style="display:none">Sending request...</span>
@@ -294,7 +296,7 @@
 										<img alt="image" class="img-circle" src="img/a6.jpg">
 									</a>
 									<div class="media-body ">									
-										<strong>Christine Ray</strong> has <span class="badge">1</span> additional phone and other details.
+										<strong>Christine Ray</strong> has <span class="badge badge-success">1</span> additional phone and other details.
 										<div class="actions">
 											<a class="btn btn-xs btn-success btn-outline request"><i class="fa fa-link m-r-xs"></i>Request details</a>
 											<span class="text-muted sending" style="display:none">Sending request...</span>
@@ -333,9 +335,10 @@
         $(document).ready(function() {	
 			
 			// loading of components and callbacks		
-			$( "#footer" ).load( "components.html #footer", afterLoadingFooter );
+			$( "#footer" ).load( "components.html #footer" );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );	
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );	
+			$( "#modal-windows" ).load( "components.html #share-contacts-modal-this" );	
 			
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
@@ -345,13 +348,15 @@
 				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */	
 				
 				// Share contacts button context-aware
-				$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share this contact</span>");
 				
+					// Content of the button
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share this contact</span>");
+					
+					// Target of the button
+					$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-this');
 				
 			};
-			
-			// callback after loading footer
-			function afterLoadingFooter(){};
+
 			
 			// callback after loading navbar-side
 			function afterLoadingNavbarSide(){

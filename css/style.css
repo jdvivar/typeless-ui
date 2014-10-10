@@ -170,6 +170,12 @@ div.cards {
 	margin-top: -5px;
 }
 
+.contact-box input[type="checkbox"] {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
 .label-fixed {
 	width: 70px;
 }

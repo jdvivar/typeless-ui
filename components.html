@@ -107,7 +107,7 @@
 	</ul>
 	
 	<button class="btn btn-default m-t m-r pull-right btn-responsive" type="button"><i class="fa fa-plus fa-fw"></i><span class="m-l">New contact</span></button>
-	<button class="btn m-t m-r pull-right btn-responsive" type="button" id="share-contacts-btn" data-toggle="modal" data-target="">  <!-- define data-target on page -->
+	<button class="btn m-t m-r pull-right btn-responsive" type="button" id="share-contacts-btn" data-toggle="modal" data-target="#share-contacts-btn" >  <!-- define data-target on page -->
 		<i class="fa fa-share-alt fa-fw"></i><span class="m-l"></span> <!-- define button wording on page -->
 	</button>
 </span>
@@ -136,7 +136,7 @@
 		<ul class="nav" id="side-menu">
 			
 			<li class="active">
-				<a href="#"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
+				<a href="contacts.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
 			</li>
 			
 			<li>
@@ -151,3 +151,284 @@
 
 	</div>
 </span>
+
+
+<div class="modal fade" id="share-contacts-modal-no-accounts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4 class="modal-title">Share contacts</h4>
+	  </div>
+	  <div class="modal-body text-center">
+		<i class="fa fa-exclamation-triangle fa-3x text-muted"></i>
+		<p>You don't have any contacts!<br>
+			Add an account or create new contacts so that you have contacts to share.
+		</p>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+		<button type="button" class="btn btn-default"><i class="fa fa-plus f-w m-r-sm"></i>Add an account</button>
+		<button type="button" class="btn btn-default"><i class="fa fa-plus f-w m-r-sm"></i>New contact</button>
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="share-contacts-modal-selected" tabindex="-1" role="dialog" aria-labelledby="modal-selected-label" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4 class="modal-title" id="modal-selected-label">Share contacts</h4>
+	  </div>
+	  <div class="modal-body">
+		<div class="panel-group" id="modal-selected-accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-selected-accordion" href="#modal-selected-accordion-1">Who would you like to share the contacts with?</a>
+					</h5>
+				</div>
+				<div id="modal-selected-accordion-1" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<form role="form">
+								<div class="form-group">
+									<input type="email" placeholder="Name or e-mail" class="form-control">
+								</div>
+								<div class="form-group">
+									<textarea style="resize:none" class="form-control" placeholder="Optional message" rows="3"></textarea>
+								</div>
+								
+							</form>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-selected-accordion" href="#modal-selected-accordion-2">Which contacts would you like to share?<span class="badge badge-success pull-right">8 contacts</span></a>
+					</h4>
+				</div>
+				<div id="modal-selected-accordion-2" class="panel-collapse collapse">
+					<div class="panel-body">
+						8 selected contacts
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-selected-accordion" href="#modal-selected-accordion-3">What details would you like to share?<span class="badge badge-success pull-right">Everything</span></a>
+					</h4>
+				</div>
+				<div id="modal-selected-accordion-3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios"  value="option1" checked>
+							Everything
+						  </label>
+						</div>
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios"  value="option2">
+							Only names and job titles (no contact details)
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+		<button type="button" class="btn btn-success"><i class="fa fa-share-alt f-w m-r-sm"></i>Share</button>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="modal fade" id="share-contacts-modal-this" tabindex="-1" role="dialog" aria-labelledby="modal-this-label" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4 class="modal-title" id="modal-this-label">Share contacts</h4>
+	  </div>
+	  <div class="modal-body">
+		<div class="panel-group" id="modal-this-accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-this-accordion" href="#modal-this-accordion-1">Who would you like to share the contacts with?</a>
+					</h5>
+				</div>
+				<div id="modal-this-accordion-1" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<form role="form">
+								<div class="form-group">
+									<input type="email" placeholder="Name or e-mail" class="form-control">
+								</div>
+								<div class="form-group">
+									<textarea style="resize:none" class="form-control" placeholder="Optional message" rows="3"></textarea>
+								</div>
+								
+							</form>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-this-accordion" href="#modal-this-accordion-2">Which contacts would you like to share?<span class="badge badge-success pull-right">Satish Jayakumar</span></a>
+					</h4>
+				</div>
+				<div id="modal-this-accordion-2" class="panel-collapse collapse">
+					<div class="panel-body">
+						Satish Jayakumar
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-this-accordion" href="#modal-this-accordion-3">What details would you like to share?<span class="badge badge-success pull-right">Everything</span></a>
+					</h4>
+				</div>
+				<div id="modal-this-accordion-3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios"  value="option1" checked>
+							Everything
+						  </label>
+						</div>
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios"  value="option2">
+							Only names and job titles (no contact details)
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+		<button type="button" class="btn btn-success"><i class="fa fa-share-alt f-w m-r-sm"></i>Share</button>
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="share-contacts-modal-regular" tabindex="-1" role="dialog" aria-labelledby="share-contacts-modal-regular-label" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4 class="modal-title" id="share-contacts-modal-regular-label">Share contacts</h4>
+	  </div>
+	  <div class="modal-body">
+		<div class="panel-group" id="modal-regular-accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-1">Who would you like to share the contacts with?</a>
+					</h5>
+				</div>
+				<div id="modal-regular-accordion-1" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<form role="form">
+								<div class="form-group">
+									<input type="email" placeholder="Name or e-mail" class="form-control">
+								</div>
+								<div class="form-group">
+									<textarea style="resize:none" class="form-control" placeholder="Optional message" rows="3"></textarea>
+								</div>
+								
+							</form>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-2">Which contacts would you like to share?<span class="badge badge-success pull-right">All contacts</span></a>
+					</h4>
+				</div>
+				<div id="modal-regular-accordion-2" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="" checked>
+							All contacts
+						  </label>
+						</div>
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-google f-w m-r-xs"></i>Google<span class="text-muted m-l-xs">(jdvivar@gmail.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-google f-w m-r-xs"></i>Google<span class="text-muted m-l-xs">(daniel@bondable.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-apple f-w m-r-xs"></i>Apple iCloud<span class="text-muted m-l-xs">(jdvivar@gmail.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-facebook f-w m-r-xs"></i>Facebook <span class="text-muted m-l-xs">(jdvivar@gmail.com)</span>
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-3">What details would you like to share?<span class="badge badge-success pull-right">Everything</span></a>
+					</h4>
+				</div>
+				<div id="modal-regular-accordion-3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios" value="option1" checked>
+							Everything
+						  </label>
+						</div>
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios" value="option2">
+							Only names and job titles (no contact details)
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+		<button type="button" class="btn btn-success"><i class="fa fa-share-alt f-w m-r-sm"></i>Share</button>
+	  </div>
+	</div>
+  </div>
+</div>
+
