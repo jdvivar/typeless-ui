@@ -5,15 +5,6 @@ $(document).ready(function () {
 	$("[data-toggle=tooltip]").tooltip({
 		container: "body"
 	});
-	
-	/* Placeholder for search bar. Put here for future customisation,
-	   always opt in for the javascript code if available and reasonably human readable */			
-	/*$('#top-search').attr('placeholder','Search for people, jobs, companies & more');*/  /* jQuery */			
-	document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */	
-
-    // MetsiMenu
-	// (We may need it in the future)
-    $('#side-menu').metisMenu();
 
     // Collapse ibox function
     $('.collapse-link').click( function() {
