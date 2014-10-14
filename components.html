@@ -97,7 +97,7 @@
 					<a href="#"><i class="fa fa-cog fa-fw m-r"></i>Settings</a>
 				</li>
 				<li>
-					<a href="#" ><i class="fa fa-download fa-fw m-r"></i>Get Bondable</a>
+					<a href="#" ><i class="fa fa-download fa-fw m-r"></i>Get Typeless</a>
 				</li>
 				<li>
 					<a href="#" ><i class="fa fa-sign-out fa-fw m-r"></i>Log out</a>
@@ -116,7 +116,7 @@
 	<div class="panel-left">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				Get Bondable
+				Get Typeless
 				<div class="ibox-tools">
 					<a class="close-panel">
 						<i class="fa fa-times"></i>
@@ -132,19 +132,35 @@
 		</div>
 	</div>
 		
-	<div class="sidebar-collapse no-icons">
+	<div class="sidebar-collapse">
 		<ul class="nav" id="side-menu">
 			
-			<li class="active">
-				<a href="contacts.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
+			<li id="contacts-link" class="active">
+				<a href="contacts.html"><span class="nav-label">Contacts<span class="badge pull-right">3.122</span></span></a>
 			</li>
 			
-			<li>
-				<a href="#"><i class="fa fa-share-alt"></i> <span class="nav-label">Sharing</span></a>
+			<li id="sharing-link">
+				<a href="#"><span class="nav-label">Sharing<span class="badge pull-right">265</span></span></a>
 			</li>
 			
-			<li>
-				<a href="#"><i class="fa fa-plug"></i> <span class="nav-label">Connected accounts</span></a>
+			<!-- <li id="connected-accounts-menu">
+				<a href="#"><span class="nav-label">Connected accounts</span><span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse" style="height: 0px;">
+					<li>
+						<a href="new-account.html" id="new-account-link">
+							<i class="fa fa-plus"></i>Connect new account
+						</a>
+					</li>
+					<li>
+						<a href="manage-accounts.html" id="manage-accounts-link">
+							<i class="fa fa-cog"></i>Manage accounts<span class="badge pull-right">6</span>
+						</a>
+					</li>
+				</ul>
+			</li> -->
+			
+			<li id="connected-accounts-link">
+				<a href="connected-accounts.html"><span class="nav-label">Connected accounts<span class="badge pull-right">6</span></span></a>
 			</li>
 			
 		</ul>
@@ -152,6 +168,60 @@
 	</div>
 </span>
 
+<div class="modal fade" id="connect-new-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4 class="modal-title">Connect new account</h4>
+	  </div>
+	  <div class="modal-body text-center">
+		What type of account you want to connect?
+		<div class="m-t">
+			<button class="btn btn-outline btn-default btn-w-m dim account-btn" type="button">
+				<i class="fa fa-google m-r-xs"></i>Google
+			</button>
+			<button class="btn btn-outline btn-default btn-w-m dim account-btn" type="button">
+				<i class="fa fa-apple m-r-xs"></i>Apple iCloud
+			</button>
+			<button class="btn btn-outline btn-default btn-w-m dim account-btn" type="button">
+				<i class="fa fa-linkedin-square m-r-xs"></i>LinkedIn
+			</button>
+			<br>
+			<button class="btn btn-outline btn-default btn-w-m dim account-btn" type="button">
+				<i class="fa fa-facebook-square m-r-xs"></i>Facebook
+			</button>
+			<button class="btn btn-outline btn-w-sm btn-w-m btn-default dim account-btn" type="button">
+				<i class="fa fa-twitter m-r-xs"></i>Twitter
+			</button>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+		<button type="button" class="btn btn-success"><i class="fa fa-external-link f-w m-r-sm"></i>Go to authorization page</button>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="modal fade" id="remove-account-confirmation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4 class="modal-title">Disconnect account</h4>
+		</div>
+		<div class="modal-body text-center">
+			<h4>Are you sure you want to disconnect from "<strong>My google account 1</strong>"?</h4>
+			<strong>890</strong> contacts will be removed. From them, <strong>215</strong> are shared contacts by you and will also be removed from the contact books of the people who request you to have them.
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-danger" data-dismiss="modal" id="disconnect-confirmation-btn">Yes, disconnect and remove account</button>
+		</div>
+	</div>
+  </div>
+</div>
 
 <div class="modal fade" id="share-contacts-modal-no-accounts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

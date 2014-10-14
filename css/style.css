@@ -1,4 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en");
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
 /*
  *
  *   INSPINIA - Responsive Admin Theme
@@ -254,7 +255,7 @@ div.cards {
 
 div.divider {
 	height: 1px;
-	margin: 9px 0;
+	/* margin: 9px 0; */
 	overflow: hidden;
 	background-color: #e5e5e5;
 }
@@ -314,6 +315,45 @@ div.divider {
 	color : black;
 }
 
+.account-btn {
+	
+}
+
+.account-name {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.account-box {
+	border : 1px solid #dddddd;
+	padding: 15px;
+	border-radius: 3px;
+	min-height:147px;
+}
+
+.account-box.new-account {
+	color: #888888;
+}
+
+
+.account-box.new-account:hover {
+	border : 1px solid #c2c2c2;
+	background: whitesmoke;	
+}
+
+.account-box.new-account:hover i {
+	color:gray;
+}
+
+.account-box.new-account i {
+	color: #dddddd;
+}
+
+.panel-heading ~ .collapse.in  {
+	background-color: red;
+}
+
+
 /* STUFF ENDS */
 
 .nav > li > a {
@@ -321,12 +361,16 @@ div.divider {
   color: #676a6c;
   font-weight: 400;
   font-size: 1.2em;
-  padding: 14px 20px 14px 25px;
+  padding: 14px 20px 14px 14px;
   background-color: white;
 }
 
 .nav-second-level li a {
 	background-color: whitesmoke;
+}
+
+.nav-second-level li a.active {
+	font-weight:600;
 }
 
 .nav.navbar-right > li > a {
@@ -578,7 +622,8 @@ div.divider {
 }
 .nav-second-level li a {
   padding: 7px 10px 7px 10px;
-  padding-left: 52px;
+  padding-left: 30px;
+  font-size: 1em;
 }
 .nav-third-level li a {
   padding-left: 62px;
@@ -1033,9 +1078,10 @@ fieldset[disabled] .btn-white.active {
 }
 button.dim {
   display: inline-block;
-  color: #fff;
+  /* color: #fff; */
+  color: gray;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
   padding-top: 6px;
   margin-right: 10px;

@@ -88,7 +88,7 @@
 																			
 							<h4>Notes
 								<small class="m-l-sm m-t-xs pull-right">
-									<i class="fa fa-lock"></i> Notes always remain private.
+									<i class="fa fa-lock"></i> Notes are never shared.
 								</small>
 							</h4>
 						
@@ -363,6 +363,14 @@
 				// MetsiMenu
 				// (We may need it in the future)
 				$('#side-menu').metisMenu();
+				
+				// inactive all options
+				$('#side-menu li').each(function(index, element) {
+                    $(this).removeClass('active');
+                });
+				
+				// active actual option
+				// --- none in this case
 			};
 			
 			// change views through editable, full & limited			

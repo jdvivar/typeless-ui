@@ -1919,14 +1919,22 @@
 				// MetsiMenu
 				// (We may need it in the future)
 				$('#side-menu').metisMenu();
+				
+				// inactive all options
+				$('#side-menu li').each(function(index, element) {
+                    $(this).removeClass('active');
+                });
+				
+				// active actual option
+				$('#contacts-link').addClass('active');
 			};
 			
-			// Every time I select a card, the number goes up
+			// Every time I select or deselect a card...
 			var selected = 0;
 			$(".contact-box input:checkbox").change(function(){
 				
 				if ($(this).is(":checked")) {
-					// coming from 0, change context
+					// coming from 0
 					if (selected==0) {
 						$("#share-contacts-btn").addClass("radioactive");
 					}
@@ -1936,7 +1944,7 @@
 					console.log("checking, "+selected);
 				}
 				else {
-					// going to 0, change context
+					// going to 0
 					if (selected==1) {
 						$("#share-contacts-btn").removeClass("radioactive");
 						changeContextToAll();
