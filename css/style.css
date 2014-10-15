@@ -349,11 +349,6 @@ div.divider {
 	color: #dddddd;
 }
 
-.panel-heading ~ .collapse.in  {
-	background-color: red;
-}
-
-
 /* STUFF ENDS */
 
 .nav > li > a {

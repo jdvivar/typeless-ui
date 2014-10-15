@@ -18,7 +18,11 @@
 
 <body>
 
-	<span id="modal-windows">
+	<span id="modal-windows-1">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
 		<!-- loaded dinamically -->
 	</span>
 
@@ -255,12 +259,12 @@
 						</div>
 					</div>
 					<div class="col-lg-4 col-sm-6  m-b" >
-						<a href="new-account.html">
-							<div class="account-box new-account text-center">
-								<i class="fa fa-plus fa-5x text-center"></i>
-								<div class="text-center m-t-sm">Connect new account</div>
-							</div>
-						</a>
+						
+						<div class="account-box new-account text-center">
+							<i class="fa fa-plus fa-5x text-center m-t"></i>
+							<div class="text-center m-t-sm">Connect new account</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -303,7 +307,11 @@
 			$( "#footer" ).load( "components.html #footer" );
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
-			$( "#modal-windows" ).load( "components.html #remove-account-confirmation-modal", afterLoadingModal);
+			
+			$( "#modal-windows-1" ).load( "components.html #remove-account-confirmation-modal", afterLoadingModal);
+			$( "#modal-windows-2" ).load( "components.html #connect-new-account-modal");
+			
+			
 						
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
@@ -355,9 +363,15 @@
 			// Space after contacts, so user see how more contacts are added
 			$('#space-after').height($('#space-after').width()/8);
 
-			// give functionality to connect new account button
+			// give functionality to connect new account button 
+			// this button is now deprecated
 			$('#new-account-btn').attr('data-toggle','modal');
 			$('#new-account-btn').attr('data-target','#connect-new-account-modal');
+			
+			// give functionality to new account empty box
+			$('.new-account').click(function(){
+				$('#connect-new-account-modal').modal();
+			});
 			
 			// functionality to refresh account button
 			$('.refresh-account').click(function(){

@@ -113,38 +113,40 @@
 							
 								<div class="contact-box m-r m-b" >
 									<div class="row no-margins">
-										<a href="profile.html">
-											<div class="col-sm-10 no-padding">
-												<p class="no-margins contact-name">Virgina Madsen</p>
-												<p class="text-muted contact-jobtitle" style="margin-top: -5px;">Graphics Designer</p>
-											</div>
-											
-											<div class="col-sm-2 no-padding">
-												<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-											</div>
-										</a>
+										
+										<div class="col-sm-10 no-padding">
+											<p class="no-margins contact-name">Virgina Madsen</p>
+											<p class="text-muted contact-jobtitle" style="margin-top: -5px;">Graphics Designer</p>
+										</div>
+										
+										<div class="col-sm-2 no-padding">
+											<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+										</div>
+										
 											
 									</div>
 									
-									<div class="m-b-sm">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="m-b-sm">vmadsen@port.com
+										
+										<span class="badge m-l-xs more">2+</span>
 										<div class="show-more" style="display:none;">
-											<span class="text-mute m-l">vmadsen@gmail.com</span>
+											<span class="text-mute">vmadsen@gmail.com</span>
 											<br>
-											<span class="text-mute m-l">virginia90823@outlook.com</span>
+											<span class="text-mute">virginia90823@outlook.com</span>
 										</div>	
 									</div>
 									
-									<div class="m-b-sm">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="m-b-sm">+44 7001 400 2355
+										<span class="badge m-l-xs more">1+</span>
 										<div class="show-more" style="display:none">
-											<span class="text-mute m-l">+33 9990 345</span>
+											<span class="text-mute">+33 9990 345</span>
 										</div>
 									</div>
 									
 									<input type="checkbox">
 									
-									<div class="clearfix"></div>
 								</div>
-							</a>
+							
 						</div>
 						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
 							<div class="contact-box m-r m-b" >
@@ -1929,6 +1931,8 @@
 				$('#contacts-link').addClass('active');
 			};
 			
+			
+			
 			// Every time I select or deselect a card...
 			var selected = 0;
 			$(".contact-box input:checkbox").change(function(){
@@ -1980,12 +1984,19 @@
 			// Space after contacts, so user see how more contacts are added
 			$('#space-after').height($('#space-after').width()/8);
 			
+			// Go to profile page if you click on box
+			$('.contact-box').click(function(){
+				console.log('click on .contact-box');
+				window.location = "profile.html";
+			});
+			
 			// Show more contact data when the badge is clicked
 			$('.more').click(function(e) {
-				console.log('click on .more');
+				//console.log('click on .more');
+				e.stopPropagation();
 				//var p = $(this).parent().next('p');
 				var p = $(this).next('.show-more');
-				console.log('p is: '+p);
+				//console.log('p is: '+p);
             	p.toggle('fast');
 				setTimeout(function(){p.hide('slow')}, 5000);
             });
@@ -2029,6 +2040,8 @@
 				$('#toggle-list').removeClass('btn-white');
 				
             });
+			
+			
 			
         });
     </script>
