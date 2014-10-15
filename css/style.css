@@ -349,6 +349,16 @@ div.divider {
 	color: #dddddd;
 }
 
+.sharing-title{
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.sharing-subtitle{
+	font-size: 30px;
+	font-weight: 100;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {

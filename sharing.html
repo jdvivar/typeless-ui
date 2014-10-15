@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Connected accounts | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows-1">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+
+	<div id="notify-wrapper">
+		<span class="m-t-sm" style="display:none" id="timeout-alert">
+			<div class="alert alert-success">
+				Deleted 1 account. <a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
+			</div>
+		</span>
+	</div>
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+		<!-- loaded dinamically -->
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" >
+        
+        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">	
+
+			<div class="row no-margins" id="alerts-row">
+
+			</div>
+			
+			<div class="row wrapper white-bg page-heading">
+            	<span id="tools" style="">
+					
+				</span>
+            </div>
+
+			<div class="wrapper wrapper-content animated fadeIn" >
+				
+				<div class="row">
+					<div class="row m-l">
+						<div class="col-md-6 no-padding">
+							<div class="sharing-title"><!-- <i class="fa fa-link fa-fw"></i> -->Sharing</div>
+							<p class="m-t" style="font-size:15px">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet. Sent and received invitations to share contact books can be managed in this page.</p>
+						</div>
+						<div class="col-md-3 col-md-offset-1 no-padding">
+							<i class="fa fa-level-down fa-rotate-180 fa-3x pull-left" style="color:#dddddd"></i>
+							Click on the share contacts button to send invitations for sharing your contact book.
+						</div>
+					</div>
+					<div class="m-l m-r m-t">
+						<table class="table">
+							<thead>
+								<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke">
+									<span class="sharing-subtitle">Received</span>
+									<td class=""></td>
+									<td class="">name</td>
+									<td class="">e-mail</td>
+									<td class="">details shared</td>
+									<td class=""></td>
+									<td class="text-right">status</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="va-middle">
+									<td><img alt="image" class="img-circle" src="img/profile.jpg" style="width:38px;height:38px"></td>
+									<td class="text-muted">[no name]<br><span class="small text-danger">(pending)</span></td>
+									<td class="">virginia.madsen@gmail.com</td>
+									<td class="">Only names and job titles</td>
+									<td class="">
+										<div class="btn-group">
+											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+												Actions <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#"><i class="fa fa-check fa-fw"></i> Accept</a></li>
+												<li><a href="#"><i class="fa fa-times fa-fw"></i> Decline</a></li>
+											</ul>
+										</div>
+									</td>
+									<td class="text-muted text-right">Received 2 min ago</td>
+								</tr>
+								<tr class="va-middle">
+									<td><img alt="image" class="img-circle" src="img/a3.jpg" style="width:38px;height:38px"></td>
+									<td class="text-muted">Alba Andersen</td>
+									<td class="">a.andersen80@gmail.com</td>
+									<td class="">Everything</td>
+									<td class="">
+																			
+										<div class="btn-group">
+											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+												Actions <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+											</ul>
+										</div>
+										
+									</td>
+									<td class="text-muted text-right">Accepted 6 days ago</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="m-l m-r m-t">
+						<table class="table m-b-xs">
+							<thead>
+								<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke">
+									<span class="sharing-subtitle">Sent</span>
+									<td class=""></td>
+									<td class="">name</td>
+									<td class="">e-mail</td>
+									<td class="">details shared</td>
+									<td class=""></td>
+									<td class="text-right">status</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="va-middle">
+									<td><img alt="image" class="img-circle" src="img/a1.jpg" style="width:38px;height:38px"></td>
+									<td class="text-muted">Javier Ramírez<br><span class="small text-danger">(pending)</span></td>
+									<td class="">j.ramirez@microsoft.com</td>
+									<td class="">Only names and job titles</td>
+									<td class="">
+									
+										<div class="btn-group">
+											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+												Actions <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+												<li><a href="#"><i class="fa fa-send fa-fw"></i> Re-send</a></li>
+												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+											</ul>
+										</div>
+									
+									</td>
+									<td class="text-muted text-right">Sent 2 h ago</td>
+								</tr>
+								<tr class="va-middle">
+									<td><img alt="image" class="img-circle" src="img/a4.jpg" style="width:38px;height:38px"></td>
+									<td class="text-muted">Raúl López</td>
+									<td class="">raul@avanza.es</td>
+									<td class="">Everything</td>
+									<td class="">
+									
+										<div class="btn-group">
+											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+												Actions <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+											</ul>
+										</div>
+										
+									</td>
+									<td class="text-muted text-right">Accepted 2 days ago</td>
+								</tr>
+								<tr class="va-middle excess" style="display:none">
+									<td><img alt="image" class="img-circle" src="img/a4.jpg" style="width:38px;height:38px"></td>
+									<td class="text-muted">Raúl López</td>
+									<td class="">raul@avanza.es</td>
+									<td class="">Everything</td>
+									<td class="">
+									
+										<div class="btn-group">
+											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+												Actions <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+											</ul>
+										</div>
+										
+									</td>
+									<td class="text-muted text-right">Accepted 2 days ago</td>
+								</tr>
+							</tbody>
+						</table>
+						<button class="btn btn-default btn-sm btn-outline more pull-right" type="button"><i class="fa fa-arrow-down fa-fw"></i> Show more</button>
+						<button class="btn btn-default btn-sm btn-outline less pull-right" type="button" style="display:none"><i class="fa fa-arrow-up fa-fw"></i> Show less</button>
+						
+					</div>
+					<div class="m-l m-r m-t">
+						<table class="table">
+							<thead>
+								<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke">
+									<span class="sharing-subtitle">Removed</span>
+									<td class=""></td>
+									<td class="">name</td>
+									<td class="">e-mail</td>
+									<td class="">details shared</td>
+									<td class=""></td>
+									<td class="text-right">status</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="va-middle">
+									<td><img alt="image" class="img-circle" src="img/a5.jpg" style="width:38px;height:38px"></td>
+									<td class="text-muted">Shawn Lee</td>
+									<td class="">hello@gmail.com</td>
+									<td class="">Only names and job titles</td>
+									<td class="">
+										<div class="btn-group">
+											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+												Actions <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#"><i class="fa fa-send fa-fw"></i> Re-send</a></li>
+												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+												<li><a href="#"><i class="fa fa-trash fa-fw"></i> Delete</a></li>
+											</ul>
+										</div>
+									</td>
+									<td class="text-muted text-right">Stopped sharing 1 week ago</td>
+								</tr>
+								<tr class="va-middle">
+									<td><img alt="image" class="img-circle" src="img/a6.jpg" style="width:38px;height:38px"></td>
+									<td class="text-muted">Rihanna Jayakumar</td>
+									<td class="">rihanna@whatshappening.com</td>
+									<td class="">Everything</td>
+									<td class="">
+										<div class="btn-group">
+											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+												Actions <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#"><i class="fa fa-send fa-fw"></i> Re-send</a></li>
+												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+												<li><a href="#"><i class="fa fa-trash fa-fw"></i> Delete</a></li>
+											</ul>
+										</div>
+										
+									</td>
+									<td class="text-muted text-right">Declined 6 days ago</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footer fixed_full custom-footer" id="footer">
+				
+				<!-- loaded dinamically -->
+
+			</div>
+
+		</div>	
+		
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+	
+	<!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+	
+	<!-- EayPIE -->
+    <script src="js/plugins/easypiechart/jquery.easypiechart.js"></script>
+
+
+
+    <script>
+        $(document).ready(function() {
+		
+			// loading of components and callbacks		
+			$( "#footer" ).load( "components.html #footer" );
+			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
+			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+			
+			$( "#modal-windows-1" ).load( "components.html #remove-account-confirmation-modal", afterLoadingModal);
+			$( "#modal-windows-2" ).load( "components.html #connect-new-account-modal");
+			
+			
+						
+			// callback after loading navbar-top
+			function afterLoadingNavbarTop(){
+				/* Placeholder for search bar. Put here for future customisation,
+				   always opt in for the javascript code if available and reasonably human readable */			
+				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
+				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */	
+			
+				// Share contacts button context-aware
+					
+					// Content of the button
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+				
+					// Target of the button
+					// I will take down this feature for this page, I'd rather show new account modal window
+					$( "#share-contacts-btn" ).attr('data-toggle','');
+					//$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-regular');
+				
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingNavbarSide(){
+				// MetsiMenu
+				// (We may need it in the future)
+				$('#side-menu').metisMenu();
+				
+				// inactive all options
+				$('#side-menu li').each(function(index, element) {
+                    $(this).removeClass('active');
+					//console.log($(this).text());
+                });
+				
+				// active actual option
+				//$('#connected-accounts-menu').addClass('active');
+				//$('#connected-accounts-menu ul').addClass('collapse in');
+				$('#sharing-link').addClass('active');
+			};
+			
+			function afterLoadingModal(){
+				// functionality to disconnect confirmation button in modal window
+				$('#disconnect-confirmation-btn').click(function(){
+					$('#timeout-alert').fadeIn('slow');
+					$('#timeout-alert').css('display','inline-block');
+					
+					setTimeout(function(){$('#timeout-alert').fadeOut('slow');}, 5000);
+				});
+			};
+		
+			// Space after contacts, so user see how more contacts are added
+			$('#space-after').height($('#space-after').width()/8);
+
+			// functionality for show more/less buttons under tables
+			$('.more').click(function(){
+				self = $(this);
+				self.fadeOut('fast',function(){
+					self.next('.less').fadeIn('slow');
+				});
+				$('tr.excess').show('slow');
+			});
+			
+			$('.less').click(function(){
+				self = $(this);
+				self.fadeOut('fast',function(){
+					self.prev('.more').fadeIn('slow');
+				});
+				$('tr.excess').hide('slow');
+			});
+
+        });
+    </script>
+	
+	
+</body>
+</html>
