@@ -246,7 +246,6 @@
 </div>
 
 
-
 <div class="modal fade" id="share-contacts-modal-selected" tabindex="-1" role="dialog" aria-labelledby="modal-selected-label" aria-hidden="true">
   <div class="modal-dialog">
 	<div class="modal-content">
@@ -395,10 +394,6 @@
   </div>
 </div>
 
-
-
-
-
 <div class="modal fade" id="share-contacts-modal-regular" tabindex="-1" role="dialog" aria-labelledby="share-contacts-modal-regular-label" aria-hidden="true">
   <div class="modal-dialog">
 	<div class="modal-content">
@@ -500,5 +495,98 @@
 	  </div>
 	</div>
   </div>
+</div>
+
+<div class="modal fade" id="edit-invitation-modal" tabindex="-1" role="dialog" aria-labelledby="edit-invitations-modal-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4 class="modal-title" id="edit-invitations-label">Edit invitation</h4>
+			</div>
+			<div class="modal-body">
+				<div class="panel panel-default m-t">
+					<div class="panel-heading">
+						<h3 class="panel-title">Which contacts would you like to share?</h3>
+					</div>
+					<div class="panel-body">
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="" checked>
+							<span class="m-r-xs">All contacts</span>
+						  </label>
+						</div>
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-google fa-fw m-r-xs"></i>Google<span class="text-muted m-l-xs">(don.draper@gmail.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-google fa-fw m-r-xs"></i>Google<span class="text-muted m-l-xs">(don@sterlingcooper.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox" style="">
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-apple fa-fw m-r-xs"></i>Apple iCloud<span class="text-muted m-l-xs">(don.draper@gmail.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox" style="" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-facebook fa-fw m-r-xs"></i>Facebook <span class="text-muted m-l-xs">(don.draper@gmail.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox" style="" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-facebook fa-fw m-r-xs"></i>Facebook <span class="text-muted m-l-xs">(don.draper@gmail.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox excess" style="display:none" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-facebook fa-fw m-r-xs"></i>Facebook <span class="text-muted m-l-xs">(don.draper@gmail.com)</span>
+						  </label>
+						</div>
+						<div class="checkbox excess" style="display:none" >
+						  <label>
+							<input type="checkbox" value="">
+							<i class="fa fa-facebook fa-fw m-r-xs"></i>Facebook <span class="text-muted m-l-xs">(don.draper@gmail.com)</span>
+						  </label>
+						</div>
+						<button class="btn btn-white btn-xs btn-outline more-accounts" type="button"><i class="fa fa-arrow-down fa-fw"></i> Show more</button>
+						<button class="btn btn-white btn-xs btn-outline less-accounts" type="button" style="display:none"><i class="fa fa-arrow-up fa-fw"></i> Show less</button>
+					</div>
+				</div>
+				<div class="panel panel-default no-margins">
+					<div class="panel-heading">
+						<h3 class="panel-title">What details would you like to share?</h3>
+					</div>
+					<div class="panel-body">
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios" value="option1" checked>
+							Everything
+						  </label>
+						</div>
+						<div class="radio">
+						  <label>
+							<input type="radio" name="optionsRadios" value="option2">
+							Only names and job titles (no contact details)
+						  </label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-primary"><i class="fa fa-cloud-upload f-w m-r-sm"></i>Save</button>
+			</div>
+		</div>
+	</div>
 </div>
 

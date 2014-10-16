@@ -29,7 +29,7 @@
 	<div id="notify-wrapper">
 		<span class="m-t-sm" style="display:none" id="timeout-alert">
 			<div class="alert alert-success">
-				Deleted 1 account. <a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
+				<span id="alert-text">Deleted 1 account. </span><a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
 			</div>
 		</span>
 	</div>
@@ -63,8 +63,10 @@
 				<div class="row">
 					<div class="row m-l">
 						<div class="col-md-6 no-padding">
-							<div class="sharing-title"><!-- <i class="fa fa-link fa-fw"></i> -->Sharing</div>
-							<p class="m-t" style="font-size:15px">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet. Sent and received invitations to share contact books can be managed in this page.</p>
+							<div class="sharing-title">Sharing</div>
+
+								<p class="m-t">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet. Sent and received invitations to share contact books can be managed in this page.</p>
+
 						</div>
 						<div class="col-md-3 col-md-offset-1 no-padding">
 							<i class="fa fa-level-down fa-rotate-180 fa-3x pull-left" style="color:#dddddd"></i>
@@ -76,12 +78,12 @@
 							<thead>
 								<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke">
 									<span class="sharing-subtitle">Received</span>
-									<td class=""></td>
-									<td class="">name</td>
-									<td class="">e-mail</td>
-									<td class="">details shared</td>
-									<td class=""></td>
-									<td class="text-right">status</td>
+									<td class="col-md-1"></td>
+									<td class="col-md-2">name</td>
+									<td class="col-md-3">e-mail</td>
+									<td class="col-md-2">details shared</td>
+									<td class="col-md-1"></td>
+									<td class="col-md-2 text-right">status</td>
 								</tr>
 							</thead>
 							<tbody>
@@ -89,19 +91,19 @@
 									<td><img alt="image" class="img-circle" src="img/profile.jpg" style="width:38px;height:38px"></td>
 									<td class="text-muted">[no name]<br><span class="small text-danger">(pending)</span></td>
 									<td class="">virginia.madsen@gmail.com</td>
-									<td class="">Only names and job titles</td>
+									<td class="">Names and job titles</td>
 									<td class="">
 										<div class="btn-group">
-											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+											<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover dropdown-toggle">
 												Actions <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="#"><i class="fa fa-check fa-fw"></i> Accept</a></li>
-												<li><a href="#"><i class="fa fa-times fa-fw"></i> Decline</a></li>
+												<li><a class="action accept" href="#"><i class="fa fa-check fa-fw "></i> Accept</a></li>
+												<li><a class="action decline" href="#"><i class="fa fa-times fa-fw"></i> Decline</a></li>
 											</ul>
 										</div>
 									</td>
-									<td class="text-muted text-right">Received 2 min ago</td>
+									<td class="text-muted text-right status">Received 2 min ago</td>
 								</tr>
 								<tr class="va-middle">
 									<td><img alt="image" class="img-circle" src="img/a3.jpg" style="width:38px;height:38px"></td>
@@ -111,16 +113,16 @@
 									<td class="">
 																			
 										<div class="btn-group">
-											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+											<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover dropdown-toggle">
 												Actions <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+												<li><a class="action stop" href="#"><i class="fa fa-ban fa-fw action stop"></i> Stop sharing</a></li>
 											</ul>
 										</div>
 										
 									</td>
-									<td class="text-muted text-right">Accepted 6 days ago</td>
+									<td class="text-muted text-right status">Accepted 6 days ago</td>
 								</tr>
 							</tbody>
 						</table>
@@ -130,12 +132,12 @@
 							<thead>
 								<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke">
 									<span class="sharing-subtitle">Sent</span>
-									<td class=""></td>
-									<td class="">name</td>
-									<td class="">e-mail</td>
-									<td class="">details shared</td>
-									<td class=""></td>
-									<td class="text-right">status</td>
+									<td class="col-md-1"></td>
+									<td class="col-md-2">name</td>
+									<td class="col-md-3">e-mail</td>
+									<td class="col-md-2">details shared</td>
+									<td class="col-md-1"></td>
+									<td class="col-md-2 text-right">status</td>
 								</tr>
 							</thead>
 							<tbody>
@@ -143,22 +145,22 @@
 									<td><img alt="image" class="img-circle" src="img/a1.jpg" style="width:38px;height:38px"></td>
 									<td class="text-muted">Javier Ramírez<br><span class="small text-danger">(pending)</span></td>
 									<td class="">j.ramirez@microsoft.com</td>
-									<td class="">Only names and job titles</td>
+									<td class="">Names and job titles</td>
 									<td class="">
 									
 										<div class="btn-group">
-											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+											<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover dropdown-toggle">
 												Actions <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-												<li><a href="#"><i class="fa fa-send fa-fw"></i> Re-send</a></li>
-												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+												<li><a class="action edit" href="#"><i class="fa fa-pencil fa-fw action edit"></i> Edit</a></li>
+												<li><a class="action resend" href="#"><i class="fa fa-send fa-fw action send"></i> Re-send</a></li>
+												<li><a class="action stop" href="#"><i class="fa fa-ban fa-fw action stop"></i> Stop sharing</a></li>
 											</ul>
 										</div>
 									
 									</td>
-									<td class="text-muted text-right">Sent 2 h ago</td>
+									<td class="text-muted text-right status">Sent 2 h ago</td>
 								</tr>
 								<tr class="va-middle">
 									<td><img alt="image" class="img-circle" src="img/a4.jpg" style="width:38px;height:38px"></td>
@@ -168,17 +170,17 @@
 									<td class="">
 									
 										<div class="btn-group">
-											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+											<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover dropdown-toggle">
 												Actions <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+												<li><a class="action edit" href="#"><i class="fa fa-pencil fa-fw action edit"></i> Edit</a></li>
+												<li><a class="action stop" href="#"><i class="fa fa-ban fa-fw action stop"></i> Stop sharing</a></li>
 											</ul>
 										</div>
 										
 									</td>
-									<td class="text-muted text-right">Accepted 2 days ago</td>
+									<td class="text-muted text-right status">Accepted 2 days ago</td>
 								</tr>
 								<tr class="va-middle excess" style="display:none">
 									<td><img alt="image" class="img-circle" src="img/a4.jpg" style="width:38px;height:38px"></td>
@@ -188,35 +190,35 @@
 									<td class="">
 									
 										<div class="btn-group">
-											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+											<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover dropdown-toggle">
 												Actions <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-												<li><a href="#"><i class="fa fa-ban fa-fw"></i> Stop sharing</a></li>
+												<li><a class="action edit" href="#"><i class="fa fa-pencil fa-fw action edit"></i> Edit</a></li>
+												<li><a class="action stop" href="#"><i class="fa fa-ban fa-fw action stop"></i> Stop sharing</a></li>
 											</ul>
 										</div>
 										
 									</td>
-									<td class="text-muted text-right">Accepted 2 days ago</td>
+									<td class="text-muted text-right status">Accepted 2 days ago</td>
 								</tr>
 							</tbody>
 						</table>
-						<button class="btn btn-default btn-sm btn-outline more pull-right" type="button"><i class="fa fa-arrow-down fa-fw"></i> Show more</button>
-						<button class="btn btn-default btn-sm btn-outline less pull-right" type="button" style="display:none"><i class="fa fa-arrow-up fa-fw"></i> Show less</button>
+						<button class="btn btn-white btn-sm btn-outline more pull-right" type="button"><i class="fa fa-arrow-down fa-fw"></i> Show more</button>
+						<button class="btn btn-white btn-sm btn-outline less pull-right" type="button" style="display:none"><i class="fa fa-arrow-up fa-fw"></i> Show less</button>
 						
 					</div>
 					<div class="m-l m-r m-t">
-						<table class="table">
+						<table class="table table-removed">
 							<thead>
 								<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke">
 									<span class="sharing-subtitle">Removed</span>
-									<td class=""></td>
-									<td class="">name</td>
-									<td class="">e-mail</td>
-									<td class="">details shared</td>
-									<td class=""></td>
-									<td class="text-right">status</td>
+									<td class="col-md-1"></td>
+									<td class="col-md-2">name</td>
+									<td class="col-md-3">e-mail</td>
+									<td class="col-md-2">details shared</td>
+									<td class="col-md-1"></td>
+									<td class="col-md-2 text-right">status</td>
 								</tr>
 							</thead>
 							<tbody>
@@ -224,20 +226,20 @@
 									<td><img alt="image" class="img-circle" src="img/a5.jpg" style="width:38px;height:38px"></td>
 									<td class="text-muted">Shawn Lee</td>
 									<td class="">hello@gmail.com</td>
-									<td class="">Only names and job titles</td>
+									<td class="">Names and job titles</td>
 									<td class="">
 										<div class="btn-group">
-											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+											<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover dropdown-toggle">
 												Actions <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="#"><i class="fa fa-send fa-fw"></i> Re-send</a></li>
-												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-												<li><a href="#"><i class="fa fa-trash fa-fw"></i> Delete</a></li>
+												<li><a class="action resend"  href="#"><i class="fa fa-send fa-fw action send"></i> Re-send</a></li>
+												<li><a class="action edit" href="#"><i class="fa fa-pencil fa-fw action edit"></i> Edit</a></li>
+												<li><a class="action delete" href="#"><i class="fa fa-trash fa-fw action delete"></i> Delete</a></li>
 											</ul>
 										</div>
 									</td>
-									<td class="text-muted text-right">Stopped sharing 1 week ago</td>
+									<td class="text-muted text-right  status">Stopped sharing 1 week ago</td>
 								</tr>
 								<tr class="va-middle">
 									<td><img alt="image" class="img-circle" src="img/a6.jpg" style="width:38px;height:38px"></td>
@@ -246,18 +248,18 @@
 									<td class="">Everything</td>
 									<td class="">
 										<div class="btn-group">
-											<button data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">
+											<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover dropdown-toggle">
 												Actions <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu">
-												<li><a href="#"><i class="fa fa-send fa-fw"></i> Re-send</a></li>
-												<li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-												<li><a href="#"><i class="fa fa-trash fa-fw"></i> Delete</a></li>
+												<li><a class="action resend" href="#"><i class="fa fa-send fa-fw action send"></i> Re-send</a></li>
+												<li><a class="action edit" href="#"><i class="fa fa-pencil fa-fw action edit"></i> Edit</a></li>
+												<li><a class="action delete" href="#"><i class="fa fa-trash fa-fw action delete"></i> Delete</a></li>
 											</ul>
 										</div>
 										
 									</td>
-									<td class="text-muted text-right">Declined 6 days ago</td>
+									<td class="text-muted text-right  status">Declined 6 days ago</td>
 								</tr>
 							</tbody>
 						</table>
@@ -304,8 +306,7 @@
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
 			
-			$( "#modal-windows-1" ).load( "components.html #remove-account-confirmation-modal", afterLoadingModal);
-			$( "#modal-windows-2" ).load( "components.html #connect-new-account-modal");
+			$( "#modal-windows-1").load( "components.html #edit-invitation-modal", afterLoadingModal);
 			
 			
 						
@@ -322,7 +323,7 @@
 					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
 				
 					// Target of the button
-					// I will take down this feature for this page, I'd rather show new account modal window
+					// I will take down this feature for this page, I'd rather show other modals
 					$( "#share-contacts-btn" ).attr('data-toggle','');
 					//$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-regular');
 				
@@ -347,19 +348,179 @@
 			};
 			
 			function afterLoadingModal(){
-				// functionality to disconnect confirmation button in modal window
-				$('#disconnect-confirmation-btn').click(function(){
-					$('#timeout-alert').fadeIn('slow');
-					$('#timeout-alert').css('display','inline-block');
+			
+				// functionality for show more/less accounts in the modal
+			
+				// Show when user has 6 or more accounts
+				// Only 5 are shown
+				
+				$('.more-accounts').click(function(){
+					console.log('is this workin?');
+					self = $(this);
+					self.fadeOut('fast',function(){
+						self.next('.less-accounts').fadeIn('slow');
+					});
+					$('div.excess').show('slow');
 					
-					setTimeout(function(){$('#timeout-alert').fadeOut('slow');}, 5000);
 				});
+				
+				$('.less-accounts').click(function(){
+					self = $(this);
+					self.fadeOut('fast',function(){
+						self.prev('.more-accounts').fadeIn('slow');
+					});
+					$('div.excess').hide('slow');
+				});
+				
+			};
+			
+			function showAlert(text){
+				$('#timeout-alert div.alert span#alert-text').text(text);
+				$('#timeout-alert').fadeIn('slow');
+				$('#timeout-alert').css('display','inline-block');
+				
+				setTimeout(function(){$('#timeout-alert').fadeOut('slow');}, 5000);
 			};
 		
+			// functionality for menu actions
+			$('.action').click(function(){
+			
+				self = $(this);
+			
+				if (self.hasClass('accept')) {
+					showAlert("Accepting invitation...");
+					// animations to do:
+					// 1.- Changing row color to green, wait 1000ms
+					// 2.- Change status to accepted, wait 1000ms
+					// 3.- Change row color to default
+					setTimeout(function(){
+						self.parents('tr').addClass('success');
+						setTimeout(function(){
+							self.parents('tr').children('.status').text('Accepted 5 s ago');
+							setTimeout(function(){
+								self.parents('tr').removeClass('success');
+							},1000);
+						},1000);
+					},5000);
+					
+					// We also have to change menu actions for new status but not necessary
+					// for mock up purposes
+					
+					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle'); // this is for closing the dropdown menu after click
+					return false; // this is just for avoiding going top of the page
+					}
+				
+				if (self.hasClass('decline')) {
+					showAlert("Declining invitation...");
+					// animations to do:
+					// 1.- Changing row color to red, wait 1000ms
+					// 2.- Change status to deleting, wait 1000ms
+					// 3.- Hide row
+					setTimeout(function(){
+						self.parents('tr').addClass('danger');
+						setTimeout(function(){
+							self.parents('tr').children('.status').text('Deleting invitation...');
+							setTimeout(function(){
+								self.parents('tr').hide('slow');
+							
+							},1000);
+						},1000);
+					},5000);
+					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
+					return false;
+					}
+					
+				if (self.hasClass('stop')) {
+					
+					// Careful with this one:
+					// If we stop sharing a received accepted invitation, it should have the same
+					// effect as if we had declined it in the firs place. For a more simpler mock up,
+					// I'm implementing all stop actions as the action for sent invitations.
+					// Remember, as said in the firs IF, there are more things happening:
+					// Like changing the items in the dropdown menu when the status of the invitation
+					// changes...
+				
+					showAlert("Removing sharing...");
+					// animations to do:
+					// 1.- Changing row color to red, wait 1000ms
+					// 2.- Change status to removing, wait 1000ms
+					// 3.- Move row to deleted and set default color again
+					setTimeout(function(){
+						self.parents('tr').addClass('danger');
+						setTimeout(function(){
+							self.parents('tr').children('.status').text('Removing invitation...');
+							setTimeout(function(){
+								$('.table-removed > tbody > tr:last').after(self.parents('tr'));
+								setTimeout(function(){
+									self.parents('tr').removeClass('danger');
+									self.parents('tr').children('.status').text('Removed 10 s ago');
+								},1000); 
+							},1000); 
+						},1000);
+					},5000);
+					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
+					return false;
+					}
+					
+				if (self.hasClass('resend')) {
+					showAlert("Re-sending invitation...");
+					// animations to do:
+					// 1.- Changing row color to green, wait 1000ms
+					// 2.- Change status to resent, wait 1000ms
+					// 3.- Change row color to default
+					setTimeout(function(){
+						self.parents('tr').addClass('success');
+						setTimeout(function(){
+							self.parents('tr').children('.status').text('Re-sent 5 s ago');
+							setTimeout(function(){
+								self.parents('tr').removeClass('success');
+							},1000);
+						},1000);
+					},5000);
+					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
+					return false;
+					}
+					
+				if (self.hasClass('delete')) {
+					showAlert("Deleting invitation...");
+					showAlert("Re-sending invitation...");
+					// animations to do:
+					// 1.- Changing row color to red, wait 1000ms
+					// 2.- Change status to deleting, wait 1000ms
+					// 3.- Change row color to default
+					setTimeout(function(){
+						self.parents('tr').addClass('success');
+						setTimeout(function(){
+							self.parents('tr').children('.status').text('Re-sent 5 s ago');
+							setTimeout(function(){
+								self.parents('tr').removeClass('success');
+							},1000);
+						},1000);
+					},5000);
+					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
+					return false;s
+					}
+					
+				if (self.hasClass('edit')) {
+					$('#edit-invitation-modal').modal();
+					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
+					return false;
+					}
+					
+					
+			});
+			
+			
 			// Space after contacts, so user see how more contacts are added
 			$('#space-after').height($('#space-after').width()/8);
 
 			// functionality for show more/less buttons under tables
+			
+				// Show more only may be shown when there are 4 or more invitations,
+				// hiding from the 4th. Once clicked, it should show all of them.
+				// The order is defined by the timestamp of the status.
+				
+				
 			$('.more').click(function(){
 				self = $(this);
 				self.fadeOut('fast',function(){
@@ -375,6 +536,9 @@
 				});
 				$('tr.excess').hide('slow');
 			});
+			
+			
+			
 
         });
     </script>
