@@ -27,9 +27,10 @@
 	</span>
 
 	<div id="notify-wrapper">
-		<span class="m-t-sm" style="display:none" id="timeout-alert">
-			<div class="alert alert-success">
-				<span id="alert-text">Deleted 1 account. </span><a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
+		<span class="" style="display:none;right: 15px;top: 82px;position: absolute;" id="timeout-alert">
+			<div class="alert alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<span id="alert-text"></span><a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
 			</div>
 		</span>
 	</div>
@@ -63,7 +64,13 @@
 				<div class="row">
 					<div class="row m-l">
 						<div class="col-md-6 no-padding">
-							<div class="sharing-title">Sharing</div>
+							<div class="sharing-title">Sharing
+								<button type="button" class="btn btn-white btn-sm pull-right empty m-l-sm">Empty tables</button>
+								<button type="button" class="btn btn-white btn-sm pull-right nothing">First time</button>
+							
+							</div>
+							
+								
 
 								<p class="m-t">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet. Sent and received invitations to share contact books can be managed in this page.</p>
 
@@ -126,6 +133,13 @@
 								</tr>
 							</tbody>
 						</table>
+						<div class="text-center show-on-empty m-t-lg" style="display:none">
+							
+							<div class="well well-sm small" style="display:inline">
+								Received invitations will appear here.
+							</div>
+							
+						</div>
 					</div>
 					<div class="m-l m-r m-t">
 						<table class="table m-b-xs">
@@ -204,6 +218,15 @@
 								</tr>
 							</tbody>
 						</table>
+						<div class="text-center show-on-empty m-t-lg" style="display:none">
+							
+							<div class="well well-sm small" style="display:inline-block">
+								Invitations sent by you will appear here.<br>
+								Click on <i class="fa fa-share-alt"></i> share contacts button up in the bar to send an invitation.
+							</div>
+							
+						</div>
+						
 						<button class="btn btn-white btn-sm btn-outline more pull-right" type="button"><i class="fa fa-arrow-down fa-fw"></i> Show more</button>
 						<button class="btn btn-white btn-sm btn-outline less pull-right" type="button" style="display:none"><i class="fa fa-arrow-up fa-fw"></i> Show less</button>
 						
@@ -263,6 +286,13 @@
 								</tr>
 							</tbody>
 						</table>
+						<div class="text-center show-on-empty m-t-lg" style="display:none">
+							
+							<div class="well well-sm small" style="display:inline">
+								Invitations declined by others and invitations that you have stopped sharing with others will appear here.
+							</div>
+							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -374,12 +404,25 @@
 				
 			};
 			
-			function showAlert(text){
+			function showAlert(text, alertColor){
+			
+				if (!alertColor)
+					$('#timeout-alert div.alert').addClass('alert-success');
+				else
+					$('#timeout-alert div.alert').addClass('alert-'+alertColor);
+			
 				$('#timeout-alert div.alert span#alert-text').text(text);
 				$('#timeout-alert').fadeIn('slow');
 				$('#timeout-alert').css('display','inline-block');
 				
-				setTimeout(function(){$('#timeout-alert').fadeOut('slow');}, 5000);
+				
+				setTimeout(function(){
+					$('#timeout-alert').fadeOut('slow', function(){
+						$('#timeout-alert div.alert').removeClass('alert-success');
+						$('#timeout-alert div.alert').removeClass('alert-'+alertColor);
+					});
+				}, 5000);
+				
 			};
 		
 			// functionality for menu actions
@@ -388,44 +431,46 @@
 				self = $(this);
 			
 				if (self.hasClass('accept')) {
+				
+					// Animations to do:
+					// 1.- Show ongoing status on alert and status and change row color to green, wait 5 s
+					
 					showAlert("Accepting invitation...");
-					// animations to do:
-					// 1.- Changing row color to green, wait 1000ms
-					// 2.- Change status to accepted, wait 1000ms
-					// 3.- Change row color to default
+					self.parents('tr').addClass('success');
+					self.parents('tr').children('.status').text('Accepting...');
+					
+					// 2.- Change status to accepted and change row color to default, wait 1 s
+					
 					setTimeout(function(){
-						self.parents('tr').addClass('success');
-						setTimeout(function(){
-							self.parents('tr').children('.status').text('Accepted 5 s ago');
-							setTimeout(function(){
-								self.parents('tr').removeClass('success');
-							},1000);
-						},1000);
+						self.parents('tr').children('.status').text('Accepted 5 s ago');
+						self.parents('tr').removeClass('success');
 					},5000);
 					
-					// We also have to change menu actions for new status but not necessary
-					// for mock up purposes
+					// We also have to change menu items (actions) when status changes.
+					// (i.e. actions for received status are accept and decline, but actions
+					// for accepted status is just stop sharing).
+					// Not needed for mock up purposes
 					
-					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle'); // this is for closing the dropdown menu after click
-					return false; // this is just for avoiding going top of the page
+					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle'); // > For closing the dropdown menu after click
+					return false; // > Just for avoiding going top of the page
+					
 					}
 				
-				if (self.hasClass('decline')) {
-					showAlert("Declining invitation...");
-					// animations to do:
-					// 1.- Changing row color to red, wait 1000ms
-					// 2.- Change status to deleting, wait 1000ms
-					// 3.- Hide row
+				if (self.hasClass('decline') || self.hasClass('delete')) {
+					
+					// Animations to do:
+					// 1.- Show ongoing action on alert and status and change row color to danger, wait 5s
+					
+					showAlert("Deleting invitation...",'danger');
+					self.parents('tr').addClass('danger');
+					self.parents('tr').children('.status').text('Deleting invitation...');
+					
+					// 2.- Delete row (for mock up, just hiding it...)
+					
 					setTimeout(function(){
-						self.parents('tr').addClass('danger');
-						setTimeout(function(){
-							self.parents('tr').children('.status').text('Deleting invitation...');
-							setTimeout(function(){
-								self.parents('tr').hide('slow');
-							
-							},1000);
-						},1000);
+						self.parents('tr').hide('slow');
 					},5000);
+					
 					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
 					return false;
 					}
@@ -436,69 +481,60 @@
 					// If we stop sharing a received accepted invitation, it should have the same
 					// effect as if we had declined it in the firs place. For a more simpler mock up,
 					// I'm implementing all stop actions as the action for sent invitations.
-					// Remember, as said in the firs IF, there are more things happening:
+					// Remember, as said in the first IF for 'accept' action, there are more things happening:
 					// Like changing the items in the dropdown menu when the status of the invitation
 					// changes...
 				
-					showAlert("Removing sharing...");
-					// animations to do:
-					// 1.- Changing row color to red, wait 1000ms
-					// 2.- Change status to removing, wait 1000ms
-					// 3.- Move row to deleted and set default color again
+					// Animations to do:
+					// 1.- Show ongoing action on alert and status, wait 5 s
+					
+					showAlert("Removing sharing...",'warning');
+					self.parents('tr').addClass('warning');
+					self.parents('tr').children('.status').text('Removing invitation...');
+					
+					// 2.- Remove row (move it to Removed table), wait 1 s
+					
 					setTimeout(function(){
-						self.parents('tr').addClass('danger');
+						$('.table-removed > tbody > tr:last').after(self.parents('tr'));
+						
+						// 3.- Change status to finished action and row color to default
+						
 						setTimeout(function(){
-							self.parents('tr').children('.status').text('Removing invitation...');
-							setTimeout(function(){
-								$('.table-removed > tbody > tr:last').after(self.parents('tr'));
-								setTimeout(function(){
-									self.parents('tr').removeClass('danger');
-									self.parents('tr').children('.status').text('Removed 10 s ago');
-								},1000); 
-							},1000); 
-						},1000);
+							self.parents('tr').removeClass('danger');
+							self.parents('tr').children('.status').text('Removed 10 s ago');
+						},1000); 
 					},5000);
 					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
 					return false;
 					}
 					
 				if (self.hasClass('resend')) {
-					showAlert("Re-sending invitation...");
+				
+					// Also, careful with this one:
+					// If I re-send a declined invitation (wich may be only found in the removed table)
+					// this invitation should be moved to sent table. In this mock up, I'm just changing
+					// status and alerting the user.
+					// I'm showing the transition of how moving an invitation between tables
+					// should behave in the 'stop sharing' action: basically, an element that is moved
+					// from one table to another may stand out clearly throughout all the transition, so the
+					// user is aware of what is happening.
+				
 					// animations to do:
-					// 1.- Changing row color to green, wait 1000ms
-					// 2.- Change status to resent, wait 1000ms
-					// 3.- Change row color to default
+					// 1.- Show ongoing action in alert and status and change row color to blue, wait 5 s
+					
+					showAlert("Re-sending invitation...",'info');
+					self.parents('tr').addClass('info');
+					self.parents('tr').children('.status').text('Re-sennding invitation...');
+				
+					// 2.- Change status to finished action and row color to default
+					
 					setTimeout(function(){
-						self.parents('tr').addClass('success');
-						setTimeout(function(){
-							self.parents('tr').children('.status').text('Re-sent 5 s ago');
-							setTimeout(function(){
-								self.parents('tr').removeClass('success');
-							},1000);
-						},1000);
+						self.parents('tr').children('.status').text('Re-sent 5 s ago');
+						self.parents('tr').removeClass('info');
 					},5000);
+					
 					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
 					return false;
-					}
-					
-				if (self.hasClass('delete')) {
-					showAlert("Deleting invitation...");
-					showAlert("Re-sending invitation...");
-					// animations to do:
-					// 1.- Changing row color to red, wait 1000ms
-					// 2.- Change status to deleting, wait 1000ms
-					// 3.- Change row color to default
-					setTimeout(function(){
-						self.parents('tr').addClass('success');
-						setTimeout(function(){
-							self.parents('tr').children('.status').text('Re-sent 5 s ago');
-							setTimeout(function(){
-								self.parents('tr').removeClass('success');
-							},1000);
-						},1000);
-					},5000);
-					self.parents('.btn-group').children('.dropdown-toggle').dropdown('toggle');
-					return false;s
 					}
 					
 				if (self.hasClass('edit')) {
@@ -538,6 +574,27 @@
 			});
 			
 			
+			// What to show when tables are empty?
+			
+			$('button.empty').click(function(){
+				// empty every table
+				$('table').hide();
+				$('.more').hide();
+				
+				// show elements for when empty
+				$('.show-on-empty').show();
+				
+				
+			});
+			
+			// What to show when tables are empty?
+			
+			$('button.nothing').click(function(){
+			
+				$('table').hide();
+				$('.more').hide();
+				$('.sharing-subtitle').hide();
+			});
 			
 
         });
