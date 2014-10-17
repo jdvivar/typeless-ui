@@ -355,7 +355,7 @@ div.divider {
 }
 
 .sharing-subtitle{
-	font-size: 30px;
+	font-size: 1.7em;
 	font-weight: 100;
 }
 
@@ -365,6 +365,20 @@ div.divider {
 .open .dropdown-toggle.btn-link.btn-link-no-hover {
 	color:inherit;
 	text-decoration:inherit;
+}
+
+.outlook-logo {
+	display: inline-block;
+	width: 18px;
+	height: 14px;
+	background-image: url(../img/logo_outlook_com-gray.png);
+	background-repeat: no-repeat;
+	background-size: auto 12px;
+	background-position: 3px 2px;
+}
+
+.outlook-logo:hover {
+	background-image: url(../img/logo_outlook_com-black.png);
 }
 
 /* STUFF ENDS */
