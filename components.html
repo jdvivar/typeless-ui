@@ -21,81 +21,95 @@
 				<button type="button" class="btn dropdown-toggle" id="top-search-btn" data-toggle="dropdown""><i class="fa fa-search"></i></button>
 				
 				<ul class="dropdown-menu search" role="menu" aria-labelledby="top-search-btn" style="min-width:600px">
-					<li role="presentation" class="dropdown-header m-t-xs">People</li>
-					
-					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#" style="position:relative">
-							<img alt="image" class="img-circle" src="img/profile.jpg" style="width:60px;height:60px">
-							<span class="name" >Daniel Comparez</span>
-							<span class="mail small" >d.comp@gmail.com</span>
-							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Fashion Designer at EVIA</span>
-							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 5566 900 900</span>
-							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Barcelona</span>
-							<span class="shared"><i class="fa fa-link"></i></span>
-						</a>
-					</li>
-					
-					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#" style="position:relative">
-							<img alt="image" class="img-circle" src="img/a4.jpg" style="width:60px;height:60px">
-							<span class="name" >Daniel Comparez</span>
-							<span class="mail small" >d.comp@gmail.com</span>
-							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Fashion Designer at EVIA</span>
-							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 5566 900 900</span>
-							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Barcelona</span>
-						</a>
-					</li>
-					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#" style="position:relative">
-							<img alt="image" class="img-circle" src="img/a1.jpg" style="width:60px;height:60px">
-							<span class="name" >Daniel Comparez</span>
-							<span class="mail small" >d.comp@gmail.com</span>
-							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Fashion Designer at EVIA</span>
-							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 5566 900 900</span>
-							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Barcelona</span>
-						</a>
-					</li>
-					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#" style="position:relative">
-							<img alt="image" class="img-circle" src="img/a5.jpg" style="width:60px;height:60px">
-							<span class="name" >Daniel Comparez</span>
-							<span class="mail small" >d.comp@gmail.com</span>
-							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Fashion Designer at EVIA</span>
-							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 5566 900 900</span>
-							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Barcelona</span>
-							<span class="shared"><i class="fa fa-link"></i></span>
-						</a>
-					</li>
-					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#" style="position:relative">
-							<img alt="image" class="img-circle" src="img/a3.jpg" style="width:60px;height:60px">
-							<span class="name" >Daniel Comparez</span>
-							<span class="mail small" >d.comp@gmail.com</span>
-							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Fashion Designer at EVIA</span>
-							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 5566 900 900</span>
-							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Barcelona</span>
-						</a>
-					</li>
 				
+					<div class="p-lg" style="display:none;background-color:whitesmoke">
+						No contact details match with your query.<br><br>
+						<button class="btn btn-xs"><i class="fa fa-plus fa-fw"></i> Connect</button> more accounts to grow your contact book.
+					</div>
+
+					<button type="button" class="btn btn-white btn-xs m-t-xs m-r-xs pull-right no-results">No results</button>
 					
+					<li role="presentation" class="dropdown-header m-t-xs">Results</li>
+					
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="profile.html" style="position:relative">
+							<img alt="image" class="img-circle" src="img/profile.jpg" >
+							<span class="name" >Diana <strong>Comp</strong>arez</span>
+							<span class="mail small" >d.<strong>comp</strong>@gmail.com</span>
+							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Fashion Designer at EVIA</span>
+							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 5566 900 900</span>
+							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Barcelona</span>
+							<span class="shared" data-toggle="tooltip" data-placement="bottom" title="Shared by Michael Stephanblome"><i class="fa fa-link"></i></span>
+						</a>
+					</li>
+					
+					
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="profile.html" style="position:relative">
+							<img alt="image" class="img-circle" src="img/a5.jpg" >
+							<span class="name">Sara A<strong>comp</strong>e</span>
+							<span class="mail small" >sara@born-free.org</span>
+							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Marketing Director at Born Free</span>
+							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 2056 998 782</span>
+							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Manchester</span>
+							<span class="shared" data-toggle="tooltip" data-placement="bottom" title="Shared by Satish Jayakumar"><i class="fa fa-link"></i></span>
+						</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="profile.html" style="position:relative">
+							<img alt="image" class="img-circle" src="img/a3.jpg" >
+							<span class="name" >Ana-<strong>Comp</strong>te Cala</span>
+							<span class="mail small" >cala-<strong>comp</strong>te@balearic.es</span>
+							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Tourist Advisor at Balearic Resorts</span>
+							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+34 899 00 99 32</span>
+							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Saint Joan</span>
+						</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="profile.html" style="position:relative">
+							<img alt="image" class="img-circle" src="img/a4.jpg">
+							<span class="name" >Esteban Salgado</span>
+							<span class="mail small" >e.salgado@my<strong>comp</strong>any.com</span>
+							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Manager at January Jones PLC</span>
+							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>+44 07490 778 911</span>
+							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Sofia</span>
+						</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="profile.html" style="position:relative">
+							<img alt="image" class="img-circle" src="img/a1.jpg">
+							<span class="name" >Rubén Aquino</span>
+							<span class="mail small" >ruben@<strong>comp</strong>adre.com</span>
+							<span class="job small" ><i class="fa fa-briefcase fa-fw m-r-xs"></i>Account Manager</span>
+							<span class="phone small" ><i class="fa fa-phone fa-fw m-r-xs"></i>91 778 56 79</span>
+							<span class="location small" ><i class="fa fa-map-marker fa-fw m-r-xs"></i>Manacor</span>
+							<span class="shared" data-toggle="tooltip" data-placement="bottom" title="Shared by Eva Robles"><i class="fa fa-link"></i></span>
+						</a>
+					</li>
+					
+					<li role="presentation" >
+						<a role="menuitem" tabindex="-1" href="search-results.html" class="all-results" >
+							More results<span class="badge m-l-sm">16</span>
+						</a>
+					</li>		
+
 					<li role="presentation" class="divider"></li>
 					
-					<li role="presentation" class="dropdown-header">More results...</li>
+					<!-- <li role="presentation" class="dropdown-header">More results...</li> -->
 					
 					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#"><span class="badge m-r-sm">4+</span>in people</a>
+						<a role="menuitem" tabindex="-1" href="search-results.html"><span class="badge m-r-sm">6+</span>in job titles</a>
 					</li>
 					
 					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#"><span class="badge m-r-sm">6+</span>in jobs</a>
+						<a role="menuitem" tabindex="-1" href="search-results.html"><span class="badge m-r-sm">2+</span>in companies</a>
 					</li>
 					
 					<li role="presentation">
-						<a role="menuitem" tabindex="-1" href="#"><span class="badge m-r-sm">2+</span>in companies</a>
-					</li>
-					
-					
-				 </ul>
+						<a role="menuitem" tabindex="-1" href="search-results.html"><span class="badge m-r-sm">1+</span>in locations</a>
+					</li>	
+											
+				</ul>
 				
 			</span>
 			<input type="text" class="form-control" id="top-search">

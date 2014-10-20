@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows">
+		<!-- loaded dinamically -->
+	</span>
+
+	<div id="notify-wrapper">
+		<span class="m-t-sm" style="display:none" id="timeout-alert">
+			<div class="alert alert-success">
+				Deleted 3 contacts. I'll close myself in 5s. <a class="alert-link" href="#">Undo</a>
+			</div>
+		</span>
+	</div>
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+		<!-- loaded dinamically -->
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" >
+        
+        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">			
+			
+			<div class="row wrapper white-bg page-heading">
+
+            	<span id="tools" style="">
+				
+					<div class="btn-group btn-outline m-t">
+						
+						<button class="btn btn-sm btn-white active" type="button" id="toggle-list">All <span class="badge">35</span></button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">Names & e-mails <span class="badge ">32</span></button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">Jobs <span class="badge ">5</span></button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">Companies <span class="badge">4</span></button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">Locations <span class="badge ">3</span></button>
+						
+					</div>
+					
+					
+					
+					<div class="sharing-subtitle m-t pull-right" style="">
+						Search results for <strong>don</strong>
+					</div>
+					
+				</span>
+            </div>
+			
+			<div class="row no-margins" id="alerts-row">
+
+				
+				
+			</div>
+			
+			<div class="wrapper wrapper-content animated fadeIn" >
+
+				
+				<div style="">
+					<table class="table results table-hover">
+						<thead>
+							<tr class="va-middle text-muted text-uppercase" style="display:none">
+								
+								<td class="" style="width:3%"></td>
+								<td class="col-md-3">name & e-mail</td>
+								<td class="col-md-2">job title, phone & location</td>
+								<td class="col-md-1">shared by</td>
+								
+							</tr>
+						</thead>
+						<tbody>
+						
+							<tr class="va-middle">
+								<td><img alt="image" class="img-circle" src="img/a4.jpg"></td>
+								<td class="name">
+									<strong>Don</strong>ald Draper<br>
+									<small><strong>don</strong>.draper@sterlingcooper.com<small>
+								</td>
+								<td class="">
+									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Accounts Director at Sterling Cooper<br>
+									<span class="fa fa-phone fa-fw m-r-xs"></span> 9900 99 45 66<br>
+									<span class="fa fa-map-marker fa-fw m-r-xs"></span> Sydney
+								</td>
+								<td class="">
+									<span class="shared" data-toggle="tooltip" data-placement="bottom" title="Shared by Eva Robles"><i class="fa fa-link"></i>
+								</span></td>
+								
+							</tr>
+							
+							<tr class="va-middle">
+								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
+								<td class="name">
+									Xavier Riva<br>
+									<small>x.riva@mc<strong>don</strong>alds.com<small>
+								</td>
+								<td class="">
+									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
+									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
+									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+								</td>
+								<td class=""></td>
+								
+							</tr>
+							<tr class="va-middle">
+								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
+								<td class="name">
+									Xavier Riva<br>
+									<small>x.riva@mc<strong>don</strong>alds.com<small>
+								</td>
+								<td class="">
+									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
+									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
+									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+								</td>
+								<td class=""></td>
+								
+							</tr>
+							<tr class="va-middle">
+								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
+								<td class="name">
+									Xavier Riva<br>
+									<small>x.riva@mc<strong>don</strong>alds.com<small>
+								</td>
+								<td class="">
+									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
+									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
+									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+								</td>
+								<td class=""></td>
+								
+							</tr>
+							<tr class="va-middle">
+								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
+								<td class="name">
+									Xavier Riva<br>
+									<small>x.riva@mc<strong>don</strong>alds.com<small>
+								</td>
+								<td class="">
+									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
+									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
+									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+								</td>
+								<td class=""></td>
+								
+							</tr>
+							<tr class="va-middle">
+								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
+								<td class="name">
+									Xavier Riva<br>
+									<small>x.riva@mc<strong>don</strong>alds.com<small>
+								</td>
+								<td class="">
+									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
+									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
+									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+								</td>
+								<td class=""></td>
+								
+							</tr>
+							<tr class="va-middle">
+								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
+								<td class="name">
+									Xavier Riva<br>
+									<small>x.riva@mc<strong>don</strong>alds.com<small>
+								</td>
+								<td class="">
+									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
+									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
+									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+								</td>
+								<td class=""></td>
+								
+							</tr>
+							
+						</tbody>
+					</table>					
+					<a class="btn btn-white btn-rounded btn-block"  id="more-contacts"><i class="fa fa-arrow-down m-r"></i>Show all <span class="badge">35</span></a>
+					
+				</div>
+				
+				
+				<div id="space-after"></div>
+			</div>
+			
+			<div class="footer fixed_full custom-footer">
+				<div>
+					<a href="">HELP </a>
+					·
+					<a href="">ABOUT </a>
+				</div>
+			</div>
+
+		</div>	
+		
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+
+    <script>
+        $(document).ready(function() {
+		
+			// loading of components and callbacks		
+			$( "#footer" ).load( "components.html #footer" );
+			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
+			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular");
+						
+			// callback after loading navbar-top
+			function afterLoadingNavbarTop(){
+			
+				/* Placeholder for search bar. Put here for future customisation,
+				   always opt in for the javascript code if available and reasonably human readable */			
+				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
+				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */
+
+				// Dropdown menu after focus
+				
+
+				// Activate tooltips
+				$("[data-toggle='tooltip']").tooltip();
+				
+				// how does it look without results?
+				$('button.no-results').click(function(){
+					$('ul.dropdown-menu.search > *').toggle();
+				});
+				
+			
+				// Share contacts button context-aware
+					
+					// Content of the button
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+				
+					// Target of the button
+					$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-regular');
+				
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingNavbarSide(){
+				// MetsiMenu
+				// (We may need it in the future)
+				$('#side-menu').metisMenu();
+				
+				// inactive all options
+				$('#side-menu li').each(function(index, element) {
+                    $(this).removeClass('active');
+                });
+				
+				// active actual option
+				$('#contacts-link').addClass('active');
+			};
+			
+			
+			
+			// Every time I select or deselect a card...
+			var selected = 0;
+			$(".contact-box input:checkbox").change(function(){
+				
+				if ($(this).is(":checked")) {
+					// coming from 0
+					if (selected==0) {
+						$("#share-contacts-btn").addClass("radioactive");
+					}
+					selected++;
+					changeContextToSelected(selected);
+
+					console.log("checking, "+selected);
+				}
+				else {
+					// going to 0
+					if (selected==1) {
+						$("#share-contacts-btn").removeClass("radioactive");
+						changeContextToAll();
+						selected--;
+					}
+					else {
+						selected--;
+						changeContextToSelected(selected);
+					}
+					console.log("unchecking, "+selected);
+				}
+				
+				// TO-DO
+				if (selected==0)
+					changeModalToAll()
+				else
+					changeModalToSelected();
+			});
+			
+			function changeContextToSelected(num){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share "+num+" contacts</span>");
+			};
+			function changeContextToAll(){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+			};
+			
+			function glowButton(id){
+				$(id).addClass("radioactive");
+			};
+		
+			// Space after contacts, so user see how more contacts are added
+			$('#space-after').height($('#space-after').width()/8);
+			
+			// Go to profile page if you click on box
+			$('.contact-box').click(function(){
+				console.log('click on .contact-box');
+				window.location = "profile.html";
+			});
+			
+			// Show more contact data when the badge is clicked
+			$('.more').click(function(e) {
+				//console.log('click on .more');
+				e.stopPropagation();
+				//var p = $(this).parent().next('p');
+				var p = $(this).next('.show-more');
+				//console.log('p is: '+p);
+            	p.toggle('fast');
+				setTimeout(function(){p.hide('slow')}, 5000);
+            });
+			
+			// Show more contacts when show more link is clicked
+			$('#more-contacts').click(function(e) {
+				$('.contact-box').fadeIn(800);
+				$('tr').fadeIn(800);
+				return false;
+			});
+			
+			// functionality to hovering table
+			$('tr').click(function(){
+				window.location.assign("profile.html")
+			})
+			
+        });
+    </script>
+	
+	
+</body>
+</html>

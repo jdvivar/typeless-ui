@@ -1678,6 +1678,16 @@
 				<div id="list-view" style="display:none">
 					<table class="table table-hover va-middle">
 						<thead>
+							<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke;">
+								<td class="" style="width:3%"></td>
+								<td class="col-md-1">name</td>
+								<td class="col-md-1">job title</td>
+								<td class="col-md-1">e-mail</td>
+								<td class="col-md-1">phone</td>
+							</tr>
+						</thead>
+						<!-- 	
+						<thead>
 							<tr>
 								<th style="width: 54px;"></th>
 								<th>Name</th>
@@ -1686,6 +1696,7 @@
 								<th>Phone</th>
 							</tr>
 						</thead>
+						-->
 						<tbody>
 							<tr>
 								<td><img alt="image" class="img-circle img-responsive" src="img/a1.jpg" style="width:38px;height:38px"></td>
@@ -1901,12 +1912,22 @@
 						
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
+			
 				/* Placeholder for search bar. Put here for future customisation,
 				   always opt in for the javascript code if available and reasonably human readable */			
 				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
 				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */
 
 				// Dropdown menu after focus
+				
+
+				// Activate tooltips
+				$("[data-toggle='tooltip']").tooltip();
+				
+				// how does it look without results?
+				$('button.no-results').click(function(){
+					$('ul.dropdown-menu.search > *').toggle();
+				});
 				
 			
 				// Share contacts button context-aware
@@ -2043,7 +2064,6 @@
 				$('#toggle-list').removeClass('btn-white');
 				
             });
-			
 			
 			
         });

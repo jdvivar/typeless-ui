@@ -385,51 +385,65 @@ div.divider {
 	box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
 
-.search.dropdown-menu > li > a {
+.search > li > a {
 	font-size: 14px;
 }
 
-.search.dropdown-menu > li > a > img.img-circle {
+.search > li > a > img.img-circle {
 	width: 60px;
 	height: 60px;
 }
 
-.search.dropdown-menu > li > a > span.name {
+.search > li > a > span.name {
 	position: absolute;
 	left: 79px;
 	top: 14px;
 	font-size: 20px;
 }
 
-.search.dropdown-menu > li > a > span.mail {
+.search > li > a > span.mail {
 	position: absolute;
 	left: 80px;
 	top: 33px;
 }
 
-.search.dropdown-menu > li > a > span.job {
+.search > li > a > span.job {
 	position: absolute;
 	left: 330px;
 	top: 3px;
 }
 
-.search.dropdown-menu > li > a > span.phone {
+.search > li > a > span.phone {
 	position: absolute;
 	left: 330px;
 	top: 23px;
 }
 
-.search.dropdown-menu > li > a > span.location {
+.search > li > a > span.location {
 	position: absolute;
 	left: 330px;
 	top: 43px;
 }
 
-.search.dropdown-menu > li > a > span.shared {
+.search > li > a > span.shared {
 	position: absolute;
 	left: 560px;
-	top: 25px;
+	top: 22px;
+	font-size: 18px;
+}
+
+.search > li > a.all-results {
+	text-align:center;
+	font-size:16px;
+}
+
+.results > tbody > tr > td.name {
 	font-size: 20px;
+}
+
+.results > tbody > tr > td > img.img-circle {
+	width: 60px;
+	height: 60px;
 }
 
 /* STUFF ENDS */
