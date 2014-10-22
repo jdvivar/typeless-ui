@@ -164,11 +164,21 @@ div.cards {
 }
 
 .contact-name {
-	font-size: 1.7em;
+	font-size: 1.2em;
 }
 
 .contact-jobtitle {
-	margin-top: -5px;
+	font-size: 0.9em;
+	min-height: 26px;
+	line-height: 13px;
+}
+
+.contact-email {
+	font-size: 0.75em;
+}
+
+.contact-phone{
+	font-size: 0.8em;
 }
 
 .contact-box input[type="checkbox"] {
