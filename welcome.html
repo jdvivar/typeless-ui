@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacts | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows">
+		<!-- loaded dinamically -->
+	</span>
+
+	<div id="notify-wrapper">
+		
+	</div>
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+		<!-- loaded dinamically -->
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" >
+        
+        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">			
+			
+			<div class="row wrapper white-bg page-heading">
+            	
+				
+            </div>
+			
+			<div class="row no-margins" id="alerts-row">
+
+				
+				
+			</div>
+			
+			<div class="wrapper wrapper-content animated fadeIn" >
+				
+				<div class="row" style="margin-top:80px">
+					<div class="col-md-2 col-md-offset-1 col-xs-3" >
+						<span class="fa fa-mobile" style="font-size:205px;color:#dddddd;"></span>
+					</div>
+					<div class="col-md-6 col-xs-9">
+						<div class="m-b-sm m-t-md" style="font-size:24px;font-weight:400">You're almost done!</div>
+						<p>Typeless is most useful when you have<br>your contacts sources connected.<br></p>
+						<p>Like the contacts from your phone.</p>
+						<div class="m-t" style="font-size:18px;">
+							What kind of phone do you use?
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-6 col-md-offset-1 col col-xs-9 col-xs-offset-2">
+						<div class="btn-group btn-group-justified m-t" data-toggle="buttons" style="" id="radio-os">
+							<label class="btn btn-white p-m" >
+								<input type="radio" name="options" id="android">
+									<i class="fa fa-android fa-fw fa-5x m-b m-t"></i><br>Android
+								</input>
+							</label>
+							<label class="btn btn-white p-m">
+								<input type="radio" name="options"  id="ios">
+									<i class="fa fa-apple fa-fw fa-5x m-b m-t"></i><br>iOS
+								</input>
+							</label>
+							<label class="btn btn-white p-m" >
+								<input type="radio" name="options" id="other">
+									<i class="fa fa-ellipsis-h fa-fw fa-5x m-b m-t"></i><br>Other
+								</input>
+							</label>
+						</div>
+						<div id="social-networks" style="display:none">
+							<div class="m-t"><small>
+								We will support other mobile OS's in the future.<br>
+								For now, you can connect your social networks, choose one below:
+							</small></div>
+							<div class="btn-group m-t btn-group-justified" data-toggle="buttons" style="" >
+								
+								<label class="btn btn-white active p-m">
+									<input type="radio" name="options" id="option1" checked>
+										<i class="fa fa-facebook fa-fw"></i>Facebook
+								</label>
+								<label class="btn btn-white">
+									<input type="radio" name="options" id="option2">
+										<i class="fa fa-linkedin-square fa-fw"></i>LinkedIn
+								</label>
+								<label class="btn btn-white">
+									<input type="radio" name="options" id="option3">
+										<i class="fa fa-twitter fa-fw"></i>Twitter
+								</label>
+							</div>
+						</div>
+						<div class="m-t" >
+							<div id="account-type"><small></small></div>
+							<button type="button" class="btn btn-success btn-lg btn-block" >
+								<i class="fa fa-external-link fa-fw m-r-sm"></i>Connect now
+							</button>
+						</div>
+					</div>
+				</div>
+				
+			
+				<div id="space-after"></div>
+			</div>
+			
+			<div class="footer fixed_full custom-footer">
+				<div>
+					<a href="">HELP </a>
+					·
+					<a href="">ABOUT </a>
+				</div>
+			</div>
+
+		</div>	
+		
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+
+    <script>
+        $(document).ready(function() {
+		
+			// loading of components and callbacks		
+			$( "#footer" ).load( "components.html #footer" );
+			//$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
+			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular");
+						
+			// callback after loading navbar-top
+			function afterLoadingNavbarTop(){
+			
+				// for this special page, we want a clean layout
+				
+				$('.top-search').hide();
+				$('#navbar-top button').hide();
+				$('#navbar-top ul li:first-child').hide();
+				
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingNavbarSide(){
+				// MetsiMenu
+				// (We may need it in the future)
+				$('#side-menu').metisMenu();
+				
+				// inactive all options
+				$('#side-menu li').each(function(index, element) {
+                    $(this).removeClass('active');
+                });
+				
+				// active actual option
+				$('#contacts-link').addClass('active');
+			};
+			
+			
+			function changeContextToSelected(num){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share "+num+" contacts</span>");
+			};
+			function changeContextToAll(){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+			};
+
+		
+			// Space after contacts, so user see how more contacts are added
+			$('#space-after').height($('#space-after').width()/8);
+						
+			
+			// functionality of OS radio
+			
+			$('#radio-os label').click(function(){
+				
+				if ($(this).children('input').is('#android')){
+					$('#social-networks').hide('fast');
+					
+				}
+				
+				if ($(this).children('input').is('#ios')){
+					$('#social-networks').hide('fast');
+					
+				}
+				
+				if ($(this).children('input').is('#other')){
+					$('#social-networks').show('slow');
+					
+				}
+				
+			});
+		
+			
+        });
+    </script>
+	
+	
+</body>
+</html>

@@ -329,6 +329,7 @@ div.divider {
 	padding: 15px;
 	border-radius: 3px;
 	min-height:149px;
+	box-shadow: 1px 1px 1px 0px rgba(1,1,1,0.2);
 }
 
 .account-box.new-account {
@@ -444,6 +445,11 @@ div.divider {
 .results > tbody > tr > td > img.img-circle {
 	width: 60px;
 	height: 60px;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease; 
+  opacity: 0;
 }
 
 /* STUFF ENDS */
