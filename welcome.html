@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contacts | Typeless.</title>
+    <title>Welcome | Typeless.</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -53,79 +53,57 @@
 			
 			<div class="wrapper wrapper-content animated fadeIn" >
 				
-				<div class="row" style="margin-top:80px">
-					<div class="col-md-2 col-md-offset-1 col-xs-3" >
-						<span class="fa fa-mobile" style="font-size:205px;color:#dddddd;"></span>
-					</div>
-					<div class="col-md-6 col-xs-9">
-						<div class="m-b-sm m-t-md" style="font-size:24px;font-weight:400">You're almost done!</div>
-						<p>Typeless is most useful when you have<br>your contacts sources connected.<br></p>
-						<p>Like the contacts from your phone.</p>
-						<div class="m-t" style="font-size:18px;">
-							What kind of phone do you use?
-						</div>
-					</div>
-				</div>
-				
 				<div class="row">
-					<div class="col-md-6 col-md-offset-1 col col-xs-9 col-xs-offset-2">
-						<div class="btn-group btn-group-justified m-t" data-toggle="buttons" style="" id="radio-os">
-							<label class="btn btn-white p-m" >
-								<input type="radio" name="options" id="android">
-									<i class="fa fa-android fa-fw fa-5x m-b m-t"></i><br>Android
-								</input>
-							</label>
-							<label class="btn btn-white p-m">
-								<input type="radio" name="options"  id="ios">
-									<i class="fa fa-apple fa-fw fa-5x m-b m-t"></i><br>iOS
-								</input>
-							</label>
-							<label class="btn btn-white p-m" >
-								<input type="radio" name="options" id="other">
-									<i class="fa fa-ellipsis-h fa-fw fa-5x m-b m-t"></i><br>Other
-								</input>
-							</label>
-						</div>
-						<div id="social-networks" style="display:none">
-							<div class="m-t"><small>
-								We will support other mobile OS's in the future.<br>
-								For now, you can connect your social networks, choose one below:
-							</small></div>
-							<div class="btn-group m-t btn-group-justified" data-toggle="buttons" style="" >
-								
-								<label class="btn btn-white active p-m">
-									<input type="radio" name="options" id="option1" checked>
-										<i class="fa fa-facebook fa-fw"></i>Facebook
-								</label>
-								<label class="btn btn-white">
-									<input type="radio" name="options" id="option2">
-										<i class="fa fa-linkedin-square fa-fw"></i>LinkedIn
-								</label>
-								<label class="btn btn-white">
-									<input type="radio" name="options" id="option3">
-										<i class="fa fa-twitter fa-fw"></i>Twitter
-								</label>
-							</div>
-						</div>
-						<div class="m-t" >
-							<div id="account-type"><small></small></div>
-							<button type="button" class="btn btn-success btn-lg btn-block" >
-								<i class="fa fa-external-link fa-fw m-r-sm"></i>Connect now
+					<div class="col-md-8 col-lg-6 col-md-offset-1">
+						<h1 class="text-center">
+							You're almost done!
+						</h1>
+						<img class="img-responsive" src="./img/welcome-ribbon.png">
+						</img>
+						<p class="text-center m-b-lg" style="font-size:16px">
+						Let's finish off by connecting your<br>
+						phone contacts into Typeless.
+						</p>
+						<div class="text-center m-b">
+							<button type="button" class="btn btn-default btn-outline big-button m-r m-l">
+								<i class="fa fa-google fa-fw"></i><br>
+								<small>Google</small>
+							</button>
+							<button type="button" class="btn btn-default btn-outline big-button m-r m-l">
+								<i class="fa fa-apple fa-fw"></i><br>
+								<small>iCloud</small>
 							</button>
 						</div>
+						<div class="m-b" style="float:left">
+							<div style="float: left;width: 50%;">
+								<p class="text-right m-l-lg m-r small">
+									Choose Google if you use an Android device, or if you use GMail/Google Apps as your main contacts source. 
+								</p>
+							</div>
+							<div style="float: left;width: 50%;">
+								<p class="text-left m-l-lg m-r small">
+									Choose Apple iCloud if you use an iOS device as your main contacts source.
+								</p>
+							</div>
+						</div>
+						<div class="text-center m-b-lg">
+							<a class="text-muted text-center">Don't have Google or iCloud?</a>
+						</div>
+						<div class="text-center">
+							<p class="text-muted text-center small">*You can connect as many accounts as you want later on.</p>
+						</div>
 					</div>
+					
 				</div>
 				
 			
 				<div id="space-after"></div>
+				
+				
 			</div>
 			
-			<div class="footer fixed_full custom-footer">
-				<div>
-					<a href="">HELP </a>
-					·
-					<a href="">ABOUT </a>
-				</div>
+			<div class="footer fixed_full custom-footer" id="footer">
+				<!-- loaded dinamically -->
 			</div>
 
 		</div>	

@@ -463,6 +463,19 @@ div.divider {
   opacity: 0;
 }
 
+.big-button {
+	height: 100px;
+	width: 100px;
+}
+
+.big-button i {
+	font-size: 40px;
+}
+
+a {
+	cursor: pointer;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
