@@ -21,6 +21,11 @@
 	<span id="modal-windows">
 		<!-- loaded dinamically -->
 	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+	
 
 	<div id="notify-wrapper">
 		<span class="m-t-sm" style="display:none" id="timeout-alert">
@@ -69,33 +74,35 @@
 						
 					</div>
 					
-					<div class="alphabet m-t" style="display:inline-block;margin-top: 12px;vertical-align: middle;">
-						<a class="alphabet float" href="#">A</a>
-						<a class="alphabet float" href="#">B</a>
-						<a class="alphabet float" href="#">C</a>
-						<a class="alphabet float" href="#">D</a>
-						<a class="alphabet float" href="#">E</a>
-						<a class="alphabet float" href="#">F</a>
-						<a class="alphabet float" href="#">G</a>
-						<a class="alphabet float" href="#">H</a>
-						<a class="alphabet float" href="#">I</a>
-						<a class="alphabet float" href="#">J</a>
-						<a class="alphabet float" href="#">K</a>
-						<a class="alphabet float" href="#">L</a>
-						<a class="alphabet float" href="#">M</a>
-						<a class="alphabet float" href="#">N</a>
-						<a class="alphabet float" href="#">O</a>
-						<a class="alphabet float" href="#">P</a>
-						<a class="alphabet float" href="#">Q</a>
-						<a class="alphabet float" href="#">R</a>
-						<a class="alphabet float" href="#">S</a>
-						<a class="alphabet float" href="#">T</a>
-						<a class="alphabet float" href="#">U</a>
-						<a class="alphabet float" href="#">V</a>
-						<a class="alphabet float" href="#">W</a>						
-						<a class="alphabet float" href="#">X</a>
-						<a class="alphabet float" href="#">Y</a>
-						<a class="alphabet float" href="#">Z</a>
+					<div id="letter-selector" class="m-t" style="display:inline-block;vertical-align: middle;">
+						
+						<a class=" float label" href="#">ALL</a>
+						<a class=" float label label-invisible" href="#">A</a>
+						<a class=" float label label-invisible" href="#">B</a>
+						<a class=" float label label-invisible" href="#">C</a>
+						<a class=" float label label-invisible" href="#">D</a>
+						<a class=" float label label-invisible" href="#">E</a>
+						<a class=" float label label-invisible" href="#">F</a>
+						<a class=" float label label-invisible" href="#">G</a>
+						<a class=" float label label-invisible" href="#">H</a>
+						<a class=" float label label-invisible" href="#">I</a>
+						<a class=" float label label-invisible" href="#">J</a>
+						<a class=" float label label-invisible" href="#">K</a>
+						<a class=" float label label-invisible" href="#">L</a>
+						<a class=" float label label-invisible" href="#">M</a>
+						<a class=" float label label-invisible" href="#">N</a>
+						<a class=" float label label-invisible" href="#">O</a>
+						<a class=" float label label-invisible" href="#">P</a>
+						<a class=" float label label-invisible" href="#">Q</a>
+						<a class=" float label label-invisible" href="#">R</a>
+						<a class=" float label label-invisible" href="#">S</a>
+						<a class=" float label label-invisible" href="#">T</a>
+						<a class=" float label label-invisible" href="#">U</a>
+						<a class=" float label label-invisible" href="#">V</a>
+						<a class=" float label label-invisible" href="#">W</a>						
+						<a class=" float label label-invisible" href="#">X</a>
+						<a class=" float label label-invisible" href="#">Y</a>
+						<a class=" float label label-invisible" href="#">Z</a>
 					</div>
 				</span>
             </div>
@@ -1530,6 +1537,8 @@
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
 			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular");
+			$( "#modal-windows-2" ).load( "components.html #new-contact-modal");
+			
 						
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
@@ -1569,6 +1578,11 @@
 					// Target of the button
 					$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-regular');
 				
+				// new contact button
+				
+				$( "#new-contact-btn" ).attr('data-target','#new-contact-modal');
+				
+				
 			};
 			
 			// callback after loading navbar-side
@@ -1586,11 +1600,16 @@
 				$('#contacts-link').addClass('active');
 			};
 			
-			
+			$(".contact-box input:checkbox").click(function(e) {
+				
+				e.stopPropagation();
+			});
 			
 			// Every time I select or deselect a card...
 			var selected = 0;
 			$(".contact-box input:checkbox").change(function(){
+			
+				
 				
 				if ($(this).is(":checked")) {
 					// coming from 0
@@ -1696,6 +1715,21 @@
 				
             });
 			
+			// functionality to letter selector
+			
+			/*
+			$('#letter-selector > a').hover(
+				function(){ $(this).removeClass('label-invisible') },
+				function(){ $(this).addClass('label-invisible') }
+			);*/
+			
+			
+			$('#letter-selector > a').click(function(e){
+				//$('#letter-selector > a').removeClass('label-invisible'); // to avoid duplicates
+				$('#letter-selector > a').addClass('label-invisible');
+				$(this).removeClass('label-invisible');
+				e.stopPropagation();
+			});
 			
         });
     </script>
