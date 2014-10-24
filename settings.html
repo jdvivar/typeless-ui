@@ -52,15 +52,11 @@
 
 			<div class="row wrapper white-bg page-heading">
             	<span id="tools" style="">
-					<div class="sharing-title m-t pull-right" style="">
-						Settings
+					<div class="sharing-title m-t pull-left" style="">
+						Settings <span class="m-l-lg" style="font-size:10px"> {use empty values to get error states}</span>
 					</div>
-					<button type="button" class="btn btn-sm btn-success m-t" id="settings-save-btn">
-						<i class="fa fa-cloud-upload fa-fw"></i> Save</button>	
-					<button type="button" class="btn btn-sm btn-primary btn-outline m-t" id="settings-ok-btn">
-						<i class="fa fa-smile-o fa-fw"></i> All good</button>		
-					<button type="button" class="btn btn-sm btn-danger m-t btn-outline" id="settings-notok-btn">
-						<i class="fa fa-frown-o fa-fw"></i> All not that good</button>		
+					
+					
 					
 				</span>
             </div>
@@ -78,15 +74,26 @@
 					
 						<form role="form">
 						
-							<div class="form-group">
-								<input type="email" placeholder="don.draper@sterlingcooper.com" class="form-control">
-								<p class="text-danger p-m error" style="display:none">
+							<div class="form-group settings-email">
+								<input type="email" placeholder="Enter e-mail" class="form-control" value="don.draper@sterlingcooper.com">
+								
+								<div class="pull-right buttons" style="display:none">
+									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+										Cancel</button>
+										
+									<button type="button" class="btn btn-sm btn-default m-t save" >
+										Save</button>
+								</div>
+								
+								<p class="text-danger m-t-md error" style="display:none">
 									<i class="fa fa-exclamation-circle fa-fw"></i> Invalid e-mail.
 								</p>
-								<p class="text-navy p-m ok" style="display:none">
+								<p class="text-navy m-t-md ok" style="display:none">
 									<i class="fa fa-check-circle fa-fw"></i> E-mail updated.
 								</p>
+								
 							</div>
+							
 							
 						</form>
 						
@@ -95,65 +102,89 @@
 						<p class="sharing-subtitle" style="background-color:whitesmoke;padding-left:10px">Account password</p>
 						<p class="small p-m  settings-subtext">Only requirement: 8 characters minimum.</p>
 					
-						<form role="form">
+						<form role="form"  class="settings-password">
 						
 							<div class="form-group">
-								<input type="password" placeholder="Old password" class="form-control">
-								<p class="text-danger p-m error" style="display:none">
+								<input type="password" placeholder="Old password" class="form-control old-password">
+								<p class="text-danger m-t-sm error old" style="display:none">
 									<i class="fa fa-exclamation-circle fa-fw"></i> Incorrect password.
 								</p>
-							</div>
-							<div class="form-group">
-								<input type="password" placeholder="New password" class="form-control">
-								<p class="text-danger p-m error" style="display:none">
-									<i class="fa fa-exclamation-circle fa-fw"></i> Invalid password.
+								<p class="text-navy m-t-sm ok old" style="display:none">
+									<i class="fa fa-check-circle fa-fw"></i> Correct password.
 								</p>
 							</div>
 							<div class="form-group">
-								<input type="password" placeholder="Re-enter password" class="form-control">
-								<p class="text-danger p-m error" style="display:none">
-									<i class="fa fa-exclamation-circle fa-fw"></i> Passwords don't match.
+								<input type="password" placeholder="New password" class="form-control new-password">
+								<p class="text-danger m-t-sm error new" style="display:none">
+									<i class="fa fa-exclamation-circle fa-fw"></i> Invalid password. 8 characters minimum.
 								</p>
-								<p class="text-navy p-m ok" style="display:none">
-									<i class="fa fa-check-circle fa-fw"></i> Password updated.
-								</p>
+								<!-- <p class="text-navy p-m ok new" style="display:none">
+									<i class="fa fa-check-circle fa-fw"></i> 
+								</p> -->
 							</div>
+							<div class="form-group">
+								<input type="password" placeholder="Re-enter password" class="form-control repeat-password">
+								
+							</div>
+							<div class="pull-right buttons" style="display:none">
+								<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+									Cancel</button>
+									
+								<button type="button" class="btn btn-sm btn-default m-t save" >
+									Save</button>
+							</div>
+							<p class="text-danger m-t-n-xs error repeat" style="display:none">
+								<i class="fa fa-exclamation-circle fa-fw"></i> Passwords don't match.
+							</p>
+							<p class="text-navy m-t-lg ok repeat" style="display:none">
+								<i class="fa fa-check-circle fa-fw"></i> Password updated.
+							</p>
+							
 							
 						</form>
 						
 					</div>
 					
 					<div class="col-sm-4">
-						<p class="sharing-subtitle" style="background-color:whitesmoke;padding-left:10px">E-mail nofifications</p>
+						<p class="sharing-subtitle" style="background-color:whitesmoke;padding-left:10px">E-mail notifications</p>
 						<p class="small p-m  settings-subtext" >Choose which notifications go into your mail inbox.</p>
 					
-						<div class="checkbox m-b-md">
-						  <label>
-							<input type="checkbox" value="" checked>
-							Typeless news & updates
-						  </label>
-						</div>
-						<div class="checkbox m-b-md">
-						  <label>
-							<input type="checkbox" value="" checked>
-							When someone asks for more details on a contact you have.
-						  </label>
-						</div>
-						<div class="checkbox m-b-md">
-						  <label>
-							<input type="checkbox" value="" checked>
-							When someone accepts a request you made on a contact from him or her.
-						  </label>
-						</div>
-						<div class="checkbox m-b-md">
-						  <label>
-							<input type="checkbox" value="" checked>
-							When someone accepts a invitation you sent to share your contacts.
-						  </label>
-						</div>
-						<p class="text-navy p-m ok" style="display:none">
-							<i class="fa fa-check-circle fa-fw"></i> E-mail notifications options updated. 
-						</p>
+						<form role="form"  class="settings-notifications">
+							<div class="checkbox m-b-md">
+							  <label>
+								<input type="checkbox" value="" checked>
+								Typeless news & updates
+							  </label>
+							</div>
+							<div class="checkbox m-b-md">
+							  <label>
+								<input type="checkbox" value="" checked>
+								When someone asks for more details on a contact you have.
+							  </label>
+							</div>
+							<div class="checkbox m-b-md">
+							  <label>
+								<input type="checkbox" value="" checked>
+								When someone accepts a request you made on a contact from him or her.
+							  </label>
+							</div>
+							<div class="checkbox m-b-md">
+							  <label>
+								<input type="checkbox" value="" checked>
+								When someone accepts a invitation you sent to share your contacts.
+							  </label>
+							</div>
+							<div class="pull-right buttons"  style="display:none">
+								
+									
+								<button type="button" class="btn btn-sm btn-default m-t save" >
+									Save</button>
+							</div>
+							<p class="text-navy m-t-xl ok" style="display:none">
+								<i class="fa fa-check-circle fa-fw"></i> E-mail notifications options updated. 
+							</p>
+							
+						</form>
 					</div>
 				</div>
 				
@@ -165,7 +196,7 @@
 					
 						<form role="form">
 						
-							<div class="form-group">
+							<div class="form-group settings-template">
 								<textarea class="form-control" rows="11">Hi {requester},
 								
 I noticed you were looking for {requested}'s contact details, I thought I could help by giving you access to them.
@@ -173,12 +204,20 @@ I noticed you were looking for {requested}'s contact details, I thought I could 
 Regards,
 {me}
 								</textarea>
-								<p class="text-danger p-m error" style="display:none">
+								<div class="pull-right buttons"  style="display:none">
+									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+										Cancel</button>
+										
+									<button type="button" class="btn btn-sm btn-default m-t save" >
+										Save</button>
+								</div>
+								<p class="text-danger m-t error" style="display:none">
 									<i class="fa fa-exclamation-circle fa-fw"></i> Message should include {requested}, {requester} and {me}.
 								</p>
-								<p class="text-navy p-m ok" style="display:none">
+								<p class="text-navy m-t ok" style="display:none">
 									<i class="fa fa-check-circle fa-fw"></i> Template message updated.
 								</p>
+								
 							</div>
 							
 						</form>
@@ -189,19 +228,27 @@ Regards,
 					
 						<form role="form">
 						
-							<div class="form-group">
+							<div class="form-group settings-template">
 								<textarea class="form-control" rows="11">Hi {requester},
 
 I noticed you were looking for {requested}'s contact details, unfortunately I cannot provide you with them as this is a private contact.
 
 Regards,
 {me}</textarea>
-								<p class="text-danger p-m error" style="display:none">
+								<div class="pull-right buttons"  style="display:none">
+									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+										Cancel</button>
+										
+									<button type="button" class="btn btn-sm btn-default m-t save" >
+										Save</button>
+								</div>
+								<p class="text-danger m-t error" style="display:none">
 									<i class="fa fa-exclamation-circle fa-fw"></i> Message should include {requested}, {requester} and {me}.
 								</p>
-								<p class="text-navy p-m ok" style="display:none">
+								<p class="text-navy m-t ok" style="display:none">
 									<i class="fa fa-check-circle fa-fw"></i> Template message updated.
 								</p>
+								
 							</div>
 							
 							
@@ -214,7 +261,7 @@ Regards,
 					
 						<form role="form">
 						
-							<div class="form-group">
+							<div class="form-group settings-template">
 								<textarea class="form-control" rows="11">Hi {requested},
 
 I'd like to introduce you to {requester} (Cc'd).
@@ -223,13 +270,23 @@ I'd like to introduce you to {requester} (Cc'd).
 
 Regards,
 {me}</textarea>
-								<p class="text-danger p-m error" style="display:none">
+								<div class="pull-right buttons"  style="display:none">
+									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+										Cancel</button>
+										
+									<button type="button" class="btn btn-sm btn-default m-t save" >
+										Save</button>
+								</div>
+								<p class="text-danger m-t error" style="display:none">
 									<i class="fa fa-exclamation-circle fa-fw"></i> Message should include {requested}, {requester} and {me}.
 								</p>
-								<p class="text-navy p-m ok" style="display:none">
+								<p class="text-navy m-t ok" style="display:none">
 									<i class="fa fa-check-circle fa-fw"></i> Template message updated.
 								</p>
+								
 							</div>
+							
+							
 							
 						</form>
 						
@@ -341,25 +398,153 @@ Regards,
 				radioClass: 'iradio_square-green',
 			});
 			
-			// show error state and messages
+						
+			// behaviour of email settings
 			
-			$('#settings-notok-btn').click(function(){
-				$('.form-group').addClass('has-error');
-				$('.error').show('slow');
+			$('.settings-email input').click(function(){
+				//console.log('click on input - email');
+				$(this).nextAll('div.buttons').fadeIn('slow');
+				$('.settings-email .error, .settings-email .ok').hide();
+				$('.settings-email').removeClass('has-error');
+				$('.settings-email').removeClass('has-success');
 			});
 			
-			$('#settings-ok-btn').click(function(){
-				$('.form-group').addClass('has-success');
-				$('.ok').show('slow');
-			});
-
-			$('#settings-save-btn').click(function(){
-				$('.form-group').removeClass('has-success');
-				$('.form-group').removeClass('has-error');
-				$('.ok').hide('slow');
-				$('.error').hide('slow');
+			$('.settings-email button.save').click(function(){
+				//console.log('click on save - email');
+				if ($('.settings-email input').val()==''){
+					//console.log('empty');
+					$('.settings-email .error').fadeIn('slow');
+					$('.settings-email input').closest('.form-group').addClass('has-error');
+				}
+				else {
+					//console.log('not empty');
+					$('.settings-email .ok').fadeIn('slow');
+					$('.settings-email input').closest('.form-group').addClass('has-success');
+				}
 			});
 			
+			$('.settings-email button.cancel').click(function(){
+				$('.settings-email').removeClass('has-success');
+				$('.settings-email').removeClass('has-error');
+				$('.settings-email .error, .settings-email .ok').hide();
+				$('.settings-email div.buttons').fadeOut('slow');
+				$('.settings-email input').val('don.draper@sterlingcooper.com');
+			});
+			
+				
+			// behaviour of password settings
+			
+			$('.settings-password input.old-password').focus(function(){
+				$('.settings-password p.error.old, .settings-password p.ok.old').hide();
+				$('.settings-password input.old-password').closest('.form-group').removeClass('has-success');
+				$('.settings-password input.old-password').closest('.form-group').removeClass('has-error');
+			});
+			
+			$('.settings-password input.new-password').focus(function(){
+			
+				$('.settings-password input.new-password').closest('.form-group').removeClass('has-success');
+				$('.settings-password input.new-password').closest('.form-group').removeClass('has-error');
+				$('.settings-password p.error.new, .settings-password p.ok.new').hide();
+				
+				if ($('.settings-password input.old-password').val()==''){
+				
+					$('.settings-password p.error.old').fadeIn('slow');
+					$('.settings-password input.old-password').closest('.form-group').addClass('has-error');
+				}
+				else {
+				
+					$('.settings-password p.error.old').fadeOut('slow');
+					$('.settings-password p.ok.old').fadeIn('slow');
+					$('.settings-password input.old-password').closest('.form-group').addClass('has-success');
+				}
+			});
+			
+			$('.settings-password input.repeat-password').focus(function(){
+				$('.settings-password input.repeat-password').closest('.form-group').removeClass('has-success');
+				$('.settings-password input.repeat-password').closest('.form-group').removeClass('has-error');
+				$('.settings-password p.error.repeat, .settings-password p.ok.repeat').hide();
+				
+			
+				if ($('.settings-password input.new-password').val()==''){
+					
+					$('.settings-password p.error.new').fadeIn('slow');
+					$('.settings-password input.new-password').closest('.form-group').addClass('has-error');
+				}
+				else {
+				
+					//$('.settings-password p.ok.new').fadeIn('slow');
+					$('.settings-password input.new-password').closest('.form-group').addClass('has-success');
+					
+					$('.settings-password div.buttons').fadeIn('slow');
+				}
+			});
+			
+			$('.settings-password button.save').click(function(){
+			
+				if ($('.settings-password input.repeat-password').val()==''){
+				
+					$('.settings-password p.error.repeat').fadeIn('slow');
+					$('.settings-password input.repeat-password').closest('.form-group').addClass('has-error');
+				}
+				else {
+				
+					$('.settings-password p.ok.repeat').fadeIn('slow');
+					$('.settings-password input.repeat-password').closest('.form-group').addClass('has-success');
+				}
+				
+			});
+			
+			$('.settings-password button.cancel').click(function(){
+				$('.settings-password .form-group').removeClass('has-error');
+				$('.settings-password .form-group').removeClass('has-success');
+				$('.settings-password p').hide();
+				$('.settings-password input').val('');
+				
+			});
+			
+				
+			// behaviour of notifications settings
+			
+			$('.settings-notifications').change(function(){
+				$('.settings-notifications div.buttons').fadeIn('slow');
+			});
+			
+			$('.settings-notifications button.save').click(function(){
+				$('.settings-notifications p.ok').fadeIn('slow');
+			});
+			
+			// behaviour of message templates settings
+			
+			$('.settings-template textarea').focusin(function(){
+				
+				self = $(this);
+				orig = $(this).val();
+				console.log('focus on textarea');
+				$(this).nextAll('div.buttons').fadeIn('slow');
+				
+				$('.settings-template button.cancel').click(function(){
+					self.val(orig);
+				});
+				
+				$('.settings-template button.save').click(function(){
+										
+					if (self.val()==''){
+						self.val(orig);
+						self.nextAll('p.error').fadeIn();
+						self.nextAll('p.ok').hide();
+					}
+					else {
+						self.nextAll('p.ok').fadeIn();
+						self.nextAll('p.error').hide();
+					}
+				});
+			});
+			
+			$('.settings-template textarea').focusout(function(){
+				
+				$(this).nextAll('div.buttons').fadeOut('slow');
+				
+			});
         });
     </script>
 	
