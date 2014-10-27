@@ -11,7 +11,11 @@
 		<button type="button" onclick="popup('')">generic</button>
 		<script>
 			function popup(account_type) {
-				myWindow = window.open("connecting-auth.html?"+account_type, "_blank", "width=800, height=500");  // Opens a new window
+				w = 800;
+				h = 400;
+				var left = (screen.width/2)-(w/2);
+				var top = (screen.height/2)-(h/2);
+				myWindow = window.open("connecting-auth.html?"+account_type, "_blank", "width="+w+', height='+h+', top='+top+', left='+left);  // Opens a new window
 				myWindow.focus();   
 			}
 		</script>
