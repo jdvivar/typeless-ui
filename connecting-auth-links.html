@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		Each button opens a new page with auth transition animation<br>
+		<button type="button" onclick="popup('facebook')">facebook</button>
+		<button type="button" onclick="popup('google')">google</button>
+		<button type="button" onclick="popup('icloud')">icloud</button>
+		<button type="button" onclick="popup('linkedin')">linkedin</button>
+		<button type="button" onclick="popup('')">generic</button>
+		<script>
+			function popup(account_type) {
+				myWindow = window.open("connecting-auth.html?"+account_type, "_blank", "width=800, height=500");  // Opens a new window
+				myWindow.focus();   
+			}
+		</script>
+	</body>
+</html>
