@@ -1548,21 +1548,22 @@
 				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
 				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */
 				
-				// placeholder behaviour corrected
-				/*
-				$('#top-search').focusin(function(){
-					$(this).attr('placeholder','');
-				});
-				$('#top-search').focusout(function(){
-					$(this).attr('placeholder','Search for people, jobs, companies & more');
-				});
-				*/
+				// Activate/deactivate button tooltips
+				$(function() {
+					
+					$(window).bind("load resize", function() {
+						if ($(this).width() < 1190) {
+							$("[data-tooltip='tooltip']").tooltip();
+						} else {
+							$("[data-tooltip='tooltip']").tooltip('destroy');
+						}
+					})
+					
+				})
 
-				// Dropdown menu after focus
 				
-
 				// Activate tooltips
-				$("[data-toggle='tooltip']").tooltip();
+				//$("[data-tooltip='tooltip']").tooltip();
 				
 				// how does it look without results?
 				$('button.no-results').click(function(){
