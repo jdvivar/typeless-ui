@@ -33,4 +33,8 @@
 <file name="logo_outlook_com-gray.png" server="ftp.danielvivar.com" local="130579458952257598" remote="130579911600000000" Dst="2" />
 <file name="logo_outlook_com.png" server="ftp.danielvivar.com" local="130579440567267372" remote="130579911600000000" Dst="2" />
 <file name="welcome-ribbon.png" server="ftp.danielvivar.com" local="130584568166172034" remote="130584439200000000" Dst="2" />
+<file name="cloud-logo-generic.png" server="ftp.danielvivar.com" local="130588816767261637" remote="130588680000000000" Dst="1" />
+<file name="cloud-logo-typeless.png" server="ftp.danielvivar.com" local="130559553153632586" remote="130588680000000000" Dst="1" />
+<file name="cloud-logo-google.png" server="ftp.danielvivar.com" local="130559543374550420" remote="130588680000000000" Dst="1" />
+<file name="cloud-logo-icloud.png" server="ftp.danielvivar.com" local="130570692299337195" remote="130588680000000000" Dst="1" />
 </dwsync>
