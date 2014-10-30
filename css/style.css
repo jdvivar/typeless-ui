@@ -515,6 +515,17 @@ a.underline:hover {
 	min-height:75px;
 }
 
+.secure-notice{
+	position:absolute;
+	width:300px;
+	margin-left:-150px;
+	left:50%;
+	bottom:0;
+	border:1px solid #dddddd;
+	border-radius:5px;
+	padding:10px;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
