@@ -273,9 +273,26 @@ div.divider {
 	background-color: #e5e5e5;
 }
 
+.click-share-notice{
+	position:absolute;
+	width:300px;
+	right: 150px;
+	top: -8px;
+}
+
+@media (max-width: 990px) {
+  .hide-below-990 {
+    display: none;
+  }
+  
+}
+
 @media (max-width: 1190px) {
   .btn-responsive > span {
     display: none;
+  }
+  .click-share-notice{
+	right:15px;
   }
 }
 
