@@ -3176,6 +3176,12 @@ table.table-mail tr td {
   margin-left: -150px;
   margin-top: -330px;
 }
+.loginsignup.middle-box {
+  width: 600px;
+  margin-left: -300px;
+  margin-top: -330px;
+}
+
 .logo-name {
   color: #e6e6e6;
   font-size: 180px;

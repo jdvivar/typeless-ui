@@ -118,10 +118,10 @@
 						
 						<span >
 							<span class="contentEditable profile-name ">Satish Jayakumar</span>
-							<span class="badge badge-primary" style="position:absolute"><i class="fa fa-check-circle" ></i> Verified</span>
+							<span class="badge badge-primary" style="position:absolute"><i class="fa fa-check-circle" ></i> Verified</span>							
 							<br>
-							<span class="contentEditable profile-job text-muted ">This job title can have a maximum of 70 characters long, like this one</span>						
-							<span class="contentEditable profile-location text-muted"><i class="fa fa-map-marker m-r-sm"></i>Barcelona, Spain</span>
+							<span class=" profile-job text-muted ">This job title can have a maximum of 70 characters long, like this one</span>						
+							<span class=" profile-location text-muted"><i class="fa fa-map-marker m-r-sm"></i>Barcelona, Spain</span>
 						</span>
 					
 						<div class="row m-t-lg m-b hide-on-limited show-on-full show-on-editable" >
@@ -131,17 +131,48 @@
 									<i class="fa fa-envelope fa-fw fa-2x m-t-xs"></i>
 								</div>
 								<div class="pull-left m-l" >
-									<p class="profile-details">
+									<div class="profile-details">
+										<div style="position:absolute">
+											<button type="button" class="m-l-sm btn btn-link btn-xs hide-on-limited hide-on-full show-on-editable" style="display:none;position:relative;left:-33px">
+												<i class="fa fa-times fa-fw"></i>
+											</button>
+										</div>
 										<span class="contentEditable label label-fixed m-r-sm">WORK</span>
 										<a class="contentEditable" href="mailto:virginia@panteon.org">satish@panteon.org</a>
+										
 										<br>
+										<div style="position:absolute">
+											<button type="button" class="m-l-sm btn btn-link btn-xs hide-on-limited hide-on-full show-on-editable" style="display:none;position:relative;left:-33px">
+												<i class="fa fa-times fa-fw"></i>
+											</button>
+										</div>
 										<span class="contentEditable label label-fixed  m-r-sm">PERSONAL</span>
 										<a class="contentEditable" href="mailto:virginia.madsen@gmail.com">satish.jy@gmail.com</a>
+										
 										<br>
+										<div style="position:absolute">
+											<button type="button" class="m-l-sm btn btn-link btn-xs hide-on-limited hide-on-full show-on-editable" style="display:none;position:relative;left:-33px">
+												<i class="fa fa-times fa-fw"></i>
+											</button>
+										</div>
 										<span class="contentEditable label label-fixed  m-r-sm">OTHER</span>
+										
 										<a class="contentEditable" href="mailto:fairy1980@hotmail.pt">fairy1975@hotmail.pt</a>
 										<br>
-									</p>
+										<span class="new-field" style="display:none">
+											<div style="position:absolute">
+												<button type="button" class="m-l-sm btn btn-link btn-xs hide-on-limited hide-on-full show-on-editable" style="display:none;position:relative;left:-33px">
+													<i class="fa fa-times fa-fw"></i>
+												</button>
+											</div>
+											<span class="contentEditable label label-fixed m-r-sm" onclick="document.execCommand('selectAll',false,null)">OTHER</span>
+											<a class="contentEditable " href="mailto:" onclick="document.execCommand('selectAll',false,null)">Enter e-mail</a>
+										</span>
+										<br class="new-field" style="display:none">
+										<button type="button" class="btn btn-default btn-outline btn-xs hide-on-limited hide-on-full show-on-editable add-field" style="display:none">
+											<i class="fa fa-plus fa-fw"></i>
+										</button>
+									</div>
 								</div>
 							</div>
 							
@@ -159,7 +190,9 @@
 										<br>										
 										<span class="contentEditable label label-fixed m-r-sm">OTHER</span>
 										<a class="contentEditable" href="tel:+447477334762">+44 7477 334 762</a>
-										<br>										
+										<br>
+										
+										
 									</div>
 									<button type="button" class="btn btn-xs btn-white m-t-xs show-more-items">Show more</i></button>
 									<div class="profile-details more-items" style="display:none">
@@ -406,6 +439,13 @@
 			$('#edit-btn').click(function(e) {
 				$('.contentEditable').addClass('contenteditable-style');
 				$('.contentEditable').attr('contenteditable','true');
+				
+				// show everything
+				$('.show-more-details').click();
+				$('.show-more-items').click();
+				
+				
+				
 			});
 			
 			// When click on a request details button			
@@ -475,6 +515,11 @@
 				$(this).fadeOut('fast', function(){
 					$('#edit-notes').fadeIn('slow');
 					});
+			});
+			
+			// when click on add field
+			$('.add-field').click(function(){
+				$('.new-field').show('fast');
 			});
 			
         });
