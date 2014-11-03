@@ -45,7 +45,7 @@
             <form class="m-t-lg" role="form" action="index.html">
 			
 				<div class="form-group">
-                    <input type="text" class="form-control" placeholder="name" required="" x-webkit-speech>
+                    <input type="text" class="form-control" placeholder="name" required="" style="text-transform: capitalize;" x-webkit-speech>
 					<a id="voice" class="small underline" style="float: right;position: relative;bottom: 25px;right: 9px;"><i class="fa fa-microphone"></i></a>
 					
 					<p class="text-left small suggest-name" style="margin: 3px auto -5px 13px;display:none">did you say "<a class="underline"></a>"?</p>
@@ -129,12 +129,12 @@
 			
 			$('.suggest-email a').click(function(){
 				$('input[type=email]').val($(this).text());
-				$(this).hide('slow');
+				$('.suggest-email').hide('slow');
 			});
 			
 			$('.suggest-name a').click(function(){
 				$('input[type=text]').val($(this).text());
-				$(this).hide('slow');
+				$('.suggest-name').hide('slow');
 			});
 			
 			
