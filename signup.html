@@ -45,13 +45,17 @@
             <form class="m-t-lg" role="form" action="index.html">
 			
 				<div class="form-group">
-                    <input type="text" class="form-control" placeholder="name" required="">
+                    <input type="text" class="form-control" placeholder="name" required="" x-webkit-speech>
+					<a id="voice" class="small underline" style="float: right;position: relative;bottom: 25px;right: 9px;"><i class="fa fa-microphone"></i></a>
+					
+					<p class="text-left small suggest-name" style="margin: 3px auto -5px 13px;display:none">did you say "<a class="underline"></a>"?</p>
 					<p class="text-left text-navy m-t-xs show-error" style="display:none">
 						<i class="fa fa-check-circle fa-fw"></i> Success message for inputs.
 					</p>
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="e-mail" required="">
+					<p class="text-left small suggest-email" style="margin: 3px auto -5px 13px;display:none">you mean "<a class="underline"></a>"?</p>
 					<p class="text-left text-danger m-t-xs show-error" style="display:none">
 						<i class="fa fa-check-circle fa-fw"></i> Error message for inputs.
 					</p>
@@ -107,6 +111,47 @@
 				$('form .form-group:eq(1)').addClass('has-error');
 			});
 			
+			
+			// suggestion for email domains, just gmail by now
+			$('input[type=email]').keypress(function(){
+				console.log('keypress');
+				val = $(this).val();
+				if (val.search('@g')!=-1) {
+					$('.suggest-email a').text(val.split('@')[0]+'@gmail.com');
+					$('.suggest-email').show('fast');
+				}
+				if (val==''){
+					$('.suggest-email').hide('fast');
+				}
+			});
+			
+			
+			
+			$('.suggest-email a').click(function(){
+				$('input[type=email]').val($(this).text());
+				$(this).hide('slow');
+			});
+			
+			$('.suggest-name a').click(function(){
+				$('input[type=text]').val($(this).text());
+				$(this).hide('slow');
+			});
+			
+			
+			// voice recognition
+			$('#voice').click(function () {
+				var recognition = new webkitSpeechRecognition();
+				//recognition.lang = "en-GB";
+				recognition.continuous = true;
+				recognition.interimResults = true;
+				recognition.onresult = function(e) { 
+				  console.log(e);
+				  $('.suggest-name a').text(e.results[0][0].transcript);
+				  $('.suggest-name').show('fast');
+				}
+				recognition.start();
+			});
+
 		});
 	</script>
 

@@ -543,6 +543,12 @@ a.underline:hover {
 	padding:10px;
 }
 
+.filter.badge {
+	position: absolute;
+	right: 10px;
+	margin-top:4px;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
