@@ -152,6 +152,18 @@
 				recognition.start();
 			});
 
+			// URL parameters
+			
+			var param = document.URL.split("?")[1];
+			var params = param.split("&");
+			
+			$(params).each(function(i,v){
+				if (v.split('=')[0]=='email')
+					$('input[type=email]').val(decodeURI(v.split('=')[1]));
+				if (v.split('=')[0]=='name')
+					$('input[type=text]').val(decodeURI(v.split('=')[1]));
+			});
+			
 		});
 	</script>
 
