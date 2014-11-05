@@ -50,8 +50,21 @@
 	<ul class="nav navbar-top-links navbar-right">
 
 		
-		<button class="btn btn-default btn-outline m-t m-r-sm">DOWNLOAD</button>
-		<button class="btn m-t m-r">LOG IN</button>
+		<div class="btn-group m-t m-r-sm">
+			<button data-toggle="dropdown" class="btn btn-white btn-outline dropdown-toggle">
+				DOWNLOAD <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li role="presentation" class="dropdown-header m-t text-center">"Typeless is where your contacts are"</li>
+				<li class="divider"></li>
+				<li><a class="" href="#">Chrome Extension for GMail <small class="text-muted m-l">beta</small></a></li>
+				<li><a class="" href="#">iOS app<small class="text-muted m-l">beta</small></a></li>
+				<li><a class="" href="#">Android app <small class="text-muted m-l">soon, click to stay updated</small></a></li>
+				<li><a class="" href="#">Outlook plugin<small class="text-muted m-l">soon, click to stay updated</small></a></li>
+			</ul>
+		</div>
+		
+		<button class="btn btn-default m-t m-r">LOG IN</button>
 			
 	</ul>
 	
@@ -66,10 +79,56 @@
 				
     <div id="wrapper" class="container animated fadeIn" style="margin-top:64px">
         <div class="row">
-			<div class="col-md-5 col-md-offset-1" style="background-color:pink; height:100px">
-				
+			<div class="col-md-5 col-md-offset-1" style="">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators" >
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+						<i class="fa fa-plug"></i>
+						
+					</li>
+					<li data-target="#carousel-example-generic" data-slide-to="1">
+						<i class="fa fa-link fa-rotate-270"></i>
+					</li>
+					<li data-target="#carousel-example-generic" data-slide-to="2">
+						<i class="fa fa-clock-o"></i>
+					</li>
+					<li data-target="#carousel-example-generic" data-slide-to="3"><i class="fa fa-tablet"></i></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+					  <img class="img-responsive" src="img/plug-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
+					  <div class="carousel-caption" >
+						Connecting accounts will let you manage all your contacts in one place.
+					  </div>
+					</div>
+					<div class="item">
+					  <img class="img-responsive" src="img/chain-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
+					  <div class="carousel-caption">
+						Sharing details and requesting them are one click away.
+					  </div>
+					</div>
+					<div class="item">
+					  <img class="img-responsive" src="img/clock-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
+					  <div class="carousel-caption">
+						Plus they will always be up to date.
+					  </div>
+					</div>
+					<div class="item">
+					  <img class="img-responsive" src="img/devices-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
+					  <div class="carousel-caption">
+						No matter what you use, Typeless is where your contacts are.
+					  </div>
+					</div>
+					
+				  </div>
+
+				  
+				</div>
 			</div>
-			<div class="col-md-5" style="background-color:red; height:100px">
+			<div class="col-md-5" style="background-color:whitesmoke; height:100px">
 				
 			</div>
 		</div>
