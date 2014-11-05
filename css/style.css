@@ -549,6 +549,37 @@ a.underline:hover {
 	margin-top:4px;
 }
 
+.dropdown-notifications {
+	min-width: 500px;
+}
+
+.dropdown-notifications  .dropdown-header:first-child{
+	padding-top: 15px;
+}
+
+.dropdown-notifications .notification-item{
+	
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right: 10px;
+	display:flex!important;
+}
+
+.dropdown-notifications .divider {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.dropdown-notifications .divider:last-of-type {
+	margin-left:0;
+	margin-right:0;
+}
+
+.notification-item .message {
+	margin-right: 100px;
+}
+
+
 /* STUFF ENDS */
 
 .nav > li > a {

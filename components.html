@@ -121,42 +121,112 @@
 
 		<li class="dropdown">
 			<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-				<i class="fa fa-bell"></i>  <span class="badge">3</span>
+				<i class="fa fa-bell"></i>  <span class="badge">9</span>
 			</a>
-			<ul class="dropdown-menu dropdown-alerts">
-				<li>
-					<a href="mailbox.html">
-						<div>
-							<i class="fa fa-envelope fa-fw m-r-sm"></i> You have <span class="badge">16</span> new messages
-							<span class="pull-right text-muted small">4min ago</span>
-						</div>
-					</a>
-				</li>
-				<li class="divider"></li>
-				<li>
-					<a href="profile.html">
-						<div>
-							<i class="fa fa-twitter fa-fw m-r-sm"></i> <span class="badge">2</span> new followers
-							<span class="pull-right text-muted small">12min ago</span>
-						</div>
-					</a>
-				</li>
-				<li class="divider"></li>
-				<li>
-					<a href="grid_options.html">
-						<div>
-							<i class="fa fa-upload fa-fw m-r-sm"></i> Server Rebooted
-							<span class="pull-right text-muted small">2h ago</span>
-						</div>
-					</a>
-				</li>
-				<li class="divider"></li>
-				<li>
-					<div class="text-center link-block">
-						<a href="notifications.html">
-							<strong>See All</strong>
-						</a>
+			<ul class="dropdown-menu dropdown-notifications">
+				
+				<li role="presentation" class="dropdown-header">Notification title</li>
+				
+				<li role="presentation" class="notification-item">
+					
+					<div style="position:relative;width:100%">	
+
+							<div class="pull-left" style="width:60%">
+								Notification message, with <a class="underline no-margins no-padding">links</a> and buttons for actions to the right.
+								The message could be as long as we want, it occupies 60% of the whole row.
+							</div>
+
+
+							<div class="pull-right text-right small text-muted" style="width:40%;position:absolute;bottom:0;right:0">
+								<button type="button" class="btn btn-default btn-xs">BUTTON</button>
+								<button type="button" class="btn btn-default btn-xs">BUTTON</button>
+								<div class="m-t-xs">timestamp<div>
+							</div>
+
 					</div>
+				</li>
+				<li class="divider"></li>
+				<li role="presentation" class="notification-item">
+					
+					<div style="position:relative;width:100%">	
+
+							<div class="pull-left" style="width:60%">
+								Simple notification <br>
+								with 2 lines
+							</div>
+
+
+							<div class="pull-right text-right small text-muted" style="width:40%;position:absolute;bottom:0;right:0">
+								timestamp
+							</div>
+
+					</div>
+				</li>
+				<li class="divider"></li>
+				<li role="presentation" class="notification-item">
+					
+					<div style="position:relative;width:100%">	
+
+							<div class="pull-left" style="width:60%">
+								Simple notification
+							</div>
+
+
+							<div class="pull-right text-right small text-muted" style="width:40%;position:absolute;bottom:0;right:0">
+								timestamp
+							</div>
+
+					</div>
+				</li>
+				<li class="divider"></li>
+				<li role="presentation" class="dropdown-header">Single contact request</li>
+				
+				<li role="presentation" class="notification-item">
+					
+					<div style="position:relative;width:100%">	
+
+							<div class="pull-left" style="width:60%">
+								<a class="underline no-margins no-padding">Michael Stephanblome</a> is asking for <a class="underline no-margins no-padding">Satish Jayakumar</a>
+								's contact details.
+							</div>
+
+
+							<div class="pull-right text-right small text-muted" style="width:40%;position:absolute;bottom:0;right:0">
+								<button type="button" class="btn btn-default btn-xs">ACCEPT</button>
+								<button type="button" class="btn btn-default btn-xs">DECLINE</button>
+								<button type="button" class="btn btn-default btn-xs">INTRO</button>
+								<div class="m-t-xs">Received 5 min ago<div>
+							</div>
+
+					</div>
+				</li>
+				<li class="divider"></li>
+				<li role="presentation" class="dropdown-header">Single contact request</li>
+				
+				<li role="presentation" class="notification-item">
+					
+					<div style="position:relative;width:100%">	
+
+							<div class="pull-left" style="width:60%">
+								<a class="underline no-margins no-padding">Michael Stephanblome</a> asked for <a class="underline no-margins no-padding">Satish Jayakumar</a>
+								's contact details.
+							</div>
+
+
+							<div class="pull-right text-right small text-muted" style="width:40%;position:absolute;bottom:0;right:0">
+								
+								<div class="m-t-xs">Accepted 18 h ago<div>
+							</div>
+
+					</div>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="notifications.html" class="link-block" style="margin:8px">
+						<div class="text-center">
+							SEE ALL
+						</div>
+					</a>
 				</li>
 			</ul>
 		</li>

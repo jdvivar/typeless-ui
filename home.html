@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<span id="modal-windows-1">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+
+	<div id="notify-wrapper">
+		<span class="m-t-sm" style="display:none" id="timeout-alert">
+			<div class="alert alert-success">
+				<a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
+			</div>
+		</span>
+	</div>
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+			
+	<div class="navbar-header">
+	
+		<a href="./" class="m-r m-t m-b logo-temp">
+			<img src="img/logo-typeless-express.png">
+		</a>
+
+		
+		
+	</div>
+	
+	<ul class="nav navbar-top-links navbar-right">
+
+		
+		<button class="btn btn-default btn-outline m-t m-r-sm">DOWNLOAD</button>
+		<button class="btn m-t m-r">LOG IN</button>
+			
+	</ul>
+	
+	
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" class="container animated fadeIn" style="margin-top:64px">
+        <div class="row">
+			<div class="col-md-5 col-md-offset-1" style="background-color:pink; height:100px">
+				
+			</div>
+			<div class="col-md-5" style="background-color:red; height:100px">
+				
+			</div>
+		</div>
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+	
+	<!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+	
+	<!-- EayPIE -->
+    <script src="js/plugins/easypiechart/jquery.easypiechart.js"></script>
+	
+	<!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+		
+			
+			$('#space-after').height($('#space-after').width()/8);
+
+
+        });
+    </script>
+	
+	
+</body>
+</html>
