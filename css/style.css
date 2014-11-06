@@ -640,6 +640,7 @@ a.underline:hover {
 
 .notifications-style .ui-pnotify-container {
 	min-width:300px;
+	padding-right:36px;
 }
 
 .notifications-style  .ui-pnotify-title {
@@ -651,7 +652,7 @@ a.underline:hover {
 }
 
 .notifications-style  .ui-pnotify-text  span{
-	margin-right:50px;
+	margin-right:25px;
 }
 
 .notifications-style  .ui-pnotify-text  a{
@@ -663,6 +664,12 @@ a.underline:hover {
 .notifications-style  .ui-pnotify-text  a:hover{
 	//color:initial;
 	text-decoration:underline;
+}
+
+.notifications-style .ui-pnotify-closer {
+	position: absolute;
+	right:14px;
+	bottom:12px;
 }
 
 

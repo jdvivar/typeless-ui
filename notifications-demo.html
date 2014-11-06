@@ -13,6 +13,7 @@
 	<link href="css/animate.css" rel="stylesheet">
 	<!-- <link href="css/plugins/pnotify/pnotify.core.css" rel="stylesheet" /> -->
 	<link href="css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" />
+	<link href="css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" />
 
     <link href="css/style.css" rel="stylesheet">
 
@@ -77,11 +78,12 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/plugins/pnotify/pnotify.core.js"></script>
+	<script src="js/plugins/pnotify/pnotify.buttons.js"></script>
 
     <script>
         $(document).ready(function() {
 		
-			//PNotify.prototype.options.styling = "fontawesome";
+			PNotify.prototype.options.styling = "fontawesome";
 			
 			var stack_bottomleft = {"dir1": "up", "dir2": "right", "push": "top"};
 				
@@ -92,9 +94,13 @@
 						text: '<span>Notice text.</span><a class=\'pull-right\'>action2</a><a class=\'pull-right\'>action1</a>',
 						icon: false,
 						shadow: false,						
-						delay: 5000,
+						delay: 500000,
 						addclass: 'notifications-style stack-bottomleft type-regular',
 						stack: stack_bottomleft,
+						buttons:{
+							sticker: false,
+							closer_hover:false,
+						}
 					});
 
 			});
@@ -107,9 +113,13 @@
 						icon: false,
 						shadow: false,
 						type: 'success', // others are "notice", "info", "success", or "error".
-						delay: 5000,
+						delay: 500000,
 						addclass: 'notifications-style stack-bottomleft type-success',
 						stack: stack_bottomleft,
+						buttons:{
+							sticker: false,
+							closer_hover:false,
+						}
 					});
 			
 			});
@@ -124,6 +134,10 @@
 						delay: 5000,
 						addclass: 'notifications-style stack-bottomleft type-error',
 						stack: stack_bottomleft,
+						buttons:{
+							sticker: false,
+							closer_hover:false,
+						}
 					});
 			});
 			
