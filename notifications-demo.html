@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications demo | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<!-- <link href="css/plugins/pnotify/pnotify.core.css" rel="stylesheet" /> -->
+	<link href="css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows-1">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+			
+	<div class="navbar-header">
+	
+		<a href="./" class="m-r m-t m-b logo-temp">
+			<img src="img/logo-typeless-express.png">
+		</a>
+
+		
+		
+	</div>
+	
+	<ul class="nav navbar-top-links navbar-right">
+
+		
+		
+			
+	</ul>
+	
+	
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" class="container animated fadeIn" style="margin-top:64px">
+        <div class="row">
+			<div class="m-t-xl m-l-xl m-r-xl" style="">
+			
+				<button id="reg-not" class="btn btn-white btn-lg m-sm">regular notification</button>
+				<button id="suc-not" class="btn btn-white btn-lg m-sm">success notification</button>
+				<button id="err-not" class="btn btn-white btn-lg m-sm">error notification</button>
+				<button id="rel-not" class="btn btn-white btn-lg m-sm">release all</button>
+				
+			
+			</div>
+		</div>
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins/pnotify/pnotify.core.js"></script>
+
+    <script>
+        $(document).ready(function() {
+		
+			//PNotify.prototype.options.styling = "fontawesome";
+			
+			var stack_bottomleft = {"dir1": "up", "dir2": "right", "push": "top"};
+				
+			$('#reg-not').click(function(){	
+
+					new PNotify({
+						title: false,
+						text: '<span>Notice text.</span><a class=\'pull-right\'>action2</a><a class=\'pull-right\'>action1</a>',
+						icon: false,
+						shadow: false,						
+						delay: 5000,
+						addclass: 'notifications-style stack-bottomleft type-regular',
+						stack: stack_bottomleft,
+					});
+
+			});
+			
+			$('#suc-not').click(function(){	
+			
+					new PNotify({
+						title: false,
+						text: '<span>Sharing invitation sent.</span><a class=\'pull-right\'>UNDO</a>',
+						icon: false,
+						shadow: false,
+						type: 'success', // others are "notice", "info", "success", or "error".
+						delay: 5000,
+						addclass: 'notifications-style stack-bottomleft type-success',
+						stack: stack_bottomleft,
+					});
+			
+			});
+			
+			$('#err-not').click(function(){	
+					new PNotify({
+						title: 'I think we should not use titles nor icons nor shadows.',
+						text: '<span>Very long notice text so that you can see how it spans. </span><a class=\'pull-right\'>action2</a><a class=\'pull-right\'>action1</a>',
+						icon: true,
+						shadow: true,
+						type: 'error', // others are "notice", "info", "success", or "error".
+						delay: 5000,
+						addclass: 'notifications-style stack-bottomleft type-error',
+						stack: stack_bottomleft,
+					});
+			});
+			
+			$('#rel-not').click(function(){	
+				PNotify.removeAll();
+			});
+			
+        });
+    </script>
+	
+	
+</body>
+</html>

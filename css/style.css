@@ -614,6 +614,57 @@ a.underline:hover {
 	font-weight: 200;
 }
 
+.notifications-style.type-regular .ui-pnotify-container{
+	background-color:whitesmoke;
+	border-color:#dddddd;
+	color: gray;
+}
+
+.notifications-style.type-success .ui-pnotify-container{
+	
+	background-color:#F0F9ED;
+	border-color:;
+	color: ;
+}
+
+.notifications-style.type-error .ui-pnotify-container{
+	
+	background-color:#FAEFEF;
+	border-color:;
+	color: ;
+}
+
+.notifications-style {
+	width:auto!important;
+}
+
+.notifications-style .ui-pnotify-container {
+	min-width:300px;
+}
+
+.notifications-style  .ui-pnotify-title {
+	
+}
+
+.notifications-style  .ui-pnotify-text {
+	
+}
+
+.notifications-style  .ui-pnotify-text  span{
+	margin-right:50px;
+}
+
+.notifications-style  .ui-pnotify-text  a{
+	text-transform:uppercase;
+	margin-left:10px;
+	color:inherit;
+}
+
+.notifications-style  .ui-pnotify-text  a:hover{
+	//color:initial;
+	text-decoration:underline;
+}
+
 
 /* STUFF ENDS */
 
