@@ -42,33 +42,22 @@
 			</div>
 		</div>
 		<div style="background-color: #e5e5e5;position: fixed;top: 108px;right: 0;height: 100%;width: 330px;border-left: 30px solid white;">
-			<div class="container">
-				<div class="row">
-					<h4 class="m-t m-l"> extension elements should go here</h4>
-				</div>				
-			</div>
+			<iframe frameborder=0 scrolling="yes" height="100%" src=""></iframe>
 		</div>
 	</div>
-	
-	
-	
-	<!-- <div style="background-color:gray;float:left;margin-top:108px;height:200px;width:auto"></div> -->
-	<!-- <div style="background-color:pink;float:right;margin-top:108px;height:200px;width:100px"></div> -->
-	
-	
 
 	<img src="img/gmail-corner-left-bottom.png" style="position:fixed;bottom:0;left:0">
     
 	<!-- Mainly scripts -->
     <script src="../js/jquery-1.10.2.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-	<script src="../js/plugins/pnotify/pnotify.core.js"></script>
-	<script src="../js/plugins/pnotify/pnotify.buttons.js"></script>
 
     <script>
         $(document).ready(function() {
 		
+			var url = document.URL.split("?")[1];
 			
+			$('iframe').attr('src','./'+url);
 			
         });
     </script>
