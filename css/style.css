@@ -725,8 +725,8 @@ a.underline:hover {
 	font-weight: bold;
 	height: 29px;
 	line-height: 27px;
-	margin-right: 16px;
-	margin-top:10px;
+	/* margin-right: 16px; */
+	margin-top:9px;
 	min-width: 70px;
 	outline-color: rgb(68, 68, 68);
 	outline-style: none;
@@ -748,6 +748,15 @@ a.underline:hover {
 .ce-button:active {
 	background-image: -webkit-linear-gradient(top, rgb(238, 238, 238), rgb(224, 224, 224));
 	border-color: rgb(204,204,204);
+}
+
+.ce-menu-dropdown{
+	margin-right:7px;
+	min-width:200px
+}
+
+.ce-menu-dropdown .badge{
+	margin-top:3px;
 }
 
 
