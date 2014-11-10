@@ -673,6 +673,84 @@ a.underline:hover {
 }
 
 
+.ce-bar {   /* chrome extension bar */
+	border-bottom: 1px solid  #e5e5e5;
+	background-color: white;
+	height: 48px;
+}
+
+.ce-secure-notice {
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	padding: 10px;
+	position: absolute;
+	left: 15px;
+	right: 15px;
+	bottom: 75px;
+	background-color: #f3f3f3;
+}
+
+.ce-button {
+	-webkit-box-shadow: none;
+	-webkit-user-select: none;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245), rgb(241, 241, 241));
+	border-bottom-color: rgba(0, 0, 0, 0.0980392);
+	border-bottom-left-radius: 2px!important;
+	border-bottom-right-radius: 2px!important;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
+	border-image-slice: 100%;
+	border-image-source: none;
+	border-image-width: 1;
+	border-left-color: rgba(0, 0, 0, 0.0980392);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: rgba(0, 0, 0, 0.0980392);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: rgba(0, 0, 0, 0.0980392);
+	border-top-left-radius: 2px!important;
+	border-top-right-radius: 2px!important;
+	border-top-style: solid;
+	border-top-width: 1px;
+	box-shadow: none;
+	color: rgb(68, 68, 68);
+	cursor: default;
+	display: inline-block;
+	font-family: arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 29px;
+	line-height: 27px;
+	margin-right: 16px;
+	margin-top:10px;
+	min-width: 70px;
+	outline-color: rgb(68, 68, 68);
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 0px;
+	position: relative;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.ce-button:hover {
+	border-color: rgb(198,198,198);
+	background-image: -webkit-linear-gradient(top, rgb(248, 248, 248), rgb(241, 241, 241));
+}
+
+.ce-button:active {
+	background-image: -webkit-linear-gradient(top, rgb(238, 238, 238), rgb(224, 224, 224));
+	border-color: rgb(204,204,204);
+}
+
+
 /* STUFF ENDS */
 
 .nav > li > a {

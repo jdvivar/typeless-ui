@@ -17,10 +17,69 @@
 	
 </head>
 
-<body>
+<body class="">
 
-	
-	this is login.html, loaded dinamically from layout.html
+	<div class="container">
+		<div class="row ce-bar">
+			<button class="ce-button btn disabled" id="ce-back" aria-disabled="disabled">
+				<i class="fa fa-chevron-left"></i> Back
+			</button>
+			<button class="ce-button btn disabled pull-right" id="ce-menu">
+				<i class="fa fa-bars"></i> Typeless
+			</button>
+		</div>
+		<div class="row">
+			<div class="container text-center">
+			
+				<div class="m-t-lg">
+
+					<img src="../img/logo-typeless-express.png" style="width:60%">
+
+				</div>
+			
+				<h3 class="m-t-lg">Welcome</h3>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+				
+				<form class="m-t-lg" role="form" action="index.html">
+				
+					<div class="form-group">
+						<input type="email" class="form-control" placeholder="e-mail" required="">
+					</div>
+					
+					<div class="form-group" >
+						<input type="password" class="form-control" placeholder="password" required="">
+					</div>
+					
+					<a class="underline pull-right small m-t-n" href="password-recover.html">Forgot password?</a>
+					
+					<div class="checkbox text-left m-l-sm" style="width:50%">
+						<label>
+							<input type="checkbox"> Remember me
+						</label>
+					</div>
+					
+					<div class="m-b-lg m-t-lg">
+						<button type="submit" class="btn btn-default">LOG IN</button>
+					</div>
+					
+					<div class="text-center">
+						<span class="text-muted"><small>New to Typeless?</small></span><br>
+						<a class="underline" href="">Sign up <i class="fa fa-external-link"></i></a>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		<div class="text-center ce-secure-notice">
+				
+			<span class="text-muted">
+				<small><i class="fa fa-lock fa-fw"></i> We secure all data using <br>1024 bit encryption.</small>
+			</span>
+			
+		</div>
+	</div>
 
 	<!-- Mainly scripts -->
     <script src="../js/jquery-1.10.2.js"></script>
