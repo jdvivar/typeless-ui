@@ -19,13 +19,17 @@
 
 <body class="">
 
+	<script>
+		
+	</script>
+
 	<div class="container">
 		<div class="row ce-bar text-center">
 			<button class="btn ce-button disabled pull-left" id="ce-back">
 				<i class="fa fa-chevron-left"></i> Back
 			</button>
 			
-			<div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div>
+			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
 			
 			<div class="dropdown pull-right">
 			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:7px" id="ce-menu" data-toggle="dropdown">
@@ -45,13 +49,64 @@
 			  </ul>
 			</div>
 			
-		</div>
-		<div class="row">
-			<div class="container text-center">
+			<button class="btn ce-button pull-right m-r-sm" id="ce-notifications" >
+				<i class="fa fa-bell"></i> 6
+			</button>
 			
-				
+		</div>
+	</div>
+	<div class="container " >
+		<div class="row">
+			
+			<div class="input-group m-t-sm ce-search-bar" style="margin-right:7px">
+				<span class="input-group-btn">
+					<button type="button" class="btn" id="top-search-btn"><i class="fa fa-search"></i></button>
+				</span>
+				<input type="text" class="form-control" id="top-search" placeholder="Search for people, jobs, companies &amp; more">
+			</div>
+			
+		</div>
+		<div class="row m-t-sm">
+			<div class="col-xs-6 col-xs-offset-3">
+				<div class="row">
+					<img class="img-circle img-responsive" src="../img/satish-sq.jpg" style="width:100%">
+					<span class="badge badge-primary" style="position:absolute;top: 0;right: -21px;"><i class="fa fa-check-circle"></i> Verified</span>
+				</div>
 			</div>
 		</div>
+		<div class="row text-center m-t-sm">
+			<div class="col-xs-10 col-xs-offset-1">
+				<span class="ce-profile-name">Satish Shortword Jayakumarlongword</span>
+				<span class="ce-profile-job text-muted m-t-sm">This job title can have a maximum of 70 characters long, like this one</span>
+				<span class="ce-profile-location text-muted"><i class="fa fa-map-marker m-r-sm"></i>Barcelona, Spain</span>
+		
+				<a class="btn btn-white btn-xs m-t-sm m-r-sm " data-tooltip="tooltip" data-placement="bottom" title="See it in Typeless.co">FULL PROFILE <span class="fa fa-external-link"></span></a>
+				<a class="btn btn-white btn-xs m-t-sm" data-tooltip="tooltip" data-placement="bottom"  title="Shared by Michael Stephanblome"><span class="fa fa-link"></span></a>
+			</div>
+		</div>
+		<div class="divider m-t-sm"></div>
+		<div class="row m-t-sm">
+			
+				<span class="copy m-l-sm" data-tooltip="tooltip" data-placement="bottom" title="Ctrl+C to copy">satish@bondable.com</span>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">satish@bondable.com</textarea>
+				<span class="m-l-sm badge" >2+</span>
+				<a type="button" class="btn btn-default btn-xs pull-right m-r-sm"
+					data-tooltip="tooltip" data-placement="left" title="Send e-mail message" href="mailto:satish@bondable.com"><i class="fa fa-send fa-fw"></i></a>
+			
+		</div>
+		
+		<div class="row m-t-sm">
+			
+				<span class="copy m-l-sm" data-tooltip="tooltip" data-placement="bottom" title="Ctrl+C to copy">+44 7477 322 890</span>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">+44 7477 322 890</textarea>
+				<span class="m-l-sm badge" >1+</span>
+			
+				<a type="button" class="btn btn-default btn-xs pull-right m-r-sm" href="tel:+44 7477 322 890"
+				data-tooltip="tooltip" data-placement="left" title="Call this number"><i class="fa fa-phone fa-fw"></i></a>
+				
+		</div>
+		
+		<div class="divider m-t-sm"></div>
 	</div>
 
 	<!-- Mainly scripts -->
@@ -63,7 +118,15 @@
     <script>
         $(document).ready(function() {
 		
-			
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+		
+			// select when hover to copy to clipboard
+			$('.copy').hover(function(){
+				//console.log($(this).nextAll('.select'));
+				$(this).nextAll('.select').show();
+				$(this).nextAll('.select').select();
+			}, function(){});
 			
         });
     </script>

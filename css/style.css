@@ -694,7 +694,10 @@ a.underline:hover {
 	-webkit-box-shadow: none;
 	-webkit-user-select: none;
 	background-color: rgba(0, 0, 0, 0);
-	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245), rgb(241, 241, 241));
+	background-image: linear-gradient(top,#F5F5F5,#f1f1f1);
+	background-image: -ms-linear-gradient(top,#F5F5F5,#f1f1f1);
+	background-image: -webkit-linear-gradient(top, #F5F5F5, #F1F1F1);
+	background-image: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1);
 	border-bottom-color: rgba(0, 0, 0, 0.0980392);
 	border-bottom-left-radius: 2px!important;
 	border-bottom-right-radius: 2px!important;
@@ -742,11 +745,17 @@ a.underline:hover {
 
 .ce-button:hover {
 	border-color: rgb(198,198,198);
-	background-image: -webkit-linear-gradient(top, rgb(248, 248, 248), rgb(241, 241, 241));
+	background-image: linear-gradient(top,#F8F8F8,#f1f1f1);
+	background-image: -ms-linear-gradient(top,#F8F8F8,#f1f1f1);
+	background-image: -webkit-linear-gradient(top, #F8F8F8, #F1F1F1);
+	background-image: -moz-linear-gradient(center top , #F8F8F8, #F1F1F1);
 }
 
 .ce-button:active {
-	background-image: -webkit-linear-gradient(top, rgb(238, 238, 238), rgb(224, 224, 224));
+	background-image: linear-gradient(top,#eeeeee,#e0e0e0);
+	background-image: -ms-linear-gradient(top,#eeeeee,#e0e0e0);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #e0e0e0);
+	background-image: -moz-linear-gradient(center top , #eeeeee, #e0e0e0);
 	border-color: rgb(204,204,204);
 }
 
@@ -757,6 +766,34 @@ a.underline:hover {
 
 .ce-menu-dropdown .badge{
 	margin-top:3px;
+}
+
+.ce-search-bar input{
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	font-size:11px;
+}
+
+#ce-notifications {
+	min-width:0;
+}
+
+.ce-profile-name {
+	font-size: 1.5em;
+	font-weight: lighter;
+	line-height: 1em;
+}
+
+.ce-profile-job {
+	font-size: 0.75em;
+	text-transform: uppercase;
+	display:block;
+}
+
+.ce-profile-location {
+	font-size: 0.75em;
+	text-transform: uppercase;
+	display: block;
 }
 
 
@@ -1770,19 +1807,19 @@ button.dim:active:before {
 */
 
 .tooltip-inner {
-  background-color: #2F4050;
+  background-color: #999999;
 }
 .tooltip.top .tooltip-arrow {
-  border-top-color: #2F4050;
+  border-top-color: transparent;
 }
 .tooltip.right .tooltip-arrow {
-  border-right-color: #2F4050;
+  border-right-color: transparent;
 }
 .tooltip.bottom .tooltip-arrow {
-  border-bottom-color: #2F4050;
+  border-bottom-color: transparent;
 }
 .tooltip.left .tooltip-arrow {
-  border-left-color: #2F4050;
+  border-left-color: transparent;
 }
 
 /* EASY PIE CHART*/

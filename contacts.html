@@ -1558,6 +1558,8 @@
 							$("[data-tooltip='tooltip']").tooltip();
 						} else {
 							$("[data-tooltip='tooltip']").tooltip('destroy');
+							// this is destroying all tooltips in the page, although I'm only interested
+							// in destroying the ones that should be responsive...
 						}
 					})
 					
