@@ -53,16 +53,33 @@
 			<div class="row wrapper white-bg page-heading">
             	<span id="tools" style="">
 					
-					<div class="btn-group btn-outline m-t">
-						
-						<button class="btn btn btn-white" type="button" id="toggle-list">All <span class="badge">35</span></button>
-						<button class="btn btn btn-white active" type="button" id="toggle-cards">New <span class="badge ">6</span></button>
+					<div class="m-t" style="display:inline;position:relative">
+						<span class="fa fa-filter fa-fw m-t" style="position:relative;top:10px"></span>
+					</div>
+					
+					<div class="btn-group btn-outline m-t m-l-xs">
+											
+						<button class="btn btn btn-white active" type="button" id="toggle-list">All</button>
+						<button class="btn btn btn-white" type="button" id="toggle-cards">New <span class="badge ">6</span></button>
 						
 					</div>
 					
-					<div class="sharing-subtitle m-t pull-right" style="">
-						Notifications
+					<div class="m-t m-l" style="display:inline;position:relative">
+						<span class="fa fa-clock-o fa-fw m-t" style="position:relative;top:10px"></span>
 					</div>
+					
+					<div class="btn-group btn-outline m-t m-l-xs">
+						
+						<button class="btn btn btn-white active" type="button" id="toggle-list">All</button>
+						<button class="btn btn btn-white" type="button" id="toggle-cards">Today</button>
+						<button class="btn btn btn-white" type="button" id="toggle-cards">Last 7 days</button>
+						<button class="btn btn btn-white" type="button" id="toggle-cards">Last 30 days</button>
+						
+					</div>
+					
+					<h1 class="pull-right" style="margin:15px 0 0 0">
+						Notifications
+					</h1>
 					
 				</span>
             </div>
@@ -73,126 +90,71 @@
 			
 			<div class="wrapper wrapper-content animated fadeIn" >
 				
-					<div style="">
-					<table class="table results table-hover">
+				<div style="">
+					<h2 style="margin-top:0">Today</h2>
+					<table class="table">
 						<thead>
-							<tr class="va-middle text-muted text-uppercase" style="display:none">
-								
-								<td class="" style="width:3%"></td>
-								<td class="col-md-3">name & e-mail</td>
-								<td class="col-md-2">job title, phone & location</td>
-								<td class="col-md-1">shared by</td>
+							<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke;display:none">
+
+								<td class="" width="250px">type</td>
+								<td class="" width="">message</td>
+								<td class="" width="200px">actions</td>
+								<td class="text-right" width="150px">status</td>
 								
 							</tr>
 						</thead>
 						<tbody>
 						
 							<tr class="va-middle">
-								<td><img alt="image" class="img-circle" src="img/a4.jpg"></td>
-								<td class="name">
-									<strong>Don</strong>ald Draper<br>
-									<small><strong>don</strong>.draper@sterlingcooper.com<small>
+								
+								<td class="text-uppercase small text-muted" width="250px">
+									
+									single contact request <span class="label">NEW</span>
+									
 								</td>
 								<td class="">
-									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Accounts Director at Sterling Cooper<br>
-									<span class="fa fa-phone fa-fw m-r-xs"></span> 9900 99 45 66<br>
-									<span class="fa fa-map-marker fa-fw m-r-xs"></span> Sydney
+									Notification message, with <a class="underline no-margins no-padding">links</a>. This
+									is a very long text to see how the notifications break lines.
 								</td>
-								<td class="">
-									<span class="shared" data-toggle="tooltip" data-placement="bottom" title="Shared by Eva Robles"><i class="fa fa-link"></i>
-								</span></td>
+								<td class="" width="200px">
+									
+									<button type="button" class="btn btn-default btn-xs">ACCEPT</button>
+									<button type="button" class="btn btn-default btn-xs">DECLINE</button>
+									<button type="button" class="btn btn-default btn-xs">INTRO</button>
+								
+								</td>
+								<td class="text-right small text-muted" width="150px">
+									this is a long timestamp
+								</td>
 								
 							</tr>
 							
 							<tr class="va-middle">
-								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
-								<td class="name">
-									Xavier Riva<br>
-									<small>x.riva@mc<strong>don</strong>alds.com<small>
-								</td>
-								<td class="">
-									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
-									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
-									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
-								</td>
-								<td class=""></td>
 								
-							</tr>
-							<tr class="va-middle">
-								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
-								<td class="name">
-									Xavier Riva<br>
-									<small>x.riva@mc<strong>don</strong>alds.com<small>
+								<td class="text-uppercase small text-muted" >
+									
+									single contact request <span class="label">NEW</span>
+									
 								</td>
 								<td class="">
-									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
-									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
-									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+									Notification message, with <a class="underline no-margins no-padding">links</a>. This
+									is a very long text to see how the notifications break lines.
 								</td>
-								<td class=""></td>
+								<td class="" >
+									
+									<button type="button" class="btn btn-default btn-xs">ACCEPT</button>
+									<button type="button" class="btn btn-default btn-xs">DECLINE</button>
+									<button type="button" class="btn btn-default btn-xs">INTRO</button>
 								
-							</tr>
-							<tr class="va-middle">
-								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
-								<td class="name">
-									Xavier Riva<br>
-									<small>x.riva@mc<strong>don</strong>alds.com<small>
 								</td>
-								<td class="">
-									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
-									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
-									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
+								<td class="text-right small text-muted" >
+									this is a long timestamp
 								</td>
-								<td class=""></td>
-								
-							</tr>
-							<tr class="va-middle">
-								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
-								<td class="name">
-									Xavier Riva<br>
-									<small>x.riva@mc<strong>don</strong>alds.com<small>
-								</td>
-								<td class="">
-									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
-									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
-									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
-								</td>
-								<td class=""></td>
-								
-							</tr>
-							<tr class="va-middle">
-								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
-								<td class="name">
-									Xavier Riva<br>
-									<small>x.riva@mc<strong>don</strong>alds.com<small>
-								</td>
-								<td class="">
-									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
-									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
-									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
-								</td>
-								<td class=""></td>
-								
-							</tr>
-							<tr class="va-middle">
-								<td><img alt="image" class="img-circle" src="img/a1.jpg"></td>
-								<td class="name">
-									Xavier Riva<br>
-									<small>x.riva@mc<strong>don</strong>alds.com<small>
-								</td>
-								<td class="">
-									<span class="fa fa-briefcase fa-fw m-r-xs"></span> Branch Manager at McDonalds<br>
-									<span class="fa fa-phone fa-fw m-r-xs"></span> +49 0990 6809 5566<br>
-									<span class="fa fa-map-marker fa-fw m-r-xs"></span> San Lorenzo
-								</td>
-								<td class=""></td>
 								
 							</tr>
 							
 						</tbody>
-					</table>					
-					<a class="btn btn-white btn-rounded btn-block"  id="more-contacts"><i class="fa fa-arrow-down m-r"></i>Show all <span class="badge">35</span></a>
-					
+					</table>	
 				</div>
 				
 				
