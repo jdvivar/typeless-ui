@@ -78,10 +78,10 @@
 								<input type="email" placeholder="Enter e-mail" class="form-control" value="don.draper@sterlingcooper.com">
 								
 								<div class="pull-right buttons" style="display:none">
-									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+									<button type="button" class="btn btn-outline btn-link m-t cancel" >
 										Cancel</button>
 										
-									<button type="button" class="btn btn-sm btn-default m-t save" >
+									<button type="button" class="btn btn-default m-t save" data-toggle="modal" data-target="#enter-password-modal">
 										Save</button>
 								</div>
 								
@@ -89,7 +89,8 @@
 									<i class="fa fa-exclamation-circle fa-fw"></i> Invalid e-mail.
 								</p>
 								<p class="text-navy m-t-md ok" style="display:none">
-									<i class="fa fa-check-circle fa-fw"></i> E-mail updated.
+									<i class="fa fa-check-circle fa-fw"></i> One last thing: confirm the new e-mail address. We just sent
+									you an e-mail message to help you with that.	
 								</p>
 								
 							</div>
@@ -128,10 +129,10 @@
 								
 							</div>
 							<div class="pull-right buttons" style="display:none">
-								<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+								<button type="button" class="btn btn-outline btn-link m-t cancel" >
 									Cancel</button>
 									
-								<button type="button" class="btn btn-sm btn-default m-t save" >
+								<button type="button" class="btn btn-default m-t save" >
 									Save</button>
 							</div>
 							<p class="text-danger m-t-n-xs error repeat" style="display:none">
@@ -178,7 +179,7 @@
 							<div class="pull-right buttons"  style="display:none">
 								
 									
-								<button type="button" class="btn btn-sm btn-default m-t save" >
+								<button type="button" class="btn btn-default m-t save" >
 									Save</button>
 							</div>
 							<p class="text-navy m-t-xl ok" style="display:none">
@@ -206,10 +207,10 @@ Regards,
 {me}
 								</textarea>
 								<div class="pull-right buttons"  style="display:none">
-									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+									<button type="button" class="btn btn-outline btn-link m-t cancel" >
 										Cancel</button>
 										
-									<button type="button" class="btn btn-sm btn-default m-t save" >
+									<button type="button" class="btn btn-default m-t save" >
 										Save</button>
 								</div>
 								<p class="text-danger m-t error" style="display:none">
@@ -237,10 +238,10 @@ I noticed you were looking for {requested}'s contact details, unfortunately I ca
 Regards,
 {me}</textarea>
 								<div class="pull-right buttons"  style="display:none">
-									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+									<button type="button" class="btn  btn-outline btn-link m-t cancel" >
 										Cancel</button>
 										
-									<button type="button" class="btn btn-sm btn-default m-t save" >
+									<button type="button" class="btn  btn-default m-t save" >
 										Save</button>
 								</div>
 								<p class="text-danger m-t error" style="display:none">
@@ -272,10 +273,10 @@ I'd like to introduce you to {requester} (Cc'd).
 Regards,
 {me}</textarea>
 								<div class="pull-right buttons"  style="display:none">
-									<button type="button" class="btn btn-sm btn-outline btn-link m-t cancel" >
+									<button type="button" class="btn btn-outline btn-link m-t cancel" >
 										Cancel</button>
 										
-									<button type="button" class="btn btn-sm btn-default m-t save" >
+									<button type="button" class="btn btn-default m-t save" >
 										Save</button>
 								</div>
 								<p class="text-danger m-t error" style="display:none">
@@ -337,10 +338,7 @@ Regards,
 			$( "#footer" ).load( "components.html #footer" );
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
-			
-			
-			
-			
+			$( "#modal-windows-1" ).load( "components.html #enter-password-modal");
 						
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
@@ -379,19 +377,10 @@ Regards,
 			};
 			
 			function afterLoadingModal(){
-				// functionality to disconnect confirmation button in modal window
-				$('#disconnect-confirmation-btn').click(function(){
-					$('#timeout-alert').fadeIn('slow');
-					$('#timeout-alert').css('display','inline-block');
-					
-					setTimeout(function(){$('#timeout-alert').fadeOut('slow');}, 5000);
-				});
+				
 			};
-		
-		
+				
 			$('#space-after').height($('#space-after').width()/8);
-
-
 
 			// activate i-checks
 			$('.i-checks').iCheck({
@@ -406,6 +395,7 @@ Regards,
 				//console.log('click on input - email');
 				$(this).nextAll('div.buttons').fadeIn('slow');
 				$('.settings-email .error, .settings-email .ok').hide();
+				$('.settings-email button').fadeIn('slow');
 				$('.settings-email').removeClass('has-error');
 				$('.settings-email').removeClass('has-success');
 			});
@@ -419,6 +409,7 @@ Regards,
 				}
 				else {
 					//console.log('not empty');
+					$('.settings-email button').hide();
 					$('.settings-email .ok').fadeIn('slow');
 					$('.settings-email input').closest('.form-group').addClass('has-success');
 				}
