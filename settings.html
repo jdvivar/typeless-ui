@@ -193,73 +193,10 @@
 				<p class="sharing-subtitle m-t-lg" style="background-color:whitesmoke;padding-left:10px">Message templates</p>
 				
 				<div class="row">
-					<div class="col-sm-4">
-						<p class="small  p-m settings-subtext" >When you <strong>accept a request</strong> for more details on one of your contacts, we will send this message to the requester on your behalf:</p>
-					
-						<form role="form">
+					<div class="col-sm-6">
 						
-							<div class="form-group settings-template">
-								<textarea class="form-control" rows="11">Hi {requester},
-								
-I noticed you were looking for {requested}'s contact details, I thought I could help by giving you access to them.
-
-Regards,
-{me}
-								</textarea>
-								<div class="pull-right buttons"  style="display:none">
-									<button type="button" class="btn btn-outline btn-link m-t cancel" >
-										Cancel</button>
-										
-									<button type="button" class="btn btn-default m-t save" >
-										Save</button>
-								</div>
-								<p class="text-danger m-t error" style="display:none">
-									<i class="fa fa-exclamation-circle fa-fw"></i> Message should include {requested}, {requester} and {me}.
-								</p>
-								<p class="text-navy m-t ok" style="display:none">
-									<i class="fa fa-check-circle fa-fw"></i> Template message updated.
-								</p>
-								
-							</div>
-							
-						</form>
-						
-					</div>
-					<div class="col-sm-4">
-						<p class="small p-m settings-subtext" >When you <strong>decline a request</strong> for more details on one of your contacts, we will send this message to the requester on your behalf:</p>
-					
-						<form role="form">
-						
-							<div class="form-group settings-template">
-								<textarea class="form-control" rows="11">Hi {requester},
-
-I noticed you were looking for {requested}'s contact details, unfortunately I cannot provide you with them as this is a private contact.
-
-Regards,
-{me}</textarea>
-								<div class="pull-right buttons"  style="display:none">
-									<button type="button" class="btn  btn-outline btn-link m-t cancel" >
-										Cancel</button>
-										
-									<button type="button" class="btn  btn-default m-t save" >
-										Save</button>
-								</div>
-								<p class="text-danger m-t error" style="display:none">
-									<i class="fa fa-exclamation-circle fa-fw"></i> Message should include {requested}, {requester} and {me}.
-								</p>
-								<p class="text-navy m-t ok" style="display:none">
-									<i class="fa fa-check-circle fa-fw"></i> Template message updated.
-								</p>
-								
-							</div>
-							
-							
-							
-						</form>
-						
-					</div>
-					<div class="col-sm-4">
-						<p class="small p-m settings-subtext">When you <strong>introduce two contacts</strong> after a request, we will send this message on your behalf to the requested and put on copy the requester.</p>
+						<h3 class="p-m" style="padding-bottom:0">Intro</h3>
+						<p class="small settings-subtext" style="padding:0 20px">When you <strong>introduce two contacts</strong> after a request, we will send this message on your behalf to the requested and put on copy the requester.</p>
 					
 						<form role="form">
 						
@@ -293,6 +230,41 @@ Regards,
 						</form>
 						
 					</div>
+					<div class="col-sm-6">
+						<h3 class="p-m" style="padding-bottom:0">Accept</h3>
+						<p class="small settings-subtext"  style="padding:0 20px">When you <strong>accept a request</strong> for more details on one of your contacts, we will send this message to the requester on your behalf:</p>
+					
+						<form role="form">
+						
+							<div class="form-group settings-template">
+								<textarea class="form-control" rows="11">Hi {requester},
+								
+I noticed you were looking for {requested}'s contact details, I thought I could help by giving you access to them.
+
+Regards,
+{me}
+								</textarea>
+								<div class="pull-right buttons"  style="display:none">
+									<button type="button" class="btn btn-outline btn-link m-t cancel" >
+										Cancel</button>
+										
+									<button type="button" class="btn btn-default m-t save" >
+										Save</button>
+								</div>
+								<p class="text-danger m-t error" style="display:none">
+									<i class="fa fa-exclamation-circle fa-fw"></i> Message should include {requested}, {requester} and {me}.
+								</p>
+								<p class="text-navy m-t ok" style="display:none">
+									<i class="fa fa-check-circle fa-fw"></i> Template message updated.
+								</p>
+								
+							</div>
+							
+						</form>
+						
+					</div>
+					
+					
 				</div>
 			</div>
 			
