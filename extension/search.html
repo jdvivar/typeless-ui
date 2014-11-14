@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrome Extension | Typeless.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/animate.css" rel="stylesheet">
+	
+	<link href="../css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" />
+	<link href="../css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+	
+</head>
+
+<body class="">
+
+	<script>
+		
+	</script>
+
+	<div class="container">
+		<div class="row ce-bar text-center">
+			<button class="btn ce-button disabled pull-left" id="ce-back">
+				<i class="fa fa-chevron-left"></i> Back
+			</button>
+			
+			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
+			
+			<div class="dropdown pull-right">
+			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:7px" id="ce-menu" data-toggle="dropdown">
+				<i class="fa fa-bars"></i> Typeless
+			  </button>
+			  <ul class="dropdown-menu ce-menu-dropdown" role="menu" aria-labelledby="ce-menu" >
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contacts<span class="badge pull-right">3,122</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sharing<span class="badge pull-right">768</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Connected accounts<span class="badge pull-right">6</span></a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="#">
+						<span style="display:block"><strong>Donald Draper</strong></span>
+						<span class="small m-t-n-sm" style="display:block">don@sterlingcooper.com</span>
+					</a>
+				</li>
+			  </ul>
+			</div>
+			
+			<button class="btn ce-button pull-right m-r-sm" id="ce-notifications" >
+				<i class="fa fa-bell"></i> 6
+			</button>
+			
+		</div>
+	</div>
+	<div class="container " >
+		
+		<div class="row">
+			
+			<div class="input-group m-t-sm ce-search-bar" style="margin-right:7px">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-sm" id="top-search-btn"><i class="fa fa-search"></i></button>
+				</span>
+				<input type="text" class="form-control input-sm" id="top-search" placeholder="Search for people, jobs, companies &amp; more">
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<!-- Mainly scripts -->
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/plugins/pnotify/pnotify.core.js"></script>
+	<script src="../js/plugins/pnotify/pnotify.buttons.js"></script>
+
+    <script>
+        $(document).ready(function() {
+		
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+		
+        });
+    </script>
+	
+	
+</body>
+</html>
