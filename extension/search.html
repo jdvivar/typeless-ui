@@ -58,14 +58,49 @@
 	<div class="container " >
 		
 		<div class="row">
+			<form role="form">
+				<div class="input-group m-t-sm ce-search-bar" style="margin-right:7px">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm" id="top-search-btn"><i class="fa fa-search"></i></button>
+					</span>
+					<input type="text" class="form-control input-sm" id="top-search" placeholder="Search for people, jobs, companies &amp; more">
+				</div>
+			</form>
 			
-			<div class="input-group m-t-sm ce-search-bar" style="margin-right:7px">
-				<span class="input-group-btn">
-					<button type="button" class="btn btn-sm" id="top-search-btn"><i class="fa fa-search"></i></button>
-				</span>
-				<input type="text" class="form-control input-sm" id="top-search" placeholder="Search for people, jobs, companies &amp; more">
+		</div>
+		<div class="row" id="instructions">
+			<h4 class="m-t">Instructions</h4>
+			<p class="small">
+				
+				> These instructions are obviously never shown.<br>
+				> The search bar is in all the pages of the chrome extension.<br>
+				> It should start to work when the user types something, from character 1.<br>
+				> Also, it should start to work when the user pastes something in the search bar.<br>
+				> Hitting enter or clicking (that is: the submit event) on the search button is prevented because it is not needed.<br>
+				> The mock only works (showing results) if you search for 'don', otherwise it shows the no results page.<br>
+				> One page results: All results will be shown in one page with scroll, unless a limit is reached, from where infinite automatic scroll should start.
+			</p>
+		</div>
+		
+		<div id="no-results" style="display:none">
+			<div class="row">
+				no results
 			</div>
+		</div>
+		
+		<div id="results" style="display:none">
+			<div class="row text-center">
 			
+				<div class="btn-group btn-outline m-t-sm" style="width:100%">
+											
+					<button class="btn btn-xs btn-default active" type="button" >All</button>
+					<button class="btn btn-xs btn-white" type="button">Job titles <span class="badge">6</span></button>
+					<button class="btn btn-xs btn-white" type="button">Companies <span class="badge">6</span></button>
+					<button class="btn btn-xs btn-white" type="button">Locations <span class="badge">6</span></button>
+						
+				</div>
+				
+			</div>
 		</div>
 		
 	</div>
@@ -81,6 +116,35 @@
 		
 			// activate tooltips
 			$("[data-tooltip='tooltip']").tooltip();
+			
+			// search submitting
+			$( 'form' ).submit( function( e ) {
+			  //console.log( 'form submit event: '+$('#top-search').val());
+			  e.preventDefault();
+			});
+			
+			// this is the correct event to manage 
+			$('#top-search').bind('input', function(e){
+				var search = $('#top-search').val();
+				console.log('input event: '+search);
+				results(search);
+			});
+			
+			function results (search) {
+				if (search=='') {
+					$('#instructions').fadeIn('slow');
+					$('#results').hide();
+					$('#no-results').hide();
+				} else if (search=='don'){
+					$('#instructions').hide();
+					$('#results').show();
+					$('#no-results').hide();
+				} else {
+					$('#instructions').hide();
+					$('#results').hide();
+					$('#no-results').show();
+				};
+			}
 		
         });
     </script>
