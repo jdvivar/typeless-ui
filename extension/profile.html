@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
 	
 </head>
 
-<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5">
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%">
 
 	<script>
 		
@@ -25,15 +25,15 @@
 
 	<div class="container">
 		<div class="row ce-bar text-center">
-			<button class="btn ce-button pull-left" id="ce-back" onclick="location.href='search.html'" style="margin-left:9px">
-				<i class="fa fa-chevron-left fa-fw"></i> BACK
+			<button class="btn ce-button pull-left" id="ce-back" onclick="location.href='search.html'" style="margin-left:9px" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Back">
+				<i class="fa fa-chevron-left fa-fw"></i>
 			</button>
 			
 			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
 			
 			<div class="dropdown pull-right">
-			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:8px" id="ce-menu" data-toggle="dropdown">
-				<i class="fa fa-bars fa-fw"></i> TYPELESS
+			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:8px" id="ce-menu" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Start">
+				<img src="../img/tw-favicon.ico" width="100%"></img>
 			  </button>
 			  <ul class="dropdown-menu ce-menu-dropdown" role="menu" aria-labelledby="ce-menu" >
 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contacts<span class="badge pull-right">3,122</span></a></li>
@@ -49,23 +49,29 @@
 			  </ul>
 			</div>
 			
-			<button class="btn ce-button pull-right" id="ce-notifications" style="margin-right:9px" >
-				<i class="fa fa-globe fa-fw"></i> 6
+			<button class="btn ce-button pull-right" id="ce-notifications" style="margin-right:9px" data-tooltip="tooltip" data-html="true" data-placement="bottom" title="6 new notifications<br>in Typeless">
+				<i class="fa fa-bell fa-fw"></i> 6
+			</button>
+			
+			<button class="btn ce-button pull-right" style="margin-right:9px" data-tooltip="tooltip" data-html="true" data-placement="bottom" title="New contact in Typeless">
+				<i class="fa fa-plus fa-fw"></i>
+			</button>
+			
+			<button class="btn ce-button pull-right" style="margin-right:9px" data-tooltip="tooltip" data-html="true" data-placement="bottom" title="Share contacts in Typeless">
+				<i class="fa fa-share-alt fa-fw"></i>
 			</button>
 			
 		</div>
 	</div>
 	<div class="container " >
-		<div class="row">
+	
+		<div class="row search m-t-sm" style="margin-right: -7px;margin-left: -6px;position:relative">
 			
-			<div class="input-group ce-search-bar" style="margin:0 8px 0 9px">
-				<span class="input-group-btn">
-					<button type="button" class="btn btn-sm" id="top-search-btn"><i class="fa fa-search"></i></button>
-				</span>
-				<input type="text" class="form-control input-sm" id="top-search" placeholder="Search for people, jobs, companies &amp; more">
-			</div>
+			<span class="fa fa-search" style="position:absolute;top:8px;left:11px"></span>
+			<input type="text" class="ce-search-bar form-control input-sm" id="top-search" placeholder="Search in Typeless">
 			
 		</div>
+		
 		<div class="row m-t m-b-xs" style="margin-left: -5px;">
 			
 			<a class="btn btn-link btn-xs pull-left m-r-xs" data-tooltip="tooltip" data-placement="bottom" data-html="true"
@@ -148,10 +154,10 @@
 			
 		</div>
 		
-		<div class="row">
+		<!-- <div class="row">
 			<div class="divider m-t-xs"></div>
-		</div>
-		
+		</div> -->
+		<!-- 
 		<div class="row m-t-sm gray-bg" style="display:none">
 		
 			<div class="m-t-sm m-b-xs m-l-sm text-uppercase small text-muted " style="">Get more details on Satish</div>
@@ -218,6 +224,7 @@
 			</div>
 			
 		</div>
+	 -->
 	</div>
 
 	<!-- Mainly scripts -->
@@ -238,6 +245,29 @@
 				$(this).nextAll('.select').show();
 				$(this).nextAll('.select').select();
 			}, function(){});
+			
+			// search bar animations
+			$('#top-search').focus(searchIn);
+			$('#top-search').blur(searchOut);
+			
+			function searchIn(){
+				
+				$('body').addClass('gray-bg');
+				
+				$('.ce-bar').slideToggle('slow');
+				
+				$('.row:not(.search)').fadeOut('slow');
+			};
+					
+			function searchOut(){
+				
+				$('body').removeClass('gray-bg');
+				
+				$('.ce-bar').slideToggle('fast');
+				
+				$('.row:not(.search)').fadeIn('fast');
+				
+			};
 			
 			
 			
