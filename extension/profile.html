@@ -17,7 +17,7 @@
 	
 </head>
 
-<body class="">
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5">
 
 	<script>
 		
@@ -25,15 +25,15 @@
 
 	<div class="container">
 		<div class="row ce-bar text-center">
-			<button class="btn ce-button disabled pull-left" id="ce-back">
-				<i class="fa fa-chevron-left"></i> Back
+			<button class="btn ce-button pull-left" id="ce-back" onclick="location.href='search.html'" style="margin-left:9px">
+				<i class="fa fa-chevron-left fa-fw"></i> BACK
 			</button>
 			
 			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
 			
 			<div class="dropdown pull-right">
-			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:7px" id="ce-menu" data-toggle="dropdown">
-				<i class="fa fa-bars"></i> Typeless
+			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:8px" id="ce-menu" data-toggle="dropdown">
+				<i class="fa fa-bars fa-fw"></i> TYPELESS
 			  </button>
 			  <ul class="dropdown-menu ce-menu-dropdown" role="menu" aria-labelledby="ce-menu" >
 				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contacts<span class="badge pull-right">3,122</span></a></li>
@@ -49,8 +49,8 @@
 			  </ul>
 			</div>
 			
-			<button class="btn ce-button pull-right m-r-sm" id="ce-notifications" >
-				<i class="fa fa-bell"></i> 6
+			<button class="btn ce-button pull-right" id="ce-notifications" style="margin-right:9px" >
+				<i class="fa fa-globe fa-fw"></i> 6
 			</button>
 			
 		</div>
@@ -58,7 +58,7 @@
 	<div class="container " >
 		<div class="row">
 			
-			<div class="input-group m-t-sm ce-search-bar" style="margin-right:7px">
+			<div class="input-group ce-search-bar" style="margin:0 8px 0 9px">
 				<span class="input-group-btn">
 					<button type="button" class="btn btn-sm" id="top-search-btn"><i class="fa fa-search"></i></button>
 				</span>
@@ -66,36 +66,42 @@
 			</div>
 			
 		</div>
-		<div class="row m-t m-b-xs">
-			<div class="col-xs-5">
+		<div class="row m-t m-b-xs" style="margin-left: -5px;">
+			
+			<a class="btn btn-link btn-xs pull-left m-r-xs" data-tooltip="tooltip" data-placement="bottom" data-html="true"
+				title="Shared by Michael Stephanblome" style="position:absolute;right:0;z-index:999"><span class="fa fa-link fa-fw"></span></a>
+		
+			<div class="col-xs-3">
 				<div class="row text-center">
 					<img class="img-circle img-responsive" src="../img/satish-sq.jpg" style="width:100%">
-					<span class="badge badge-primary" style="position:relative;top:-10px;font-size:8px"><i class="fa fa-check-circle"></i> VERIFIED</span>
+					<span class="badge" style="position:relative;top:-10px;font-size:8px"><i class="fa fa-check-circle"></i> VERIFIED</span>
 				</div>
 			</div>
 		
-			<div class="col-xs-7">
+			<div class="col-xs-9">
 				<span class="ce-profile-name">Satish Shortword Jayakumarlongword</span>
-				<span class="ce-profile-job small text-muted m-t-xs">This job title can have a maximum of 70 characters long, like this one</span>
-				<span class="ce-profile-location small text-muted m-t-xs"><i class="fa fa-map-marker fa-fw"></i> Barcelona, Spain</span>
+				<span class="ce-profile-job small text-muted m-t-xs">Sales Manager at Power Plant</span>
+				<span class="ce-profile-location small text-muted m-t-xs"><i class="fa fa-map-marker fa-fw"></i>Bremen, Germany</span>
 		
 			</div>
 		</div>
-		<div class="row">
+		<!-- <div class="row">
 			<div class="divider"></div>
-		</div>
-		<div class="row m-t-sm">
-			<span class="small text-muted pull-left">MAIN</span>
-			<span class="small text-muted pull-right m-r-sm">MORE</span>
-		</div>
-		<div class="row m-t-xs">
+		</div> -->
+		
+		<div class="row m-t-sm" style="margin-left:-5px">
 			
 				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to send e-mail<br>Ctrl+C to copy" href="mailto:satish@bondable.com">satish@bondable.com</a>
 				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">satish@bondable.com</textarea>
 				
+				<br>
+				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to send e-mail<br>Ctrl+C to copy" href="mailto:s.jaya@gmail.com">s.jaya@gmail.com</a>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">s.jaya@gmail.com</textarea>
+				
+				
 				<div class="dropdown ce-dropdown pull-right m-r-xs">
 				  <button class="btn btn-outline btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-					1
+					<small>1 MORE</small>
 					<span class="caret"></span>
 				  </button>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -107,14 +113,17 @@
 			
 		</div>
 		
-		<div class="row m-t-sm">
+		<div class="row m-t-sm" style="margin-left:-5px">
 			
 				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to call this phone<br>Ctrl+C to copy" href="tel:+44 7477 322 890">+44 7477 322 890 </a>
 				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">+44 7477 322 890</textarea>
+				<br>
+				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to call this phone<br>Ctrl+C to copy" href="tel:+44 020 676 2239">+44 020 676 2239 </a>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">+44 020 676 2239</textarea>
 				
 				<div class="dropdown ce-dropdown pull-right m-r-xs">
 				  <button class="btn btn-outline btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-					2
+					<small>2 MORE</small>
 					<span class="caret"></span>
 				  </button>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -125,13 +134,13 @@
 				
 		</div>
 		
-		<div class="row">
+		<!-- <div class="row">
 			<div class="divider m-t-xs"></div>
-		</div>
+		</div> -->
 		
-		<div class="row m-t-sm">
+		<div class="row m-t-sm m-b-xs" style="margin-left:-5px">
 			<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="See it in Typeless.co">FULL PROFILE <span class="fa fa-external-link fa-fw"></span></a>
-			<a class="btn btn-white btn-xs pull-left m-r-sm" data-tooltip="tooltip" data-placement="right" data-html="true" title="Shared by<br>Michael Stephanblome"><span class="fa fa-link fa-fw"></span></a>
+			<a class="btn btn-white btn-xs pull-left m-r-sm" data-tooltip="tooltip" data-placement="right" data-html="true" title="Shared by<br>Michael Stephanblome" style="display:none"><span class="fa fa-link fa-fw"></span></a>
 			
 			<a class="btn btn-xs pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Go to Facebook profile"><span class="fa fa-facebook fa-fw"></span></a>
 			<a class="btn btn-xs pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Go to LinkedIn profile"><span class="fa fa-linkedin fa-fw"></span></a>
@@ -139,7 +148,11 @@
 			
 		</div>
 		
-		<div class="row m-t-sm gray-bg">
+		<div class="row">
+			<div class="divider m-t-xs"></div>
+		</div>
+		
+		<div class="row m-t-sm gray-bg" style="display:none">
 		
 			<div class="m-t-sm m-b-xs m-l-sm text-uppercase small text-muted " style="">Get more details on Satish</div>
 
@@ -171,7 +184,7 @@
 			</div>
 			
 		</div>
-		<div class="row m-t-sm gray-bg">
+		<div class="row m-t-sm gray-bg" style="display:none">
 		
 			<a class="btn btn-xs btn-white pull-right m-sm"
 					data-tooltip="tooltip" data-placement="top" title="See all">89+</a>
