@@ -775,22 +775,22 @@ a.underline:hover {
 	margin-top:3px;
 }
 
-.ce-search-bar {
+.ce-search-bar input{
 	border-radius:0!important;
 	font-size:13px;
-	padding-left: 30px!important;
-	background-color:rgb(232, 232, 232)!important;
-	border-color:lightgray!important;
-	border:none!important;
-}
-.ce-search-bar:hover {
-	background-color:rgb(240, 240, 240)!important;
-}
-
-.ce-search-bar:focus {
 	background-color:white!important;
+	border-bottom-right-radius: 3px!important;
+	border-top-right-radius: 3px!important;
+}
+.ce-search-bar input:hover {
+	background-color:white!important;
+	border-color:#00C3A6!important;
 }
 
+.ce-search-bar input:focus {
+	background-color:white!important;
+	border-color:#00C3A6!important;
+}
 
 #ce-notifications {
 	min-width:0;

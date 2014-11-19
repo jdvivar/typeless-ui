@@ -17,7 +17,7 @@
 	
 </head>
 
-<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%">
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%;background-color:#f1f1f1">
 
 	<script>
 		
@@ -64,15 +64,22 @@
 		</div>
 	</div>
 	<div class="container " >
-	
-		<div class="row search m-t-sm" style="margin-right: -7px;margin-left: -6px;position:relative">
-			
-			<span class="fa fa-search" style="position:absolute;top:8px;left:11px"></span>
-			<input type="text" class="ce-search-bar form-control input-sm" id="top-search" placeholder="Search in Typeless">
-			
-		</div>
+		<div class="row search">
+			<form role="form">
+				<div class="input-group m-t-sm m-b-sm ce-search-bar" style="margin-right:8px;margin-left:9px">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm btn-primary" id="top-search-btn"><i class="fa fa-search"></i></button>
+					</span>
+					<input type="text" class="form-control input-sm" id="top-search" placeholder="Search in Typeless">
+				</div>
+			</form>
 		
-		<div class="row m-t m-b-xs" style="margin-left: -5px;">
+		</div>
+	</div>
+	
+	<div class="container " >
+		
+		<div class="row m-b-xs" style="margin-left: -5px;">
 			
 			<a class="btn btn-link btn-xs pull-left m-r-xs" data-tooltip="tooltip" data-placement="bottom" data-html="true"
 				title="Shared by Michael Stephanblome" style="position:absolute;right:0;z-index:999"><span class="fa fa-link fa-fw"></span></a>
@@ -95,7 +102,7 @@
 			<div class="divider"></div>
 		</div> -->
 		
-		<div class="row m-t-sm" style="margin-left:-5px">
+		<div class="row" style="margin-left:-5px">
 			
 				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to send e-mail<br>Ctrl+C to copy" href="mailto:satish@bondable.com">satish@bondable.com</a>
 				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">satish@bondable.com</textarea>
@@ -140,12 +147,19 @@
 				
 		</div>
 		
+		<div class="row m-t-xs" style="margin-left:-5px">
+			<div class="small text-uppercase">NOTES</div>
+			<div class="well well-sm" style="margin-right:8px;margin-bottom:0;background-color:white">Notes about Satish.<br>line2<br>line3<br>
+				<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="More in Typeless">... MORE</a>
+			</div>
+		</div>
+		
 		<!-- <div class="row">
 			<div class="divider m-t-xs"></div>
 		</div> -->
 		
 		<div class="row m-t-sm m-b-xs" style="margin-left:-5px">
-			<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="See it in Typeless.co">FULL PROFILE <span class="fa fa-external-link fa-fw"></span></a>
+			<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="See it in Typeless">FULL PROFILE <span class="fa fa-external-link fa-fw"></span></a>
 			<a class="btn btn-white btn-xs pull-left m-r-sm" data-tooltip="tooltip" data-placement="right" data-html="true" title="Shared by<br>Michael Stephanblome" style="display:none"><span class="fa fa-link fa-fw"></span></a>
 			
 			<a class="btn btn-xs pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Go to Facebook profile"><span class="fa fa-facebook fa-fw"></span></a>
@@ -252,20 +266,16 @@
 			
 			function searchIn(){
 				
-				$('body').addClass('gray-bg');
-				
 				$('.ce-bar').slideToggle('slow');
 				
-				$('.row:not(.search)').fadeOut('slow');
+				$('.row:not(.search,.ce-bar)').fadeOut('slow');
 			};
 					
 			function searchOut(){
 				
-				$('body').removeClass('gray-bg');
-				
 				$('.ce-bar').slideToggle('fast');
 				
-				$('.row:not(.search)').fadeIn('fast');
+				$('.row:not(.search,.ce-bar)').fadeIn('fast');
 				
 			};
 			
