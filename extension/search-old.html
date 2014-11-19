@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrome Extension | Typeless.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/animate.css" rel="stylesheet">
+	
+	<link href="../css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" />
+	<link href="../css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+	
+</head>
+
+<body class="">
+
+	<script>
+		
+	</script>
+
+	<div class="container">
+		<div class="row ce-bar text-center">
+			<button class="btn ce-button disabled pull-left" id="ce-back">
+				<i class="fa fa-chevron-left"></i> Back
+			</button>
+			
+			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
+			
+			<div class="dropdown pull-right">
+			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:7px" id="ce-menu" data-toggle="dropdown">
+				<i class="fa fa-bars"></i> Typeless
+			  </button>
+			  <ul class="dropdown-menu ce-menu-dropdown" role="menu" aria-labelledby="ce-menu" >
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contacts<span class="badge pull-right">3,122</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sharing<span class="badge pull-right">768</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Connected accounts<span class="badge pull-right">6</span></a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="#">
+						<span style="display:block"><strong>Donald Draper</strong></span>
+						<span class="small m-t-n-sm" style="display:block">don@sterlingcooper.com</span>
+					</a>
+				</li>
+			  </ul>
+			</div>
+			
+			<button class="btn ce-button pull-right m-r-sm" id="ce-notifications" >
+				<i class="fa fa-bell"></i> 6
+			</button>
+			
+		</div>
+	</div>
+	<div class="container " >
+		
+		<div class="row">
+			<form role="form">
+				<div class="input-group m-t-sm ce-search-bar" style="margin-right:7px">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm" id="top-search-btn"><i class="fa fa-search"></i></button>
+					</span>
+					<input type="text" class="form-control input-sm" id="top-search" placeholder="Search for people, jobs, companies &amp; more">
+				</div>
+			</form>
+			
+		</div>
+		<div class="row" id="instructions">
+			<h4 class="m-t">Instructions</h4>
+			<p class="small">
+				
+				> These instructions are obviously never shown.<br>
+				> The search bar is in all the pages of the chrome extension.<br>
+				> It should start to work when the user types something, from character 1.<br>
+				> Also, it should start to work when the user pastes something in the search bar.<br>
+				> Hitting enter or clicking (that is: the submit event) on the search button is prevented because it is not needed.<br>
+				> The mock only works (showing results) if you search for <button id="don">'don'</button>, otherwise it shows the no results page.<br>
+				> One page results: All results will be shown in one page with scroll, unless a limit is reached, from where infinite automatic scroll should start.
+			</p>
+		</div>
+		
+		<div id="no-results" style="display:none">
+			<div class="row">
+				no results
+			</div>
+		</div>
+		
+		<div id="results" style="display:none">
+			<div class="row" style="">
+						
+				<div class="btn-group btn-outline m-t-sm" style="width:100%">
+											
+					<button class="btn btn-xs btn-default active" type="button" style="width: 12%;">All<br><br><span class="badge">35</span></button>
+					<button class="btn btn-xs btn-white" type="button" style="width: 24%;">Names &amp;<br>e-mails<br><span class="badge">32</span></button>
+					<button class="btn btn-xs btn-white" type="button" style="width: 15%;">Job<br>titles<br><span class="badge">5</span></button>
+					<button class="btn btn-xs btn-white" type="button" style="width: 25%;">Companies<br><br><span class="badge">4</span></button>
+					<button class="btn btn-xs btn-white" type="button" style="width: 23%;">Locations<br><br><span class="badge">3</span></button>
+						
+				</div>
+				
+				<div class="text-left m-t-sm" style="margin-right:7px;">
+					<table class="table table-hover">
+					
+						<thead>
+							<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke;display:none">
+								<td class="" width="20%">pic</td>
+								<td class="" width="">type</td>
+								<td class="" width="">rest</td>
+															
+							</tr>
+						</thead>
+						
+						<tbody class="">
+						
+							<tr class="va-middle small" >
+								<td class="" width="20%" style="border-color:transparent">
+									<img class="img-circle" src="../img/a1.jpg" style="width:100%">
+								</td>
+								<td style="border-color:transparent">
+									<span class="small text-uppercase text-muted">name</span><br>
+									<span><strong>Don</strong>ald Draper</span><br>
+									<span class="small text-uppercase text-muted">e-mail</span><br>
+									<span><strong>don</strong>@sterlingcooper.com</span>
+								</td>
+							</tr>
+							<tr class="va-middle small" >
+								<td class="" width="20%" >
+									<img class="img-circle" src="../img/a3.jpg" style="width:100%">
+								</td>
+								<td >
+									<span class="small text-uppercase text-muted">name</span><br>
+									<span><strong>Don</strong>ally Raisin</span><br>
+									<span class="small text-uppercase text-muted">e-mail</span><br>
+									<span>d.raisin@sterlingcooper.com</span>
+								</td>
+							</tr>
+							<tr class="va-middle small" >
+								<td class="" width="20%" >
+									<img class="img-circle" src="../img/a4.jpg" style="width:100%">
+								</td>
+								<td >
+									<span class="small text-uppercase text-muted">name</span><br>
+									<span>Francis Upperland</span><br>
+									<span class="small text-uppercase text-muted">job title</span><br>
+									<span>Sales Manager at Cale<strong>don</strong>ian</span>
+								</td>
+							</tr>
+							<tr class="va-middle small" >
+								<td class="" width="20%" >
+									<img class="img-circle" src="../img/a6.jpg" style="width:100%">
+								</td>
+								<td >
+									<span class="small text-uppercase text-muted">name</span><br>
+									<span>Virginia Madsen</span><br>
+									<span class="small text-uppercase text-muted">Company</span><br>
+									<span>Cale<strong>don</strong>ian</span>
+								</td>
+							</tr>
+							<tr class="va-middle small" onclick="location.href='profile.html'">
+								<td class="" width="20%" >
+									<img class="img-circle" src="../img/a7.jpg" style="width:100%">
+								</td>
+								<td >
+									<span class="small text-uppercase text-muted">name</span><br>
+									<span>Raul Vialas</span><br>
+									<span class="small text-uppercase text-muted">Location</span><br>
+									<span>Re<strong>don</strong>, France</span>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- Mainly scripts -->
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="../js/plugins/pnotify/pnotify.core.js"></script>
+	<script src="../js/plugins/pnotify/pnotify.buttons.js"></script>
+
+    <script>
+        $(document).ready(function() {
+		
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+			
+			// search submitting
+			$( 'form' ).submit( function( e ) {
+			  //console.log( 'form submit event: '+$('#top-search').val());
+			  e.preventDefault();
+			});
+			
+			// this is the correct event to manage 
+			$('#top-search').bind('input', function(e){
+				var search = $('#top-search').val();
+				console.log('input event: '+search);
+				results(search);
+			});
+			
+			function results (search) {
+				if (search=='') {
+					$('#instructions').fadeIn('slow');
+					$('#results').hide();
+					$('#no-results').hide();
+				} else if (search=='don'){
+					$('#instructions').hide();
+					$('#results').show();
+					$('#no-results').hide();
+				} else {
+					$('#instructions').hide();
+					$('#results').hide();
+					$('#no-results').show();
+				};
+			}
+			
+			// insert 'don' with button
+			$('#don').click(function(){
+				$('#top-search').val('don');
+				$('#top-search').trigger('input');
+			});
+		
+        });
+    </script>
+	
+	
+</body>
+</html>

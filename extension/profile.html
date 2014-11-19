@@ -30,8 +30,11 @@
 			</button>
 			
 			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
-			
-			<div class="dropdown pull-right">
+			<button class="btn ce-button pull-right" type="button" style="margin-right:8px" data-tooltip="tooltip" data-placement="bottom" title="Start">
+				<img src="../img/tw-favicon.ico" width="100%"></img>
+			</button>
+			  
+			<!-- <div class="dropdown pull-right">
 			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:8px" id="ce-menu" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Start">
 				<img src="../img/tw-favicon.ico" width="100%"></img>
 			  </button>
@@ -47,7 +50,7 @@
 					</a>
 				</li>
 			  </ul>
-			</div>
+			</div> -->
 			
 			<button class="btn ce-button pull-right" id="ce-notifications" style="margin-right:9px" data-tooltip="tooltip" data-html="true" data-placement="bottom" title="6 new notifications<br>in Typeless">
 				<i class="fa fa-bell fa-fw"></i> 6
@@ -82,7 +85,7 @@
 		<div class="row m-b-xs" style="margin-left: -5px;">
 			
 			<a class="btn btn-link btn-xs pull-left m-r-xs" data-tooltip="tooltip" data-placement="bottom" data-html="true"
-				title="Shared by Michael Stephanblome" style="position:absolute;right:0;z-index:999"><span class="fa fa-link fa-fw"></span></a>
+				title="Shared by Michael Stephanblome" style="position:absolute;right:-4px;z-index:999"><span class="fa fa-link fa-fw"></span></a>
 		
 			<div class="col-xs-3">
 				<div class="row text-center">
@@ -148,9 +151,9 @@
 		</div>
 		
 		<div class="row m-t-xs" style="margin-left:-5px">
-			<div class="small text-uppercase">NOTES</div>
-			<div class="well well-sm" style="margin-right:8px;margin-bottom:0;background-color:white">Notes about Satish.<br>line2<br>line3<br>
-				<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="More in Typeless">... MORE</a>
+			<div class="small m-b-xs">NOTES <a class="btn btn-xs btn-white" data-tooltip="tooltip" data-placement="right" title="Edit in Typeless" style=""><small>EDIT</small></a></div>
+			<div class="well well-sm" style="margin-right:9px;margin-bottom:0;background-color:white">Notes about Satish.<br>There can be more lines.<br>Maximum 3 lines.
+				<a class="btn btn-link btn-xs " data-tooltip="tooltip" data-placement="bottom" title="More in Typeless" style="position:relative;bottom:1px"><small>... MORE</small></a>
 			</div>
 		</div>
 		
@@ -159,7 +162,7 @@
 		</div> -->
 		
 		<div class="row m-t-sm m-b-xs" style="margin-left:-5px">
-			<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="See it in Typeless">FULL PROFILE <span class="fa fa-external-link fa-fw"></span></a>
+			<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="See it in Typeless"><small>FULL PROFILE <span class="fa fa-external-link fa-fw"></small></span></a>
 			<a class="btn btn-white btn-xs pull-left m-r-sm" data-tooltip="tooltip" data-placement="right" data-html="true" title="Shared by<br>Michael Stephanblome" style="display:none"><span class="fa fa-link fa-fw"></span></a>
 			
 			<a class="btn btn-xs pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Go to Facebook profile"><span class="fa fa-facebook fa-fw"></span></a>
@@ -266,14 +269,14 @@
 			
 			function searchIn(){
 				
-				$('.ce-bar').slideToggle('slow');
+				//$('.ce-bar').slideToggle('fast');
 				
-				$('.row:not(.search,.ce-bar)').fadeOut('slow');
+				$('.row:not(.search,.ce-bar)').fadeOut('fast');
 			};
 					
 			function searchOut(){
 				
-				$('.ce-bar').slideToggle('fast');
+				//$('.ce-bar').slideToggle('fast');
 				
 				$('.row:not(.search,.ce-bar)').fadeIn('fast');
 				

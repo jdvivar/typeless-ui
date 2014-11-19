@@ -687,7 +687,7 @@ a.underline:hover {
 	left: 15px;
 	right: 15px;
 	bottom: 75px;
-	background-color: #f3f3f3;
+	background-color: white;
 }
 
 .ce-button {
@@ -775,21 +775,27 @@ a.underline:hover {
 	margin-top:3px;
 }
 
+.ce-search-bar button {
+	width:32px;
+}
+
 .ce-search-bar input{
 	border-radius:0!important;
 	font-size:13px;
 	background-color:white!important;
 	border-bottom-right-radius: 3px!important;
 	border-top-right-radius: 3px!important;
+	border: 1px solid lightgray;
+	border-left:none;
 }
 .ce-search-bar input:hover {
 	background-color:white!important;
-	border-color:#00C3A6!important;
+	border-color:#18a689!important;
 }
 
 .ce-search-bar input:focus {
 	background-color:white!important;
-	border-color:#00C3A6!important;
+	border-color:#18a689!important;
 }
 
 #ce-notifications {
