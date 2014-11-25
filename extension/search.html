@@ -273,19 +273,25 @@
 				</tbody>
 			</table>
 		</div>
-		<div style="height:101px;background-color:#f1f1f1;display:none">
-			<!-- 60 px from gmail header and 41 px from extension footer -->
-		</div>
+		
+		<!-- <div style="height:101px;background-color:#f1f1f1;display:none">
+			
+		</div> -->
 		
 	</div>
 	
 	<div class="container " id="no-results" style="display:none">
 	
 		<div class="row">
-			<div class="m">
-				no results page (to be done)
-				
+			
+			<div class="well text-muted" style="margin:1px 9px 9px 9px">
+				<span class="fa fa-frown-o pull-left" style="font-size:36px"></span>Ups, no contact details found matching <mark id="query"></mark>.
 			</div>
+			<div class="well text-muted" style="margin:1px 9px 9px 9px">
+				<span class="fa fa-question-circle pull-left" style="font-size:36px"></span>Connect a new account to have access to more contacts and enrich with new information the ones you already have.<br>
+				<button class="btn btn-default m-t m-l-lg" type="button" data-tooltip="tooltip" data-placement="bottom" title="Connect new account in Typeless" ><i class="fa fa-plus fa-fw"></i><span class="m-l-xs">Connect new account</span></button>
+			</div>
+				
 		</div>
 	</div>
 	
@@ -318,7 +324,8 @@
 				$('#instructions').hide();
 			};
 			function searchOut (){
-				$('#instructions').show();
+				if ($('#top-search').val()=='')
+					$('#instructions').show();
 			};
 			
 			// search submitting, prevented
@@ -332,6 +339,7 @@
 				var search = $('#top-search').val();
 				console.log('input event: '+search);
 				results(search);
+				$('#query').text(search);
 				//hide dropdown
 				$('.dropdown-menu').parent().removeClass('open');
 			});
