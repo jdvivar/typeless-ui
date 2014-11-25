@@ -55,24 +55,213 @@
 					<span class="input-group-btn">
 						<button type="submit" class="btn btn-sm btn-primary" id="top-search-btn"><i class="fa fa-search"></i></button>
 					</span>
-					<input type="text" class="form-control input-sm" id="top-search" placeholder="Search in Typeless">
+					<input type="text" class="form-control input-sm dropdown-toggle" data-toggle="dropdown" id="top-search" placeholder="Search in Typeless" autocomplete="off">
+					<ul class="dropdown-menu">
+						<li role="presentation" class="dropdown-header" style="margin-top:6px"><small>PREVIOUS SEARCHES</small></li>
+						<li><a href="#" class="prev-search" value="don">'don'</a></li>
+						<li><a href="#" class="prev-search" value="sales manager">'sales manager'</a></li>
+						<li><a href="#" class="prev-search" value="london">'london'</a></li>
+						<li class="divider"></li>
+						<li role="presentation" class="dropdown-header"><small>FAVOURITE CONTACTS</small></li>
+						<li><a href="profile.html"><img class="img-circle m-r-sm" src="../img/a6.jpg" style="width:20px">Virginia Madsen</a></li>
+						<li><a href="profile.html"><img class="img-circle m-r-sm" src="../img/a1.jpg" style="width:20px">Raul Vialas</a></li>
+						<li><a href="profile.html"><img class="img-circle m-r-sm" src="../img/a5.jpg" style="width:20px">Barbara T. Raymond</a></li>
+					</ul>
 				</div>
 			</form>
 		
 		</div>
 	</div>
 	
-	<div class="container " >
+	<div class="container " id="instructions">
+	
+		<div class="row">
+			<h4 class="m">Instructions</h4>
+			<p class="small m">
+				
+				> (meta) These instructions are never shown.<br><br>
+				> The search bar is in all the pages of the chrome extension.<br><br>
+				> It should start to work when the user clicks in the input (focus in event). A list of previous searches or other things may be shown to assist the user. We'll define this behaviour in the future.<br><br>
+				> When the user types something, from character 1, we have to show results.<br><br>
+				> Also, it should show results when the user pastes something in the search bar.<br><br>
+				> Hitting enter or clicking on the search button (that is: the submit event) is prevented because it is not needed. By the time this event could be needed, we already are showing final results to the user.<br><br>
+				> The mock only works (showing results) if you search for <button id="don">'don'</button>, otherwise it shows the no results page.<br><br>
+				> One page results: All results will be shown in one page with infinite scroll, unless a limit is reached, from where infinite automatic scroll should start.
+			</p>
+		</div>
 		
 		<!-- <div class="row">
 			<div class="divider"></div>
 		</div> -->
 		
+	</div>
+	
+	<div class="container " id="results" style="display:none">
+	
+		<div class="row white-bg" style="">
 		
-		<!-- <div class="row">
-			<div class="divider m-t-xs"></div>
-		</div> -->
+			<table class="table table-hover no-margins">
+					
+				<thead>
+					<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke;display:none">
+						<td class="" width="20%">pic</td>
+						<td class="" width="">type</td>
+						<td class="" width="">rest</td>
+													
+					</tr>
+				</thead>
+				
+				<tbody class="">
+				
+					<tr class="va-middle " >
+						<td class="" width="54px" style="border-color:transparent">
+							<img class="img-circle" src="../img/a1.jpg" style="width:100%">
+						</td>
+						<td style="border-color:transparent;padding-left:0">
+							
+							<span><mark>Don</mark>ald Draper</span><br>
+							
+							<span class="text-muted"><mark>don</mark>@sterlingcooper.com</span>
+						</td>
+					</tr>
+					<tr class="va-middle"  >
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a3.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ally Raisin</span><br>
+							
+							<span class="text-muted">d.raisin@sterlingcooper.com</span>
+						</td>
+					</tr>
+					<tr class="va-middle " >
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a4.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Francis Upperland</span><br>
+							
+							<span class="text-muted">Sales Manager at Cale<mark>don</mark>ian</span>
+						</td>
+					</tr>
+					<tr class="va-middle " >
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a6.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Virginia Madsen</span><br>
+							
+							<span class="text-muted">Cale<mark>don</mark>ian</span>
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a7.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Raul Vialas</span><br>
+							<span class="text-muted">Re<mark>don</mark>, France</span>
+						</td>
+					</tr>
+					<tr class="va-middle " >
+						<td class="" width="54px" style="border-color:transparent">
+							<img class="img-circle" src="../img/a1.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ald Draper</span><br>
+							
+							<span class="text-muted"><mark>don</mark>@sterlingcooper.com</span>
+						</td>
+					</tr>
+					<tr class="va-middle"  >
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a3.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ally Raisin</span><br>
+							
+							<span class="text-muted">d.raisin@sterlingcooper.com</span>
+						</td>
+					</tr>
+					<tr class="va-middle " >
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a4.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Francis Upperland</span><br>
+							
+							<span class="text-muted">Sales Manager at Cale<mark>don</mark>ian</span>
+						</td>
+					</tr>
+					<tr class="va-middle " >
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a6.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Virginia Madsen</span><br>
+							
+							<span class="text-muted">Cale<mark>don</mark>ian</span>
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a7.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Raul Vialas</span><br>
+							<span class="text-muted">Re<mark>don</mark>, France</span>
+						</td>
+					</tr>
+					<tr class="va-middle " >
+						<td class="" width="54px" style="border-color:transparent">
+							<img class="img-circle" src="../img/a1.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ald Draper</span><br>
+							
+							<span class="text-muted"><mark>don</mark>@sterlingcooper.com</span>
+						</td>
+					</tr>
+					<tr class="va-middle"  >
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a3.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ally Raisin</span><br>
+							
+							<span class="text-muted">d.raisin@sterlingcooper.com</span>
+						</td>
+					</tr>
+					
+					
+					
+				</tbody>
+			</table>
+		</div>
+		<div style="height:60px;background-color:white">
+		</div>
 		
+	</div>
+	
+	<div class="container " id="no-results" style="display:none">
+	
+		<div class="row">
+			<div class="m">
+				no results page (to be done)
+				
+			</div>
+		</div>
 	</div>
 
 	<!-- Mainly scripts -->
@@ -87,11 +276,66 @@
 			// activate tooltips
 			$("[data-tooltip='tooltip']").tooltip();
 		
-			// search bar animations
+			// search bar events
 			$('#top-search').focus(searchIn);
 			$('#top-search').blur(searchOut);
 			
+			function searchIn (){
+				$('#instructions').hide();
+			};
+			function searchOut (){
+				$('#instructions').show();
+			};
 			
+			// search submitting, prevented
+			$( 'form' ).submit( function( e ) {
+			  console.log( 'form submit event: '+$('#top-search').val());
+			  e.preventDefault();
+			});
+			
+			// manage 'input' event from jquery
+			$('#top-search').bind('input', function(e){
+				var search = $('#top-search').val();
+				console.log('input event: '+search);
+				results(search);
+				//hide dropdown
+				$('.dropdown-menu').parent().removeClass('open');
+			});
+			
+			// what we do, depending on what we type
+			function results (search) {
+				if (search=='') {
+					$('#instructions').fadeIn('slow');
+					$('#results').hide();
+					$('#no-results').hide();
+				} else if (search=='don'){
+					$('#instructions').hide();
+					$('#results').show();
+					$('#no-results').hide();
+				} else {
+					$('#instructions').hide();
+					$('#results').hide();
+					$('#no-results').show();
+				};
+			}
+			
+			// insert 'don' with button
+			$('#don').click(function(){
+				//console.log("clicked don button");
+				search('don');
+			});
+			
+			// function to search programatically
+			function topSearch (what) {
+				$('#top-search').val(what);
+				$('#top-search').trigger('input');
+			}
+			
+			// previous search links
+			$('.prev-search').click(function(){
+				//console.log($(this).attr('value'));
+				topSearch($(this).attr('value'));
+			});
 			
         });
     </script>

@@ -798,6 +798,21 @@ a.underline:hover {
 	border-color:#18a689!important;
 }
 
+.ce-search-bar .dropdown-menu {
+	width: 252px;
+	margin-left:30px;
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+}
+
+.ce-search-bar .dropdown-menu > li > a {
+	line-height: 15px;
+}
+
+.ce-search-bar .dropdown-header {
+	padding-left: 15px;
+}
+
 #ce-notifications {
 	min-width:0;
 }
@@ -821,6 +836,23 @@ a.underline:hover {
 	line-height: 15px;
 }
 
+.ce-footer-logo {
+	background-color: gray;
+	position:relative;
+	bottom:10px;
+	right:10px;
+}
+
+.ce-footer-logo:hover {
+	background-color: #505050;
+}
+
+/* style for mark */
+mark {
+	padding:0;
+	color:inherit;
+	background-color:#dddddd;
+}
 
 /* STUFF ENDS */
 
