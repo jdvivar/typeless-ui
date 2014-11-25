@@ -33,15 +33,17 @@
 <file name="logo_outlook_com-gray.png" server="ftp.danielvivar.com" local="130579458952257598" remote="130579911600000000" Dst="2" />
 <file name="logo_outlook_com.png" server="ftp.danielvivar.com" local="130579440567267372" remote="130579911600000000" Dst="2" />
 <file name="welcome-ribbon.png" server="ftp.danielvivar.com" local="130584568166172034" remote="130584439200000000" Dst="2" />
-<file name="cloud-logo-generic.png" server="ftp.danielvivar.com" local="130588816767261637" remote="130588680000000000" Dst="1" />
-<file name="cloud-logo-typeless.png" server="ftp.danielvivar.com" local="130559553153632586" remote="130588680000000000" Dst="1" />
-<file name="cloud-logo-google.png" server="ftp.danielvivar.com" local="130559543374550420" remote="130588680000000000" Dst="1" />
-<file name="cloud-logo-icloud.png" server="ftp.danielvivar.com" local="130570692299337195" remote="130588680000000000" Dst="1" />
-<file name="cloud-logo-facebook.png" server="ftp.danielvivar.com" local="130588947287879632" remote="130588808400000000" Dst="1" />
-<file name="cloud-logo-linkedin.png" server="ftp.danielvivar.com" local="130588951350204499" remote="130588808400000000" Dst="1" />
-<file name="chain-icon-painted.png" server="ftp.danielvivar.com" local="130596849614953179" remote="130596765000000000" Dst="1" />
-<file name="devices-icon-painted.png" server="ftp.danielvivar.com" local="130596850671878261" remote="130596765000000000" Dst="1" />
-<file name="clock-icon-painted.png" server="ftp.danielvivar.com" local="130596849208121806" remote="130596765000000000" Dst="1" />
-<file name="plug-icon-painted.png" server="ftp.danielvivar.com" local="130596850974360044" remote="130596765000000000" Dst="1" />
+<file name="cloud-logo-generic.png" server="ftp.danielvivar.com" local="130588816767261637" remote="130608809400000000" Dst="1" />
+<file name="cloud-logo-typeless.png" server="ftp.danielvivar.com" local="130559553153632586" remote="130608809400000000" Dst="1" />
+<file name="cloud-logo-google.png" server="ftp.danielvivar.com" local="130559543374550420" remote="130608809400000000" Dst="1" />
+<file name="cloud-logo-icloud.png" server="ftp.danielvivar.com" local="130570692299337195" remote="130608809400000000" Dst="1" />
+<file name="cloud-logo-facebook.png" server="ftp.danielvivar.com" local="130588947287879632" remote="130608809400000000" Dst="1" />
+<file name="cloud-logo-linkedin.png" server="ftp.danielvivar.com" local="130588951350204499" remote="130608809400000000" Dst="1" />
+<file name="chain-icon-painted.png" server="ftp.danielvivar.com" local="130596849614953179" remote="130608809400000000" Dst="1" />
+<file name="devices-icon-painted.png" server="ftp.danielvivar.com" local="130596850671878261" remote="130608809400000000" Dst="1" />
+<file name="clock-icon-painted.png" server="ftp.danielvivar.com" local="130596849208121806" remote="130608809400000000" Dst="1" />
+<file name="plug-icon-painted.png" server="ftp.danielvivar.com" local="130596850974360044" remote="130608809400000000" Dst="1" />
 <file name="tw-favicon.ico" server="ftp.danielvivar.com" local="130607185107546565" remote="130607826000000000" Dst="1" />
+<file name="logo-typeless-express-non-square-inverse-transparent.png" server="ftp.danielvivar.com" local="130608869002471569" remote="130608809400000000" Dst="1" />
+<file name="logo-typeless-express-w200.png" server="ftp.danielvivar.com" local="130608865218207079" remote="130608809400000000" Dst="1" />
 </dwsync>
