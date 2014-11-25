@@ -97,7 +97,7 @@
 		
 	</div>
 	
-	<div class="container " id="results" style="display:none">
+	<div class="container " id="results" style="display:none;overflow-y:auto">
 	
 		<div class="row white-bg" style="">
 		
@@ -273,7 +273,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div style="height:101px;background-color:#f1f1f1">
+		<div style="height:101px;background-color:#f1f1f1;display:none">
 			<!-- 60 px from gmail header and 41 px from extension footer -->
 		</div>
 		
@@ -369,6 +369,16 @@
 			$('.prev-search').click(function(){
 				//console.log($(this).attr('value'));
 				topSearch($(this).attr('value'));
+			});
+			
+			// resize results scroll
+			$(function() {
+					
+				$(window).bind("load resize", function() {
+					var altura = $(this).height();
+					$('#results').height(altura-189);
+				})
+				
 			});
 			
         });
