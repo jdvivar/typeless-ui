@@ -61,7 +61,7 @@
 	font-weight: bold;
 	height: 29px;
 	line-height: 27px;
-	/* margin-right: 16px; */
+	margin-right: 9px;
 	margin-top:9px;
 	//min-width: 70px;
 	outline-color: rgb(68, 68, 68);
@@ -101,6 +101,11 @@
 
 .ce-menu-dropdown .badge{
 	margin-top:3px;
+}
+
+.ce-search-bar {
+	margin-right:8px;
+	margin-left:9px
 }
 
 .ce-search-bar button {
