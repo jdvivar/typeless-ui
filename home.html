@@ -46,7 +46,7 @@
 		<ul class="nav navbar-top-links navbar-right">
 
 			
-			<div class="btn-group m-t m-r-sm">
+			<div class="btn-group m-t m-r-sm" style="display:none">
 				<button data-toggle="dropdown" class="btn btn-white dropdown-toggle">
 					DOWNLOAD <span class="caret"></span>
 				</button>
@@ -68,8 +68,9 @@
 	</nav>
 	
 	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
-	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+	<nav class="navbar-default navbar-static-side" role="navigation" style="" id="navbar-side">
 		<!-- loaded dinamically -->	
+		hola!
 		
 	</nav>
 	
@@ -79,14 +80,13 @@
 			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
 				
 				<img src="img/logo-complete-1000p.png" width="50%" style="margin-top:15%">
-				<div class="m-t-xl"></div>
-				<div class="m-t-xl h2 text-navy" style=""><strong>your contacts, better connected.</strong>
-				</div>
-				<div class="m-t-xl"></div>
-				<div class="m-t-xl  text-gray" style="">Typeless brings together all your contacts together in one unified & easy to use contact book. Typeless is always up-to-date & on the web, on your phone or wherever you need it.
+				
+				<div class="h2 text-navy" style="margin-top:60px"><strong>your contacts, better connected.</strong></div>
+				
+				<div class="text-gray" style="margin-top:40px">Typeless brings together all your contacts in one unified & easy-to-use contact book. It's always up-to-date & on the web, on your phone or wherever you need it.
 				</div>
 				
-				<button type="button" class="btn btn-success btn-lg m-t-xl">SIGN UP</button>
+				<button type="button" class="btn btn-success btn-lg" style="margin-top:80px">SIGN UP</button>
 				<div class="m-t-sm text-gray small">It's <strong>FREE</strong> &amp; takes 10 seconds.
 				</div>
 				
@@ -95,59 +95,6 @@
 			<div class="col-xs-12" style="height:50px;position: absolute;bottom: 0;">
 				<button type="button" class="btn btn-info btn-outline btn m-b-sm scroll" data-to="row-2">LEARN MORE <i class="fa fa-angle-down"></i></button>
 			</div>
-			<!-- <button type="button" class="btn btn-primary btn m-b-sm" style="position: absolute;bottom: 0;">LEARN MORE</button> -->
-
-			
-			
-			<!-- <div class="col-md-5 col-md-offset-1" style="display:none">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  
-				  <ol class="carousel-indicators" >
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active">
-						<i class="fa fa-plug"></i>
-						
-					</li>
-					<li data-target="#carousel-example-generic" data-slide-to="1">
-						<i class="fa fa-link fa-rotate-270"></i>
-					</li>
-					<li data-target="#carousel-example-generic" data-slide-to="2">
-						<i class="fa fa-clock-o"></i>
-					</li>
-					<li data-target="#carousel-example-generic" data-slide-to="3"><i class="fa fa-tablet"></i></li>
-				  </ol>
-
-				  
-				  <div class="carousel-inner" role="listbox">
-					<div class="item active">
-					  <img class="img-responsive" src="img/plug-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
-					  <div class="carousel-caption" >
-						Connecting accounts will let you manage all your contacts in one place.
-					  </div>
-					</div>
-					<div class="item">
-					  <img class="img-responsive" src="img/chain-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
-					  <div class="carousel-caption">
-						Sharing details and requesting them are one click away.
-					  </div>
-					</div>
-					<div class="item">
-					  <img class="img-responsive" src="img/clock-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
-					  <div class="carousel-caption">
-						Plus they will always be up to date.
-					  </div>
-					</div>
-					<div class="item">
-					  <img class="img-responsive" src="img/devices-icon-painted.png" alt="..." style="padding:20% 20% 30% 20% ">
-					  <div class="carousel-caption">
-						No matter what you use, Typeless is where your contacts are.
-					  </div>
-					</div>
-					
-				  </div>
-
-				  
-				</div>
-			</div> -->
 				
 		</div>
 		<div class="row text-center" id="row-2" style="position:relative; margin-left: 10%; margin-right: 10%">
@@ -174,7 +121,7 @@
 			<div class="col-md-4 p-m">
 				<img src="img/clock-icon.png" width="40%">
 				<div class="m-t text-yellow h4 "><strong>UPDATED</strong></div>
-				<div class="m-t text-gray">Typeless looks for & updates any new contacts details of your friends. Always get in touch in one click.</div>
+				<div class="m-t text-gray">Typeless looks for & updates any new contact details of your friends. Always get in touch in one click.</div>
 			</div>
 			<div class="col-md-4 p-m">
 				<img src="img/lock-icon.png" width="40%">
@@ -192,8 +139,55 @@
 		</div>
 		<div class="row text-center" id="row-3" style="position:relative">
 			<div class="col-xs-12" style="height:50px;position: absolute;top: 0;">
-				<button type="button" class="btn btn-info btn-outline btn m-t-sm scroll" data-to="row-1">LEARN MORE <i class="fa fa-angle-up"></i></button>
+				<button type="button" class="btn btn-info btn-outline btn m-t-sm scroll" data-to="row-2">LEARN MORE <i class="fa fa-angle-up"></i></button>
 			</div>
+			<div style="height:10%">
+			</div>			
+			<div class="col-md-12" style>
+				<div class="carousel slide home-carousel" style="position:relative" id="carousel2">
+					<span class="fa fa-quote-right" style="position:absolute;left:38%;top:20%;color:#7f8c8d;opacity:.1;font-size:50px;display:none"></span>
+					<span class="fa fa-quote-left" style="position:absolute;left:38%;bottom:0;color:#7f8c8d;opacity:.3;font-size:50px;display:none"></span>
+					
+					<ol class="carousel-indicators">
+						<li data-slide-to="0" data-target="#carousel2" class="active"></li>
+						<li data-slide-to="1" data-target="#carousel2" class=""></li>
+						<li data-slide-to="2" data-target="#carousel2" class=""></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img alt="image" class="img-responsive" src="img/bdc3c7-100p.png" style="height:300px;width:100%;border-radius:20px;opacity:0;">
+							<div class="carousel-caption">
+								<img class="img-circle img-responsive caption-pic" src="img/satish-sq.jpg" style=""></img>
+								<div class="caption-big">"Lorem ipsum dolor sit amet, odio accumsan at sed, an pro forensibus dissentiet."</div>
+								<div class="caption-small text-success">Oliver Jones</div>
+							</div>
+						</div>
+						<div class="item ">
+							<img alt="image" class="img-responsive" src="img/bdc3c7-100p.png" style="height:300px;width:100%;border-radius:20px;opacity:0;">
+							<div class="carousel-caption">
+								<img class="img-circle img-responsive caption-pic" src="img/a3.jpg" style=""></img>
+								<div class="caption-big">"Et clita tamquam commune pro, zril percipit quaestio mel ut."</div>
+								<div class="caption-small text-success">Hannah Rivera</div>
+							</div>
+						</div>
+						<div class="item ">
+							<img alt="image" class="img-responsive" src="img/bdc3c7-100p.png" style="height:300px;width:100%;border-radius:20px;opacity:0;">
+							<div class="carousel-caption">
+								<img class="img-circle img-responsive caption-pic" src="img/a6.jpg" style=""></img>
+								<div class="caption-big">"At mel wisi lobortis intellegam. Vel ut purto mollis argumentum, at vocent noluisse usu."</i></div>
+								<div class="caption-small text-success">Tom Hiddleston Long</div>
+							</div>
+						</div>
+					</div>
+					<a data-slide="prev" href="#carousel2" class="left carousel-control" >
+						<span class="icon-prev"></span>
+					</a>
+					<a data-slide="next" href="#carousel2" class="right carousel-control" >
+						<span class="icon-next"></span>
+					</a>
+				</div>
+			</div>
+			
 			<div class="col-xs-12" style="height:50px;position: absolute;bottom: 0;">
 				<button type="button" class="btn btn-info btn-outline btn m-b-sm scroll" data-to="row-1">GO TO TOP <i class="fa fa-angle-up"></i></button>
 			</div>

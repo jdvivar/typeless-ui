@@ -672,7 +672,54 @@ a.underline:hover {
 	bottom:12px;
 }
 
-
+.home-carousel .carousel-caption {
+	color: #7f8c8d;
+	text-shadow: none;
+	padding-bottom: 50px;
+}
+.home-carousel .carousel-indicators li {
+	border-color: #1abc9c;
+	display:none;	
+}
+.home-carousel .carousel-indicators .active {
+	background-color: #1abc9c;
+}
+.home-carousel .carousel-control {
+	background: none;
+	border-radius: 20px;
+}
+.home-carousel .carousel-control span{
+	color: #1abc9c;
+	text-shadow: none;
+	font-size: 100px;
+	position:absolute;
+	top: 30%;
+}
+.home-carousel .caption-big{
+	font-weight: 100;
+	font-size: 30px;
+	position: absolute;
+	top: -100px;
+	margin-left: 30%;
+	text-align: left;
+}
+.home-carousel .caption-small{
+	font-size: 18px;
+	margin-top: 15px;
+	position: absolute;
+	bottom: -20px;
+	left:-10%;
+	text-align: center;
+	margin: ;
+	font-weight: 300;
+	width: 200px;
+}
+.home-carousel .caption-pic{
+	position: absolute;
+	bottom: 30%;
+	height: 300%;
+	left: -10%;
+}
 
 /* STUFF ENDS */
 
