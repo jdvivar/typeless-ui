@@ -700,7 +700,8 @@ a.underline:hover {
 	font-size: 30px;
 	position: absolute;
 	top: -100px;
-	margin-left: 30%;
+	margin-right: 0;
+	margin-left: 40%;
 	text-align: left;
 }
 .home-carousel .caption-small{
@@ -708,17 +709,17 @@ a.underline:hover {
 	margin-top: 15px;
 	position: absolute;
 	bottom: -20px;
-	left:-10%;
+	left:0;
 	text-align: center;
 	margin: ;
 	font-weight: 300;
-	width: 200px;
+	width: 210px;
 }
 .home-carousel .caption-pic{
 	position: absolute;
 	bottom: 30%;
 	height: 300%;
-	left: -10%;
+	left: 0;
 }
 
 /* STUFF ENDS */
@@ -845,6 +846,7 @@ a.underline:hover {
   text-align: left;
   font-weight: normal;
   padding: 5px 10px;
+  transition: background-color .5s;
 }
 .dropdown-menu > li > a.font-bold {
   font-weight: 600;
@@ -3216,31 +3218,31 @@ table.table-mail tr td {
 /* COLORS */
 
 .text-navy {
-  color: #2c3e50; /* flat dark blue */
+  color: #2c3e50!important; /* flat dark blue */
 }
 .text-primary {
-  color: black; 
+  color: black!important; 
 }
 .text-success {
-  color: #1abc9c; /* flat green*/
+  color: #1abc9c!important; /* flat green*/
 }
 .text-info {
-  color: #3498db; /* flat light blue */
+  color: #3498db!important; /* flat light blue */
 }
 .text-warning {
-  color: #e67e22; /* flat orange */
+  color: #e67e22!important; /* flat orange */
 }
 .text-danger {
-  color: #e74c3c; /* flat red */
+  color: #e74c3c!important; /* flat red */
 }
 .text-muted {
-  color: #bdc3c7; /* flat light gray */
+  color: #bdc3c7!important; /* flat light gray */
 }
 .text-gray {
-  color: #7f8c8d; /* flat dark gray */
+  color: #7f8c8d!important; /* flat dark gray */
 }
 .text-yellow {
-  color: #f1c40f; /* flat yellow */
+  color: #f1c40f!important; /* flat yellow */
 }
 
 /* TEXT ALIGNS*/
