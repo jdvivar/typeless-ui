@@ -672,54 +672,83 @@ a.underline:hover {
 	bottom:12px;
 }
 
-.home-carousel .carousel-caption {
-	color: #7f8c8d;
-	text-shadow: none;
-	padding-bottom: 50px;
+
+
+
+
+@media (max-width: 768px){
+	.btn-topbar-right{
+		float: right;
+	}
+	#logo-center-topbar{
+		background: url('../img/logo-only-icon-320p.png');
+		width: 18px;
+		background-position-y: 5px;
+		left:0;
+		margin-left:82px;
+		margin-top:18px;
+
+	}
+	.scroll {
+		display:none;
+	}
+	#home-logo-center{
+		width:80%;
+		margin-top:3%;
+	}
+	#home-main-line{
+		margin-top: 3%;
+	}
+	#home-sub-line{
+		font-size:14px;
+	}
+	.home-feature{
+		width:80%;
+	}
+	#go-to-top-btn{
+		right: 15px;
+	}
 }
-.home-carousel .carousel-indicators li {
-	border-color: #1abc9c;
-	display:none;	
+
+@media (min-width: 768px){
+	.btn-topbar-right{
+		float: right;
+	}
+	#logo-center-topbar{
+		background: url('../img/logo-complete-1000p.png');
+		width: 160px;
+		left:-80px;
+		margin-left:50%;
+		margin-top:7px;
+	}
+	#home-logo-center{
+		width: 50%;
+		margin-top:10%;
+	}
+	#home-main-line{
+		margin-top: 8%;
+	}
+	.home-feature{
+		width: 40%;
+	}
+	#go-to-top-btn{
+		right: 50px;
+	}
 }
-.home-carousel .carousel-indicators .active {
-	background-color: #1abc9c;
+
+#logo-center-topbar{
+	height: 64px;
+	background-repeat: no-repeat;
+	position:fixed;
+	display:none;
+	background-size:100%;
 }
-.home-carousel .carousel-control {
-	background: none;
-	border-radius: 20px;
-}
-.home-carousel .carousel-control span{
-	color: #1abc9c;
-	text-shadow: none;
-	font-size: 100px;
-	position:absolute;
-	top: 30%;
-}
-.home-carousel .caption-big{
-	font-weight: 100;
-	font-size: 30px;
-	position: absolute;
-	top: -100px;
-	margin-right: 0;
-	margin-left: 40%;
-	text-align: left;
-}
-.home-carousel .caption-small{
-	font-size: 18px;
-	margin-top: 15px;
-	position: absolute;
-	bottom: -20px;
-	left:0;
-	text-align: center;
-	margin: ;
-	font-weight: 300;
-	width: 210px;
-}
-.home-carousel .caption-pic{
-	position: absolute;
-	bottom: 30%;
-	height: 300%;
-	left: 0;
+
+#go-to-top-btn{
+	position:fixed;
+	bottom:75px;
+	z-index:1;
+	display:none;
 }
 
 /* STUFF ENDS */
@@ -1054,6 +1083,19 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   transition-duration: 0.5s;
   border-bottom: 1px solid #e7eaec !important;
 }
+
+.navbar-home{
+  min-width: 0;
+  background-color: white;
+  transition: all .5s;
+  border-bottom: 1px solid #bdc3c7;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .navbar-fixed-top,
 .navbar-static-top {
   background: #f3f3f4;
@@ -4573,8 +4615,8 @@ body.skin-3 {
     display: none;
   }
   .navbar-header {
-    display: inline;
-    float: left;
+    //display: inline;
+    //float: left;
   }
   .sidebard-panel {
     z-index: 2;
