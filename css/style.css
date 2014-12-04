@@ -1720,8 +1720,8 @@ button.dim:active:before {
   font-size: 50px;
 }
 .label {
-  background-color: #d1dade;
-  color: #5e5e5e;
+  background-color: #7f8c8d;
+  color: white;
   font-family: 'Open Sans';
   font-size: 10px;
   font-weight: 600;
@@ -1729,8 +1729,8 @@ button.dim:active:before {
   text-shadow: none;
 }
 .badge {
-  background-color: #d1dade;
-  color: #5e5e5e;
+  background-color: #7f8c8d;
+  color: white;
   font-family: 'Open Sans';
   font-size: 11px;
   font-weight: 600;
@@ -1741,52 +1741,53 @@ button.dim:active:before {
 }
 .label-primary,
 .badge-primary {
-  background-color: #1abc9c;
-  color: #FFFFFF;
+  background-color: #2c3e50;
+  color: white;
 }
 .label-success,
 .badge-success {
-  background-color: #3498db;
-  color: #FFFFFF;
+  background-color: #1abc9c;
+  color: white;
 }
 .label-warning,
 .badge-warning {
-  background-color: #f8ac59;
-  color: #FFFFFF;
+  background-color: #e67e22;
+  color: white;
 }
 .label-warning-light,
 .badge-warning-light {
-  background-color: #f8ac59;
-  color: #ffffff;
+  background-color: #f1c40f;
+  color: white;
 }
 .label-danger,
 .badge-danger {
-  background-color: #ed5565;
-  color: #FFFFFF;
+  background-color: #e74c3c;
+  color: white;
 }
 .label-info,
 .badge-info {
-  background-color: #23c6c8;
-  color: #FFFFFF;
+  background-color: #3498db;
+  color: white;
 }
 .label-inverse,
 .badge-inverse {
-  background-color: #262626;
-  color: #FFFFFF;
+  background-color: #7f8c8d;
+  color: #bdc3c7;
 }
 .label-white,
 .badge-white {
-  background-color: #FFFFFF;
-  color: #5E5E5E;
+  background-color: white;
+  color: #7f8c8d;
+  border: 1px solid #bdc3c7;
 }
-.label-white,
+.label-disable,
 .badge-disable {
-  background-color: #2A2E36;
-  color: #8B91A0;
+  opacity: .25;
 }
 
 .label-invisible,
 .badge-invisible {
+	color: #bdc3c7;
 	background-color:transparent;
 }
 
