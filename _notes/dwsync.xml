@@ -14,18 +14,20 @@
 <file name="index.html" server="ftp.danielvivar.com" local="130614921142407287" remote="130614759600000000" Dst="1" />
 <file name="search-results.html" server="ftp.danielvivar.com" local="130606934797613845" remote="130607592600000000" Dst="1" />
 <file name="welcome.html" server="ftp.danielvivar.com" local="130584658101191913" remote="130584479400000000" Dst="2" />
-<file name="settings.html" server="ftp.danielvivar.com" local="130604410384017805" remote="130604231400000000" Dst="1" />
+<file name="settings.html" server="ftp.danielvivar.com" local="130620954101084374" remote="130621725000000000" Dst="1" />
 <file name="connecting-auth.html" server="ftp.danielvivar.com" local="130588977023738287" remote="130602582000000000" Dst="1" />
 <file name="connecting-auth-links.html" server="ftp.danielvivar.com" local="130588977618195316" remote="130602582000000000" Dst="1" />
 <file name="login.html" server="ftp.danielvivar.com" local="130591527010403234" remote="130602582000000000" Dst="1" />
-<file name="signup.html" server="ftp.danielvivar.com" local="130594881439273811" remote="130602582000000000" Dst="1" />
+<file name="signup.html" server="ftp.danielvivar.com" local="130621640224887851" remote="130621460400000000" Dst="1" />
 <file name="password-recover.html" server="ftp.danielvivar.com" local="130591399316514758" remote="130602582000000000" Dst="1" />
 <file name="signup-login-by-invitation.html" server="ftp.danielvivar.com" local="130589863347809628" remote="130602582600000000" Dst="1" />
 <file name="new-password.html" server="ftp.danielvivar.com" local="130591555147749656" remote="130602582000000000" Dst="1" />
-<file name="home.html" server="ftp.danielvivar.com" local="130619899994010839" remote="130619719800000000" Dst="1" />
+<file name="home.html" server="ftp.danielvivar.com" local="130621899698686645" remote="130621725000000000" Dst="1" />
 <file name="notifications.html" server="ftp.danielvivar.com" local="130606917006685602" remote="130607592600000000" Dst="1" />
 <file name="notifications-demo.html" server="ftp.danielvivar.com" local="130597721649714459" remote="130602582000000000" Dst="1" />
 <file name="git-update.bat" server="ftp.danielvivar.com" local="130603548687521770" remote="130604199600000000" Dst="1" />
 <file name="favicon.ico" server="ftp.danielvivar.com" local="130614926900891739" remote="130614758400000000" Dst="1" />
 <file name="favicon.png" server="ftp.danielvivar.com" local="130614920435041128" remote="130614759000000000" Dst="1" />
+<file name="privacy.html" server="ftp.danielvivar.com" local="130621897974558661" remote="130621725000000000" Dst="1" />
+<file name="terms.html" server="ftp.danielvivar.com" local="130621864544805416" remote="130621725000000000" Dst="1" />
 </dwsync>
