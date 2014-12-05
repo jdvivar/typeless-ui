@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parser Demo | Typeless </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	
+	<style>
+		.close{
+			float:none!important;
+		}
+		#fake{
+			position: relative;
+			bottom: 58px;
+			left: 8px;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+		<div class="row m-t-xl">
+			<h2>Demo</h2>
+			<p>This is a demo showing a behaviour similar to the one found in Dropbox or Facebook regarding e-mail input.
+			It gives the user the chance not only to check whether the input e-mail addresses are valid but also to manage them easily.
+			I have documented the code very well, so that anyone can understand it.</p>
+			<p>Please feel free to enter <strong>ANY</strong> type of characters, strings or names. The input will behave quite smartly.</p>
+		
+			<form >
+				<input type="text" class="form-control"></input>
+			</form>
+			<p class="text-danger error" style="display:none">One or more e-mail addresses you have entered are invalid.</p>
+			<div id="fake" ></div>
+		
+			
+		</div>
+	</div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {	
+
+			// delete a badge		
+			function deleteBadge(badge){
+			
+				badge.remove(); // delete node from DOM
+				
+				if (!$('.badge-danger').is('*')) { // are there any invalid badges?
+					$('.error').hide();
+				};
+				
+				offsetPadding(); // adjust left padding
+					
+				$('input').focus(); // give focus to input again
+			}
+			
+			// remove badge when click ok
+			function addCloseEvents () {
+				$('.close').click(function(){
+					deleteBadge($(this).parent());
+				})
+			};
+			
+			// add a badge over input
+			function addBadge (list){
+			
+				var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; // filter for email address
+			
+				$(list).each(function(i,e){ // for every element
+				
+					var appendTo = $( '#fake' ); // object where we will append the badges
+					if (e == '') {} // only non-empty elements are accepted
+					else if (filter.test(e)) 	// if test is passed add a VALID badge
+						appendTo.append( "<span class=\"badge sum-width badge-white m-r-sm\" contenteditable=\"false\">"+e+"<i class=\"fa fa-fw fa-times-circle close\"></i></span>" );
+					else {						// otherwise add an INVALID badge (user experience recomendation)
+						appendTo.append( "<span class=\"badge sum-width badge-danger m-r-sm\"contenteditable=\"false\">"+e+"<i class=\"fa fa-fw fa-times-circle close\"></i></span>" );
+						$('.error').show();		// the first INVALID badge added shows the notice error
+					}
+					
+				});
+
+				offsetPadding(); // adjust left padding
+				
+				addCloseEvents(); // add close events to badges
+			};
+			
+			// adjust left padding of input to accomodate badges
+			function offsetPadding (){
+			
+				var paddingLeft=8; // offset padding
+				$('.sum-width').each(function(ind,elem){
+					paddingLeft += $(elem).outerWidth( true );	// sum up all the badges including paddings, borders and margins
+				});												//(true is for the margin, outerWidth is for borders and padding)
+				
+				$('input').css('padding-left',paddingLeft);
+				$('#fake').width(paddingLeft);	// to let user click-focus on input, without this line there's no way the user could get focus on input
+												// this div is transparent and is in the front
+			
+			}
+			
+			// take the text, clean it and add badges according to it
+			function treatSubmit(event, inputObj){
+				event.preventDefault();
+				console.log("submit event");
+				var inputText = inputObj.val();
+				inputObj.val('');
+				addBadge(cleanInput(inputText));
+			}
+			
+			// whenc sumitting form (intended for different inputs, although we only have one in the demo)
+			$('form').submit(function(e){
+				treatSubmit(e, $(this).children('input'));
+			});
+			
+			//addBadge(['email@example.com']); // demos to see how addBadge worked
+			//addBadge(['hola@example.com']);
+			
+			// function to clean text step by step
+			function cleanInput (text){
+				var output = text;
+				
+				// to lower case (email address policy for old mail servers)
+				output = output.toLowerCase();
+				
+				// remove spaces from start and end
+				output = output.trim();
+				
+				// remove all characters that are not numbers 0-9, letters a-z or the character @ or .
+				var patt = /[^0-9¦^a-z¦^@¦^ ¦^.]/g; // I think it is enough with this regexp	
+				output = output.replace(patt,' ');
+				
+				// split
+				var list = output.split(" ");
+
+				return list;
+			}
+			
+			// event to allow removing of badges by pressing "delete", keycode 8
+			$('input').keydown(function (e) {
+				if ($(this).val()=='' && e.which == 8) {
+					deleteBadge($('.badge:last'));
+				}
+			});
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
