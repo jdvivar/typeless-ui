@@ -679,6 +679,23 @@ a.underline:hover {
 	bottom:12px;
 }
 
+#home-sub-line{
+		margin-top:3%;
+		font-weight:300;
+	}
+	
+.home-bottom-div{
+	height:50px;
+	position: absolute;
+	bottom: 0;
+}
+
+.home-top-div{
+	height:50px;
+	position: absolute;
+	top: 0;
+}
+
 @media (max-width: 1024px){
 	.btn-topbar-right{
 		float: right;
