@@ -678,8 +678,8 @@ a.underline:hover {
 	}
 	#logo-center-topbar{
 		background: url('../img/logo-only-icon-320p.png');
-		width: 24px;
-		background-position-y: 3px;
+		width: 28px;
+		background-position-y: 0px;
 		left:0;
 		margin-left:82px;
 		margin-top:18px;
@@ -745,6 +745,12 @@ a.underline:hover {
 	bottom:75px;
 	z-index:1;
 	display:none;
+}
+
+@media (max-width:850px){
+	.home-footer{
+		float:none!important;
+	}
 }
 
 /* STUFF ENDS */
