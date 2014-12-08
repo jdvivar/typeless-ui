@@ -672,18 +672,14 @@ a.underline:hover {
 	bottom:12px;
 }
 
-
-
-
-
-@media (max-width: 768px){
+@media (max-width: 1024px){
 	.btn-topbar-right{
 		float: right;
 	}
 	#logo-center-topbar{
 		background: url('../img/logo-only-icon-320p.png');
-		width: 18px;
-		background-position-y: 5px;
+		width: 24px;
+		background-position-y: 3px;
 		left:0;
 		margin-left:82px;
 		margin-top:18px;
@@ -710,7 +706,7 @@ a.underline:hover {
 	}
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 	.btn-topbar-right{
 		float: right;
 	}
