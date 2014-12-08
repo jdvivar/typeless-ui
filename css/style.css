@@ -638,6 +638,13 @@ a.underline:hover {
 	width:auto!important;
 }
 
+@media (max-width:1024px){
+	.notifications-style {
+		right:25px!important;
+		left:25px!important;
+	}
+}
+
 .notifications-style .ui-pnotify-container {
 	min-width:300px;
 	padding-right:36px;

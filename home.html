@@ -26,17 +26,12 @@
 	<span id="modal-windows-2">
 		<!-- loaded dinamically -->
 	</span>
-
-	<div id="notify-wrapper">
-		<span class="m-t-sm" style="display:none" id="timeout-alert">
-			<div class="alert alert-success">
-				<a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
-			</div>
-		</span>
-	</div>
 	
 	
+	
+	<!-- original topbar used in regular designs -->
 	<nav class="navbar navbar-fixed-top navbar-home white-bg" role="navigation" id="navbar-top" style="display:none">
+		
 			
 		<div class="navbar-header" style="height:64px">
 		
@@ -88,7 +83,10 @@
 	
 	</nav>
 	
+		
+	<!-- top navbar used for home -->
 	<div class="navbar-home">
+	
 		<div class="btn-group m" style="float:left">
 			<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
 				<i class="fa fa-bars"></i> </span>
@@ -182,6 +180,12 @@
 	</div>
 	
     <div id="wrapper" class="container animated fadeIn" style="margin-top:64px">
+	
+		<div class="well well-sm alert-dismissable m-t text-gray" style="">
+			<span class="m-r">This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.</span>
+			<a class="m-r"  style="display:inline-block">SEE OUR COOKIES POLICY</a>
+			<a class="" data-dismiss="alert" style="display:inline-block" >ACCEPT AND CLOSE</a>
+		</div>
 	
 		<div class="row resize text-center" id="row-1" style="position:relative">
 			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
@@ -432,6 +436,7 @@
 					$('#stay-updated-ok').fadeIn('slow');
 				});
 			});
+			
 			
         });
     </script>
