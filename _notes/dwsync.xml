@@ -22,14 +22,16 @@
 <file name="password-recover.html" server="ftp.danielvivar.com" local="130591399316514758" remote="130602582000000000" Dst="1" />
 <file name="signup-login-by-invitation.html" server="ftp.danielvivar.com" local="130589863347809628" remote="130602582600000000" Dst="1" />
 <file name="new-password.html" server="ftp.danielvivar.com" local="130591555147749656" remote="130602582000000000" Dst="1" />
-<file name="home.html" server="ftp.danielvivar.com" local="130625159759568438" remote="130624980000000000" Dst="1" />
+<file name="home.html" server="ftp.danielvivar.com" local="130625316489359616" remote="130625147400000000" Dst="1" />
 <file name="notifications.html" server="ftp.danielvivar.com" local="130606917006685602" remote="130607592600000000" Dst="1" />
 <file name="notifications-demo.html" server="ftp.danielvivar.com" local="130597721649714459" remote="130602582000000000" Dst="1" />
 <file name="git-update.bat" server="ftp.danielvivar.com" local="130603548687521770" remote="130604199600000000" Dst="1" />
 <file name="favicon.ico" server="ftp.danielvivar.com" local="130614926900891739" remote="130614758400000000" Dst="1" />
 <file name="favicon.png" server="ftp.danielvivar.com" local="130614920435041128" remote="130614759000000000" Dst="1" />
-<file name="privacy.html" server="ftp.danielvivar.com" local="130621897974558661" remote="130621725000000000" Dst="1" />
-<file name="terms.html" server="ftp.danielvivar.com" local="130622474247499189" remote="130624896000000000" Dst="1" />
+<file name="privacy.html" server="ftp.danielvivar.com" local="130625319463609451" remote="130625148000000000" Dst="1" />
+<file name="terms.html" server="ftp.danielvivar.com" local="130625319336903610" remote="130625148000000000" Dst="1" />
 <file name="parser.html" server="ftp.danielvivar.com" local="130622743105589850" remote="130622562600000000" Dst="1" />
 <file name="acceptable-use.html" server="ftp.danielvivar.com" local="130622511389989683" remote="130624896000000000" Dst="1" />
+<file name="about.html" server="ftp.danielvivar.com" local="130625325790734940" remote="130625147400000000" Dst="1" />
+<file name="contact.html" server="ftp.danielvivar.com" local="130625326102694067" remote="130625147400000000" Dst="1" />
 </dwsync>
