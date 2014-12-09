@@ -180,7 +180,7 @@
 	background-color: #505050;
 }
 
-.ce-footer .row{
+.ce-footer{
 	position:fixed;
 	bottom:60px;
 	border-top:1px solid #dddddd;

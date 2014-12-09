@@ -31,9 +31,9 @@
 			</button>
 			
 			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
-			<button class="btn ce-button pull-right" type="button" style="margin-right:8px" data-tooltip="tooltip" data-placement="bottom" title="Start">
+			<a class="btn ce-button pull-right" type="button" style="margin-right:8px" data-tooltip="tooltip" data-placement="bottom" title="Start" href="start.html">
 				<img src="../img/logo-only-icon-320p.png" width="16px"></img>
-			</button>
+			</a>
 			  
 			<!-- <div class="dropdown pull-right">
 			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:8px" id="ce-menu" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Start">
@@ -261,8 +261,8 @@
 		</div>
 		
 	</div>
-	<div class="container ce-footer">
-		<div class="row" >
+	<div class="container ">
+		<div class="row ce-footer"  >
 			<a class="btn btn-link btn-gray btn-xs"><small>CONTACTS</small></a>
 			<a class="btn btn-link btn-gray btn-xs" style="margin-left:5px"><small>SHARING</small></a><br>
 			<a class="btn btn-link btn-gray btn-xs m-t-n-sm"><small>CONNECTED ACCOUNTS</small></a>
@@ -297,7 +297,7 @@
 				
 				//$('.ce-bar').slideToggle('fast');
 				
-				$('.row:not(.search,.ce-bar)').fadeOut('fast');
+				$('.row:not(.search,.ce-bar,.ce-footer)').fadeOut('fast');
 			};
 					
 			function searchOut(){
