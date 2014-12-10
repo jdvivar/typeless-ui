@@ -781,6 +781,10 @@ a.underline:hover {
 
 }
 
+.add-border{
+	border: 1px solid #e5e5e5;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
@@ -1168,7 +1172,7 @@ body.mini-navbar #page-wrapper {
 .btn {
   border-radius: 3px;
   border: 1px solid transparent;
-  transition: all .2s;
+  transition: all .25s;
 }
 
 .btn:hover:not(.btn-outline):not(.btn-link):not(.btn-invisible) {
@@ -1189,6 +1193,12 @@ body.mini-navbar #page-wrapper {
 	background-image:-ms-linear-gradient(top,rgba(248,248,248,.5),rgba(241,241,241,.5));
 	background-image:-o-linear-gradient(top,rgba(248,248,248,.5),rgba(241,241,241,.5));
 	background-image:linear-gradient(top,rgba(248,248,248,.5),rgba(241,241,241,.5));
+}
+
+.btn.btn-invisible:active {
+	box-shadow:0px 0px 7px 1px rgba(0,0,0,0.15) inset;
+	border-color:#c6c6c6!important;
+	background-color:#f8f8f8;
 }
 
 .btn.btn-outline{

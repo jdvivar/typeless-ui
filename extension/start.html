@@ -84,37 +84,45 @@
 	<div class="container" style="margin-left: 9px;margin-right: 9px;" >
 	
 		<div class="row m-b-sm " >
-			<a class="btn btn-xs btn-default pull-right">LOG OUT</a>
+			<a class="btn btn-white btn-xs pull-right"><small>LOG OUT</small></a>
 			Hi, you are signed is as
 			<div><strong>Donald Draper</strong></div>
 		</div>
 	
-		<div class="row m-b-sm" style="margin-left: -25px;margin-right: -25px;">
+		<!-- <div class="row m-b-sm" style="margin-left: -25px;margin-right: -25px;">
 			<div class="divider"></div>
-		</div>
+		</div> -->
 		
-		<div class="row m-b-sm" style="font-family: 'Open Sans';">
-			<div class="white-bg">
-				<div class="text-center" style="border-radius:3px; background-color: rgba(52,152,219,0);">
-					<div class="h1" style="display: inline-block;">3,421</div><br>
-					<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong>total contacts</strong></div>
+		<div class="row m-b-sm text-center" style="font-family: 'Open Sans';">
+			<div class="col-xs-4 ">
+				<div class="white-bg m-r-n-sm m-l-n add-border" style="border-radius:3px;">
+					<div class="h3 text-success" style="display: inline-block;">3,421</div><br>
+					<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong>total<br>contacts</strong></div>
+				</div>
+			</div>
+			<div class="col-xs-8">
+				<div class="white-bg m-r-n m-l-n-sm text-center add-border m-b-sm" style="border-radius:3px">
+					<div class="h3 text-warning pull-left m-t-sm m-l-md text-center" style="display: inline-block;">16</div>
+					<div class="text-uppercase text-gray small m-t-sm m-b-sm" style="display: inline-block;"><strong >new contacts<br>(last 7 days)</strong> </div>
+				</div>
+				<div class="white-bg m-r-n m-l-n-sm text-center add-border" style="border-radius:3px">
+					<div class="h3 text-yellow pull-left m-t-sm m-l-md text-center" style="display: inline-block;">&nbsp;4</div>
+					<div class="text-uppercase text-gray small m-t-sm m-b-sm" style="display: inline-block;"><strong >connected<br>accounts</strong> </div>
 				</div>
 			</div>
 		</div>
 		
-		<div class="row m-b-sm text-center" style="font-family: 'Open Sans';">
+		<div class="row m-b-sm text-center" style="font-family: 'Open Sans'; display:none;">
 			<div class="col-xs-6 ">
-				<div class="white-bg m-r-n-sm m-l-n">
-					<div class="" style="border-radius:3px; background-color: rgba(26,188,156,0);">
-						<div class="h1" style="display: inline-block;">16</div><br>
+				<div class="white-bg m-r-n-sm m-l-n add-border" style="border-radius:3px;">
+					<div class="h2 text-warning" style="display: inline-block;">16</div><br>
 					<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong >new contacts (last 7 days)</strong> </div>
-					</div>
 				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="white-bg m-r-n m-l-n-sm text-center" style="border-radius:3px">
-					<div class="h1" style="display: inline-block;">4</div><br>
-				<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong>connected accounts</strong></div>
+				<div class="white-bg m-r-n m-l-n-sm text-center add-border" style="border-radius:3px">
+					<div class="h2 text-yellow" style="display: inline-block;">4</div><br>
+					<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong>connected accounts</strong></div>
 				</div>
 			</div>
 		</div>
@@ -123,24 +131,34 @@
 			<div class="divider"></div>
 		</div>
 		
-		<div class="row m-b-sm " >
-			<strong>Quick links</strong>
-		</div>
+		<div class="row m-b-sm" style="">
 		
-		<div class="row m-b-sm "  style="font-family: 'Open Sans';">
-
-			<div class="col-xs-6 m-b-md">
-				<a class="btn btn-default btn-block p-sm" ><i class="fa fa-group fa-2x"></i><br><br><small>CONTACTS</small></a>
+			<div class="m-b-sm"><strong >Notifications</strong></div>
+			
+			<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+				
+				<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE REQUESTS</small></a>
+				<div class="small m-t-sm text-gray">Single contact request</div>
+				<div class="divider m-t-xs m-b-xs"></div>
+				<div class="m-b-xs"><a class="underline text-info">Virgina Madsen</a> asked for <a class="underline text-info">Raul Viala</a>'s contact details.</div>
+				<span class="small text-muted pull-left" style="margin-top:3px">18 m ago</span>
+				<button aria-hidden="true" data-dismiss="alert" class="close m-b-sm" type="button">×</button>
+				
 			</div>
-			<div class="col-xs-6 m-b-md">
-				<a class="btn btn-default btn-block p-sm" ><i class="fa fa-share-alt fa-2x"></i><br><br><small>SHARING</small></a>
+			
+			<div class="col-xs-12 add-border white-bg" style="border-radius:3px;">
+				
+				<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE ACCOUNTS</small></a>
+				<div class="small m-t-sm text-gray">New account</div>
+				<div class="divider m-t-xs m-b-xs"></div>
+				<div class="m-b-xs">A new LinkedIn account 'don@scooper.com' has been connected.</div>
+				<span class="small text-muted pull-left" style="margin-top:3px">2 h ago</span>
+				<button aria-hidden="true" data-dismiss="alert" class="close m-b-sm" type="button">×</button>
+				
 			</div>
-			<div class="col-xs-6 m-b-md">
-				<a class="btn btn-default btn-block p-sm" ><i class="fa fa-plug fa-2x"></i><br><small>CONNECTED<br>ACCOUNTS</small></a>
-			</div>
-			<div class="col-xs-6 m-b-md">
-				<a class="btn btn-default btn-block p-sm" ><i class="fa fa-cog fa-2x"></i><br><br><small>SETTINGS</small></a>
-			</div>
+			
+			
+			
 		</div>
 		
 		<!-- <div class="row">
