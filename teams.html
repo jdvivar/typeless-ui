@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teams | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<span id="modal-windows-1">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<!-- top navbar used for home -->
+	<div class="navbar-home">
+	
+		<div class="btn-group m" style="float:left">
+			<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+				<i class="fa fa-bars"></i> </span>
+			</button>
+			<ul class="dropdown-menu">
+			
+				<li><a class="text-gray h5 text-uppercase" data-toggle="modal" data-target="#downloads-modal" href="#" >Downloads</span></a></li>
+				
+				<li><a class="text-gray h5 text-uppercase" href="http://typeless.uservoice.com/" target="_blank" >Help with Typeless</a></li>
+				
+				<li><a class="text-gray h5 text-uppercase" href="./teams.html" >Typeless for Teams</a></li>
+									
+				<li><a class="text-gray h5 text-uppercase" href="./contact.html" >Get in touch</a></li>
+				
+				<li><a class="text-gray h5 text-uppercase" href="./about.html" >About Typeless</a></li>						
+				
+			</ul>
+		</div>
+				
+		<a href="./home.html">
+			<div class="" id="logo-center-topbar"></div>
+		</a>
+		
+		<div class="btn-topbar-right">
+			<button class="btn btn-success " id="sign-up-btn" style="display:none">SIGN UP</button>
+			<button class="btn btn-default m">LOG IN</button>
+		</div>
+	</div>
+	
+	<!-- GO TO TOP -->
+	<!-- <button class="btn btn-info btn-circle btn-lg btn-outline scroll" data-to="row-1" id="go-to-top-btn" ><i class="fa fa-angle-double-up"></i></button> -->
+	
+	
+    <div id="wrapper" class="container animated fadeIn" style="margin-top:64px;margin-bottom:150px">
+	
+		<div class="row  m-t-xl" id="row-1" style="">
+
+				<h1 class="text-center">Typeless for Teams</h1>
+				<h3 class="text-center">Start your free trial or <a class="text-info underline">purchase Typeless for Teams now</a></h3>
+				
+				<div class="m-t-xl"></div>
+				
+				<div class="col-md-8 ">
+					<div class="p-m">
+						<h2 class="no-margins">The Administrator</h2>
+						<span class="text-left"><a class="underline text-info">use another account</a></span>
+						<div class="admin-logged">
+							<div class="m-t-lg" style="display:inline-block">
+								<img class="img-circle m-t-n-md" width="54px" src="./img/a1.jpg">
+								<div class="m-l m-r" style="display:inline-block"><strong>Richard Winstone</strong><br>richard@however.com</div>
+							</div>
+						</div>
+						<div class="admin-unlogged">
+							<div class="m-t-lg" style="display:inline-block">
+								<form role="form">
+									<div class="form-group col-md-6">
+										<!-- <label for="exampleInputEmail1">Name</label> -->
+										<input type="text" class="form-control" placeholder="Name">
+									</div>
+									<div class="form-group col-md-6">
+										<!-- <label for="exampleInputEmail1">Email address</label> -->
+										<input type="email" class="form-control" placeholder="E-mail address">
+									</div>
+									<div class="form-group col-md-6">
+										<!-- <label for="exampleInputPassword1">Password</label> -->
+										<input type="password" class="form-control"  placeholder="Password">
+									</div>
+									<div class="form-group col-md-6">
+										<!-- <label for="exampleInputPassword1">Password</label> -->
+										<input type="password" class="form-control" placeholder="Repeat password">
+									</div>
+								</form>
+							</div>
+						</div>
+						<h2 class="m-t-xl">The Team</h2>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="p-m" style="border:1px solid #e5e5e5;border-radius:3px;background-color:whitesmoke;">
+						<p>hola</p>
+					</div>
+				</div>
+				
+			
+			
+		</div>
+		
+    </div>
+	
+	<div class="text-center m-b white-bg" style="position:fixed;bottom:0;width:100%;z-index:1000">
+		<div class="pull-left home-footer m-l" >
+			<span class="text-gray btn btn-link disabled"><small>&copy; 2014 TRIGMATIC LTD</small></span>
+			<a class="text-gray btn btn-link" href="./privacy.html" target="_blank"><small>PRIVACY</small></a>
+			<a class="text-gray btn btn-link" href="./acceptable-use.html" target="_blank"><small>ACCEPTABLE USE</small></a>
+			<a class="text-gray btn btn-link" href="./terms.html" target="_blank"><small>TERMS</small></a>
+		</div>
+		
+		<div class="pull-right home-footer m-r" >
+			<span class="text-right text-uppercase text-muted"><small>Follow us on</small></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-facebook-square"></i></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-twitter-square"></i></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-linkedin-square"></i></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-google-plus-square"></i></span>
+		</div>
+	</div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+		
+			// scroll event for logo opacity
+			$(function(){
+				
+				$('#logo-center-topbar').show();
+				$('#sign-up-btn').show();
+				$('#go-to-top-btn').show();
+				
+			});
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
