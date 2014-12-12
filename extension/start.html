@@ -93,7 +93,7 @@
 			<div class="divider"></div>
 		</div> -->
 		
-		<div class="row m-b-sm text-center" style="font-family: 'Open Sans';">
+		<div class="row m-b-sm text-center" style="font-family: 'Open Sans';display:none;">
 			<div class="col-xs-4 ">
 				<div class="white-bg m-r-n-sm m-l-n add-border" style="border-radius:3px;">
 					<div class="h3 text-success" style="display: inline-block;">3,421</div><br>
@@ -130,45 +130,104 @@
 		<div class="row m-b-sm" style="margin-left: -25px;margin-right: -25px;">
 			<div class="divider"></div>
 		</div>
+	</div>
+	<div class="container" style="margin-left: 9px;" >
+		<div class="row m-b-sm" id="notifications-row" style="overflow-y:auto">
 		
-		<div class="row m-b-sm" style="">
+			<div style="margin-right:9px">
 		
-			<div class="m-b-sm"><strong >Notifications</strong></div>
+				<div class="m-b-sm"><strong >Notifications</strong></div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;padding:10px 15px 15px 15px">
+					<div class="small text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+					<div class="divider m-t-xs m-b-sm"></div>
+					<div class="text-center m">
+						<img class="" src="../img/socialbox-icon.png" width="50%">
+					</div>
+					<a class="btn btn-info btn-sm btn-block"><small><i class="fa fa-plus"></i> CONNECT A NEW ACCOUNT</small></a>
+					<!-- <span class="small text-muted pull-left m-t-sm" style="">18 m ago</span> -->
+					<!-- <button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button> -->
+					
+				</div>
+				
+				
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					
+					<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE REQUESTS</small></a>
+					<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-link fa-flip-horizontal text-muted"></i> Single contact request</div>
+					<div class="divider m-t-xs m-b-xs"></div>
+					<div class="m-b-xs"><a class="underline text-info">Virgina Madsen</a> asked for <a class="underline text-info">Raul Viala</a>'s contact details.</div>
+					<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">18 m ago</span>
+					<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<img class="m-t-xs pull-left m-r m-b" src="../img/enrich-facebook.png" width="114" style="border:1px solid #e5e5e5;border-radius:3px">
+						<div class="m-b-sm m-t-sm">Add <strong>pictures</strong>, <strong>locations</strong> and more.</div>
+						<a class="btn btn-xs btn-info"><small><i class="fa fa-plus"></i> FACEBOOK</small></a>
+					
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<img class="m-t-xs pull-left m-r m-b" src="../img/enrich-google.png" width="114" style="border:1px solid #e5e5e5;border-radius:3px">
+						<div class="m-b-sm m-t-sm">Add <strong>phones</strong>, <strong>mails</strong> and more.</div>
+						<a class="btn btn-xs btn-info"><small><i class="fa fa-plus"></i> GOOGLE</small></a>
+					
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					
+					<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE ACCOUNTS</small></a>
+					<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> New account</div>
+					<div class="divider m-t-xs m-b-xs"></div>
+					<div class="m-b-xs">A new LinkedIn account 'don@scooper.com' has been connected.</div>
+					<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">2 h ago</span>
+					<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					<a>
+						<!-- <a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE ACCOUNTS</small></a> -->
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<span class="fa fa-facebook-square fa-2x pull-left m-t-xs text-info" style="margin-right:10px!important"></span>
+						<div class="m-b-xs">Connect a Facebook account to add <strong>pictures</strong>, <strong>locations</strong> and more.</div>
+						<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">120 of 789 contacts lack a picture</span>
+					</a>
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					<a>
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<span class="fa fa-stack pull-left m-t-xs text-info" style="margin-right:10px!important">
+						  <i class="fa fa-square fa-stack-2x"></i>
+						  <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+						</span>
+						<div class="m-b-sm">Connect a Google account to add <strong>e-mail addresses</strong> from GMail, <strong>phone numbers</strong> from your Android device and more.</div>
+						<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">427 of 789 contacts lack a phone number</span>
+					</a>
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
 			
-			<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
-				
-				<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE REQUESTS</small></a>
-				<div class="small m-t-sm text-gray">Single contact request</div>
-				<div class="divider m-t-xs m-b-xs"></div>
-				<div class="m-b-xs"><a class="underline text-info">Virgina Madsen</a> asked for <a class="underline text-info">Raul Viala</a>'s contact details.</div>
-				<span class="small text-muted pull-left" style="margin-top:3px">18 m ago</span>
-				<button aria-hidden="true" class="close m-b-sm" type="button">×</button>
-				
 			</div>
-			
-			<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
-				
-				<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE ACCOUNTS</small></a>
-				<div class="small m-t-sm text-gray">New account</div>
-				<div class="divider m-t-xs m-b-xs"></div>
-				<div class="m-b-xs">A new LinkedIn account 'don@scooper.com' has been connected.</div>
-				<span class="small text-muted pull-left" style="margin-top:3px">2 h ago</span>
-				<button aria-hidden="true" class="close m-b-sm" type="button">×</button>
-				
-			</div>
-			
-			<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
-				
-				<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE ACCOUNTS</small></a>
-				<div class="small m-t-sm text-gray">New account</div>
-				<div class="divider m-t-xs m-b-xs"></div>
-				<div class="m-b-xs">A new LinkedIn account 'don@scooper.com' has been connected.</div>
-				<span class="small text-muted pull-left" style="margin-top:3px">2 h ago</span>
-				<button aria-hidden="true" class="close m-b-sm" type="button">×</button>
-				
-			</div>
-			
-			
 			
 		</div>
 		
@@ -177,6 +236,7 @@
 		</div> -->
 		
 	</div>
+	
 	<div class="container ">
 		<div class="row ce-footer" >
 			<a class="btn btn-link btn-gray btn-xs"><small>CONTACTS</small></a>
@@ -229,6 +289,16 @@
 				$(this).parent().hide('fast', function(e){
 					e.parent().remove();
 				});
+				
+			});
+			
+			// resize notifications scroll
+			$(function() {
+					
+				$(window).bind("load resize", function() {
+					var altura = $(this).height();
+					$('#notifications-row').height(altura-251);
+				})
 				
 			});
 			
