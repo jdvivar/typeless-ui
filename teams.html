@@ -65,7 +65,7 @@
 	
     <div id="wrapper" class="container animated fadeIn" style="margin-top:64px;margin-bottom:150px">
 	
-		<div class="row  m-t-xl" id="row-1" style="">
+		<div class="container m-t-xl" style="">
 
 				<h1 class="text-center">Typeless for Teams</h1>
 				<h3 class="text-center">Start your free trial or <a class="text-info underline">purchase Typeless for Teams now</a></h3>
@@ -74,37 +74,130 @@
 				
 				<div class="col-md-8 ">
 					<div class="p-m">
+						
 						<h2 class="no-margins">The Administrator</h2>
-						<span class="text-left"><a class="underline text-info">use another account</a></span>
-						<div class="admin-logged">
-							<div class="m-t-lg" style="display:inline-block">
+						<div class="divider m-t"></div>
+						<div class="admin-logged" style="display:none">
+							<div class="m-t-lg" >
 								<img class="img-circle m-t-n-md" width="54px" src="./img/a1.jpg">
 								<div class="m-l m-r" style="display:inline-block"><strong>Richard Winstone</strong><br>richard@however.com</div>
 							</div>
+							<div class="m-t">or <a class="underline text-info">use another account</a></div>
 						</div>
-						<div class="admin-unlogged">
-							<div class="m-t-lg" style="display:inline-block">
-								<form role="form">
-									<div class="form-group col-md-6">
-										<!-- <label for="exampleInputEmail1">Name</label> -->
-										<input type="text" class="form-control" placeholder="Name">
+						<div class="admin-unlogged" style="">
+							<div class="m-t" >
+								Set up a new account or <a class="underline text-info">use an existing account</a>.
+								<form class="m-t" role="form">
+									<div class="form-group col-sm-12">
+										<label class="form-label text-info">Name</label>
+										<input type="text" class="form-control" placeholder="">
 									</div>
-									<div class="form-group col-md-6">
-										<!-- <label for="exampleInputEmail1">Email address</label> -->
-										<input type="email" class="form-control" placeholder="E-mail address">
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Email address</label>
+										<input type="email" class="form-control" placeholder="">
 									</div>
-									<div class="form-group col-md-6">
-										<!-- <label for="exampleInputPassword1">Password</label> -->
-										<input type="password" class="form-control"  placeholder="Password">
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Phone number</label>
+										<input type="tel" class="form-control" placeholder="">
 									</div>
-									<div class="form-group col-md-6">
-										<!-- <label for="exampleInputPassword1">Password</label> -->
-										<input type="password" class="form-control" placeholder="Repeat password">
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Password</label>
+										<input type="password" class="form-control"  placeholder="">
+									</div>
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Repeat password</label>
+										<input type="password" class="form-control" placeholder="">
 									</div>
 								</form>
+								<div style="display:inline-block"></div>
 							</div>
 						</div>
-						<h2 class="m-t-xl">The Team</h2>
+						<h2 class="m-t-lg">The Team</h2>
+						<div class="divider m-t"></div>
+						<div class="m-t" >
+							About your company:
+							<form class="m-t" role="form">
+								<div class="form-group col-sm-4">
+									<label class="form-label text-danger">Team name</label>
+									<input type="text" class="form-control" placeholder="">
+								</div>
+								<div class="form-group col-sm-4" >
+									<label  class="form-label text-danger">Phone number</label>
+									<input type="tel" class="form-control" placeholder="">
+								</div>
+								<div class="form-group col-sm-4">
+									<label  class="form-label text-danger">Company size</label>
+									<select class="form-control">
+									  <option><100</option>
+									  <option>100-1000</option>
+									  <option>+1000</option>
+									</select>
+								</div>
+								
+							</form>
+							<div style="display:inline-block"></div>
+						</div>
+						
+						<h2 class="m-t-lg">The Plan</h2>
+						<div class="divider m-t"></div>
+						<div class="m-t" >
+							Choose your plan:
+							<form class="m-t" role="form">
+								<div class="form-group col-sm-3"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="" data-original-title="The price should update according to the number of users">
+									<label class="form-label text-warning">Number of users</label>
+									<input type="number" class="form-control" min="5" max="1000000" placeholder="5 or more">
+								</div>
+								<div class="form-group col-sm-3">
+									<label  class="form-label text-warning">Currency</label>
+									<select class="form-control" id="currency-select">
+									  <option value="gbp" checked>£ (GBP)</option>
+									  <option value="eur">€ (EUR)</option>
+									  <option value="usd">$ (USD)</option>
+									</select>
+								</div>
+								<div class="form-group col-sm-6">
+									<label class="form-label text-warning">Billing plan</label><br>
+									<label class="radio-inline" style="width:45%">
+										<input type="radio"  name="billing-plan" value="annually">
+											Annually<br>
+											<span class="m-t-sm" style="font-size:24px">
+												<span class="currency-span">£</span><span id="price-annually-units">39</span><sup style="font-size:14px" id="price-annually-decimals">99</sup>
+											</span>
+									</label>
+									<label class="radio-inline" style="width:45%">
+										<input type="radio" name="billing-plan" value="monthly">
+											Monthly<br>
+											<span class="m-t-sm" style="font-size:24px">
+												<span class="currency-span">£</span><span id="price-monthly-units">3</span><sup style="font-size:14px" id="price-monthly-decimals">99</sup>
+											</span>
+									</label>
+									
+								</div>
+								
+				
+							</form>
+							<div>
+								<span class="currency-span">£</span><span id="price-per-user-annually">39.99</span><span id="price-per-user-monthly" style="display:none">3.99</span> for every additional user per <span id="billing-time">year</span>.
+							</div>
+						</div>
+						
+						<h2 class="m-t-lg">The Payment</h2>
+						<div class="divider m-t"></div>
+						<div class="m-t" >
+							Please, fill in your card details. You won't be charged now.
+							<form class="m-t" role="form">
+								<div class="form-group col-sm-8">
+									<label class="form-label text-success">Card Number</label>
+									<input type="text" class="form-control">
+									<span class="fa fa-lock text-gray" style="position:absolute;top:35px;right:25px"></span>
+								</div>
+								<div class="form-group col-sm-4">
+									<label class="form-label text-success">Expiration</label>
+									
+									<span class="fa fa-lock text-gray" style="position:absolute;top:35px;right:25px"></span>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 				
@@ -120,7 +213,7 @@
 		
     </div>
 	
-	<div class="text-center m-b white-bg" style="position:fixed;bottom:0;width:100%;z-index:1000">
+	<div class="text-center m-b white-bg" style="position:absolute;;width:100%;z-index:1000">
 		<div class="pull-left home-footer m-l" >
 			<span class="text-gray btn btn-link disabled"><small>&copy; 2014 TRIGMATIC LTD</small></span>
 			<a class="text-gray btn btn-link" href="./privacy.html" target="_blank"><small>PRIVACY</small></a>
@@ -155,6 +248,68 @@
 				$('#go-to-top-btn').show();
 				
 			});
+			
+			// change event for currency
+			$('#currency-select').change(function(){
+				switch ($(this).val()){
+					case 'gbp':
+						$('.currency-span').text('£');
+						
+						$('#price-per-user-monthly').text('3.99');
+						$('#price-per-user-annually').text('39.99');
+						
+						$('#price-annually-units').text('39');
+						$('#price-annually-decimals').text('99');
+						
+						$('#price-monthly-units').text('3');
+						$('#price-monthly-decimals').text('99');
+						break;
+					case 'eur':
+						$('.currency-span').text('€');
+						
+						$('#price-per-user-monthly').text('4.99');
+						$('#price-per-user-annually').text('49.99');
+						
+						$('#price-annually-units').text('49');
+						$('#price-annually-decimals').text('99');
+						
+						$('#price-monthly-units').text('4');
+						$('#price-monthly-decimals').text('99');
+						break;
+					case 'usd':
+						$('.currency-span').text('$');
+						
+						$('#price-per-user-monthly').text('5.99');
+						$('#price-per-user-annually').text('59.99');
+						
+						$('#price-annually-units').text('59');
+						$('#price-annually-decimals').text('99');
+						
+						$('#price-monthly-units').text('5');
+						$('#price-monthly-decimals').text('99');
+						break;
+				}
+			});
+			
+			// change event for billing-plan
+			$('[name=billing-plan]').change(function(){
+				console.log('billing-plan change event fired!');
+				switch ($(this).val()){
+					case 'monthly':
+						$('#price-per-user-monthly').show();
+						$('#price-per-user-annually').hide();
+						$('#billing-time').text('month');
+						break;
+					case 'annually':
+						$('#price-per-user-monthly').hide();
+						$('#price-per-user-annually').show();
+						$('#billing-time').text('year');
+						break;
+				}
+			});
+			
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
 			
         });
     </script>

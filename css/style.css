@@ -813,6 +813,11 @@ a.underline:hover {
 	animation: pulsate 1.8s ease-out infinite;
 }
 
+.form-label {
+	text-transform: uppercase;
+	font-size: 75%;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
