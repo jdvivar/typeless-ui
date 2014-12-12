@@ -540,6 +540,7 @@ a.underline:hover {
 	border:1px solid #dddddd;
 	border-radius:5px;
 	padding:10px;
+	background-color:white;
 }
 
 .filter.badge {
