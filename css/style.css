@@ -349,16 +349,20 @@ div.divider {
 }
 
 .account-name {
-	font-size: 14px;
-	font-weight: 600;
+	width: 72%;
+	word-break: break-all;
+}
+
+.refresh-account {
+	width: 65%;
 }
 
 .account-box {
 	border : 1px solid #dddddd;
 	padding: 15px;
 	border-radius: 3px;
-	min-height:149px;
-	box-shadow: 1px 1px 1px 0px rgba(1,1,1,0.2);
+	height:162px;
+	//box-shadow: 0px 1px 1px 0px rgba(1,1,1,0.2);
 }
 
 .account-box.new-account {
@@ -817,6 +821,27 @@ a.underline:hover {
 .form-label {
 	text-transform: uppercase;
 	font-size: 75%;
+}
+
+.row-masonry {
+	 -moz-column-width: 26em;
+	 -webkit-column-width: 26em;
+	 -moz-column-gap: 0;
+	 -webkit-column-gap: 0;
+	 margin-right: -8px;
+	 margin-left:-1em;
+  
+}
+
+.row-brick {
+	 display: inline-block;
+	 margin:  0.25rem;
+	 padding:  1rem;
+	 width:  100%; 
+}
+
+.row-masonry .panel-account {
+	margin-bottom:0;
 }
 
 /* STUFF ENDS */
