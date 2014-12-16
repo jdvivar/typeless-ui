@@ -87,7 +87,7 @@
 					var appendTo = $( '#fake' ); // object where we will append the badges
 					if (e == '') {} // only non-empty elements are accepted
 					else if (filter.test(e)) 	// if test is passed add a VALID badge
-						appendTo.append( "<span class=\"badge sum-width badge-white m-r-sm\" contenteditable=\"false\">"+e+"<i class=\"fa fa-fw fa-times-circle close\"></i></span>" );
+						appendTo.append( "<span class=\"badge sum-width badge-invisible m-r-sm\" contenteditable=\"false\">"+e+"<i class=\"fa fa-fw fa-times-circle close\"></i></span>" );
 					else {						// otherwise add an INVALID badge (user experience recomendation)
 						appendTo.append( "<span class=\"badge sum-width badge-danger m-r-sm\"contenteditable=\"false\">"+e+"<i class=\"fa fa-fw fa-times-circle close\"></i></span>" );
 						$('.error').show();		// the first INVALID badge added shows the notice error
