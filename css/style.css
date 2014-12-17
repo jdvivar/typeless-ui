@@ -853,6 +853,10 @@ a.underline:hover {
 	word-break:break-all;
 }
 
+.break-word {
+	word-break:break-word;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
