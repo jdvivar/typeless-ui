@@ -20,19 +20,27 @@
 
     <div class="middle-box text-center loginsignup animated fadeInDown">
         <div>
-            <div class="m-t-lg">
+            <div class="m-t-lg m-b">
 
-                <img src="./img/logo-typeless-express.png" style="width:50%">
+                <img src="./img/logo-complete-original.png" style="width:100%">
 
             </div>
 			
-            <h3 class="m-t-lg" style="">Share contacts invitation</h3>
+            <h2 class="m-t-lg" style="">Share contacts invitation</h2>
 			<p>You've received an invitation to share<br>contacts from <strong>Michael Stephanblome</strong>.</p>
 		</div>
-		<div class="pull-left" style="width:45%">
+		
+		<div class="text-center" style="position:absolute;width:200%;margin-left:-50%">
+			
+			<a class="btn btn btn-success m-t m-r-sm btn-outline im-new" style="width:35%"><small><strong>I'M NEW TO TYPELESS</strong></small></a>
+			<a class="btn btn btn-info m-t m-l-sm btn-outline im-user" style="width:35%"><small><strong>I'M ALREADY A TYPELESS USER</strong></small></a>
+		</div>
+		
+		<div class="form-signup" style="margin-top:100px">
 			<form class="m-t-lg" role="form" action="index.html">
+				
 				<div class="form-group">
-                    <input type="text" class="form-control" placeholder="name" required="">
+                    <input type="text" class="form-control disable-signup" placeholder="name" required="">
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="e-mail" required="" disabled="disabled" value="satish@typeless.co">
@@ -40,45 +48,57 @@
 						Why can't I change this?</p>
 				</div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="password" required="">
+                    <input type="password" class="form-control disable-signup" placeholder="password" required="">
                 </div>
 				<div class="m-t-lg">
-					<button type="submit" class="btn btn-white">SIGN UP</button>
+					<button class="btn btn-success disable-signup">SIGN UP</button>
 				</div>
 				
-				<p class="small m-l m-r">By clicking here and signing up you are accepting our <a class="underline">Terms & Conditions</a>.<p>
-				
+				<div class="m-t-xl">
+					<span class="text-gray"><input type="checkbox" class="disable-signup" value="" id="" checked><small> By signing up you are accepting our<br><a class="underline">Terms & Conditions</a>.</small></span><br>
+				</div>
+			
             </form>
 		</div>
 		
-		<div class="pull-left m-t-lg" style="width:10%">
+		<!-- <div class="pull-left m-t-lg" style="width:10%" style="">
 			<div class="m-t" style="height:50px;width:1px;background-color:#dddddd;margin: 0 auto;">
 			</div>
 			<div class="m-b m-t">or
 			</div>
 			<div class="m-t" style="height:50px;width:1px;background-color:#dddddd;margin: 0 auto;">
 			</div>
-		</div>
+		</div> -->
 		
-		<div class="pull-left" style="width:45%">
+		<div class="form-login" style="margin-top:100px">
 			<form class="m-t-lg" role="form" action="index.html">
-				
-				<p class="small">Already a Typeless user?<br>Link <strong>satish@typeless.co</strong> to your account by loggin in here.<p>
+							
+				<p class="small">To link <strong>satish@typeless.co</strong> to your<br>account log in here.<br><br><p>
 				
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="e-mail" required="">
+                    <input type="email" class="form-control disable-login" placeholder="e-mail" required="" >
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="password" required="">
+                    <input type="password" class="form-control disable-login" placeholder="password" required="" >
                 </div>
+					<a class="underline text-info pull-right small m-t-n" href="password-recover.html">Forgot password?</a>
 				<div class="m-b-lg m-t-lg">
-					<button type="submit" class="btn btn-white">LOG IN</button>
+					<button class="btn btn-success disable-login">LOG IN</button>
 				</div>
 				
                 
 				
             </form>
 		</div>
+	</div>
+	
+	<div class="m-b text-center secure-notice">
+				
+		<span class="text-gray">
+		
+			<small><i class="fa fa-lock fa-fw"></i> We secure all data using 1024 bit encryption.</small>
+		</span>
+		
 	</div>
 	
 	
@@ -88,9 +108,51 @@
     <script src="js/bootstrap.min.js"></script>
 	
 	<script>
+	
         $(document).ready(function() {
+		
 			// Activate tooltips
 			$("[data-tooltip='tooltip']").tooltip();
+			
+			// disable everything
+			function disableAll(){
+				$('.disable-login').prop('disabled', true);
+				$('.disable-signup').prop('disabled', true);
+				
+			}
+			
+			disableAll();
+			
+			$('.form-signup').hide();
+			$('.form-login').hide();
+			
+			//Im new
+			$('.im-new').click(function(){
+				
+				$('.im-new').addClass('active');
+				$('.im-user').removeClass('active');
+				
+				$('.form-signup').show();
+				$('.form-login').hide();
+				
+				
+				disableAll();
+				$('.disable-signup').prop('disabled', false);
+			});
+			
+			//Im a user
+			$('.im-user').click(function(){
+			
+				$('.form-signup').hide();
+				$('.form-login').show();
+				
+				$('.im-user').addClass('active');
+				$('.im-new').removeClass('active');
+				
+				disableAll();
+				$('.disable-login').prop('disabled', false);
+			});
+
 		});
 	</script>
 </body>
