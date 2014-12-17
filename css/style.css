@@ -823,7 +823,7 @@ a.underline:hover {
 	font-size: 75%;
 }
 
-.row-masonry {
+.row-masonry-account {
 	 -moz-column-width: 26em;
 	 -webkit-column-width: 26em;
 	 -moz-column-gap: 0;
@@ -840,8 +840,17 @@ a.underline:hover {
 	 width:  100%; 
 }
 
-.row-masonry .panel-account {
+.row-masonry-account .panel-account {
 	margin-bottom:0;
+}
+
+.doubleform {
+	width: 600px;
+
+}
+
+.break-all {
+	word-break:break-all;
 }
 
 /* STUFF ENDS */
@@ -3763,8 +3772,8 @@ table.table-mail tr td {
   margin-top: -330px;
 }
 .loginsignup.middle-box {
-  width: 600px;
-  margin-left: -300px;
+  width: 300px;
+  margin-left: -150px;
   margin-top: -330px;
 }
 
