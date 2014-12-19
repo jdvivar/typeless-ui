@@ -859,6 +859,18 @@ a.underline:hover {
 	word-break:break-word;
 }
 
+.color-facebook{
+	color: #314a80;
+}
+
+.color-google{
+	color: #166cf2;
+}
+
+.color-linkedin{
+	color: rgb(15,126,184);
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
