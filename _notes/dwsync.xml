@@ -9,7 +9,7 @@
 <file name="contacts.html" server="ftp.danielvivar.com" local="130614925418377366" remote="130614757800000000" Dst="1" />
 <file name="profile.html" server="ftp.danielvivar.com" local="130602733571255482" remote="130602582000000000" Dst="1" />
 <file name="README.md" server="ftp.danielvivar.com" local="130574054931128251" remote="130582626600000000" Dst="2" />
-<file name="connected-accounts.html" server="ftp.danielvivar.com" local="130619236556760093" remote="130619158800000000" Dst="1" />
+<file name="connected-accounts.html" server="ftp.danielvivar.com" local="130632023813196330" remote="130632805800000000" Dst="1" />
 <file name="sharing.html" server="ftp.danielvivar.com" local="130602609682920343" remote="130602582000000000" Dst="1" />
 <file name="index.html" server="ftp.danielvivar.com" local="130614921142407287" remote="130614759600000000" Dst="1" />
 <file name="search-results.html" server="ftp.danielvivar.com" local="130606934797613845" remote="130607592600000000" Dst="1" />
@@ -18,9 +18,9 @@
 <file name="connecting-auth.html" server="ftp.danielvivar.com" local="130588977023738287" remote="130602582000000000" Dst="1" />
 <file name="connecting-auth-links.html" server="ftp.danielvivar.com" local="130588977618195316" remote="130602582000000000" Dst="1" />
 <file name="login.html" server="ftp.danielvivar.com" local="130591527010403234" remote="130602582000000000" Dst="1" />
-<file name="signup.html" server="ftp.danielvivar.com" local="130621640224887851" remote="130621460400000000" Dst="1" />
+<file name="signup.html" server="ftp.danielvivar.com" local="130628784685449731" remote="130632808200000000" Dst="1" />
 <file name="password-recover.html" server="ftp.danielvivar.com" local="130591399316514758" remote="130602582000000000" Dst="1" />
-<file name="signup-login-by-invitation.html" server="ftp.danielvivar.com" local="130589863347809628" remote="130602582600000000" Dst="1" />
+<file name="signup-login-by-invitation.html" server="ftp.danielvivar.com" local="130632220168672385" remote="130632808200000000" Dst="1" />
 <file name="new-password.html" server="ftp.danielvivar.com" local="130591555147749656" remote="130602582000000000" Dst="1" />
 <file name="home.html" server="ftp.danielvivar.com" local="130625926107612585" remote="130625875200000000" Dst="1" />
 <file name="notifications.html" server="ftp.danielvivar.com" local="130606917006685602" remote="130607592600000000" Dst="1" />
@@ -34,9 +34,9 @@
 <file name="acceptable-use.html" server="ftp.danielvivar.com" local="130622511389989683" remote="130624896000000000" Dst="1" />
 <file name="about.html" server="ftp.danielvivar.com" local="130625325790734940" remote="130625147400000000" Dst="1" />
 <file name="contact.html" server="ftp.danielvivar.com" local="130625326102694067" remote="130625147400000000" Dst="1" />
-<file name="styles.html" server="ftp.danielvivar.com" local="130626025836343570" remote="130625875200000000" Dst="1" />
+<file name="styles.html" server="ftp.danielvivar.com" local="130626997439413748" remote="130632808200000000" Dst="1" />
 <file name="404.html" server="ftp.danielvivar.com" local="130627748343291987" remote="130627590600000000" Dst="1" />
 <file name="500.html" server="ftp.danielvivar.com" local="130627769759561135" remote="130627590600000000" Dst="1" />
 <file name="down.html" server="ftp.danielvivar.com" local="130627770113679746" remote="130627590600000000" Dst="1" />
-<file name="teams.html" server="ftp.danielvivar.com" local="130627905466299888" remote="130627725000000000" Dst="1" />
+<file name="teams.html" server="ftp.danielvivar.com" local="130628517162695749" remote="130632808200000000" Dst="1" />
 </dwsync>

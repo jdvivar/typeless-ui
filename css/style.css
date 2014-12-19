@@ -41,14 +41,14 @@ h5 {
 /* Added to original css from Inspinia */
 /* STUFF */
 
-.logo-temp {
+.logo-corner {
   float: left;
   width: 220px;
-  padding-left: 25px;
+  padding-left: 35px;
 }
 
-.logo-temp img {
-  height: 34px;
+.logo-corner img {
+  height: 54px;
   -moz-display:inline-table;
 }
 
@@ -828,6 +828,8 @@ a.underline:hover {
 	 -webkit-column-width: 26em;
 	 -moz-column-gap: 0;
 	 -webkit-column-gap: 0;
+	 column-width:26em;
+	 column-gap:0;
 	 margin-right: -8px;
 	 margin-left:-1em;
   
@@ -877,7 +879,7 @@ a.underline:hover {
 }
 
 .nav.navbar-right > li > a {
-  color: #999c9e;
+  //color: #999c9e;
 }
 .nav > li.active > a {
   background-color: whitesmoke;
