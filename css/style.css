@@ -521,13 +521,18 @@ a.underline:hover {
 	vertical-align: middle;
 }
 
-#letter-selector > a:hover {
-	color: inherit;
+#letter-selector > a:hover ,
+#letter-selector > a:focus {
+	color: rgb(127, 140, 141);;
+}
+
+#letter-selector > a {
+	transition: all .1s;
 }
 
 #letter-selector > .label {
-	padding : 3px 3px;
-	font-size: 12px;
+	padding : 1px 1px;
+	font-size: 8px;
 	margin: 0 -1px;
 }
 
@@ -1281,10 +1286,31 @@ body.mini-navbar #page-wrapper {
 	background-image:linear-gradient(top,rgba(248,248,248,.5),rgba(241,241,241,.5));
 }
 
-.btn.btn-invisible:active {
+.btn.btn-invisible:active,
+.btn.btn-invisible.active,
+.btn.btn-invisible:focus,
+.open .dropdown-toggle.btn-invisible {
 	box-shadow:0px 0px 7px 1px rgba(0,0,0,0.15) inset;
 	border-color:#c6c6c6!important;
 	background-color:#f8f8f8;
+}
+
+.btn-invisible.disabled,
+.btn-invisible.disabled:hover,
+.btn-invisible.disabled:focus,
+.btn-invisible.disabled:active,
+.btn-invisible.disabled.active,
+.btn-invisible[disabled],
+.btn-invisible[disabled]:hover,
+.btn-invisible[disabled]:focus,
+.btn-invisible[disabled]:active,
+.btn-invisible.active[disabled],
+fieldset[disabled] .btn-invisible,
+fieldset[disabled] .btn-invisible:hover,
+fieldset[disabled] .btn-invisible:focus,
+fieldset[disabled] .btn-invisible:active,
+fieldset[disabled] .btn-invisible.active {
+  opacity: 0.5;
 }
 
 .btn.btn-outline{
