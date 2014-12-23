@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teams | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<span id="modal-windows-1">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<!-- top navbar used for home -->
+	<div class="navbar-home">
+	
+		<div class="btn-group m" style="float:left">
+			<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+				<i class="fa fa-bars"></i> </span>
+			</button>
+			<ul class="dropdown-menu">
+			
+				<li><a class="text-gray h5 text-uppercase" data-toggle="modal" data-target="#downloads-modal" href="#" >Downloads</span></a></li>
+				
+				<li><a class="text-gray h5 text-uppercase" href="http://typeless.uservoice.com/" target="_blank" >Help with Typeless</a></li>
+				
+				<li><a class="text-gray h5 text-uppercase" href="./teams.html" >Typeless for Teams</a></li>
+									
+				<li><a class="text-gray h5 text-uppercase" href="./contact.html" >Get in touch</a></li>
+				
+				<li><a class="text-gray h5 text-uppercase" href="./about.html" >About Typeless</a></li>						
+				
+			</ul>
+		</div>
+				
+		<a href="./home.html">
+			<div class="" id="logo-center-topbar"></div>
+		</a>
+		
+		<div class="btn-topbar-right">
+			<button class="btn btn-success " id="sign-up-btn" style="display:none">SIGN UP</button>
+			<button class="btn btn-default m">LOG IN</button>
+		</div>
+	</div>
+	
+	<!-- GO TO TOP -->
+	<!-- <button class="btn btn-info btn-circle btn-lg btn-outline scroll" data-to="row-1" id="go-to-top-btn" ><i class="fa fa-angle-double-up"></i></button> -->
+	
+	
+    <div id="wrapper" class="container animated fadeIn" style="margin-top:64px;margin-bottom:150px">
+	
+		<div class="container m-t-xl" style="">
+
+				<h1 class="text-center">Typeless for Teams</h1>
+				<h3 class="text-center">Start your free trial or <a class="text-info underline">purchase Typeless for Teams now</a></h3>
+				
+				<div class="m-t-xl"></div>
+				
+				<div class="col-md-8 ">
+					<div class="p-m">
+						
+						<h2 class="no-margins">The Administrator</h2>
+						<div class="divider m-t"></div>
+						<div class="admin-logged" style="display:none">
+							<div class="m-t-lg" >
+								<img class="img-circle m-t-n-md" width="54px" src="./img/a1.jpg">
+								<div class="m-l m-r" style="display:inline-block"><strong>Richard Winstone</strong><br>richard@however.com</div>
+							</div>
+							<div class="m-t">or <a class="underline text-info">use another account</a></div>
+						</div>
+						<div class="admin-unlogged" style="">
+							<div class="m-t" >
+								Set up a new account or <a class="underline text-info">use an existing account</a>.
+								<form class="m-t" role="form">
+									<div class="form-group col-sm-12">
+										<label class="form-label text-info">Name</label>
+										<input type="text" class="form-control" placeholder="">
+									</div>
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Email address</label>
+										<input type="email" class="form-control" placeholder="">
+									</div>
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Phone number</label>
+										<input type="tel" class="form-control" placeholder="">
+									</div>
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Password</label>
+										<input type="password" class="form-control"  placeholder="">
+									</div>
+									<div class="form-group col-sm-6">
+										<label  class="form-label text-info">Repeat password</label>
+										<input type="password" class="form-control" placeholder="">
+									</div>
+								</form>
+								<div style="display:inline-block"></div>
+							</div>
+						</div>
+						<h2 class="m-t-lg">The Team</h2>
+						<div class="divider m-t"></div>
+						<div class="m-t" >
+							About your company:
+							<form class="m-t" role="form">
+								<div class="form-group col-sm-4">
+									<label class="form-label text-danger">Team name</label>
+									<input type="text" class="form-control" placeholder="">
+								</div>
+								<div class="form-group col-sm-4" >
+									<label  class="form-label text-danger">Phone number</label>
+									<input type="tel" class="form-control" placeholder="">
+								</div>
+								<div class="form-group col-sm-4">
+									<label  class="form-label text-danger">Company size</label>
+									<select class="form-control">
+									  <option><100</option>
+									  <option>100-1000</option>
+									  <option>+1000</option>
+									</select>
+								</div>
+								
+							</form>
+							<div style="display:inline-block"></div>
+						</div>
+						
+						<h2 class="m-t-lg">The Plan</h2>
+						<div class="divider m-t"></div>
+						<div class="m-t" >
+							Choose your plan:
+							<form class="m-t" role="form">
+								<div class="form-group col-sm-3"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="" data-original-title="The price should update according to the number of users">
+									<label class="form-label text-warning">Number of users</label>
+									<input type="number" class="form-control" min="5" max="1000000" placeholder="5 or more">
+								</div>
+								<div class="form-group col-sm-3">
+									<label  class="form-label text-warning">Currency</label>
+									<select class="form-control" id="currency-select">
+									  <option value="gbp" checked>£ (GBP)</option>
+									  <option value="eur">€ (EUR)</option>
+									  <option value="usd">$ (USD)</option>
+									</select>
+								</div>
+								<div class="form-group col-sm-6">
+									<label class="form-label text-warning">Billing plan</label><br>
+									<label class="radio-inline" style="width:45%">
+										<input type="radio"  name="billing-plan" value="annually">
+											Annually<br>
+											<span class="m-t-sm" style="font-size:24px">
+												<span class="currency-span">£</span><span id="price-annually-units">39</span><sup style="font-size:14px" id="price-annually-decimals">99</sup>
+											</span>
+									</label>
+									<label class="radio-inline" style="width:45%">
+										<input type="radio" name="billing-plan" value="monthly">
+											Monthly<br>
+											<span class="m-t-sm" style="font-size:24px">
+												<span class="currency-span">£</span><span id="price-monthly-units">3</span><sup style="font-size:14px" id="price-monthly-decimals">99</sup>
+											</span>
+									</label>
+									
+								</div>
+								
+				
+							</form>
+							<div>
+								<span class="currency-span">£</span><span id="price-per-user-annually">39.99</span><span id="price-per-user-monthly" style="display:none">3.99</span> for every additional user per <span id="billing-time">year</span>.
+							</div>
+						</div>
+						
+						<h2 class="m-t-lg">The Payment</h2>
+						<div class="divider m-t"></div>
+						<div class="m-t" >
+							Please, fill in your card details. You won't be charged now.
+							<form class="m-t" role="form">
+								<div class="form-group col-sm-8">
+									<label class="form-label text-success">Card Number</label>
+									<input type="text" class="form-control">
+									<span class="fa fa-lock text-gray" style="position:absolute;top:35px;right:25px"></span>
+								</div>
+								<div class="form-group col-sm-4">
+									<label class="form-label text-success">Expiration</label>
+									
+									<span class="fa fa-lock text-gray" style="position:absolute;top:35px;right:25px"></span>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="p-m" style="border:1px solid #e5e5e5;border-radius:3px;background-color:whitesmoke;">
+						<p>hola</p>
+					</div>
+				</div>
+				
+			
+			
+		</div>
+		
+    </div>
+	
+	<div class="text-center m-b white-bg" style="position:absolute;;width:100%;z-index:1000">
+		<div class="pull-left home-footer m-l" >
+			<span class="text-gray btn btn-link disabled"><small>&copy; 2014 TRIGMATIC LTD</small></span>
+			<a class="text-gray btn btn-link" href="./privacy.html" target="_blank"><small>PRIVACY</small></a>
+			<a class="text-gray btn btn-link" href="./acceptable-use.html" target="_blank"><small>ACCEPTABLE USE</small></a>
+			<a class="text-gray btn btn-link" href="./terms.html" target="_blank"><small>TERMS</small></a>
+		</div>
+		
+		<div class="pull-right home-footer m-r" >
+			<span class="text-right text-uppercase text-muted"><small>Follow us on</small></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-facebook-square"></i></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-twitter-square"></i></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-linkedin-square"></i></span>
+			<span class="text-gray btn m-r-n-sm"><i class="fa fa-fw fa-google-plus-square"></i></span>
+		</div>
+	</div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+		
+			// scroll event for logo opacity
+			$(function(){
+				
+				$('#logo-center-topbar').show();
+				$('#sign-up-btn').show();
+				$('#go-to-top-btn').show();
+				
+			});
+			
+			// change event for currency
+			$('#currency-select').change(function(){
+				switch ($(this).val()){
+					case 'gbp':
+						$('.currency-span').text('£');
+						
+						$('#price-per-user-monthly').text('3.99');
+						$('#price-per-user-annually').text('39.99');
+						
+						$('#price-annually-units').text('39');
+						$('#price-annually-decimals').text('99');
+						
+						$('#price-monthly-units').text('3');
+						$('#price-monthly-decimals').text('99');
+						break;
+					case 'eur':
+						$('.currency-span').text('€');
+						
+						$('#price-per-user-monthly').text('4.99');
+						$('#price-per-user-annually').text('49.99');
+						
+						$('#price-annually-units').text('49');
+						$('#price-annually-decimals').text('99');
+						
+						$('#price-monthly-units').text('4');
+						$('#price-monthly-decimals').text('99');
+						break;
+					case 'usd':
+						$('.currency-span').text('$');
+						
+						$('#price-per-user-monthly').text('5.99');
+						$('#price-per-user-annually').text('59.99');
+						
+						$('#price-annually-units').text('59');
+						$('#price-annually-decimals').text('99');
+						
+						$('#price-monthly-units').text('5');
+						$('#price-monthly-decimals').text('99');
+						break;
+				}
+			});
+			
+			// change event for billing-plan
+			$('[name=billing-plan]').change(function(){
+				console.log('billing-plan change event fired!');
+				switch ($(this).val()){
+					case 'monthly':
+						$('#price-per-user-monthly').show();
+						$('#price-per-user-annually').hide();
+						$('#billing-time').text('month');
+						break;
+					case 'annually':
+						$('#price-per-user-monthly').hide();
+						$('#price-per-user-annually').show();
+						$('#billing-time').text('year');
+						break;
+				}
+			});
+			
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
