@@ -81,110 +81,180 @@
 						
 							<ul class="nav nav-tabs">
 								<li class="active"><a data-toggle="tab" href="#tab-incoming">Team Members</a></li>
-								<li class=""><a data-toggle="tab" href="#tab-shared">Team Shared Contacts</a></li>
+								<li class=""><a data-toggle="tab" href="#tab-shared">Team Shared Contacts Invitations</a></li>
 							</ul>
 							
 							<div class="tab-content">
 								<div class="tab-pane active" id="tab-incoming">
 									<table class="table">
-									<thead>
-										<tr class="va-middle text-gray" style="background-color:whitesmoke;">
-									
-											<td class="" style="width:3%"> <a class="btn btn-xs btn-invisible"><i class="fa fa-plus"></i> ADD MEMBER</a> </td>
-											<td class="col-md-3"><span data-tooltip="tooltip" data-placement="bottom" title="Only Typeless users within the same domain can be team members.">NAME & E-MAIL</td>
-											<td class="col-md-1"><span data-tooltip="tooltip" data-placement="bottom" title="Only contact details from connected business accounts are shared with the team.">CONTACTS</span></td>
-											<td class="col-md-1"></td>
-											<td class="col-md-2 text-right">STATUS</td>
+										<thead>
+											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+										
+												<td class="" style="width:3%"> <a class="btn btn-xs btn-invisible text-info" data-tooltip="tooltip" data-placement="bottom" title="Only Typeless users within the same domain can be team members."><i class="fa fa-plus"></i> ADD MEMBER</a> </td>
+												<td class="col-md-3">NAME & E-MAIL</td>
+												<td class="col-md-2">BUSINESS CONTACTS <i class="fa fa-info-circle text-info" data-tooltip="tooltip" data-placement="bottom" title="Only contact details from connected business accounts are shared with the team."></i></td>
+												<td class="col-md-1"></td>
+												<td class="col-md-2 text-right">STATUS</td>
+												
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="va-middle">
+												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
+												<td class="">Virginia Bravo<br><span class="small text-gray">virginia@balderton.com</span></td>
+												<td class="">3,415</td>
+												<td class="">
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP MEMBERSHIP</a></li>
+														</ul>
+													</div>
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-success">LIVE</span><br>Accepted 2 min ago</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
+												<td class="">Petra Andersen<br><span class="small text-gray">petra@balderton.com</span></td>
+												<td class="">1,209</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action stop" href="#"><i class="fa fa-send fa-fw action stop"></i> RE-SEND TEAM INVITATION</a></li>
+															<li><a class="action stop" href="#"><i class="fa fa-trash fa-fw action stop"></i> REMOVE MEMBER</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-danger">STOPPED</span><br>Stopped 3 days ago</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a6.jpg" style="width:38px;height:38px"></td>
+												<td class="">Eva Pryce<br><span class="small text-gray">eva@balderton.com</span></td>
+												<td class="">2,269</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action stop" href="#"><i class="fa fa-send fa-fw action stop"></i> RE-SEND TEAM INVITATION</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 6 days ago</td>
+											</tr>
 											
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="va-middle">
-											<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
-											<td class="">Virginia Bravo<br><span class="small text-gray">virginia@balderton.com</span></td>
-											<td class="">3,415</td>
-											<td class="">
-												<div class="btn-group">
-													<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-														<small>ACTIONS</small> <span class="caret"></span>
-													</button>
-													<ul class="dropdown-menu">
-														<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP MEMBERSHIP</a></li>
-													</ul>
-												</div>
-											</td>
-											<td class="text-gray text-right status small"><span class="label label-success">LIVE</span><br>Accepted 2 min ago</td>
-										</tr>
-										<tr class="va-middle">
-											<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
-											<td class="">Petra Andersen<br><span class="small text-gray">petra@balderton.com</span></td>
-											<td class="">1,209</td>
-											<td class="">
-																					
-												<div class="btn-group">
-													<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-														<small>ACTIONS</small> <span class="caret"></span>
-													</button>
-													<ul class="dropdown-menu">
-														<li><a class="action stop" href="#"><i class="fa fa-send fa-fw action stop"></i> RE-SEND TEAM INVITATION</a></li>
-													</ul>
-												</div>
-												
-											</td>
-											<td class="text-gray text-right status small"><span class="label label-danger">REMOVED</span><br>Stopped 3 days ago</td>
-										</tr>
-										<tr class="va-middle">
-											<td><img alt="image" class="img-circle m-l-sm" src="img/a6.jpg" style="width:38px;height:38px"></td>
-											<td class="">Eva Pryce<br><span class="small text-gray">eva@balderton.com</span></td>
-											<td class="">2,269</td>
-											<td class="">
-																					
-												<div class="btn-group">
-													<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-														<small>ACTIONS</small> <span class="caret"></span>
-													</button>
-													<ul class="dropdown-menu">
-														<li><a class="action stop" href="#"><i class="fa fa-send fa-fw action stop"></i> RE-SEND TEAM INVITATION</a></li>
-													</ul>
-												</div>
-												
-											</td>
-											<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 6 days ago</td>
-										</tr>
-										<tr class="va-middle">
-											<td><img alt="image" class="img-circle m-l-sm" src="img/a1.jpg" style="width:38px;height:38px"></td>
-											<td class="">Harry Manion<br><span class="small text-gray">harry.it@balderton.com</span></td>
-											<td class="">231</td>
-											<td class="">
-																					
-												<div class="btn-group">
-													<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-														<small>ACTIONS</small> <span class="caret"></span>
-													</button>
-													<ul class="dropdown-menu">
-														<li><a class="action stop" href="#"><i class="fa fa-send fa-fw action stop"></i> RE-SEND TEAM INVITATION</a></li>
-													</ul>
-												</div>
-												
-											</td>
-											<td class="text-gray text-right status small"><span class="label ">ERROR</span><br>Sent 1 month ago</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="text-center show-on-empty m-t-lg" style="display:none">
-									
-									<div class="well well-sm small" style="display:inline">
-										Received invitations will appear here.
-									</div>
-									
-								</div>
+										</tbody>
+									</table>
+								
 								</div>
 								<div class="tab-pane" id="tab-shared">
-									content for another similar table
+									<table class="table">
+										<thead>
+											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+										
+												<td class="" style="width:3%"> <a class="btn btn-xs btn-invisible text-info" data-tooltip="tooltip" data-placement="bottom" title="Share team members' contacts with any Typeless user."><i class="fa fa-share-alt"></i> SHARE TEAM</a> </td>
+												<td class="col-md-3">NAME & E-MAIL</td>
+												<td class="col-md-2">TEAM SHARED CONTACTS</td>
+												<td class="col-md-1"></td>
+												<td class="col-md-2 text-right">STATUS</td>
+												
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="va-middle">
+												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
+												<td class="">Virginia Bravo<br><span class="small text-gray">virginia@balderton.com</span></td>
+												<td class="">6,893</td>
+												<td class="">
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
+														</ul>
+													</div>
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-success">LIVE</span><br>Accepted just now</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
+												<td class="">Petra Andersen<br><span class="small text-gray">petra@balderton.com</span></td>
+												<td class="">6,893</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-trash fa-fw "></i> REMOVE</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-danger">STOPPED</span><br>Stopped 3 days ago</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a1.jpg" style="width:38px;height:38px"></td>
+												<td class="">Harry Manion<br><span class="small text-gray">h.manion@briefcase.com</span></td>
+												<td class="">6,893</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 6 days ago</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a4.jpg" style="width:38px;height:38px"></td>
+												<td class="">Peter Francis<br><span class="small text-gray">p.francis@balderton.com</span></td>
+												<td class="">4,624</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 1 week ago</td>
+											</tr>
+											
+										</tbody>
+									</table>
 								</div>
 							</div>
 						
-						
+							
                      
 						
 					</div>
