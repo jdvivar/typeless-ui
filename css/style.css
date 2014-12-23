@@ -3085,6 +3085,7 @@ body.body-small .footer.fixed {
 .blank-panel .panel-heading {
   padding-bottom: 0;
 }
+
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
@@ -3094,11 +3095,11 @@ body.body-small .footer.fixed {
   -moz-border-top-colors: none;
   background: none;
   border-color: #dddddd #dddddd rgba(0, 0, 0, 0);
-  border-bottom: #f3f3f4;
+  border-bottom: #ffffff;
   border-image: none;
   border-style: solid;
   border-width: 1px;
-  color: #555555;
+  color: black;
   cursor: default;
 }
 .nav.nav-tabs li {
@@ -3106,15 +3107,19 @@ body.body-small .footer.fixed {
   border: none;
 }
 .nav-tabs > li > a {
-  color: #A7B1C2;
-  font-weight: 600;
-  padding: 10px 20px 10px 25px;
+  color: black;
+  font-weight: 200;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  border-bottom: #bdc3c7;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
-  background-color: #e6e6e6;
-  color: #676a6c;
-}
+  background-color: #f5f5f5;
+  border-color:#f5f5f5;
+} 
+
+
 /* GLOBAL  */
 .no-padding {
   padding: 0 !important;
