@@ -29,13 +29,13 @@
 		
 	</div>
 	<div style="background-color:#fff;height:48px;border-bottom: 1px solid #e5e5e5;position:fixed;width:100%;min-width:1120px;margin-top:60px;">
-		<img src="img/gmail-toolbar-right.png" style="float:right;margin-right:330px">
+		<img id="gmail-toolbar-right" src="img/gmail-toolbar-right.png" style="float:right;margin-right:330px">
 		<img src="img/gmail-toolbar-left.png" style="float:left;margin-left:0">
 	</div>
 	<div style="float:left;margin-top:108px;width:100%">
 		<img src="img/gmail-left.png" style="position:fixed;left:0;vertical-align:top">
 		<div style="background-color:#f3f3f3;height:200px;width:100%;margin-left:202px">
-			<div class="pull-right" style="background-color:white;width:532px;height:200px">
+			<div id="background" class="pull-right" style="background-color:white;width:532px;height:200px">
 			</div>
 			<div class="container">
 				<div class="row m-t-xl">
@@ -48,11 +48,13 @@
 					<button onclick="location.href='layout.html?search.html'">search.html</button>
 					<button onclick="location.href='layout.html?start.html'">start.html</button>
 					<button onclick="location.href='layout.html?connect-account.html'">connect-account.html</button>
+					<button id="minimized" onclick="location.href='layout.html?minimized.html'">minimized.html</button>
+					
 				</div>
 				
 			</div>
 		</div>
-		<div style="background-color: #e5e5e5;position: fixed;top: 60px;right: 0;height: 100%;width: 300px;">
+		<div id="iframe-container" style="background-color: #e5e5e5;position: fixed;top: 60px;right: 0;height: 100%;width: 300px;">
 			<iframe frameborder=0 scrolling="yes" height="100%" src=""></iframe>
 		</div>
 	</div>
@@ -69,6 +71,19 @@
 			var url = document.URL.split("?")[1];
 			
 			$('iframe').attr('src','./'+url);
+			
+			if (url=="minimized.html") {
+				$('#iframe-container').css('width','50px');
+				$('#gmail-toolbar-right').css('margin-right','80px');
+				$('#background').css('width','252px');
+				$('iframe').css('width','50px');
+			} else {
+				$('#iframe-container').css('width','300px');
+				$('#gmail-toolbar-right').css('margin-right','330px');
+				$('#background').css('width','532px');
+				$('iframe').css('width','300px');				
+			}
+			
 			
         });
     </script>

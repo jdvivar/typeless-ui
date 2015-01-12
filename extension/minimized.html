@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrome Extension | Typeless.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../octicons/octicons.css" rel="stylesheet" >
+	<link href="../css/animate.css" rel="stylesheet">
+	
+	<!-- <link href="../css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" /> -->
+	<!-- <link href="../css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" /> -->
+
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/ce-style.css" rel="stylesheet">
+	
+</head>
+
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%;background-color:#f1f1f1">
+
+	<script>
+		
+	</script>
+
+	<div class="container">
+		<div class="row ce-bar text-center">
+			<button class="btn ce-button pull-left ce-minimize" onclick="" style="margin-left:9px">
+				<span class="octicon octicon-move-left" style="font-size:14px"></span>
+			</button>
+				
+			<button class="btn ce-button pull-left " onclick="" style="margin-left:9px;margin-top: 50px;">
+				<i class="fa fa-share-alt fa-fw"></i>
+			</button>
+			
+			<button class="btn ce-button pull-left " onclick="" style="margin-left:9px">
+				<i class="fa fa-plus fa-fw"></i>
+			</button>
+			
+			<button class="btn ce-button pull-left " onclick="" style="margin-left:9px">
+				<i class="fa fa-bell fa-fw"><sup>6</sup></i>
+			</button>
+			
+			<button class="btn ce-button pull-left" style="margin-left:9px;background-color:#1abc9c;color:white">
+				<i class="fa fa-search fa-fw"></i>
+			</button>
+			
+			<!-- <div class="text-center" style="display: inline-block;margin-top: 50px;"> <span style="font-size:9px;font-weight:bold">RECENT CONTACTS</span><br><br>
+				<a href="profile.html"><img class="img-circle" src="../img/a6.jpg" style="width:66%"><br>Virginia</a><br><br>
+				<a href="profile.html"><img class="img-circle" src="../img/a1.jpg" style="width:66%"><br>Raul</a><br><br>
+				<a href="profile.html"><img class="img-circle" src="../img/a5.jpg" style="width:66%"><br>Barbara</a><br>
+			</div> -->
+			
+		</div>
+		
+		
+		
+	</div>
+	
+	<div class="text-center" style="position:absolute;bottom:85px">
+		<img src="../img/logo-only-icon-original.png" style="width:66%"></img>
+	</div>
+
+	
+	<div class="container ">
+		<div class="row ce-footer text-center" style="border:none">
+			<a><img class="ce-footer-logo" src="../img/logo-only-letters-inverse.png" width="80%" ></img></a>
+		</div>
+	</div>
+
+	<!-- Mainly scripts -->
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<!-- <script src="../js/plugins/pnotify/pnotify.core.js"></script> -->
+	<!-- <script src="../js/plugins/pnotify/pnotify.buttons.js"></script> -->
+
+    <script>
+        $(document).ready(function() {
+		
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+		
+			// select when hover to copy to clipboard
+			$('.copy').hover(function(){
+				//console.log($(this).nextAll('.select'));
+				$(this).nextAll('.select').show();
+				$(this).nextAll('.select').select();
+			}, function(){});
+			
+			// search bar animations
+			$('#top-search').focus(searchIn);
+			$('#top-search').blur(searchOut);
+			
+			function searchIn(){
+			
+				//$('.ce-bar').slideToggle('fast');
+				
+				$( '.row:not(.search,.ce-bar,.ce-footer)' ).fadeOut('fast');
+			};
+			
+			function searchOut(){
+				
+				//$('.ce-bar').slideToggle('fast');
+				
+				$('.row:not(.search,.ce-bar)').fadeIn('fast');
+				
+			};
+			
+			
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
