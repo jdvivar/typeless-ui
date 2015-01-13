@@ -188,6 +188,14 @@
 	background-color:#f1f1f1
 }
 
+.ce-minimize img {
+	background-color: rgb(103, 106, 108);
+}
+
+.ce-minimize img:hover {
+	background-color: rgb(0,0,0);
+}
+
 
 /* style for mark */
 /* It hasn't got ce prefix because I'm rewriting an html tag style */
