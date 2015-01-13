@@ -3,7 +3,20 @@
 <head>
 	<link rel="icon" href="favicon.png">
 	<script>
-		window.setTimeout(function(){window.location.assign("contacts.html")},2000);
+		function is_mobile() {
+			var agents = ['android', 'webos', 'iphone', 'ipad', 'blackberry'];
+			for(i in agents) {
+				if(navigator.userAgent.match('/'+agents[i]+'/i')) {
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		if (is_mobile())
+			window.setTimeout(function(){window.location.assign("contacts.html")},2000);
+		else
+			window.setTimeout(function(){window.location.assign("m-start.html")},2000);
 	</script>
 </head>
 <body>
