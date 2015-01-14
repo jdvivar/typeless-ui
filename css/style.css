@@ -882,6 +882,79 @@ a.underline:hover {
 	left:-6px;
 }
 
+.m-search-bar {
+	z-index:1000;
+}
+
+.m-search-bar input::-webkit-input-placeholder {
+	font-size: 10px;
+	text-transform:uppercase;
+	text-align: center;	
+}
+
+.m-search-bar input:-moz-placeholder { /* Firefox 18- */
+	font-size: 10px;
+	text-transform:uppercase;
+	text-align: center;
+}
+
+.m-search-bar input::-moz-placeholder {  /* Firefox 19+ */
+	font-size: 10px;
+	text-transform:uppercase;
+	text-align: center;
+}
+
+.m-search-bar input:-ms-input-placeholder {  
+	font-size: 10px;
+	text-transform:uppercase;
+	text-align: center;
+}
+
+.m-search-bar button {
+	
+}
+
+.m-search-bar input{
+	border-radius:0!important;
+	font-size:13px;
+	background-color:white!important;
+	border-bottom-right-radius: 3px!important;
+	border-top-right-radius: 3px!important;
+	border: 1px solid lightgray;
+	border-left:none;
+}
+.m-search-bar input:hover {
+	background-color:white!important;
+	border-color:#18a689!important;
+}
+
+.m-search-bar input:focus {
+	background-color:white!important;
+	border-color:#18a689!important;
+}
+
+.m-search-bar .dropdown-menu {
+	width: 100%;
+	margin-left: 0;
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+	font-size: 12px;
+	padding-bottom: 8px;
+}
+
+.m-search-bar .m-dropdown-header{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	color: #7f8c8d;
+}
+
+.m-search-bar .m-dropdown-item {
+	line-height: 2.5;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {

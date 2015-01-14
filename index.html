@@ -4,21 +4,25 @@
 	<link rel="icon" href="favicon.png">
 	<script>
 		function is_mobile() {
-			var agents = ['android', 'webos', 'iphone', 'ipad', 'blackberry'];
-			for(i in agents) {
-				if(navigator.userAgent.match('/'+agents[i]+'/i')) {
-					return true;
-				}
-			}
-			return false;
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+				return true;
+			else
+				return false;
 		}
 		
-		if (is_mobile())
+		//document.getElementById('agent').innerHTML = navigator.userAgent;
+		console.log(navigator.userAgent);
+		
+		if (!is_mobile()){
 			window.setTimeout(function(){window.location.assign("contacts.html")},2000);
-		else
+		}
+		else {
 			window.setTimeout(function(){window.location.assign("m-start.html")},2000);
+		}
+		
 	</script>
 </head>
 <body>
-	Redirecting to contacts.html...
+	Redirecting...<br>
+	User agent is <span id="agent"><script>document.getElementById('agent').innerHTML = navigator.userAgent;</script></span>
 </body>

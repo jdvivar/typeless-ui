@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html style="height:100%">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	
+	<meta name="apple-itunes-app" content="app-id=370144476">
+
+    <title>Mobile | Typeless.</title>
+	
+	<link rel="icon" href="favicon.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/smart-app-banner.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body style="height:100%">	
+	
+	<div class="container-fluid" style="height:100%">
+		<div class="row text-center animated fadeInDown" style="height:100%">
+			<div style="position: relative;height: 100%;padding-top: 10px; padding-bottom:15px;background-color: ;">
+				<img class="hide-logo m-t-lg" src="img/logo-only-icon-original.png" style="width:33%"></img>
+				<div class="hide-logo p-m m-b" style="width:100%">
+					<img src="img/logo-only-letters-original.png" style="width:67%"></img>
+				</div>
+				
+				<div class="m-l m-r" style="">
+					<form role="form">
+						<div class="input-group m-t-sm m-b-sm m-search-bar">
+							<span class="input-group-btn">
+								<button type="submit" class="btn btn-success" id="top-search-btn"><i class="fa fa-search"></i></button>
+							</span>
+							<input type="text" class="form-control input dropdown-toggle" data-toggle="dropdown" id="top-search" placeholder="Search for people, jobs, companies & more" autocomplete="off" style="-webkit-user-select:auto;">
+							<div class="dropdown-backdrop"></div>
+							<ul class="dropdown-menu">
+								<div class="col-xs-6">
+									<li class="m-dropdown-header"><small>PREVIOUS SEARCHES</small></li>
+									<li class="m-dropdown-item"><a href="#" class="prev-search" value="don">don</a></li>
+									<li class="m-dropdown-item"><a href="#" class="prev-search" value="sales manager">sales manager</a></li>
+									<li class="m-dropdown-item"><a href="#" class="prev-search" value="london">london</a></li>
+								</div>
+
+								<ul class="list-unstyled col-xs-6" style="padding-left:0">
+									<li class="m-dropdown-header"><small>RECENT CONTACTS</small></li>
+									<li class="m-dropdown-item"><a href="profile.html"><img class="img-circle m-r-sm" src="img/a6.jpg" style="width:20px">Virginia Madsen</a></li>
+									<li class="m-dropdown-item"><a href="profile.html"><img class="img-circle m-r-sm" src="img/a1.jpg" style="width:20px">Raul Vialas</a></li>
+									<li class="m-dropdown-item"><a href="profile.html"><img class="img-circle m-r-sm" src="img/a5.jpg" style="width:20px">Barbara T. Raymond</a></li>
+								</ul>
+							</ul>
+						</div>
+					</form>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div class="row m-b text-center" style="position:fixed;bottom:0;width:100%;z-index:-1">
+			<a class="btn btn-info btn-sm">GO TO DESKTOP VERSION <i class="fa fa-long-arrow-right"></i></a>
+		</div>
+	</div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/smart-app-banner.min.js"></script>
+	
+    <!-- <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script> -->
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+
+    <script>
+        $(document).ready(function() {
+			
+			// search bar events
+			$('#top-search').focus(searchIn);
+			$('#top-search').blur(searchOut);
+			
+			function searchIn (){
+				$('.hide-logo').hide('fast');
+				window.setTimeout(function(){scrollToID('body', 100)},500);
+			};
+			function searchOut (){
+				if ($('#top-search').val()=='')
+					$('.hide-logo').show('fast');
+				$('.m-search-bar').removeClass('open');
+			};
+			
+			function scrollToID(id, speed){
+				var offSet = 0;
+				var targetOffset = $(id).offset().top - offSet;
+
+				$('html,body').animate({scrollTop:targetOffset}, speed);
+			}			
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
