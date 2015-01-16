@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html style="height:100%">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <title>Search | Typeless.</title>
+	
+	<link rel="icon" href="favicon.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body style="height:100%;background-color:whitesmoke">	
+	
+	<div class="container-fluid" style="height:100%;background-color:whitesmoke">
+		<div class="row text-center" style="height:100%">
+			
+			
+			<div style="position: relative;height: 100%;padding-bottom:15px;">
+				<span class="m-clear" style="display:none">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-close fa-stack-1x fa-inverse"></i>
+					</span>
+				</span>
+				<div class="m-l m-r" style="position: fixed;z-index: 1000;
+											padding-top: 10px;padding-bottom: 10px;
+											background-color: whitesmoke;top: 0;">
+					<form role="form">
+						<div class="input-group m-t-sm m-b-sm m-search-bar">
+							<span class="input-group-btn">
+								<button type="submit" class="btn btn-success" id="top-search-btn"><i class="fa fa-search"></i></button>
+							</span>
+							<input type="search" class="form-control input" id="top-search" placeholder="Search for people, jobs, companies & more" value="don" autocomplete="off">
+						</div>
+					</form>
+				</div>
+				<div style="height:74px"></div>
+				
+				<ul class="list-group m-search-results m-t m-b">
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a1.jpg" style="height:40px">
+							<div class="name"><mark>Don</mark>ald Draper</div>
+							<div class="text-gray"><mark>don</mark>@sterlingcooper.com</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action call" style="background-color:#3498db;">
+								CALL</div><!-- no space 
+						 --><div class="m-action message" style="background-color:#f1c40f;">
+								MESSAGE</div><!-- no space 
+						 --><div class="m-action mail" style="background-color:#e74c3c;">
+								MAIL</div><!-- no space 
+						 --><div class="m-action more" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+						<div class="m-call options" style="display:none">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<a href="tel:657023359">
+										<span class="pull-right fa fa-chevron-right m-t"></span>
+										<div class="action">CALL MOBILE</div>
+										<div class="detail">657 023 359</div>
+									</a>
+								</li>
+								<li class="list-group-item">
+									<a href="tel:02032303409">
+										<span class="pull-right fa fa-chevron-right m-t"></span>
+										<div class="action">CALL WORK</div>
+										<div class="detail">020 3230 3409</div>
+									</a>
+								</li>
+							<ul>
+						</div>
+						<div class="m-message options" style="display:none">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<a href="sms:657023359">
+										<span class="pull-right fa fa-chevron-right m-t"></span>
+										<div class="action">MESSAGE MOBILE</div>
+										<div class="detail">657 023 359</div>
+									</a>
+								</li>
+							<ul>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a7.jpg" style="height:40px">
+							<div class="name">Virginia Madsen</div>
+							<div class="text-gray">Cale<mark>don</mark>ian</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action" style="background-color:#3498db;">
+								CALL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#f1c40f;">
+								MESSAGE</div><!-- no space 
+						 --><div class="m-action" style="background-color:#e74c3c;">
+								MAIL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a3.jpg" style="height:40px">
+							<div class="name"><mark>Don</mark>ally Raisin</div>
+							<div class="text-gray">draisin@sterlingcooper.com</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action" style="background-color:#e74c3c;">
+								MAIL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					
+					<li class="list-group-item">
+						<div class="details">
+							<img class="image img-circle pull-left m-r-sm" src="./img/a4.jpg" style="height:40px">
+							<div class="name">Francis Upperland</div>
+							<div class="text-gray">Sales Manager at Cale<mark>don</mark>ian</div>
+						</div>
+						<div class="m-actionbar">
+							
+						<div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a7.jpg" style="height:40px">
+							<div class="name">Virginia Madsen</div>
+							<div class="text-gray">Cale<mark>don</mark>ian</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action" style="background-color:#3498db;">
+								CALL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#f1c40f;">
+								MESSAGE</div><!-- no space 
+						 --><div class="m-action" style="background-color:#e74c3c;">
+								MAIL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a1.jpg" style="height:40px">
+							<div class="name"><mark>Don</mark>ald Draper</div>
+							<div class="text-gray"><mark>don</mark>@sterlingcooper.com</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action" style="background-color:#3498db;">
+								CALL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#f1c40f;">
+								MESSAGE</div><!-- no space 
+						 --><div class="m-action" style="background-color:#e74c3c;">
+								MAIL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a1.jpg" style="height:40px">
+							<div class="name"><mark>Don</mark>ald Draper</div>
+							<div class="text-gray"><mark>don</mark>@sterlingcooper.com</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action" style="background-color:#3498db;">
+								CALL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#f1c40f;">
+								MESSAGE</div><!-- no space 
+						 --><div class="m-action" style="background-color:#e74c3c;">
+								MAIL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a7.jpg" style="height:40px">
+							<div class="name">Virginia Madsen</div>
+							<div class="text-gray">Cale<mark>don</mark>ian</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action" style="background-color:#3498db;">
+								CALL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#f1c40f;">
+								MESSAGE</div><!-- no space 
+						 --><div class="m-action" style="background-color:#e74c3c;">
+								MAIL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a4.jpg" style="height:40px">
+							<div class="name">Francis Upperland</div>
+							<div class="text-gray">Sales Manager at Cale<mark>don</mark>ian</div>
+						</div>
+						<div class="m-actionbar">
+							
+						<div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					
+					<li class="list-group-item">
+						<div class="details">
+							<img class="img-circle pull-left m-r-sm" src="./img/a1.jpg" style="height:40px">
+							<div class="name">Raul Vialas</div>
+							<div class="text-gray">Re<mark>don</mark>, France</div>
+						</div>
+						<div class="m-actionbar">
+							<div class="m-action" style="background-color:#3498db;" data-toggle="modal" data-target=".modal-call">
+								CALL</div><!-- no space 
+						 --><div class="m-action" style="background-color:#f1c40f;">
+								MESSAGE</div><div class="m-action" style="background-color:#bdc3c7;">
+								MORE...
+							</div>
+						</div>
+					</li>
+					
+					
+				</ul>
+				
+			</div>
+		</div>
+		
+		
+	</div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+    <script>
+        $(document).ready(function() {
+		
+			// search bar events
+			$('#top-search').focus(searchIn);
+			//$('#top-search').blur(searchOut);
+			
+			function searchIn (){
+				
+			};
+			
+			// clear button to show up when the user writes in the search bar
+			$('#top-search').keyup(function(){
+				if($(this).val()!='')
+					$('.m-clear').show();
+				else
+					$('.m-clear').hide();
+				
+			})
+			
+			// if user clicks on the clear button, the user is not interested in the results
+			// the screen should change to the initial one when the user click in to
+			// write in the first place
+			$('.m-clear').click(function(){
+				window.location.assign("m-start.html");
+			});
+			
+			// animations that happen when clicking a contact
+			// close other contacts
+			// scroll to that contact
+			$('.list-group-item > .details').click(function(e){
+			
+				$('.list-group-item').each(function(){
+					if ($(this).hasClass('active')) {
+						$(this).children('.m-call.options').slideUp(300);
+						$(this).children('.m-call.options').removeClass('active');
+						
+						$(this).children('.m-message.options').slideUp(300);
+						$(this).children('.m-message.options').removeClass('active');
+						
+						$(this).children('.m-mail.options').slideUp(300);
+						$(this).children('.m-mail.options').removeClass('active');
+					}
+				});
+				
+				$('.list-group-item').not($(this).parent('.list-group-item')).removeClass('active');
+				$(this).parent().toggleClass('active');
+					
+				self = $(this).parent();
+				window.setTimeout(function(){scrollToID(self,250);},500);
+			});
+			
+			// function to scroll (for our page 74px is the offset, for the search bar)
+			function scrollToID(id, speed){
+				var offSet = 74;
+				var targetOffset = $(id).offset().top - offSet;
+
+				$('html,body').animate({scrollTop:targetOffset}, speed);
+			}		
+
+			// give actions proportional widths: 1 100%, 2 50%, 3 33%, etc
+			$('.m-actionbar').each(function(){
+				var count = $(this).children('.m-action').length;
+				$(this).children('.m-action').each(function(){
+					$(this).width(100/count+'%');
+				});
+			});
+			
+			
+			$('.m-action.call').click(function(e){
+				if ($(this).parent().parent().children('.m-call.options').hasClass('active')){
+				
+					console.log('via active');
+					
+					$(this).parent().parent().children('.m-call.options').slideToggle(300);
+					$(this).parent().parent().children('.m-call.options').addClass('active');
+					
+				} else {
+				
+					console.log('via inactive');
+				
+					$(this).parent().parent().children('.m-message.options').slideUp(300);
+					$(this).parent().parent().children('.m-message.options').removeClass('active');			
+					
+					$(this).parent().parent().children('.m-mail.options').slideUp(300);
+					$(this).parent().parent().children('.m-mail.options').removeClass('active');
+					
+					$(this).parent().parent().children('.m-call.options').delay(300).slideToggle(300);
+					$(this).parent().parent().children('.m-call.options').addClass('active');
+				}
+			})
+			
+			$('.m-action.message').click(function(e){
+				if ($(this).hasClass('active')){
+					$(this).parent().parent().children('.m-message.options').slideToggle(300);
+					$(this).parent().parent().children('.m-message.options').addClass('active');
+				} else {
+					$(this).parent().parent().children('.m-call.options').slideUp(300);
+					$(this).parent().parent().children('.m-call.options').removeClass('active');			
+					
+					$(this).parent().parent().children('.m-mail.options').slideUp(300);
+					$(this).parent().parent().children('.m-mail.options').removeClass('active');
+					
+					$(this).parent().parent().children('.m-message.options').delay(300).slideToggle(300);
+					$(this).parent().parent().children('.m-message.options').addClass('active');
+				}
+			})
+			
+        });
+    </script>
+	
+	
+</body>
+</html>

@@ -917,6 +917,7 @@ a.underline:hover {
 .m-search-bar input{
 	border-radius:0!important;
 	font-size:13px;
+	font-weight: 600;
 	background-color:white!important;
 	border-bottom-right-radius: 3px!important;
 	border-top-right-radius: 3px!important;
@@ -954,6 +955,101 @@ a.underline:hover {
 	white-space: nowrap;
 	overflow: hidden;
 }
+
+.m-clear {
+	font-size: 10px;
+	position: absolute;
+	z-index: 9000;
+	right: 20px;
+	top: 24px;
+	color: #e74c3c;
+}
+
+.m-search-results {
+	background-color: white;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding-top: 0!important;
+	margin-top:0!important;
+}
+
+.m-search-results .list-group-item {
+	text-align: left;
+	transition: all 0.3s;
+	padding: 0;
+}
+
+.m-search-results .list-group-item.active {
+	background-color: white;
+	border-color: #7f8c8d;
+	//border-bottom-color: #eeeeee;
+	color: black;
+}
+
+.m-action {
+	display: inline-block;
+	text-align: center;
+	font-weight: 600;
+	color: transparent;
+	line-height: 40px;
+}
+
+.m-actionbar,.m-action {
+	height:0!important;
+	transition: all .3s;
+}
+
+.active .m-actionbar, .active .m-action{
+	height:40px!important;
+	color: white;
+}
+
+.list-group-item .details {
+	padding: 8px;
+}
+
+mark {
+	padding: 0;
+	color: inherit;
+	background-color: #eeeeee;
+}
+
+.m-search-results .list-group-item .details .name {
+	font-weight:600;
+}
+
+.m-call .list-group-item{
+	background-color: #3498db;
+}
+
+.m-message .list-group-item{
+	background-color: #f1c40f;
+}
+
+.m-mail .list-group-item{
+	background-color: #e74c3c;
+}
+
+.options .list-group-item {
+	border:none;
+	padding:10px;
+	border-radius:0;
+}
+
+.options .list-group {
+	margin-bottom:1px;
+}
+
+.options .action {
+	font-weight:600;
+	font-size: 14px;
+	border: none;
+}
+
+.options *{
+	color:white;
+}
+
 
 /* STUFF ENDS */
 

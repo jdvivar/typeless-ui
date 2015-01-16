@@ -37,12 +37,12 @@
 							<span class="input-group-btn">
 								<button type="submit" class="btn btn-success" id="top-search-btn"><i class="fa fa-search"></i></button>
 							</span>
-							<input type="text" class="form-control input dropdown-toggle" data-toggle="dropdown" id="top-search" placeholder="Search for people, jobs, companies & more" autocomplete="off" style="-webkit-user-select:auto;">
+							<input type="search" class="form-control input dropdown-toggle" data-toggle="dropdown" id="top-search" placeholder="Search for people, jobs, companies & more" autocomplete="off" style="-webkit-user-select:auto;">
 							<div class="dropdown-backdrop"></div>
 							<ul class="dropdown-menu">
 								<div class="col-xs-6">
 									<li class="m-dropdown-header"><small>PREVIOUS SEARCHES</small></li>
-									<li class="m-dropdown-item"><a href="#" class="prev-search" value="don">don</a></li>
+									<li class="m-dropdown-item"><a href="./m-search-results.html" class="prev-search" value="don">don</a></li>
 									<li class="m-dropdown-item"><a href="#" class="prev-search" value="sales manager">sales manager</a></li>
 									<li class="m-dropdown-item"><a href="#" class="prev-search" value="london">london</a></li>
 								</div>
@@ -81,7 +81,7 @@
 			
 			// search bar events
 			$('#top-search').focus(searchIn);
-			$('#top-search').blur(searchOut);
+			$('#top-search').blur(window.setTimeout(searchOut,100));
 			
 			function searchIn (){
 				$('.hide-logo').hide('fast');
