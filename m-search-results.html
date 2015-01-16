@@ -96,7 +96,7 @@
 					<li class="list-group-item">
 						<div class="details">
 							<img class="img-circle pull-left m-r-sm" src="./img/a7.jpg" style="height:40px">
-							<div class="name">Virginia Madsen</div>
+							<div class="name">Ruben Merch&aacute;n</div>
 							<div class="text-gray">Cale<mark>don</mark>ian</div>
 						</div>
 						<div class="m-actionbar">
@@ -129,7 +129,7 @@
 					<li class="list-group-item">
 						<div class="details">
 							<img class="image img-circle pull-left m-r-sm" src="./img/a4.jpg" style="height:40px">
-							<div class="name">Francis Upperland</div>
+							<div class="name">Ra&uacute;l Vialas</div>
 							<div class="text-gray">Sales Manager at Cale<mark>don</mark>ian</div>
 						</div>
 						<div class="m-actionbar">
@@ -229,7 +229,7 @@
 					<li class="list-group-item">
 						<div class="details">
 							<img class="img-circle pull-left m-r-sm" src="./img/a1.jpg" style="height:40px">
-							<div class="name">Raul Vialas</div>
+							<div class="name">Francis Upperland</div>
 							<div class="text-gray">Re<mark>don</mark>, France</div>
 						</div>
 						<div class="m-actionbar">
@@ -326,15 +326,11 @@
 			
 			$('.m-action.call').click(function(e){
 				if ($(this).parent().parent().children('.m-call.options').hasClass('active')){
-				
-					console.log('via active');
-					
+									
 					$(this).parent().parent().children('.m-call.options').slideToggle(300);
 					$(this).parent().parent().children('.m-call.options').addClass('active');
 					
 				} else {
-				
-					console.log('via inactive');
 				
 					$(this).parent().parent().children('.m-message.options').slideUp(300);
 					$(this).parent().parent().children('.m-message.options').removeClass('active');			
@@ -348,10 +344,13 @@
 			})
 			
 			$('.m-action.message').click(function(e){
-				if ($(this).hasClass('active')){
+				if ($(this).parent().parent().children('.m-message.options').hasClass('active')){
+				
 					$(this).parent().parent().children('.m-message.options').slideToggle(300);
 					$(this).parent().parent().children('.m-message.options').addClass('active');
+					
 				} else {
+				
 					$(this).parent().parent().children('.m-call.options').slideUp(300);
 					$(this).parent().parent().children('.m-call.options').removeClass('active');			
 					
