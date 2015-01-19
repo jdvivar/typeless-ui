@@ -92,6 +92,24 @@
 								</li>
 							<ul>
 						</div>
+						<div class="m-mail options" style="display:none">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<a href="mailto:don@sterlingcooper.com">
+										<span class="pull-right fa fa-chevron-right m-t"></span>
+										<div class="action">MAIL WORK</div>
+										<div class="detail">don@sterlingcooper.com</div>
+									</a>
+								</li>
+								<li class="list-group-item">
+									<a href="mailto:don@sterlingcooper.com">
+										<span class="pull-right fa fa-chevron-right m-t"></span>
+										<div class="action">MAIL PERSONAL</div>
+										<div class="detail">donald1976@gmail.com</div>
+									</a>
+								</li>
+							<ul>
+						</div>
 					</li>
 					<li class="list-group-item">
 						<div class="details">
@@ -341,7 +359,7 @@
 					$(this).parent().parent().children('.m-call.options').delay(300).slideToggle(300);
 					$(this).parent().parent().children('.m-call.options').addClass('active');
 				}
-			})
+			});
 			
 			$('.m-action.message').click(function(e){
 				if ($(this).parent().parent().children('.m-message.options').hasClass('active')){
@@ -360,7 +378,26 @@
 					$(this).parent().parent().children('.m-message.options').delay(300).slideToggle(300);
 					$(this).parent().parent().children('.m-message.options').addClass('active');
 				}
-			})
+			});
+			
+			$('.m-action.mail').click(function(e){
+				if ($(this).parent().parent().children('.m-mail.options').hasClass('active')){
+				
+					$(this).parent().parent().children('.m-mail.options').slideToggle(300);
+					$(this).parent().parent().children('.m-mail.options').addClass('active');
+					
+				} else {
+				
+					$(this).parent().parent().children('.m-call.options').slideUp(300);
+					$(this).parent().parent().children('.m-call.options').removeClass('active');			
+					
+					$(this).parent().parent().children('.m-message.options').slideUp(300);
+					$(this).parent().parent().children('.m-message.options').removeClass('active');
+					
+					$(this).parent().parent().children('.m-mail.options').delay(300).slideToggle(300);
+					$(this).parent().parent().children('.m-mail.options').addClass('active');
+				}
+			});
 			
         });
     </script>
