@@ -34,7 +34,7 @@
 <file name="logo_outlook_com.png" server="ftp.danielvivar.com" local="130638043270343968" remote="130638081600000000" Dst="1" />
 <file name="welcome-ribbon.png" server="ftp.danielvivar.com" local="130638043271034421" remote="130638081600000000" Dst="1" />
 <file name="cloud-logo-generic.png" server="ftp.danielvivar.com" local="130638043269843626" remote="130638081600000000" Dst="1" />
-<file name="cloud-logo-typeless.png" server="ftp.danielvivar.com" local="130638043269893672" remote="130638081600000000" Dst="1" />
+<file name="cloud-logo-typeless.png" server="ftp.danielvivar.com" local="130661382198113633" remote="130662927600000000" Dst="1" />
 <file name="cloud-logo-google.png" server="ftp.danielvivar.com" local="130638043269863652" remote="130638081600000000" Dst="1" />
 <file name="cloud-logo-icloud.png" server="ftp.danielvivar.com" local="130638043269873659" remote="130638081600000000" Dst="1" />
 <file name="cloud-logo-facebook.png" server="ftp.danielvivar.com" local="130638043269833619" remote="130638081600000000" Dst="1" />
@@ -83,4 +83,13 @@
 <file name="microsoft-outlook-logo-original.png" server="ftp.danielvivar.com" local="130661360552198907" remote="130661181600000000" Dst="1" />
 <file name="microsoft-exchange-logo-original.png" server="ftp.danielvivar.com" local="130661360342991501" remote="130661181600000000" Dst="1" />
 <file name="2-clouds-typeless-google.gif" server="ftp.danielvivar.com" local="130661423948544300" remote="130661250000000000" Dst="1" />
+<file name="2-clouds-typeless-exchange.gif" server="ftp.danielvivar.com" local="130661518829207630" remote="130662927000000000" Dst="1" />
+<file name="2-clouds-typeless-facebook.gif" server="ftp.danielvivar.com" local="130661437397680244" remote="130662927000000000" Dst="1" />
+<file name="2-clouds-typeless-icloud.gif" server="ftp.danielvivar.com" local="130661486786268147" remote="130662927000000000" Dst="1" />
+<file name="2-clouds-typeless-linkedin.gif" server="ftp.danielvivar.com" local="130661483644900478" remote="130662927000000000" Dst="1" />
+<file name="2-clouds-typeless-outlook.gif" server="ftp.danielvivar.com" local="130661519737526221" remote="130662927000000000" Dst="1" />
+<file name="2-clouds-typeless-salesforce.gif" server="ftp.danielvivar.com" local="130661485382337609" remote="130662927000000000" Dst="1" />
+<file name="cloud-logo-exchange.png" server="ftp.danielvivar.com" local="130661405815442255" remote="130662927000000000" Dst="1" />
+<file name="cloud-logo-outlook.png" server="ftp.danielvivar.com" local="130661406471406998" remote="130662927000000000" Dst="1" />
+<file name="cloud-logo-salesforce.png" server="ftp.danielvivar.com" local="130661392105066462" remote="130662927000000000" Dst="1" />
 </dwsync>
