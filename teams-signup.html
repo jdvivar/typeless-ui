@@ -72,7 +72,7 @@
 				
 				<div class="m-t-xl"></div>
 				
-				<div class="col-md-12 ">
+				<div class="col-md-8 ">
 					<div class="p-m">
 						
 						<h2 class="no-margins">The Administrator</h2>
@@ -213,6 +213,7 @@
 								</div>
 							</form>
 						</div>
+						
 						<div>
 							&nbsp;
 						</div>
@@ -221,14 +222,42 @@
 					</div>
 				</div>
 				
-				<div class="col-md-4" style="display:none">
-					<div class="p-m" style="border:1px solid #e5e5e5;border-radius:3px;background-color:whitesmoke;">
-						<p>hola</p>
+				<div class="col-md-4" >
+					<div class="p-m text-left" style="border:1px solid #e5e5e5;border-radius:3px;background-color:whitesmoke;font-weight: 400;font-size: 14px;line-height:1.42">
+						
+						<h2 class="text-info">What's included in your free trial?</h2>
+						<p>· Full access to Typeless for Teams for one month.</p>
+						<p>· 100,000 contacts for 4 users, with more as your team grows</p>
+						<p>· Unlimited contact merging, enrichment and de-duplication</p>
+						<p>· Admin controls for secure sharing and collaboration</p>
+						
+						<h2 class="text-warning">Will my credit card be charged right now?</h2>
+						<p>Don't worry, you won't be charged now.
+						You'll only be charged if you continue using
+						Typeless for Teams after your trial ends on: <span id="date"></span>.</p>
+						
+						<h2 class="text-success">Can I change my payment method later?</h2>
+						<p>Yes! You can change your payment method any time.</p>
+						
+						<h2 class="text-danger">Accepted payment types</h2>
+						<p class="text-gray" style="font-size:28px">
+							<i class="fa fa-cc-visa"></i>
+							<i class="fa fa-cc-mastercard"></i>
+							<i class="fa fa-cc-amex"></i>
+							<i class="fa fa-cc-discover"></i>
+							<i class="fa fa-cc-paypal"></i>
+						</p>
+						<p>If you require an invoice to make a payment, please <a class="text-info underline">contact our sales team</a>.</p>
+						<p class="text-gray">Prices do not include applicable taxes and VAT.</p>
 					</div>
 				</div>
 				
 				<div class="col-md-12">
 					<button class="btn btn-block btn-lg btn-info m-t-xl">START YOUR FREE TRIAL</button>
+					<div class="text-gray m-t">
+						<input type="checkbox" value="" id="" checked="">
+							By signing up you are accepting our <a class="underline">Terms &amp; Conditions</a>.
+					</div>
 				</div>
 				
 				
@@ -264,6 +293,12 @@
 
     <script>
         $(document).ready(function() {
+		
+			// calculate day, month and day that trial ends
+			var d = new Date();
+			d.setMonth(d.getMonth()+1);
+			document.getElementById("date").innerHTML = d.toDateString();
+			
 		
 			// scroll event for logo opacity
 			$(function(){
