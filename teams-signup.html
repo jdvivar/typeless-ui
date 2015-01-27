@@ -361,12 +361,15 @@
 				var lic=0;
 				if (currency=='gbp'){
 					lic=licGBP;
+					$('.currency-span').text('£');
 				}
 				if (currency=='eur'){
 					lic=licEUR;
+					$('.currency-span').text('€');
 				}
 				if (currency=='usd'){
 					lic=licUSD;
+					$('.currency-span').text('$');
 				}
 					
 				console.log('lic: '+lic);
@@ -397,8 +400,7 @@
 				} else{
 					$('#additional-users-notice').show();
 					$('#max-users-notice').hide();
-				}
-				
+				};
 				
 			}
 			
