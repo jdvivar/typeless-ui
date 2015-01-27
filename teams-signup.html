@@ -176,8 +176,9 @@
 			
 								</form>
 							
-							<div>
-								<span class="currency-span">£</span><span id="price-per-user-annually">39.99</span><span id="price-per-user-monthly" style="display:none">3.99</span> for every additional user per <span id="billing-time">year</span>.
+							<div >
+								<span id="additional-users-notice"><span class="currency-span">£</span><span id="price-per-user-annually">39.99</span><span id="price-per-user-monthly" style="display:none">3.99</span> for every additional user per <span id="billing-time">year</span>.</span>
+								<span id="max-users-notice" style="display:none; font-size:14px; line-height:1.42;font-weight:400;">You have selected more than 199 users, the maximum allowed using this page. You can <a class="underline text-info">contact us</a> to complete this order.</span>
 							</div>
 						
 						</div>
@@ -389,6 +390,14 @@
 					$('#price-per-user-monthly').hide();
 					$('#price-per-user-annually').show();
 				};
+				
+				if (users>199){
+					$('#additional-users-notice').hide();
+					$('#max-users-notice').show();
+				} else{
+					$('#additional-users-notice').show();
+					$('#max-users-notice').hide();
+				}
 				
 				
 			}
