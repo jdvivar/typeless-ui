@@ -58,14 +58,13 @@ footer {
 	position:absolute;
 	width:100%;
 	z-index:-1000;
-	height: 300px;
-	display:none;
 }
 
 
 
 .sentence {
 	font-weight: regular;
+	//transition: all .5s;
 }
 
 .sentence.sentence-verb,.sentence.sentence-possessive {
@@ -144,12 +143,20 @@ footer {
 	
 	.network {
 		margin: 80px 0;
-		background-color: #f1f1f1;
+		//background-color: #f1f1f1;
 	}
 	
 	.sentence {
 		font-size: 72px;
 		line-height: 80px;
+	}
+	
+	.sentence.sentence-subject {
+		min-height:160px;
+	}
+	
+	.grayed-out {
+		height: 625px;
 	}
 }
 
@@ -189,12 +196,27 @@ footer {
 	
 	.network {
 		margin: 20px 0;
-		background-color: #f1f1f1;
+		//background-color: #f1f1f1;
 	}
 	
 	.sentence {
 		font-size: 56px;
 		line-height: 60px;
+	}
+	
+	.sentence.sentence-subject {
+		min-height:120px;
+	}
+	
+	.grayed-out {
+		height: 400px;
+	}
+}
+
+@media (min-width: 1200px) {
+	
+	#network {
+		margin-top : -60px;
 	}
 }
 
