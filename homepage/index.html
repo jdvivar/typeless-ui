@@ -62,7 +62,7 @@
     <div class="container">
 
         <div class="network row">
-			<div class="col-md-5 col-lg-4">
+			<div class="col-sm-5 col-md-5 col-lg-4">
 				<div class="sentence sentence-verb">share</div>
 				<div class="sentence sentence-possessive">your</div>
 				<div class="sentence sentence-subject">contacts</div>
@@ -71,8 +71,14 @@
 					<div class="trial-text">free 30-day trial</div>
 				</div>
 			</div>
-			<div class="col-md-7 col-lg-8 hidden-xs hidden-sm">
-				<img id="network" src="../img/network.png" width="100%"></img>
+			<div class="col-sm-7 col-md-7 col-lg-8 hidden-xs">
+				<img class="network-pic" id="network-lines" src="../img/network-lines.png" width="100%" style="position:absolute"></img>
+				<img class="network-pic" id="network-topleft" src="../img/network-pic-topleft-1.png" width="100%"></img>
+				<img class="network-pic" id="network-topright" src="../img/network-pic-topright-1.png" width="100%"></img>
+				<img class="network-pic" id="network-medleft" src="../img/network-pic-medleft-1.png" width="100%"></img>
+				<img class="network-pic" id="network-medright" src="../img/network-pic-medright-1.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomleft" src="../img/network-pic-bottomleft-1.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomright" src="../img/network-pic-bottomright-1.png" width="100%"></img>
 			</div>
         </div>
 
@@ -197,7 +203,6 @@
 				"find", 
 				"share", 
 				"search",
-				"request"
 				];
 			
 			function ramVerb (){
@@ -207,7 +212,7 @@
 			subjects = [
 				"contacts",
 				"banking contacts",
-				"everyone you know",
+				"everyone you know<br><br>",
 				"sales contacts",
 				"colleagues' colleagues",
 				"customers",
@@ -228,7 +233,14 @@
 				
 				setTimeout(function(){
 					setInterval(function(){
-						$('.sentence.sentence-subject').text(ramSubject());
+						var sub = ramSubject();
+						if (sub==subjects[2]) { // everyone you know
+							$('.sentence.sentence-possessive').hide();
+							
+						} else {
+							$('.sentence.sentence-possessive').show();
+						}
+						$('.sentence.sentence-subject').html(sub);
 						$('.sentence.sentence-subject').css('color',ramColor());
 					},3000);
 				}, 1500);

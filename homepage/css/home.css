@@ -60,8 +60,6 @@ footer {
 	z-index:-1000;
 }
 
-
-
 .sentence {
 	font-weight: regular;
 	//transition: all .5s;
@@ -104,6 +102,10 @@ footer {
 	margin-top: 8px;
 }
 
+.network-pic{
+	position: absolute;
+}
+
 @media (min-width: 768px) {
 	body {
 		padding-top: 100px;
@@ -142,17 +144,7 @@ footer {
 	}
 	
 	.network {
-		margin: 80px 0;
-		//background-color: #f1f1f1;
-	}
-	
-	.sentence {
-		font-size: 72px;
-		line-height: 80px;
-	}
-	
-	.sentence.sentence-subject {
-		min-height:160px;
+		margin: 40px 0;
 	}
 	
 	.grayed-out {
@@ -196,9 +188,15 @@ footer {
 	
 	.network {
 		margin: 20px 0;
-		//background-color: #f1f1f1;
 	}
 	
+	.grayed-out {
+		height: 400px;
+	}
+}
+
+@media(max-width: 991px){
+
 	.sentence {
 		font-size: 56px;
 		line-height: 60px;
@@ -208,14 +206,28 @@ footer {
 		min-height:120px;
 	}
 	
-	.grayed-out {
-		height: 400px;
+}
+
+@media(min-width: 992px){
+
+	.network {
+		margin: 80px 0;
 	}
+
+	.sentence {
+		font-size: 72px;
+		line-height: 80px;
+	}
+	
+	.sentence.sentence-subject {
+		min-height:160px;
+	}
+
 }
 
 @media (min-width: 1200px) {
 	
-	#network {
+	.network-pic {
 		margin-top : -60px;
 	}
 }
