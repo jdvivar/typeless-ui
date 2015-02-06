@@ -104,6 +104,7 @@ footer {
 
 .network-pic{
 	position: absolute;
+	display: none;
 }
 
 @media (min-width: 768px) {

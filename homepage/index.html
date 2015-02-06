@@ -72,13 +72,29 @@
 				</div>
 			</div>
 			<div class="col-sm-7 col-md-7 col-lg-8 hidden-xs">
-				<img class="network-pic" id="network-lines" src="../img/network-lines.png" width="100%" style="position:absolute"></img>
-				<img class="network-pic" id="network-topleft" src="../img/network-pic-topleft-1.png" width="100%"></img>
-				<img class="network-pic" id="network-topright" src="../img/network-pic-topright-1.png" width="100%"></img>
-				<img class="network-pic" id="network-medleft" src="../img/network-pic-medleft-1.png" width="100%"></img>
-				<img class="network-pic" id="network-medright" src="../img/network-pic-medright-1.png" width="100%"></img>
-				<img class="network-pic" id="network-bottomleft" src="../img/network-pic-bottomleft-1.png" width="100%"></img>
-				<img class="network-pic" id="network-bottomright" src="../img/network-pic-bottomright-1.png" width="100%"></img>
+				<img class="network-pic" id="network-lines" src="../img/network-lines.png" width="100%"></img>
+				
+				<img class="network-pic" id="network-topleft-1" src="../img/network-pic-topleft-1.png" width="100%"></img>
+				<img class="network-pic" id="network-topright-1" src="../img/network-pic-topright-1.png" width="100%"></img>
+				<img class="network-pic" id="network-medleft-1" src="../img/network-pic-medleft-1.png" width="100%"></img>
+				<img class="network-pic" id="network-medright-1" src="../img/network-pic-medright-1.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomleft-1" src="../img/network-pic-bottomleft-1.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomright-1" src="../img/network-pic-bottomright-1.png" width="100%"></img>
+				
+				<img class="network-pic" id="network-topleft-2" src="../img/network-pic-topleft-2.png" width="100%"></img>
+				<img class="network-pic" id="network-topright-2" src="../img/network-pic-topright-2.png" width="100%"></img>
+				<img class="network-pic" id="network-medleft-2" src="../img/network-pic-medleft-2.png" width="100%"></img>
+				<img class="network-pic" id="network-medright-2" src="../img/network-pic-medright-2.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomleft-2" src="../img/network-pic-bottomleft-2.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomright-2" src="../img/network-pic-bottomright-2.png" width="100%"></img>
+				
+				<img class="network-pic" id="network-topleft-3" src="../img/network-pic-topleft-3.png" width="100%"></img>
+				<img class="network-pic" id="network-topright-3" src="../img/network-pic-topright-3.png" width="100%"></img>
+				<img class="network-pic" id="network-medleft-3" src="../img/network-pic-medleft-3.png" width="100%"></img>
+				<img class="network-pic" id="network-medright-3" src="../img/network-pic-medright-3.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomleft-3" src="../img/network-pic-bottomleft-3.png" width="100%"></img>
+				<img class="network-pic" id="network-bottomright-3" src="../img/network-pic-bottomright-3.png" width="100%"></img>
+				
 			</div>
         </div>
 
@@ -222,8 +238,42 @@
 				"friends' colleagues"
 			];
 			
+			pos = [
+				"bottomleft",
+				"bottomright",
+				"medright",
+				"medleft",
+				"topleft",
+				"topright"
+			];
+			
+			function ramPos(){
+				return pos[Math.floor(Math.random()*pos.length)];
+			}
+			
 			function ramSubject (){
 				return subjects[Math.floor(Math.random()*subjects.length)];
+			};
+			
+			function ramPic(pic){
+				
+				var show = Math.floor(Math.random()*3)+1;
+						
+				if (show==1) {
+					$('#network-'+pic+'-1').fadeIn(1000);
+					$('#network-'+pic+'-2').fadeOut(1000);
+					$('#network-'+pic+'-3').fadeOut(1000);							
+				}
+				if (show==2) {
+					$('#network-'+pic+'-1').fadeOut(1000);
+					$('#network-'+pic+'-2').fadeIn(1000);
+					$('#network-'+pic+'-3').fadeOut(1000);
+				}
+				if (show==3) {
+					$('#network-'+pic+'-1').fadeOut(1000);
+					$('#network-'+pic+'-2').fadeOut(1000);
+					$('#network-'+pic+'-3').fadeIn(1000);
+				} 
 			};
 		
 			function iterate(){
@@ -244,6 +294,22 @@
 						$('.sentence.sentence-subject').css('color',ramColor());
 					},3000);
 				}, 1500);
+				
+				$('#network-lines').fadeIn(2000);
+				
+				ramPic('topleft');
+				ramPic('topright');
+				ramPic('bottomleft');
+				ramPic('bottomright');
+				ramPic('medright');
+				ramPic('medleft');
+				
+				setTimeout(function(){
+					setInterval(function(){
+						ramPic(ramPos());
+					},1000);					
+				}, 1000);
+				
 			};
 			
 			iterate();
