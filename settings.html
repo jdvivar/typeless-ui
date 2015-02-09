@@ -68,7 +68,7 @@
 			<div class="wrapper wrapper-content animated fadeIn" >
 				
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-md-4">
 						<p class="sharing-subtitle" style="background-color:whitesmoke;padding-left:10px">Account</p>
 						<p class="small p-m settings-subtext">Default e-mail address to log in and to receive notifications.</p>
 					
@@ -116,12 +116,11 @@
 							
 						</form>
 						
-						<p class="small p-m settings-subtext">If you want to delete your account, click <a class="underline">here</a>. You will receive 
-						a confirmation e-mail. Please, follow the link in the e-mail to confirm the deletion of your account. Once confirmed, the
-						deletion can't be undone.</p>
+						<p class="small p-m settings-subtext">If you want to delete your account, click <a class="underline" data-toggle="modal" data-target="#delete-account-confirmation-modal">here</a>.</p>
+						
 						
 					</div>
-					<div class="col-sm-4">
+					<div class="col-md-4">
 						<p class="sharing-subtitle" style="background-color:whitesmoke;padding-left:10px">Account password</p>
 						<p class="small p-m  settings-subtext">As all your data, your password is also safe with use: 1024 bits encryption.</p>
 					
@@ -169,7 +168,7 @@
 						
 					</div>
 					
-					<div class="col-sm-4">
+					<div class="col-md-4">
 						<p class="sharing-subtitle" style="background-color:whitesmoke;padding-left:10px">E-mail notifications</p>
 						<p class="small p-m  settings-subtext" >Choose which notifications go into your mail inbox.</p>
 					
@@ -215,7 +214,7 @@
 				<p class="sharing-subtitle m-t-lg" style="background-color:whitesmoke;padding-left:10px">Message templates</p>
 				
 				<div class="row">
-					<div class="col-sm-6">
+					<div class="col-md-6">
 						
 						<h3 class="p-m" style="padding-bottom:0">Intro</h3>
 						<p class="small settings-subtext" style="padding:0 20px">When you <strong>introduce two contacts</strong> after a request, we will send this message on your behalf to the requested and put on copy the requester.</p>
@@ -252,7 +251,7 @@ Regards,
 						</form>
 						
 					</div>
-					<div class="col-sm-6">
+					<div class="col-md-6">
 						<h3 class="p-m" style="padding-bottom:0">Accept</h3>
 						<p class="small settings-subtext"  style="padding:0 20px">When you <strong>accept a request</strong> for more details on one of your contacts, we will send this message to the requester on your behalf:</p>
 					
@@ -333,6 +332,7 @@ Regards,
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
 			$( "#modal-windows-1" ).load( "components.html #enter-password-modal");
+			$( "#modal-windows-2" ).load( "components.html #delete-account-confirmation-modal", afterLoadingModal);
 						
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
@@ -344,7 +344,7 @@ Regards,
 				// Share contacts button context-aware
 					
 					// Content of the button
-					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE CONTACTS</small></span>");
 				
 					// Target of the button
 					$( "#share-contacts-btn" ).attr('data-toggle','');
@@ -371,6 +371,13 @@ Regards,
 			};
 			
 			function afterLoadingModal(){
+				
+				$('.send-feedback').click(function(e){
+					e.preventDefault();
+					$(this).fadeOut(500,function(){
+						$(this).next('.ok-feedback').fadeIn(500);
+					})
+				});
 				
 			};
 				
@@ -530,7 +537,8 @@ Regards,
 				
 				$(this).nextAll('div.buttons').fadeOut('slow');
 				
-			});
+			});			
+			
         });
     </script>
 	
