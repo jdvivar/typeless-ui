@@ -8,14 +8,52 @@
  
 body {
 	font-family: 'Open Sans', sans-serif;
-}
-
-.hero-feature {
-    margin-bottom: 30px;
+	position: relative;
 }
 
 footer {
-    margin: 50px 0;
+    margin-bottom: 50px;
+    margin-top: 150px;
+}
+
+a {
+	cursor: pointer;
+}
+
+.footer-title {
+	font-size: 16px;
+	font-weight:bold;
+	text-transform:uppercase;
+	color: #2f2f2f;
+	margin-bottom: 20px;
+}
+
+.footer-p {
+	font-size: 12px;
+	color: #2f2f2f;
+}
+
+.footer-small {
+	font-size: 10px;
+}
+
+.footer-link {
+	color: #2f2f2f;
+	transition: all 1s;
+}
+
+.footer-2nd {
+	margin-bottom: 15px;
+}
+
+.footer-bg {
+	background-image: url("/typeless/img/footer-bg.png");
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+	bottom:0;
+	background-color: #eeeeee;
+	z-index: -1;
 }
 
 .navbar-default{
@@ -28,6 +66,7 @@ footer {
 	margin-left:30px;
 	text-transform: uppercase;
 	font-weight: 700;
+	background-color: white!important;
 	transition: all .5s;
 }
 
@@ -96,7 +135,7 @@ footer {
 }
 
 .trial-text{
-	margin-left: 50px;
+	margin-left: 45px;
 	color: #7f8c8d;
 	font-weight: 100;
 	margin-top: 8px;
@@ -105,6 +144,47 @@ footer {
 .network-pic{
 	position: absolute;
 	display: none;
+}
+
+.subline {
+	font-weight:200;
+	color:#7f8c8d;
+	margin-bottom: 40px;
+}
+
+.btn-circle {
+	border-radius: 24px;
+	border-color: #7f8c8d;
+	background-color:transparent;
+	color: #7f8c8d;
+	transition: all .5s;
+}
+
+.btn-circle:focus, .btn-circle:active, .btn-circle:hover {
+	border-color:transparent;
+	background-color: #7f8c8d;
+	color: white;
+}
+
+
+.pitch-bg {
+	position: absolute;
+	z-index: -1;
+}
+
+.feature-title {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform:uppercase;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.feature-description {
+	font-weight: 600;
+	color: #7f8c8d;
+	font-size: 13px;
+	margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
@@ -129,17 +209,17 @@ footer {
 		margin-right:15px;
 	}
 	
-	.hover-blue:hover, .hover-blue:active, .hover-blue:focus {
+	.hover-blue:hover, .hover-blue:active, .hover-blue:focus, .navbar-nav>li.active>.hover-blue {
 		box-shadow: inset #3498db 0 -5px 0 0;
 		color: #3498db!important;
 	}
 
-	.hover-green:hover, .hover-green:active, .hover-green:focus {
+	.hover-green:hover, .hover-green:active, .hover-green:focus, .navbar-nav>li.active>.hover-green {
 		box-shadow: inset #1abc9c 0 -5px 0 0;
 		color: #1abc9c!important;
 	}
 
-	.hover-red:hover, .hover-red:active, .hover-red:focus {
+	.hover-red:hover, .hover-red:active, .hover-red:focus, .navbar-nav>li.active>.hover-red {
 		box-shadow: inset #e74c3c 0 -5px 0 0;
 		color: #e74c3c!important;
 	}
@@ -150,6 +230,22 @@ footer {
 	
 	.grayed-out {
 		height: 625px;
+	}
+
+	.aboutus {
+		text-align: left;
+	}
+	
+	.logo {
+		text-align: center;
+	}
+	
+	.blog {
+		text-align: center;
+	}
+	
+	.getintouch {
+		text-align: right;
 	}
 }
 
@@ -172,17 +268,17 @@ footer {
 		
 	}
 	
-	.hover-blue:hover, .hover-blue:active, .hover-blue:focus {
+	.hover-blue:hover, .hover-blue:active, .hover-blue:focus, .navbar-nav>li.active>.hover-blue {
 		box-shadow: inset #3498db -5px 0 0 0;
 		color: #3498db!important;
 	}
 
-	.hover-green:hover, .hover-green:active, .hover-green:focus {
+	.hover-green:hover, .hover-green:active, .hover-green:focus, .navbar-nav>li.active>.hover-green {
 		box-shadow: inset #1abc9c -5px 0 0 0;
 		color: #1abc9c!important;
 	}
 
-	.hover-red:hover, .hover-red:active, .hover-red:focus {
+	.hover-red:hover, .hover-red:active, .hover-red:focus, .navbar-nav>li.active>.hover-red {
 		box-shadow: inset #e74c3c -5px 0 0 0 ;
 		color: #e74c3c!important;
 	}
@@ -194,6 +290,7 @@ footer {
 	.grayed-out {
 		height: 400px;
 	}
+	
 }
 
 @media(max-width: 991px){
@@ -207,6 +304,7 @@ footer {
 		min-height:120px;
 	}
 	
+
 }
 
 @media(min-width: 992px){
@@ -231,6 +329,200 @@ footer {
 	.network-pic {
 		margin-top : -60px;
 	}
+}
+
+/* proper media queries now (767 px and less, 768 to 991 px, 992 to 1199px, 1200 px and more) */
+
+@media (min-width:1200px) {
+
+	.pitch-title {
+		font-size: 30px;
+		font-weight: bold;
+		text-transform:uppercase;
+		margin-top: 160px;
+		margin-bottom: 80px;
+		color:white;
+	} 
+	
+	#pitch-bg-1 {
+		width:1000px;
+		top:110px;
+		right:0;
+	}
+	
+	#pitch-bg-2 {
+		width: 1000px;
+		top: 100px;
+		left: -110px;
+	}
+	
+	#pitch-bg-3 {
+		width: 1000px;
+		top: 110px;
+		right: 95px;
+	}
+	
+	.feature-img {
+		width: 50%;
+	}
+
+	.logo>img:nth-child(1) {
+		width: 20%;
+		margin-top: 40px;
+	}
+	
+	.logo>img:nth-child(3) {
+		width: 40%;
+		margin-top:10px;
+	}
+	
+	.footer-bg {
+		height: 430px;
+	}
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+	
+	.pitch-title {
+		font-size: 24px;
+		font-weight: bold;
+		text-transform:uppercase;
+		margin-top: 160px;
+		margin-bottom: 80px;
+		color:white;
+	} 
+	
+	#pitch-bg-1 {
+		width:800px;
+		top:120px;
+		right:0;
+	}
+	
+	#pitch-bg-2 {
+		width: 750px;
+		top: 115px;
+		left: -75px;
+	}
+	
+	#pitch-bg-3 {
+		width: 750px;
+		top: 123px;
+		left: -237px;
+	}
+	
+	.feature-img {
+		width: 50%;
+	}
+
+	.logo>img:nth-child(1) {
+		width: 25%;
+		margin-top: 40px;
+	}
+	
+	.logo>img:nth-child(3) {
+		width: 50%;
+		margin-top:10px;
+	}
+	
+	.footer-bg {
+		height: 430px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.pitch-title {
+		font-size: 20px;
+		font-weight: bold;
+		text-transform:uppercase;
+		margin-top: 120px;
+		margin-bottom: 60px;
+		color:white;
+	} 
+
+	#pitch-bg-1 {
+		width:600px;
+		top:90px;
+		right:0;
+	}
+	
+	#pitch-bg-2 {
+		width: 650px;
+		top: 80px;
+		left: -90px;
+	}
+	
+	#pitch-bg-3 {
+		width: 600px;
+		top: 90px;
+		right: -43px;
+	}
+	
+	.feature-img {
+		width: 33%;
+	}
+
+	.logo>img:nth-child(1) {
+		width: 33%;
+		margin-top: 40px;
+	}
+	
+	.logo>img:nth-child(3) {
+		width: 66%;
+		margin-top:8px;
+	}
+	
+	.footer-bg {
+		height: 460px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	
+	.pitch-title {
+		font-size: 18px;
+		font-weight: bold;
+		text-transform:uppercase;
+		margin-top: 90px;
+		margin-bottom: 45px;
+		color:black;
+	}
+	
+	#pitch-bg-1 {
+		width:300px;
+		top:82px;
+		left:0;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		filter: FlipH;
+		opacity: .5;
+	}
+	
+	#pitch-bg-2 {
+		width: 300px;
+		top: 78px;
+		left: 0;
+		opacity: .5;
+	}
+	
+	#pitch-bg-3 {
+		width: 300px;
+		top: 82px;
+		left: 0;
+		opacity: .5;
+	}
+	
+	.feature-img {
+		width: 25%;
+	}
+	
+	.footer-bg {
+		height: 700px;
+	}
+
 }
 
 

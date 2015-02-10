@@ -22,12 +22,13 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#bs-example-navbar-collapse-1" data-offset="100">
 
     <!-- Navigation -->
+	<div>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+		
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -37,28 +38,26 @@
 					<img alt="Typeless" src="../img/logo-complete-original.png">
 				</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+			
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="hover-blue" href="#">How it works</a>
+                        <a class="hover-blue scroll" data-to="howitworks" href="#howitworks">How it works</a>
                     </li>
                     <li>
                         <a class="hover-green" href="#">Pricing</a>
                     </li>
                     <li>
-                        <a class="hover-red" href="#">Get in touch</a>
+                        <a class="hover-red scroll" data-to="getintouch" href="#getintouch">Get in touch</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
-	<div class="grayed-out"></div>
+	<div class="grayed-out">
+	</div>
     
-	<!-- Page Content -->
     <div class="container">
 
         <div class="network row">
@@ -99,86 +98,120 @@
         </div>
 
         <!-- <hr> -->
+		
+		<div class="row text-center">
+			<div class="">
+				<h3 class="subline">The unified contact book for teams</h3>
+			</div>
+			<button class="btn scroll btn-lg btn-circle" data-to="howitworks" ><i class="fa fa-angle-down"></i></button>
+		</div>
 
-        <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Latest Features</h3>
-            </div>
+        <div id="howitworks" >
+			
+			<div class="row">
+				<div class="col-xs-12 col-sm-offset-6 col-sm-6">
+					<img class="pitch-bg" id="pitch-bg-1" src="../img/pitch-title-bg-1.png" ></img>
+					<div class="pitch-title" id="pitch-title-1">Unify your contacts.</div>
+				</div>
+				<div class="col-xs-12">					
+					<div>content for pitch 1</div>					
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-xs-12 ">
+					<img class="pitch-bg" id="pitch-bg-2" src="../img/pitch-title-bg-2.png" ></img>
+					<div class="pitch-title" id="pitch-title-2">Collaborate on your contacts.</div>
+				</div>
+				<div class="col-xs-12">					
+					<div>content for pitch 2</div>					
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-offset-4 col-md-8 col-sm-offset-6 col-sm-6 col-xs-12">
+					<img class="pitch-bg" id="pitch-bg-3" src="../img/pitch-title-bg-3.png" ></img>
+					<div class="pitch-title" id="pitch-title-3">Retain your contacts.</div>
+				</div>
+				<div class="col-xs-12">					
+					<div>content for pitch 3</div>					
+				</div>
+			</div>
+			
+			<div class="row text-center">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img class="feature-img" src="../img/lock-icon.png"></img>
+					<div class="feature-title" style="color:#e74c3c">Secure.</div>
+					<div class="feature-description">All your data is encrypted on 1024 bit encryption (one of the strongest possible encryptions).</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img class="feature-img" src="../img/safe-icon.png"></img>
+					<div class="feature-title" style="color:#7f8c8d">Private.</div>
+					<div class="feature-description">Typeless will not spam you or share your details with anyone without permission.</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img class="feature-img" src="../img/devices-icon.png"></img>
+					<div class="feature-title" style="color:#2c3e50">Everywhere.</div>
+					<div class="feature-description">On your phone, tablet or the web. On the road, by the beach. Typeless is always there.</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img class="feature-img" src="../img/clock-icon.png"></img>
+					<div class="feature-title" style="color:#f1c40f">Updated.</div>
+					<div class="feature-description">Typeless looks for & updates any new contact details of your friends. Always get in touch in one click.</div>
+				</div>
+			</div>
+			
         </div>
-        <!-- /.row -->
+		
 
-        <!-- Page Features -->
-        <div class="row text-center">
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
+        <footer class="footer">
             <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                <div class="col-sm-4 aboutus">
+                    <div class="footer-title">About us</div>
+					<p class="footer-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+					</p>
+					<p class="footer-p">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+					dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+					sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					
+                </div>
+				 <div class="col-sm-4 hidden-xs logo">
+                    <img src="../img/logo-only-icon-original.png"></img><br>
+                    <img src="../img/logo-only-letters-original.png"></img>
+                </div>
+				<div class="col-sm-4 getintouch" id="getintouch">
+                    <div class="footer-title">Get in touch</div>
+					<p class="footer-p">Drop us a message <a>here</a>.</p>
+					<p class="footer-p">
+						<strong>The Leathermarket</strong><br>
+						Weston St, London SE1 3ER<br>
+					</p>
+					<iframe style="margin-bottom: 15px; border: 1px solid rgba(1,1,1,.5)"width="100%" height="100px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20Leathermarket%2C%20Weston%20Street&key=AIzaSyB0ZZkNt-ghiIPjWtDUzzLg0G10459TRns"></iframe>
                 </div>
             </div>
+			<div class="row">
+				<div class="col-sm-4 aboutus footer-2nd">
+					<p class="footer-small"><strong>2014 &copy; TRIGMATIC LTD</strong></p>
+					<div class="footer-small"><a class="footer-link">PRIVACY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">ACCEPTABLE USE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">TERMS</a></div>
+                </div>
+				<div class="col-sm-4 blog footer-2nd">
+					<a><img src="../img/blog-icon.png" width="50px"></img></a>
+				</div>
+				<div class="col-sm-4 getintouch footer-2nd">
+					<p class="footer-small"><strong>FOLLOW US ON</strong></p>
+					<p class="footer-small"><a class="footer-link">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">LINKEDIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">GOOGLE+</a></p>
+				</div>
+			</div>
         </footer>
 
     </div>
-    <!-- /.container -->
+
+	<div class="footer-bg"></div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -189,8 +222,7 @@
 	<script>
         $(document).ready(function() {
 			
-			// function to get random colors, verbs
-			
+			// list of colors			
 			// dark blue	#2c3e50
 			// light blue	#3498db
 			// green		#1abc9c
@@ -207,23 +239,13 @@
 				"#e67e22", 
 				"#e74c3c", 
 				"#f1c40f",
-				];
-			
-			function ramColor (){
-				return colors[Math.floor(Math.random()*colors.length)];
-			};
-			
-			console.log(ramColor());
+			];
 			
 			verbs =[
 				"find", 
 				"share", 
 				"search",
 				];
-			
-			function ramVerb (){
-				return verbs[Math.floor(Math.random()*verbs.length)];
-			};
 			
 			subjects = [
 				"contacts",
@@ -247,13 +269,11 @@
 				"topright"
 			];
 			
-			function ramPos(){
-				return pos[Math.floor(Math.random()*pos.length)];
-			}
-			
-			function ramSubject (){
-				return subjects[Math.floor(Math.random()*subjects.length)];
+			// function that returns a ramdom element from 'list'
+			function ramList (list){
+				return list[Math.floor(Math.random()*list.length)]
 			};
+			
 			
 			function ramPic(pic){
 				
@@ -278,12 +298,12 @@
 		
 			function iterate(){
 				setInterval(function(){
-						$('.sentence.sentence-verb').text(ramVerb());
-				}, 3000);
+						$('.sentence.sentence-verb').text(ramList(verbs));
+				}, 6000);
 				
 				setTimeout(function(){
 					setInterval(function(){
-						var sub = ramSubject();
+						var sub = ramList(subjects);
 						if (sub==subjects[2]) { // everyone you know
 							$('.sentence.sentence-possessive').hide();
 							
@@ -291,7 +311,7 @@
 							$('.sentence.sentence-possessive').show();
 						}
 						$('.sentence.sentence-subject').html(sub);
-						$('.sentence.sentence-subject').css('color',ramColor());
+						$('.sentence.sentence-subject').css('color',ramList(colors));
 					},3000);
 				}, 1500);
 				
@@ -306,13 +326,39 @@
 				
 				setTimeout(function(){
 					setInterval(function(){
-						ramPic(ramPos());
+						ramPic(ramList(pos));
 					},1000);					
 				}, 1000);
 				
 			};
 			
 			iterate();
+			
+			$(function() {
+					
+				
+			});
+			
+			
+			// event/functions for scrolling
+			
+			$('.scroll').on('click', function(event){
+				event.preventDefault();
+				var sectionID = $(this).attr("data-to");
+				scrollToID('#'+sectionID, 750);
+			});
+			
+			
+			function scrollToID(id, speed){
+				var offSet = $('body').css('padding-top').replace("px", "");
+				var targetOffset = $(id).offset().top - offSet;
+
+				$('html,body').animate({scrollTop:targetOffset}, speed);
+			}
+			
+			// trigger focus on active li>a
+			//$('li.active>a').click();
+			
 		});
 	</script>
 
