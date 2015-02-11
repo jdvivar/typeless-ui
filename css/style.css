@@ -276,7 +276,9 @@ div.divider {
 	position:absolute;
 	width:300px;
 	right: 150px;
-	top: -8px;
+	top: 25px;
+	border: 1px solid #3498db;
+	border-radius: 3px;
 }
 
 @media (max-width: 990px) {
