@@ -219,6 +219,116 @@ a {
 	border-color: #c6c6c6!important;
 }
 
+.contact-card {
+	border: 1px solid #D5D5D5;
+	border-radius: 3px;
+	border-top-left-radius: 71px;
+	background-color: whitesmoke;
+	height: 200px;
+	width: 324px;
+	box-shadow: inset 4px 8px 12px rgba(255, 255, 255, .5);
+}
+
+.contact-card hr {
+	border-color: #d5d5d5;
+	margin: 0;
+	padding: 1px;
+}
+
+.contact-card .footer {
+	bottom: 1px;
+	position: relative;
+	width: 322px;
+	background-color: white;
+	margin-bottom: 1px;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+.contact-card .footer .footer-content {
+	padding: 10px;
+	min-height: 54px;
+}
+
+.contact-card .footer .footer-content .footer-info i{
+	font-size: 14px;
+}
+
+.contact-card .footer .footer-content:hover .footer-info {
+	display:none;
+}
+
+.contact-card .footer .footer-content:hover .footer-hover {
+	display:block;
+}
+
+.contact-card .footer .footer-content .footer-hover {
+	display:none;
+}
+
+.contact-card .footer .dropdown-menu>li>a {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.contact-card .body {
+	padding: 5px 10px 5px 5px;
+}
+
+.contact-card .body-text {
+	width: 165px;
+}
+
+.contact-card .body-text .name{
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.contact-card .body-text .job-title{
+	font-size: 13px;
+	font-weight: 300;
+}
+
+.contact-card .body-text .mail{
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.contact-card .body-text .number{
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.details-default .label {
+	//position: absolute;
+}
+
+.contact-card .body-text .details-all {
+	overflow-y: scroll;
+	max-height: 80px;
+}
+
+.contact-card img {
+	height: 132px;
+	width: 132px;
+}
+
+.tooltip {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.tooltip .tooltip-inner {
+	background-color: ;
+}
+
+.tooltip .tooltip-arrow {
+	display:none;
+
+}
+
 
 @media (min-width: 768px) {
 	body {

@@ -37,9 +37,99 @@
 		<button class="btn btn-action disabled">disabled</button>
 		<button class="btn btn-action active">active</button>
 		<br>
-		<button class="btn btn-action active"><i class="fa fa-plus"></i></button>
-		<button class="btn btn-action active"><i class="fa fa-minus"></i></button>
+		<button class="btn btn-action "><i class="fa fa-plus"></i></button>
+		<button class="btn btn-action "><i class="fa fa-minus"></i></button>
 		<br><br>
+		
+		<div class="contact-card">
+			<div class="body">
+				<img class="img-circle" src="../img/a18.jpg"></img>
+				<div class="body-text pull-right">
+					<div class="name">Virginia Madsen</div>
+					<div class="job-title">Sales Manager at ACME</div>
+					<hr style="margin:5px 0 5px 0;">
+					<div class="details-default">
+						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><span class="label label-primary pull-right" data-tooltip="tooltip" data-placement="right" data-original-title="Click to show all">2+</span><br>
+						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><span class="label label-primary pull-right"  data-tooltip="tooltip" data-placement="right" data-original-title="Click to show all">1+</span><br>
+					</div>
+					<div class="details-all" style="display:none">
+						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
+						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
+						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
+						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
+						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
+						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
+						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
+						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
+						<button class="btn btn-xs btn-action">See less</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<hr>
+				<div class="footer-content">
+					<span class="footer-info">
+						
+						<span class="pull-left"><strong style="color:#e74c3c">Attributes</strong><br>shared, incomplete</span>
+						<span class="pull-right text-right"><strong style="color:#3498db">Sources</strong><br>
+							<i class="fa fa-facebook-square"></i>
+							<i class="fa fa-linkedin-square"></i>
+							<i class="fa fa-twitter-square"></i>
+						</span>
+						
+					</span>
+					<span class="footer-hover">
+						
+						<span class="pull-left" style="color:#f1c40f;line-height: 36px;margin-right: 10px;"><strong>Actions</strong></span>						
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SELECT"><i class="fa fa-check"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SHARE"><i class="fa fa-share-alt"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SEE PROFILE"><i class="fa fa-eye"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="MAIL"><i class="fa fa-envelope"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="CALL"><i class="fa fa-phone"></i></button>
+						<!-- <button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="MORE"><span class="caret"></i></button> -->
+						<div class="dropdown" style="display: inline-block;">
+						  <button class="btn btn-action dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" data-tooltip="tooltip" data-placement="bottom" data-original-title="More">
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See duplicates</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See sharer's profile</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Make private</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Unmerge</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Stop sharing</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit share</a></li>
+						  </ul>
+						</div>
+						
+					</span>
+				</div>
+			</div>
+		</div>
+	
+		
 	</div>
 	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+	$(document).ready(function() {
+	
+		// activate tooltips
+		$("[data-tooltip='tooltip']").tooltip();
+		
+		// hover over labels
+		$('.details-default .label').click(function(){
+			$('.details-default').fadeOut(500, function(){
+				$('.details-all').fadeIn(500)
+			});
+		});
+		
+	});
+	</script>
+	
 </body>
+</html>
