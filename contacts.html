@@ -60,12 +60,12 @@
 						<span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu" role="menu">
-						<li><a href="#"><i class="fa fa-circle f-w m-r-sm"></i><span class="m-r-xl">Everything</span><span class="badge filter">3,122</span></a></li>
-						<li><a href="#"><i class="fa fa-star f-w m-r-sm"></i><span class="m-r-xl">Most contacted</span><span class="badge filter">50</span></a></li>
-						<li><a href="#"><i class="fa fa-share-alt f-w m-r-sm"></i><span class="m-r-xl">Shared contacts</span><span class="badge filter">789</span></a></li>
-						<li><a href="#"><i class="fa fa-exclamation-circle f-w m-r-sm"></i><span class="m-r-xl">Incomplete contacts</span><span class="badge filter">12</span></a></li>
-						<li><a href="#"><i class="fa fa-clock-o f-w m-r-sm"></i><span class="m-r-xl">Recently added</span><span class="badge filter">391</span></a></li>
-						<li><a href="#"><i class="fa fa-lock f-w m-r-sm"></i><span class="m-r-xl">Private</span><span class="badge filter">5</span></a></li>
+						<li><a href="#"><i class="fa fa-circle fa-fw m-r-sm"></i><span class="m-r-xl">Everything</span><span class="badge filter">3,122</span></a></li>
+						<li><a href="#"><i class="fa fa-star fa-fw m-r-sm"></i><span class="m-r-xl">Most contacted</span><span class="badge filter">50</span></a></li>
+						<li><a href="#"><i class="fa fa-share-alt fa-fw m-r-sm"></i><span class="m-r-xl">Shared contacts</span><span class="badge filter">789</span></a></li>
+						<li><a href="#"><i class="fa fa-exclamation-circle fa-fw m-r-sm"></i><span class="m-r-xl">Incomplete contacts</span><span class="badge filter">12</span></a></li>
+						<li><a href="#"><i class="fa fa-clock-o fa-fw m-r-sm"></i><span class="m-r-xl">Recently added</span><span class="badge filter">391</span></a></li>
+						<li><a href="#"><i class="fa fa-lock fa-fw m-r-sm"></i><span class="m-r-xl">Private</span><span class="badge filter">5</span></a></li>
 					  </ul>
 					</div>
 
@@ -1308,7 +1308,7 @@
 						
 					</div>
 
-					<a class="btn btn-white btn-rounded btn-block" href="#" id="more-contacts"><i class="fa fa-arrow-down m-r"></i>Show more</a>
+					<a class="btn btn-white btn-rounded btn-block" href="#" id="more-contacts"><i class="fa fa-arrow-down m-r"></i><small>SHOW MORE</small></a>
 				</div>
 			
 				<div id="list-view" style="display:none">
@@ -1580,7 +1580,7 @@
 				// Share contacts button context-aware
 					
 					// Content of the button
-					$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\"></small>SHARE CONTACTS</small></span>");
 				
 					// Target of the button
 					$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-regular');
@@ -1651,11 +1651,11 @@
 			
 			function changeContextToSelected(num){
 				// Content of the button
-				$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\">Share "+num+" contacts</span>");
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE "+num+" CONTACTS</small></span>");
 			};
 			function changeContextToAll(){
 				// Content of the button
-				$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE CONTACTS</small></span>");
 			};
 			
 			function glowButton(id){
