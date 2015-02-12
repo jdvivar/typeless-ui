@@ -1070,7 +1070,13 @@ mark {
 
 .nav-second-level li a.active {
 	font-weight:600;
+	background-color: #d5d5d5;
 }
+
+.nav-second-level li a:hover {
+	background-color: #d5d5d5!important;
+}
+
 
 .nav.navbar-right > li > a {
   //color: #999c9e;
