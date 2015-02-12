@@ -54,14 +54,11 @@
 					</div>
 					<div class="details-all" style="display:none">
 						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
-						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
-						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
-						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><br>
+						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="tel:07477239901">91 751 12 74</a><br>
+						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Mobile" href="tel:07477239901">+33 3440 565 010</a><br>
 						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
-						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
-						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
-						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Work" href="mailto:virginia@acme.org">virginia@acme.org</a><br>
-						<button class="btn btn-xs btn-action">See less</button>
+						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Personal" href="mailto:virginia@acme.org">v.madsen@gmail.com</a><br>
+						<button class="btn btn-xs btn-primary see-less" style="margin-bottom:5px">See less</button>
 					</div>
 				</div>
 			</div>
@@ -92,12 +89,12 @@
 							<span class="caret"></span>
 						  </button>
 						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See duplicates</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See potential duplicates</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See sharer's profile</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Make private</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Unmerge</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Stop sharing</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit share</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Stop sharing with Virginia</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit what I share with Virginia</a></li>
 						  </ul>
 						</div>
 						
@@ -106,6 +103,7 @@
 			</div>
 		</div>
 	
+		
 		
 	</div>
 	
@@ -125,6 +123,12 @@
 		$('.details-default .label').click(function(){
 			$('.details-default').fadeOut(500, function(){
 				$('.details-all').fadeIn(500)
+			});
+		});
+		
+		$('button.see-less').click(function(){
+			$('.details-all').fadeOut(500, function(){
+				$('.details-default').fadeIn(500)
 			});
 		});
 		
