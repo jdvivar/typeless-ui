@@ -116,6 +116,12 @@ a {
 	
 }
 
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .btn-get-started {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -187,6 +193,21 @@ a {
 	margin-bottom: 40px;
 }
 
+.dropdown-menu.filter .expand{
+	margin-right: 40px;
+	margin-left: 5px;
+}
+
+.dropdown-menu.filter a{
+	font-size: 12px;
+}
+
+.dropdown-menu.filter .label{
+	position: absolute;
+	right: 5px;
+	margin-top:2px;
+}
+
 .btn-action {
 	background-color: transparent;
 	transition: all .1s;
@@ -227,6 +248,8 @@ a {
 	height: 200px;
 	width: 324px;
 	box-shadow: inset 4px 8px 12px rgba(255, 255, 255, .5);
+	display: inline-table;
+	margin-right: 15px;
 }
 
 .contact-card hr {
@@ -258,12 +281,30 @@ a {
 	display:none;
 }
 
-.contact-card .footer .footer-content:hover .footer-hover {
+.contact-card:not(.selected) .footer .footer-content:hover .footer-hover {
 	display:block;
 }
 
 .contact-card .footer .footer-content .footer-hover {
 	display:none;
+}
+
+.contact-card .footer .footer-content .footer-selected {
+	display:none;
+}
+
+.contact-card.selected .footer-hover, .contact-card.selected .footer-info{
+	display:none;
+}
+
+.contact-card.selected .footer-selected {
+	display: block;
+	
+}
+
+.contact-card.selected {
+	border-color: rgba(1,1,1,.4);
+	box-shadow: 0px 5px rgba(1,1,1,.4);
 }
 
 .contact-card .footer .dropdown-menu>li>a {
@@ -274,6 +315,7 @@ a {
 
 .contact-card .body {
 	padding: 5px 10px 5px 5px;
+	position: relative;
 }
 
 .contact-card .body-text {
@@ -281,13 +323,13 @@ a {
 }
 
 .contact-card .body-text .name{
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 }
 
 .contact-card .body-text .job-title{
 	font-size: 13px;
-	font-weight: 300;
+	//font-weight: 300;
 }
 
 .contact-card .body-text .mail{
@@ -297,6 +339,14 @@ a {
 
 .contact-card .body-text .number{
 	font-size: 13px;
+	font-weight: 600;
+}
+
+.contact-card .body-text .notice{
+	font-size: 13px;
+}
+
+.contact-card .body-text .notice a{
 	font-weight: 600;
 }
 
@@ -312,6 +362,24 @@ a {
 .contact-card img {
 	height: 132px;
 	width: 132px;
+}
+
+.contact-card .badge.verified {
+	position: absolute;
+	bottom: 5px;
+	left: 43px;
+	font-size: 8px;
+	background-color: #1abc9c;
+	display: none;
+}
+
+.contact-card .badge.not-verified {
+	position: absolute;
+	bottom: 3px;
+	left: 59px;
+	font-size: 11px;
+	background-color: #e74c3c;
+	display: none;
 }
 
 .tooltip {

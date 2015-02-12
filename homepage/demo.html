@@ -25,28 +25,102 @@
 <body>
 
     <div class="container">
-	
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-		
-		<button class="btn btn-action">action</button>
+			
+		<!-- <button class="btn btn-action">action</button>
 		<button class="btn btn-action disabled">disabled</button>
-		<button class="btn btn-action active">active</button>
+		<button class="btn btn-action active">active</button> -->
+		
+		<div class="dropdown" style="display:inline-block">
+						
+			<button class="btn btn-action btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+				<i class="fa fa-circle fa-fw"></i>&nbsp;&nbsp;Everything&nbsp;&nbsp;<span class="label label-default">3,122</span>&nbsp;&nbsp;<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu filter" role="menu">
+				<li>
+					<a href="#">
+						<i class="fa fa-star fa-fw"></i>
+						<span class="expand">Most contacted</span>
+						<span class="label label-default">50</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-share-alt fa-fw"></i>
+						<span class="expand">Shared contacts</span>
+						<span class="label label-default ">789</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-exclamation-circle fa-fw"></i>
+						<span class="expand">Incomplete contacts</span>
+						<span class="label label-default pull-right">12</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-clock-o fa-fw"></i>
+						<span class="expand">Recently added</span>
+						<span class="label label-default">391</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-lock fa-fw"></i>
+						<span class="expand">Private</span>
+						<span class="label label-default ">5</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-copy fa-fw"></i>
+						<span class="expand">Duplicates</span>
+						<span class="label label-default ">67</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="dropdown" style="display:inline-block">
+						
+			<button class="btn btn-action btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+				<i class="fa fa-circle fa-fw"></i>&nbsp;&nbsp;All accounts&nbsp;&nbsp;<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu filter" role="menu">
+				<li>
+					<a href="#">
+						<i class="fa fa-facebook-square fa-fw"></i>
+						<span class="expand">Facebook</span>
+						<span class="label label-default">1,087</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-linkedin-square fa-fw"></i>
+						<span class="expand">LinkedIn</span>
+						<span class="label label-default ">550</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-twitter-square fa-fw"></i>
+						<span class="expand">Google</span>
+						<span class="label label-default ">789</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<span class="" style="position: absolute;top: 104px;left:863px;">Showing all contacts from all accounts <span class="label label-default">3,122</span></span>
 		<br>
-		<button class="btn btn-action "><i class="fa fa-plus"></i></button>
-		<button class="btn btn-action "><i class="fa fa-minus"></i></button>
 		<br><br>
 		
-		<div class="contact-card">
+		<div class="contact-card" id="1">
 			<div class="body">
 				<img class="img-circle" src="../img/a18.jpg"></img>
+				<span class="badge verified"><i class="fa fa-check-circle"></i> VERIFIED</span>
 				<div class="body-text pull-right">
 					<div class="name">Virginia Madsen</div>
-					<div class="job-title">Sales Manager at ACME</div>
+					<div class="job-title"><a data-tooltip="tooltip" data-placement="bottom" data-original-title="Search 'Sales Manager'">Sales Manager</a> at <a data-tooltip="tooltip" data-placement="bottom" data-original-title="Search 'ACME'">ACME</a></div>
 					<hr style="margin:5px 0 5px 0;">
 					<div class="details-default">
 						<a class="number" data-tooltip="tooltip" data-placement="right" data-original-title="Home" href="tel:07477239901">07477 239 901</a><span class="label label-primary pull-right" data-tooltip="tooltip" data-placement="right" data-original-title="Click to show all">2+</span><br>
@@ -60,6 +134,7 @@
 						<a class="mail" data-tooltip="tooltip" data-placement="right" data-original-title="Personal" href="mailto:virginia@acme.org">v.madsen@gmail.com</a><br>
 						<button class="btn btn-xs btn-primary see-less" style="margin-bottom:5px">See less</button>
 					</div>
+					
 				</div>
 			</div>
 			<div class="footer">
@@ -67,7 +142,7 @@
 				<div class="footer-content">
 					<span class="footer-info">
 						
-						<span class="pull-left"><strong style="color:#e74c3c">Attributes</strong><br>shared, incomplete</span>
+						<span class="pull-left"><strong style="color:#e74c3c">Attributes</strong><br>owned, merged, private</span>
 						<span class="pull-right text-right"><strong style="color:#3498db">Sources</strong><br>
 							<i class="fa fa-facebook-square"></i>
 							<i class="fa fa-linkedin-square"></i>
@@ -78,23 +153,24 @@
 					<span class="footer-hover">
 						
 						<span class="pull-left" style="color:#f1c40f;line-height: 36px;margin-right: 10px;"><strong>Actions</strong></span>						
-						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SELECT"><i class="fa fa-check"></i></button>
+						<button class="btn btn-action select" data-tooltip="tooltip" data-placement="bottom" data-original-title="SELECT"><i class="fa fa-check"></i></button>
 						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SHARE"><i class="fa fa-share-alt"></i></button>
 						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SEE PROFILE"><i class="fa fa-eye"></i></button>
 						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="MAIL"><i class="fa fa-envelope"></i></button>
 						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="CALL"><i class="fa fa-phone"></i></button>
 						<!-- <button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="MORE"><span class="caret"></i></button> -->
-						<div class="dropdown" style="display: inline-block;">
+						<div class="dropdown pull-right" style="">
 						  <button class="btn btn-action dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" data-tooltip="tooltip" data-placement="bottom" data-original-title="More">
 							<span class="caret"></span>
 						  </button>
 						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See potential duplicates</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See sharer's profile</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Make private</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See potential duplicates<span class="label label-primary pull-right">2</span></a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Make public</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Unmerge</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Stop sharing with Virginia</a></li>
 							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit what I share with Virginia</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation" class="dropdown-header">Virginia is in Typeless.<span class="fa fa-check-circle pull-right"></span></li>
 						  </ul>
 						</div>
 						
@@ -103,7 +179,118 @@
 			</div>
 		</div>
 	
-		
+		<div class="contact-card" id="2">
+			<div class="body">
+				<img class="img-circle" src="../img/letters.png"></img>
+				<a class="badge not-verified" data-tooltip="tooltip" data-placement="right" data-original-title="Click to invite to Typeless."><i class="fa fa-exclamation-circle"></i></a>
+
+				<div class="body-text pull-right">
+					<div class="name truncate" data-tooltip="tooltip" data-placement="bottom" data-original-title="Aldo 1234 Home Superlong Name">Aldo 1234 Home Superlong Name</div>
+					<div class="job-title"><br></div>
+					<hr style="margin:5px 0 5px 0;">
+					<div class="details-default">
+						
+					</div>
+					<div class="details-all" style="display:none">
+						
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<hr>
+				<div class="footer-content">
+					<span class="footer-info">
+						
+						<span class="pull-left"><strong style="color:#e74c3c">Attributes</strong><br>owned, incomplete</span>
+						<span class="pull-right text-right"><strong style="color:#3498db">Sources</strong><br>
+							<i class="fa fa-facebook-square"></i>
+						</span>
+						
+					</span>
+					<span class="footer-hover">
+						
+						<span class="pull-left" style="color:#f1c40f;line-height: 36px;margin-right: 10px;"><strong>Actions</strong></span>						
+						<button class="btn btn-action select" data-tooltip="tooltip" data-placement="bottom" data-original-title="SELECT"><i class="fa fa-check"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SHARE"><i class="fa fa-share-alt"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SEE PROFILE"><i class="fa fa-eye"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="COMPLETE"><i class="fa fa-pencil"></i></button>
+						<!-- <button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="MORE"><span class="caret"></i></button> -->
+						<div class="dropdown pull-right" style="">
+						  <button class="btn btn-action dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" data-tooltip="tooltip" data-placement="bottom" data-original-title="More">
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Make private</a></li>
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#" class="disabled">Start Sharing with Aldo</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation" class="dropdown-header">Aldo is not in Typeless.</li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Invite Aldo to Typeless</a></li>
+						  </ul>
+						</div>
+						
+					</span>
+					<span class="footer-selected">
+						hola
+					</span>
+				</div>
+			</div>
+		</div>
+	
+		<div class="contact-card" id="3">
+			<div class="body" >
+				<img class="img-circle" src="../img/satish-sq.jpg"></img>
+				<span class="badge verified"><i class="fa fa-check-circle"></i> VERIFIED</span>
+
+				<div class="body-text pull-right">
+					<div class="name truncate">Michael Jayakumar</div>
+					<div class="job-title"><a data-tooltip="tooltip" data-placement="bottom" data-original-title="Search 'Office Angel'">Office Angel</a> at <a data-tooltip="tooltip" data-placement="bottom" data-original-title="Search 'Burunda'">Burunda</a></div>
+					<hr style="margin:5px 0 5px 0;">
+					<div class="details-default">
+						<span class="notice">Sharing only name and job title. <a>Request</a> full details to the <a data-tooltip="tooltip" data-placement="bottom" data-original-title="Daniel Vivar">sharer</a>.</span>
+						
+					</div>
+					<div class="details-all" style="display:none">
+						
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<hr>
+				<div class="footer-content">
+					<span class="footer-info">
+						
+						<span class="pull-left"><strong style="color:#e74c3c">Attributes</strong><br>shared, recent</span>
+						<span class="pull-right text-right"><strong style="color:#3498db">Sources</strong><br>
+							<img src="../img/logo-only-icon-original.png" style="width:12px;height:12px;"></img>
+						</span>
+						
+					</span>
+					<span class="footer-hover">
+						
+						<span class="pull-left" style="color:#f1c40f;line-height: 36px;margin-right: 10px;"><strong>Actions</strong></span>						
+						<button class="btn btn-action select" data-tooltip="tooltip" data-placement="bottom" data-original-title="SELECT"><i class="fa fa-check"></i></button>
+						<button class="btn btn-action" data-tooltip="tooltip" data-placement="bottom" data-original-title="SEE PROFILE"><i class="fa fa-eye"></i></button>
+						<div class="dropdown pull-right" style="">
+						  <button class="btn btn-action dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" data-tooltip="tooltip" data-placement="bottom" data-original-title="More">
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See potential duplicates<span class="label label-primary pull-right">1</span></a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">See sharer's profile</a></li>
+							<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Start sharing with Michael</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation" class="dropdown-header">Michael is in Typeless.<span class="fa fa-check-circle pull-right"></span></li>
+						  </ul>
+						</div>
+						
+					</span>
+					<span class="footer-selected">
+						hola
+					</span>
+				</div>
+			</div>
+		</div>
+	
 		
 	</div>
 	
@@ -130,6 +317,13 @@
 			$('.details-all').fadeOut(500, function(){
 				$('.details-default').fadeIn(500)
 			});
+		});
+		
+		$('button.select').click(function(){
+			//$(this).addClass('active');
+			card = $(this).parents('.contact-card');
+			card.addClass('selected');
+			
 		});
 		
 	});
