@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrome Extension | Typeless.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/animate.css" rel="stylesheet">
+	
+	<!-- <link href="../css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" /> -->
+	<!-- <link href="../css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" /> -->
+
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/ce-style.css" rel="stylesheet">
+	
+</head>
+
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%;background-color:#f1f1f1">
+
+	<script>
+		
+	</script>
+
+	<div class="container">
+		<div class="row ce-bar text-center">
+			<button class="btn ce-button pull-left" id="ce-back" onclick="" style="margin-left:9px" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Back">
+				<i class="fa fa-chevron-left fa-fw"></i>
+			</button>
+			
+			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
+			<button class="btn ce-button pull-right" type="button" style="margin-right:8px" data-tooltip="tooltip" data-placement="bottom" title="Start">
+				<img src="../img/logo-only-icon-320p.png" width="16px"></img>
+			</button>
+			  
+			<!-- <div class="dropdown pull-right">
+			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:8px" id="ce-menu" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Start">
+				<img src="../img/tw-favicon.ico" width="100%"></img>
+			  </button>
+			  <ul class="dropdown-menu ce-menu-dropdown" role="menu" aria-labelledby="ce-menu" >
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contacts<span class="badge pull-right">3,122</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sharing<span class="badge pull-right">768</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Connected accounts<span class="badge pull-right">6</span></a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="#">
+						<span style="display:block"><strong>Donald Draper</strong></span>
+						<span class="small m-t-n-sm" style="display:block">don@sterlingcooper.com</span>
+					</a>
+				</li>
+			  </ul>
+			</div> -->
+			
+			<button class="btn ce-button pull-right" id="ce-notifications"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="6 new notifications<br>in Typeless">
+				<i class="fa fa-bell fa-fw"></i> 6
+			</button>
+			
+			<button class="btn ce-button pull-right"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="New contact in Typeless">
+				<i class="fa fa-plus fa-fw"></i>
+			</button>
+			
+			<button class="btn ce-button pull-right"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="Share contacts in Typeless">
+				<i class="fa fa-share-alt fa-fw"></i>
+			</button>
+			
+		</div>
+	</div>
+	<div class="container " >
+		<div class="row search">
+			<form role="form">
+				<div class="input-group m-t-sm m-b-sm ce-search-bar" style="margin-right:8px;margin-left:9px">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm btn-success" id="top-search-btn"><i class="fa fa-search"></i></button>
+					</span>
+					<input type="text" class="form-control input-sm" id="top-search" placeholder="Search in Typeless" autocomplete="off">
+				</div>
+			</form>
+		
+		</div>
+	</div>
+	
+	<div class="container" style="margin-left: 9px;margin-right: 9px;" >
+	
+	
+
+	
+		
+		
+		
+		
+		
+	</div>
+	<div class="container ">
+		<div class="row ce-footer" >
+			<a class="btn btn-link btn-gray btn-xs"><small>CONTACTS</small></a>
+			<a class="btn btn-link btn-gray btn-xs" style="margin-left:5px"><small>SHARING</small></a><br>
+			<a class="btn btn-link btn-gray btn-xs m-t-n-sm"><small>CONNECTED ACCOUNTS</small></a>
+			<a><img class="ce-footer-logo pull-right" src="../img/logo-only-letters-inverse.png" width="25%"></img></a>
+		</div>
+	</div>
+
+	<!-- Mainly scripts -->
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<!-- <script src="../js/plugins/pnotify/pnotify.core.js"></script> -->
+	<!-- <script src="../js/plugins/pnotify/pnotify.buttons.js"></script> -->
+
+    <script>
+        $(document).ready(function() {
+		
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+		
+			// select when hover to copy to clipboard
+			$('.copy').hover(function(){
+				//console.log($(this).nextAll('.select'));
+				$(this).nextAll('.select').show();
+				$(this).nextAll('.select').select();
+			}, function(){});
+			
+			// search bar animations
+			$('#top-search').focus(searchIn);
+			$('#top-search').blur(searchOut);
+			
+			function searchIn(){
+				
+				//$('.ce-bar').slideToggle('fast');
+				
+				$('.row:not(.search,.ce-bar,.ce-footer)').fadeOut('fast');
+			};
+					
+			function searchOut(){
+				
+				//$('.ce-bar').slideToggle('fast');
+				
+				$('.row:not(.search,.ce-bar)').fadeIn('fast');
+				
+			};
+			
+			// close
+			$('.close').click(function(){
+				$(this).parent().hide('fast', function(e){
+					e.parent().remove();
+				});
+				
+			});
+			
+			
+			
+        });
+    </script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrome Extension | Typeless.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/animate.css" rel="stylesheet">
+	
+	<!-- <link href="../css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" /> -->
+	<!-- <link href="../css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" /> -->
+
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/ce-style.css" rel="stylesheet">
+	
+	
+	
+</head>
+
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%;background-color:#f1f1f1">
+
+	<script>
+		
+	</script>
+
+	<div class="container">
+		<div class="row ce-bar text-center">
+			<button class="btn ce-button pull-left" id="ce-back" onclick="location.href='search.html'" style="margin-left:9px" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Back">
+				<i class="fa fa-chevron-left fa-fw"></i>
+			</button>
+			
+			
+			<button class="btn ce-button pull-right" type="button" style="margin-right:8px" data-tooltip="tooltip" data-placement="bottom" title="Start">
+				<img src="../img/tw-favicon.ico" width="100%"></img>
+			</button>
+			
+			<button class="btn ce-button pull-right" id="ce-notifications" data-tooltip="tooltip" data-html="true" data-placement="bottom" title="6 new notifications<br>in Typeless">
+				<i class="fa fa-bell fa-fw"></i> 6
+			</button>
+			
+			<button class="btn ce-button pull-right"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="New contact in Typeless">
+				<i class="fa fa-plus fa-fw"></i>
+			</button>
+			
+			<button class="btn ce-button pull-right" data-tooltip="tooltip" data-html="true" data-placement="bottom" title="Share contacts in Typeless">
+				<i class="fa fa-share-alt fa-fw"></i>
+			</button>
+			
+		</div>
+	</div>
+	<div class="container " >
+		<div class="row search">
+			<form role="form">
+				<div class="input-group m-t-sm m-b-sm ce-search-bar">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm btn-success" id="top-search-btn"><i class="fa fa-search"></i></button>
+					</span>
+					<input type="text" class="form-control input-sm dropdown-toggle" data-toggle="dropdown" id="top-search" placeholder="Search in Typeless" autocomplete="off">
+					<ul class="dropdown-menu">
+						<li role="presentation" class="dropdown-header" style="margin-top:6px"><small>PREVIOUS SEARCHES</small></li>
+						<li><a href="#" class="prev-search" value="don">'don'</a></li>
+						<li><a href="#" class="prev-search" value="sales manager">'sales manager'</a></li>
+						<li><a href="#" class="prev-search" value="london">'london'</a></li>
+						<li class="divider"></li>
+						<li role="presentation" class="dropdown-header"><small>RECENT CONTACTS</small></li>
+						<li><a href="profile.html"><img class="img-circle m-r-sm" src="../img/a6.jpg" style="width:20px">Virginia Madsen</a></li>
+						<li><a href="profile.html"><img class="img-circle m-r-sm" src="../img/a1.jpg" style="width:20px">Raul Vialas</a></li>
+						<li><a href="profile.html"><img class="img-circle m-r-sm" src="../img/a5.jpg" style="width:20px">Barbara T. Raymond</a></li>
+					</ul>
+				</div>
+			</form>
+		
+		</div>
+	</div>
+	
+	<div class="container " id="instructions">
+	
+		<div class="row">
+			<h4 class="m">Instructions</h4>
+			<p class="small m">
+				
+				> (meta) These instructions are never shown.<br><br>
+				> The search bar is in all the pages of the chrome extension.<br><br>
+				> It should start to work when the user clicks in the input (focus in event). A list of previous searches or other things may be shown to assist the user. We'll define this behaviour in the future.<br><br>
+				> When the user types something, from character 1, we have to show results.<br><br>
+				> Also, it should show results when the user pastes something in the search bar.<br><br>
+				> Hitting enter or clicking on the search button (that is: the submit event) is prevented because it is not needed. By the time this event could be needed, we already are showing final results to the user.<br><br>
+				> The mock only works (showing results) if you search for <button id="don">'don'</button>, otherwise it shows the no results page.<br><br>
+				> One page results: All results will be shown in one page with infinite scroll, unless a limit is reached, from where infinite automatic scroll should start.
+			</p>
+		</div>
+		
+		<!-- <div class="row">
+			<div class="divider"></div>
+		</div> -->
+		
+	</div>
+	
+	<div class="container " id="results" style="display:none;overflow-y:auto">
+	
+		<div class="row white-bg" style="">
+		
+			<table class="table table-hover no-margins">
+					
+				<thead>
+					<tr class="va-middle text-muted text-uppercase" style="background-color:whitesmoke;display:none">
+						<td class="" width="54px">pic</td>
+						<td class="" width="">type</td>
+						<td class="" width="">rest</td>
+													
+					</tr>
+				</thead>
+				
+				<tbody class="">
+				
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" >
+							<img class="img-circle" src="../img/a1.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span class="break-word"><mark>Don</mark>ald Draper</span><br>
+							
+							<span class="break-all text-gray"><mark>don</mark>@sterlingcooper.com</span>
+						</td>
+						<td >
+							<span class="fa fa-link pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Shared by Daniel Vivar"></span>
+						</td>
+					</tr>
+					<tr class="va-middle"  onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a3.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ally Raisin</span><br>
+							
+							<span class="text-gray">d.raisin@sterlingcooper.com</span>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a4.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Francis Upperland</span><br>
+							
+							<span class="text-gray">Sales Manager at Cale<mark>don</mark>ian</span>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a6.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Virginia Madsen</span><br>
+							
+							<span class="text-gray">Cale<mark>don</mark>ian</span>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a7.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Raul Vialas</span><br>
+							<span class="text-gray">Re<mark>don</mark>, France</span>
+						</td>
+						<td>
+							<span class="fa fa-link pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Shared by Thomas Cook"></span>
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="54px" style="border-color:transparent">
+							<img class="img-circle" src="../img/a1.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ald Draper</span><br>
+							
+							<span class="text-gray"><mark>don</mark>@sterlingcooper.com</span>
+						</td>
+						<td>
+							<span class="fa fa-link pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Shared by Daniel Vivar"></span>
+						</td>
+					</tr>
+					<tr class="va-middle"  onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a3.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ally Raisin</span><br>
+							
+							<span class="text-gray">d.raisin@sterlingcooper.com</span>
+						</td>
+						<td>
+							<span class="fa fa-link pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Shared by Daniel Vivar"></span>
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a4.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Francis Upperland</span><br>
+							
+							<span class="text-gray">Sales Manager at Cale<mark>don</mark>ian</span>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a7.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span>Raul Vialas</span><br>
+							<span class="text-gray">Re<mark>don</mark>, France</span>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="va-middle " onclick="location.href='profile.html'">
+						<td class="" width="54px" style="border-color:transparent">
+							<img class="img-circle" src="../img/a1.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ald Draper</span><br>
+							
+							<span class="text-gray"><mark>don</mark>@sterlingcooper.com</span>
+						</td>
+						<td>
+							<span class="fa fa-link pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Shared by Daniel Vivar"></span>
+						</td>
+					</tr>
+					<tr class="va-middle"  onclick="location.href='profile.html'">
+						<td class="" width="" >
+							<img class="img-circle" src="../img/a3.jpg" style="width:100%">
+						</td>
+						<td style="padding-left:0">
+							
+							<span><mark>Don</mark>ally Raisin</span><br>
+							
+							<span class="text-gray">d.raisin@sterlingcooper.com</span>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					
+					
+					
+				</tbody>
+			</table>
+		</div>
+		
+		<!-- <div style="height:101px;background-color:#f1f1f1;display:none">
+			
+		</div> -->
+		
+	</div>
+	
+	<div class="container " id="no-results" style="display:none">
+	
+		<div class="row">
+			
+			<div class="well text-gray" style="margin:1px 9px 9px 9px">
+				<span class="fa fa-frown-o pull-left" style="font-size:36px"></span>Ups, no contact details found matching <mark id="query"></mark>.
+			</div>
+			<div class="well text-gray" style="margin:10px 9px 9px 9px">
+				<span class="fa fa-question-circle pull-left" style="font-size:36px"></span>Connect a new account to have access to more contacts and enrich with new information the ones you already have.<br>
+				<button class="btn btn-default m-t m-l-lg" type="button" data-tooltip="tooltip" data-placement="bottom" title="Connect new account in Typeless" ><i class="fa fa-plus fa-fw"></i><span class="m-l-xs">Connect new account</span></button>
+			</div>
+				
+		</div>
+	</div>
+	
+	<div class="container ">
+		<div class="row ce-footer" >
+			<a class="btn btn-link btn-gray btn-xs"><small>PRIVACY</small></a>
+			<a class="btn btn-link btn-gray btn-xs"><small>ACCEPTABLE USE</small></a>
+			<a class="btn btn-link btn-gray btn-xs"><small>TERMS</small></a>
+			<a><img class="ce-footer-logo pull-right m-r m-t-xs" src="../img/logo-only-letters-inverse.png" width="15%"></img></a>
+		</div>
+	</div>
+
+	<!-- Mainly scripts -->
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<!-- <script src="../js/plugins/pnotify/pnotify.core.js"></script> -->
+	<!-- <script src="../js/plugins/pnotify/pnotify.buttons.js"></script> -->
+
+    <script>
+        $(document).ready(function() {
+		
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+		
+			// search bar events
+			$('#top-search').focus(searchIn);
+			$('#top-search').blur(searchOut);
+			
+			function searchIn (){
+				$('#instructions').hide();
+			};
+			function searchOut (){
+				if ($('#top-search').val()=='')
+					$('#instructions').show();
+			};
+			
+			// search submitting, prevented
+			$( 'form' ).submit( function( e ) {
+			  console.log( 'form submit event: '+$('#top-search').val());
+			  e.preventDefault();
+			});
+			
+			// manage 'input' event from jquery
+			$('#top-search').bind('input', function(e){
+				var search = $('#top-search').val();
+				console.log('input event: '+search);
+				results(search);
+				$('#query').text(search);
+				//hide dropdown
+				$('.dropdown-menu').parent().removeClass('open');
+			});
+			
+			// what we do, depending on what we type
+			function results (search) {
+				if (search=='') {
+					$('#instructions').fadeIn('slow');
+					$('#results').hide();
+					$('#no-results').hide();
+				} else if (search=='don'){
+					$('#instructions').hide();
+					$('#results').show();
+					$('#no-results').hide();
+				} else {
+					$('#instructions').hide();
+					$('#results').hide();
+					$('#no-results').show();
+				};
+			}
+			
+			// insert 'don' with button
+			$('#don').click(function(){
+				//console.log("clicked don button");
+				topSearch('don');
+			});
+			
+			// function to search programatically
+			function topSearch (what) {
+				$('#top-search').val(what);
+				$('#top-search').trigger('input');
+			}
+			
+			// previous search links
+			$('.prev-search').click(function(){
+				//console.log($(this).attr('value'));
+				topSearch($(this).attr('value'));
+			});
+			
+			// resize results scroll
+			$(function() {
+					
+				$(window).bind("load resize", function() {
+					var altura = $(this).height();
+					$('#results').height(altura-171);
+				})
+				
+			});
+			
+        });
+    </script>
+	
+	
+</body>
+</html>

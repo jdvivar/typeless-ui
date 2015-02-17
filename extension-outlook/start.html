@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrome Extension | Typeless.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../octicons/octicons.css" rel="stylesheet" >
+	<link href="../css/animate.css" rel="stylesheet">
+	
+	<!-- <link href="../css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" /> -->
+	<!-- <link href="../css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" /> -->
+
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/ce-style.css" rel="stylesheet">
+	
+</head>
+
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%;background-color:#f1f1f1">
+
+	<script>
+		
+	</script>
+	
+	<!-- <div class="text-muted ce-minimize" style="width:5px;height:100%;position:absolute" data-html="true" data-tooltip="tooltip" data-placement="right" title='<i class="fa fa-angle-double-right"></i> Minimize'>
+		
+	</div> -->
+
+	<div class="container">
+		<div class="row ce-bar text-center">
+			<button class="btn ce-button pull-left ce-minimize" onclick="" style="margin-left:9px" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Collapse">
+				<!-- <span class="octicon octicon-move-right" style="font-size:14px"></span> -->
+				<img src="../img/octicon-move-right-inverted.png" width="14px" style="backgound-color:"></img>
+			</button>
+			
+			<button class="btn ce-button pull-left" id="ce-back" onclick="" style="" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Back">
+				<i class="fa fa-arrow-left fa-fw"></i>
+			</button>
+			
+			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
+			<button class="btn ce-button pull-right" type="button" style="margin-right:8px" data-tooltip="tooltip" data-placement="bottom" title="Start">
+				<img src="../img/logo-only-icon-320p.png" width="16px"></img>
+			</button>
+			
+			<button class="btn ce-button pull-right" id="ce-notifications"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="6 new notifications<br>in Typeless">
+				<i class="fa fa-bell fa-fw"></i> 6
+			</button>
+			
+			<button class="btn ce-button pull-right"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="New contact in Typeless">
+				<i class="fa fa-plus fa-fw"></i>
+			</button>
+			
+			<button class="btn ce-button pull-right"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="Share contacts in Typeless">
+				<i class="fa fa-share-alt fa-fw"></i>
+			</button>
+			
+		</div>
+	</div>
+	<div class="container " >
+		<div class="row search">
+			<form role="form">
+				<div class="input-group m-t-sm m-b-sm ce-search-bar" style="margin-right:8px;margin-left:9px">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm btn-success" id="top-search-btn"><i class="fa fa-search"></i></button>
+					</span>
+					<input type="text" class="form-control input-sm" id="top-search" placeholder="Search in Typeless" autocomplete="off">
+				</div>
+			</form>
+		
+		</div>
+	</div>
+	
+	<div class="container" style="margin-left: 9px;margin-right: 9px;" >
+	
+		<div class="row m-b-sm " >
+			<a class="btn btn-white btn-xs pull-right"><small>LOG OUT</small></a>
+			Satish Jayakumar
+			<div class="text-gray"><strong>satish@sterlingcooper.com</strong></div>
+		</div>
+	
+		<!-- <div class="row m-b-sm" style="margin-left: -25px;margin-right: -25px;">
+			<div class="divider"></div>
+		</div> -->
+		
+		<div class="row m-b-sm text-center" style="font-family: 'Open Sans';display:none;">
+			<div class="col-xs-4 ">
+				<div class="white-bg m-r-n-sm m-l-n add-border" style="border-radius:3px;">
+					<div class="h3 text-success" style="display: inline-block;">3,421</div><br>
+					<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong>total<br>contacts</strong></div>
+				</div>
+			</div>
+			<div class="col-xs-8">
+				<div class="white-bg m-r-n m-l-n-sm text-center add-border m-b-sm" style="border-radius:3px">
+					<div class="h3 text-warning pull-left m-t-sm m-l-md text-center" style="display: inline-block;">16</div>
+					<div class="text-uppercase text-gray small m-t-sm m-b-sm" style="display: inline-block;"><strong >new contacts<br>(last 7 days)</strong> </div>
+				</div>
+				<div class="white-bg m-r-n m-l-n-sm text-center add-border" style="border-radius:3px">
+					<div class="h3 text-yellow pull-left m-t-sm m-l-md text-center" style="display: inline-block;">&nbsp;4</div>
+					<div class="text-uppercase text-gray small m-t-sm m-b-sm" style="display: inline-block;"><strong >connected<br>accounts</strong> </div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row m-b-sm text-center" style="font-family: 'Open Sans'; display:none;">
+			<div class="col-xs-6 ">
+				<div class="white-bg m-r-n-sm m-l-n add-border" style="border-radius:3px;">
+					<div class="h2 text-warning" style="display: inline-block;">16</div><br>
+					<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong >new contacts (last 7 days)</strong> </div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="white-bg m-r-n m-l-n-sm text-center add-border" style="border-radius:3px">
+					<div class="h2 text-yellow" style="display: inline-block;">4</div><br>
+					<div class="text-uppercase text-gray m-b-md" style="display: inline-block;"><strong>connected accounts</strong></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row m-b-sm" style="margin-left: -25px;margin-right: -25px;">
+			<div class="divider"></div>
+		</div>
+	</div>
+	<div class="container" style="margin-left: 9px;" >
+		<div class="row m-b-sm" id="notifications-row" style="overflow-y:auto">
+		
+			<div style="margin-right:9px">
+		
+				<div class="m-b-sm"><strong >Notifications</strong></div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;padding:10px 15px 15px 15px">
+					<div class="small text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+					<div class="divider m-t-xs m-b-sm"></div>
+					<div class="text-center m">
+						<img class="" src="../img/socialbox-icon.png" width="50%">
+					</div>
+					<a class="btn btn-info btn-sm btn-block"><small><i class="fa fa-plus"></i> CONNECT A NEW ACCOUNT</small></a>
+					<!-- <span class="small text-muted pull-left m-t-sm" style="">18 m ago</span> -->
+					<!-- <button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button> -->
+					
+				</div>
+				
+				
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					
+					<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE REQUESTS</small></a>
+					<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-link fa-flip-horizontal text-muted"></i> Single contact request</div>
+					<div class="divider m-t-xs m-b-xs"></div>
+					<div class="m-b-xs"><a class="underline text-info">Virgina Madsen</a> asked for <a class="underline text-info">Raul Viala</a>'s contact details.</div>
+					<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">18 m ago</span>
+					<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;;display:none;">
+					
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<img class="m-t-xs pull-left m-r m-b" src="../img/enrich-facebook.png" width="114" style="border:1px solid #e5e5e5;border-radius:3px">
+						<div class="m-b-sm m-t-sm">Add <strong>pictures</strong>, <strong>locations</strong> and more.</div>
+						<a class="btn btn-xs btn-info"><small><i class="fa fa-plus"></i> FACEBOOK</small></a>
+					
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;;display:none;">
+					
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<img class="m-t-xs pull-left m-r m-b" src="../img/enrich-google.png" width="114" style="border:1px solid #e5e5e5;border-radius:3px">
+						<div class="m-b-sm m-t-sm">Add <strong>phones</strong>, <strong>mails</strong> and more.</div>
+						<a class="btn btn-xs btn-info"><small><i class="fa fa-plus"></i> GOOGLE</small></a>
+					
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;">
+					
+					<a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE ACCOUNTS</small></a>
+					<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> New account</div>
+					<div class="divider m-t-xs m-b-xs"></div>
+					<div class="m-b-xs">A new LinkedIn account 'don@scooper.com' has been connected.</div>
+					<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">2 h ago</span>
+					<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;display:none;">
+					<a>
+						<!-- <a class="btn btn-gray btn-xs btn-link pull-right m-t-xs m-r-n-xs"><small>MANAGE ACCOUNTS</small></a> -->
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<span class="fa fa-facebook-square fa-2x pull-left m-t-xs text-info" style="margin-right:10px!important"></span>
+						<div class="m-b-xs">Connect a Facebook account to add <strong>pictures</strong>, <strong>locations</strong> and more.</div>
+						<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">120 of 789 contacts lack a picture</span>
+					</a>
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;display:none;">
+					<a>
+						<div class="small m-t-sm text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
+						<div class="divider m-t-xs m-b-xs"></div>
+						<span class="fa fa-stack pull-left m-t-xs text-info" style="margin-right:10px!important">
+						  <i class="fa fa-square fa-stack-2x"></i>
+						  <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+						</span>
+						<div class="m-b-sm">Connect a Google account to add <strong>e-mail addresses</strong> from GMail, <strong>phone numbers</strong> from your Android device and more.</div>
+						<span class="small text-muted pull-left m-b-sm" style="margin-top:3px">427 of 789 contacts lack a phone number</span>
+					</a>
+						<button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button>
+					
+				</div>
+				
+			
+			</div>
+			
+		</div>
+		
+		<!-- <div class="row">
+			<div class="divider m-t-sm"></div>
+		</div> -->
+		
+	</div>
+	
+	<div class="container ">
+		<div class="row ce-footer" >
+			<a class="btn btn-link btn-gray btn-xs"><small>PRIVACY</small></a>
+			<a class="btn btn-link btn-gray btn-xs"><small>ACCEPTABLE USE</small></a>
+			<a class="btn btn-link btn-gray btn-xs"><small>TERMS</small></a>
+			<a><img class="ce-footer-logo pull-right m-r m-t-xs" src="../img/logo-only-letters-inverse.png" width="15%"></img></a>
+		</div>
+	</div>
+
+	<!-- Mainly scripts -->
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<!-- <script src="../js/plugins/pnotify/pnotify.core.js"></script> -->
+	<!-- <script src="../js/plugins/pnotify/pnotify.buttons.js"></script> -->
+
+    <script>
+        $(document).ready(function() {
+		
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+		
+			// select when hover to copy to clipboard
+			$('.copy').hover(function(){
+				//console.log($(this).nextAll('.select'));
+				$(this).nextAll('.select').show();
+				$(this).nextAll('.select').select();
+			}, function(){});
+			
+			// search bar animations
+			$('#top-search').focus(searchIn);
+			$('#top-search').blur(searchOut);
+			
+			function searchIn(){
+				
+				//$('.ce-bar').slideToggle('fast');
+				
+				$('.row:not(.search,.ce-bar,.ce-footer)').fadeOut('fast');
+			};
+					
+			function searchOut(){
+				
+				//$('.ce-bar').slideToggle('fast');
+				
+				$('.row:not(.search,.ce-bar)').fadeIn('fast');
+				
+			};
+			
+			// close
+			$('.close').click(function(){
+				$(this).parent().hide('fast', function(e){
+					e.parent().remove();
+				});
+				
+			});
+			
+			// resize notifications scroll
+			$(function() {
+					
+				$(window).bind("load resize", function() {
+					var altura = $(this).height();
+					$('#notifications-row').height(altura-228);
+				})
+				
+			});
+			
+			// click on minimize div
+			$('.ce-minimize').click(function(){
+				$('#iframe-container',top.document).css('width','50px');
+				$('#gmail-toolbar-right',top.document).css('margin-right','80px');
+				$('#background',top.document).css('width','252px');
+				$('iframe',top.document).css('width','50px');
+				location.href='minimized.html';
+			});
+			
+			
+			
+        });
+    </script>
+	
+	
+</body>
+</html>

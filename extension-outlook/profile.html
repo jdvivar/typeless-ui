@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrome Extension | Typeless.</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/animate.css" rel="stylesheet">
+	
+	<!-- <link href="../css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" /> -->
+	<!-- <link href="../css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" /> -->
+
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/ce-style.css" rel="stylesheet">
+	
+</head>
+
+<body class="" style="font-size:13px;font-family:arial;border-left:1px solid #e5e5e5;min-height:100%;background-color:#f1f1f1">
+
+	<script>
+		
+	</script>
+
+	<div class="container">
+		<div class="row ce-bar text-center">
+			<button class="btn ce-button pull-left" id="ce-back" onclick="" style="margin-left:9px" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Back">
+				<i class="fa fa-chevron-left fa-fw"></i>
+			</button>
+			
+			<!-- <div class="" style="display:inline-block;margin-top:15px" ><strong>Profile view</strong></div> -->
+			<a class="btn ce-button pull-right" type="button" style="margin-right:8px" data-tooltip="tooltip" data-placement="bottom" title="Start" href="start.html">
+				<img src="../img/logo-only-icon-320p.png" width="16px"></img>
+			</a>
+			  
+			<!-- <div class="dropdown pull-right">
+			  <button class="btn ce-button dropdown-toggle" type="button" style="margin-right:8px" id="ce-menu" data-toggle="dropdown" data-tooltip="tooltip" data-placement="bottom" title="Start">
+				<img src="../img/tw-favicon.ico" width="100%"></img>
+			  </button>
+			  <ul class="dropdown-menu ce-menu-dropdown" role="menu" aria-labelledby="ce-menu" >
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contacts<span class="badge pull-right">3,122</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sharing<span class="badge pull-right">768</span></a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Connected accounts<span class="badge pull-right">6</span></a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="#">
+						<span style="display:block"><strong>Donald Draper</strong></span>
+						<span class="small m-t-n-sm" style="display:block">don@sterlingcooper.com</span>
+					</a>
+				</li>
+			  </ul>
+			</div> -->
+			
+			<button class="btn ce-button pull-right" id="ce-notifications"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="6 new notifications<br>in Typeless">
+				<i class="fa fa-bell fa-fw"></i> 6
+			</button>
+			
+			<button class="btn ce-button pull-right"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="New contact in Typeless">
+				<i class="fa fa-plus fa-fw"></i>
+			</button>
+			
+			<button class="btn ce-button pull-right"  data-tooltip="tooltip" data-html="true" data-placement="bottom" title="Share contacts in Typeless">
+				<i class="fa fa-share-alt fa-fw"></i>
+			</button>
+			
+		</div>
+	</div>
+	<div class="container " >
+		<div class="row search">
+			<form role="form">
+				<div class="input-group m-t-sm m-b-sm ce-search-bar" style="margin-right:8px;margin-left:9px">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-sm btn-success" id="top-search-btn"><i class="fa fa-search"></i></button>
+					</span>
+					<input type="text" class="form-control input-sm" id="top-search" placeholder="Search in Typeless" autocomplete="off">
+				</div>
+			</form>
+		
+		</div>
+	</div>
+	
+	<div class="container " >
+		
+		<div class="row m-b-xs" style="margin-left: -5px;">
+			
+			<a class="btn btn-link btn-gray btn-xs pull-left m-r-xs" data-tooltip="tooltip" data-placement="bottom" data-html="true"
+				title="Shared by Michael Stephanblome" style="position:absolute;right:-4px;z-index:999"><span class="fa fa-link fa-fw"></span></a>
+		
+			<div class="col-xs-3">
+				<div class="row text-center">
+					<img class="img-circle img-responsive" src="../img/satish-sq.jpg" style="width:100%">
+					<span class="badge" style="position:relative;top:-3px;font-size:8px"><i class="fa fa-check-circle"></i> VERIFIED</span>
+				</div>
+			</div>
+		
+			<div class="col-xs-9">
+				<span class="ce-profile-name">Satish Shortword Jayakumarlongword</span>
+				<span class="ce-profile-job small text-gray m-t-xs">Sales Manager at Power Plant</span>
+				<span class="ce-profile-location small text-gray m-t-xs"><i class="fa fa-map-marker fa-fw"></i>Bremen, Germany</span>
+		
+			</div>
+		</div>
+		<!-- <div class="row">
+			<div class="divider"></div>
+		</div> -->
+		
+		<div class="row" style="margin-left:-5px">
+			
+				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to send e-mail<br>Ctrl+C to copy" href="mailto:satish@bondable.com">satish@bondable.com</a>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">satish@bondable.com</textarea>
+				
+				<br>
+				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to send e-mail<br>Ctrl+C to copy" href="mailto:s.jaya@gmail.com">s.jaya@gmail.com</a>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">s.jaya@gmail.com</textarea>
+				
+				
+				<div class="dropdown ce-dropdown pull-right m-r-xs">
+				  <button class="btn btn-outline btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+					<small>1 MORE</small>
+					<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">satish@typeless.co</a></li>
+				  </ul>
+				</div>
+				
+				
+			
+		</div>
+		
+		<div class="row m-t-sm" style="margin-left:-5px">
+			
+				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to call this phone<br>Ctrl+C to copy" href="tel:+44 7477 322 890">+44 7477 322 890 </a>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">+44 7477 322 890</textarea>
+				<br>
+				<a class="copy" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="Click to call this phone<br>Ctrl+C to copy" href="tel:+44 020 676 2239">+44 020 676 2239 </a>
+				<textarea class="select" style="display:none;position:absolute;left:-100px;width:0;height:0;">+44 020 676 2239</textarea>
+				
+				<div class="dropdown ce-dropdown pull-right m-r-xs">
+				  <button class="btn btn-outline btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+					<small>2 MORE</small>
+					<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">+44 2089 005 223</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">+34 0800 556</a></li>
+				  </ul>
+				</div>				
+				
+		</div>
+		
+		<div class="row m-t-xs" style="margin-left:-5px">
+			<div class="m-b-xs"><strong>Notes</strong> <a class="btn btn-xs btn-white" data-tooltip="tooltip" data-placement="right" title="Edit in Typeless" style=""><small>EDIT</small></a></div>
+			<div class="well well-sm" style="margin-right:9px;margin-bottom:0;background-color:white">Notes about Satish.<br>There can be more lines.<br>Maximum 3 lines.
+				<a class="btn btn-link btn-gray btn-xs " data-tooltip="tooltip" data-placement="bottom" title="More in Typeless" style="position:relative;bottom:1px"><small>... MORE</small></a>
+			</div>
+		</div>
+		
+		<!-- <div class="row">
+			<div class="divider m-t-xs"></div>
+		</div> -->
+		
+		<div class="row m-t-sm m-b-xs" style="margin-left:-5px">
+			<a class="btn btn-white btn-xs" data-tooltip="tooltip" data-placement="right" title="See it in Typeless"><small>FULL PROFILE <span class="fa fa-external-link fa-fw"></small></span></a>
+			<a class="btn btn-white btn-xs pull-left m-r-sm" data-tooltip="tooltip" data-placement="right" data-html="true" title="Shared by<br>Michael Stephanblome" style="display:none"><span class="fa fa-link fa-fw"></span></a>
+			
+			<a class="btn btn-xs pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Go to Facebook profile"><span class="fa fa-facebook fa-fw"></span></a>
+			<a class="btn btn-xs pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Go to LinkedIn profile"><span class="fa fa-linkedin fa-fw"></span></a>
+			<a class="btn btn-xs pull-right" data-tooltip="tooltip" data-placement="left" data-html="true" title="Go to Twitter profile"><span class="fa fa-twitter fa-fw"></span></a>
+			
+		</div>
+		
+		<div class="row">
+			<div class="divider m-t-xs"></div>
+		</div>
+		
+		<div class="row m-t-sm" style="">
+		
+			<div class="m-l-sm " style=""><strong>Get more details on Satish</strong></div>
+			
+			<div class="m-l-sm m-t-sm">
+				
+				<a class="pull-left">
+					<img alt="image" class="img-circle" src="../img/a4.jpg"
+						data-tooltip="tooltip" data-placement="right" title="James Murray" style="width:32px">
+				</a>
+				
+				<a class="btn btn-xs btn-white request pull-right m-r-sm"><small><i class="fa fa-plus"></i>&nbsp;REQUEST</small></a>
+				
+				<div class="" style="margin-left:40px">1 additional phone and 1 additional e-mail</div>
+
+			</div>
+			
+			<div class="m-l-sm m-t-sm">
+				
+				<a class="pull-left">
+					<img alt="image" class="img-circle" src="../img/a1.jpg" style="width:32px">
+				</a>
+				
+				<div style="margin-left:40px"><a class="underline text-info">Chris Morrison</a> has 1 additional phone and other details
+					<div>
+						<a class="btn btn-xs btn-white request m-r-sm"><small><i class="fa fa-plus"></i>&nbsp;REQUEST</small></a>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="m-l-sm m-t-sm" >
+				
+				<a class="pull-left">
+					<img alt="image" class="img-circle" src="../img/a6.jpg"
+						data-tooltip="tooltip" data-placement="right" title="Virginia Madsen" style="width:32px">
+				</a>
+				
+				<a class="btn btn-xs btn-white request pull-right m-r-sm"><small><i class="fa fa-plus"></i>&nbsp;REQUEST</small></a>
+				
+				<div style="margin-left:40px">1 additional e-mail</div>
+				
+			</div>
+
+		</div>
+		
+		<div class="row">
+			<div class="divider m-t-sm"></div>
+		</div>
+		
+		<div class="row m-t-sm gray-bg" style="display:none">
+		
+			<a class="btn btn-xs btn-white pull-right m-sm"
+					data-tooltip="tooltip" data-placement="top" title="See all">89+</a>
+					
+			<div class="m-t-sm m-b-xs m-l-sm text-uppercase small text-muted" style="">Who knows Satish?</div>
+			
+			
+
+			<div class="m-l-xs m-b-sm pull-left text-center">
+			
+				<a class="m-r-sm m-l-sm" style="display:inline-block">
+					<img alt="image" class="img-circle img-responsive" src="../img/a1.jpg"
+						data-tooltip="tooltip" data-placement="top" title="Chris Overtrunk" style="width:50px;margin: 0 auto;">
+				</a>
+				
+				<a class="m-r-sm m-l-sm" style="display:inline-block">
+					<img alt="image" class="img-circle img-responsive" src="../img/a5.jpg"
+						data-tooltip="tooltip" data-placement="top" title="Xia Maar" style="width:50px;margin: 0 auto;">
+				</a>
+				
+				<a class="m-r-sm m-l-sm" style="display:inline-block">
+					<img alt="image" class="img-circle img-responsive" src="../img/a3.jpg"
+						data-tooltip="tooltip" data-placement="top" title="Virginia Madsen" style="width:50px;margin: 0 auto;">
+				</a>
+				
+				<a class="m-r-sm m-l-sm" style="display:inline-block">
+					<img alt="image" class="img-circle img-responsive" src="../img/a4.jpg"
+						data-tooltip="tooltip" data-placement="top" title="James Murray" style="width:50px;margin: 0 auto;">
+				</a>
+
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="container ">
+		<div class="row ce-footer" >
+			<a class="btn btn-link btn-gray btn-xs"><small>PRIVACY</small></a>
+			<a class="btn btn-link btn-gray btn-xs"><small>ACCEPTABLE USE</small></a>
+			<a class="btn btn-link btn-gray btn-xs"><small>TERMS</small></a>
+			<a><img class="ce-footer-logo pull-right m-r m-t-xs" src="../img/logo-only-letters-inverse.png" width="15%"></img></a>
+		</div>
+	</div>
+
+	<!-- Mainly scripts -->
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	<!-- <script src="../js/plugins/pnotify/pnotify.core.js"></script> -->
+	<!-- <script src="../js/plugins/pnotify/pnotify.buttons.js"></script> -->
+
+    <script>
+        $(document).ready(function() {
+		
+			// activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+		
+			// select when hover to copy to clipboard
+			$('.copy').hover(function(){
+				//console.log($(this).nextAll('.select'));
+				$(this).nextAll('.select').show();
+				$(this).nextAll('.select').select();
+			}, function(){});
+			
+			// search bar animations
+			$('#top-search').focus(searchIn);
+			$('#top-search').blur(searchOut);
+			
+			function searchIn(){
+			
+				//$('.ce-bar').slideToggle('fast');
+				
+				$( '.row:not(.search,.ce-bar,.ce-footer)' ).fadeOut('fast');
+			};
+			
+			function searchOut(){
+				
+				//$('.ce-bar').slideToggle('fast');
+				
+				$('.row:not(.search,.ce-bar)').fadeIn('fast');
+				
+			};
+			
+			
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
