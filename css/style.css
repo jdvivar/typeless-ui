@@ -276,9 +276,18 @@ div.divider {
 	position:absolute;
 	width:300px;
 	right: 150px;
-	top: 25px;
-	border: 1px solid #3498db;
+	top: 15px;
+	border: 2px solid white;
 	border-radius: 3px;
+	font-size: 12px;
+	background-color:rgba(52,152,219,.25);
+	outline: 1px solid rgba(52,152,219,.25);
+}
+
+.click-share-notice .close{
+	position: relative;
+	top: -15px;
+	right: -10px;
 }
 
 @media (max-width: 990px) {
@@ -1052,6 +1061,72 @@ mark {
 	color:white;
 }
 
+.text-600 {
+	font-weight: 600;
+}
+
+.text-700 {
+	font-weight: 700;
+}
+
+.table-hide-actions tbody tr:hover a.btn {
+	visibility: inherit;
+}
+
+.table-hide-actions tbody tr a.btn {
+	visibility: hidden;
+}
+
+.team-notification {
+	padding: 10px 10px;
+	font-size: 12px;
+	/* font-weight: 600; */
+	border: 1px solid #dddddd;
+	border-top: none;
+}
+
+.team-notification .close-notification {
+	color: #7f8c8d;
+}
+
+.team-notification .close-notification:hover {
+	color: black;
+}
+
+.team-select{
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+	padding: 5px 5px;
+}
+
+.team-select option {
+	
+}
+
+.team-select option.all {
+	color: black;
+}
+
+.team-select option.uninvited {
+	color: rgba(127,140,141,1);
+	background-color: white;
+}
+
+.team-select option.sharing {
+	color: rgba(26,188,156,1);
+	background-color: rgba(26,188,156,.2);
+}
+
+.team-select option.pending {
+	color: rgba(241,196,15,1);
+	background-color: rgba(241,196,15,.2);
+}
+
+.team-select option.error {
+	color: rgba(231,76,60,1);
+	background-color: rgba(231,76,60,.2);
+}
 
 /* STUFF ENDS */
 
@@ -3303,7 +3378,7 @@ body.body-small .footer.fixed {
 }
 .nav-tabs > li > a {
   color: black;
-  font-weight: 200;
+  font-weight: 600;
   font-size: 14px;
   padding: 10px 20px 10px 20px;
   border-bottom: #bdc3c7;
