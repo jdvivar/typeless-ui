@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Team | Typeless.</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows-1">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+
+	<div id="notify-wrapper">
+		<span class="" style="display:none;right: 15px;top: 82px;position: absolute;" id="timeout-alert">
+			<div class="alert alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<span id="alert-text"></span><a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
+			</div>
+		</span>
+	</div>
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+		<!-- loaded dinamically -->
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" >
+        
+        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">	
+
+			<div class="row no-margins" id="alerts-row">
+
+			</div>
+			
+			<div class="row wrapper white-bg page-heading">
+            	<span id="tools" style="">
+					
+				</span>
+            </div>
+
+			<div class="wrapper wrapper-content animated fadeIn" >
+					
+				<div class="row">
+					<div class="row m-l">
+						<div class="col-md-6 no-padding">
+							<!-- <img alt="image" class="img-circle m pull-left" src="img/balderton.png" style="height:72px"> -->
+							<!-- <span class="sharing-title">My team</span>&nbsp;&nbsp;&nbsp;&nbsp; -->
+							<!-- <span class="badge ">2</span> members&nbsp;&nbsp;&nbsp;&nbsp; -->
+							<!-- <span class="badge ">6,893</span> contacts -->
+							<a class="btn btn-invisible text-700 text-info"><small><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD MEMBERS</small></a>
+							<a class="btn btn-invisible text-700 text-info" data-tooltip="tooltip" data-placement="right" title="ADMIN"><small><i class="fa fa-share-alt"></i>&nbsp;&nbsp;SHARE TEAM CONTACTS <span class="badge badge-info">5,905</span></small> </a>
+							<!-- <p class="m-t">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet.
+							Sent and received invitations to share contact books can be managed in this page.</p> -->
+						</div>
+						
+					</div>
+					<div class="m-l m-r m-t">
+									
+						
+							<ul class="nav nav-tabs">
+								<li class="active"><a class="text-info" data-toggle="tab" href="#tab-who">Team Members <span class="badge badge-info">5</span></a></li>
+								<li class=""><a class="text-success" data-toggle="tab" href="#tab-what">What I'm sharing <span class="badge badge-success">1,408</span></a></li>
+								<li class=""><a class="text-warning" data-toggle="tab" href="#tab-pending" data-tooltip="tooltip" data-placement="right" title="ADMIN">Pending requests <span class="badge badge-warning" >4</span></a></li>
+								<li class=""><a class="text-gray" data-toggle="tab" href="#tab-settings" data-tooltip="tooltip" data-placement="right" title="ADMIN">Settings</a></li>
+							</ul>
+							
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab-who">
+									<table class="table table-hover table-hide-actions">
+										<thead>
+											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+										
+												<td class="" style="width:3%"></td>
+												<td class="col-md-3"><a class="text-gray">Name & e-mail <i class="fa fa-sort-down"></i></a></td>
+												<td class="col-md-2"><a class="text-gray">Contacts <i class="fa fa-sort"></i></a></td>
+												<td class="col-md-1">
+													<a class="btn btn-sm btn-invisible text-700 text-success show-uninvited" data-tooltip="tooltip" data-placement="right" title="If filter is UNINVITED" style="display:none"><small>INVITE ALL UNINVITED</small></a>
+													<a class="btn btn-sm btn-invisible text-700 text-info show-pending" data-tooltip="tooltip" data-placement="right" title="If filter is PENDING" style="display:none"><small>RE-SEND INVITATION TO ALL PENDING</small></a>
+												</td>
+												<td class="col-md-2 text-right"><select class="team-select">
+																						  <option class="all" value="all">All</option>
+																						  <option class="uninvited" value="uninvited">Uninvited</option>
+																						  <option class="pending" value="pending">Pending</option>
+																						  <option class="sharing" value="sharing">Sharing</option>
+																						  <option class="error" value="error">Error</option>
+																						  <option class="error" value="signed-off">Signed off</option>
+																						</select></td>
+												
+											</tr>
+										</thead>
+										<tbody>
+											<div class="bg-warning team-notification">
+												This is a non-dismissable warning notification. <a class="underline text-info text-700">This is an action link</a>.											
+											</div>
+											<div class="bg-info team-notification" >
+												This is a dismissable info notification. All notifications are mutually exclusive. <a class="pull-right close-notification"><i class="fa fa-times"></i></a>										
+											</div>
+											
+											<tr class="va-middle show-uninvited">
+												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
+												<td class="">Africa Bravo<br><span class="small text-gray">abravo@balderton.com</span></td>
+												<td class=""></td>
+												<td class="">
+													<a class="btn btn btn-invisible text-success text-700"><small>INVITE</small></a>
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-invisible">UNINVITED</span></td>
+											</tr>
+											<tr class="va-middle show-pending">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
+												<td class="">Brye Andersen<br><span class=" small text-gray">aandersen@balderton.com</span></td>
+												<td class=""></td>
+												<td class="">
+																						
+													<a class="btn btn btn-invisible text-info text-700"><small>RE-SEND INVITATION</small></a>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light">PENDING</span><br>Sent 3 days ago</td>
+											</tr>
+											<tr class="va-middle show-sharing">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a6.jpg" style="width:38px;height:38px"></td>
+												<td class="">Karen Pryce<br><span class="small text-gray underline">karen@balderton.com</span></td>
+												<td class=""><a class="underline text-info">2,269</a></td>
+												<td class="">
+																						
+									
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-success ">SHARING</span><br>Started 6h ago</td>
+											</tr>
+											
+											<tr class="va-middle show-signed-off show-sharing">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a15.jpg" style="width:38px;height:38px"></td>
+												<td class="">Ramon Prieto<br><span class=" small text-gray">rprieto@balderton.com</span></td>
+												<td class=""><a class="underline text-info">4,623</a></td>
+												<td class="">
+																						
+									
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-danger ">SIGNED OFF <i class="fa fa-info-circle" data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily."></i></span> <span class="label label-success ">SHARING</span><br>Started 6h ago</td>
+											</tr>
+											<tr class="va-middle show-error">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a19.jpg" style="width:38px;height:38px"></td>
+												<td class="">Tim Bay<br><span class=" small text-gray">tim@balderton.com</span></td>
+												<td class=""></td>
+												<td class="">
+													<a class="btn btn btn-invisible text-gray text-700"><small>SEND MESSAGE</small></a>
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-danger ">ERROR</span><br>Started 6h ago</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								
+								</div>
+								<div class="tab-pane" id="tab-what">
+									<table class="table">
+										<thead>
+											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+										
+												<td class="" style="width:3%"> <a class="btn btn-xs btn-invisible text-info" data-tooltip="tooltip" data-placement="bottom" title="Share team members' contacts with any Typeless user."><i class="fa fa-share-alt"></i>SHARE TEAM</a> </td>
+												<td class="col-md-3">NAME & E-MAIL</td>
+												<td class="col-md-2">TEAM SHARED CONTACTS</td>
+												<td class="col-md-1"></td>
+												<td class="col-md-2 text-right">STATUS</td>
+												
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="va-middle">
+												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
+												<td class="">Virginia Bravo<br><span class="small text-gray">virginia@balderton.com</span></td>
+												<td class="">6,893</td>
+												<td class="">
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
+														</ul>
+													</div>
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-success">LIVE</span><br>Accepted just now</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
+												<td class="">Petra Andersen<br><span class="small text-gray">petra@balderton.com</span></td>
+												<td class="">6,893</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-trash fa-fw "></i> REMOVE</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-danger">STOPPED</span><br>Stopped 3 days ago</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a1.jpg" style="width:38px;height:38px"></td>
+												<td class="">Harry Manion<br><span class="small text-gray">h.manion@briefcase.com</span></td>
+												<td class="">6,893</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 6 days ago</td>
+											</tr>
+											<tr class="va-middle">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a4.jpg" style="width:38px;height:38px"></td>
+												<td class="">Peter Francis<br><span class="small text-gray">p.francis@balderton.com</span></td>
+												<td class="">4,624</td>
+												<td class="">
+																						
+													<div class="btn-group">
+														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
+															<small>ACTIONS</small> <span class="caret"></span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
+															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
+														</ul>
+													</div>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 1 week ago</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+								<div class="tab-pane" id="tab-pending">
+								</div>
+								<div class="tab-pane" id="tab-settings">
+								</div>
+							</div>
+						
+							
+                     
+						
+					</div>
+					
+					
+				</div>
+			</div>
+			
+			<div class="footer fixed_full custom-footer" id="footer">
+				
+				<!-- loaded dinamically -->
+
+			</div>
+
+		</div>	
+		
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+	
+	<!-- Flot -->
+    <!-- <script src="js/plugins/flot/jquery.flot.js"></script> -->
+    <!-- <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script> -->
+    <!-- <script src="js/plugins/flot/jquery.flot.resize.js"></script> -->
+	
+	<!-- EayPIE -->
+    <!-- <script src="js/plugins/easypiechart/jquery.easypiechart.js"></script> -->
+
+
+
+    <script>
+        $(document).ready(function() {
+		
+			// loading of components and callbacks		
+			$( "#footer" ).load( "components.html #footer" );
+			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
+			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+						
+						
+			// callback after loading navbar-top
+			function afterLoadingNavbarTop(){
+				/* Placeholder for search bar. Put here for future customisation,
+				   always opt in for the javascript code if available and reasonably human readable */			
+				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
+				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */	
+			
+				// Activate tooltips
+				$("[data-tooltip='tooltip']").tooltip();
+				
+				// Share contacts button context-aware
+					
+					// Content of the button
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE CONTACTS</small></span>");
+				
+					// Target of the button
+					// I will take down this feature for this page, I'd rather show other modals
+					$( "#share-contacts-btn" ).attr('data-toggle','');
+					//$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-regular');
+				
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingNavbarSide(){
+				// MetsiMenu
+				// (We may need it in the future)
+				$('#side-menu').metisMenu();
+				
+				// inactive all options
+				$('#side-menu li').each(function(index, element) {
+                    $(this).removeClass('active');
+					//console.log($(this).text());
+                });
+				
+				// active actual option
+				//$('#connected-accounts-menu').addClass('active');
+				//$('#connected-accounts-menu ul').addClass('collapse in');
+				//$('#sharing-link').addClass('active');
+				
+				//$('#teams-link').addClass('active');
+				
+				$('#sharing-menu>ul').addClass('collapase in');
+				$('#sharing-menu').addClass('active');
+				$('#sharing-team-link').addClass('active');
+				
+			};
+			
+			function afterLoadingModal(){
+			
+				
+				
+			};
+			
+			function showAlert(text, alertColor){
+			
+				if (!alertColor)
+					$('#timeout-alert div.alert').addClass('alert-success');
+				else
+					$('#timeout-alert div.alert').addClass('alert-'+alertColor);
+			
+				$('#timeout-alert div.alert span#alert-text').text(text);
+				$('#timeout-alert').fadeIn('slow');
+				$('#timeout-alert').css('display','inline-block');
+				
+				
+				setTimeout(function(){
+					$('#timeout-alert').fadeOut('slow', function(){
+						$('#timeout-alert div.alert').removeClass('alert-success');
+						$('#timeout-alert div.alert').removeClass('alert-'+alertColor);
+					});
+				}, 5000);
+				
+			};
+			
+			// Function to close team notifications		
+			$('.close-notification').click(function(){
+				$(this).parents('.team-notification').slideUp(500);
+			});
+			
+			
+			// Function to show/hide elements (bulk action buttons, team members) according to STATE
+			$('select.team-select').change(function(){
+								
+				switch($(this).val()) {
+					case 'all':
+						$('.show-uninvited').show();
+						$('.show-pending').show();
+						$('.show-sharing').show();
+						$('.show-error').show();
+						$('.show-signed-off').show();
+						$('.btn.show-pending').hide();
+						$('.btn.show-uninvited').hide();
+						break;
+					case 'uninvited':
+						$('.show-pending').hide();
+						$('.show-sharing').hide();
+						$('.show-error').hide();
+						$('.show-signed-off').hide();
+						$('.show-uninvited').show();
+						break;
+					case 'pending':					
+						$('.show-uninvited').hide();
+						$('.show-sharing').hide();
+						$('.show-error').hide();
+						$('.show-signed-off').hide();
+						$('.show-pending').show();					
+						break;
+					case 'sharing':
+						$('.show-uninvited').hide();
+						$('.show-pending').hide();
+						$('.show-error').hide();
+						$('.show-signed-off').hide();
+						$('.show-sharing').show();
+						break;
+					case 'error':
+						$('.show-uninvited').hide();
+						$('.show-pending').hide();
+						$('.show-sharing').hide();
+						$('.show-signed-off').hide();
+						$('.show-error').show();
+						break;
+					case 'signed-off':
+						$('.show-uninvited').hide();
+						$('.show-pending').hide();
+						$('.show-sharing').hide();
+						$('.show-error').hide();
+						$('.show-signed-off').show();
+						break;
+					default:
+						null;
+				}
+				
+			});			
+
+        });
+    </script>
+	
+	
+</body>
+</html>
