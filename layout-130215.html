@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demo top bar | Typeless.</title>
+	
+	<link rel="icon" href="favicon.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+	
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+		<div class="navbar-header">
+		
+			<a href="./" class="m-r m-t-xs m-b-xs logo-corner">
+				<img src="img/logo-complete-1000p.png">
+			</a>
+
+			<div class="input-group m-b m-t top-search">
+				<span class="input-group-btn dropdown">
+					
+					<button type="button" class="btn dropdown-toggle" id="top-search-btn" data-toggle="dropdown""><i class="fa fa-search"></i></button>
+					
+				</span>
+				<input type="text" class="form-control" id="top-search">
+			</div>
+			
+		</div>
+		
+		<ul class="nav navbar-top-links navbar-right">
+
+			<li class="dropdown">
+				<a class="count-info active">
+					<i class="fa fa-bell"></i>  <span class="badge">6</span>
+				</a>
+				
+			</li>
+			
+			<li class="dropdown">
+				<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+					Donald Draper <i class="fa fa-sort-down"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-user">
+					<li class="m-t m-b m-l m-r">
+						<span style="font-size:14px">Donald Draper</span> <br>
+						<span>don@sterlingcooper.com</span>
+					</li>
+					<li class="m-t m-b m-l m-r">
+						<div id="rank-div">
+							<span class="text-gray">Your rank is 65%</span>
+							<div class="progress progress-striped progress-rank">
+								<div style="width: 65%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+									<span class="sr-only">65%</span>
+								</div>
+							</div>
+							<div id="improve-it-link" class="text-center" style="display:none">
+								<a href="notifications.html">
+									<strong>Improve it</strong>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="settings.html"><i class="fa fa-cog fa-fw m-r"></i>Settings</a>
+					</li>
+					<li>
+						<a href="#" ><i class="fa fa-download fa-fw m-r"></i>Get Typeless</a>
+					</li>
+					<li>
+						<a href="login.html" ><i class="fa fa-sign-out fa-fw m-r"></i>Log out</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<button class="btn btn-default m-t m-r pull-right btn-responsive" type="button" id="new-contact-btn" data-toggle="modal" data-tooltip="tooltip" data-placement="bottom" title="New contact"><i class="fa fa-plus fa-fw"></i><span class="m-l-sm"><small>NEW CONTACT</small></span></button>
+		<button class="btn m-t m-r pull-right btn-responsive" type="button" id="share-contacts-btn" data-toggle="modal" data-target="#share-contacts-btn" data-tooltip="tooltip" data-placement="bottom" title="Share contacts">  <!-- define data-target on page -->
+			<i class="fa fa-share-alt fa-fw"></i><span class="m-l-sm"></span> </small>SHARE CONTACT</small>
+		</button>
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<div class="panel-left">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Get Typeless
+					<div class="ibox-tools">
+						<a class="close-panel">
+							<i class="fa fa-times"></i>
+						</a>
+					</div>
+				</div>
+				<div class="panel-body">
+					<a href="#"><i class="fa fa-google fa-fw m-r-sm"></i> for GMail</a><br>
+					<a href="#"><span class="m-r-sm outlook-logo"></span><span> for Outlook</span><br>
+					<a href="#"><i class="fa fa-apple fa-fw m-r-sm"></i> for iOS</a><br>
+					<a href="#"><i class="fa fa-android fa-fw m-r-sm"></i> for Android</a><br>
+					</a>
+				</div>
+
+			</div>
+		</div>
+			
+		<div class="sidebar-collapse">
+			<ul class="nav" id="side-menu">
+				
+				<li id="contacts-link" class="active">
+					<a href="contacts.html"><span class="nav-label">Contacts<span class="badge pull-right">3,122</span></span></a>
+				</li>
+				
+				<!-- <li id="sharing-link">
+					<a href="sharing.html"><span class="nav-label">Sharing<span class="badge pull-right">789</span></span></a>
+				</li> -->
+				
+				<li id="sharing-menu">
+					<a href="#"><span class="nav-label">Sharing</span><span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level collapse" style="height: 0px;">
+						<li  >
+							<a href="sharing-friends.html" id="sharing-friends-link">
+								My friends<span class="badge pull-right">789</span>
+							</a>
+						</li>
+						<li>
+							<a href="sharing-team.html"  id="sharing-team-link" >
+								My team<span class="badge pull-right">5.905</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				
+				<li id="connected-accounts-link">
+					<a href="connected-accounts.html"><span class="nav-label">Connected accounts<span class="badge pull-right">6</span></span></a>
+				</li>
+				
+				<li id="teams-link" style="display:">
+					<a href="teams.html"><span class="nav-label">Team Balderton<span class="badge pull-right">6,893</span></span></a>
+				</li>
+				
+			</ul>
+
+		</div>
+	</nav>
+
+	<div id="wrapper" >
+        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">		
+			<div class="row wrapper white-bg page-heading">
+				<div class="m-t">
+					<h2>content</h2>
+				</div>
+			</div>
+			<div class="footer fixed_full custom-footer" id="footer">
+				<div class="">
+					<a class="underline">Help</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a class="underline">About</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a class="underline">Blog</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+					<a class="underline" href="">Privacy</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a  class="underline" href="">Acceptable Use</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a  class="underline" href="">Terms</a>
+					<div class="text-gray">©<strong> 2014 TRIGMATIC LTD</strong></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+			
+			//$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
+			//$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+
+			
+			//  after loading navbar-side
+			
+			// MetsiMenu
+			// (We may need it in the future)
+			$('#side-menu').metisMenu();
+			
+			// inactive all options
+			$('#side-menu li').each(function(index, element) {
+				$(this).removeClass('active');
+			});
+				
+			
+			
+			// after loading navbar-top
+			
+			
+			/* Placeholder for search bar. Put here for future customisation,
+			   always opt in for the javascript code if available and reasonably human readable */			
+			// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
+			document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */
+			
+			// Activate/deactivate button tooltips
+			$(function() {
+				
+				$(window).bind("load resize", function() {
+					if ($(this).width() < 1190) {
+						$("[data-tooltip='tooltip']").tooltip();
+					} else {
+						$("[data-tooltip='tooltip']").tooltip('destroy');
+						// this is destroying all tooltips in the page, although I'm only interested
+						// in destroying the ones that should be responsive...
+					}
+				})
+				
+			})
+				
+
+
+			
+			
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
