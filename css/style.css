@@ -1128,6 +1128,15 @@ mark {
 	background-color: rgba(231,76,60,.2);
 }
 
+.line-height-normal {
+	line-height: normal;
+}
+
+.team-popover + .popover .popover-content{
+	font-size: 13px;
+	font-weight: normal;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
