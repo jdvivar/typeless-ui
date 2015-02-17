@@ -62,225 +62,15 @@
 			<div class="wrapper wrapper-content animated fadeIn" >
 					
 				<div class="row">
-					<div class="row m-l">
-						<div class="col-md-6 no-padding">
-							<!-- <img alt="image" class="img-circle m pull-left" src="img/balderton.png" style="height:72px"> -->
-							<!-- <span class="sharing-title">My team</span>&nbsp;&nbsp;&nbsp;&nbsp; -->
-							<!-- <span class="badge ">2</span> members&nbsp;&nbsp;&nbsp;&nbsp; -->
-							<!-- <span class="badge ">6,893</span> contacts -->
-							<a class="btn btn-invisible text-700 text-info"><small><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD MEMBERS</small></a>
-							<a class="btn btn-invisible text-700 text-info" data-tooltip="tooltip" data-placement="right" title="ADMIN"><small><i class="fa fa-share-alt"></i>&nbsp;&nbsp;SHARE TEAM CONTACTS <span class="badge badge-info">5,905</span></small> </a>
-							<!-- <p class="m-t">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet.
-							Sent and received invitations to share contact books can be managed in this page.</p> -->
+					<div class="row m-l m-t-xl">
+						<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center" >
+							<h2 class="line-height-normal">To start using Typeless for Teams, you first need to connect your <span class="text-info team-popover" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="What does this mean?" data-html="true" data-content="You need to know what type of work/company/business e-mail you are using. At this moment we only support Google for Work accounts in Typeless for Teams, but very soon we will support Microsoft Exchange and Office 365 accounts, among others.<br><a class='text-info'>Contact us for more info</a>">work e-mail account.</span></h2>
+							<h3 class="line-height-normal m-t-lg">Click on 'Connect new account' in the 'Connected accounts' page:.</h3>
+							<a class="m-t btn btn-lg btn-invisible text-700 text-info">GO TO CONNECTED ACCOUNTS <i class="fa fa-long-arrow-right"></i></a>
 						</div>
 						
 					</div>
-					<div class="m-l m-r m-t">
-									
-						
-							<ul class="nav nav-tabs">
-								<li class="active"><a class="text-info" data-toggle="tab" href="#tab-who">Team Members <span class="badge badge-info">5</span></a></li>
-								<li class=""><a class="text-success" data-toggle="tab" href="#tab-what">What I'm sharing <span class="badge badge-success">1,408</span></a></li>
-								<li class=""><a class="text-warning" data-toggle="tab" href="#tab-pending" data-tooltip="tooltip" data-placement="right" title="ADMIN">Pending requests <span class="badge badge-warning" >4</span></a></li>
-								<li class=""><a class="text-gray" data-toggle="tab" href="#tab-settings" data-tooltip="tooltip" data-placement="right" title="ADMIN">Settings</a></li>
-							</ul>
-							
-							<div class="tab-content">
-								<div class="tab-pane active" id="tab-who">
-									<table class="table table-hover table-hide-actions">
-										<thead>
-											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
-										
-												<td class="" style="width:3%"></td>
-												<td class="col-md-3"><a class="text-gray">Name & e-mail <i class="fa fa-sort-down"></i></a></td>
-												<td class="col-md-2"><a class="text-gray">Contacts <i class="fa fa-sort"></i></a></td>
-												<td class="col-md-1">
-													<a class="btn btn-sm btn-invisible text-700 text-success show-uninvited" data-tooltip="tooltip" data-placement="right" title="If filter is UNINVITED" style="display:none"><small>INVITE ALL UNINVITED</small></a>
-													<a class="btn btn-sm btn-invisible text-700 text-info show-pending" data-tooltip="tooltip" data-placement="right" title="If filter is PENDING" style="display:none"><small>RE-SEND INVITATION TO ALL PENDING</small></a>
-												</td>
-												<td class="col-md-2 text-right"><select class="team-select">
-																						  <option class="all" value="all">All</option>
-																						  <option class="uninvited" value="uninvited">Uninvited</option>
-																						  <option class="pending" value="pending">Pending</option>
-																						  <option class="sharing" value="sharing">Sharing</option>
-																						  <option class="error" value="error">Error</option>
-																						  <option class="error" value="signed-off">Signed off</option>
-																						</select></td>
-												
-											</tr>
-										</thead>
-										<tbody>
-											<div class="bg-warning team-notification">
-												This is a non-dismissable warning notification. <a class="underline text-info text-700">This is an action link</a>.											
-											</div>
-											<div class="bg-info team-notification" >
-												This is a dismissable info notification. All notifications are mutually exclusive. <a class="pull-right close-notification"><i class="fa fa-times"></i></a>										
-											</div>
-											
-											<tr class="va-middle show-uninvited">
-												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
-												<td class="">Africa Bravo<br><span class="small text-gray">abravo@balderton.com</span></td>
-												<td class=""></td>
-												<td class="">
-													<a class="btn btn btn-invisible text-success text-700"><small>INVITE</small></a>
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-invisible">UNINVITED</span></td>
-											</tr>
-											<tr class="va-middle show-pending">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
-												<td class="">Brye Andersen<br><span class=" small text-gray">aandersen@balderton.com</span></td>
-												<td class=""></td>
-												<td class="">
-																						
-													<a class="btn btn btn-invisible text-info text-700"><small>RE-SEND INVITATION</small></a>
-													
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-warning-light">PENDING</span><br>Sent 3 days ago</td>
-											</tr>
-											<tr class="va-middle show-sharing">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a6.jpg" style="width:38px;height:38px"></td>
-												<td class="">Karen Pryce<br><span class="small text-gray underline">karen@balderton.com</span></td>
-												<td class=""><a class="underline text-info">2,269</a></td>
-												<td class="">
-																						
-									
-													
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-success ">SHARING</span><br>Started 6h ago</td>
-											</tr>
-											
-											<tr class="va-middle show-signed-off show-sharing">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a15.jpg" style="width:38px;height:38px"></td>
-												<td class="">Ramon Prieto<br><span class=" small text-gray">rprieto@balderton.com</span></td>
-												<td class=""><a class="underline text-info">4,623</a></td>
-												<td class="">
-																						
-									
-													
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger ">SIGNED OFF <i class="fa fa-info-circle" data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily."></i></span> <span class="label label-success ">SHARING</span><br>Started 6h ago</td>
-											</tr>
-											<tr class="va-middle show-error">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a19.jpg" style="width:38px;height:38px"></td>
-												<td class="">Tim Bay<br><span class=" small text-gray">tim@balderton.com</span></td>
-												<td class=""></td>
-												<td class="">
-													<a class="btn btn btn-invisible text-gray text-700"><small>SEND MESSAGE</small></a>
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger ">ERROR</span><br>Started 6h ago</td>
-											</tr>
-											
-										</tbody>
-									</table>
-								
-								</div>
-								<div class="tab-pane" id="tab-what">
-									<table class="table">
-										<thead>
-											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
-										
-												<td class="" style="width:3%"> <a class="btn btn-xs btn-invisible text-info" data-tooltip="tooltip" data-placement="bottom" title="Share team members' contacts with any Typeless user."><i class="fa fa-share-alt"></i>SHARE TEAM</a> </td>
-												<td class="col-md-3">NAME & E-MAIL</td>
-												<td class="col-md-2">TEAM SHARED CONTACTS</td>
-												<td class="col-md-1"></td>
-												<td class="col-md-2 text-right">STATUS</td>
-												
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="va-middle">
-												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
-												<td class="">Virginia Bravo<br><span class="small text-gray">virginia@balderton.com</span></td>
-												<td class="">6,893</td>
-												<td class="">
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
-														</ul>
-													</div>
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-success">LIVE</span><br>Accepted just now</td>
-											</tr>
-											<tr class="va-middle">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
-												<td class="">Petra Andersen<br><span class="small text-gray">petra@balderton.com</span></td>
-												<td class="">6,893</td>
-												<td class="">
-																						
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-trash fa-fw "></i> REMOVE</a></li>
-														</ul>
-													</div>
-													
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger">STOPPED</span><br>Stopped 3 days ago</td>
-											</tr>
-											<tr class="va-middle">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a1.jpg" style="width:38px;height:38px"></td>
-												<td class="">Harry Manion<br><span class="small text-gray">h.manion@briefcase.com</span></td>
-												<td class="">6,893</td>
-												<td class="">
-																						
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
-														</ul>
-													</div>
-													
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 6 days ago</td>
-											</tr>
-											<tr class="va-middle">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a4.jpg" style="width:38px;height:38px"></td>
-												<td class="">Peter Francis<br><span class="small text-gray">p.francis@balderton.com</span></td>
-												<td class="">4,624</td>
-												<td class="">
-																						
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
-														</ul>
-													</div>
-													
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 1 week ago</td>
-											</tr>
-											
-										</tbody>
-									</table>
-								</div>
-								<div class="tab-pane" id="tab-pending">
-								</div>
-								<div class="tab-pane" id="tab-settings">
-								</div>
-							</div>
-						
-							
-                     
-						
-					</div>
-					
-					
+
 				</div>
 			</div>
 			
@@ -333,6 +123,9 @@
 			
 				// Activate tooltips
 				$("[data-tooltip='tooltip']").tooltip();
+				
+				// Activate popovers
+				 $('[data-toggle="popover"]').popover()
 				
 				// Share contacts button context-aware
 					
