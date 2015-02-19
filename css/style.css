@@ -44,11 +44,12 @@ h5 {
 .logo-corner {
   float: left;
   width: 220px;
-  padding-left: 35px;
+  padding-left: 47px;
+  margin-top: 14px;
 }
 
 .logo-corner img {
-  height: 54px;
+  height: 38px;
   -moz-display:inline-table;
 }
 
@@ -1079,10 +1080,13 @@ mark {
 
 .team-notification {
 	padding: 10px 10px;
-	font-size: 12px;
+	font-size: 13px;
+	/* text-align: center; */
 	/* font-weight: 600; */
-	border: 1px solid #dddddd;
-	border-top: none;
+	/* border: 1px solid #dddddd; */
+	/* border-top: none; */
+	/* color: white; */
+	/* background-color: rgba(52,152,219,.8); */
 }
 
 .team-notification .close-notification {
@@ -1113,7 +1117,7 @@ mark {
 	background-color: white;
 }
 
-.team-select option.sharing {
+.team-select option.sharing,.team-select option.accepted {
 	color: rgba(26,188,156,1);
 	background-color: rgba(26,188,156,.2);
 }
@@ -1123,7 +1127,7 @@ mark {
 	background-color: rgba(241,196,15,.2);
 }
 
-.team-select option.error {
+.team-select option.error,.team-select option.declined {
 	color: rgba(231,76,60,1);
 	background-color: rgba(231,76,60,.2);
 }
@@ -1135,6 +1139,50 @@ mark {
 .team-popover + .popover .popover-content{
 	font-size: 13px;
 	font-weight: normal;
+}
+
+.team-select-account button{
+	min-width: 197px;
+	transition: none;
+}
+
+.team-select-account button .fa{
+	font-size: 60px;
+	margin: 15px;
+}
+
+.team-select-account .img-icon {
+	margin: 15px auto;
+	width: 60px;
+	height: 60px;
+	background-color: #3498db;
+	background-image: url(../img/microsoft-exchange-logo-100-inverted-white.png);
+	background-size: 60px;
+	background-position: center;
+}
+
+.team-select-account button:hover .img-icon, .team-select-account button.active .img-icon {
+	background-color: white;
+	background-image: url(../img/microsoft-exchange-logo-100-inverted-blue.png);
+}
+
+.bg-pattern {
+	background-image: url(/typeless/img/pattern-test.png);
+	background-position-y: -20px;
+	/* background-size: 300px; */
+}
+
+.white-circle {
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	height: 400px;
+	width: 400px;
+	text-align: center;
+	background-color: white;
+	border-radius: 200px;
+	padding: 90px 30px;
+	border: 1px solid #dddddd;
 }
 
 /* STUFF ENDS */
@@ -2233,32 +2281,32 @@ button.dim:active:before {
 }
 .label-success,
 .badge-success {
-  background-color: rgba(26,188,156,.2);
-  color:  rgba(26,188,156,1);
+  background-color: rgba(26,188,156,1);
+  color:  white;
   border-color:  rgba(26,188,156,1);
 }
 .label-warning,
 .badge-warning {
-  background-color: rgba(230,126,34,.2);
-  color: rgba(230,126,34,1);
+  background-color: rgba(230,126,34,1);
+  color: white;
   border-color: rgba(230,126,34,1);
 }
 .label-warning-light,
 .badge-warning-light {
-  background-color: rgba(241,196,15,.2);
-  color: rgba(241,196,15,1);
+  background-color: rgba(241,196,15,1);
+  color: white;
   border-color: rgba(241,196,15,1);
 }
 .label-danger,
 .badge-danger {
-  background-color: rgba(231,76,60,.2);
-  color:rgba(231,76,60,1);
+  background-color: rgba(231,76,60,1);
+  color:white;
   border-color:rgba(231,76,60,1);
 }
 .label-info,
 .badge-info {
-  background-color: rgba(52,152,219,.2);
-  color: rgba(52,152,219,1);
+  background-color: rgba(52,152,219,1);
+  color: white;
   border-color: rgba(52,152,219,1);
 }
 
@@ -3640,42 +3688,42 @@ table.table-mail tr td {
   background-color: #262626;
 }
 .panel-primary {
-  border-color: #1abc9c;
+  border-color: #7f8c8d;
 }
 .panel-primary > .panel-heading {
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  background-color: #7f8c8d;
+  border-color: #7f8c8d;
 }
 .panel-success {
-  border-color: #3498db;
+  border-color: #1abc9c;
 }
 .panel-success > .panel-heading {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: #ffffff;
+}
+.panel-info {
+  border-color: #3498db;
+}
+.panel-info > .panel-heading {
   background-color: #3498db;
   border-color: #3498db;
   color: #ffffff;
 }
-.panel-info {
-  border-color: #23c6c8;
-}
-.panel-info > .panel-heading {
-  background-color: #23c6c8;
-  border-color: #23c6c8;
-  color: #ffffff;
-}
 .panel-warning {
-  border-color: #f8ac59;
+  border-color: #e67e22;
 }
 .panel-warning > .panel-heading {
-  background-color: #f8ac59;
-  border-color: #f8ac59;
+  background-color: #e67e22;
+  border-color: #e67e22;
   color: #ffffff;
 }
 .panel-danger {
-  border-color: #ed5565;
+  border-color: #e74c3c;
 }
 .panel-danger > .panel-heading {
-  background-color: #ed5565;
-  border-color: #ed5565;
+  background-color: #e74c3c;
+  border-color: #e74c3c;
   color: #ffffff;
 }
 .progress-bar {
@@ -3711,6 +3759,7 @@ table.table-mail tr td {
 }
 .panel-title {
   font-size: inherit;
+  font-weight: 600;
 }
 .jumbotron {
   border-radius: 6px;
@@ -3746,6 +3795,14 @@ table.table-mail tr td {
 }
 .text-yellow {
   color: #f1c40f!important; /* flat yellow */
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black!important;
 }
 
 /* TEXT ALIGNS*/
