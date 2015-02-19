@@ -13,6 +13,11 @@
 
 	<link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+	
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/grey.css" rel="stylesheet">
+	<!-- <link href="css/plugins/iCheck/polaris.css" rel="stylesheet"> -->
+	
 
 </head>
 
@@ -79,15 +84,16 @@
 									
 						
 							<ul class="nav nav-tabs">
-								<li class="active"><a class="text-info" data-toggle="tab" href="#tab-who">Team Members <span class="badge badge-info">5</span></a></li>
+								<li class=""><a class="text-info" data-toggle="tab" href="#tab-who">Team Members <span class="badge badge-info">5</span></a></li>
 								<li class=""><a class="text-success" data-toggle="tab" href="#tab-what">What I'm sharing <span class="badge badge-success">1,408</span></a></li>
-								<li class=""><a class="text-warning" data-toggle="tab" href="#tab-pending" data-tooltip="tooltip" data-placement="right" title="ADMIN">Pending requests <span class="badge badge-warning" >4</span></a></li>
-								<li class=""><a class="text-gray" data-toggle="tab" href="#tab-settings" data-tooltip="tooltip" data-placement="right" title="ADMIN">Settings</a></li>
+								<li class="active"><a class="text-yellow" data-toggle="tab" href="#tab-pending" data-tooltip="tooltip" data-placement="right" title="ADMIN">Requests <span class="badge badge-warning-light" >2</span></a></li>
+								<li class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-user" data-tooltip="tooltip" data-placement="right" title="USER">Settings</a></li>
+								<li class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-admin" data-tooltip="tooltip" data-placement="right" title="ADMIN">Settings</a></li>
 							</ul>
 							
 							<div class="tab-content">
-								<div class="tab-pane active" id="tab-who">
-									<table class="table table-hover table-hide-actions">
+								<div class="tab-pane" id="tab-who">
+									<table class="table table-hover ">
 										<thead>
 											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
 										
@@ -98,7 +104,7 @@
 													<a class="btn btn-sm btn-invisible text-700 text-success show-uninvited" data-tooltip="tooltip" data-placement="right" title="If filter is UNINVITED" style="display:none"><small>INVITE ALL UNINVITED</small></a>
 													<a class="btn btn-sm btn-invisible text-700 text-info show-pending" data-tooltip="tooltip" data-placement="right" title="If filter is PENDING" style="display:none"><small>RE-SEND INVITATION TO ALL PENDING</small></a>
 												</td>
-												<td class="col-md-2 text-right"><select class="team-select">
+												<td class="col-md-2 text-right">Filter by&nbsp;&nbsp;<select class="team-select">
 																						  <option class="all" value="all">All</option>
 																						  <option class="uninvited" value="uninvited">Uninvited</option>
 																						  <option class="pending" value="pending">Pending</option>
@@ -110,11 +116,8 @@
 											</tr>
 										</thead>
 										<tbody>
-											<div class="bg-warning team-notification">
-												This is a non-dismissable warning notification. <a class="underline text-info text-700">This is an action link</a>.											
-											</div>
-											<div class="bg-info team-notification" >
-												This is a dismissable info notification. All notifications are mutually exclusive. <a class="pull-right close-notification"><i class="fa fa-times"></i></a>										
+											<div class="team-notification text-center">
+												This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase">Appoint yourself as admin now</a>									
 											</div>
 											
 											<tr class="va-middle show-uninvited">
@@ -175,103 +178,163 @@
 								
 								</div>
 								<div class="tab-pane" id="tab-what">
-									<table class="table">
+									<div class="team-notification bg-info text-left" >
+										You & Adam Parker are admins of this team. <a class="btn btn-xs btn-invisible text-600 text-black close-notification">CLOSE</a>										
+									</div>
+									<div class="col-md-6 col-lg-5 m-t-md">
+										<div class="panel panel-success">
+										  <div class="panel-heading">
+											<h3 class="panel-title">Which contacts would you like to share?</h3>
+										  </div>
+										  <div class="panel-body">
+											<div class="checkbox ">
+											  <label >
+												<input type="checkbox" value="" checked>
+												All contacts
+											  </label>
+											</div>
+											<div class="checkbox disabled">
+											  <label data-tooltip="tooltip" data-placement="bottom" title="This is the main account you are using with your team.">
+												<input type="checkbox" value="" disabled checked>
+												<i class="fa fa-fw fa-google"></i> Google <span class="text-gray">(don.draper@balderton.com)</span>
+											  </label>
+											</div>
+											<div class="checkbox ">
+											  <label >
+												<input type="checkbox" value="" checked>
+												<i class="fa fa-fw fa-facebook"></i> Facebook <span class="text-gray">(donald@gmail.com)</span>
+											  </label>
+											</div>
+											
+										  </div>
+										</div>
+									
+										<div class="panel panel-success">
+											<div class="panel-heading">
+												<h3 class="panel-title">What details would you like to share?</h3>
+											</div>
+											<div class="panel-body">
+												<div class="radio">
+												  <label>
+													<input type="radio" name="optionsRadios" id="optionsRadios1" value="full" checked>
+													All available contact details
+												  </label>
+												</div>
+												<div class="radio">
+												  <label>
+													<input type="radio" name="optionsRadios" id="optionsRadios2" value="limited">
+													Only names and job titles
+												  </label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane active" id="tab-pending">
+									<table class="table table-hover ">
 										<thead>
 											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
 										
-												<td class="" style="width:3%"> <a class="btn btn-xs btn-invisible text-info" data-tooltip="tooltip" data-placement="bottom" title="Share team members' contacts with any Typeless user."><i class="fa fa-share-alt"></i>SHARE TEAM</a> </td>
-												<td class="col-md-3">NAME & E-MAIL</td>
-												<td class="col-md-2">TEAM SHARED CONTACTS</td>
-												<td class="col-md-1"></td>
-												<td class="col-md-2 text-right">STATUS</td>
+												<td class="col-md-1 text-center">
+													<!-- <input type="checkbox" id="" value=""> -->
+												</td>
+												<td class="col-md-4">
+													Requester
+												</td>
+												<td class="col-md-2">
+													Requested from
+												</td>
+												<td class="col-md-3 text-center">
+													<a class="btn btn-sm btn-invisible text-700 text-success show-pending"><small>ACCEPT ALL</small></a>
+													<a class="btn btn-sm btn-invisible text-700 text-danger show-pending"><small>IGNORE ALL</small></a>
+													<a class="btn btn-sm btn-invisible text-700 show-accepted show-declined" style="display:none"><small>DELETE ALL</small></a>
+												</td>
+												<td class="col-md-2 text-right"><select class="team-select">
+																						  <option class="pending" value="pending">Pending</option>
+																						  <option class="accepted" value="accepted">Accepted</option>
+																						  <option class="declined" value="declined">Ignored</option>
+																						  <option class="all" value="all">All</option>
+																						</select></td>
 												
 											</tr>
 										</thead>
 										<tbody>
-											<tr class="va-middle">
-												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
-												<td class="">Virginia Bravo<br><span class="small text-gray">virginia@balderton.com</span></td>
-												<td class="">6,893</td>
-												<td class="">
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
-														</ul>
-													</div>
+											
+											<tr class="va-middle show-pending">
+												
+												<td class="text-center">
+													<input class="show-pending" type="checkbox" id="" value="">
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-success">LIVE</span><br>Accepted just now</td>
+												<td class="">Michael Smith is asking for Raul Viala's contact details.</td>
+												<td class=""><span class="text-gray"><small>Satish Jayakumar</small></span></td>
+												<td class="text-center">
+													<a class="btn btn btn-invisible text-success text-700"><small>ACCEPT</small></a>
+													<a class="btn btn btn-invisible text-danger text-700"><small>IGNORE</small></a>
+												</td>
+												<td class="text-gray text-right status small">
+													<span class="label label-warning-light">PENDING</span><br>Requested 2 min ago
+												</td>
+												
+												
 											</tr>
-											<tr class="va-middle">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
-												<td class="">Petra Andersen<br><span class="small text-gray">petra@balderton.com</span></td>
-												<td class="">6,893</td>
-												<td class="">
-																						
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-trash fa-fw "></i> REMOVE</a></li>
-														</ul>
-													</div>
-													
+											<tr class="va-middle show-pending">
+												
+												<td class="text-center">
+													<input class="show-pending" type="checkbox" id="" value="">
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger">STOPPED</span><br>Stopped 3 days ago</td>
+												<td class="">Alex Hardy is asking for Adrian Cadbury's contact details.</td>
+												<td class=""><span class="text-gray"><small>Aldo Zanon</small></span></td>
+												<td class="text-center">
+													<a class="btn btn btn-invisible text-success text-700"><small>ACCEPT</small></a>
+													<a class="btn btn btn-invisible text-danger text-700"><small>IGNORE</small></a>
+												</td>
+												<td class="text-gray text-right status small">
+													<span class="label label-warning-light">PENDING</span><br>Requested 1 h ago
+												</td>
+												
+												
 											</tr>
-											<tr class="va-middle">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a1.jpg" style="width:38px;height:38px"></td>
-												<td class="">Harry Manion<br><span class="small text-gray">h.manion@briefcase.com</span></td>
-												<td class="">6,893</td>
-												<td class="">
-																						
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
-														</ul>
-													</div>
-													
+											<tr class="va-middle show-accepted" style="display:none">
+												
+												<td class="text-center">
+													<input class="show-accepted" type="checkbox" id="" value="">
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 6 days ago</td>
+												<td class="">Alex Hardy is asking for Aaron Geezer's contact details.</td>
+												<td class=""><span class="text-gray"><small>Satish Jayakumar</small></span></td>
+												<td class="text-center">
+													<!-- <a class="btn btn btn-invisible text-success text-700"><small>ACCEPT</small></a> -->
+													<a class="btn btn btn-invisible text-700"><small>DELETE</small></a>
+												</td>
+												<td class="text-gray text-right status small">
+													<span class="label label-success">ACCEPTED</span><br>Accepted 3 h ago
+												</td>
+												
+												
 											</tr>
-											<tr class="va-middle">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a4.jpg" style="width:38px;height:38px"></td>
-												<td class="">Peter Francis<br><span class="small text-gray">p.francis@balderton.com</span></td>
-												<td class="">4,624</td>
-												<td class="">
-																						
-													<div class="btn-group">
-														<button data-toggle="dropdown" class="btn btn-link btn-link-no-hover text-primary dropdown-toggle">
-															<small>ACTIONS</small> <span class="caret"></span>
-														</button>
-														<ul class="dropdown-menu">
-															<li><a class="action accept" href="#"><i class="fa fa-pencil fa-fw "></i> EDIT</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-send fa-fw "></i> RE-SEND INVITATION</a></li>
-															<li><a class="action accept" href="#"><i class="fa fa-ban fa-fw "></i> STOP SHARING</a></li>
-														</ul>
-													</div>
-													
+											<tr class="va-middle show-declined" style="display:none">
+												
+												<td class="text-center">
+													<input class="show-declined" type="checkbox" id="" value="">
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br>Sent 1 week ago</td>
+												<td class="">Virginia Madsen is asking for Mark Storey's contact details.</td>
+												<td class=""><span class="text-gray"><small>Daniel Vivar</small></span></td>
+												<td class="text-center">
+													<!-- <a class="btn btn btn-invisible text-success text-700"><small>ACCEPT</small></a> -->
+													<a class="btn btn btn-invisible text-700"><small>DELETE</small></a>
+												</td>
+												<td class="text-gray text-right status small">
+													<span class="label label-danger">IGNORED</span><br>Declined 3 days ago
+												</td>
+												
+												
 											</tr>
 											
 										</tbody>
 									</table>
 								</div>
-								<div class="tab-pane" id="tab-pending">
+								<div class="tab-pane" id="tab-settings-user">
 								</div>
-								<div class="tab-pane" id="tab-settings">
+								<div class="tab-pane" id="tab-settings-admin">
 								</div>
 							</div>
 						
@@ -313,7 +376,8 @@
 	<!-- EayPIE -->
     <!-- <script src="js/plugins/easypiechart/jquery.easypiechart.js"></script> -->
 
-
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -414,14 +478,21 @@
 						$('.show-sharing').show();
 						$('.show-error').show();
 						$('.show-signed-off').show();
+						$('.show-accepted').show();
+						$('.show-declined').show();
 						$('.btn.show-pending').hide();
 						$('.btn.show-uninvited').hide();
+						$('.btn.show-accepted').hide();
+						$('.btn.show-declined').hide();
+						$('.table input').hide();
 						break;
 					case 'uninvited':
 						$('.show-pending').hide();
 						$('.show-sharing').hide();
 						$('.show-error').hide();
 						$('.show-signed-off').hide();
+						$('.show-accepted').hide();
+						$('.show-declined').hide();
 						$('.show-uninvited').show();
 						break;
 					case 'pending':					
@@ -429,6 +500,8 @@
 						$('.show-sharing').hide();
 						$('.show-error').hide();
 						$('.show-signed-off').hide();
+						$('.show-accepted').hide();
+						$('.show-declined').hide();
 						$('.show-pending').show();					
 						break;
 					case 'sharing':
@@ -436,6 +509,8 @@
 						$('.show-pending').hide();
 						$('.show-error').hide();
 						$('.show-signed-off').hide();
+						$('.show-accepted').hide();
+						$('.show-declined').hide();
 						$('.show-sharing').show();
 						break;
 					case 'error':
@@ -443,6 +518,8 @@
 						$('.show-pending').hide();
 						$('.show-sharing').hide();
 						$('.show-signed-off').hide();
+						$('.show-accepted').hide();
+						$('.show-declined').hide();
 						$('.show-error').show();
 						break;
 					case 'signed-off':
@@ -450,13 +527,53 @@
 						$('.show-pending').hide();
 						$('.show-sharing').hide();
 						$('.show-error').hide();
+						$('.show-accepted').hide();
+						$('.show-declined').hide();
 						$('.show-signed-off').show();
+						break;
+					case 'accepted':
+						$('.show-uninvited').hide();
+						$('.show-pending').hide();
+						$('.show-sharing').hide();
+						$('.show-error').hide();
+						$('.show-declined').hide();
+						$('.show-signed-off').hide();
+						$('.show-accepted').show();
+						break;
+					case 'declined':
+						$('.show-uninvited').hide();
+						$('.show-pending').hide();
+						$('.show-sharing').hide();
+						$('.show-error').hide();
+						$('.show-accepted').hide();
+						$('.show-signed-off').hide();
+						$('.show-declined').show();
 						break;
 					default:
 						null;
 				}
 				
-			});			
+			});	
+
+			<!-- functions to activate rows (checking checkbox or clicking in row) -->
+			
+			$('.table-hover tbody tr').click(function(e){
+				$(this).find('input').iCheck('toggle');
+			});
+			
+			$(".table-hover tbody tr input").on('ifToggled',function(e){
+				$(this).parents('tr').toggleClass('active');
+			});
+			
+			<!-- iCheck -->
+			
+			$('input').iCheck({
+				checkboxClass: 'icheckbox_square-grey',
+				//checkboxClass: 'icheckbox_polaris',
+				radioClass: 'iradio_square-grey',
+				//radioClass: 'iradio_polaris'
+				//increaseArea: '50%' // optional
+			});
 
         });
     </script>
