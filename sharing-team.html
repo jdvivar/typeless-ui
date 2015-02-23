@@ -15,7 +15,8 @@
     <link href="css/style.css" rel="stylesheet">
 	
 	<!-- iCheck -->
-	<link href="css/plugins/iCheck/grey.css" rel="stylesheet">
+	<link href="css/plugins/iCheck/blue.css" rel="stylesheet">
+	<!-- <link href="css/plugins/iCheck/grey.css" rel="stylesheet"> -->
 	<!-- <link href="css/plugins/iCheck/polaris.css" rel="stylesheet"> -->
 	
 
@@ -74,7 +75,7 @@
 							<!-- <span class="badge ">2</span> members&nbsp;&nbsp;&nbsp;&nbsp; -->
 							<!-- <span class="badge ">6,893</span> contacts -->
 							<a class="btn btn-invisible text-700 text-info"><small><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD MEMBERS</small></a>
-							<a class="btn btn-invisible text-700 text-info" data-tooltip="tooltip" data-placement="right" title="ADMIN"><small><i class="fa fa-share-alt"></i>&nbsp;&nbsp;SHARE TEAM CONTACTS <span class="badge badge-info">5,905</span></small> </a>
+							<a id="share-team-contacts-button" class="btn btn-invisible text-700 text-info"><small><i class="fa fa-share-alt"></i>&nbsp;&nbsp;SHARE TEAM CONTACTS <span class="badge badge-info">5,905</span></small> </a>
 							<!-- <p class="m-t">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet.
 							Sent and received invitations to share contact books can be managed in this page.</p> -->
 						</div>
@@ -84,23 +85,23 @@
 									
 						
 							<ul class="nav nav-tabs">
-								<li class=""><a class="text-info" data-toggle="tab" href="#tab-who">Team Members <span class="badge badge-info">5</span></a></li>
-								<li class=""><a class="text-success" data-toggle="tab" href="#tab-what">What I'm sharing <span class="badge badge-success">1,408</span></a></li>
-								<li class="active"><a class="text-yellow" data-toggle="tab" href="#tab-pending" data-tooltip="tooltip" data-placement="right" title="ADMIN">Requests <span class="badge badge-warning-light" >2</span></a></li>
-								<li class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-user" data-tooltip="tooltip" data-placement="right" title="USER">Settings</a></li>
-								<li class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-admin" data-tooltip="tooltip" data-placement="right" title="ADMIN">Settings</a></li>
+								<li id="li-tab-who" class=""><a class="text-info" data-toggle="tab" href="#tab-who">Team Members <span class="badge badge-info how-many">5</span></a></li>
+								<li id="li-tab-what" class=""><a class="text-success" data-toggle="tab" href="#tab-what">What I'm sharing <span class="badge badge-success">2,269</span></a></li>
+								<li id="li-tab-pending" class=""><a class="text-yellow" data-toggle="tab" href="#tab-pending" data-tooltip="tooltip" data-placement="right" title="ADMIN">Requests <span class="badge badge-warning-light" >2</span></a></li>
+								<li id="li-tab-settings-user" class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-user" data-tooltip="tooltip" data-placement="right" title="USER">Settings</a></li>
+								<li id="li-tab-settings-admin" class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-admin" data-tooltip="tooltip" data-placement="right" title="ADMIN">Settings</a></li>
 							</ul>
 							
 							<div class="tab-content">
 								<div class="tab-pane" id="tab-who">
-									<table class="table table-hover ">
+									<table class="table">
 										<thead>
 											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
 										
 												<td class="" style="width:3%"></td>
-												<td class="col-md-3"><a class="text-gray">Name & e-mail <i class="fa fa-sort-down"></i></a></td>
-												<td class="col-md-2"><a class="text-gray">Contacts <i class="fa fa-sort"></i></a></td>
-												<td class="col-md-1">
+												<td class="col-md-2"><a class="text-gray">Name & e-mail <i class="fa fa-sort-down"></i></a></td>
+												<td class="col-md-1"><a class="text-gray">Contacts <i class="fa fa-sort"></i></a></td>
+												<td class="col-md-3">
 													<a class="btn btn-sm btn-invisible text-700 text-success show-uninvited" data-tooltip="tooltip" data-placement="right" title="If filter is UNINVITED" style="display:none"><small>INVITE ALL UNINVITED</small></a>
 													<a class="btn btn-sm btn-invisible text-700 text-info show-pending" data-tooltip="tooltip" data-placement="right" title="If filter is PENDING" style="display:none"><small>RE-SEND INVITATION TO ALL PENDING</small></a>
 												</td>
@@ -116,7 +117,7 @@
 											</tr>
 										</thead>
 										<tbody>
-											<div class="team-notification text-center">
+											<div class="team-notification text-center appoint-yourself" style="display:none">
 												This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase">Appoint yourself as admin now</a>									
 											</div>
 											
@@ -124,8 +125,9 @@
 												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
 												<td class="">Africa Bravo<br><span class="small text-gray">abravo@balderton.com</span></td>
 												<td class=""></td>
-												<td class="">
-													<a class="btn btn btn-invisible text-success text-700"><small>INVITE</small></a>
+												<td class="show-children-on-hover">
+													<a class="btn btn btn-invisible text-success text-700" ><small>INVITE</small></a>
+													<a class="btn btn btn-invisible text-success text-700 show-children-on-hover" style="display:none;" ><small>... ALL UNINVITED</small></a>
 												</td>
 												<td class="text-gray text-right status small"><span class="label label-invisible">UNINVITED</span></td>
 											</tr>
@@ -133,15 +135,16 @@
 												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
 												<td class="">Brye Andersen<br><span class=" small text-gray">aandersen@balderton.com</span></td>
 												<td class=""></td>
-												<td class="">
+												<td class="show-children-on-hover">
 																						
 													<a class="btn btn btn-invisible text-info text-700"><small>RE-SEND INVITATION</small></a>
+													<a class="btn btn btn-invisible text-info text-700 show-children-on-hover" style="display:none;" ><small>... TO ALL PENDING</small></a>
 													
 												</td>
 												<td class="text-gray text-right status small"><span class="label label-warning-light">PENDING</span><br>Sent 3 days ago</td>
 											</tr>
-											<tr class="va-middle show-sharing">
-												<td><img alt="image" class="img-circle m-l-sm" src="img/a6.jpg" style="width:38px;height:38px"></td>
+											<tr class="va-middle show-sharing" id="row-you">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a18.jpg" style="width:38px;height:38px"></td>
 												<td class="">Karen Pryce<br><span class="small text-gray underline">karen@balderton.com</span></td>
 												<td class=""><a class="underline text-info">2,269</a></td>
 												<td class="">
@@ -149,7 +152,7 @@
 									
 													
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-success ">SHARING</span><br>Started 6h ago</td>
+												<td class="text-gray text-right status small"><span class="label label-success ">SHARING</span><br><span class="when">Started 6h ago</span></td>
 											</tr>
 											
 											<tr class="va-middle show-signed-off show-sharing">
@@ -161,7 +164,7 @@
 									
 													
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger ">SIGNED OFF <i class="fa fa-info-circle" data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily."></i></span> <span class="label label-success ">SHARING</span><br>Started 6h ago</td>
+												<td class="text-gray text-right status small"><span class="label label-danger ">SIGNED OFF <i class="fa fa-info-circle" data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily."></i></span>&nbsp;<span class="label label-success ">SHARING</span><br>Started 6h ago</td>
 											</tr>
 											<tr class="va-middle show-error">
 												<td><img alt="image" class="img-circle m-l-sm" src="img/a19.jpg" style="width:38px;height:38px"></td>
@@ -178,8 +181,12 @@
 								
 								</div>
 								<div class="tab-pane" id="tab-what">
-									<div class="team-notification bg-info text-left" >
-										You & Adam Parker are admins of this team. <a class="btn btn-xs btn-invisible text-600 text-black close-notification">CLOSE</a>										
+									<div class="team-notification text-center appoint-yourself" style="display:none">
+										This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase">Appoint yourself as admin now</a>									
+									</div>
+									<div class="team-notification bg-info text-left" style="display:none">
+										<!-- You & Adam Parker are admins of this team. <a class="btn btn-xs btn-invisible text-600 text-info close-notification">CLOSE</a>										 -->
+										You & Adam Parker are admins of this team. <a class="pull-right close-notification"><i class="fa fa-times"></i></a>										
 									</div>
 									<div class="col-md-6 col-lg-5 m-t-md">
 										<div class="panel panel-success">
@@ -189,19 +196,20 @@
 										  <div class="panel-body">
 											<div class="checkbox ">
 											  <label >
-												<input type="checkbox" value="" checked>
+												<input type="checkbox" value="" >
 												All contacts
 											  </label>
 											</div>
 											<div class="checkbox disabled">
-											  <label data-tooltip="tooltip" data-placement="bottom" title="This is the main account you are using with your team.">
-												<input type="checkbox" value="" disabled checked>
-												<i class="fa fa-fw fa-google"></i> Google <span class="text-gray">(don.draper@balderton.com)</span>
-											  </label>
+												<a class="" id="help-account-notice" style="position:absolute;left:0"><i class="fa fa-question-circle text-info"></i></a>
+												<label id="account-notice" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;#account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Work e-mail accounts are automatically shared. If you want to stop sharing this account, <a class='underline text-info'>contact your team admin</a>.">
+													<input type="checkbox" value="" disabled checked>
+													<i class="fa fa-fw fa-google"></i> Google <span class="text-gray">(don.draper@balderton.com)</span>
+												</label>
 											</div>
 											<div class="checkbox ">
 											  <label >
-												<input type="checkbox" value="" checked>
+												<input type="checkbox" value="" >
 												<i class="fa fa-fw fa-facebook"></i> Facebook <span class="text-gray">(donald@gmail.com)</span>
 											  </label>
 											</div>
@@ -230,7 +238,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="tab-pane active" id="tab-pending">
+								<div class="tab-pane" id="tab-pending">
 									<table class="table table-hover ">
 										<thead>
 											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
@@ -245,11 +253,11 @@
 													Requested from
 												</td>
 												<td class="col-md-3 text-center">
-													<a class="btn btn-sm btn-invisible text-700 text-success show-pending"><small>ACCEPT ALL</small></a>
-													<a class="btn btn-sm btn-invisible text-700 text-danger show-pending"><small>IGNORE ALL</small></a>
+													<a class="btn btn-sm btn-invisible text-700 text-success show-pending bulk"><small>ACCEPT <span class="how-many">ALL</span></small></a>
+													<a class="btn btn-sm btn-invisible text-700 text-danger show-pending bulk"><small>IGNORE <span class="how-many">ALL</span></small></a>
 													<a class="btn btn-sm btn-invisible text-700 show-accepted show-declined" style="display:none"><small>DELETE ALL</small></a>
 												</td>
-												<td class="col-md-2 text-right"><select class="team-select">
+												<td class="col-md-2 text-right">Filter by&nbsp;&nbsp;<select class="team-select">
 																						  <option class="pending" value="pending">Pending</option>
 																						  <option class="accepted" value="accepted">Accepted</option>
 																						  <option class="declined" value="declined">Ignored</option>
@@ -259,7 +267,14 @@
 											</tr>
 										</thead>
 										<tbody>
-											
+											<tr class="table-separator text-uppercase text-600 show-pending text-gray">
+												
+												<td></td>
+												<td>Today</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
 											<tr class="va-middle show-pending">
 												
 												<td class="text-center">
@@ -277,6 +292,14 @@
 												
 												
 											</tr>
+											<tr class="table-separator text-uppercase text-600 show-pending text-gray">
+												
+												<td></td>
+												<td>Last 7 days</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
 											<tr class="va-middle show-pending">
 												
 												<td class="text-center">
@@ -289,10 +312,18 @@
 													<a class="btn btn btn-invisible text-danger text-700"><small>IGNORE</small></a>
 												</td>
 												<td class="text-gray text-right status small">
-													<span class="label label-warning-light">PENDING</span><br>Requested 1 h ago
+													<span class="label label-warning-light">PENDING</span><br>Requested 3 days ago
 												</td>
 												
 												
+											</tr>
+											<tr class="table-separator text-uppercase text-600 show-accepted text-gray" style="display:none">
+												
+												<td></td>
+												<td>Last 30 days</td>
+												<td></td>
+												<td></td>
+												<td></td>
 											</tr>
 											<tr class="va-middle show-accepted" style="display:none">
 												
@@ -306,10 +337,18 @@
 													<a class="btn btn btn-invisible text-700"><small>DELETE</small></a>
 												</td>
 												<td class="text-gray text-right status small">
-													<span class="label label-success">ACCEPTED</span><br>Accepted 3 h ago
+													<span class="label label-success">ACCEPTED</span><br>Accepted 24 days ago
 												</td>
 												
 												
+											</tr>
+											<tr class="table-separator text-uppercase text-600 show-declined text-gray" style="display:none">
+												
+												<td></td>
+												<td>More than 30 days...</td>
+												<td></td>
+												<td></td>
+												<td></td>
 											</tr>
 											<tr class="va-middle show-declined" style="display:none">
 												
@@ -323,7 +362,7 @@
 													<a class="btn btn btn-invisible text-700"><small>DELETE</small></a>
 												</td>
 												<td class="text-gray text-right status small">
-													<span class="label label-danger">IGNORED</span><br>Declined 3 days ago
+													<span class="label label-danger">IGNORED</span><br>Declined 45 days ago
 												</td>
 												
 												
@@ -362,7 +401,7 @@
     <!-- Mainly scripts -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script> -->
 
     <!-- Custom and plugin javascript -->
     <!-- <script src="js/typeless.js"></script> -->
@@ -398,6 +437,9 @@
 				// Activate tooltips
 				$("[data-tooltip='tooltip']").tooltip();
 				
+				// Activate popovers
+				$('[data-toggle="popover"]').popover()
+				
 				// Share contacts button context-aware
 					
 					// Content of the button
@@ -410,11 +452,14 @@
 				
 			};
 			
+			
+			var myTeamHowMany;
+			
 			// callback after loading navbar-side
 			function afterLoadingNavbarSide(){
 				// MetsiMenu
 				// (We may need it in the future)
-				$('#side-menu').metisMenu();
+				//$('#side-menu').metisMenu();
 				
 				// inactive all options
 				$('#side-menu li').each(function(index, element) {
@@ -432,6 +477,8 @@
 				$('#sharing-menu>ul').addClass('collapase in');
 				$('#sharing-menu').addClass('active');
 				$('#sharing-team-link').addClass('active');
+				
+				$('#sharing-team-link span').text(myTeamHowMany);
 				
 			};
 			
@@ -484,7 +531,9 @@
 						$('.btn.show-uninvited').hide();
 						$('.btn.show-accepted').hide();
 						$('.btn.show-declined').hide();
-						$('.table input').hide();
+						$('.table tbody tr').addClass('non-select');
+						$('.table tbody input').iCheck('disable');
+						$('.table').removeClass('table-hover');
 						break;
 					case 'uninvited':
 						$('.show-pending').hide();
@@ -494,6 +543,9 @@
 						$('.show-accepted').hide();
 						$('.show-declined').hide();
 						$('.show-uninvited').show();
+						$('.table tbody tr').removeClass('non-select');
+						$('.table tbody input').iCheck('enable');
+						$('.table').addClass('table-hover');
 						break;
 					case 'pending':					
 						$('.show-uninvited').hide();
@@ -502,7 +554,10 @@
 						$('.show-signed-off').hide();
 						$('.show-accepted').hide();
 						$('.show-declined').hide();
-						$('.show-pending').show();					
+						$('.show-pending').show();
+						$('.table tbody tr').removeClass('non-select');
+						$('.table tbody input').iCheck('enable');
+						$('.table').addClass('table-hover');						
 						break;
 					case 'sharing':
 						$('.show-uninvited').hide();
@@ -512,6 +567,9 @@
 						$('.show-accepted').hide();
 						$('.show-declined').hide();
 						$('.show-sharing').show();
+						$('.table tbody tr').removeClass('non-select');
+						$('.table tbody input').iCheck('enable');
+						$('.table').addClass('table-hover');
 						break;
 					case 'error':
 						$('.show-uninvited').hide();
@@ -521,6 +579,9 @@
 						$('.show-accepted').hide();
 						$('.show-declined').hide();
 						$('.show-error').show();
+						$('.table tbody tr').removeClass('non-select');
+						$('.table tbody input').iCheck('enable');
+						$('.table').addClass('table-hover');
 						break;
 					case 'signed-off':
 						$('.show-uninvited').hide();
@@ -530,6 +591,9 @@
 						$('.show-accepted').hide();
 						$('.show-declined').hide();
 						$('.show-signed-off').show();
+						$('.table tbody tr').removeClass('non-select');
+						$('.table tbody input').iCheck('enable');
+						$('.table').addClass('table-hover');
 						break;
 					case 'accepted':
 						$('.show-uninvited').hide();
@@ -539,6 +603,9 @@
 						$('.show-declined').hide();
 						$('.show-signed-off').hide();
 						$('.show-accepted').show();
+						$('.table tbody tr').removeClass('non-select');
+						$('.table tbody input').iCheck('enable');
+						$('.table').addClass('table-hover');
 						break;
 					case 'declined':
 						$('.show-uninvited').hide();
@@ -548,6 +615,9 @@
 						$('.show-accepted').hide();
 						$('.show-signed-off').hide();
 						$('.show-declined').show();
+						$('.table tbody tr').removeClass('non-select');
+						$('.table tbody input').iCheck('enable');
+						$('.table').addClass('table-hover');
 						break;
 					default:
 						null;
@@ -555,25 +625,117 @@
 				
 			});	
 
-			<!-- functions to activate rows (checking checkbox or clicking in row) -->
+			<!-- functions to activate rows and control bulk actions (checking checkbox or clicking in row) -->
 			
 			$('.table-hover tbody tr').click(function(e){
-				$(this).find('input').iCheck('toggle');
+				if (!$(this).hasClass('non-select'))
+					$(this).find('input').iCheck('toggle');
 			});
 			
 			$(".table-hover tbody tr input").on('ifToggled',function(e){
 				$(this).parents('tr').toggleClass('active');
+				if ($(this).parent('div').hasClass('checked'))
+					bulkAction('less');
+				else
+					bulkAction('more');
 			});
+			
+			var bulk = 0;
+			
+			function bulkAction (action) {
+				if (action=='more')
+					bulk++;
+				else if (action=='less')
+					bulk--;
+				
+				console.log(bulk);
+				
+				changeBulkIcon(bulk);
+			}
+						
+			function changeBulkIcon(n) {
+			
+				var howMany;
+			
+				if (n==0)
+					howMany = 'ALL'
+				else
+					howMany = n.toString() + ' SELECTED';
+				
+				$.each($('.bulk .how-many'), function(i,e){
+					$(e).text(howMany);
+				});
+			}
 			
 			<!-- iCheck -->
 			
 			$('input').iCheck({
-				checkboxClass: 'icheckbox_square-grey',
+				checkboxClass: 'icheckbox_square-blue',
+				//checkboxClass: 'icheckbox_square-grey',
 				//checkboxClass: 'icheckbox_polaris',
-				radioClass: 'iradio_square-grey',
+				radioClass: 'iradio_square-blue',
 				//radioClass: 'iradio_polaris'
-				//increaseArea: '50%' // optional
+				increaseArea: '20%' // optional
 			});
+			
+			<!-- show account notice popover on hover -->
+			$('a#help-account-notice').hover(function(){
+				$('#account-notice').popover('show');
+			},function(){
+				//$(this).popover('hide');
+			});
+			
+			<!-- show children elements on hover -->
+			$('.show-children-on-hover').hover(function(){
+				$(this).children().show();
+			},function(){
+				$(this).children('.show-children-on-hover').hide();
+			});
+			
+			
+			<!-- Manage state of the page as a url parameter -->
+			
+			var state = document.URL.split("?")[1];
+			
+			switch(state) {
+				case 'firstTime':
+					firstTime();
+					break;
+				default:
+					null;
+			}
+			
+			function firstTime(){
+			
+				// show team members tab as active
+				$('.nav.nav-tabs li#li-tab-who').addClass('active');
+				$('.tab-content .tab-pane#tab-who').addClass('active');
+				
+				// show only regular user elements (hide team sharing, settings and request tabs)
+				$('#share-team-contacts-button').hide();
+				$('.nav.nav-tabs li#li-tab-pending').hide();
+				$('.nav.nav-tabs li#li-tab-settings-user').hide();
+				$('.nav.nav-tabs li#li-tab-settings-admin').hide();
+				
+				// show only 1 member (YOU)
+				$('.nav.nav-tabs li#li-tab-who span.how-many').text('1');
+				$('#tab-who tbody tr:not(#row-you)').hide();
+				
+				// show that it has joint recently by showing a recent status
+				$('#tab-who tbody tr#row-you .status .when').text('Started 10s ago');
+				
+				// show appoint yourself notice in all tabs
+				$('#tab-who .appoint-yourself').slideDown(1000);
+				$('#tab-what .appoint-yourself').slideDown(1000);
+				
+				// show default values for what I'm sharing
+				// afterLoadingNavbarSide
+				// $('#sharing-team-link span').text('2,269');
+				myTeamHowMany = '2,269';
+				//$('#sharing-team-link span').text(myTeamHowMany);
+				
+				
+			}
 
         });
     </script>
