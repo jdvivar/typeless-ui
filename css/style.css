@@ -1083,8 +1083,10 @@ mark {
 	font-size: 13px;
 	/* text-align: center; */
 	/* font-weight: 600; */
-	/* border: 1px solid #dddddd; */
-	/* border-top: none; */
+	border: 1px solid #dddddd;
+	border-top: none;
+	border-left: none;
+	border-right: none;
 	/* color: white; */
 	/* background-color: rgba(52,152,219,.8); */
 }
@@ -1183,6 +1185,11 @@ mark {
 	border-radius: 200px;
 	padding: 90px 30px;
 	border: 1px solid #dddddd;
+}
+
+.table-separator {
+	background-color: whitesmoke;
+	font-size: 10px;
 }
 
 /* STUFF ENDS */
@@ -1454,10 +1461,10 @@ mark {
   float: right;
 }
 .fa.arrow:before {
-  content: "\f104";
+  content: "\f107";
 }
 .active > a > .fa.arrow:before {
-  content: "\f107";
+  content: "\f106";
 }
 .nav-second-level li,
 .nav-third-level li {
