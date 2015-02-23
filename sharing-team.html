@@ -171,7 +171,7 @@
 												<td class="">Tim Bay<br><span class=" small text-gray">tim@balderton.com</span></td>
 												<td class=""></td>
 												<td class="">
-													<a class="btn btn btn-invisible text-gray text-700"><small>SEND MESSAGE</small></a>
+													<a class="btn btn btn-invisible text-gray text-700 action-send-message"><small>SEND MESSAGE</small></a>
 												</td>
 												<td class="text-gray text-right status small"><span class="label label-danger ">ERROR</span><br>Started 6h ago</td>
 											</tr>
@@ -733,6 +733,9 @@
 				// $('#sharing-team-link span').text('2,269');
 				myTeamHowMany = '2,269';
 				//$('#sharing-team-link span').text(myTeamHowMany);
+				
+				// hide send-message action, which is only available to admins
+				$('.action-send-message').hide();
 				
 				
 			}
