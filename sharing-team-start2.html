@@ -47,7 +47,7 @@
 				
     <div id="wrapper" >
         
-        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">	
+        <div id="page-wrapper" class="white-bg bg-pattern top-navbar" style="margin-top:64px">	
 
 			<div class="row no-margins" id="alerts-row">
 
@@ -60,35 +60,22 @@
             </div>
 
 			<div class="wrapper wrapper-content animated fadeIn" >
+					
 				<div class="row">
 					<div class="row m-l m-t-xl">
-						<div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center" >
-							<!-- <h1 class="line-height-normal">Welcome to</h1> -->
-							<!-- <img src="./img/typeless-for-teams-test.png" width="300px"></img> -->
-							<h3 class="line-height-normal m-t-xl">Which account do you want to use with your team?<h3>
-							<!-- <h5>or <a class="text-info underline">add a new account now</a></h5> -->
-							
-							<div class="btn-group btn-group-lg m-t team-select-account" role="group" >
-								<button class="btn btn-info btn-outline">
-									<i class="fa fa-google"></i><br>
-									Google for Work<br>
-									<h4>james@balderton.com</h4>
-								</button>
-								<button class="btn btn-info btn-outline">
-									<!-- src="./img/microsoft-exchange-logo-100-inverted.png" -->
-									<div class="img-icon"></div>
-									Microsoft Exchange<br>
-									<h4>james.p@rendell.com</h4>
-								</button>
-								<button class="btn btn-info btn-outline" onclick="location.href='connected-accounts.html'">
-									<i class="fa fa-plus"></i><br>
-									Add a new account<br>
-									<h4>in "Connected accounts"</h4>
-									<!-- <h4>james@balderton.com</h4> -->
-								</button>
+						
+						<div class="white-circle">
+						
+							<h2 class="line-height-normal">Which account do you want to use with your team?</h2>
+							<h3 class="line-height-normal">or <a class="text-info underline">set up a new account</a></h3>
+							<div class="m-t">
+								<select class="form-control" id="team-account-selector">
+									<option value="none">Choose one...</option>
+									<option>karen@acme.org (Google)</option>
+									<option>karen.phillips@brenton.com (MS Exchange)</option>
+								</select>
 							</div>
-							<br>
-							<a class="m-t-xl btn btn-lg btn-invisible text-success text-700 start disabled" href="sharing-team.html?firstTime"> <img src="./img/logo-only-icon-original.png" width="25px" class="m-t-n-xs"></img>&nbsp;&nbsp;START</a>
+							<a class="m-t-lg btn btn-lg btn-invisible text-success text-700 start disabled" href="sharing-team.html?firstTime"> <img src="./img/logo-only-icon-original.png" width="25px" class="m-t-n-xs"></img>&nbsp;&nbsp;START</a>
 						</div>
 						
 					</div>
@@ -213,12 +200,12 @@
 				
 			};
 			
-			// function for selecting account
-			$('.team-select-account button').click(function(){
-				$('.team-select-account button').removeClass('active');
-				$(this).addClass('active');
-				$('.start').removeClass('disabled');
-			})
+			$('#team-account-selector').change(function(){
+				if ($(this).val()!='none')
+					$('a.start').removeClass('disabled');
+				else	
+					$('a.start').addClass('disabled');
+			});
 
         });
     </script>
