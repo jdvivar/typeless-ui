@@ -74,7 +74,7 @@
 							<!-- <span class="sharing-title">My team</span>&nbsp;&nbsp;&nbsp;&nbsp; -->
 							<!-- <span class="badge ">2</span> members&nbsp;&nbsp;&nbsp;&nbsp; -->
 							<!-- <span class="badge ">6,893</span> contacts -->
-							<a class="btn btn-invisible text-700 text-info"><small><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD MEMBERS</small></a>
+							<a class="btn btn-invisible text-700 text-info" data-toggle="modal" data-target="#team-add-members"><small><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD MEMBERS</small></a>
 							<a id="share-team-contacts-button" class="btn btn-invisible text-700 text-info"><small><i class="fa fa-share-alt"></i>&nbsp;&nbsp;SHARE TEAM CONTACTS <span class="badge badge-info">5,905</span></small> </a>
 							<!-- <p class="m-t">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet.
 							Sent and received invitations to share contact books can be managed in this page.</p> -->
@@ -86,14 +86,12 @@
 						
 							<ul class="nav nav-tabs">
 								<li id="li-tab-who" class=""><a class="text-info" data-toggle="tab" href="#tab-who">Team Members <span class="badge badge-info how-many">5</span></a></li>
-								<li id="li-tab-what" class=""><a class="text-success" data-toggle="tab" href="#tab-what">What I'm sharing <span class="badge badge-success">2,269</span></a></li>
-								<li id="li-tab-pending" class=""><a class="text-yellow" data-toggle="tab" href="#tab-pending" data-tooltip="tooltip" data-placement="right" title="ADMIN">Requests <span class="badge badge-warning-light" >2</span></a></li>
-								<li id="li-tab-settings-user" class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-user" data-tooltip="tooltip" data-placement="right" title="USER">Settings</a></li>
-								<li id="li-tab-settings-admin" class=""><a class="text-gray" data-toggle="tab" href="#tab-settings-admin" data-tooltip="tooltip" data-placement="right" title="ADMIN">Settings</a></li>
+								<li id="li-tab-requests" class=""><a class="text-yellow" data-toggle="tab" href="#tab-requests" >Requests <span class="badge badge-warning-light">0</span></a></li>
+								<li id="li-tab-settings" class=""><a class="text-success" data-toggle="tab" href="#tab-settings" >Settings</a></li>
 							</ul>
 							
 							<div class="tab-content">
-								<div class="tab-pane" id="tab-who">
+								<div class="tab-pane fade in" id="tab-who">
 									<table class="table">
 										<thead>
 											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
@@ -119,6 +117,9 @@
 										<tbody>
 											<div class="team-notification text-center appoint-yourself" style="display:none">
 												This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase">Appoint yourself as admin now</a>									
+											</div>
+											<div class="team-notification text-center appointed-yourself" style="display:none">
+												You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase">Appoint another admin now</a>									
 											</div>
 											
 											<tr class="va-middle show-uninvited">
@@ -180,65 +181,11 @@
 									</table>
 								
 								</div>
-								<div class="tab-pane" id="tab-what">
-									<div class="team-notification text-center appoint-yourself" style="display:none">
-										This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase">Appoint yourself as admin now</a>									
+								
+								<div class="tab-pane fade" id="tab-requests">
+									<div class="team-notification text-center appointed-yourself">
+										You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase">Appoint another admin now</a>									
 									</div>
-									<div class="team-notification bg-info text-left" style="display:none">
-										<!-- You & Adam Parker are admins of this team. <a class="btn btn-xs btn-invisible text-600 text-info close-notification">CLOSE</a>										 -->
-										You & Adam Parker are admins of this team. <a class="pull-right close-notification"><i class="fa fa-times"></i></a>										
-									</div>
-									<div class="col-md-6 col-lg-5 m-t-md">
-										<div class="panel panel-success">
-										  <div class="panel-heading">
-											<h3 class="panel-title">Which contacts would you like to share?</h3>
-										  </div>
-										  <div class="panel-body">
-											<div class="checkbox ">
-											  <label >
-												<input type="checkbox" value="" >
-												All contacts
-											  </label>
-											</div>
-											<div class="checkbox disabled">
-												<a class="" id="help-account-notice" style="position:absolute;left:0"><i class="fa fa-question-circle text-info"></i></a>
-												<label id="account-notice" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;#account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Work e-mail accounts are automatically shared. If you want to stop sharing this account, <a class='underline text-info'>contact your team admin</a>.">
-													<input type="checkbox" value="" disabled checked>
-													<i class="fa fa-fw fa-google"></i> Google <span class="text-gray">(don.draper@balderton.com)</span>
-												</label>
-											</div>
-											<div class="checkbox ">
-											  <label >
-												<input type="checkbox" value="" >
-												<i class="fa fa-fw fa-facebook"></i> Facebook <span class="text-gray">(donald@gmail.com)</span>
-											  </label>
-											</div>
-											
-										  </div>
-										</div>
-									
-										<div class="panel panel-success">
-											<div class="panel-heading">
-												<h3 class="panel-title">What details would you like to share?</h3>
-											</div>
-											<div class="panel-body">
-												<div class="radio">
-												  <label>
-													<input type="radio" name="optionsRadios" id="optionsRadios1" value="full" checked>
-													All available contact details
-												  </label>
-												</div>
-												<div class="radio">
-												  <label>
-													<input type="radio" name="optionsRadios" id="optionsRadios2" value="limited">
-													Only names and job titles
-												  </label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane" id="tab-pending">
 									<table class="table table-hover ">
 										<thead>
 											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
@@ -267,6 +214,13 @@
 											</tr>
 										</thead>
 										<tbody>
+											<tr id="no-requests">
+												<td></td>
+												<td>No requests</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
 											<tr class="table-separator text-uppercase text-600 show-pending text-gray">
 												
 												<td></td>
@@ -371,10 +325,173 @@
 										</tbody>
 									</table>
 								</div>
-								<div class="tab-pane" id="tab-settings-user">
+								
+								<div class="tab-pane fade" id="tab-settings">
+									<div class="team-notification text-center appoint-yourself" style="display:none">
+										This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase action-appoint-yourself">Appoint yourself as admin now</a>									
+									</div>
+									<div class="team-notification text-center appointed-yourself" style="display:none">
+										You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase action-appoint-another">Appoint another admin now</a>									
+									</div>
+									<div class="row">
+										<div class="col-md-6 m-t-md">
+											<div class="panel panel-info">
+												<div class="panel-heading">
+													<span class="badge badge-white pull-right text-600">2,269 contacts</span>
+													<h3 class="panel-title">What I'm sharing with my team?</h3>
+												</div>
+												<div class="panel-body">
+													<div>Which contacts would you like to share?</div>
+													<div class="checkbox">
+													  
+														<input type="checkbox" value="" >
+														&nbsp;&nbsp;All contacts
+													  
+													</div>
+													<div class="checkbox disabled" id="account-notice" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;#account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Work e-mail accounts are automatically shared. If you want to stop sharing this account, <a class='underline text-info'>contact your team admin</a>.">
+														
+															<input type="checkbox" value="" disabled checked >
+															&nbsp;&nbsp;<i class="fa fa-fw fa-google"></i> Google <span class="text-gray">(don.draper@balderton.com)</span>
+															<a class="" id="help-account-notice" style=""><i class="fa fa-question-circle text-info"></i></a>
+														
+													</div>
+													<div class="checkbox">
+													  
+														<input type="checkbox" value="" >
+														&nbsp;&nbsp;<i class="fa fa-fw fa-facebook"></i> Facebook <span class="text-gray">(donald@gmail.com)</span>
+													  
+													</div>
+																						
+													<div class="m-t-md">What details would you like to share?</div>
+												
+													<div class="radio">
+													  
+														<input type="radio" name="optionsRadios" id="optionsRadios1" value="full" checked>
+														&nbsp;&nbsp;All available contact details
+													  
+													</div>
+													<div class="radio">
+													
+														<input type="radio" name="optionsRadios" id="optionsRadios2" value="limited">
+														&nbsp;&nbsp;Only names and job titles
+													
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 m-t-md">
+											<div class="panel panel-success" id="team-admin-list-first" >
+												<div class="panel-heading">
+													<span class="badge pull-right" >no admins</span>
+													<h3 class="panel-title">Who is managing my team?</h3>
+												</div>
+												<div class="panel-body text-center">
+													<!-- <div class="m-b">This team is running without administrators.</div> -->
+													<button class="btn btn-success text-700 action-appoint-yourself"><small>APPOINT YOURSELF AS ADMIN NOW</small></button>
+												</div>
+												
+											</div>
+											<div class="panel panel-success" id="team-admin-list-user" style="display:none">
+												<div class="panel-heading">
+													<span class="badge pull-right" >1 admin</span>
+													<h3 class="panel-title">Who is managing my team?</h3>
+												</div>
+												<div class="panel-body text-center">
+													
+													<button class="btn btn-success text-700 action-request-admin"><small>REQUEST YOURSELF AS ADMIN</small></button>
+												</div>
+												<table class="table">
+													<thead>
+														<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+															<th></th>
+															<th>Team admins</th>
+															<th></th>
+													  </tr>
+													</thead>
+													<tbody>
+													  <tr>
+														<th class="col-md-1"><img alt="image" class="img-circle" src="img/a15.jpg" style="width:38px;height:38px"></th>
+														<td class="col-md-5">Ramon Prieto<br><span class="small text-gray underline">r.prieto@balderton.com</span></td>
+														<td class="col-md-5 text-right">
+														</td>
+													  </tr>
+													
+													</tbody>
+												  </table>
+											</div>
+											<div class="panel panel-success" id="team-admin-list-admin" style="display:none">
+												<div class="panel-heading">
+													<span class="badge pull-right" >1 admin</span>
+													<h3 class="panel-title">Who is managing my team?</h3>
+												</div>
+												<div class="panel-body text-center">
+													
+													<button class="btn btn-success text-700 action-add-admin"><small>APPOINT A TEAM MEMBER AS ADMIN</small></button>
+												</div>
+												<table class="table">
+													<thead>
+														<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+															<th></th>
+															<th>Team admins</th>
+															<th></th>
+													  </tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th class="col-md-1"><img alt="image" class="img-circle" src="img/a18.jpg" style="width:38px;height:38px"></th>
+															<td class="col-md-5">Karen Pryce<br><span class="small text-gray underline">karen@balderton.com</span></td>
+															<td class="col-md-5 text-right">
+																<a class="btn btn btn-invisible text-gray text-700 action-remove-admin"><small>REMOVE ADMIN</small></a>
+															</td>
+														</tr>
+													
+														<tr>
+															<th class="col-md-1"><img alt="image" class="img-circle" src="img/a15.jpg" style="width:38px;height:38px"></th>
+															<td class="col-md-5">Ramon Prieto<br><span class="small text-gray underline">r.prieto@balderton.com</span></td>
+															<td class="col-md-5 text-right">
+																<a class="btn btn btn-invisible text-gray text-700 action-remove-admin"><small>REMOVE ADMIN</small></a>
+															</td>
+														</tr>
+													</tbody>
+												  </table>
+											</div>
+										</div>
+									</div>
+								
+									<div class="row">
+										<div class="col-md-6 m-t-md">
+											<div class="panel panel-default" id="team-settings-user">
+												<div class="panel-heading">
+													Other team settings
+												</div>
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-xs-6">
+															<div class="checkbox" >
+																<input type="checkbox" value="" > <small>Allow team members to share team contacts with people outside the company.</small>
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<a class="btn btn btn-invisible text-gray text-700 pull-right action-quit-team"><small>QUIT TEAM</small></a>
+															<a class="btn btn btn-invisible text-gray text-700 pull-right action-delete-team" style="display:none"><small>DELETE TEAM</small></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 m-t-md">
+											<div class="panel panel-default" id="team-billing">
+												<div class="panel-heading">
+													Billing and invoicing
+												</div>
+												<div class="panel-body">
+													{TO-DO}
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="tab-pane" id="tab-settings-admin">
-								</div>
+								
 							</div>
 						
 							
@@ -425,6 +542,7 @@
 			$( "#footer" ).load( "components.html #footer" );
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+			$( "#modal-windows-1" ).load("components.html #team-add-members", afterLoadingModal);
 						
 						
 			// callback after loading navbar-top
@@ -713,9 +831,9 @@
 				
 				// show only regular user elements (hide team sharing, settings and request tabs)
 				$('#share-team-contacts-button').hide();
-				$('.nav.nav-tabs li#li-tab-pending').hide();
-				$('.nav.nav-tabs li#li-tab-settings-user').hide();
-				$('.nav.nav-tabs li#li-tab-settings-admin').hide();
+				$('.nav.nav-tabs li#li-tab-requests').hide();
+				$('.nav.nav-tabs li#li-tab-what').hide();
+				
 				
 				// show only 1 member (YOU)
 				$('.nav.nav-tabs li#li-tab-who span.how-many').text('1');
@@ -725,8 +843,8 @@
 				$('#tab-who tbody tr#row-you .status .when').text('Started 10s ago');
 				
 				// show appoint yourself notice in all tabs
-				$('#tab-who .appoint-yourself').slideDown(1000);
-				$('#tab-what .appoint-yourself').slideDown(1000);
+				$('.appoint-yourself').slideDown(1000);
+				$('.appoint-yourself').slideDown(1000);
 				
 				// show default values for what I'm sharing
 				// afterLoadingNavbarSide
@@ -737,8 +855,36 @@
 				// hide send-message action, which is only available to admins
 				$('.action-send-message').hide();
 				
-				
 			}
+			
+			<!-- appoint yourself as administrator -->
+			$('.appoint-yourself a, .action-appoint-yourself').click(function(){
+				<!-- add admin label to yourself in team members -->
+				$('#row-you td.status').prepend("<span class='label label-info'>ADMIN</span> ");
+				
+				<!-- hide previous and show next notification: appoint another -->
+				$('.appoint-yourself').slideUp(1000);
+				$('.appointed-yourself').slideDown(1000);
+				
+				<!-- show request tab -->
+				$('.nav.nav-tabs li#li-tab-requests').slideDown(1000);
+				
+				<!-- hide all rows from request, except the no requests one -->
+				$('#tab-requests table tbody tr:not(#no-requests)').hide();
+				
+				<!-- settings now for admin -->
+				$('#tab-settings #team-admin-list-first').hide();
+				$('#tab-settings #team-admin-list-admin').show();
+				
+				<!-- but show only karen -->
+				$('#tab-settings #team-admin-list-admin table tbody tr:last-child').hide();
+				
+			})
+			
+			<!-- appoint another -->
+			$('.appointed-yourself a').click(function(){
+				//$('.nav.nav-tabs li#li-tab-settings a').tab('show');
+			});
 
         });
     </script>

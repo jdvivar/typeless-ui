@@ -1192,6 +1192,18 @@ mark {
 	font-size: 10px;
 }
 
+.panel-success>.panel-heading .badge,.panel-info>.panel-heading .badge {
+	background-color: white;
+}
+
+.panel-success>.panel-heading .badge {
+	color: #1abc9c;
+}
+
+.panel-info>.panel-heading .badge {
+	color: #3498db;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {
