@@ -188,7 +188,7 @@ div.cards {
 	width: 70px;
 }
 
-.va-middle td{
+.va-middle td, .va-middle th{
 	vertical-align: middle !important;
 }
 
@@ -1079,14 +1079,14 @@ mark {
 }
 
 .team-notification {
-	padding: 10px 10px;
-	font-size: 13px;
+	padding: 50px 100px;
+	font-size: 16px;
 	/* text-align: center; */
-	/* font-weight: 600; */
+	font-weight: 600;
 	border: 1px solid #dddddd;
 	border-top: none;
-	border-left: none;
-	border-right: none;
+	/* border-left: none; */
+	/* border-right: none; */
 	/* color: white; */
 	/* background-color: rgba(52,152,219,.8); */
 }
@@ -1120,18 +1120,31 @@ mark {
 }
 
 .team-select option.sharing,.team-select option.accepted {
-	color: rgba(26,188,156,1);
-	background-color: rgba(26,188,156,.2);
+	/* color: rgba(26,188,156,1); */
+	color: white;
+	/* background-color: rgba(26,188,156,.2); */
+	background-color: rgba(26,188,156,1);
+}
+
+.team-select option.admin {
+	/* color: rgba(52,152,219,1); */
+	color: white;
+	background-color: rgba(52,152,219,.5);
+	background-color: rgba(52,152,219,1);
 }
 
 .team-select option.pending {
-	color: rgba(241,196,15,1);
-	background-color: rgba(241,196,15,.2);
+	/* color: rgba(241,196,15,1); */
+	color: white;
+	/* background-color: rgba(241,196,15,.2); */
+	background-color: rgba(241,196,15,1);
 }
 
 .team-select option.error,.team-select option.declined {
-	color: rgba(231,76,60,1);
-	background-color: rgba(231,76,60,.2);
+	/* color: rgba(231,76,60,1); */
+	color: white;
+	/* background-color: rgba(231,76,60,.2); */
+	background-color: rgba(231,76,60,1);
 }
 
 .line-height-normal {
