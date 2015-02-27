@@ -340,6 +340,53 @@
 	</div>
 </span>
 
+<div class="modal fade" id="team-send-invitation">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title text-600">Re-send invitation</h3>
+      </div>
+	  <div class="modal-body">
+		<div class="panel panel-default">
+		 
+			<div class="panel-heading"><strong>Subject</strong><span style="position:absolute;left:0;margin-left:150px">An invitation to join our team</style></div>
+			<ul class="list-group">
+				<li class="list-group-item" style="position:relative">
+					<strong>To</strong>
+					<span style="position: relative;left: 83px;">Brye Andersen</span>
+					<span class="text-gray small pull-right">bandersen@balderton.com</span>				
+				</li>
+			</ul>
+			<div class="panel-body">
+				<p>Hi Brye,</p>
+				<p>You have a pending invitation to join our team in Typeless.</br>
+				Click on the link below or log in into Typeless to manage your invitations.</p>
+				<p class="text-info"> < link > </p>
+			</div>
+			<ul class="list-group" style="background-image: url('./img/paper-bg2.png')">
+				<li class="list-group-item" style="position:relative">
+					<strong>Note</strong>
+					<span class="text-gray small pull-right">It will appear as "Karen Pryce (karen@balderton.com) added:"</span>				
+					<textarea class="m-t" style="width:100%;resize:vertical" rows="3"></textarea>
+				</li>
+			</ul>
+			<div class="panel-body">
+				<p>Best regards,</br>
+				Your Typeless team.</p>
+				<p class="text-info"> Learn more about Typeless for Teams </p>
+			</div>
+
+		  
+		</div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-invisible text-uppercase text-700" data-dismiss="modal"><small>Cancel</small></a>
+        <a class="btn btn-invisible text-info text-uppercase text-700 action team-add-members" data-dismiss="modal"><small>Re-send invitation</small></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="modal fade" id="team-add-members">
   <div class="modal-dialog">
@@ -351,11 +398,57 @@
 	  <div class="modal-body">
 		Please, type or paste the e-mail addresses of the people you want to add to your team.
         <br><br><textarea style="resize:vertical;width:100%"></textarea>
-		<small>They will all be listed as <span class="label label-invisible">UNINVITED</span> team members.</small>
+		<small>We will invite them via an e-mail message. You will see them listed as <span class="label label-warning-light">PENDING</span> team members.</small>
       </div>
       <div class="modal-footer">
         <a class="btn btn-invisible text-uppercase text-700" data-dismiss="modal"><small>Cancel</small></a>
-        <a class="btn btn-invisible text-info text-uppercase text-700"><small>Add members</small></a>
+        <a class="btn btn-invisible text-info text-uppercase text-700 action team-add-members" data-dismiss="modal"><small>Add members</small></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="team-appoint-members">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title text-600">Appoint team members as administrators</h3>
+      </div>
+	  <div class="modal-body">
+		Select the team members you want to appoint as administrators:
+      </div>
+	  <table class="table table-hover" style="margin-bottom:0">
+		<thead>
+			<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+				<th></th>
+				<th>Team members</th>
+				<th></th>
+		  </tr>
+		</thead>
+		<tbody>
+				
+			<tr class="va-middle non-select">
+				<th class="col-md-1 text-center"><img alt="image" class="img-circle" src="img/a18.jpg" style="width:38px;height:38px"></th>
+				<td class="col-md-8">Karen Pryce<br><span class="small text-gray underline">karen@balderton.com</span></td>
+				<td class="col-md-3 text-left">
+					<input type="checkbox" value="" disabled>
+					<span class='label label-info'>ADMIN</span>
+				</td>
+			</tr>
+		
+			<tr class="va-middle">
+				<th class="col-md-1 text-center"><img alt="image" class="img-circle" src="img/a15.jpg" style="width:38px;height:38px"></th>
+				<td class="col-md-8">Ramon Prieto<br><span class="small text-gray underline">r.prieto@balderton.com</span></td>
+				<td class="col-md-3 text-left">
+					<input type="checkbox" value="" >
+				</td>
+			</tr>
+		</tbody>
+	  </table>
+      <div class="modal-footer">
+        <a class="btn btn-invisible text-uppercase text-700" data-dismiss="modal"><small>Cancel</small></a>
+        <a class="btn btn-invisible text-info text-uppercase text-700 action team-appoint-members disabled" data-dismiss="modal"><small>Appoint as admins</small></a>
       </div>
     </div>
   </div>

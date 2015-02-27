@@ -31,6 +31,10 @@
 	<span id="modal-windows-2">
 		<!-- loaded dinamically -->
 	</span>
+	
+	<span id="modal-windows-3">
+		<!-- loaded dinamically -->
+	</span>
 
 	<div id="notify-wrapper">
 		<span class="" style="display:none;right: 15px;top: 82px;position: absolute;" id="timeout-alert">
@@ -96,21 +100,22 @@
 										<thead>
 											<tr class="va-middle text-gray" style="background-color:whitesmoke;">
 										
-												<td class="" style="width:3%"></td>
-												<td class="col-md-2"><a class="text-gray">Name & e-mail <i class="fa fa-sort-down"></i></a></td>
-												<td class="col-md-1"><a class="text-gray">Contacts <i class="fa fa-sort"></i></a></td>
-												<td class="col-md-3">
+												<th class="" style="width:3%"></th>
+												<th class="col-md-2"><a class="text-gray">Name & e-mail <i class="fa fa-sort-down"></i></a></th>
+												<th class="col-md-1"><a class="text-gray">Contacts <i class="fa fa-sort"></i></a></th>
+												<th class="col-md-3">
 													<a class="btn btn-sm btn-invisible text-700 text-success show-uninvited" data-tooltip="tooltip" data-placement="right" title="If filter is UNINVITED" style="display:none"><small>INVITE ALL UNINVITED</small></a>
 													<a class="btn btn-sm btn-invisible text-700 text-info show-pending" data-tooltip="tooltip" data-placement="right" title="If filter is PENDING" style="display:none"><small>RE-SEND INVITATION TO ALL PENDING</small></a>
-												</td>
-												<td class="col-md-2 text-right">Filter by&nbsp;&nbsp;<select class="team-select">
+												</th>
+												<th class="col-md-2 text-right">Filter by&nbsp;&nbsp;<select class="team-select">
 																						  <option class="all" value="all">All</option>
 																						  <option class="uninvited" value="uninvited">Uninvited</option>
 																						  <option class="pending" value="pending">Pending</option>
 																						  <option class="sharing" value="sharing">Sharing</option>
+																						  <option class="admin" value="admin">Admin</option>
 																						  <option class="error" value="error">Error</option>
 																						  <option class="error" value="signed-off">Signed off</option>
-																						</select></td>
+																						</select></th>
 												
 											</tr>
 										</thead>
@@ -119,30 +124,20 @@
 												This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase">Appoint yourself as admin now</a>									
 											</div>
 											<div class="team-notification text-center appointed-yourself" style="display:none">
-												You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase">Appoint another admin now</a>									
+												You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase"  data-toggle="modal" data-target="#team-appoint-members">Appoint another admin now</a>									
 											</div>
 											
-											<tr class="va-middle show-uninvited">
-												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
-												<td class="">Africa Bravo<br><span class="small text-gray">abravo@balderton.com</span></td>
-												<td class=""></td>
-												<td class="show-children-on-hover">
-													<a class="btn btn btn-invisible text-success text-700" ><small>INVITE</small></a>
-													<a class="btn btn btn-invisible text-success text-700 show-children-on-hover" style="display:none;" ><small>... ALL UNINVITED</small></a>
-												</td>
-												<td class="text-gray text-right status small"><span class="label label-invisible">UNINVITED</span></td>
-											</tr>
 											<tr class="va-middle show-pending">
 												<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
-												<td class="">Brye Andersen<br><span class=" small text-gray">aandersen@balderton.com</span></td>
+												<td class="">Brye Andersen<br><span class=" small text-gray">bandersen@balderton.com</span></td>
 												<td class=""></td>
 												<td class="show-children-on-hover">
 																						
-													<a class="btn btn btn-invisible text-info text-700"><small>RE-SEND INVITATION</small></a>
+													<a class="btn btn btn-invisible text-info text-700" data-toggle="modal" data-target="#team-send-invitation"><small>RE-SEND INVITATION</small></a>
 													<a class="btn btn btn-invisible text-info text-700 show-children-on-hover" style="display:none;" ><small>... TO ALL PENDING</small></a>
 													
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-warning-light">PENDING</span><br>Sent 3 days ago</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light">PENDING</span><br><span class="when">Sent 3 days ago</span></td>
 											</tr>
 											<tr class="va-middle show-sharing" id="row-you">
 												<td><img alt="image" class="img-circle m-l-sm" src="img/a18.jpg" style="width:38px;height:38px"></td>
@@ -155,17 +150,47 @@
 												</td>
 												<td class="text-gray text-right status small"><span class="label label-success ">SHARING</span><br><span class="when">Started 6h ago</span></td>
 											</tr>
+											<tr class="va-middle show-pending" id="ramon-pending">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a15.jpg" style="width:38px;height:38px"></td>
+												<td class="">Ramon Prieto<br><span class=" small text-gray">rprieto@balderton.com</span></td>
+												<td class=""><a class="underline text-info">4,623</a></td>
+												<td class="show-children-on-hover">
+																						
+													<a class="btn btn btn-invisible text-info text-700"><small>RE-SEND INVITATION</small></a>
+													<a class="btn btn btn-invisible text-info text-700 show-children-on-hover" style="display:none;" ><small>... TO ALL PENDING</small></a>
+													
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br><span class="when">Started 6h ago</span></td>
+											</tr>
 											
-											<tr class="va-middle show-signed-off show-sharing">
+											<tr class="va-middle show-sharing" id="ramon-sharing">
 												<td><img alt="image" class="img-circle m-l-sm" src="img/a15.jpg" style="width:38px;height:38px"></td>
 												<td class="">Ramon Prieto<br><span class=" small text-gray">rprieto@balderton.com</span></td>
 												<td class=""><a class="underline text-info">4,623</a></td>
 												<td class="">
-																						
-									
-													
+
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger ">SIGNED OFF <i class="fa fa-info-circle" data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily."></i></span>&nbsp;<span class="label label-success ">SHARING</span><br>Started 6h ago</td>
+												<td class="text-gray text-right status small"></span>&nbsp;<span class="label label-success ">SHARING</span><br><span class="when">Started 6h ago</span></td>
+											</tr>
+											
+											<tr class="va-middle show-signed-off show-sharing" id="ramon-signed-off">
+												<td><img alt="image" class="img-circle m-l-sm" src="img/a15.jpg" style="width:38px;height:38px"></td>
+												<td class="">Ramon Prieto<br><span class=" small text-gray">rprieto@balderton.com</span></td>
+												<td class=""><a class="underline text-info">4,623</a></td>
+												<td class="">
+
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-danger " data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily.">SIGNED OFF <i class="fa fa-info-circle" ></i></span>&nbsp;<span class="label label-success ">SHARING</span><br><span class="when">Signed off 6h ago</span></td>
+											</tr>
+											<tr class="va-middle show-uninvited">
+												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
+												<td class="">Africa Bravo<br><span class="small text-gray">abravo@balderton.com</span></td>
+												<td class=""></td>
+												<td class="show-children-on-hover">
+													<a class="btn btn btn-invisible text-success text-700" ><small>INVITE</small></a>
+													<a class="btn btn btn-invisible text-success text-700 show-children-on-hover" style="display:none;" ><small>... ALL UNINVITED</small></a>
+												</td>
+												<td class="text-gray text-right status small"><span class="label label-invisible" data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has been pulled off automatically from your company domain">UNINVITED <i class="fa fa-info-circle" ></i></span>&nbsp;</span></td>
 											</tr>
 											<tr class="va-middle show-error">
 												<td><img alt="image" class="img-circle m-l-sm" src="img/a19.jpg" style="width:38px;height:38px"></td>
@@ -174,7 +199,7 @@
 												<td class="">
 													<a class="btn btn btn-invisible text-gray text-700 action-send-message"><small>SEND MESSAGE</small></a>
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger ">ERROR</span><br>Started 6h ago</td>
+												<td class="text-gray text-right status small"><span class="label label-danger ">ERROR</span><br>Started 1 min ago</td>
 											</tr>
 											
 										</tbody>
@@ -184,7 +209,7 @@
 								
 								<div class="tab-pane fade" id="tab-requests">
 									<div class="team-notification text-center appointed-yourself">
-										You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase">Appoint another admin now</a>									
+										You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase"  data-toggle="modal" data-target="#team-appoint-members">Appoint another admin now</a>									
 									</div>
 									<table class="table table-hover ">
 										<thead>
@@ -193,23 +218,24 @@
 												<td class="col-md-1 text-center">
 													<!-- <input type="checkbox" id="" value=""> -->
 												</td>
-												<td class="col-md-4">
+												<th class="col-md-4">
 													Requester
-												</td>
-												<td class="col-md-2">
+												</th>
+												<th class="col-md-2">
 													Requested from
-												</td>
-												<td class="col-md-3 text-center">
+												</th>
+												<th class="col-md-3 text-center">
 													<a class="btn btn-sm btn-invisible text-700 text-success show-pending bulk"><small>ACCEPT <span class="how-many">ALL</span></small></a>
 													<a class="btn btn-sm btn-invisible text-700 text-danger show-pending bulk"><small>IGNORE <span class="how-many">ALL</span></small></a>
 													<a class="btn btn-sm btn-invisible text-700 show-accepted show-declined" style="display:none"><small>DELETE ALL</small></a>
-												</td>
-												<td class="col-md-2 text-right">Filter by&nbsp;&nbsp;<select class="team-select">
-																						  <option class="pending" value="pending">Pending</option>
-																						  <option class="accepted" value="accepted">Accepted</option>
-																						  <option class="declined" value="declined">Ignored</option>
-																						  <option class="all" value="all">All</option>
-																						</select></td>
+												</th>
+												<th class="col-md-2 text-right">Filter by&nbsp;&nbsp;<select class="team-select">
+													  <option class="pending" value="pending">Pending</option>
+													  <option class="accepted" value="accepted">Accepted</option>
+													  <option class="declined" value="declined">Ignored</option>
+													  <option class="all" value="all">All</option>
+													</select>
+												</th>
 												
 											</tr>
 										</thead>
@@ -331,55 +357,111 @@
 										This team is running without an administrator. This team will be suspended unless an administrator is appointed within 14 days.<br> <a class="m-t-sm btn btn-sm btn-info text-700 text-uppercase action-appoint-yourself">Appoint yourself as admin now</a>									
 									</div>
 									<div class="team-notification text-center appointed-yourself" style="display:none">
-										You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase action-appoint-another">Appoint another admin now</a>									
+										You are now a team administrator. You have 14 days to appoint an additional administrator.<br> <a class="m-t-sm btn btn-sm btn-success text-700 text-uppercase action-appoint-another"  data-toggle="modal" data-target="#team-appoint-members">Appoint another admin now</a>									
 									</div>
 									<div class="row">
-										<div class="col-md-6 m-t-md">
+										<div class="col-md-12 m-t-md">
 											<div class="panel panel-info">
 												<div class="panel-heading">
 													<span class="badge badge-white pull-right text-600">2,269 contacts</span>
 													<h3 class="panel-title">What I'm sharing with my team?</h3>
 												</div>
 												<div class="panel-body">
-													<div>Which contacts would you like to share?</div>
-													<div class="checkbox">
-													  
-														<input type="checkbox" value="" >
-														&nbsp;&nbsp;All contacts
-													  
+													<div class="col-md-6 m-t">
+														<div class="text-600">Which contacts would you like to share?</div>
+														<div class="checkbox">
+														  
+															<input type="checkbox" value="" >
+															&nbsp;&nbsp;All contacts
+														  
+														</div>
+														<div class="checkbox disabled team-account-notice text-muted" id="" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;.team-account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Work e-mail accounts are automatically shared. If you want to stop sharing this account, <a class='underline text-info'>contact your team admin</a>.">
+															
+																<input type="checkbox" value="" disabled checked >
+																&nbsp;&nbsp;<i class="fa fa-fw fa-google color-google"></i> Google (don.draper@balderton.com)
+																<a class="help-team-account-notice" id="" style=""><i class="fa fa-question-circle text-info"></i></a>
+															
+														</div>
+														<div class="checkbox disabled team-account-notice text-muted" id="" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;.team-account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Only one work e-mail account can be used and shared with your team. If you want to use and shared this account instead, <a class='underline text-info'>contact your team admin</a>.">
+															
+																<input type="checkbox" value="" disabled >
+																&nbsp;&nbsp;<i class="fa fa-fw fa-google color-google"></i> Google (donald@balderton.com)
+																<a class="help-team-account-notice" id="" style=""><i class="fa fa-question-circle text-info"></i></a>
+															
+														</div>
+														<div class="checkbox disabled team-account-notice text-muted" id="" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;.team-account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Only one work e-mail account can be used and shared with your team. If you want to use and shared this account instead, <a class='underline text-info'>contact your team admin</a>.">
+															
+																<input type="checkbox" value="" disabled >
+																&nbsp;&nbsp;<i class="fa fa-fw fa-google color-google"></i> Google (donald@acme.org)
+																<a class="help-team-account-notice" id="" style=""><i class="fa fa-question-circle text-info"></i></a>
+															
+														</div>
+														<div class="checkbox disabled team-account-notice text-muted" id="" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;.team-account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Only one work e-mail account can be used and shared with your team. If you want to use and shared this account instead, <a class='underline text-info'>contact your team admin</a>.">
+															
+																<input type="checkbox" value="" disabled >
+																&nbsp;&nbsp;<img src="./img/microsoft-exchange-logo-original.png" width="18px"> Microsoft Exchange (donald@company.com)
+																<a class="help-team-account-notice" id="" style=""><i class="fa fa-question-circle text-info"></i></a>
+															
+														</div>
+														<div class="checkbox disabled team-account-notice text-muted" id="" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;.team-account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Only one work e-mail account can be used and shared with your team. If you want to use and shared this account instead, <a class='underline text-info'>contact your team admin</a>.">
+															
+																<input type="checkbox" value="" disabled >
+																&nbsp;&nbsp;<img src="./img/microsoft-outlook-logo-original.png" width="18px"> Microsoft Outlook (donald@company2.com)
+																<a class="help-team-account-notice" id="" style=""><i class="fa fa-question-circle text-info"></i></a>
+															
+														</div>
+														<div class="checkbox disabled team-account-notice text-muted" id="" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;.team-account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Only one work e-mail account can be used and shared with your team. If you want to use and shared this account instead, <a class='underline text-info'>contact your team admin</a>.">
+															
+																<input type="checkbox" value="" disabled >
+																&nbsp;&nbsp;<img src="./img/microsoft-office-logo-100.png" width="18px"> Microsoft Office 365 (donald@company3.com)
+																<a class="help-team-account-notice" id="" style=""><i class="fa fa-question-circle text-info"></i></a>
+															
+														</div>
+														<div class="checkbox">
+															
+																<input type="checkbox" value=""  >
+																&nbsp;&nbsp;<img src="./img/salesforce-logo-100.png" width="18px"> Salesforce <span class="text-gray">(donald@company4.com)</span>
+															
+														</div>
+														<div class="checkbox">
+															
+																<input type="checkbox" value=""  >
+																&nbsp;&nbsp;<img src="./img/salesforce-logo-100.png" width="18px"> Salesforce <span class="text-gray">(donald@company5.com)</span>
+															
+														</div>
+														<div class="checkbox">
+														  
+															<input type="checkbox" value="" >
+															&nbsp;&nbsp;<i class="fa fa-fw fa-facebook-square color-facebook"></i> Facebook <span class="text-gray">(donald@gmail.com)</span>
+														  
+														</div>
+														<div class="checkbox">
+														  
+															<input type="checkbox" value="" >
+															&nbsp;&nbsp;<i class="fa fa-fw fa-linkedin-square color-linkedin"></i> Linkedin <span class="text-gray">(donald@gmail.com)</span>
+														  
+														</div>
 													</div>
-													<div class="checkbox disabled" id="account-notice" data-toggle="popover" data-trigger="manual click" data-placement="bottom" data-title="Why can't I change this? <a class='pull-right' onclick='$(&quot;#account-notice&quot;).popover(&quot;hide&quot;);'><i class='fa fa-times'></i></a>" data-html="true" data-content="Work e-mail accounts are automatically shared. If you want to stop sharing this account, <a class='underline text-info'>contact your team admin</a>.">
-														
-															<input type="checkbox" value="" disabled checked >
-															&nbsp;&nbsp;<i class="fa fa-fw fa-google"></i> Google <span class="text-gray">(don.draper@balderton.com)</span>
-															<a class="" id="help-account-notice" style=""><i class="fa fa-question-circle text-info"></i></a>
-														
-													</div>
-													<div class="checkbox">
-													  
-														<input type="checkbox" value="" >
-														&nbsp;&nbsp;<i class="fa fa-fw fa-facebook"></i> Facebook <span class="text-gray">(donald@gmail.com)</span>
-													  
-													</div>
-																						
-													<div class="m-t-md">What details would you like to share?</div>
-												
-													<div class="radio">
-													  
-														<input type="radio" name="optionsRadios" id="optionsRadios1" value="full" checked>
-														&nbsp;&nbsp;All available contact details
-													  
-													</div>
-													<div class="radio">
+													<div class="col-md-6 m-t">									
+														<div class="text-600">What details would you like to share?</div>
 													
-														<input type="radio" name="optionsRadios" id="optionsRadios2" value="limited">
-														&nbsp;&nbsp;Only names and job titles
-													
+														<div class="radio">
+														  
+															<input type="radio" name="optionsRadios" id="optionsRadios1" value="full" checked>
+															&nbsp;&nbsp;All available contact details
+														  
+														</div>
+														<div class="radio">
+														
+															<input type="radio" name="optionsRadios" id="optionsRadios2" value="limited">
+															&nbsp;&nbsp;Only names and job titles
+														
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-6 m-t-md">
+										<div class="col-sm-12 col-md-6 m-t-md">
 											<div class="panel panel-success" id="team-admin-list-first" >
 												<div class="panel-heading">
 													<span class="badge pull-right" >no admins</span>
@@ -426,7 +508,7 @@
 												</div>
 												<div class="panel-body text-center">
 													
-													<button class="btn btn-success text-700 action-add-admin"><small>APPOINT A TEAM MEMBER AS ADMIN</small></button>
+													<button class="btn btn-success text-700 action-add-admin" data-toggle="modal" data-target="#team-appoint-members"><small>APPOINT A TEAM MEMBER AS ADMIN</small></button>
 												</div>
 												<table class="table">
 													<thead>
@@ -437,16 +519,16 @@
 													  </tr>
 													</thead>
 													<tbody>
-														<tr>
-															<th class="col-md-1"><img alt="image" class="img-circle" src="img/a18.jpg" style="width:38px;height:38px"></th>
+														<tr class="va-middle">
+															<th class="col-md-1 text-center"><img alt="image" class="img-circle" src="img/a18.jpg" style="width:38px;height:38px"></th>
 															<td class="col-md-5">Karen Pryce<br><span class="small text-gray underline">karen@balderton.com</span></td>
 															<td class="col-md-5 text-right">
 																<a class="btn btn btn-invisible text-gray text-700 action-remove-admin"><small>REMOVE ADMIN</small></a>
 															</td>
 														</tr>
 													
-														<tr>
-															<th class="col-md-1"><img alt="image" class="img-circle" src="img/a15.jpg" style="width:38px;height:38px"></th>
+														<tr class="va-middle">
+															<th class="col-md-1 text-center"><img alt="image" class="img-circle" src="img/a15.jpg" style="width:38px;height:38px"></th>
 															<td class="col-md-5">Ramon Prieto<br><span class="small text-gray underline">r.prieto@balderton.com</span></td>
 															<td class="col-md-5 text-right">
 																<a class="btn btn btn-invisible text-gray text-700 action-remove-admin"><small>REMOVE ADMIN</small></a>
@@ -456,36 +538,29 @@
 												  </table>
 											</div>
 										</div>
-									</div>
-								
-									<div class="row">
-										<div class="col-md-6 m-t-md">
-											<div class="panel panel-default" id="team-settings-user">
-												<div class="panel-heading">
-													Other team settings
-												</div>
-												<div class="panel-body">
-													<div class="row">
-														<div class="col-xs-6">
-															<div class="checkbox" >
-																<input type="checkbox" value="" > <small>Allow team members to share team contacts with people outside the company.</small>
-															</div>
-														</div>
-														<div class="col-xs-6">
-															<a class="btn btn btn-invisible text-gray text-700 pull-right action-quit-team"><small>QUIT TEAM</small></a>
-															<a class="btn btn btn-invisible text-gray text-700 pull-right action-delete-team" style="display:none"><small>DELETE TEAM</small></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-6 m-t-md">
+										<br>
+										<div class="col-sm-12 col-md-6 m-t-md">
 											<div class="panel panel-default" id="team-billing">
 												<div class="panel-heading">
 													Billing and invoicing
 												</div>
 												<div class="panel-body">
 													{TO-DO}
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 col-md-6 m-t-md">
+											<div class="panel panel-default" id="team-settings-user">
+												<div class="panel-heading">
+													Team account
+												</div>
+												<div class="panel-body text-center">
+													
+														
+														<a class="btn btn btn-invisible text-gray text-700 action-quit-team"><small>QUIT TEAM</small></a>
+														<a class="btn btn btn-invisible text-gray text-700 action-delete-team" style="display:none"><small>REQUEST DELETETION OF TEAM</small></a>
+														
+													
 												</div>
 											</div>
 										</div>
@@ -543,6 +618,8 @@
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
 			$( "#modal-windows-1" ).load("components.html #team-add-members", afterLoadingModal);
+			$( "#modal-windows-2" ).load("components.html #team-appoint-members", afterLoadingModal);
+			$( "#modal-windows-3" ).load("components.html #team-send-invitation", afterLoadingModal);
 						
 						
 			// callback after loading navbar-top
@@ -602,7 +679,36 @@
 			
 			function afterLoadingModal(){
 			
+				$('.team-add-members').click(function(){
+					addMembers();
+				})
 				
+				startiCheck();
+				
+				
+				$('#team-appoint-members .table-hover tbody tr').click(function(e){
+					if (!$(this).hasClass('non-select'))
+						$(this).find('input').iCheck('toggle');
+				});
+				
+				$('#team-appoint-members .table-hover tbody tr input').on('ifToggled',function(e){
+					$(this).parents('tr').toggleClass('active');
+					if (!$(this).parent('div').hasClass('checked'))
+						$('#team-appoint-members .action').removeClass('disabled');
+					else
+						$('#team-appoint-members .action').addClass('disabled');
+				});
+				
+				$('#team-appoint-members .action').click(function(){
+					<!-- add admin label to yourself in team members -->
+					$('#tab-who tr#ramon-signed-off .status').prepend("<span class='label label-info'>ADMIN</span> ");
+					<!-- remove team notification -->
+					$('.team-notification.appointed-yourself').slideUp(1000);
+					<!-- show ramon in settings tab too -->
+					$('#tab-settings #team-admin-list-admin table tbody tr:last-child').show();
+					<!-- and the number of admins is now 2 -->
+					$('#tab-settings #team-admin-list-admin span').text('2 admins');
+				});
 				
 			};
 			
@@ -787,18 +893,23 @@
 			
 			<!-- iCheck -->
 			
-			$('input').iCheck({
-				checkboxClass: 'icheckbox_square-blue',
-				//checkboxClass: 'icheckbox_square-grey',
-				//checkboxClass: 'icheckbox_polaris',
-				radioClass: 'iradio_square-blue',
-				//radioClass: 'iradio_polaris'
-				increaseArea: '20%' // optional
-			});
+			function startiCheck(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_square-blue',
+					//checkboxClass: 'icheckbox_square-grey',
+					//checkboxClass: 'icheckbox_polaris',
+					radioClass: 'iradio_square-blue',
+					//radioClass: 'iradio_polaris'
+					increaseArea: '20%' // optional
+				});
+			}
+			
+			startiCheck();
 			
 			<!-- show account notice popover on hover -->
-			$('a#help-account-notice').hover(function(){
-				$('#account-notice').popover('show');
+			$('a.help-team-account-notice').hover(function(){
+				//$('.team-account-notice').popover('hide');
+				$(this).parents('.team-account-notice').popover('show');
 			},function(){
 				//$(this).popover('hide');
 			});
@@ -840,7 +951,7 @@
 				$('#tab-who tbody tr:not(#row-you)').hide();
 				
 				// show that it has joint recently by showing a recent status
-				$('#tab-who tbody tr#row-you .status .when').text('Started 10s ago');
+				$('#tab-who tbody tr#row-you .status .when').text('Started 10 s ago');
 				
 				// show appoint yourself notice in all tabs
 				$('.appoint-yourself').slideDown(1000);
@@ -855,7 +966,7 @@
 				// hide send-message action, which is only available to admins
 				$('.action-send-message').hide();
 				
-			}
+			};
 			
 			<!-- appoint yourself as administrator -->
 			$('.appoint-yourself a, .action-appoint-yourself').click(function(){
@@ -879,12 +990,51 @@
 				<!-- but show only karen -->
 				$('#tab-settings #team-admin-list-admin table tbody tr:last-child').hide();
 				
+				<!-- show remove team too -->
+				$('#tab-settings .action-delete-team').show();
+				
 			})
 			
 			<!-- appoint another -->
 			$('.appointed-yourself a').click(function(){
 				//$('.nav.nav-tabs li#li-tab-settings a').tab('show');
 			});
+			
+			function addMembers(){
+				// contacts number
+				myTeamHowMany = '3,991';
+				$('#sharing-team-link span').text(myTeamHowMany);
+				
+				//add pending member
+				$('#tab-who tbody tr.show-pending').show();
+				
+				//show a later joint status for you
+				$('#tab-who tbody tr#row-you .status .when').text('Started 5 min ago');
+				
+				//and a sooner joint status for the pending
+				$('#tab-who tbody tr.show-pending .status .when').text('Invited 10 s ago');
+				
+				// show number of team members
+				$('.nav.nav-tabs li#li-tab-who span.how-many').text('3');
+				
+				// wait 3 s, then convert to sharing Ramon Prieto
+				// wait another 3s, then signed him off
+				// wait another 3s, show an error and an uninvited contact
+				setTimeout(function(){
+					$('#tab-who tbody #ramon-pending').hide();
+					$('#tab-who tbody #ramon-sharing').show();
+					$('#tab-who tbody #ramon-sharing .status .when').text('Started 3 s ago');
+					setTimeout(function(){
+						$('#tab-who tbody #ramon-sharing').hide();
+						$('#tab-who tbody #ramon-signed-off').show();	
+						$('#tab-who tbody #ramon-signed-off .status .when').text('Signed off 3 s ago');
+						setTimeout(function(){
+							$('#tab-who tbody tr.show-uninvited').show();
+							//$('#tab-who tbody tr.show-error').show();
+						}, 3000);
+					}, 3000);
+				}, 3000);
+			};
 
         });
     </script>
