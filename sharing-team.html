@@ -180,7 +180,11 @@
 												<td class="">
 
 												</td>
-												<td class="text-gray text-right status small"><span class="label label-danger " data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily.">SIGNED OFF <i class="fa fa-info-circle" ></i></span>&nbsp;<span class="label label-success ">SHARING</span><br><span class="when">Signed off 6h ago</span></td>
+												<td class="text-gray text-right status small">
+													<span class="label label-danger " data-tooltip="tooltip" data-placement="left" data-html="true" title="This member has signed<br>off from Typeless,<br>permanently or temporarily.">SIGNED OFF <i class="fa fa-info-circle" ></i></span>
+													&nbsp;<span class="label label-success ">SHARING</span><br>
+													<span class="when">Signed off 6h ago</span>
+												</td>
 											</tr>
 											<tr class="va-middle show-uninvited">
 												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
@@ -699,15 +703,21 @@
 						$('#team-appoint-members .action').addClass('disabled');
 				});
 				
-				$('#team-appoint-members .action').click(function(){
-					<!-- add admin label to yourself in team members -->
-					$('#tab-who tr#ramon-signed-off .status').prepend("<span class='label label-info'>ADMIN</span> ");
+				$('#team-appoint-members a.action.team-appoint-members').click(function(e){
+					
+					if(e.handled !== true) {
+						<!-- add admin label to ramon in team members -->
+						$('#ramon-signed-off .status').prepend("<span class='label label-info'>ADMIN</span> ");
+						e.handled = true;
+					}
+					
 					<!-- remove team notification -->
 					$('.team-notification.appointed-yourself').slideUp(1000);
 					<!-- show ramon in settings tab too -->
 					$('#tab-settings #team-admin-list-admin table tbody tr:last-child').show();
 					<!-- and the number of admins is now 2 -->
 					$('#tab-settings #team-admin-list-admin span').text('2 admins');
+					
 				});
 				
 			};
@@ -992,6 +1002,9 @@
 				
 				<!-- show remove team too -->
 				$('#tab-settings .action-delete-team').show();
+				
+				<!-- show share team button -->
+				$('#share-team-contacts-button').fadeIn();
 				
 			})
 			
