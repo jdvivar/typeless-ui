@@ -196,6 +196,20 @@
 	background-color: rgb(0,0,0);
 }
 
+.ce-initial{
+	position: relative;
+}
+
+.ce-initial span.text-white{
+
+	position:absolute;
+	font-size: 18px;
+	left: 8px;
+	top: -3px;
+	font-family: monospace;
+
+}
+
 
 /* style for mark */
 /* It hasn't got ce prefix because I'm rewriting an html tag style */
