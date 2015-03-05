@@ -907,11 +907,11 @@
 	<div class="modal-content">
 	  <div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-		<h4 class="modal-title" id="share-contacts-modal-regular-label">Share contacts</h4>
+		<h3 class="modal-title text-600" id="share-contacts-modal-regular-label">Share contacts</h3>
 	  </div>
 	  <div class="modal-body">
 		<div class="panel-group" id="modal-regular-accordion">
-			<div class="panel panel-default">
+			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h5 class="panel-title">
 						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-1">Who would you like to share the contacts with?</a>
@@ -931,54 +931,77 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel panel-default">
+			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-2">Which contacts would you like to share?<span class="badge badge-success pull-right">All contacts</span></a>
+						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-2">Which contacts would you like to share?<span class="badge badge-info pull-right">All your contacts: 3,694</span></a>
 					</h4>
 				</div>
-				<div id="modal-regular-accordion-2" class="panel-collapse collapse">
+				<div id="modal-regular-accordion-2" class="panel-collapse">
 					<div class="panel-body">
-						<div class="checkbox" >
-						  <label>
-							<input type="checkbox" value="" checked>
-							All contacts
-						  </label>
+						<div class="radio" >
+							<span class="badge badge-info pull-right">3,694</span>
+							<label>
+								<input type="radio" name="optionsShareModalWhich"  checked>
+								All your contacts
+							</label>
 						</div>
-						<div class="checkbox" >
-						  <label>
-							<input type="checkbox" value="">
-							<i class="fa fa-google fa-fw m-r-xs"></i>Google<span class="text-muted m-l-xs">(jdvivar@gmail.com)</span>
-						  </label>
+						<div class="radio" >
+							<label style="vertical-align: top;">
+								<input type="radio" name="optionsShareModalWhich">
+								Only your contacts from the accounts selected:
+								<div class="checkbox" >
+									<span class="badge badge-info pull-right">1,105</span>
+									<label>
+										<input type="checkbox" value="">
+										<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+									</label>
+								</div>
+								<div class="checkbox" >
+									<span class="badge badge-info pull-right">761</span>
+									<label>
+										<input type="checkbox" value="">
+										<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(daniel@typeless.co)</span>
+									</label>
+								</div>
+								<div class="checkbox" >
+									<span class="badge badge-info pull-right">1,789</span>
+									<label>
+										<input type="checkbox" value="">
+										<i class="fa fa-apple fa-fw m-r-xs"></i>Apple iCloud<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+									</label>
+								</div>
+								<div class="checkbox" >
+									<span class="badge badge-info pull-right">411</span>
+									<label>
+										<input type="checkbox" value="">
+										<i class="fa fa-facebook-square color-facebook fa-fw m-r-xs"></i>Facebook <span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+									</label>
+								</div>
+							</label>
 						</div>
-						<div class="checkbox" >
-						  <label>
-							<input type="checkbox" value="">
-							<i class="fa fa-google fa-fw m-r-xs"></i>Google<span class="text-muted m-l-xs">(daniel@bondable.com)</span>
-						  </label>
+						<div class="radio" >
+							<label style="vertical-align: top;">
+								<span class="badge badge-info pull-right">12,344</span>
+								<input type="radio" name="optionsShareModalWhich"  >
+								Your team contacts<br>
+								<div class="text-gray" style="padding-left:25px;">
+									<small>This includes the contacts in the work e-mail account you used to connect to your team (daniel@typeless.co) plus all the contacts the team members are sharing within the team.</small>
+								</div>
+							</label>
 						</div>
-						<div class="checkbox" >
-						  <label>
-							<input type="checkbox" value="">
-							<i class="fa fa-apple fa-fw m-r-xs"></i>Apple iCloud<span class="text-muted m-l-xs">(jdvivar@gmail.com)</span>
-						  </label>
-						</div>
-						<div class="checkbox" >
-						  <label>
-							<input type="checkbox" value="">
-							<i class="fa fa-facebook fa-fw m-r-xs"></i>Facebook <span class="text-muted m-l-xs">(jdvivar@gmail.com)</span>
-						  </label>
-						</div>
+						
+						
 					</div>
 				</div>
 			</div>
-			<div class="panel panel-default">
+			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-3">What details would you like to share?<span class="badge badge-success pull-right">Everything</span></a>
 					</h4>
 				</div>
-				<div id="modal-regular-accordion-3" class="panel-collapse collapse">
+				<div id="modal-regular-accordion-3" class="panel-collapse">
 					<div class="panel-body">
 						<div class="radio">
 						  <label>
@@ -998,8 +1021,8 @@
 		</div>
 	  </div>
 	  <div class="modal-footer">
-		<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
-		<button type="button" class="btn btn-success"><i class="fa fa-share-alt f-w m-r-sm"></i>Share</button>
+		<a class="btn btn-invisible text-uppercase text-700" data-dismiss="modal"><small>Cancel</small></a>
+        <a class="btn btn-invisible text-info text-uppercase text-700" data-dismiss="modal"><small><i class="fa fa-share-alt fa-fw"></i> Share</small></a>
 	  </div>
 	</div>
   </div>

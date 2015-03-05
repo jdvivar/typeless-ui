@@ -15,6 +15,9 @@
 
 	<link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+	
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/blue.css" rel="stylesheet">
 
 </head>
 
@@ -1532,6 +1535,9 @@
     <!-- Custom and plugin javascript -->
     <!-- <script src="js/typeless.js"></script> -->
     <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+	
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -1540,7 +1546,7 @@
 			$( "#footer" ).load( "components.html #footer" );
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
-			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular");
+			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
 			$( "#modal-windows-2" ).load( "components.html #new-contact-modal");
 			
 						
@@ -1605,6 +1611,13 @@
 				
 				// active actual option
 				$('#contacts-link').addClass('active');
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingModal(){
+			
+				startiCheck();
+				
 			};
 			
 			$(".contact-box input:checkbox").click(function(e) {
@@ -1737,6 +1750,19 @@
 				$(this).removeClass('label-white');
 				e.stopPropagation();
 			});
+			
+			function startiCheck(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_square-blue',
+					//checkboxClass: 'icheckbox_square-grey',
+					//checkboxClass: 'icheckbox_polaris',
+					radioClass: 'iradio_square-blue',
+					//radioClass: 'iradio_polaris'
+					increaseArea: '20%' // optional
+				});
+			}
+			
+			startiCheck();
 			
         });
     </script>
