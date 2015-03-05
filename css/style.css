@@ -188,7 +188,7 @@ div.cards {
 	width: 70px;
 }
 
-.va-middle td, .va-middle th{
+.va-middle{
 	vertical-align: middle !important;
 }
 
