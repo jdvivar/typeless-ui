@@ -54,36 +54,38 @@
 			<div class="row wrapper white-bg page-heading">
             	<span id="tools" style="">
 				
+					<span class="text-gray"><small>Filter by:</small></span>
+					
 					<div class="dropdown m-t" style="display:inline-block">
-						
-						<a class="btn btn-invisible btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-							<i class="fa fa-circle f-w m-r-sm"></i><span class="m-r-xs">Everything</span><span class="badge m-r-xs">3,122</span>
+											
+						<a class="btn btn-invisible dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+							<i class="fa fa-circle f-w m-r-sm"></i><span class="m-r-xs">Everything</span><span class="badge badge-info m-r-xs">3,122</span>
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#"><i class="fa fa-star f-w m-r-sm"></i><span class="m-r-xl">Most contacted</span><span class="badge filter">50</span></a></li>
-							<li><a href="#"><i class="fa fa-share-alt f-w m-r-sm"></i><span class="m-r-xl">Shared contacts</span><span class="badge filter">789</span></a></li>
-							<li><a href="#"><i class="fa fa-exclamation-circle f-w m-r-sm"></i><span class="m-r-xl">Incomplete contacts</span><span class="badge filter">12</span></a></li>
-							<li><a href="#"><i class="fa fa-clock-o f-w m-r-sm"></i><span class="m-r-xl">Recently added</span><span class="badge filter">391</span></a></li>
-							<li><a href="#"><i class="fa fa-lock f-w m-r-sm"></i><span class="m-r-xl">Private</span><span class="badge filter">5</span></a></li>
-							<li><a href="#"><i class="fa fa-copy f-w m-r-sm"></i><span class="m-r-xl">Duplicates</span><span class="badge filter">67</span></a></li>
+							<li><a href="#"><i class="fa fa-star f-w m-r-sm"></i><span class="m-r-xl">Most contacted</span><span class="badge badge-info filter">50</span></a></li>
+							<li><a href="#"><i class="fa fa-share-alt f-w m-r-sm"></i><span class="m-r-xl">Shared contacts</span><span class="badge badge-info filter">789</span></a></li>
+							<li><a href="#"><i class="fa fa-exclamation-circle f-w m-r-sm"></i><span class="m-r-xl">Incomplete contacts</span><span class="badge badge-info filter">12</span></a></li>
+							<li><a href="#"><i class="fa fa-clock-o f-w m-r-sm"></i><span class="m-r-xl">Recently added</span><span class="badge badge-info filter">391</span></a></li>
+							<li><a href="#"><i class="fa fa-lock f-w m-r-sm"></i><span class="m-r-xl">Private</span><span class="badge badge-info filter">5</span></a></li>
+							<li><a href="#"><i class="fa fa-copy f-w m-r-sm"></i><span class="m-r-xl">Duplicates</span><span class="badge badge-info filter">67</span></a></li>
 						</ul>
 					</div>
 					
 					<div class="dropdown m-t m-r" style="display:inline-block">
 						
-						<a class="btn btn-invisible btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+						<a class="btn btn-invisible btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 							<i class="fa fa-circle f-w m-r-sm"></i><span class="m-r-xs">All accounts</span>
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#"><i class="fa fa-google f-w m-r-sm"></i><span class="m-r-xl">Google</span><span class="badge filter">1,087</span></a></li>
-							<li><a href="#"><i class="fa fa-facebook f-w m-r-sm"></i><span class="m-r-xl">Facebook</span><span class="badge filter">550</span></a></li>
-							<li><a href="#"><i class="fa fa-linkedin f-w m-r-sm"></i><span class="m-r-xl">LinkedIn</span><span class="badge filter">789</span></a></li>
+							<li><a href="#"><i class="fa fa-google color-google f-w m-r-sm"></i><span class="m-r-xl">Google</span><span class="badge color-google badge-white filter">1,087</span></a></li>
+							<li><a href="#"><i class="fa fa-facebook-square color-facebook f-w m-r-sm"></i><span class="m-r-xl">Facebook</span><span class="badge filter">550</span></a></li>
+							<li><a href="#"><i class="fa fa-linkedin-square color-linkedin f-w m-r-sm"></i><span class="m-r-xl">LinkedIn</span><span class="badge filter">789</span></a></li>
 						</ul>
 					</div>
 
-					<div id="letter-selector" class="text-center" style="cursor:pointer;display:inline-block;//vertical-align: middle;width:330px;">
+					<div id="letter-selector" class="text-center" style="cursor:pointer;display:none;//vertical-align: middle;width:330px;">
 						
 						<a class="  label" href="#">ALL</a>
 						<a class="  label label-white" href="#">A</a>
@@ -114,12 +116,15 @@
 						<a class="  label label-white" href="#">Z</a>
 					</div>
 					
-					<div class="btn-group  m-t pull-right">
-						
-						<button class="btn btn-xs btn-white" type="button" id="toggle-list"><i class="fa fa-list-ul m-r-sm"></i>List</button>
-						<button class="btn btn-xs active" type="button" id="toggle-cards"><i class="fa fa-th m-r-sm"></i>Cards</button>
-						
+					<span class="text-gray m-r-xs"><small>View:</small></span>
+					
+					<div class="btn-group">
+											
+						<button class="btn btn-white" type="button" id="toggle-list"><i class="fa fa-list-ul m-r-sm"></i>List</button>
+						<button class="btn btn-white active" type="button" id="toggle-cards"><i class="fa fa-th m-r-sm"></i>Cards</button>
+
 					</div>
+					
 					
 				</span>
             </div>

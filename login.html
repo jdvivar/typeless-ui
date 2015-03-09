@@ -13,6 +13,9 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+	
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/blue.css" rel="stylesheet">
 
 </head>
 
@@ -47,9 +50,10 @@
 				
 				
 				
-				<div class="checkbox text-left m-l-sm" style="width:50%">
+				<div class="checkbox text-left m-l-n" style="width:50%">
 					<label>
-						<input type="checkbox"> <small>Remember me</small>
+						<input type="checkbox">
+						<small>Remember me</small>
 					</label>
 				</div>
 				
@@ -81,7 +85,25 @@
     <!-- Mainly scripts -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
 
+	<script>
+	$(document).ready(function() {
+		function startiCheck(){
+			$('input').iCheck({
+				checkboxClass: 'icheckbox_square-blue',
+				//checkboxClass: 'icheckbox_square-grey',
+				//checkboxClass: 'icheckbox_polaris',
+				radioClass: 'iradio_square-blue',
+				//radioClass: 'iradio_polaris'
+				increaseArea: '20%' // optional
+			});
+		}
+			
+		startiCheck();
+	});
+	</script>
 </body>
 
 </html>

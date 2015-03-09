@@ -188,7 +188,7 @@ div.cards {
 	width: 70px;
 }
 
-.va-middle{
+.va-middle td, .va-middle th {
 	vertical-align: middle !important;
 }
 
@@ -1215,6 +1215,10 @@ mark {
 
 .panel-info>.panel-heading .badge {
 	color: #3498db;
+}
+
+.fa.collapse-indicator:before {
+  content: "\f055";
 }
 
 /* STUFF ENDS */
@@ -3962,7 +3966,7 @@ table.table-mail tr td {
   margin-left: -40px;
 }
 .m-t-none {
-  margin-top: 0;
+  margin-top: 0!important;
 }
 .m-t-xxs {
   margin-top: 1px;
