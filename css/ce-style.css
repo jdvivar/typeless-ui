@@ -210,6 +210,11 @@
 
 }
 
+.dropdown .ce-initial span.text-white {
+	left: 7px;
+	top: -1px;
+}
+
 
 /* style for mark */
 /* It hasn't got ce prefix because I'm rewriting an html tag style */
