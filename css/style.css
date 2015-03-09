@@ -1221,6 +1221,30 @@ mark {
   content: "\f055";
 }
 
+.row.merge{
+	padding-top: 15px;
+	border: 1px solid transparent;
+}
+
+.row.merge .btn.merge{
+	visibility:hidden;
+}
+
+.row.merge:hover .btn.merge{
+	visibility:visible;
+}
+
+.row.merge:hover {
+	background-color: whitesmoke;
+	border: 1px solid #e5e5e5;
+}
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {

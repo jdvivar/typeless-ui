@@ -169,6 +169,10 @@
 	line-height: 15px;
 }
 
+.ce-dropdown > ul {
+	max-width: 290px;
+}
+
 .ce-footer-logo {
 	background-color: gray;
 	//position:relative;
