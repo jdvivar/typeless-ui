@@ -69,6 +69,8 @@
 						<li><a href="#"><i class="fa fa-exclamation-circle fa-fw m-r-sm"></i><span class="m-r-xl">Incomplete contacts</span><span class="badge filter">12</span></a></li>
 						<li><a href="#"><i class="fa fa-clock-o fa-fw m-r-sm"></i><span class="m-r-xl">Recently added</span><span class="badge filter">391</span></a></li>
 						<li><a href="#"><i class="fa fa-lock fa-fw m-r-sm"></i><span class="m-r-xl">Private</span><span class="badge filter">5</span></a></li>
+						<li><a href="contacts-duplicates.html"><i class="fa fa-copy fa-fw m-r-sm"></i><span class="m-r-xl">Potential duplicates</span><span class="badge filter">3</span></a></li>
+						<li><a href="contacts-merged.html"><i class="fa fa-folder fa-fw m-r-sm"></i><span class="m-r-xl">Merged</span><span class="badge filter">9</span></a></li>
 					  </ul>
 					</div>
 
@@ -1618,9 +1620,9 @@
 			
 				startiCheck();
 				
-				//collapse indicators
-				$("[data-toggle='collapse']").click(function(){
-					
+				$("#share-contacts-modal-regular input#optionsShareModalWhich-2").on('ifToggled', function(event){
+					$("#share-contacts-modal-regular .accounts-checkboxes").slideToggle(500);
+					console.log('ifClicked');
 				});
 				
 			};

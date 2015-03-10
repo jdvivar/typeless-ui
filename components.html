@@ -270,8 +270,8 @@
 		</li>
 	</ul>
 	
-	<button class="btn btn-default m-t m-r pull-right btn-responsive" type="button" id="new-contact-btn" data-toggle="modal" data-tooltip="tooltip" data-placement="bottom" title="New contact"><i class="fa fa-plus fa-fw"></i><span class="m-l-sm"><small>NEW CONTACT</small></span></button>
-	<button class="btn m-t m-r pull-right btn-responsive" type="button" id="share-contacts-btn" data-toggle="modal" data-target="#share-contacts-btn" data-tooltip="tooltip" data-placement="bottom" title="Share contacts">  <!-- define data-target on page -->
+	<button class="btn btn-default m-t m-r pull-right btn-responsive text-700" type="button" id="new-contact-btn" data-toggle="modal" data-tooltip="tooltip" data-placement="bottom" title="New contact"><i class="fa fa-plus fa-fw"></i><span class="m-l-sm"><small>NEW CONTACT</small></span></button>
+	<button class="btn m-t m-r pull-right btn-responsive text-700" type="button" id="share-contacts-btn" data-toggle="modal" data-target="#share-contacts-btn" data-tooltip="tooltip" data-placement="bottom" title="Share contacts">  <!-- define data-target on page -->
 		<i class="fa fa-share-alt fa-fw"></i><span class="m-l-sm"></span> <!-- define button wording on page -->
 	</button>
 </span>
@@ -914,7 +914,7 @@
 			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h5 class="panel-title">
-						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-1"><span class="fa collapse-indicator"></span> Who would you like to share the contacts with?</a>
+						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-1">Who would you like to share the contacts with?</a>
 					</h5>
 				</div>
 				<div id="modal-regular-accordion-1" class="panel-collapse collapse in">
@@ -924,7 +924,7 @@
 								<input type="email" placeholder="Name or e-mail" class="form-control">
 							</div>
 							<div class="form-group">
-								<textarea style="resize:none" class="form-control" placeholder="Optional message" rows="3"></textarea>
+								<textarea style="resize:vertical" class="form-control" placeholder="Optional message" rows="1"></textarea>
 							</div>
 							
 						</form>
@@ -934,59 +934,61 @@
 			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-2"><span class="fa collapse-indicator"></span> Which contacts would you like to share?<span class="badge badge-info pull-right">All your contacts: 3,694</span></a>
+						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-2">Which contacts would you like to share?<span class="badge badge-info pull-right">All your contacts: 3,694</span></a>
 					</h4>
 				</div>
-				<div id="modal-regular-accordion-2" class="panel-collapse collapse">
+				<div id="modal-regular-accordion-2" class="panel-collapse collapse in">
 					<div class="panel-body">
 						<div class="radio" >
 							<span class="badge badge-info pull-right">3,694</span>
 							<label>
-								<input type="radio" name="optionsShareModalWhich"  checked>
+								<input type="radio" name="optionsShareModalWhich" id="optionsShareModalWhich-1" checked>
 								All your contacts
 							</label>
 						</div>
 						<div class="radio" >
 							<label style="vertical-align: top;">
-								<input type="radio" name="optionsShareModalWhich">
-								Only your contacts from the accounts selected:
-								<div class="checkbox" >
-									<span class="badge badge-info pull-right">1,105</span>
-									<label>
-										<input type="checkbox" value="">
-										<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
-									</label>
-								</div>
-								<div class="checkbox" >
-									<span class="badge badge-info pull-right">761</span>
-									<label>
-										<input type="checkbox" value="">
-										<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(daniel@typeless.co)</span>
-									</label>
-								</div>
-								<div class="checkbox" >
-									<span class="badge badge-info pull-right">1,789</span>
-									<label>
-										<input type="checkbox" value="">
-										<i class="fa fa-apple fa-fw m-r-xs"></i>Apple iCloud<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
-									</label>
-								</div>
-								<div class="checkbox" >
-									<span class="badge badge-info pull-right">411</span>
-									<label>
-										<input type="checkbox" value="">
-										<i class="fa fa-facebook-square color-facebook fa-fw m-r-xs"></i>Facebook <span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
-									</label>
+								<input type="radio" name="optionsShareModalWhich" id="optionsShareModalWhich-2">
+								Only your contacts from the accounts selected
+								<div class="accounts-checkboxes" style="display:none">
+									<div class="checkbox" >
+										<span class="badge badge-info pull-right">1,105</span>
+										<label>
+											<input type="checkbox" value="">
+											<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+										</label>
+									</div>
+									<div class="checkbox" >
+										<span class="badge badge-info pull-right">761</span>
+										<label>
+											<input type="checkbox" value="">
+											<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(daniel@typeless.co)</span>
+										</label>
+									</div>
+									<div class="checkbox" >
+										<span class="badge badge-info pull-right">1,789</span>
+										<label>
+											<input type="checkbox" value="">
+											<i class="fa fa-apple fa-fw m-r-xs"></i>Apple iCloud<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+										</label>
+									</div>
+									<div class="checkbox" >
+										<span class="badge badge-info pull-right">411</span>
+										<label>
+											<input type="checkbox" value="">
+											<i class="fa fa-facebook-square color-facebook fa-fw m-r-xs"></i>Facebook <span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+										</label>
+									</div>
 								</div>
 							</label>
 						</div>
 						<div class="radio" >
 							<label style="vertical-align: top;">
 								<span class="badge badge-info pull-right">12,344</span>
-								<input type="radio" name="optionsShareModalWhich"  >
+								<input type="radio" name="optionsShareModalWhich"  id="optionsShareModalWhich-3">
 								Your team contacts<br>
 								<div class="text-gray" style="padding-left:25px;">
-									<small>This includes the contacts in the work e-mail account you used to connect to your team (daniel@typeless.co) plus all the contacts the team members are sharing within the team.</small>
+									<small>Contacts in your work e-mail account connected to your team (daniel@typeless.co) plus contacts the team members are sharing within the team.</small>
 								</div>
 							</label>
 						</div>
@@ -998,10 +1000,10 @@
 			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-3"><span class="fa collapse-indicator"></span> What details would you like to share?<span class="badge badge-success pull-right">Everything</span></a>
+						<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-3">What details would you like to share?<span class="badge badge-success pull-right">Everything</span></a>
 					</h4>
 				</div>
-				<div id="modal-regular-accordion-3" class="panel-collapse collapse">
+				<div id="modal-regular-accordion-3" class="panel-collapse collapse in">
 					<div class="panel-body">
 						<div class="radio">
 						  <label>
