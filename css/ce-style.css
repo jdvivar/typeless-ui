@@ -202,23 +202,18 @@
 
 .ce-initial{
 	position: relative;
+	font-size: 10px;
 }
 
 .ce-initial span.text-white{
 
 	position:absolute;
-	font-size: 18px;
-	left: 8px;
-	top: -3px;
+	font-size: 12px;
+	left: 7px;
+	top: -2px;
 	font-family: monospace;
 
 }
-
-.dropdown .ce-initial span.text-white {
-	left: 7px;
-	top: -1px;
-}
-
 
 /* style for mark */
 /* It hasn't got ce prefix because I'm rewriting an html tag style */
