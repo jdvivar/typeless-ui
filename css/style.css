@@ -379,11 +379,12 @@ div.divider {
 
 .account-box.new-account {
 	color: #888888;
+	border-style: dashed;
 }
 
 
 .account-box.new-account:hover {
-	border : 1px solid #c2c2c2;
+	border : 1px dashed #c2c2c2;
 	background: whitesmoke;	
 }
 
@@ -1062,6 +1063,26 @@ mark {
 	color:white;
 }
 
+.text-100 {
+	font-weight: 100;
+}
+
+.text-200 {
+	font-weight: 200;
+}
+
+.text-300 {
+	font-weight: 300;
+}
+
+.text-400 {
+	font-weight: 400;
+}
+
+.text-500 {
+	font-weight: 500;
+}
+
 .text-600 {
 	font-weight: 600;
 }
@@ -1716,8 +1737,13 @@ fieldset[disabled] .btn-invisible.active {
 .float-e-margins .btn {
   margin-bottom: 5px;
 }
+
 .btn-w-m {
   min-width: 120px;
+}
+
+.btn-w-lg {
+  min-width: 400px;
 }
 
 .btn-navy.btn-outline,.btn-navy.btn-link,.btn-navy.btn-link:hover{

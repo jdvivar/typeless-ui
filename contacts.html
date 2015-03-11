@@ -31,6 +31,10 @@
 		<!-- loaded dinamically -->
 	</span>
 	
+	<span id="modal-windows-3">
+		<!-- loaded dinamically -->
+	</span>
+	
 
 	<div id="notify-wrapper">
 		<span class="m-t-sm" style="display:none" id="timeout-alert">
@@ -1549,7 +1553,8 @@
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
 			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
-			$( "#modal-windows-2" ).load( "components.html #new-contact-modal");
+			$( "#modal-windows-2" ).load( "components.html #new-contact-modal", afterLoadingModal);
+			$( "#modal-windows-3" ).load( "components.html #received-invitation-modal", afterLoadingModal);
 			
 						
 			// callback after loading navbar-top
