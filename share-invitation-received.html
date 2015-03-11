@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Share invitation received | Typeless.</title>
+	
+	<link rel="icon" href="favicon.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/blue.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-3">
+		<!-- loaded dinamically -->
+	</span>
+	
+
+	<div id="notify-wrapper">
+		<span class="m-t-sm" style="display:none" id="timeout-alert">
+			<div class="alert alert-success">
+				Deleted 3 contacts. I'll close myself in 5s. <a class="alert-link" href="#">Undo</a>
+			</div>
+		</span>
+	</div>
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+		<!-- loaded dinamically -->
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" >
+        
+        <div class="white-bg top-navbar" style="margin-top:64px">			
+			
+			<div class="row wrapper white-bg page-heading">
+            </div>
+			
+			<div class="row no-margins" id="alerts-row">
+
+				
+				
+			</div>
+			
+			<div class="wrapper wrapper-content animated fadeIn" >
+				
+				<!-- <div class="text-center h2">title</div> -->
+				
+				<h1 class="text-center line-height-normal m-t-xl">Michael wants to give you access to<br><strong>3,205</strong> contacts.</h1>
+				<div class="text-center m-t-n-sm m-b-lg text-gray small">
+					<a class="text-600 text-gray underline contacts-from">Where are these contacts coming from? <i class="fa fa-caret-down"></i></a><br>
+					<div class="contacts-from-list" style="display:none">
+						Facebook account (m.stepahblome@gmail.com)<br>
+						Facebook account 2 (michael@typeless.co)<br>
+						Google account (m.stepahblome@gmail.com)<br>
+						Salesforce account (michael@typeless.co)<br>
+						Linkedin account (michael@typeless.co)<br>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+					<div class="text-center m-b-xl">
+						<a class="btn btn-success btn-w-lg btn-lg text-700 m-r-lg text-uppercase">Yes, I'd like access to these contacts</a>
+						<a class="btn btn-danger btn-w-lg btn-lg text-700 m-l-lg text-uppercase" >No, I don't want these contacts</a>
+						<br>
+						<a class="text-info underline" style="margin-left:715px">Not sure? Decide later</a>
+					</div>
+					<div class="col-xs-4 text-center p-xs">
+						<div class="well"  style="min-height:190px">
+							<!-- <span class="fa-stack fa-2x">
+							  <i class="fa fa-eye fa-stack-1x"></i>
+							  <i class="fa fa-ban fa-stack-2x text-danger"></i>
+							</span><br> -->
+							<span class="fa-stack fa-2x">
+							  <i class="fa fa-exchange fa-stack-1x"></i>
+							  <i class="fa fa-ban fa-stack-2x text-danger"></i>
+							</span><br>
+							<div class="h4 text-left text-300 line-height-normal">Don't worry, Michael will not have access to your contacts.</div>
+						</div>
+					</div>
+					<div class="col-xs-4 text-center p-xs">
+						<div class="well" style="min-height:190px">
+							<span class="fa-stack fa-2x">
+							  <i class="fa fa-circle fa-stack-2x text-info"></i>
+							  <i class="fa fa-link fa-stack-1x fa-inverse fa-rotate-90"></i>
+							</span><br>
+							<div class="h4 text-left text-300 line-height-normal">All changes to Michael's contact book will update automatically.</div>
+						</div>
+					</div>
+					<div class="col-xs-4 text-center p-xs">
+						<div class="well"  style="min-height:190px">
+						<span class="fa-stack fa-2x">
+						  <i class="fa fa-circle fa-stack-2x text-gray"></i>
+						  <i class="fa fa-cogs fa-stack-1x fa-inverse "></i>
+						</span><br>
+						<div class="h4 text-left text-300 line-height-normal">You can remove these contacts with one click at any time in the future.</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				
+				<div id="space-after"></div>
+			</div>
+			
+			<div class="footer fixed_full custom-footer" id="footer">
+				<!-- loaded dinamically -->
+			</div>
+
+		</div>	
+		
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+	
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+		
+			// loading of components and callbacks		
+			$( "#footer" ).load( "components.html #footer" );
+			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
+			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
+			$( "#modal-windows-2" ).load( "components.html #new-contact-modal", afterLoadingModal);
+			$( "#modal-windows-3" ).load( "components.html #received-invitation-modal", afterLoadingModal);
+			
+						
+			// callback after loading navbar-top
+			function afterLoadingNavbarTop(){
+			
+				/* Placeholder for search bar. Put here for future customisation,
+				   always opt in for the javascript code if available and reasonably human readable */			
+				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
+				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */
+								
+				$('#share-contacts-btn').fadeOut(2000);
+				$('#new-contact-btn').fadeOut(2000);
+				$('.input-group.top-search').fadeOut(2000);
+				$('.navbar-top-links li.dropdown:first-child').fadeOut(2000);
+				$('.navbar-top-links li.dropdown:nth-child(2) .dropdown-menu li:nth-child(4)').fadeOut(2000);
+				$('.navbar-top-links li.dropdown:nth-child(2) .dropdown-menu li:nth-child(5)').fadeOut(2000);			
+				
+			};
+			
+			function afterLoadingNavbarSide(){
+				$("#navbar-side").fadeOut(2000);
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingModal(){
+			
+				startiCheck();
+				
+				$("#share-contacts-modal-regular input#optionsShareModalWhich-2").on('ifToggled', function(event){
+					$("#share-contacts-modal-regular .accounts-checkboxes").slideToggle(500);
+					console.log('ifClicked');
+				});
+				
+			};
+			
+			$(".contact-box input:checkbox").click(function(e) {
+				
+				e.stopPropagation();
+			});			
+			
+			// Space after contacts, so user see how more contacts are added
+			$('#space-after').height($('#space-after').width()/8);			
+			
+			function startiCheck(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_square-blue',
+					//checkboxClass: 'icheckbox_square-grey',
+					//checkboxClass: 'icheckbox_polaris',
+					radioClass: 'iradio_square-blue',
+					//radioClass: 'iradio_polaris'
+					increaseArea: '20%' // optional
+				});
+			}
+			
+			startiCheck();
+			
+			// Activate tooltips
+			$("[data-tooltip='tooltip']").tooltip();
+			
+			$(".contacts-from").click(function(){
+				$('.contacts-from-list').slideToggle(1000);
+				$(this).children("i").caretToggle();
+			});
+			
+			jQuery.fn.extend({
+				caretToggle: function () {
+					var self = $(this);
+					if (self.hasClass("fa-caret-down")) {
+						self.removeClass("fa-caret-down");
+						self.addClass("fa-caret-up");
+					} else if (self.hasClass("fa-caret-up")) {
+						self.removeClass("fa-caret-up");
+						self.addClass("fa-caret-down");
+					};
+				}
+			});
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
