@@ -515,7 +515,7 @@
 	<div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			<h4 class="modal-title">Delete account</h4>
+			<h3 class="modal-title text-600">Delete account</h3>
 		</div>
 		<div class="modal-body">
 			<h2>Did we do something wrong?</h2>
@@ -524,7 +524,7 @@
 				<textarea class="form-control m-t" rows="3" placeholder="We would like to help you get the best out of Typeless. Please, explain us why you want to leave. We promise to answer as soon as we can.
 (OPTIONAL)"></textarea>
 				<div class="text-right">
-					<button class="send-feedback btn btn-info btn-sm m-t">SEND</button>
+					<a class="send-feedback btn text-info btn-invisible text-700 m-t"><small>SEND</small></a>
 					<div class="ok-feedback text-success m-t" style="display:none"><i class="fa fa-check-circle"></i> Thank you!</div>
 				</div>
 				
@@ -550,19 +550,19 @@
 				</div>
 
 				<div class="text-right">
-					<button class="send-feedback btn btn-info btn-sm m-t">SEND</button>
+					<a class="send-feedback btn text-info btn-invisible text-700 m-t"><small>SEND</small></a>
 					<div class="ok-feedback text-success m" style="display:none"><i class="fa fa-check-circle"></i> Thank you!</div>
 				</div>
 				
 			</form>
 			
 			<p class="m-t"><strong>Please note that this deletion cannot be undone.</strong></p>
-			<p>If you click yes we will sent you a confirmation e-mail with a link.	Once confirmed, all the contacts acquired, connections and shares and will be removed.</p>
+			<p>If you click yes we will sent you a confirmation e-mail with a link.	Once confirmed, all the contacts acquired, connections and shares will be removed.</p>
 			
 		</div>
 		<div class="modal-footer">
-			<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
-			<button type="button" class="btn btn-danger" data-dismiss="modal" id="disconnect-confirmation-btn">Yes, I want to delete this account.</button>
+			<a type="button" class="btn btn-invisible text-700 text-uppercase" data-dismiss="modal"><small>Cancel</small></a>
+			<a type="button" class="btn btn-invisible text-700 text-uppercase text-danger" data-dismiss="modal" id="disconnect-confirmation-btn"><small>delete this account</small></a>
 		</div>
 	</div>
   </div>
