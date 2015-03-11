@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Potential duplicates | Typeless.</title>
+	
+	<link rel="icon" href="favicon.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/plugins/pnotify/pnotify.custom.css" rel="stylesheet" />
+	<link href="css/plugins/pnotify/pnotify.buttons.css" rel="stylesheet" />
+	
+	
+    <link href="css/style.css" rel="stylesheet">
+	
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/blue.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<span id="modal-windows">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-2">
+		<!-- loaded dinamically -->
+	</span>
+	
+
+	<div id="notify-wrapper">
+		<span class="m-t-sm" style="display:none" id="timeout-alert">
+			<div class="alert alert-success">
+				Deleted 3 contacts. I'll close myself in 5s. <a class="alert-link" href="#">Undo</a>
+			</div>
+		</span>
+	</div>
+	
+	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+		<!-- loaded dinamically -->
+	</nav>
+	
+	<!-- this next nav needs margin-top 64px if no following wrapper with margin-top of 64px exists -->
+	<nav class="navbar-default navbar-static-side" role="navigation" style="position:fixed;" id="navbar-side">
+		<!-- loaded dinamically -->	
+	</nav>
+	
+				
+    <div id="wrapper" >
+        
+        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">			
+			
+			<div class="row wrapper white-bg page-heading">
+            	<span id="tools" style="">
+				
+					<div class="btn-group m-t m-r">
+					  <button type="button" class="btn btn btn-white"><i class="fa fa-folder fa-fw m-r-sm"></i>Merged <span class="badge">9</span></button>
+					  <button type="button" class="btn btn btn-white dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+						<li><a href="#"><i class="fa fa-circle fa-fw m-r-sm"></i><span class="m-r-xl">Everything</span><span class="badge filter">3,122</span></a></li>
+						<li><a href="#"><i class="fa fa-star fa-fw m-r-sm"></i><span class="m-r-xl">Most contacted</span><span class="badge filter">50</span></a></li>
+						<li><a href="#"><i class="fa fa-share-alt fa-fw m-r-sm"></i><span class="m-r-xl">Shared contacts</span><span class="badge filter">789</span></a></li>
+						<li><a href="#"><i class="fa fa-exclamation-circle fa-fw m-r-sm"></i><span class="m-r-xl">Incomplete contacts</span><span class="badge filter">12</span></a></li>
+						<li><a href="#"><i class="fa fa-clock-o fa-fw m-r-sm"></i><span class="m-r-xl">Recently added</span><span class="badge filter">391</span></a></li>
+						<li><a href="#"><i class="fa fa-lock fa-fw m-r-sm"></i><span class="m-r-xl">Private</span><span class="badge filter">5</span></a></li>
+						<li><a href="contacts-duplicates.html"><i class="fa fa-copy fa-fw m-r-sm"></i><span class="m-r-xl">Potential duplicates</span><span class="badge filter">3</span></a></li>
+						<li><a href="contacts-merged.html"><i class="fa fa-folder fa-fw m-r-sm"></i><span class="m-r-xl">Merged</span><span class="badge filter">9</span></a></li>
+					  </ul>
+					</div>
+
+					
+					
+					<button type="button" class="btn btn btn-default pull-right m-t text-700 unmerge"><small>UNMERGE ALL (9)</small></button>
+					<button type="button" class="btn btn btn-default pull-right m-t text-700 disabled m-r unmerge"><small>UNMERGE SELECTED</small></button>
+					
+					
+				</span>
+            </div>
+			
+			<div class="row no-margins" id="alerts-row">
+
+				
+				
+			</div>
+			
+			<div class="wrapper wrapper-content animated fadeIn" >
+				<div id="card-view">
+					
+					<div class="row cards unmerge">
+					
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							
+								<div class="contact-box m-r m-b" >
+									<div class="row no-margins">
+										
+										<div class="col-sm-10 no-padding">
+											<p class="no-margins contact-name">Virgina Madsen</p>
+											<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+										</div>
+										
+										<div class="col-sm-2 no-padding">
+											<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+										</div>
+										
+											
+									</div>
+									
+									<div class="contact-email">vmadsen@port.com
+										
+										<span class="badge m-l-xs more">2+</span>
+										<div class="show-more" style="display:none;">
+											<span class="text-mute">vmadsen@gmail.com</span>
+											<br>
+											<span class="text-mute">virginia90823@outlook.com</span>
+										</div>	
+									</div>
+									
+									<div class="contact-phone">+44 7001 400 2355
+										<span class="badge m-l-xs more">1+</span>
+										<div class="show-more" style="display:none">
+											<span class="text-mute">+33 9990 345</span>
+										</div>
+									</div>
+									
+									<input type="checkbox">
+									
+								</div>
+							
+						</div>
+						
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
+							<div class="contact-box m-r m-b" >
+								<div class="row no-margins">
+
+									<div class="col-sm-10 no-padding">
+										<p class="no-margins contact-name" style="">Virgina Madsen</p>
+										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
+									</div>
+									
+									<div class="col-sm-2 no-padding">
+										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
+									</div>
+										
+								</div>
+								
+								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
+									<div class="show-more" style="display:none;">
+										<span class="text-mute">vmadsen@gmail.com</span>
+										<br>
+										<span class="text-mute">virginia90823@outlook.com</span>
+									</div>	
+								</div>
+								
+								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
+									<div class="show-more" style="display:none">
+										<span class="text-mute">+33 9990 345</span>
+									</div>
+								</div>
+								
+								<input type="checkbox">
+								
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						
+						
+						
+					</div>
+				
+
+					<a class="btn btn-white btn-rounded btn-block m-t" href="#" id="more-contacts"><i class="fa fa-arrow-down m-r"></i><small>SHOW MORE</small></a>
+				</div>
+			
+				<div id="space-after"></div>
+			</div>
+			
+			<div class="footer fixed_full custom-footer" id="footer">
+				<!-- loaded dinamically -->
+			</div>
+
+		</div>	
+		
+    </div>
+	
+	
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	<script src="js/plugins/pnotify/pnotify.core.js"></script>
+	<script src="js/plugins/pnotify/pnotify.buttons.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <!-- <script src="js/typeless.js"></script> -->
+    <!-- <script src="js/plugins/pace/pace.min.js"></script>	 -->
+	
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+		
+			// loading of components and callbacks		
+			$( "#footer" ).load( "components.html #footer" );
+			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
+			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
+			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
+			$( "#modal-windows-2" ).load( "components.html #new-contact-modal");
+			
+						
+			// callback after loading navbar-top
+			function afterLoadingNavbarTop(){
+			
+				/* Placeholder for search bar. Put here for future customisation,
+				   always opt in for the javascript code if available and reasonably human readable */			
+				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
+				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */
+				
+				// Activate/deactivate button tooltips
+				$(function() {
+					
+					$(window).bind("load resize", function() {
+						if ($(this).width() < 1190) {
+							$("[data-tooltip='tooltip']").tooltip();
+						} else {
+							$("[data-tooltip='tooltip']").tooltip('destroy');
+							// this is destroying all tooltips in the page, although I'm only interested
+							// in destroying the ones that should be responsive...
+						}
+					})
+					
+				})
+
+				
+				// Activate tooltips
+				//$("[data-tooltip='tooltip']").tooltip();
+				
+				// how does it look without results?
+				$('button.no-results').click(function(){
+					$('ul.dropdown-menu.search > *').toggle();
+				});
+				
+			
+				// Share contacts button context-aware
+					
+					// Content of the button
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE CONTACTS</small></span>");
+				
+					// Target of the button
+					$( "#share-contacts-btn" ).attr('data-target','#share-contacts-modal-regular');
+				
+				// new contact button
+				
+				$( "#new-contact-btn" ).attr('data-target','#new-contact-modal');
+				
+				
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingNavbarSide(){
+				// MetsiMenu
+				// (We may need it in the future)
+				$('#side-menu').metisMenu();
+				
+				// inactive all options
+				$('#side-menu li').each(function(index, element) {
+                    $(this).removeClass('active');
+                });
+				
+				// active actual option
+				$('#contacts-link').addClass('active');
+			};
+			
+			// callback after loading navbar-side
+			function afterLoadingModal(){
+			
+				startiCheck();
+				
+				//collapse indicators
+				$("[data-toggle='collapse']").click(function(){
+					
+				});
+				
+			};
+			
+			$(".contact-box input:checkbox").click(function(e) {
+				
+				e.stopPropagation();
+			});
+			
+			// Every time I select or deselect a card...
+			var selected = 0;
+			$(".contact-box input:checkbox").change(function(){
+
+				if ($(this).is(":checked")) {
+					// coming from 0
+					if (selected==0) {
+						$("#share-contacts-btn").addClass("radioactive");
+					}
+					selected++;
+					changeContextToSelected(selected);
+
+					console.log("checking, "+selected);
+				}
+				else {
+					// going to 0
+					if (selected==1) {
+						$("#share-contacts-btn").removeClass("radioactive");
+						changeContextToAll();
+						selected--;
+					}
+					else {
+						selected--;
+						changeContextToSelected(selected);
+					}
+					console.log("unchecking, "+selected);
+				}
+				
+				// TO-DO
+				if (selected==0)
+					changeModalToAll()
+				else
+					changeModalToSelected();
+			});
+			
+			function changeContextToSelected(num){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE "+num+" CONTACTS</small></span>");
+			};
+			function changeContextToAll(){
+				// Content of the button
+				$( "#share-contacts-btn" ).html("<i class=\"fa fa-fw fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE CONTACTS</small></span>");
+			};
+			
+			function glowButton(id){
+				$(id).addClass("radioactive");
+			};
+		
+			// Space after contacts, so user see how more contacts are added
+			$('#space-after').height($('#space-after').width()/8);
+			
+			// Go to profile page if you click on box
+			$('.contact-box').click(function(){
+				console.log('click on .contact-box');
+				window.location = "profile.html";
+			});
+			
+			// Show more contact data when the badge is clicked
+			$('.more').click(function(e) {
+				//console.log('click on .more');
+				e.stopPropagation();
+				//var p = $(this).parent().next('p');
+				var p = $(this).next('.show-more');
+				//console.log('p is: '+p);
+            	p.toggle('fast');
+				setTimeout(function(){p.hide('slow')}, 5000);
+            });
+			
+			// Show more contacts when show more link is clicked
+			$('#more-contacts').click(function(e) {
+				$('.contact-box').fadeIn(800);
+				$('tr').fadeIn(800);
+				return false;
+			});
+
+			
+			function startiCheck(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_square-blue',
+					//checkboxClass: 'icheckbox_square-grey',
+					//checkboxClass: 'icheckbox_polaris',
+					radioClass: 'iradio_square-blue',
+					//radioClass: 'iradio_polaris'
+					increaseArea: '20%' // optional
+				});
+			}
+			
+			startiCheck();
+			
+			PNotify.prototype.options.styling = "fontawesome";
+			
+			var stack_bottomleft = {"dir1": "up", "dir2": "right", "push": "top"};
+			
+			$('.btn.unmerge').click(function(){
+				$('.row.unmerge').slideUp(1000);
+				
+				new PNotify({
+						title: false,
+						text: '<span>You have unmerged 9 contacts.</span><a class=\'pull-right\'>UNDO</a>',
+						icon: false,
+						shadow: false,
+						type: 'success', // others are "notice", "info", "success", or "error".
+						delay: 5000,
+						addclass: 'notifications-style stack-bottomleft type-success',
+						stack: stack_bottomleft,
+						buttons:{
+							sticker: false,
+							closer_hover:false,
+						}
+				});
+			});
+
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
