@@ -17,7 +17,7 @@
 <file name="settings.html" server="ftp.danielvivar.com" local="130679648372256448" remote="130680228000000000" Dst="1" />
 <file name="connecting-auth.html" server="ftp.danielvivar.com" local="130638043267902330" remote="130638081000000000" Dst="1" />
 <file name="connecting-auth-links.html" server="ftp.danielvivar.com" local="130638043267902330" remote="130638081000000000" Dst="1" />
-<file name="login.html" server="ftp.danielvivar.com" local="130700450981297866" remote="130704377400000000" Dst="1" />
+<file name="login.html" server="ftp.danielvivar.com" local="130707149341419888" remote="130707191400000000" Dst="1" />
 <file name="signup.html" server="ftp.danielvivar.com" local="130638043272955703" remote="130638082200000000" Dst="1" />
 <file name="password-recover.html" server="ftp.danielvivar.com" local="130638043272535423" remote="130638081600000000" Dst="1" />
 <file name="signup-login-by-invitation.html" server="ftp.danielvivar.com" local="130706469151434930" remote="130706349000000000" Dst="1" />
@@ -51,8 +51,8 @@
 <file name="sharing-team.html" server="ftp.danielvivar.com" local="130700226840064949" remote="130704377400000000" Dst="1" />
 <file name="sharing-friends.html" server="ftp.danielvivar.com" local="130683031220978500" remote="130687088400000000" Dst="1" />
 <file name="sharing-team-start2.html" server="ftp.danielvivar.com" local="130691858447566118" remote="130691697000000000" Dst="1" />
-<file name="contacts-duplicates.html" server="ftp.danielvivar.com" local="130704574895971985" remote="130705530000000000" Dst="1" />
+<file name="contacts-duplicates.html" server="ftp.danielvivar.com" local="130707334993823112" remote="130707191400000000" Dst="1" />
 <file name="contacts-merged.html" server="ftp.danielvivar.com" local="130703927293023091" remote="130705530000000000" Dst="1" />
-<file name="share-invitation-received.html" server="ftp.danielvivar.com" local="130706451235532593" remote="130706314200000000" Dst="1" />
-<file name="share-invitation-received-new-user.html" server="ftp.danielvivar.com" local="130706495550832283" remote="130706351400000000" Dst="1" />
+<file name="share-invitation-received.html" server="ftp.danielvivar.com" local="130707201782901743" remote="130707191400000000" Dst="1" />
+<file name="share-invitation-received-new-user.html" server="ftp.danielvivar.com" local="130707206961404269" remote="130707191400000000" Dst="1" />
 </dwsync>
