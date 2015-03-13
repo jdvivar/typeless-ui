@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Potential duplicates | Typeless.</title>
+    <title>Unmerge contacts | Typeless.</title>
 	
 	<link rel="icon" href="favicon.png">
 
@@ -61,7 +61,9 @@
 			<div class="row wrapper white-bg page-heading">
             	<span id="tools" style="">
 				
-					<div class="btn-group m-t m-r">
+					<h1 class="pull-left text-400">Unmerge contacts</h1>
+				
+					<div class="btn-group m-t m-r" style="display:none">
 					  <button type="button" class="btn btn btn-white"><i class="fa fa-folder fa-fw m-r-sm"></i>Merged <span class="badge">9</span></button>
 					  <button type="button" class="btn btn btn-white dropdown-toggle" data-toggle="dropdown">
 						<span class="caret"></span>
@@ -80,9 +82,7 @@
 
 					
 					
-					<button type="button" class="btn btn btn-default pull-right m-t text-700 unmerge"><small>UNMERGE ALL (9)</small></button>
-					<button type="button" class="btn btn btn-default pull-right m-t text-700 disabled m-r unmerge"><small>UNMERGE SELECTED</small></button>
-					
+					<button type="button" class="btn btn btn-navy pull-right m-t text-700 unmerge"><small>UNMERGE ALL (2)</small></button>
 					
 				</span>
             </div>
@@ -94,7 +94,103 @@
 			</div>
 			
 			<div class="wrapper wrapper-content animated fadeIn" >
-				<div id="card-view">
+				<div class="">
+					<div class="well white-bg" style="position:relative">
+						<a class="btn btn-invisible text-navy text-uppercase text-700 pull-right"><small>unmerge</small></a>
+						<!-- <a class="btn btn-invisible text-gray text-uppercase text-600 pull-right"><small>dismiss</small></a> -->
+						<!-- <span class="pull-right m-t-sm m-r small">Is this the same contact?</span> -->
+						<!-- <a class="btn btn-invisible text-gray text-uppercase text-600" style="position:absolute;right:15px;top:15px"><small>merge</small></a> -->
+						<h3 class="text-600">Virginia Madsen</span></h3>
+						<hr>
+						<div class="row">
+							
+							<div class="col-xs-2">
+								<img alt="image" class="img-circle" src="img/a18.jpg" style="width:64px;height:64px">
+							</div>
+							<div class="col-xs-3">
+								<strong>Virginia</strong><br>
+								+44 7778 567 933
+							</div>
+							<div class="col-xs-2">
+								<img class="m-l-xs" src="img/logo-only-icon-320p.png" width="14px"><br>
+								<span class="label label-white">MOBILE</span>
+							</div>
+						</div>							
+						<hr>
+						<div class="row">
+							
+							<div class="col-xs-2">
+								<img alt="image" class="img-circle" src="img/a18.jpg" style="width:64px;height:64px">
+							</div>
+							<div class="col-xs-3">
+								<strong>Virginia Madsen</strong><br>
+								+44 7778 567 933<br>
+								v.madsen@acme.org
+							</div>
+							<div class="col-xs-2">
+								<i class="fa fa-facebook-square fa-fw color-facebook m-l-xs"></i><i class="fa fa-google fa-fw color-google m-l-xs"></i><br>
+								<span class="label label-white">MOBILE</span><br>
+								<span class="label label-white">WORK</span>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							
+							<div class="col-xs-2">
+								<!-- <img alt="image" class="img-circle m-l-sm" src="img/a18.jpg" style="width:64px;height:64px"> -->
+								<img class="img-circle" src="http://placehold.it/64x64&text=NO PICTURE">
+							</div>
+							<div class="col-xs-3">
+								<strong>Virginia Madsen</strong><br>
+								+44 020 7234 3390
+							</div>
+							<div class="col-xs-2">
+								<i class="fa fa-google fa-fw color-google m-l-xs"></i><br>
+								<span class="label label-white">HOME</span>
+							</div>
+						</div>	
+					</div>
+					<div class="well white-bg" style="position:relative">
+						<a class="btn btn-invisible text-navy text-uppercase text-700 pull-right"><small>unmerge</small></a>
+						<h3 class="text-600">Michael Rearden</span></h3>
+						<hr>
+						<div class="row">
+	
+							<div class="col-xs-2">
+								<img alt="image" class="img-circle" src="img/a15.jpg" style="width:64px;height:64px">
+							</div>
+							<div class="col-xs-3">
+								<strong>Michael Rearden</strong><br>
+								Recruiter at Saloom
+							</div>
+							<div class="col-xs-2">
+								<i class="fa fa-linkedin-square fa-fw color-linkedin m-l-xs"></i><br>
+								<span class="label label-white">JOB TITLE</span>
+							</div>
+						</div>							
+						<hr>
+						<div class="row">
+
+							<div class="col-xs-2">
+								<img alt="image" class="img-circle" src="img/a15.jpg" style="width:64px;height:64px">
+							</div>
+							<div class="col-xs-3">
+								<strong>Michael Rearden</strong><br>
+								+44 7778 567 933<br>
+								michael@acme.org
+							</div>
+							<div class="col-xs-2">
+								<i class="fa fa-google fa-fw color-google m-l-xs"></i><i class="fa fa-apple fa-fw m-l-xs"></i><br>
+								<span class="label label-white">MOBILE</span><br>
+								<span class="label label-white">WORK</span>
+							</div>
+						</div>
+							
+					</div>
+				
+				</div>
+				
+				<div id="card-view" style="display:none">
 					
 					<div class="row cards unmerge">
 					
@@ -517,7 +613,9 @@
                 });
 				
 				// active actual option
-				$('#contacts-link').addClass('active');
+				$('#merge-menu').addClass('active');
+				$('#unmerge-link').addClass('active');
+				$('#merge-menu>ul').addClass('collapse in');
 			};
 			
 			// callback after loading navbar-side
