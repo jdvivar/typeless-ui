@@ -3881,6 +3881,7 @@ table.table-mail tr td {
 .text-gray {
   color: #7f8c8d!important; /* flat dark gray */
 }
+
 .text-yellow {
   color: #f1c40f!important; /* flat yellow */
 }
@@ -3891,6 +3892,10 @@ table.table-mail tr td {
 
 .text-black {
   color: black!important;
+}
+
+.text-gray-hover:hover {
+  color: #7f8c8d!important; /* flat dark gray */
 }
 
 /* TEXT ALIGNS*/
