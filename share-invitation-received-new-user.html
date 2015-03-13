@@ -71,7 +71,7 @@
 				
 				<!-- <div class="text-center h2">title</div> -->
 				
-				<h1 class="text-center line-height-normal m-t-xl"><img class="img-circle" src="./img/a18.jpg"><br>Karen wants to give you access to<br><strong>3,205</strong> contacts.</h1>
+				<h1 class="text-center line-height-normal m-t-xl"><img class="img-circle" src="./img/a18.jpg"><br>Karen Stephanblome wants to give you access to<br><strong>3,205</strong> contacts.</h1>
 				<div class="text-center m-t-n-sm m-b-lg text-gray small">
 					<a class="text-600 text-gray underline contacts-from">Where are these contacts coming from? <i class="fa fa-caret-down"></i></a><br>
 					<div class="contacts-from-list" style="display:none">
@@ -88,40 +88,23 @@
 						<a class="btn btn-success btn-w-lg btn-lg text-700 m-r-lg text-uppercase">Yes, I'd like access to these contacts</a>
 						<a class="btn btn-danger btn-w-lg btn-lg text-700 m-l-lg text-uppercase" >No, I don't want these contacts</a>
 						<br>
-						<a class="text-info underline" style="margin-left:715px">Not sure? Decide later</a>
+						<!-- <a class="text-info underline" style="margin-left:715px">Not sure? Decide later</a> -->
+						<p class="m-t-xl h4 text-400 line-height-normal">
+							Typeless brings all your contacts together from your favourite online services.<br>
+							Like Karen, you too can collaborate with your friends and colleagues on contacts. 
+							<!-- It helps you collaborate with your friends and colleagues on contacts, like Karen just did sharing contacts with you.<br> -->
+							
+						</p>
+						<!-- <a><img class="m-t-xl" style="border-radius:15px" src="./img/video-placeholder.png"></a> -->
+						<img class="m-t-xl" src="./img/logo-only-icon-original.png" width="5%"><br>
+						<img class="m-t" src="./img/logo-only-letters-1000p.png" width="10%">
+						
 					</div>
-					<div class="col-xs-4 text-center p-xs">
-						<div class="well"  style="min-height:190px">
-							<!-- <span class="fa-stack fa-2x">
-							  <i class="fa fa-eye fa-stack-1x"></i>
-							  <i class="fa fa-ban fa-stack-2x text-danger"></i>
-							</span><br> -->
-							<span class="fa-stack fa-2x">
-							  <i class="fa fa-exchange fa-stack-1x"></i>
-							  <i class="fa fa-ban fa-stack-2x text-danger"></i>
-							</span><br>
-							<div class="h4 text-left text-300 line-height-normal">Don't worry, Michael will not have access to your contacts.</div>
-						</div>
-					</div>
-					<div class="col-xs-4 text-center p-xs">
-						<div class="well" style="min-height:190px">
-							<span class="fa-stack fa-2x">
-							  <i class="fa fa-circle fa-stack-2x text-info"></i>
-							  <i class="fa fa-link fa-stack-1x fa-inverse fa-rotate-90"></i>
-							</span><br>
-							<div class="h4 text-left text-300 line-height-normal">All changes to Michael's contact book will update automatically.</div>
-						</div>
-					</div>
-					<div class="col-xs-4 text-center p-xs">
-						<div class="well"  style="min-height:190px">
-						<span class="fa-stack fa-2x">
-						  <i class="fa fa-circle fa-stack-2x text-gray"></i>
-						  <i class="fa fa-cogs fa-stack-1x fa-inverse "></i>
-						</span><br>
-						<div class="h4 text-left text-300 line-height-normal">You can remove these contacts with one click at any time in the future.</div>
-						</div>
-					</div>
+					
+				
+
 					<div class="clearfix"></div>
+					<br><br><br><br><br><br>
 				</div>
 				
 				<div id="space-after"></div>
@@ -153,7 +136,7 @@
         $(document).ready(function() {
 		
 			// loading of components and callbacks		
-			$( "#footer" ).load( "components.html #footer" );
+			//$( "#footer" ).load( "components.html #footer" );
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
 			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
@@ -173,8 +156,7 @@
 				$('#new-contact-btn').fadeOut(2000);
 				$('.input-group.top-search').fadeOut(2000);
 				$('.navbar-top-links li.dropdown:first-child').fadeOut(2000);
-				$('.navbar-top-links li.dropdown:nth-child(2) .dropdown-menu li:nth-child(4)').fadeOut(2000);
-				$('.navbar-top-links li.dropdown:nth-child(2) .dropdown-menu li:nth-child(5)').fadeOut(2000);			
+				$('.navbar-top-links li.dropdown:nth-child(2)').fadeOut(2000);	
 				
 			};
 			
