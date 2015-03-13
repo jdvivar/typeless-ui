@@ -1604,6 +1604,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 
 .navbar-fixed-top {
   background: #fff;
+  min-height:64px;
   min-width:1009px;
   transition-duration: 0.5s;
   border-bottom: 1px solid #e7eaec !important;
@@ -2570,6 +2571,7 @@ button.dim:active:before {
 
 .tooltip-inner {
   background-color: #999999;
+  max-width:250px;
 }
 .tooltip.top .tooltip-arrow {
   border-top-color: transparent;
