@@ -71,20 +71,23 @@
 				
 				<!-- <div class="text-center h2">title</div> -->
 				
-				<h1 class="text-center line-height-normal m-t-xl"><img class="img-circle" src="./img/a18.jpg"><br>Karen Stephanblome wants to give you access to<br><strong>3,205</strong> contacts.</h1>
-				<div class="text-center m-t-n-sm m-b-lg text-gray small">
-					<a class="text-600 text-gray underline contacts-from">Where are these contacts coming from? <i class="fa fa-caret-down"></i></a><br>
-					<div class="contacts-from-list" style="display:none">
-						Facebook account (m.stepahblome@gmail.com)<br>
-						Facebook account 2 (michael@typeless.co)<br>
-						Google account (m.stepahblome@gmail.com)<br>
-						Salesforce account (michael@typeless.co)<br>
-						Linkedin account (michael@typeless.co)<br>
+				<div class="" style="width:220px;position:absolute">
+					<div class="well well-sm white-bg m-l m-t-sm">
+						<div class="text-600 text-gray">Access level:</div>
+						<div>Everything <i class="fa fa-info-circle text-info" data-tooltip="tooltip" data-placement="bottom" title="Karen has given you full access to these contacts, including phone numbers, e-mails and any other details."></i></div>
+					</div>
+					<div class="well well-sm white-bg m-l">
+						<div class="text-600 text-gray">Where are these contacts coming from?</div>
+						<i class="fa fa-google color-google" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael.stephamblome@gmail.com<br>michael@typeless.co"></i>&nbsp;
+						<i class="fa fa-facebook-square color-facebook" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael.stephamblome@gmail.com"></i>&nbsp;
+						<i class="fa fa-linkedin-square color-linkedin" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael@typeless.co"></i>&nbsp;
 					</div>
 				</div>
 				
-				<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-					<div class="text-center m-b-xl">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1" style="margin-left:220px">
+					<h1 class="text-center line-height-normal m-t-xl"><img class="img-circle" src="./img/a18.jpg"><br>Karen Stephanblome wants to give you access to<br><strong>3,205</strong> contacts.</h1>
+					
+					<div class="text-center m-t-xl m-b-xl">
 						<a class="btn btn-success btn-w-lg btn-lg text-700 m-r-lg text-uppercase">Yes, I'd like access to these contacts</a>
 						<a class="btn btn-danger btn-w-lg btn-lg text-700 m-l-lg text-uppercase" >No, I don't want these contacts</a>
 						<br>
@@ -136,7 +139,7 @@
         $(document).ready(function() {
 		
 			// loading of components and callbacks		
-			//$( "#footer" ).load( "components.html #footer" );
+			$( "#footer" ).load( "components.html #footer" );
 			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
 			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
 			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
