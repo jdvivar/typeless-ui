@@ -92,11 +92,11 @@ h5 {
 
 .panel-body a {
   font-size: 14px;
-  color: gray;
+  //color: gray;
 }
 
 .panel-body a:hover {
-  color: black;
+  //color: black;
 }
 
 .top-navbar {
@@ -361,8 +361,10 @@ div.divider {
 }
 
 .account-name {
-	width: 72%;
-	word-break: break-all;
+	//width: 80%;
+	margin-left: 50px;
+	line-height: 40px;
+	//word-break: break-all;
 }
 
 .refresh-account {
@@ -685,8 +687,8 @@ a.underline:hover {
 }
 
 .notifications-style  .ui-pnotify-text  a{
-	text-transform:uppercase;
-	margin-left:10px;
+	//text-transform:uppercase;
+	//margin-left:10px;
 	color:inherit;
 }
 
@@ -889,6 +891,14 @@ a.underline:hover {
 	color: rgb(15,126,184);
 }
 
+.color-salesforce {
+	color: #189cd8;
+}
+
+.color-office365 {
+	color: #e73f24;
+}
+
 .label.upper, .badge.upper {
 	position: relative;
 	bottom:12px;
@@ -1084,11 +1094,11 @@ mark {
 }
 
 .text-600 {
-	font-weight: 600;
+	font-weight: 600!important;
 }
 
 .text-700 {
-	font-weight: 700;
+	font-weight: 700!important;
 }
 
 .table-hide-actions tbody tr:hover a.btn {
@@ -1264,6 +1274,40 @@ mark {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.panel-account .dropdown-menu {
+	padding: 5px 0;
+	margin: 2px 0 0;
+}
+
+.panel-account .dropdown-menu > li > a{
+	font-size: 12px;
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	line-height: 1.42857143;
+	color: #333;
+	white-space: nowrap;
+	margin: 0;
+	border-radius: 0;
+}
+
+.panel.new-account {
+	//border-style:dashed;
+}
+
+.panel.new-account>.panel-heading{
+	//border-bottom-style: dashed;
+}
+
+.btn-new-account {
+	box-shadow: 1px 1px 5px 0px gray;
+}
+
+.btn-new-account:hover {
+	//border: 1px solid black;
+	box-shadow: 1px 1px 5px 0px black;
 }
 
 /* STUFF ENDS */
@@ -1673,7 +1717,7 @@ body.mini-navbar #page-wrapper {
 	font-size: 12px;
 }
 
-.btn:hover:not(.btn-outline):not(.btn-link):not(.btn-invisible):not(.ce-button){
+.btn:hover:not(.btn-outline):not(.btn-link):not(.btn-invisible):not(.ce-button):not(.btn-new-account){
   box-shadow:0px 0px 10px 2px rgba(0,0,0,0.15) inset;
   //border-color: #7f8c8d;
   //color: #7f8c8d;
@@ -3908,7 +3952,7 @@ table.table-mail tr td {
 }
 
 .text-right {
-  text-align: right;
+  text-align: right!important;
 }
 
 /* WIDTHS & HEIGHTS*/
