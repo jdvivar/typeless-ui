@@ -27,9 +27,14 @@
 	</span>
 
 	<div id="notify-wrapper">
-		<span class="m-t-sm" style="display:none" id="timeout-alert">
-			<div class="alert alert-success">
-				Deleted 1 account. <a class="alert-link" href="#"> <i class="fa fa-undo"></i> Undo</a>
+		<span class="m-t-sm" style="display:inline-block">
+			<div id="alert-deleted" class="alert alert-google-style alert-dismissible fade in" style="display:none">
+				<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+				The account 'Facebook' has been removed. <a class="alert-link" href="#">Undo</a>
+			</div>
+			<div id="alert-added" class="alert alert-google-style alert-dismissible fade in" style="display:none">
+				<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+				A new Salesforce account has been added.
 			</div>
 		</span>
 	</div>
@@ -49,6 +54,8 @@
         <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">	
 
 			<div class="row wrapper white-bg page-heading">
+				<div class="h4 pull-left text-600 m-t-md">Connected accounts</div>
+				<div class="pull-right m-t-md">We will never contact or spam your contacts.</div>
             	<span id="tools" style="">
 					<button class="btn btn-sm btn-outline btn-success m-t m-r-sm" type="button" id="new-account-btn" style="display:none">
 						<i class="fa fa-plug m-r-sm"></i>Connect new account
@@ -63,7 +70,8 @@
 				</span>
             </div>
 			
-			<div class="row">
+			<div class="row" style="display:none">
+			
 					<div class="col-sm-3 text-center p-m">
 						<img class="" src="./img/socialbox-icon.png" width="70%" style="margin-top:50px">
 					</div>
@@ -76,79 +84,6 @@
 						
 					</div>
 					
-										
-					<!-- <div class="col-lg-3 col-sm-6 m-t-lg">
-						<div class="col-xs-6 no-padding">
-							<img class="img-circle img-responsive" src="img/satish-sq.jpg" style=""></img>
-						</div>
-						<div class="col-xs-6">
-							<div style="font-size:1.5em">Michael Stephanblome</div>
-						</div>
-					</div> -->
-					
-					
-					<!-- <div class="col-lg-3 col-sm-6 m-t-lg">
-						<div class="widget yellw-bg no-padding">
-							<div class="m-l">
-								<h1 class="">3.122 contacts</h1>
-							</div>
-							<div class="flot-chart m-t-n-md">
-								<div class="flot-chart-content" id="flot-chart3" style="padding: 0px; position: relative;">
-								</div>
-							</div>
-						</div>
-					</div> -->
-					
-					<!-- <div class="col-lg-3 col-sm-6 m-t-lg">
-						<div class="widget style1">
-							<div class="row">
-								
-									<div class="pull-left" style="font-size:5em; font-weight:100">145</div>
-								
-									<div class="text-right m-t-md">
-										<h3 class="font-bold no-margins">
-											New<br>contacts
-										</h3>
-										<small >Last 90 days</small>
-									</div>
-									
-								
-							</div>
-						</div>
-					</div> -->
-					
-					<!-- <div class="col-lg-3 col-sm-6 m-t-lg">
-						<div class="widget style1">
-							<div class="row">
-								
-									<div class="pull-left" style="font-size:5em; font-weight:100">789</div>
-								
-									<div class="text-right m-t-md">
-										<h3 class="font-bold no-margins">
-											Shared<br>contacts
-										</h3>
-										<small ></small>
-									</div>
-									
-								
-							</div>
-						</div>
-					</div> -->
-					
-					<!-- Saved for a better time! :) -->
-					<!-- <div class="col-lg-3 col-sm-6 m-b m-t-lg">
-						<div class="widget text-center no-padding">
-							<div class="m-b-md">
-								<div class="chart-rank" data-percent="65">
-								</div>
-								<h1 class="font-bold">65%</h1>
-								<h2 class="no-margins">
-									Your rank
-								</h2>
-								<button type="button" class="btn btn-outline btn-info btn-xs m-t-sm">How to improve it?</button>
-							</div>
-						</div>
-					</div> -->
 			</div>
 			
 			
@@ -161,165 +96,206 @@
 			
 			<div class="wrapper wrapper-content animated fadeIn" >
 			
-				<div class="menu row-masonry-account">
-					<div class="row-brick">
-						<div class="panel panel-account panel-default">
-						
-							<div class="panel-heading">
-								<span class="pull-right"><i class="fa fa-fw fa-google"></i> Google</span>
-								<div class="account-name dropdown">donald.draper.very.long@gmail.com
-								
-									<span class="caret dropdown-toggle"  data-toggle="dropdown" aria-expanded="true"></span>
-								 
-								  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">RENAME</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
-								  </ul>
-								</div>
-							</div>
-							<div class="panel-body small">
-								<div class="m-t">
-									<span class="badge badge-success">930</span> contacts <span class="badge badge-info m-l-xs">51</span> shared
-									<span class="pull-right"><i class="fa fa-fw fa-plug"></i> 1 day ago</span>
-								</div>
-								<div class="divider m-b m-t"></div>
-								<a class="btn btn-invisible btn-xs disconnect-btn text-primary"><small>DISCONNECT</small></a>
-								
-								<div class="refresh-account pull-right text-warning text-right" >
-									
-									<span class="fa-stack" >
-									  <i class="fa fa-frown-o fa-stack-2x "></i>
-									</span>	
-									Not connected, click to try again
-									
-								</div>
-								
-							</div>
-
-						</div>
-					</div>
-					<div class="row-brick">
-						<div class="panel panel-account  panel-default">
-						
-							<div class="panel-heading">
-								<span class="pull-right"><i class="fa fa-fw fa-google"></i> Google <a class="label label-info" href="/typeless/sharing-team-start2.html" data-tooltip="tooltip" data-placement="bottom" title="This account is supported by Typeless for Teams. Click to go to My Team."><i class="fa fa-users"></i> TEAMS</a></span>
-								<div class="account-name dropdown">donald.draper.very.long@gmail.com
-								
-									<span class="caret dropdown-toggle"  data-toggle="dropdown" aria-expanded="true"></span>
-								 
-								  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">RENAME</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
-								  </ul>
-								</div>
-							</div>
-							<div class="panel-body small">
-								<div class="m-t">
-									<span class="badge badge-success">930</span> contacts <span class="badge badge-info m-l-xs">51</span> shared
-									<span class="pull-right"><i class="fa fa-fw fa-users"></i> 1 week ago </span>
-									<span class="pull-right m-r"><i class="fa fa-fw fa-plug"></i> 25 days ago </span>
-								</div>
-								<div class="divider m-b m-t"></div>
-								<a class="btn btn-invisible btn-xs disconnect-btn text-primary"><small>DISCONNECT</small></a>
-								
-								<div class="refresh-account pull-right text-warning text-right" >
-									
-									<span class="fa-stack" >
-									  <i class="fa fa-frown-o fa-stack-2x "></i>
-									</span>	
-									Not connected, click to try again
-									
-								</div>
-								
-							</div>
-
-						</div>
-					</div>
-					<div class="row-brick">
-						<div class="panel panel-account panel-default">
-						
-							<div class="panel-heading">
-								<span class="pull-right"><i class="fa fa-fw fa-google"></i> Google</span>
-								<div class="account-name">donald.draper.very.long@gmail.com</div>
-							</div>
-							<div class="panel-body small">
-								<div class="m-t">
-									<span class="badge badge-success">930</span> contacts <span class="badge badge-info m-l-xs">51</span> shared
-									<span class="pull-right"><i class="fa fa-fw fa-plug"></i> 1 day ago</span>
-								</div>
-								<div class="divider m-b m-t"></div>
-								<a class="btn btn-invisible btn-xs disconnect-btn text-primary"><small>DISCONNECT</small></a>
-								
-								<div class="refresh-account pull-right text-warning text-right" >
-									
-									<span class="fa-stack" >
-									  <i class="fa fa-frown-o fa-stack-2x "></i>
-									</span>	
-									Not connected, click to try again
-									
-								</div>
-								
-							</div>
-
-						</div>
-					</div>
-					<div class="row-brick">
-						<div class="panel panel-account panel-default">
-						
-							<div class="panel-heading">
-								<span class="pull-right"><i class="fa fa-fw fa-google"></i> Google</span>
-								<div class="account-name">donald.draper.very.long@gmail.com</div>
-							</div>
-							<div class="panel-body small">
-								<div class="m-t">
-									<span class="badge badge-success">930</span> contacts <span class="badge badge-info m-l-xs">51</span> shared
-									<span class="pull-right"><i class="fa fa-fw fa-plug"></i> 1 day ago</span>
-								</div>
-								<div class="divider m-b m-t"></div>
-								<a class="btn btn-invisible btn-xs disconnect-btn text-primary"><small>DISCONNECT</small></a>
-								
-								<div class="refresh-account pull-right text-warning text-right" >
-									
-									<span class="fa-stack" >
-									  <i class="fa fa-frown-o fa-stack-2x "></i>
-									</span>	
-									Not connected, click to try again
-									
-								</div>
-								
-							</div>
-
-						</div>
-					</div>
+				<div class="row">
 					
-					
-					<div class="row-brick">
-						<div class="account-box new-account text-center">
-							<i class="fa fa-plus fa-5x text-center"></i>
-							<!-- <div class="text-center m-t-sm small text-uppercase">Connect new account</div> -->
-							<br>
-							<a class="btn btn-invisible"><span class="fa fa-facebook-square color-facebook"></span> Facebook</a>
-							<a class="btn btn-invisible"><span class="fa fa-linkedin-square color-linkedin"></span> Linkedin</a>
-							<a class="btn btn-invisible"><span class="fa fa-stack" style="font-size:7.5px">
-															  <span class="fa fa-square fa-stack-2x color-google"></span>
-															  <span class="fa fa-google fa-stack-1x fa-inverse"></span>
-															</span>
-															Google</a>
-							<a class="btn btn-invisible"><img src="./img/salesforce-logo-100.png" width="18px"> Salesforce</a>
-							<a class="btn btn-invisible"><img src="./img/microsoft-office-logo-100.png" width="18px"> Office 365</a>
+						<div class="panel panel-account panel-default new-account m-r m-l">
+						
+							<div class="panel-heading text-center">
+								<span class="pull-left m-r-xs" style="display:none">
+									<span class="fa-stack" style="font-size:1.5em;">
+									  <i class="fa fa-circle fa-stack-2x text-muted"></i>
+									  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+									</span>
+								</span>
+								<div class="text-600 truncate">Add a new account</div>
+								<div class="text-300 text-gray">Click on the service you want to connect</div>
+								
+							</div>
+							<div class="panel-body small text-center">
+								
+								<a id="add-account-facebook" class="btn btn-new-account m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Facebook account" style="background-color:#314a80"><img src="./img/logo-service-facebook-circle.png" width="40px"></a>
+								<a id="add-account-linkedin" class="btn btn-new-account m-l m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Linkedin account" style="background-color:rgb(15,126,184)"><img src="./img/logo-service-linkedin-circle.png" width="40px"></a>
+								<a id="add-account-google" class="btn btn-new-account m-l m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Google account" style="background-color:#166cf2"><img src="./img/logo-service-google-circle.png" width="40px"></a>
+								<a id="add-account-salesforce" class="btn btn-new-account m-l m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Salesforce account" style="background-color:white"><img src="./img/salesforce-logo-100.png" width="40px"></a>
+								<a id="add-account-office365" class="btn btn-new-account m-l m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add an Office 365 account" style="background-color:#e73f24"><img src="./img/logo-service-office365-circle.png" width="40px"></a>
+							</div>
 						</div>
-					</div>					
+					
+				</div>
+				
+				<div class="row">
+					
+						<div class="col-lg-4 col-md-6 col-sm-12 account-box-google m-t" style="display:none">
+							<div class="panel panel-account panel-default">
+								<div class="panel-heading">
+									<span class="pull-left">
+										<img src="./img/logo-service-google-circle.png" width="40px">
+									</span>
+									<div class="account-name text-600 truncate" contenteditable="true">don.draper@gmail.com</div><a class="edit m-t-sm m-l-sm"><i class="fa fa-pencil"></i></a><a class="save m-t-sm m-l-sm"><i class="fa fa-save"></i></a>
+								</div>
+								<div class="panel-body small">
+									
+									<div class="dropdown" style="display:inline-block">
+										<button class="btn btn btn-info btn-outline dropdown-toggle" data-toggle="dropdown">Connected <i class="fa fa-caret-down" ></i></button>
+										<ul class="dropdown-menu by-hover m-t" role="menu" aria-labelledby="dropdownMenu1">
+											<li role="presentation"><a class="text-700 text-info " role="menuitem" tabindex="-1" href="#">FIND NEW CONTACTS</a></li>
+											<li role="presentation"><a class="text-700 text-danger disconnect-btn" role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
+										</ul>
+									</div>
+									<button class="pull-right btn btn btn-info text-uppercase text-700"><small>View contacts (930)</small></button>
+									
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-6 col-sm-12 account-box-facebook m-t" style="display:none">
+							<div class="panel panel-account panel-default">
+								<div class="panel-heading">
+									<span class="pull-left">
+										<img src="./img/logo-service-facebook-circle.png" width="40px">
+									</span>
+									<div class="account-name text-600 truncate" contenteditable="true">Facebook</div><a class="edit m-t-sm m-l-sm"><i class="fa fa-pencil"></i></a><a class="save m-t-sm m-l-sm"><i class="fa fa-save"></i></a>
+								</div>
+								<div class="panel-body small">
+									
+									<div class="dropdown" style="display:inline-block">
+										<button class="btn btn btn-danger btn-outline dropdown-toggle" data-toggle="dropdown">Not connected <i class="fa fa-caret-down" ></i></button>
+										<ul class="dropdown-menu by-hover m-t" role="menu" aria-labelledby="dropdownMenu1">
+											<li role="presentation"><a class="text-700 text-info " role="menuitem" tabindex="-1" href="#">CONNECT NOW</a></li>
+											<li role="presentation"><a class="text-700 text-danger disconnect-btn" role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
+										</ul>
+									</div>
+									<span class="pull-right" style="display:inline-block" data-tooltip="tooltip" data-placement="bottom" title="Connect to see your contacts">
+									<button class=" btn btn btn-info text-uppercase text-700 disabled" ><small>View contacts (456)</small></button>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-6 col-sm-12 account-box-salesforce m-t" style="display:none">
+							<div class="panel panel-account panel-default">
+								<div class="panel-heading">
+									<span class="pull-left">
+										<img src="./img/logo-service-salesforce-circle.png" width="40px">
+									</span>
+									<div class="account-name text-600 truncate" contenteditable="true">Salesforce</div><a class="edit m-t-sm m-l-sm"><i class="fa fa-pencil"></i></a><a class="save m-t-sm m-l-sm"><i class="fa fa-save"></i></a>
+								</div>
+								<div class="panel-body small">
+									
+									<div class="dropdown" style="display:inline-block">
+										<button class="btn btn btn-info btn-outline dropdown-toggle" data-toggle="dropdown">Connected <i class="fa fa-caret-down" ></i></button>
+										<ul class="dropdown-menu by-hover m-t" role="menu" aria-labelledby="dropdownMenu1">
+											<li role="presentation"><a class="text-700 text-info " role="menuitem" tabindex="-1" href="#">FIND NEW CONTACTS</a></li>
+											<li role="presentation"><a class="text-700 text-danger disconnect-btn" role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
+										</ul>
+									</div>
+									<span class="pull-right" style="display:inline-block" data-tooltip="tooltip" data-placement="bottom" title="It takes just a minute">
+									<button class=" btn btn btn-info text-uppercase text-700 disabled" ><small>Loading <i class="fa fa-spinner fa-pulse"></i></small></button>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-6 col-sm-12 account-box-linkedin m-t" style="display:none">
+							<div class="panel panel-account panel-default">
+								<div class="panel-heading">
+									<span class="pull-left">
+										<img src="./img/logo-service-linkedin-circle.png" width="40px">
+									</span>
+									<div class="account-name text-600 truncate" contenteditable="true">Linkedin</div><a class="edit m-t-sm m-l-sm"><i class="fa fa-pencil"></i></a><a class="save m-t-sm m-l-sm"><i class="fa fa-save"></i></a>
+								</div>
+								<div class="panel-body small">
+									
+									<div class="dropdown" style="display:inline-block">
+										<button class="btn btn	btn-info btn-outline dropdown-toggle" data-toggle="dropdown">Connected <i class="fa fa-caret-down" ></i></button>
+										<ul class="dropdown-menu by-hover m-t" role="menu" aria-labelledby="dropdownMenu1">
+											<li role="presentation"><a class="text-700 text-info " role="menuitem" tabindex="-1" href="#">FIND NEW CONTACTS</a></li>
+											<li role="presentation"><a class="text-700 text-danger disconnect-btn" role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
+										</ul>
+									</div>
+									<button class="pull-right btn btn btn-info text-uppercase text-700"><small>View contacts (930)</small></button>
+									
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-6 col-sm-12 account-box-office365 m-t" style="display:none">
+							<div class="panel panel-account panel-default">
+								<div class="panel-heading">
+									<span class="pull-left">
+										<img src="./img/logo-service-office365-circle.png" width="40px">
+									</span>
+									<div class="account-name text-600 truncate" contenteditable="true">Office 365</div><a class="edit m-t-sm m-l-sm"><i class="fa fa-pencil"></i></a><a class="save m-t-sm m-l-sm"><i class="fa fa-save"></i></a>
+								</div>
+								<div class="panel-body small">
+									
+									<div class="dropdown" style="display:inline-block">
+										<button class="btn btn btn-info btn-outline dropdown-toggle" data-toggle="dropdown">Connected <i class="fa fa-caret-down" ></i></button>
+										<ul class="dropdown-menu by-hover m-t" role="menu" aria-labelledby="dropdownMenu1">
+											<li role="presentation"><a class="text-700 text-info " role="menuitem" tabindex="-1" href="#">FIND NEW CONTACTS</a></li>
+											<li role="presentation"><a class="text-700 text-danger disconnect-btn" role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
+										</ul>
+									</div>
+									<button class="pull-right btn btn btn-info text-uppercase text-700"><small>View contacts (930)</small></button>
+									
+								</div>
+							</div>
+						</div>
+					
 				</div>
 			
+				<div class="menu row-masonry-account" style="display:none">
+					
+					<div class="row-brick">
+						<div class="panel panel-account panel-default">
+							<div class="panel-heading">
+								<span class="pull-left">
+									<img src="./img/logo-service-google-circle.png" width="40px">
+								</span>
+								<div class="account-name text-600 truncate">don.draper@gmail.com</div>
+							</div>
+							<div class="panel-body small">
+								<a class="pull-right btn btn-xs btn-invisible text-uppercase text-700 text-info"><small>View contacts (930)</small></a>
+								
+								<span class="dropdown" style="position:relative">
+									<a class="btn btn-xs btn-info btn-outline dropdown-toggle" data-toggle="dropdown">Connected <i class="fa fa-caret-down" ></i></a>
+									<ul class="dropdown-menu m-t" role="menu" aria-labelledby="dropdownMenu1">
+										<li role="presentation"><a class="text-700 text-info " role="menuitem" tabindex="-1" href="#">REFRESH</a></li>
+										<li role="presentation"><a class="text-700 text-danger disconnect-btn" role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
+									</ul>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row-brick">
+						<div class="panel panel-account panel-default">
+							<div class="panel-heading">
+								<span class="pull-left">
+									<img src="./img/logo-service-facebook-circle.png" width="40px">
+								</span>
+								<!-- <div class="account-name text-600 truncate m-l-lg">Google account</div> -->
+								<div class="account-name text-600 truncate">Facebook</div>
+							</div>
+							<div class="panel-body small">
+								<a class="pull-right btn btn-xs btn-invisible text-uppercase text-700 text-info"><small>View contacts (930)</small></a>
+								
+								<span class="dropdown" style="position:relative">
+									<a class="btn btn-xs btn-danger btn-outline dropdown-toggle" data-toggle="dropdown">Not connected <i class="fa fa-caret-down" ></i></a>
+									<ul class="dropdown-menu m-t" role="menu" aria-labelledby="dropdownMenu1">
+										<li role="presentation"><a class="text-700 text-info " role="menuitem" tabindex="-1" href="#">REFRESH</a></li>
+										<li role="presentation"><a class="text-700 text-danger disconnect-btn" role="menuitem" tabindex="-1" href="#">DISCONNECT</a></li>
+									</ul>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
 			
 			<div class="footer fixed_full custom-footer" id="footer">
-				
 				<!-- loaded dinamically -->
-
 			</div>
-
-		</div>	
-		
+		</div>
     </div>
 	
 	
@@ -399,125 +375,75 @@
 			function afterLoadingModal(){
 				// functionality to disconnect confirmation button in modal window
 				$('#disconnect-confirmation-btn').click(function(){
-					$('#timeout-alert').fadeIn('slow');
-					$('#timeout-alert').css('display','inline-block');
+				
+					$('.alert').fadeOut('fast');
+				
+					$('#alert-deleted').fadeIn('slow');
 					
-					setTimeout(function(){$('#timeout-alert').fadeOut('slow');}, 5000);
+					setTimeout(clickOutsideWillDismiss,300);
+					
+					setTimeout(function(){$('#alert-deleted').fadeOut('slow');}, 5000);
+				});
+				
+				$('#add-account-salesforce').click(function(){
+				
+					$('.alert').fadeOut('fast');
+				
+					$('#alert-added').fadeIn('slow');
+					
+					setTimeout(clickOutsideWillDismiss,300);
+					
+					setTimeout(function(){$('#alert-added').fadeOut('slow');}, 5000);
+					
 				});
 			};
 		
-			// Space after contacts, so user see how more contacts are added
-			$('#space-after').height($('#space-after').width()/8);
-
-			// give functionality to connect new account button 
-			// this button is now deprecated
-			$('#new-account-btn').attr('data-toggle','modal');
-			$('#new-account-btn').attr('data-target','#connect-new-account-modal');
-			
-			// give functionality to new account empty box
-			$('.new-account').click(function(){
-				$('#connect-new-account-modal').modal();
-			});
-			
-			// functionality to refresh account button
-			$('.refresh-account').click(function(){
-				self = $(this);
-				$(this).removeClass('refresh-account');
-				$(this).html("<span class=\"pull-right text-muted\">Connecting...</span>");
-				setTimeout(function(){
-					self.html("<span class=\"pull-right text-success\"><span class=\"fa-stack\"><i class=\"fa fa-smile-o fa-stack-2x\"></i></span> All good</span>");
-				},2500);
-				
-			});
-			
-			
-			
-			// functionality to edit/save names button
-			
-			$('#edit-names-btn').click(function(){
-				$(this).fadeOut('fast', function(){
-					$('#save-names-btn').fadeIn('slow');
-					$('.account-name').attr('contenteditable','true');
-					$('.account-name').addClass('contenteditable-style');
-				})
-			});
-			
-			$('#save-names-btn').click(function(){
-				$(this).fadeOut('fast', function(){
-					$('#edit-names-btn').fadeIn('slow');
-					$('.account-name').attr('contenteditable','false');
-					$('.account-name').removeClass('contenteditable-style');
-				})
-			});
-			
 			// give modal functionality to every disconnect button
 			$('.disconnect-btn').attr('data-toggle','modal');
 			$('.disconnect-btn').attr('data-target','#remove-account-confirmation-modal');
 			
+			$('a.save').css("visibility","hidden");
+			$('a.edit').click(function(){
+				$(this).prevAll([contenteditable="true"]).focus();
+			});
 			
-			// code for the charts of contacts
-			var d1 = [[1262304000000, 560], [1264982400000, 920], [1267401600000, 1420], [1270080000000, 1560], [1272672000000, 1700], [1275350400000, 2543]];
-            var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 300], [1270080000000, 350], [1272672000000, 400], [1275350400000, 740]];
+			$('.panel-account [contenteditable="true"]').focus(function(){
+				$(this).nextAll('a.edit').css("visibility","hidden");
+				$(this).nextAll('a.save').css("visibility","visible");
+			});
 			
-			/*
-			var data3 = [
-                { label: "Data 1", data: d1, color: '#dddddd'},
-                { label: "Data 2", data: d2, color: '#1ab394' }
-            ];*/
+			$('.panel-account [contenteditable="true"]').focusout(function(){
+				$(this).nextAll('a.edit').css("visibility","visible");
+				$(this).nextAll('a.save').css("visibility","hidden");
+			});
 			
-			var data3 = [
-                { label: "Data 1", data: d1, color: '#dddddd'}
-            ];
-			
-            $.plot($("#flot-chart3"), data3, {
-                xaxis: {
-                    tickDecimals: 0
-                },
-                series: {
-                    lines: {
-                        show: true,
-                        fill: true,
-                        fillColor: {
-                            colors: [{
-                                opacity: 1
-                            }, {
-                                opacity: 1
-                            }]
-                        },
-                    },
-                    points: {
-                        width: 0.1,
-                        show: false
-                    },
-                },
-                grid: {
-                    show: false,
-                    borderWidth: 0
-                },
-                legend: {
-                    show: false,
-                }
-            });
-			
-			// code for the chart of rank
-			$('.chart-rank').easyPieChart({
-                barColor: '#dddddd',
-                scaleColor: false,
-				trackColor: false,
-				lineCap: 'round',
-				animate:{
-					duration:2000,
-					enabled:true
-				},
-                // scaleLength: 10,
-                lineWidth: 10,
-                size: 65
-            });
+			$('#add-account-facebook').click(function(){
+				$('.account-box-facebook').slideDown(1000);
+			});
+			$('#add-account-linkedin').click(function(){
+				$('.account-box-linkedin').slideDown(1000);
+			});
+			$('#add-account-google').click(function(){
+				$('.account-box-google').slideDown(1000);
+			});
+			$('#add-account-salesforce').click(function(){
+				$('.account-box-salesforce').slideDown(1000);
+			});
+			$('#add-account-office365').click(function(){
+				$('.account-box-office365').slideDown(1000);
+			});		
 
+			// click on search input should dismiss any alert on display
+			function clickOutsideWillDismiss() {
+			
+				$('#top-search').click(function() {
+					$('.alert').alert('close');
+				});
+				
+			};
 
         });
     </script>
-	
 	
 </body>
 </html>

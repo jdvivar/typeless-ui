@@ -361,10 +361,25 @@ div.divider {
 }
 
 .account-name {
-	//width: 80%;
-	margin-left: 50px;
-	line-height: 40px;
+	width: 75%;
+	margin-left: 10px;
+	line-height: 35px;
+	display:inline-block;
 	//word-break: break-all;
+}
+
+.panel-account  a.edit, .panel-account  a.save {
+	position: absolute;
+	display:none;
+}
+
+.panel-account:hover  a.edit,.panel-account:hover  a.save {
+	display:inline;
+	color:gray;
+}
+
+.panel-account:hover  a.edit:hover,.panel-account:hover  a.save:hover {
+	color:black;
 }
 
 .refresh-account {
@@ -1310,6 +1325,41 @@ mark {
 	box-shadow: 1px 1px 5px 0px black;
 }
 
+.dropdown:hover > ul.dropdown-menu.by-hover {
+    display: block;    
+}
+
+[contenteditable="true"]:focus {
+	outline: 1px dashed gray;
+}
+
+.alert.alert-google-style {
+	border: none;
+	background-color: #404040;
+	color: white;
+	font-size: 13px;
+}
+
+.alert.alert-google-style  a{
+	color: #a1c2fa;
+	text-transform: uppercase;
+	margin-left: 10px;
+}
+
+.alert.alert-google-style .close {
+	opacity: 1;
+}
+
+.alert.alert-google-style .close span {
+	color: white;
+	text-shadow:none;
+}
+
+.alert.alert-google-style .close:hover span {
+	color: gray;
+}
+
+
 /* STUFF ENDS */
 
 .nav > li > a {
@@ -1571,8 +1621,8 @@ mark {
   top: 12px;
 }
 
-.count-info.active {
-	border-bottom: 3px solid #3498db;
+.count-info.active, .count-info.active:focus {
+	border-bottom: 3px solid #1abc9c!important;
 }
 
 .arrow {
