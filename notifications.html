@@ -51,7 +51,9 @@
         <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">	
 
 			<div class="row wrapper white-bg page-heading">
-            	<span id="tools" style="">
+				<div class="h4 pull-left text-600 m-t-md">Notifications</div>
+				
+            	<span class="pull-right" id="tools" style="">
 					
 					<div class="m-t" style="display:inline;position:relative">
 						<span class="fa fa-filter fa-fw m-t" style="position:relative;top:10px"></span>
@@ -59,8 +61,8 @@
 					
 					<div class="btn-group btn-outline m-t m-l-xs">
 											
-						<button class="btn btn btn-default active" type="button" id="toggle-list">All</button>
-						<button class="btn btn btn-white" type="button" id="toggle-cards">New <span class="badge">6</span></button>
+						<button class="btn btn-sm btn-info active" type="button" id="toggle-list">All</button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">New <span class="badge badge-success">2</span></button>
 						
 					</div>
 					
@@ -70,16 +72,12 @@
 					
 					<div class="btn-group btn-outline m-t m-l-xs">
 						
-						<button class="btn btn btn-default active" type="button" id="toggle-list">All</button>
-						<button class="btn btn btn-white" type="button" id="toggle-cards">Today</button>
-						<button class="btn btn btn-white" type="button" id="toggle-cards">Last 7 days</button>
-						<button class="btn btn btn-white" type="button" id="toggle-cards">Last 30 days</button>
+						<button class="btn btn-sm btn-info active" type="button" id="toggle-list">All</button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">Today</button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">Last 7 days</button>
+						<button class="btn btn-sm btn-white" type="button" id="toggle-cards">Last 30 days</button>
 						
 					</div>
-					
-					<h1 class="pull-right" style="margin:15px 0 0 0">
-						Notifications
-					</h1>
 					
 				</span>
             </div>
@@ -91,14 +89,14 @@
 			<div class="wrapper wrapper-content animated fadeIn" >
 				
 				<div style="">
-					<h2 style="margin-top:0">Today</h2>
+					<h2 class="no-margins gray-bg" style="padding: 10px 0;">&nbsp;Today</h2>
 					<table class="table">
 						<thead>
 							<tr class="va-middle text-gray text-uppercase" style="background-color:whitesmoke;display:none">
 
 								<td class="" width="250px">type</td>
 								<td class="" width="">message</td>
-								<td class="" width="200px">actions</td>
+								<td class="text-right" width="250px">actions</td>
 								<td class="text-right" width="150px">status</td>
 								
 							</tr>
@@ -107,20 +105,20 @@
 						
 							<tr class="va-middle">
 								
-								<td class="text-uppercase small text-gray" width="250px">
+								<td class="small text-gray text-600" width="250px">
 									
-									Notification title <span class="label">LABEL</span>
+									Notification title <span class="label label-info">LABEL</span>
 									
 								</td>
 								<td class="">
-									Notification message, with <a class="underline no-margins no-padding">links</a>. This
+									Notification message, with <a class="text-info underline no-margins no-padding">links</a>. This
 									is a very long text to see how the notifications break lines.
 								</td>
-								<td class="text-center" width="200px">
+								<td class="text-right" width="250px">
 									
-									<button type="button" class="btn btn-default btn-xs">BTN1</button>
-									<button type="button" class="btn btn-default btn-xs">BTN2</button>
-									<button type="button" class="btn btn-default btn-xs">BTN3</button>
+									<button type="button" class="btn btn-success btn-sm text-700">YES!</button>
+									<button type="button" class="btn btn-info btn-sm text-700">OK</button>
+									<button type="button" class="btn btn-danger btn-sm text-700">NO!</button>
 								
 								</td>
 								<td class="text-right small text-gray" width="150px">
@@ -134,14 +132,14 @@
 				</div>
 				
 				<div style="">
-					<h2 style="margin-top:0">Yesterday</h2>
+					<h2 class="no-margins gray-bg" style="padding: 10px 0;">&nbsp;Yesterday</h2>
 					<table class="table">
 						<thead>
 							<tr class="va-middle text-gray text-uppercase" style="background-color:whitesmoke;display:none">
 
 								<td class="" width="250px">type</td>
 								<td class="" width="">message</td>
-								<td class="" width="200px">actions</td>
+								<td class="text-right" width="250px">actions</td>
 								<td class="text-right" width="150px">status</td>
 								
 							</tr>
@@ -150,21 +148,21 @@
 						
 							<tr class="va-middle">
 								
-								<td class="text-uppercase small text-gray" width="250px">
+								<td class=" small text-gray text-600" width="250px">
 									
-									single contact request <span class="label">NEW</span>
+									Single contact request <span class="label label-success">NEW</span>
 									
 								</td>
 								<td class="">
-									<a class="underline no-margins no-padding">Raul Viala</a>
-									is asking for <a class="underline no-margins no-padding">Michael Stephanblome</a>'s
+									<a class="text-info underline no-margins no-padding">Raul Viala</a>
+									is asking for <a class="text-info underline no-margins no-padding">Michael Stephanblome</a>'s
 									details.
 								</td>
-								<td class="" width="200px">
+								<td class="text-right" width="250px">
 									
-									<button type="button" class="btn btn-default btn-xs">ACCEPT</button>
-									<button type="button" class="btn btn-default btn-xs">DECLINE</button>
-									<button type="button" class="btn btn-default btn-xs">INTRO</button>
+									<button type="button" class="btn btn-success btn-sm text-700">ACCEPT</button>
+									<button type="button" class="btn btn-danger btn-sm text-700">DECLINE</button>
+									<button type="button" class="btn btn-info btn-sm text-700">INTRO</button>
 								
 								</td>
 								<td class="text-right small text-gray" width="150px">
@@ -175,17 +173,17 @@
 							
 							<tr class="va-middle">
 								
-								<td class="text-uppercase small text-gray" width="250px">
+								<td class="text-600 small text-gray" width="250px">
 									
-									single contact request
+									Single contact request
 									
 								</td>
 								<td class="">
-									<a class="underline no-margins no-padding">Rita Barbera</a>
-									asked for <a class="underline no-margins no-padding">Michael Stephanblome</a>'s
+									<a class="text-info underline no-margins no-padding">Rita Barbera</a>
+									asked for <a class="text-info underline no-margins no-padding">Michael Stephanblome</a>'s
 									details.
 								</td>
-								<td class="" width="200px">
+								<td class="text-right" width="250px">
 									
 									
 								</td>
@@ -200,14 +198,14 @@
 				</div>
 				
 				<div style="">
-					<h2 style="margin-top:0">12 November</h2>
+					<h2 class="no-margins gray-bg" style="padding: 10px 0;">&nbsp;12 November</h2>
 					<table class="table">
 						<thead>
 							<tr class="va-middle text-gray text-uppercase" style="background-color:whitesmoke;display:none">
 
 								<td class="" width="250px">type</td>
 								<td class="" width="">message</td>
-								<td class="" width="200px">actions</td>
+								<td class="text-right" width="250px">actions</td>
 								<td class="text-right" width="150px">status</td>
 								
 							</tr>
@@ -216,17 +214,17 @@
 						
 							<tr class="va-middle">
 								
-								<td class="text-uppercase small text-gray" width="250px">
+								<td class="text-600 small text-gray" width="250px">
 									
-									single contact request
+									Single contact request
 									
 								</td>
 								<td class="">
-									<a class="underline no-margins no-padding">Jhon Hammond</a>
-									asked for <a class="underline no-margins no-padding">Raul Viala</a>'s
+									<a class="text-info underline no-margins no-padding">Jhon Hammond</a>
+									asked for <a class="text-info underline no-margins no-padding">Raul Viala</a>'s
 									details.
 								</td>
-								<td class="" width="200px">
+								<td class="text-right" width="250px">
 									
 																	
 								</td>
@@ -238,17 +236,17 @@
 							
 							<tr class="va-middle">
 								
-								<td class="text-uppercase small text-gray" width="250px">
+								<td class="text-600 small text-gray" width="250px">
 									
-									single contact request
+									Single contact request
 									
 								</td>
 								<td class="">
-									<a class="underline no-margins no-padding">Rita Barbera</a>
-									asked for <a class="underline no-margins no-padding">Michael Stephanblome</a>'s
+									<a class="text-info underline no-margins no-padding">Rita Barbera</a>
+									asked for <a class="text-info underline no-margins no-padding">Michael Stephanblome</a>'s
 									details.
 								</td>
-								<td class="" width="200px">
+								<td class="text-right" width="250px">
 									
 									
 								</td>
@@ -300,7 +298,7 @@
 				// Share contacts button context-aware
 					
 					// Content of the button
-					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\">Share contacts</span>");
+					$( "#share-contacts-btn" ).html("<i class=\"fa fa-share-alt\"></i><span class=\"m-l-sm\"><small>SHARE CONTACTS</small></span>");
 				
 					// Target of the button
 					$( "#share-contacts-btn" ).attr('data-toggle','');
