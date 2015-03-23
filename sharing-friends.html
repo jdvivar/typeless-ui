@@ -35,7 +35,7 @@
 		</span>
 	</div>
 	
-	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+	<nav class="navbar navbar-fixed-top gray-bg" role="navigation" id="navbar-top">
 		<!-- loaded dinamically -->
 	</nav>
 	
@@ -72,10 +72,11 @@
 				<div class="row">
 					<div class="row m-l">
 						<div class="col-md-6 no-padding">
-							<div class="sharing-title">Sharing
-								<button class="btn btn-xs empty">empty</button>
-								<button class="btn btn-xs nothing">nothing</button>
-							</div>
+							<div class="h4 pull-left text-600 m-t-md">Sharing</div>
+							<br>
+							<button class="btn btn-xs empty">empty</button>
+							<button class="btn btn-xs nothing">nothing</button>
+							
 							
 							<p class="m-t">Typeless lets you share your contact book with anyone, even if they are not in Typeless yet.
 							Sent and received invitations to share contact books can be managed in this page.</p>
@@ -86,20 +87,20 @@
 					<div class="m-l m-r m-t">
 						<table class="table">
 							<thead>
-								<tr class="va-middle text-gray text-uppercase" style="background-color:whitesmoke;">
+								<tr class="va-middle text-gray" style="background-color:whitesmoke;">
 									<span class="sharing-subtitle">Received</span>
-									<td class="" style="width:3%"></td>
-									<td class="col-md-3">name & e-mail</td>
-									<td class="col-md-1">contacts</td>
-									<td class="col-md-2">details shared</td>
-									<td class="col-md-1"></td>
-									<td class="col-md-2 text-right">status</td>
+									<th class="" style="width:3%"></td>
+									<th class="col-md-3 text-600">Name & e-mail</td>
+									<th class="col-md-1 text-600">Contacts</td>
+									<th class="col-md-2 text-600">Details shared</td>
+									<th class="col-md-1 text-600"></td>
+									<th class="col-md-2 text-right  text-600">Status</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr class="va-middle">
 									<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
-									<td class="">Virgina Bravo<span class="label pull-right m-t-sm">PENDING</span><br><span class="small text-gray">virginia.madsen@gmail.com</span></td>
+									<td class="">Virgina Bravo<span class="label label-warning-light pull-right m-t-sm">PENDING</span><br><span class="small text-gray">virginia.madsen@gmail.com</span></td>
 									<td class="">345</td>
 									<td class="">Names and job titles</td>
 									<td class="">
@@ -118,7 +119,7 @@
 								<tr class="va-middle">
 									<td><img alt="image" class="img-circle m-l-sm" src="img/a3.jpg" style="width:38px;height:38px"></td>
 									<td class="">Alba Andersen<br><span class="small text-gray">a.andersen80@gmail.com</span></td>
-									<td class="">1.209</td>
+									<td class=""><a class="underline text-info">1.209</a></td>
 									<td class="">Everything</td>
 									<td class="">
 																			
@@ -147,20 +148,21 @@
 					<div class="m-l m-r m-t">
 						<table class="table m-b-xs">
 							<thead>
-								<tr class="va-middle text-gray text-uppercase" style="background-color:whitesmoke">
+								
+								<tr class="va-middle text-gray" style="background-color:whitesmoke;">
 									<span class="sharing-subtitle">Sent</span>
-									<td class="" style="width:3%"></td>
-									<td class="col-md-3">name & e-mail</td>
-									<td class="col-md-1">contacts</td>
-									<td class="col-md-2">details shared</td>
-									<td class="col-md-1"></td>
-									<td class="col-md-2 text-right">status</td>
+									<th class="" style="width:3%"></td>
+									<th class="col-md-3 text-600">Name & e-mail</td>
+									<th class="col-md-1 text-600">Contacts</td>
+									<th class="col-md-2 text-600">Details shared</td>
+									<th class="col-md-1 text-600"></td>
+									<th class="col-md-2 text-right  text-600">Status</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr class="va-middle">
 									<td><img alt="image" class="img-circle m-l-sm" src="img/a1.jpg" style="width:38px;height:38px"></td>
-									<td class="">Javier Ramírez<span class="label pull-right m-t-sm">PENDING</span><br><span class="small text-gray">j.ramirez@microsoft.com</span></td>
+									<td class="">Javier Ramírez<span class="label label-warning-light pull-right m-t-sm">PENDING</span><br><span class="small text-gray">j.ramirez@microsoft.com</span></td>
 									<td class="">1.832</td>
 									<td class="">Names and job titles</td>
 									<td class="">
@@ -229,22 +231,22 @@
 							</div>
 							
 						</div>
-						
-						<button class="btn btn-white btn-sm btn-outline more pull-right" type="button"><i class="fa fa-arrow-down fa-fw"></i> <small>SHOW MORE</small></button>
-						<button class="btn btn-white btn-sm btn-outline less pull-right" type="button" style="display:none"><i class="fa fa-arrow-up fa-fw"></i> <small>SHOW LESS</small></button>
-						
+						<div class="text-right">
+							<button class="btn btn-white btn-sm btn-outline more text-700" type="button"><i class="fa fa-arrow-down fa-fw"></i> <small>SHOW MORE</small></button>
+							<button class="btn btn-white btn-sm btn-outline less text-700" type="button" style="display:none"><i class="fa fa-arrow-up fa-fw"></i> <small>SHOW LESS</small></button>
+						</div>
 					</div>
 					<div class="m-l m-r m-t">
 						<table class="table table-removed">
 							<thead>
-								<tr class="va-middle text-gray text-uppercase" style="background-color:whitesmoke">
-									<span class="sharing-subtitle">Removed</span>
-									<td class="" style="width:3%"></td>
-									<td class="col-md-3">name & e-mail</td>
-									<td class="col-md-1">contacts</td>
-									<td class="col-md-2">details shared</td>
-									<td class="col-md-1"></td>
-									<td class="col-md-2 text-right">status</td>
+								<tr class="va-middle text-gray" style="background-color:whitesmoke;">
+									<div class="sharing-subtitle">Removed</div>
+									<th class="" style="width:3%"></td>
+									<th class="col-md-3 text-600">Name & e-mail</td>
+									<th class="col-md-1 text-600">Contacts</td>
+									<th class="col-md-2 text-600">Details shared</td>
+									<th class="col-md-1 text-600"></td>
+									<th class="col-md-2 text-right  text-600">Status</td>
 								</tr>
 							</thead>
 							<tbody>
@@ -572,7 +574,7 @@
 				self.fadeOut('fast',function(){
 					self.next('.less').fadeIn('slow');
 				});
-				$('tr.excess').show('slow');
+				$('tr.excess').slideDown('slow');
 			});
 			
 			$('.less').click(function(){
@@ -580,7 +582,7 @@
 				self.fadeOut('fast',function(){
 					self.prev('.more').fadeIn('slow');
 				});
-				$('tr.excess').hide('slow');
+				$('tr.excess').slideUp('slow');
 			});
 			
 			
