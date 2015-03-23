@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Potential duplicates | Typeless.</title>
+    <title>Merge duplicates | Typeless.</title>
 	
 	<link rel="icon" href="favicon.png">
 
@@ -44,7 +44,7 @@
 		</span>
 	</div>
 	
-	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+	<nav class="navbar navbar-fixed-top gray-bg" role="navigation" id="navbar-top">
 		<!-- loaded dinamically -->
 	</nav>
 	
@@ -61,7 +61,7 @@
 			<div class="row wrapper white-bg page-heading">
             	<span id="tools" style="">
 				
-					<h1 class="pull-left text-400">Merge duplicates</h1>
+					<div class="h4 pull-left text-600 m-t-md">Merge duplicates</div>
 				
 					<div class="btn-group m-t m-r" style="display:none">
 					  <button type="button" class="btn btn btn-white"><i class="fa fa-copy fa-fw m-r-sm"></i>Potential duplicates <span class="badge">3</span></button>
@@ -98,15 +98,19 @@
 			
 			
 				<div class="">
-					<div class="well white-bg" style="position:relative">
-						<a class="btn btn-invisible text-info text-uppercase text-700 pull-right"><small>merge</small></a>
-						<a class="btn btn-invisible text-gray text-uppercase text-600 pull-right"><small>dismiss</small></a>
+					<div class="all-merged m-b" style="display:none">
+						<div class="h5 text-right">You have merged 2 contacts. <a class="text-uppercase undeline text-600 m-l">UNDO</a>
+						</div>
+					</div>
+					<div class="well white-bg virginia-unmerged" style="position:relative">
+						<a class="btn btn-invisible text-info text-uppercase text-700 pull-right merge"><small>merge</small></a>
+						<a class="btn btn-invisible text-gray text-uppercase text-600 pull-right dismiss"><small>dismiss</small></a>
 						<!-- <span class="pull-right m-t-sm m-r small">Is this the same contact?</span> -->
 						<!-- <a class="btn btn-invisible text-gray text-uppercase text-600" style="position:absolute;right:15px;top:15px"><small>merge</small></a> -->
 						<h3 class="">Is this the same contact? <span class="text-600">Virginia Madsen</span></h3>
 						<hr>
 						<div class="row">
-							<a class="pull-right m-t m-r text-muted text-gray-hover" style="font-size:20px" data-tooltip="tooltip" data-placement="left" title="Keep this contact separate">
+							<a class="pull-right m-t text-muted text-gray-hover" style="font-size:20px;margin-right:75px" data-tooltip="tooltip" data-placement="left" title="Keep this contact separate">
 								<i class="fa fa-times"></i>
 							</a>
 							<div class="col-xs-2">
@@ -123,7 +127,7 @@
 						</div>							
 						<hr>
 						<div class="row">
-							<a class="pull-right m-t m-r text-muted text-gray-hover" style="font-size:20px" data-tooltip="tooltip" data-placement="left" title="Keep this contact separate">
+							<a class="pull-right m-t text-muted text-gray-hover" style="font-size:20px;margin-right:75px" data-tooltip="tooltip" data-placement="left" title="Keep this contact separate">
 								<i class="fa fa-times"></i>
 							</a>
 							<div class="col-xs-2">
@@ -142,7 +146,7 @@
 						</div>
 						<hr>
 						<div class="row">
-							<a class="pull-right m-t m-r text-muted text-gray-hover" style="font-size:20px" data-tooltip="tooltip" data-placement="left" title="Keep this contact separate">
+							<a class="pull-right m-t text-muted text-gray-hover" style="font-size:20px;margin-right:75px" data-tooltip="tooltip" data-placement="left" title="Keep this contact separate">
 								<i class="fa fa-times"></i>
 							</a>
 							<div class="col-xs-2">
@@ -159,9 +163,17 @@
 							</div>
 						</div>	
 					</div>
-					<div class="well white-bg" style="position:relative">
-						<a class="btn btn-invisible text-info text-uppercase text-700 pull-right"><small>merge</small></a>
-						<a class="btn btn-invisible text-gray text-uppercase text-600 pull-right"><small>dismiss</small></a>
+					<div class="virginia-merged m-b" style="display:none">
+						<div class="h5 text-right">You have merged <a class="text-info underline">Virginia Madsen</a>. <a class="text-uppercase undeline text-600 m-l">UNDO</a>
+						</div>
+					</div>
+					<div class="virginia-dismissed m-b" style="display:none">
+						<div class="h5 text-right">You have dismissed Virginia Madsen. <a class="text-uppercase undeline text-600 m-l">UNDO</a>
+						</div>
+					</div>
+					<div class="well white-bg rearden-unmerged" style="position:relative">
+						<a class="btn btn-invisible text-info text-uppercase text-700 pull-right merge"><small>merge</small></a>
+						<a class="btn btn-invisible text-gray text-uppercase text-600 pull-right dismiss"><small>dismiss</small></a>
 						<!-- <span class="pull-right m-t-sm m-r small">Is this the same contact?</span> -->
 						<!-- <a class="btn btn-invisible text-gray text-uppercase text-600" style="position:absolute;right:15px;top:15px"><small>merge</small></a> -->
 						<h3 class="">Is this the same contact? <span class="text-600">Michael Rearden</span></h3>
@@ -199,485 +211,19 @@
 						</div>
 							
 					</div>
+					<div class="rearden-merged m-b" style="display:none">
+						<div class="h5 text-right">You have merged <a class="text-info underline">Michael Rearden</a>. <a class="text-uppercase undeline text-600 m-l">UNDO</a>
+						</div>
+						
+					</div>
+					<div class="rearden-dismissed m-b" style="display:none">
+						<div class="h5 text-right">You have dismissed Michael Rearden. <a class="text-uppercase undeline text-600 m-l">UNDO</a>
+						</div>
+					</div>
 				
 				</div>
 				
-				<div id="card-view" style="display:none">
-					
-					<div class="row cards merge">
-					
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							
-								<div class="contact-box m-r m-b" >
-									<div class="row no-margins">
-										
-										<div class="col-sm-10 no-padding">
-											<p class="no-margins contact-name">Virgina Madsen</p>
-											<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-										</div>
-										
-										<div class="col-sm-2 no-padding">
-											<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-										</div>
-										
-											
-									</div>
-									
-									<div class="contact-email">vmadsen@port.com
-										
-										<span class="badge m-l-xs more">2+</span>
-										<div class="show-more" style="display:none;">
-											<span class="text-mute">vmadsen@gmail.com</span>
-											<br>
-											<span class="text-mute">virginia90823@outlook.com</span>
-										</div>	
-									</div>
-									
-									<div class="contact-phone">+44 7001 400 2355
-										<span class="badge m-l-xs more">1+</span>
-										<div class="show-more" style="display:none">
-											<span class="text-mute">+33 9990 345</span>
-										</div>
-									</div>
-									
-									<input type="checkbox" disabled>
-								</div>
-							
-						</div>
-						
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								<input type="checkbox" disabled>
-								
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						
-						<button type="button" class="btn btn btn-default pull-right text-700 merge m-r"><small>MERGE</small></button>						
-						<button type="button" class="btn btn btn-default pull-right text-700 merge m-r disabled"><small>MERGE SELECTED</small></button>
-
-						
-					</div>
-					
-					<div class="row cards merge">
-					
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							
-								<div class="contact-box m-r m-b" >
-									<div class="row no-margins">
-										
-										<div class="col-sm-10 no-padding">
-											<p class="no-margins contact-name">Virgina Madsen</p>
-											<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-										</div>
-										
-										<div class="col-sm-2 no-padding">
-											<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-										</div>
-										
-											
-									</div>
-									
-									<div class="contact-email">vmadsen@port.com
-										
-										<span class="badge m-l-xs more">2+</span>
-										<div class="show-more" style="display:none;">
-											<span class="text-mute">vmadsen@gmail.com</span>
-											<br>
-											<span class="text-mute">virginia90823@outlook.com</span>
-										</div>	
-									</div>
-									
-									<div class="contact-phone">+44 7001 400 2355
-										<span class="badge m-l-xs more">1+</span>
-										<div class="show-more" style="display:none">
-											<span class="text-mute">+33 9990 345</span>
-										</div>
-									</div>
-									<input type="checkbox">
-								</div>
-							
-						</div>
-						
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								<input type="checkbox" checked>
-								
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								
-								<input type="checkbox" checked>
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								
-								<input type="checkbox">
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						
-						<button type="button" class="btn btn btn-default pull-right text-700 m-r m-b merge"><small>MERGE</small></button>						
-						<button type="button" class="btn btn btn-default pull-right text-700 m-r m-b merge"><small>MERGE SELECTED (2)</small></button>
-					
-					</div>
-					
-					<div class="row cards merge">
-					
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							
-								<div class="contact-box m-r m-b" >
-									<div class="row no-margins">
-										
-										<div class="col-sm-10 no-padding">
-											<p class="no-margins contact-name">Virgina Madsen</p>
-											<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-										</div>
-										
-										<div class="col-sm-2 no-padding">
-											<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-										</div>
-										
-											
-									</div>
-									
-									<div class="contact-email">vmadsen@port.com
-										
-										<span class="badge m-l-xs more">2+</span>
-										<div class="show-more" style="display:none;">
-											<span class="text-mute">vmadsen@gmail.com</span>
-											<br>
-											<span class="text-mute">virginia90823@outlook.com</span>
-										</div>	
-									</div>
-									
-									<div class="contact-phone">+44 7001 400 2355
-										<span class="badge m-l-xs more">1+</span>
-										<div class="show-more" style="display:none">
-											<span class="text-mute">+33 9990 345</span>
-										</div>
-									</div>
-									<input type="checkbox">
-								</div>
-							
-						</div>
-						
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								<input type="checkbox">
-								
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								<input type="checkbox">
-								
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								
-								<input type="checkbox">
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								
-								<input type="checkbox">
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								
-								<input type="checkbox">
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
-							<div class="contact-box m-r m-b" >
-								<div class="row no-margins">
-
-									<div class="col-sm-10 no-padding">
-										<p class="no-margins contact-name" style="">Virgina Madsen</p>
-										<p class="text-gray contact-jobtitle" style="">Graphics Designer</p>
-									</div>
-									
-									<div class="col-sm-2 no-padding">
-										<img alt="image" class="img-circle img-responsive" src="img/a1.jpg">                                
-									</div>
-										
-								</div>
-								
-								<div class="contact-email">vmadsen@port.com<span class="badge m-l-xs more">2+</span>
-									<div class="show-more" style="display:none;">
-										<span class="text-mute">vmadsen@gmail.com</span>
-										<br>
-										<span class="text-mute">virginia90823@outlook.com</span>
-									</div>	
-								</div>
-								
-								<div class="contact-phone">+44 7001 400 2355<span class="badge m-l-xs more">1+</span>
-									<div class="show-more" style="display:none">
-										<span class="text-mute">+33 9990 345</span>
-									</div>
-								</div>
-								
-								<input type="checkbox">
-								<div class="clearfix"></div>
-							</div>
-						</div>
-						
-						<button type="button" class="btn btn btn-default pull-right text-700 m-r m-b merge"><small>MERGE</small></button>
-						<button type="button" class="btn btn btn-default pull-right text-700 m-r m-b merge disabled"><small>MERGE SELECTED</small></button>
-					
-					</div>
-
-
-					<a class="btn btn-white btn-rounded btn-block m-t" href="#" id="more-contacts"><i class="fa fa-arrow-down m-r"></i><small>SHOW MORE</small></a>
-				</div>
-			
+				
 				<div id="space-after"></div>
 			</div>
 			
@@ -891,43 +437,45 @@
 			
 			var stack_bottomleft = {"dir1": "up", "dir2": "right", "push": "top"};
 			
-			$('.btn.merge').click(function(){
-				$(this).parents('.row.merge').slideUp(1000);
+			$('.virginia-unmerged .merge').click(function(){
+				$('.well.virginia-unmerged').slideUp(1000);
+				$('.virginia-merged').slideDown(1000);
+				$('.rearden-merged').hide();
 				
-				new PNotify({
-						title: false,
-						text: '<span>You have merged 1 contact.</span><a class=\'pull-right\'>UNDO</a>',
-						icon: false,
-						shadow: false,
-						type: 'success', // others are "notice", "info", "success", or "error".
-						delay: 5000,
-						addclass: 'notifications-style stack-bottomleft type-success',
-						stack: stack_bottomleft,
-						buttons:{
-							sticker: false,
-							closer_hover:false,
-						}
-				});
+			});
+			
+			$('.virginia-unmerged .dismiss').click(function(){
+				$('.well.virginia-unmerged').slideUp(1000);
+				$('.virginia-dismissed').slideDown(1000);
+				$('.rearden-merged').hide();
+				$('.rearden-dismissed').hide();
+				
+			});
+			
+			$('.rearden-unmerged .merge').click(function(){
+				$('.well.rearden-unmerged').slideUp(1000);
+				$('.rearden-merged').slideDown(1000);
+				$('.virginia-merged').hide();
+				$('.virginia-dismissed').hide();
+			});
+			
+			$('.rearden-unmerged .dismiss').click(function(){
+				$('.well.rearden-unmerged').slideUp(1000);
+				$('.rearden-dismissed').slideDown(1000);
+				$('.virginia-merged').hide();
+				$('.virginia-dismissed').hide();
+				
 			});
 			
 			$('.btn.merge-all').click(function(){
-				
-				$('.row.merge').slideUp(1000);
-			
-				new PNotify({
-						title: false,
-						text: '<span>You have merged 3 contacts.</span><a class=\'pull-right\'>UNDO</a>',
-						icon: false,
-						shadow: false,
-						type: 'success', // others are "notice", "info", "success", or "error".
-						delay: 5000,
-						addclass: 'notifications-style stack-bottomleft type-success',
-						stack: stack_bottomleft,
-						buttons:{
-							sticker: false,
-							closer_hover:false,
-						}
-				});
+				$('.well.rearden-unmerged').slideUp(1000);
+				$('.well.virginia-unmerged').slideUp(1000);
+				$('.all-merged').slideDown(1000);
+				$('.virginia-merged').hide();
+				$('.virginia-dismissed').hide();
+				$('.rearden-merged').hide();
+				$('.rearden-dismissed').hide();
+
 			});
 			
         });
