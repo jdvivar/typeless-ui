@@ -25,6 +25,14 @@
 	<span id="modal-windows-2">
 		<!-- loaded dinamically -->
 	</span>
+	
+	<span id="modal-windows-3">
+		<!-- loaded dinamically -->
+	</span>
+	
+	<span id="modal-windows-4">
+		<!-- loaded dinamically -->
+	</span>
 
 	<div id="notify-wrapper">
 		<span class="m-t-sm" style="display:inline-block">
@@ -39,7 +47,7 @@
 		</span>
 	</div>
 	
-	<nav class="navbar navbar-fixed-top gray-bg" role="navigation" id="navbar-top">
+	<nav class="navbar navbar-fixed-top gray-bg" role="navigation" id="navbar-top" >
 		<!-- loaded dinamically -->
 	</nav>
 	
@@ -50,8 +58,21 @@
 	
 				
     <div id="wrapper" >
+	
         
         <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">	
+			
+			<div class="get-typeless-notification-1 blue-bg text-center p-m" style="">
+				<a id="close-notification-1" class="text-white "><span class="fa fa-times pull-right m-t-xs"></span></a>
+				<span class="fa fa-inbox fa-3x pull-left m-t-n-sm"></span>
+				<div class="text-600">Hey! Did you know now you can have the awesome Typeless features right in your inbox? Download it now for <a class="text-700 text-white text-underline underline" data-tooltip="tooltip" data-placement="bottom" title="available as a Chrome Extension">GMail</a> or <a class="text-700 text-white text-underline underline" data-tooltip="tooltip" data-placement="top" title="available as a Microsoft Outlook 2013 App for Windows">Outlook 2013</a></div>
+			</div>
+			<div class="get-typeless-notification-2 blue-bg text-center p-m" style="display:none">
+				<!-- <a class="text-white"><span class="fa fa-times pull-right m-t-xs"></span></a> -->
+				<span class="fa fa-inbox fa-3x pull-left m-t-n-sm"></span>
+				<div class="text-600">Are you sure? It's just a blink to install them and it will make your inbox much smarter and productive. Download it now for <a class="text-700 text-white text-underline underline" data-tooltip="tooltip" data-placement="bottom" title="available as a Chrome Extension">GMail</a> or <a class="text-700 text-white text-underline underline" data-tooltip="tooltip" data-placement="top" title="available as a Microsoft Outlook 2013 App for Windows">Outlook 2013</a></div>
+				<div class="m-t"><a id="close-notification-2" class="text-white underline text-underline ">Don't bother me again about this, please</a></div>
+			</div>
 
 			<div class="row wrapper white-bg page-heading">
 				<div class="h4 pull-left text-600 m-t-md">Connected accounts</div>
@@ -329,6 +350,8 @@
 			
 			$( "#modal-windows-1" ).load( "components.html #remove-account-confirmation-modal", afterLoadingModal);
 			$( "#modal-windows-2" ).load( "components.html #connect-new-account-modal");
+			$( "#modal-windows-3" ).load( "components.html #get-typeless-gmail-modal", afterLoadingModal);
+			$( "#modal-windows-4" ).load( "components.html #get-typeless-outlook-modal", afterLoadingModal);
 			
 			
 						
@@ -441,7 +464,18 @@
 				});
 				
 			};
-
+			
+			//close notification-1
+			$('#close-notification-1').click(function(){
+				$('.get-typeless-notification-1').slideUp('slow', function(){
+					$('.get-typeless-notification-2').slideDown('slow');
+				});
+			});
+			
+			$('#close-notification-2').click(function(){
+				$('.get-typeless-notification-2').slideUp('fast');
+			});
+	
         });
     </script>
 	

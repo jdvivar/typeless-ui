@@ -282,23 +282,30 @@
 	
 	
 	<div class="panel-left">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Get Typeless
-				<div class="ibox-tools">
+		<div class="panel panel-info">
+			<div class="panel-heading text-center">
+				<h2>Get Typeless in your inbox</h2>
+				<i class="fa fa-inbox fa-3x m-t-xs m-b"></i>
+				<!-- <p class="small m-t-sm">Use Typeless where you most need it. Stay updated in <a href="http://blog.typeless.co" class="underline text-700 text-white">our blog</a> about upcoming apps.</p> -->
+				<!-- <img class="pull-right" src="img/logo-only-icon-original-120p.png" width="20px"> -->
+				<!-- <div class="ibox-tools">
 					<a class="close-panel">
 						<i class="fa fa-times"></i>
 					</a>
-				</div>
+				</div> -->
 			</div>
-			<div class="panel-body">
-				<a href="#"><i class="fa fa-google fa-fw m-r-sm"></i> for GMail</a><br>
-				<a href="#"><span class="m-r-sm outlook-logo"></span><span> for Outlook</span><br>
-				<a href="#"><i class="fa fa-apple fa-fw m-r-sm"></i> for iOS</a><br>
-				<a href="#"><i class="fa fa-android fa-fw m-r-sm"></i> for Android</a><br>
-				</a>
+			
+			<div class="panel-body" style="display:none">
+				Use Typeless where you most need it. Stay updated in <a href="http://blog.typeless.co" class="underline text-info">our blog</a> about upcoming apps.
 			</div>
 
+			<ul class="list-group">
+				<!-- <li class="list-group-item  text-600 text-info small" data-tooltip="tooltip" data-placement="top" title="available as a Chrome Extension" ><a href="https://chrome.google.com/webstore/detail/typeless-chrome-extension/glggemdefgdemakpkekbbmjdpgljekhm" target="_blank"><img class="m-r-sm" src="img/logo-service-gmail-circle.png" width="25px">for GMail<span class="fa fa-chevron-right pull-right m-t-xs"></span></a></li> -->
+				<li class="list-group-item  text-600 text-info small" data-tooltip="tooltip" data-placement="top" title="available as a Chrome Extension" ><a data-toggle="modal" data-target="#get-typeless-gmail-modal"><img class="m-r-sm" src="img/logo-service-gmail-circle.png" width="25px">for GMail<span class="fa fa-chevron-right pull-right m-t-xs"></span></a></li>
+				<!-- <li class="list-group-item  text-600 text-info small" data-tooltip="tooltip" data-placement="top" title="available as a Microsoft Outlook 2013 App for Windows"  style="border-bottom-color: rgb(52, 152, 219);"><a href="https://typelessco.blob.core.windows.net/publish/setup.exe" target="_blank"><img class="m-r-sm" src="img/logo-service-outlook-circle.png" width="25px">for Outlook 2013<span class="fa fa-chevron-right pull-right m-t-xs"></span></a></li> -->
+				<li class="list-group-item  text-600 text-info small" data-tooltip="tooltip" data-placement="top" title="available as a Microsoft Outlook 2013 App for Windows"  style="border-bottom-color: rgb(52, 152, 219);"><a data-toggle="modal" data-target="#get-typeless-outlook-modal"><img class="m-r-sm" src="img/logo-service-outlook-circle.png" width="25px">for Outlook 2013<span class="fa fa-chevron-right pull-right m-t-xs"></span></a></li>
+			</ul>
+			
 		</div>
 	</div>
 		
@@ -317,7 +324,7 @@
 				<a href="#"><span class="nav-label">Sharing</span><span class="fa arrow"></span></a>
 				<ul class="nav nav-second-level collapse" style="height: 0px;">
 					<li>
-						<a href="sharing-team-connect.html"  id="sharing-team-link" >
+						<a href="sharing-team-start2.html"  id="sharing-team-link" >
 							My team<span class="badge pull-right"></span>
 						</a>
 					</li>
@@ -334,19 +341,19 @@
 				<ul class="nav nav-second-level collapse" style="height: 0px;">
 					<li  >
 						<a href="contacts-duplicates.html" id="merge-link">
-							Merge duplicates<span class="badge pull-right">36</span>
+							Merge duplicates<span class="badge badge-info pull-right">36</span>
 						</a>
 					</li>
 					<li>
 						<a href="contacts-merged.html"  id="unmerge-link" >
-							Unmerge contacts<span class="badge pull-right">129</span>
+							Unmerge contacts<span class="badge badge-navy pull-right">129</span>
 						</a>
 					</li>
 				</ul>
 			</li>
 			
 			<li id="connected-accounts-link">
-				<a href="connected-accounts.html"><span class="nav-label">Connected accounts<span class="badge badge-info pull-right">6</span></span></a>
+				<a href="connected-accounts.html"><span class="nav-label">Connected accounts<span class="badge badge-info pull-right">5</span></span></a>
 			</li>
 			
 			<li id="teams-link" style="display:none">
@@ -1179,6 +1186,65 @@
 				<a type="button" class="btn btn-invisible text-600 text-uppercase pull-left" data-dismiss="modal">Cancel</a>
 				<a type="button" class="btn btn-invisible text-600 text-uppercase text-success">Accept</a>
 				<a type="button" class="btn btn-invisible text-600 text-uppercase text-danger pull-right" >Decline</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="get-typeless-gmail-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-info">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="modal-title text-600">Get Typeless in your inbox</h3>
+			</div>
+			<div class="modal-body">
+				<p class="">Empower your GMail inbox with the awesome features of Typeless:</p>
+				<ul>
+					<li>Our powerful <strong>search</strong> right in  your inbox.</li>
+					<li>See <strong>automatically contact details</strong> of recipients or senders when you read an e-mail.</li>
+					<li>Compatible with <strong>Google Apps'</strong> work e-mail accounts.</li>
+					<li><strong>Minimize</strong> the extension when you don't need its help.</li>
+					<li>and much more!</li>
+				</ul>
+				<div class="text-center m-t-lg">
+					<img src="img/get-typeless-for-gmail.png">
+				</div>
+				<div class="small text-right text-gray m-t">*Available as a Chrome Extension</div>
+			</div>
+			<div class="modal-footer">
+				<a type="button" class="btn btn-invisible text-600 text-uppercase" data-dismiss="modal">Cancel</a>
+				<a type="button" class="btn btn-invisible text-600 text-uppercase text-info" href="https://chrome.google.com/webstore/detail/typeless-chrome-extension/glggemdefgdemakpkekbbmjdpgljekhm" target="_blank">DOWNLOAD FROM CHROME WEB STORE</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="get-typeless-outlook-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-info">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="modal-title text-600">Get Typeless in your inbox</h3>
+			</div>
+			<div class="modal-body">
+				<p class="">Empower your Outlook inbox with the awesome features of Typeless:</p>
+				<ul>
+					<li>Our powerful <strong>search</strong> right in  your inbox.</li>
+					<li>See <strong>automatically contact details</strong> of recipients or senders when you read an e-mail.</li>
+					<li><strong>Minimize</strong> the extension when you don't need its help.</li>
+					<li>and much more!</li>
+				</ul>
+				<div class="text-center m-t-lg">
+					<img src="img/get-typeless-for-outlook.png">
+				</div>
+				<div class="small text-right text-gray m-t">
+					*Available as a <strong>Microsoft Outlook 2013</strong> App for Windows<br>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a type="button" class="btn btn-invisible text-600 text-uppercase" data-dismiss="modal">Cancel</a>
+				<a type="button" class="btn btn-invisible text-600 text-uppercase text-info" href="https://typelessco.blob.core.windows.net/publish/setup.exe" target="_blank">DOWNLOAD SETUP.EXE (0.8MB)</a>
 			</div>
 		</div>
 	</div>
