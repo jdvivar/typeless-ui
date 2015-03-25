@@ -281,9 +281,10 @@ div.divider {
 	top: 15px;
 	border: 2px solid white;
 	border-radius: 3px;
-	font-size: 12px;
-	background-color:rgba(52,152,219,.25);
-	outline: 1px solid rgba(52,152,219,.25);
+	font-size: 14px;
+	font-weight:300;
+	//background-color:rgba(52,152,219,.25);
+	//outline: 1px solid rgba(52,152,219,.25);
 }
 
 .click-share-notice .close{
@@ -2468,6 +2469,12 @@ button.dim:active:before {
   color: rgba(44,62,80,1);
   border-color: rgba(44,62,80,1);
 }
+.label-navy,
+.badge-navy {
+  background-color: rgba(44,62,80,1);
+  color: white;
+  border-color: rgba(44,62,80,1);
+}
 .label-success,
 .badge-success {
   background-color: rgba(26,188,156,1);
@@ -2675,6 +2682,11 @@ button.dim:active:before {
   background-color: #999999;
   max-width:250px;
 }
+
+.panel-left .tooltip-inner {
+  max-width:150px;
+}
+
 .tooltip.top .tooltip-arrow {
   border-top-color: transparent;
 }
@@ -3403,11 +3415,14 @@ a {
 .font-bold {
   font-weight: 600;
 }
-.font-noraml {
+.font-normal {
   font-weight: 400;
 }
 .text-uppercase {
   text-transform: uppercase;
+}
+.text-underline {
+  text-decoration:underline;
 }
 .b-r {
   border-right: 1px solid #e7eaec;
