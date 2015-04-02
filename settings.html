@@ -14,6 +14,9 @@
 	<link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+	
+	<!-- iCheck -->
+	<link href="css/plugins/iCheck/blue.css" rel="stylesheet">
 
 
 </head>
@@ -379,6 +382,14 @@ Regards,
 					})
 				});
 				
+				startiCheck();
+				
+				$("#delete-account-confirmation-modal .other-textarea").hide();
+				
+				$("#delete-account-confirmation-modal input#other-textarea").on('ifToggled', function(event){
+					$("#delete-account-confirmation-modal .other-textarea").slideToggle(500);
+				});
+				
 			};
 				
 			$('#space-after').height($('#space-after').width()/8);
@@ -537,8 +548,18 @@ Regards,
 				
 				$(this).nextAll('div.buttons').fadeOut('slow');
 				
-			});			
+			});		
 			
+			function startiCheck(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_square-blue',
+					//checkboxClass: 'icheckbox_square-grey',
+					//checkboxClass: 'icheckbox_polaris',
+					radioClass: 'iradio_square-blue',
+					//radioClass: 'iradio_polaris'
+					increaseArea: '20%' // optional
+				});
+			}
         });
     </script>
 	
