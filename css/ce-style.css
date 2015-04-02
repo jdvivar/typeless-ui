@@ -215,6 +215,10 @@
 
 }
 
+.box-suggestions {
+	border-color: #dddddd;
+}
+
 /* style for mark */
 /* It hasn't got ce prefix because I'm rewriting an html tag style */
 /* But I'm not putting it in the regular style because I'm not sure if using it in the web app too */

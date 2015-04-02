@@ -189,7 +189,7 @@ div.cards {
 	width: 70px;
 }
 
-.va-middle td, .va-middle th {
+.va-middle td, .va-middle th , .va-middle li{
 	vertical-align: middle !important;
 }
 
@@ -1361,6 +1361,93 @@ mark {
 	color: gray;
 }
 
+div.right-end{
+	width: 50px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+	margin-right: 26px;
+	z-index: 1;
+}
+
+.box-suggestions {
+	width: 150px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	text-align: center;
+	position:relative;
+}
+
+.panel-info .box-suggestions  {
+	border-color: #3498db;
+}
+.panel-success .box-suggestions {
+	border-color: #1abc9c;
+}
+.panel-warning .box-suggestions {
+	border-color: #e67e22;
+}
+.panel-default .box-suggestions {
+	border-color: #dddddd;
+}
+
+.box-suggestions .job-title {
+	white-space: normal;
+	height: 35px;
+	overflow: hidden;
+}
+
+.box-suggestions .close {
+	top: 1px;
+	right: 5px;
+	position: absolute;
+}
+
+.jcarousel-height {
+	line-height: 304px;
+}
+
+
+/* jCarousel styling */
+
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jcarousel > ul {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jcarousel > ul > li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+	margin-right:15px;
+}
 
 /* STUFF ENDS */
 
@@ -2518,7 +2605,9 @@ button.dim:active:before {
 }
 
 .label-disable,
-.badge-disable {
+.badge-disable,
+.badge.disabled,
+.label.disabled {
   opacity: .25;
 }
 
@@ -3921,6 +4010,14 @@ table.table-mail tr td {
 .panel-warning > .panel-heading {
   background-color: #e67e22;
   border-color: #e67e22;
+  color: #ffffff;
+}
+.panel-warning-light {
+  border-color: #f1c40f;
+}
+.panel-warning-light > .panel-heading {
+  background-color: #f1c40f;
+  border-color: #f1c40f;
   color: #ffffff;
 }
 .panel-danger {
