@@ -311,6 +311,10 @@
 		
 	<div class="sidebar-collapse">
 		<ul class="nav" id="side-menu">
+		
+			<li id="start-link">
+				<a href="start.html"><span class="nav-label">Home</span></a>
+			</li>
 			
 			<li id="contacts-link" class="active">
 				<a href="contacts.html"><span class="nav-label">Contacts<span class="badge badge-success pull-right">3,122</span></span></a>
@@ -545,17 +549,16 @@
 		<div class="modal-body">
 			<h2>Did we do something wrong?</h2>
 			
-			<form role="form" >
-				<textarea class="form-control m-t" rows="3" placeholder="We would like to help you get the best out of Typeless. Please, explain us why you want to leave. We promise to answer as soon as we can.
-(OPTIONAL)"></textarea>
-				<div class="text-right">
+			<form class="m-b-lg"role="form" >
+				
+				<!-- <div class="text-right">
 					<a class="send-feedback btn text-info btn-invisible text-700 m-t"><small>SEND</small></a>
 					<div class="ok-feedback text-success m-t" style="display:none"><i class="fa fa-check-circle"></i> Thank you!</div>
-				</div>
+				</div> -->
 				
-				<div class="m-t">Please, select the options that most suit your reasons to leave Typeless. You can choose more than one. (OPTIONAL)</div>
+				<div class="m-t">We'd love to know why you are thinking of leaving us. Please choose from the options below to help us fix this. (OPTIONAL)</div>
 				
-				<div class="checkbox ">
+				<div class="checkbox">
 				  <label>
 					<input type="checkbox" >
 					It's difficult to use.
@@ -569,15 +572,16 @@
 				</div>
 				<div class="checkbox">
 				  <label>
-					<input type="checkbox" >
-					Other. (Please use the text box above to specify.)
+					<input type="checkbox" id="other-textarea" >
+					Other. Please specify:
 				  </label>
+				  <textarea class="form-control m-t m-b-lg other-textarea" style="resize:vertical" rows="3"></textarea>
 				</div>
 
-				<div class="text-right">
+				<!-- <div class="text-right">
 					<a class="send-feedback btn text-info btn-invisible text-700 m-t"><small>SEND</small></a>
 					<div class="ok-feedback text-success m" style="display:none"><i class="fa fa-check-circle"></i> Thank you!</div>
-				</div>
+				</div> -->
 				
 			</form>
 			
@@ -1245,6 +1249,175 @@
 			<div class="modal-footer">
 				<a type="button" class="btn btn-invisible text-600 text-uppercase" data-dismiss="modal">Cancel</a>
 				<a type="button" class="btn btn-invisible text-600 text-uppercase text-info" href="https://typelessco.blob.core.windows.net/publish/setup.exe" target="_blank">DOWNLOAD SETUP.EXE (0.8MB)</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="start-connect-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="modal-title text-600">Connect with Pilar Rubio</h3>
+			</div>
+			<div class="modal-body">
+								
+				
+				<div class="panel panel-default m-b-none">
+		 
+					<div class="panel-body gray-bg">
+						<strong>Include a note to Pilar</strong>
+						<span class="text-gray small pull-right">Maximum 200 characters</span>
+					</div>
+					
+					<ul class="list-group gray-bg" >
+						<li class="list-group-item" style="position:relative">											
+							<textarea class="m-t" style="width:100%;resize:vertical" rows="6"  maxlength="200">Hi Pilar,
+I'd like to get access to your contact network on Typeless. 
+
+Best regards,
+Karen Pryce.
+							</textarea>
+						</li>
+					</ul>
+					
+				</div>
+				
+				<hr>
+				
+				<p class=""><strong>Pilar is more likely to accept if you offer access to your contacts in return.</strong></p>
+
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="option-reciprocal" id="check-reciprocal" checked>
+						Yes, make this connection reciprocal.<br>
+						<br><span class="badge badge-info">All your contacts: 3,694</span> <span class="badge badge-info">Only names and job titles</span></small>
+					</label>
+					
+					<button class="btn btn-sm text-700 text-info btn-invisible show-options"><small>EDIT SETTINGS <i class="fa fa-caret-down"></i></small></button>
+					<button class="btn btn-sm text-700 text-info btn-invisible hide-options" style="display:none"><small>HIDE SETTINGS <i class="fa fa-caret-up"></i></small></button>
+					
+				</div>
+				
+				<div class="panel panel-info show-options" id="scrollhere" style="display:none">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-2">Which contacts would you like to share?<span class="badge badge-info pull-right">All your contacts: 3,694</span></a>
+						</h4>
+					</div>
+					<div id="modal-regular-accordion-2" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="radio" >
+								<span class="badge badge-info pull-right">3,694</span>
+								<label>
+									<input type="radio" name="optionsShareModalWhich" id="optionsShareModalWhich-1" checked>
+									All your contacts
+								</label>
+							</div>
+							<div class="radio" >
+								<label style="vertical-align: top;">
+									<input type="radio" name="optionsShareModalWhich" id="optionsShareModalWhich-2">
+									Only your contacts from the accounts selected
+									<div class="accounts-checkboxes" style="display:none">
+										<div class="checkbox" >
+											<span class="badge badge-info pull-right">1,105</span>
+											<label>
+												<input type="checkbox" value="">
+												<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+											</label>
+										</div>
+										<div class="checkbox" >
+											<span class="badge badge-info pull-right">761</span>
+											<label>
+												<input type="checkbox" value="">
+												<i class="fa fa-google color-google fa-fw m-r-xs"></i>Google<span class="text-gray m-l-xs">(daniel@typeless.co)</span>
+											</label>
+										</div>
+										<div class="checkbox" >
+											<span class="badge badge-info pull-right">1,789</span>
+											<label>
+												<input type="checkbox" value="">
+												<i class="fa fa-apple fa-fw m-r-xs"></i>Apple iCloud<span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+											</label>
+										</div>
+										<div class="checkbox" >
+											<span class="badge badge-info pull-right">411</span>
+											<label>
+												<input type="checkbox" value="">
+												<i class="fa fa-facebook-square color-facebook fa-fw m-r-xs"></i>Facebook <span class="text-gray m-l-xs">(jdvivar@gmail.com)</span>
+											</label>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="radio" >
+								<label style="vertical-align: top;">
+									<span class="badge badge-info pull-right">12,344</span>
+									<input type="radio" name="optionsShareModalWhich"  id="optionsShareModalWhich-3">
+									Your team contacts<br>
+									<div class="text-gray" style="padding-left:25px;">
+										<small>Contacts in your work e-mail account connected to your team (daniel@typeless.co) plus contacts the team members are sharing within the team.</small>
+									</div>
+								</label>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-info show-options" style="display:none">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#modal-regular-accordion" href="#modal-regular-accordion-3">What details would you like to share?<span class="badge badge-success pull-right">Everything</span></a>
+						</h4>
+					</div>
+					<div id="modal-regular-accordion-3" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="radio">
+							  <label>
+								<input type="radio" name="optionsRadios" value="option1" checked>
+								Everything
+							  </label>
+							</div>
+							<div class="radio">
+							  <label>
+								<input type="radio" name="optionsRadios" value="option2">
+								Only names and job titles (no contact details)
+							  </label>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="modal-footer">
+				<a type="button" class="btn btn-invisible text-600 text-uppercase" data-dismiss="modal">Cancel</a>
+				<a type="button" class="btn btn-invisible text-600 text-uppercase text-info" data-dismiss="modal" id="connect-button">Connect</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="start-request-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="modal-title text-600">Request contact details of Sanson Pierre</h3>
+			</div>
+			<div class="modal-body">
+				<p>These people have contact details </p>
+				
+				<label class="m-t">
+					<input type="checkbox" checked>
+					Make this connection reciprocal.
+				</label>
+				
+				<p>Send a share invitation while requesting one will grow both of your networks.</p>				
+				
+			</div>
+			<div class="modal-footer">
+				<a type="button" class="btn btn-invisible text-600 text-uppercase" data-dismiss="modal">Cancel</a>
+				<a type="button" class="btn btn-invisible text-600 text-uppercase text-info">Connect</a>
 			</div>
 		</div>
 	</div>
