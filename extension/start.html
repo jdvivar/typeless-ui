@@ -127,10 +127,66 @@
 		<div class="row m-b-sm" id="notifications-row" style="overflow-y:auto">
 		
 			<div style="margin-right:9px">
+
+				<div class="m-b-sm"><strong >What's going on in your network</strong></div>
 		
+				<div class="text-center"><i class="fa fa-angle-up"></i></div>
+			
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;padding:10px 10px 10px 10px">
+						
+						<a class="pull-left">
+							<img alt="image" class="img-circle" src="../img/a18.jpg" style="width:35px">
+						</a>
+						
+						<span class="text-info small" style="position:absolute;right:10px;top:35px">711 contacts</span>
+						
+						<a class="btn btn-xs btn-outline btn-info request pull-right text-700"><small>&nbsp;CONNECT&nbsp;</small></a>
+						
+						<div class="" style="margin-left:40px">
+							<div class="truncate"><strong>Virginia Madsen</strong></div>
+							<div class="truncate">CEO of Rhyno</div>
+						</div>
+						
+				</div>
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;padding:10px 10px 10px 10px">
+						
+						<a class="pull-left">
+							<img alt="image" class="img-circle" src="../img/a17.jpg" style="width:35px">
+						</a>
+						
+						<span class="text-info small" style="position:absolute;right:10px;top:35px">4,077 contacts</span>
+						
+						<a class="btn btn-xs btn-outline btn-info request pull-right text-700"><small>&nbsp;CONNECT&nbsp;</small></a>
+						
+						<div class="" style="margin-left:40px">
+							<div class="truncate"><strong>Michael W. Ferguson</strong></div>
+							<div class="truncate">Sales Manager at RFFE</div>
+						</div>
+						
+				</div>
+				<div class="col-xs-12 add-border white-bg" style="border-radius:3px;padding:10px 10px 10px 10px">
+						
+						<a class="pull-left">
+							<img alt="image" class="img-circle" src="../img/a10.jpg" style="width:35px">
+						</a>
+						
+						<span class="text-info small" style="position:absolute;right:10px;top:35px">2,233 contacts</span>
+						
+						<a class="btn btn-xs btn-outline btn-info request pull-right text-700"><small>&nbsp;CONNECT&nbsp;</small></a>
+						
+						<div class="" style="margin-left:40px">
+							<div class="truncate"><strong>Enrigue Iglesias</strong></div>
+							<div class="truncate">Industrial Engineer</div>
+						</div>
+						
+				</div>
+				
+				
+				<div class="text-center"><i class="fa fa-angle-down"></i></div>
+				
 				<div class="m-b-sm"><strong >Notifications</strong></div>
 				
-				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;padding:10px 15px 15px 15px">
+				<div class="col-xs-12 add-border white-bg m-b-sm" style="border-radius:3px;padding:10px 15px 15px 15px; display:none">
 					<div class="small text-gray"><i class="fa fa-fw fa-plug text-muted"></i> Enrich your contacts</div>
 					<div class="divider m-t-xs m-b-sm"></div>
 					<div class="text-center m">
@@ -141,6 +197,7 @@
 					<!-- <button aria-hidden="true" class="close" type="button" style="position: absolute;right: 10px;bottom: 10px;">×</button> -->
 					
 				</div>
+				
 				
 				
 				
@@ -243,6 +300,9 @@
     <script src="../js/bootstrap.min.js"></script>
 	<!-- <script src="../js/plugins/pnotify/pnotify.core.js"></script> -->
 	<!-- <script src="../js/plugins/pnotify/pnotify.buttons.js"></script> -->
+	
+		<!-- jCarousel -->
+	<script src="../js/plugins/jCarousel/jquery.jcarousel.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -303,7 +363,16 @@
 				location.href='minimized.html';
 			});
 			
-			
+						//jcarousel
+			$('.jcarousel').jcarousel();
+		
+			$('.jcarousel-prev').jcarouselControl({
+				target: '-=1'
+			});
+
+			$('.jcarousel-next').jcarouselControl({
+				target: '+=1'
+			});
 			
         });
     </script>
