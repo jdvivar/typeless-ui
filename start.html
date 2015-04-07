@@ -587,9 +587,11 @@
 				
 				$('#start-connect-modal #connect-button').click(function(){
 				
+					$('.box-suggestions').first().fadeOut('slow');
 					
 					$('#alert-connected').fadeIn('slow');
-					setTimeout(function(){$('#alert-connected').fadeOut('slow');}, 5000);
+					setTimeout(function(){
+						$('#alert-connected').fadeOut('slow');}, 5000);
 					
 				});
 				

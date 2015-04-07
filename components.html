@@ -328,9 +328,17 @@
 				<a href="#"><span class="nav-label">Sharing</span><span class="fa arrow"></span></a>
 				<ul class="nav nav-second-level collapse" style="height: 0px;">
 					<li>
-						<a href="sharing-team-start2.html"  id="sharing-team-link" >
+						<a href="sharing-team-start2.html"  id="sharing-team-link" onclick="window.location.assign('sharing-team-start2.html')">
 							My team<span class="badge pull-right"></span>
 						</a>
+						<ul class="nav nav-third-level collapse in" style="height: auto;display:none">
+							<li>
+								<a href="#" id="team-1">Balderton PR team</a>
+							</li>
+							<li>
+								<a href="#" id="team-2">Balderton IT team</a>
+							</li>
+						</ul>
 					</li>
 					<li  >
 						<a href="sharing-friends.html" id="sharing-friends-link">
@@ -425,8 +433,11 @@
         <h3 class="modal-title text-600">Add members to your team</h3>
       </div>
 	  <div class="modal-body">
-		Please, type or paste the e-mail addresses of the people you want to add to your team.
-        <br><br><textarea style="resize:vertical;width:100%"></textarea>
+		Please, type or paste the e-mail addresses of the people you want to add to your team.</br></br>
+		
+		<button class="btn btn-info text-700 import-gapps"><small>IMPORT GOOGLE APPS USERS</small></button>
+		
+        <br><br><textarea id="add-members-textarea" style="resize:vertical;width:100%" rows="5"></textarea>
 		<small>We will invite them via an e-mail message. You will see them listed as <span class="label label-warning-light">PENDING</span> team members.</small>
       </div>
       <div class="modal-footer">
