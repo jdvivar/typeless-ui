@@ -1,0 +1,136 @@
+/* TOPBAR STYLES */
+
+/* Given the mess I did when I grasped my hands on the Inspinia/Bootstrap style-sheets with 0 experience */
+
+.tb.tb-main {
+	background-color:#f3f3f4;
+	height:64px;
+	border-bottom:1px solid #e7eaec;
+}
+
+.tb .tb-left {
+	height:64px;
+	text-align:center;
+	float:left;
+}
+
+.tb-left .btn {
+	color: #7f8c8d;
+}
+
+.tb .tb-logo {
+	width:220px;
+	height:64px;
+	text-align:center;
+	float:left;
+}
+
+.tb .tb-logo img {
+	width:50%;
+	margin-top: 16px;
+}
+
+.tb .tb-right {
+	height:64px;
+	text-align:right;
+	float:right;
+	margin-right: 15px;
+}
+
+.tb-right .tb-bell {
+	line-height: 64px;
+	padding: 20px 10px;
+	border-bottom: 3px solid #1abc9c;
+	color: #7f8c8d;
+	position:relative;
+}
+
+.tb-bell:hover {
+	background-color: white;
+}
+
+.tb-bell .badge {
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+
+.tb .tb-search {
+	width:auto;
+	height:64px;
+	text-align:right;
+	margin-left:15px;
+	padding-top:16px
+}
+
+.tb-search .input-group {
+	padding-left:15px;
+}
+
+.tb-search input {
+	border-color: #3498db;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	transition: all .5s;
+}
+
+.tb .tb-user {
+	margin-left: 15px;
+}
+
+.tb-user img {
+	width: 40px;
+	border: 1px solid transparent;
+}
+
+.tb-user img:hover {
+	border: 1px solid #dddddd;
+}
+
+/* responsive rules */
+
+@media (max-width: 768px) {
+	.tb .tb-logo {
+		display: none;
+	}
+}
+
+@media (min-width: 769px) {
+	.tb .tb-left {
+		display: none;
+	}
+}
+
+@media (max-width:590px) {
+	.tb .tb-right .btn span {
+		display: none;
+	}
+}
+
+@media (max-width:392px) {
+	.tb .tb-search .input-group {
+		padding-right: 15px;
+	}
+	
+	.tb .tb-right .btn:first-child {
+		margin-left:0;
+	}
+	
+	.tb .tb-right .btn {
+		padding: 6px 3px;
+	}
+
+	.tb .tb-search input {
+		width: 0;
+	}
+	
+	.tb .tb-search input:focus {
+		/* width: 237px; */
+		width: 100%;
+	}
+	
+	.tb .tb-right {
+		//display: none;
+	}
+	
+}

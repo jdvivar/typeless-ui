@@ -53,9 +53,21 @@ h5 {
   -moz-display:inline-table;
 }
 
+
 .top-search{
   width: 400px;
   margin-left:15px;
+}
+
+@media (max-width: 1116px){
+	.top-search{
+		width: 344px;
+	}
+}
+@media (max-width: 1060px){
+	.top-search{
+		width: 150px;
+	}
 }
 
 /* problem with top search bar in Firefox */
@@ -300,10 +312,14 @@ div.divider {
   
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 866px) {
   .btn-responsive > span {
     display: none;
   }
+}
+
+
+@media (max-width: 1190px) {
   .click-share-notice{
 	right:15px;
   }
@@ -1794,7 +1810,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 .navbar-fixed-top {
   background: #fff;
   min-height:64px;
-  min-width:1009px;
+  /* min-width:1009px; */
   transition-duration: 0.5s;
   border-bottom: 1px solid #e7eaec !important;
 }
@@ -5417,7 +5433,7 @@ body.skin-3 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #page-wrapper {
     position: inherit;
     margin: 0 0 0 0px;
@@ -5439,8 +5455,8 @@ body.skin-3 {
     display: none;
   }
   .navbar-header {
-    //display: inline;
-    //float: left;
+    /* display: inline; */
+    float: left;
   }
   .sidebard-panel {
     z-index: 2;
