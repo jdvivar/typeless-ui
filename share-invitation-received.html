@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Share invitation received | Typeless.</title>
+    <title>Share invitation confirmation | Typeless.</title>
 	
 	<link rel="icon" href="favicon.png">
 
@@ -35,15 +35,6 @@
 		<!-- loaded dinamically -->
 	</span>
 	
-
-	<div id="notify-wrapper">
-		<span class="m-t-sm" style="display:none" id="timeout-alert">
-			<div class="alert alert-success">
-				Deleted 3 contacts. I'll close myself in 5s. <a class="alert-link" href="#">Undo</a>
-			</div>
-		</span>
-	</div>
-	
 	<nav class="navbar navbar-fixed-top gray-bg" role="navigation" id="navbar-top">
 		<!-- loaded dinamically -->
 	</nav>
@@ -56,44 +47,50 @@
 				
     <div id="wrapper" >
         
-        <div class="white-bg top-navbar" style="margin-top:64px">			
+        <div id="page-wrapper" class="white-bg top-navbar" style="margin-top:64px">			
 			
 			<div class="row wrapper white-bg page-heading">
-            </div>
+            	
+			</div>
 			
 			<div class="row no-margins" id="alerts-row">
-
-				
 				
 			</div>
 			
 			<div class="wrapper wrapper-content animated fadeIn" >
 				
-				<div class="" style="width:220px;position:absolute">
-					<div class="well well-sm white-bg m-l m-t-sm">
-						<div class="text-600 text-gray">Access level:</div>
-						<div>Names and job titles <i class="fa fa-info-circle text-info" data-tooltip="tooltip" data-placement="bottom" title="You can see Karen's contacts but will need to request any specific contact details."></i></div>
+				<h1 class="text-center line-height-normal m-t-xl"><img class="img-circle" src="./img/a18.jpg"><br>Karen wants to give you access to<br><a class=" underline"><strong>3,205</strong></a> contacts.</h1>
+				
+
+				<div class="row m-t-xl m-b-xl">
+					<div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 text-center">
+						<a class="btn btn-success btn-lg text-700 text-uppercase" style="width:100%;white-space: normal;">Yes, I'd like access to these contacts</a>
 					</div>
-					<div class="well well-sm white-bg m-l">
-						<div class="text-600 text-gray">Where are these contacts coming from?</div>
-						<i class="fa fa-google color-google" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael.stephamblome@gmail.com<br>michael@typeless.co"></i>&nbsp;
-						<i class="fa fa-facebook-square color-facebook" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael.stephamblome@gmail.com"></i>&nbsp;
-						<i class="fa fa-linkedin-square color-linkedin" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael@typeless.co"></i>&nbsp;
+					<div class="m-t visible-xs">&nbsp;</div>
+					<div class="col-xs-12 col-sm-6 col-md-5 text-right">
+						<a class="btn btn-danger btn-lg text-700 text-uppercase" style="width:100%;white-space: normal;">No, I don't want these contacts</a>
+						<br>
+						<a class="text-info underline" style="">Not sure? Decide later</a>
 					</div>
 				</div>
 				
-				
-				<div class="col-sm-10 col-sm-offset-1" style="margin-left:220px">
-					<h1 class="text-center line-height-normal m-t-xl"><img class="img-circle" src="./img/a18.jpg"><br>Karen wants to give you access to<br><strong>3,205</strong> contacts.</h1>
-					
-					
-					<div class="text-center m-t-xl m-b-xl">
-						<a class="btn btn-success btn-w-lg btn-lg text-700 m-r-lg text-uppercase">Yes, I'd like access to these contacts</a>
-						<a class="btn btn-danger btn-w-lg btn-lg text-700 m-l-lg text-uppercase" >No, I don't want these contacts</a>
-						<br>
-						<a class="text-info underline" style="margin-left:715px">Not sure? Decide later</a>
+				<div class="row visible-xs">
+					<div class="col-xs-12">
+						<div class="well well-sm white-bg">
+							<div class="text-600 text-gray">Access level:</div>
+							<div>Names and job titles <i class="fa fa-info-circle text-info" data-tooltip="tooltip" data-placement="bottom" title="You can see Karen's contacts but will need to request any specific contact details."></i></div>
+						</div>
+						<div class="well well-sm white-bg">
+							<div class="text-600 text-gray">Where are these contacts coming from?</div>
+							<i class="fa fa-google color-google" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael.stephamblome@gmail.com<br>michael@typeless.co"></i>&nbsp;
+							<i class="fa fa-facebook-square color-facebook" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael.stephamblome@gmail.com"></i>&nbsp;
+							<i class="fa fa-linkedin-square color-linkedin" data-tooltip="tooltip" data-placement="bottom" data-html="true" title="michael@typeless.co"></i>&nbsp;
+						</div>
 					</div>
-					<div class="col-xs-4 text-center p-xs">
+				</div>
+
+				<div class="row">
+					<div class="col-sm-4 text-center">
 						<div class="well"  style="min-height:190px">
 							<!-- <span class="fa-stack fa-2x">
 							  <i class="fa fa-eye fa-stack-1x"></i>
@@ -103,30 +100,28 @@
 							  <i class="fa fa-exchange fa-stack-1x"></i>
 							  <i class="fa fa-ban fa-stack-2x text-danger"></i>
 							</span><br>
-							<div class="h4 text-left text-300 line-height-normal">Don't worry, Michael will not have access to your contacts.</div>
+							<div class="h4 text-300 line-height-normal">Don't worry, Karen will not have access to your contacts.</div>
 						</div>
 					</div>
-					<div class="col-xs-4 text-center p-xs">
+					<div class="col-sm-4 text-center">
 						<div class="well" style="min-height:190px">
 							<span class="fa-stack fa-2x">
 							  <i class="fa fa-circle fa-stack-2x text-info"></i>
 							  <i class="fa fa-link fa-stack-1x fa-inverse fa-rotate-90"></i>
 							</span><br>
-							<div class="h4 text-left text-300 line-height-normal">All changes to Michael's contact book will update automatically.</div>
+							<div class="h4 text-300 line-height-normal">All changes to Karen's contact book will update automatically.</div>
 						</div>
 					</div>
-					<div class="col-xs-4 text-center p-xs">
+					<div class="col-sm-4 text-center">
 						<div class="well"  style="min-height:190px">
 						<span class="fa-stack fa-2x">
 						  <i class="fa fa-circle fa-stack-2x text-gray"></i>
 						  <i class="fa fa-cogs fa-stack-1x fa-inverse "></i>
 						</span><br>
-						<div class="h4 text-left text-300 line-height-normal">You can remove these contacts with one click at any time in the future.</div>
+						<div class="h4 text-300 line-height-normal">You can remove these contacts with one click at any time in the future.</div>
 						</div>
 					</div>
-					<div class="clearfix"></div>
 				</div>
-				
 				<div id="space-after"></div>
 			</div>
 			
@@ -157,53 +152,31 @@
 		
 			// loading of components and callbacks		
 			$( "#footer" ).load( "components.html #footer" );
-			$( "#navbar-side" ).load( "components.html #navbar-side", afterLoadingNavbarSide );
-			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );
-			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
-			$( "#modal-windows-2" ).load( "components.html #new-contact-modal", afterLoadingModal);
-			$( "#modal-windows-3" ).load( "components.html #received-invitation-modal", afterLoadingModal);
-			
+			$( "#navbar-side" ).load( "components.html #navbar-side-share-invitation", afterLoadingNavbarSide );
+			$( "#navbar-top" ).load( "components.html #navbar-top", afterLoadingNavbarTop );			
 						
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
 			
-				/* Placeholder for search bar. Put here for future customisation,
-				   always opt in for the javascript code if available and reasonably human readable */			
-				// $('#top-search').attr('placeholder','Search for people, jobs, companies & more');  /* jQuery */			
-				document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more"; /* javascript */
-								
 				$('#share-contacts-btn').fadeOut(2000);
 				$('#new-contact-btn').fadeOut(2000);
 				$('.input-group.top-search').fadeOut(2000);
 				$('.navbar-top-links li.dropdown:first-child').fadeOut(2000);
 				$('.navbar-top-links li.dropdown:nth-child(2) .dropdown-menu li:nth-child(4)').fadeOut(2000);
-				$('.navbar-top-links li.dropdown:nth-child(2) .dropdown-menu li:nth-child(5)').fadeOut(2000);			
+				$('.navbar-top-links li.dropdown:nth-child(2) .dropdown-menu li:nth-child(5)').fadeOut(2000);
 				
-			};
-			
-			function afterLoadingNavbarSide(){
-				$("#navbar-side").fadeOut(2000);
 			};
 			
 			// callback after loading navbar-side
-			function afterLoadingModal(){
+			function afterLoadingNavbarSide(){
 			
-				startiCheck();
+				// Activate tooltips
+				$("[data-tooltip='tooltip']").tooltip();
 				
-				$("#share-contacts-modal-regular input#optionsShareModalWhich-2").on('ifToggled', function(event){
-					$("#share-contacts-modal-regular .accounts-checkboxes").slideToggle(500);
-					console.log('ifClicked');
-				});
-				
-			};
-			
-			$(".contact-box input:checkbox").click(function(e) {
-				
-				e.stopPropagation();
-			});			
+			};			
 			
 			// Space after contacts, so user see how more contacts are added
-			$('#space-after').height($('#space-after').width()/8);			
+			$('#space-after').height($('#space-after').width()/8);
 			
 			function startiCheck(){
 				$('input').iCheck({
@@ -220,19 +193,6 @@
 			
 			// Activate tooltips
 			$("[data-tooltip='tooltip']").tooltip();
-			
-			jQuery.fn.extend({
-				caretToggle: function () {
-					var self = $(this);
-					if (self.hasClass("fa-caret-down")) {
-						self.removeClass("fa-caret-down");
-						self.addClass("fa-caret-up");
-					} else if (self.hasClass("fa-caret-up")) {
-						self.removeClass("fa-caret-up");
-						self.addClass("fa-caret-down");
-					};
-				}
-			});
 			
         });
     </script>
