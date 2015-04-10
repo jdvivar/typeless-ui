@@ -60,7 +60,7 @@
 		/* function to make search bar placeholder responsive */
 			$(function() {					
 				$(window).bind("load resize", function() {
-					if ($(this).width() < 999) {
+					if (($(this).width() < 800 && $(this).width() > 768) || $(this).width() < 629) {
 						document.getElementById("search-input").placeholder = "Search";
 					} else {
 						document.getElementById("search-input").placeholder = "Search for people, jobs, companies & more";
