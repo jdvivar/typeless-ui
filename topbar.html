@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+    <title>Topbar | Typeless.</title>
+	
+	<link rel="icon" href="favicon.png">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/topbar.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<div class="tb tb-main">
+		<div class="tb-left">
+			<a style="line-height:64px"><button class="btn btn-invisible m-l-sm" type="button" id="menu-btn"><i class="fa fa-bars"></i></button></a>
+		</div>
+		<div class="tb-logo">
+			<img src="img/logo-complete-400p.png" >
+		</div>
+		<div class="tb-right">
+			<button class="btn btn-invisible text-info    text-700 m-l-sm" type="button" id="share-contacts-btn" data-tooltip="tooltip" data-placement="bottom" title="" data-original-title="Share contacts"><small><i class="fa fa-fw fa-share-alt"></i> <span>SHARE CONTACTS</span></small></button>
+			<button class="btn btn-invisible text-success text-700 m-r-sm" type="button" id="new-contact-btn" data-tooltip="tooltip" data-placement="bottom" title="" data-original-title="New contact"><small><i class="fa fa-plus fa-fw"></i> <span>NEW CONTACT</span></small></button>
+			<a class="tb-bell" href="#">
+				<i class="fa fa-bell fa-fw"></i><span class="badge badge-success" style="">2</span>
+			</a>
+			<a class="tb-user" href="#">
+				<img class="img-circle" src="img/a10.jpg">
+			</a>
+		</div>
+		<div class="tb-search">
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button class="btn btn-info" type="button"><i class="fa fa-search"></i></button>
+				</span>
+				<input type="text" class="form-control"	id="search-input" placeholder="Search for people, jobs, companies and more"></input>
+			</div>
+		</div>
+		
+	</div>
+	
+    <!-- Mainly scripts -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+		
+		/* function to make search bar placeholder responsive */
+			$(function() {					
+				$(window).bind("load resize", function() {
+					if ($(this).width() < 999) {
+						document.getElementById("search-input").placeholder = "Search";
+					} else {
+						document.getElementById("search-input").placeholder = "Search for people, jobs, companies & more";
+					}
+				});
+			});
+			
+			$('.tb .tb-search input').focus(
+				function(){
+					if ($(window).width() < 392)
+						$('.tb .tb-right').toggle();
+				}
+			);
+				
+			$('.tb .tb-search input').blur(
+				function(){
+					if ($(window).width() < 392)
+						$('.tb .tb-right').toggle('slow');
+				}
+			);
+			
+			
+        });
+    </script>
+	
+	
+</body>
+</html>
