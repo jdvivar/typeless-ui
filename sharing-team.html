@@ -163,7 +163,7 @@
 												<td class="text-gray text-right status small"><span class="label label-warning-light ">PENDING</span><br><span class="when">Started 6h ago</span></td>
 											</tr>
 											
-											<tr class="va-middle show-sharing" id="ramon-sharing">
+											<!-- <tr class="va-middle show-sharing" id="ramon-sharing">
 												<td><img alt="image" class="img-circle m-l-sm" src="img/a15.jpg" style="width:38px;height:38px"></td>
 												<td class="">Ramon Prieto<br><span class=" small text-gray">rprieto@balderton.com</span></td>
 												<td class=""><a class="underline text-info">4,623</a></td>
@@ -185,7 +185,7 @@
 													&nbsp;<span class="label label-success ">SHARING</span><br>
 													<span class="when">Signed off 6h ago</span>
 												</td>
-											</tr>
+											</tr> -->
 											<tr class="va-middle show-uninvited">
 												<td ><img alt="image" class="img-circle m-l-sm" src="img/profile.jpg" style="width:38px;height:38px"></td>
 												<td class="">Africa Bravo<br><span class="small text-gray">abravo@balderton.com</span></td>
@@ -756,11 +756,13 @@
 				$('#sharing-team-link span').text(myTeamHowMany);
 				
 				$('#sharing-menu #team-1').click(function(){
+					$('#tab-who tbody tr:nth-child(even)').show();
 					$('#tab-who tbody tr:nth-child(odd)').hide();
 					
 				});
 				
 				$('#sharing-menu #team-2').click(function(){
+					$('#tab-who tbody tr:nth-child(odd)').show();
 					$('#tab-who tbody tr:nth-child(even)').hide();
 					
 				});
@@ -1118,7 +1120,7 @@
 				$('#tab-who tbody tr.show-pending .status .when').text('Invited 10 s ago');
 				
 				// show number of team members
-				$('.nav.nav-tabs li#li-tab-who span.how-many').text('3');
+				$('.nav.nav-tabs li#li-tab-who span.how-many').text('10');
 				
 				// wait 3 s, then convert to sharing Ramon Prieto
 				// wait another 3s, then signed him off
