@@ -463,9 +463,9 @@ div.divider {
 	background-image: url(../img/logo_outlook_com-black.png);
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
 	box-shadow: 0 6px 12px rgba(0,0,0,.175);
-}
+} */
 
 .search > li > a {
 	font-size: 14px;
@@ -1469,20 +1469,20 @@ have a fixed width and height (but it's not required).
 
 .nav > li > a {
   /* color: #a7b1c2; */
-  color: #676a6c;
-  font-weight: 400;
-  font-size: 1.2em;
-  padding: 14px 20px 14px 14px;
-  //background-color: white;
+  color: #666666;
+  /* font-weight: 400; */
+  /* font-size: 16px; */
+  /* padding: 12px; */
+  /* background-color: #f3f3f4; */
 }
 
 .nav-second-level li a {
 	background-color: whitesmoke;
+	font-weight: normal;
 }
 
 .nav-second-level li a.active {
-	font-weight:600;
-	background-color: #d5d5d5;
+	/* font-weight:600; */
 }
 
 .nav-second-level li a:hover {
@@ -1498,14 +1498,14 @@ have a fixed width and height (but it's not required).
 }
 .nav > li.active {
   background-color: whitesmoke;
+  font-weight: 600;
 }
 
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
-  /* background-color: #293846; */
   background-color: whitesmoke;
-  /* color: white; */
 }
+
 .nav.navbar-top-links > li > a:hover,
 .nav.navbar-top-links > li > a:focus {
   background-color: whitesmoke;
@@ -1570,7 +1570,8 @@ have a fixed width and height (but it's not required).
   z-index: 1000;
   border-radius: 2px;
 } */
-.dropdown-menu {
+
+/* .dropdown-menu {
   border: 1px solid #e5e5e5;
   border-radius: 3px;
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -1585,9 +1586,9 @@ have a fixed width and height (but it's not required).
   top: 100%;
   z-index: 1000;
   margin-top:0;
-}
+} */
 
-.dropdown-menu > li > a {
+/* .dropdown-menu > li > a {
   border-radius: 3px;
   color: inherit;
   line-height: 25px;
@@ -1596,7 +1597,8 @@ have a fixed width and height (but it's not required).
   font-weight: normal;
   padding: 5px 10px;
   transition: background-color .5s;
-}
+} */
+
 .dropdown-menu > li > a.font-bold {
   font-weight: 600;
 }

@@ -1,12 +1,11 @@
-/* TOPBAR STYLES */
-
-/* Given the mess I did when I grasped my hands on the Inspinia/Bootstrap style-sheets with 0 experience */
+/* TYPELESS UI LAYOUT */
 
 .tb.tb-main {
 	background-color:#f3f3f4;
 	height:64px;
 	border-bottom:1px solid #e7eaec;
 	position: fixed;
+	z-index: 5;
 }
 
 .tb .tb-left {
@@ -49,21 +48,40 @@
 }
 
 .tb-right .tb-bell {
-	line-height: 64px;
 	padding: 20px 10px;
 	border-bottom: 3px solid #1abc9c;
 	color: #7f8c8d;
-	position:relative;
+	display: inline-block;
+}
+
+.tb-bell > a {
+	color: #7f8c8d;
+}
+
+.tb-bell .badge {
+	position: absolute;
+	top: 10px;
+	right: 5px;
 }
 
 .tb-bell:hover {
 	background-color: white;
 }
 
-.tb-bell .badge {
-	position: absolute;
-	top: 10px;
-	right: 0px;
+.tb-bell ul.notifications{
+	width: 450px;
+}
+
+.tb-bell ul.notifications *{
+	white-space: normal;
+}
+
+.tb-bell ul.notifications .timestamp-mobile{
+	display: none;
+}
+
+.tb-bell ul.notifications .timestamp{
+	float: right;
 }
 
 .tb .tb-search {
@@ -87,6 +105,12 @@
 
 .tb .tb-user {
 	margin-left: 15px;
+	height: 51px;
+	display: inline-block;
+}
+
+.tb .tb-user.dropdown > ul{
+	max-width:300px
 }
 
 .tb-user img {
@@ -94,7 +118,7 @@
 	border: 1px solid transparent;
 }
 
-.tb-user img:hover {
+.tb-user img:hover, .dropdown.open .dropdown-toggle img{
 	border: 1px solid #dddddd;
 }
 
@@ -107,6 +131,56 @@
 	position: fixed;
 	top: 64px;
 	z-index:1;
+	height: 100%;
+	border-right: 1px solid #e7eaec;
+	/* background-color:#f3f3f4; */
+}
+
+.tb.navbar-default .sidebar-collapse .user-menu{
+	padding: 10px 15px 0 15px;
+}
+
+.tb.navbar-default .sidebar-collapse .footer-menu{
+	padding: 0 15px 10px 15px;
+}
+
+.tb.navbar-default .sidebar-collapse .footer-menu .copyright{
+	position:relative;
+	top:2px
+}
+
+.tb .tb-right .dropdown-menu {
+	right: 0;
+	left: auto;
+}
+
+.tb.navbar-default .foo {
+	position: fixed;
+	bottom:0;
+	width: 220px;
+	background-color: white;
+	padding: 10px 12px;
+	border-right: 1px solid #e7eaec;
+	/* background-color: #f3f3f4; */
+}
+
+.tb.navbar-default .foo div{
+	display: inline-block;
+}
+
+.tb .tb-search .dropdown-menu .results-extended {
+	position: absolute;
+	left: 300px;
+}
+
+.tb .tb-search .dropdown-menu a img {
+	height: 60px;
+}
+
+.tb .tb-search .dropdown-menu a span.fa-stack {
+	font-size: 10px;
+	position: absolute;
+	left: 18px;
 }
 
 /* responsive rules */
@@ -119,6 +193,14 @@
 	.tb .tb-right .tb-user {
 		display: none;
 	}
+	
+	.tb.navbar-default{
+		border: none;
+	}
+	
+	.tb.navbar-default .foo {
+		display:none;
+	}
 }
 
 @media (min-width: 768px) {
@@ -129,6 +211,14 @@
 	.tb.navbar-default .sidebar-collapse .user-menu{
 		display: none;
 	}
+	
+	.tb.navbar-default .sidebar-collapse .footer-menu{
+		display: none;
+	}
+	
+	.tb.tb-wrapper {
+		margin-left: 220px;
+	}
 }
 
 @media (max-width:999px) {
@@ -137,14 +227,30 @@
 	}
 }
 
+@media (min-width:1000px){
+	.nav#side-menu > li > a {
+	  font-weight: 400;
+	  font-size: 16px;
+	  padding: 12px;
+	}
+}
+
 @media (max-width:480px) {
 	
-	.tb .tb-right .btn {
+	.tb .tb-right > .btn {
 		display:none;
 	}
 	
 	.tb .tb-search .input-group {
 		padding-right: 15px;
+	}
+	
+	.tb-bell ul.notifications .timestamp-mobile{
+		display: block;
+	}
+	
+	.tb-bell ul.notifications .timestamp{
+		display: none;
 	}
 	
 }
@@ -161,15 +267,9 @@
 		display:none;
 	}
 	
-	.tb.navbar-default ul.nav {
+	.tb.navbar-default .sidebar-collapse {
 		border-bottom: 1px solid #dddddd;
 		box-shadow: 0px 1px 3px rgba(33, 33, 33, 0.1);
 	}
 	
-}
-
-@media (min-width: 768px) {
-	.tb.tb-wrapper {
-		margin-left: 220px;
-	}
 }
