@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <title>Topbar | Typeless.</title>
@@ -36,17 +37,158 @@
 		<div class="tb-right">
 			<button class="btn btn-invisible text-info    text-700 m-l-sm" type="button" id="share-contacts-btn" data-tooltip="tooltip" data-placement="bottom" title="" data-original-title="Share contacts"><small><i class="fa fa-fw fa-share-alt"></i> <span>SHARE CONTACTS</span></small></button>
 			<button class="btn btn-invisible text-success text-700 m-r-sm" type="button" id="new-contact-btn" data-tooltip="tooltip" data-placement="bottom" title="" data-original-title="New contact"><small><i class="fa fa-plus fa-fw"></i> <span>NEW CONTACT</span></small></button>
-			<a class="tb-bell" href="#">
-				<i class="fa fa-bell fa-fw"></i><span class="badge badge-success" style="">2</span>
-			</a>
-			<a class="tb-user" href="#">
-				<img class="img-circle" src="img/a10.jpg">
-			</a>
+
+			<div class="tb-bell dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<span class="badge badge-success" style="">1</span>
+					<i class="fa fa-bell fa-fw"></i>
+				</a>
+				<ul class="dropdown-menu notifications" role="menu" >
+					<button class="btn btn-xs btn-success btn-outline pull-right m-r-xs text-700"><small>SEE ALL</small></button>
+					<li role="presentation" class="dropdown-header m-b-xs">Notifications</li>
+					<li role="presentation">
+						<a class="" role="menuitem" tabindex="-1" href="#">
+							<span class="text-muted timestamp small">Received 5 min ago</span>
+							<div><span class="label label-success">NEW</span><strong> Share invitation</strong></div>
+							<div>Michael Stephanblome has sent you a share invitation.</div>
+							<span class="text-muted timestamp-mobile small">Received 5 min ago</span>
+						</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a class="" role="menuitem" tabindex="-1" href="#">
+							<span class="text-muted timestamp small">Received 1 h ago</span>
+							<div><strong>Single contact request</strong></div>
+							<div>Michael Stephanblome is asking for Satish Jayakumar's contact details.</div>
+							<span class="text-muted timestamp-mobile small">Received 1 h ago</span>
+							<div class="text-center m-t-xs">
+								<button class="btn btn-sm btn-success btn-outline text-700"><small>ACCEPT</small></button>
+								<button class="btn btn-sm btn-warning btn-outline text-700"><small>IGNORE</small></button>
+								<button class="btn btn-sm btn-info btn-outline text-700"><small>INTRO</small></button>
+							</div>
+						</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a class="" role="menuitem" tabindex="-1" href="#">
+							<span class="text-muted timestamp small">Accepted 2 days ago</span>
+							<div><strong>Single contact request</strong></div>
+							<div>Virginia Madsen asked for Raul Vialas's contact details.</div>
+							<span class="text-muted timestamp-mobile small">Accepted 2 days ago</span>
+						</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a class="" role="menuitem" tabindex="-1" href="#">
+							<span class="text-muted timestamp small">Status and timestamp</span>
+							<div><strong>Notification title</strong></div>
+							<div>Notification text.</div>
+							<span class="text-muted timestamp-mobile small">Status and timestamp</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tb-user dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle" src="img/a10.jpg"></a>
+				<ul class="dropdown-menu" role="menu" >
+					
+					<div class="truncate m-l-md m-t-xs m-r-md"><strong>Donald Draper</strong></div>
+					<div class="truncate m-l-md m-r-md text-gray">don@sterlingcooper.com</div>
+					
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Settings</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Log out</a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="tb-search">
 			<div class="input-group">
-				<span class="input-group-btn">
-					<button class="btn btn-info" type="button"><i class="fa fa-search"></i></button>
+				<span class="input-group-btn dropdown">
+					<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-search"></i></button>
+					<ul class="dropdown-menu" role="menu">
+						<button class="btn btn-xs btn-info btn-outline pull-right m-r-xs text-700"><small>SHOW ALL RESULTS</small></button>
+						<button class="btn btn-xs btn-info btn-outline pull-right m-r-xs text-700 desktop"><small>BY LOCATIONS</small></button>
+						<button class="btn btn-xs btn-info btn-outline pull-right m-r-xs text-700 desktop"><small>BY JOB TITLES</small></button>
+						<button class="btn btn-xs btn-info btn-outline pull-right m-r-xs text-700 desktop"><small>BY COMPANIES</small></button>
+						<li role="presentation" class="dropdown-header">Results</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<img src="img/a18.jpg" class="pull-left img-circle m-r-sm"></img>
+								<span class="fa-stack">
+								  <i class="fa fa-circle fa-stack-2x text-info"></i>
+								  <i class="fa fa-link fa-stack-1x fa-inverse"></i>
+								</span>
+								<div class="results-extended">
+									<span><strong>H</strong> +44 9817238969</span><br>
+									<span><i class="fa fa-map-marker"></i> New York</span><br>
+									<span><strong>W</strong> +34 9872498578</span><br>
+								</div>
+								<span><strong>Karen Pryce</strong></span><br>
+								<span>kpryce@acme.com</span><br>
+								<span class="text-gray">Sales Manager at CEAC</span>
+							</a>
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<img src="img/a16.jpg" class="pull-left img-circle m-r-sm" ></img>
+								
+								<div class="results-extended" >
+									<span><strong>W</strong> +44 9817238969</span><br>
+									<span><i class="fa fa-map-marker"></i> Paris, France</span><br>
+									
+								</div>
+								<span><strong>Michael Rindbrugen</strong></span><br>
+								<span>michael@aecc.com</span><br>
+								<span class="text-gray">Fashion Designer at EVIA</span>
+							</a>
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<img src="img/a17.jpg" class="pull-left img-circle m-r-sm" ></img>
+								<span class="fa-stack" >
+								  <i class="fa fa-circle fa-stack-2x text-info"></i>
+								  <i class="fa fa-link fa-stack-1x fa-inverse"></i>
+								</span>
+								<div class="results-extended" style="  position: absolute;  left: 300px;">
+									
+								</div>
+								<span><strong>Tom W. Restmore</strong></span><br>
+								<span>kpryce@acme.com</span><br>
+								<br>
+							</a>
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<img src="img/a12.jpg" class="pull-left img-circle m-r-sm" ></img>
+								
+								<div class="results-extended" >
+									
+								</div>
+								<span><strong>Jonathan Burg</strong></span><br>
+								<span>kpryce@acme.com</span><br>
+								<span class="text-gray">Branch Director at HSBC</span>
+							</a>
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">
+								<img src="img/a10.jpg" class="pull-left img-circle m-r-sm" ></img>
+								
+								<div class="results-extended">
+									<span><i class="fa fa-map-marker"></i> London, UK</span><br>
+									<span><strong>H</strong> +44 9817238969</span><br>
+								</div>
+								<span><strong>Miguel Guerrero Alonso</strong></span><br>
+								<span>kpryce@acme.com</span><br>
+								<br>
+							</a>
+						</li>
+						
+					</ul>
 				</span>
 				<input type="text" class="form-control"	id="search-input" placeholder="Search for people, jobs, companies and more"></input>
 			</div>
@@ -55,16 +197,15 @@
 	</div>
 	
 	<nav class="tb navbar-default navbar-static-side" role="navigation" style="" id="navbar-side">
-		<div class="sidebar-collapse white-bg">
-			<div class="user-menu p-xs" style="padding-bottom:0">
-				<div class="btn-group-vertical pull-right" role="group">
-				  <a type="button" class="btn btn-xs btn-warning btn-outline text-700"><small>SETTINGS</small></a>
-				  <a type="button" class="btn btn-xs btn-danger btn-outline  text-700"><small>LOG OUT</small></a>
-				</div>
-				<strong>Donald Draper</strong><br>
-				<span class="text-gray">donal@sterlingcooper.com</span><br>
+		<div class="sidebar-collapse white-bg" >
+			<div class="user-menu">
 				
-				<div class="divider m-t"></div>
+				<button type="button" class="btn btn-white text-700 pull-right m-t-xs"><small>LOG OUT</small></button>
+				
+				<div class="truncate m-t-xs"><strong>Donald Draper</strong></div>
+				<div class="text-gray truncate">donal@sterlingcooper.com</div>
+				
+				<div class="divider m-t-sm"></div>
 			</div>
 			<ul class="nav" id="side-menu">
 			
@@ -72,7 +213,7 @@
 					<a href="start.html"><span class="nav-label">Home</span></a>
 				</li>
 				
-				<li id="contacts-link" class="">
+				<li class="active" id="contacts-link" class="">
 					<a href="contacts.html"><span class="nav-label">Contacts<span class="badge badge-success pull-right">3,122</span></span></a>
 				</li>
 				
@@ -82,7 +223,7 @@
 				
 				<li id="sharing-menu">
 					<a href="#"><span class="nav-label">Sharing</span><span class="fa arrow"></span></a>
-					<ul class="nav nav-second-level collapse" style="height: 0px;">
+					<ul class="nav nav-second-level collapse">
 						<li>
 							<a href="sharing-team-start2.html"  id="sharing-team-link" onclick="window.location.assign('sharing-team-start2.html')">
 								My team<span class="badge pull-right"></span>
@@ -106,8 +247,8 @@
 				
 				<li id="merge-menu">
 					<a href="#"><span class="nav-label">Merge contacts</span><span class="fa arrow"></span></a>
-					<ul class="nav nav-second-level collapse" style="height: 0px;">
-						<li  >
+					<ul class="nav nav-second-level collapse">
+						<li >
 							<a href="contacts-duplicates.html" id="merge-link">
 								Merge duplicates<span class="badge badge-info pull-right">36</span>
 							</a>
@@ -129,14 +270,42 @@
 				</li>
 				
 			</ul>
+			<div class="footer-menu">
+				<div class="divider m-b-sm"></div>
+				<span class="copyright small pull-right text-muted"><strong>2015 © Trigmatic Ltd</strong></span>
+				<div style="display:inline-block">
+					<a class="small text-muted underline">Help</a>
+					<a class="small text-muted underline m-l-sm">About</a>
+					<a class="small text-muted underline m-l-sm m-r-sm">Blog</a>
+				</div>
+				<div style="display:inline-block">
+					<a class="small text-muted underline">Privacy</a>
+					<a class="small text-muted underline m-l-sm">Acceptable Use</a>
+					<a class="small text-muted underline m-l-sm">Terms</a>
+				</div>
+				
+			</div>
 
+		</div>
+		<div class="foo">
+			<div >
+				<a class="small text-muted underline">Help</a>
+				<a class="small text-muted underline m-l-sm">About</a>
+				<a class="small text-muted underline m-l-sm m-r-sm">Blog</a>
+			</div>
+			<div >
+				<a class="small text-muted underline">Privacy</a>
+				<a class="small text-muted underline m-l-sm">Acceptable Use</a>
+				<a class="small text-muted underline m-l-sm">Terms</a>
+			</div>
+			<span class="small text-muted"><strong>2015 © Trigmatic Ltd</strong></span>
 		</div>
 	</nav>
 	
 	<div class="tb tb-wrapper" >
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				content
+				<div class="m">content</div>
 			</div>
 		</div>
 	</div>
@@ -154,6 +323,26 @@
 		/* function to make search bar placeholder responsive */
 			$(function() {					
 				$(window).bind("load resize", function() {
+				
+					self = $(this);
+					
+					if ($(this).width() > 595) {
+						$('.tb .tb-search ul.dropdown-menu').css('width',510);
+						$('.tb .tb-search ul.dropdown-menu button.desktop').show();
+						$('.tb .tb-search ul.dropdown-menu .results-extended').show();
+					} else {
+						$('.tb .tb-search ul.dropdown-menu').css('width',300);
+						$('.tb .tb-search ul.dropdown-menu button.desktop').hide();
+						$('.tb .tb-search ul.dropdown-menu .results-extended').hide();
+					}
+					
+					if ($(this).width() < 380){
+						$('.tb .tb-search ul.dropdown-menu').css('left','-60px');
+						$('.tb .tb-search ul.dropdown-menu').css('width',self.width()-24);
+					} else {
+						$('.tb .tb-search ul.dropdown-menu').css('left',0);
+					}
+					
 					if (($(this).width() < 800 && $(this).width() > 767) || $(this).width() < 629) {
 						document.getElementById("search-input").placeholder = "Search";
 					} else {
@@ -164,6 +353,39 @@
 						$('.sidebar-collapse').slideDown('slow');
 					else
 						$('.sidebar-collapse').slideUp('slow');
+						
+					if ($(this).width() < 768){
+						// responsiveness of notifications menu
+						$('.tb-bell ul.notifications').css('max-height',self.height()-79);
+						$('.tb-bell ul.notifications').css('overflow-y','scroll');
+						$('.tb-bell ul.notifications').css('width',self.width()-30);
+						
+						// responsiveness of sidebar menu
+						$('.tb.navbar-default .sidebar-collapse').css('overflow-y','scroll');
+						$('.tb.navbar-default .sidebar-collapse').css('max-height',self.height()-64);	
+						
+						// responsiveness of search results dropdown
+						$('.tb .tb-search ul.dropdown-menu').css('max-height',self.height()-64);
+						$('.tb .tb-search ul.dropdown-menu').css('overflow-y','scroll');
+
+						$('html').click(function() {
+							// hide all opened menus
+							$('.tb.navbar-default .sidebar-collapse').hide('slow');
+						});
+
+						$('.tb.navbar-default .sidebar-collapse, #menu-btn').click(function(e){
+							e.stopPropagation();
+						});
+						
+					} else	{
+					
+						$('.tb-bell ul.notifications').css('width','450');
+						$('.tb-bell ul.notifications').css('overflow-y','auto');
+						$('.tb .tb-search ul.dropdown-menu').css('overflow-y','auto');
+						$('.tb.navbar-default .sidebar-collapse').css('overflow-y','auto');
+						$('html').unbind('click');
+						
+					}
 				});
 			});
 			
@@ -183,7 +405,23 @@
 			$('#side-menu').metisMenu();
 			
 			$('#menu-btn').click(function(){
+				//$(this).children('i').caretToggle();
 				$('.sidebar-collapse').toggle('slow');
+			});
+			
+
+			
+			jQuery.fn.extend({
+				caretToggle: function () {
+					var self = $(this);
+					if (self.hasClass("fa-caret-down")) {
+						self.removeClass("fa-caret-down");
+						self.addClass("fa-caret-up");
+					} else if (self.hasClass("fa-caret-up")) {
+						self.removeClass("fa-caret-up");
+						self.addClass("fa-caret-down");
+					};
+				}
 			});
 			
         });
