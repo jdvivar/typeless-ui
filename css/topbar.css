@@ -84,6 +84,11 @@
 	float: right;
 }
 
+.tb-bell ul.notifications .actions{
+	margin-top: 10px;
+	margin-left: -12px;
+}
+
 .tb .tb-search {
 	width:auto;
 	height:64px;
