@@ -260,6 +260,7 @@ a {
 	
 	.navbar-default{
 		//border: none;
+		opacity:.9;
 	}
 	
 	.navbar-nav>li:last-child>a {

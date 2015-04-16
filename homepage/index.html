@@ -157,7 +157,7 @@
             </div>
 			<div class="row">
 				<div class="col-sm-4 aboutus footer-2nd">
-					<p class="footer-small"><strong><script>new Date().getFullYear()</script> &copy; TRIGMATIC LTD</strong></p>
+					<p class="footer-small"><strong><span class="year">2015</span> &copy; TRIGMATIC LTD</strong></p>
 					<div class="footer-small"><a class="footer-link">PRIVACY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">ACCEPTABLE USE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">TERMS</a></div>
                 </div>
 				<div class="col-sm-4 blog footer-2nd">
@@ -197,6 +197,8 @@
 
 				$('html,body').animate({scrollTop:targetOffset}, speed);
 			}
+			
+			$('.year').text(new Date().getFullYear());
 			
 		});
 	</script>
