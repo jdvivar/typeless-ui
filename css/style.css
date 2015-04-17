@@ -1599,6 +1599,12 @@ have a fixed width and height (but it's not required).
   transition: background-color .5s;
 } */
 
+/* .dropdown-menu > li > a {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform:uppercase;
+} */
+
 .dropdown-menu > li > a.font-bold {
   font-weight: 600;
 }
