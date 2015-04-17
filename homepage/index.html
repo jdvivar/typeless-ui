@@ -34,7 +34,8 @@
                     <i class="fa fa-bars fa-fw" style=""></i>
                 </button>
                 <a class="navbar-brand" href="#">
-					<img alt="Typeless" src="../img/logo-complete-original.png">
+					<img class="" alt="Typeless" src="../img/logo-complete-original.png"></img>
+					<!-- <img class="hidden-xs hidden-md hidden-lg" alt="Typeless" src="../img/logo-only-icon-320p.png"></img> -->
 				</a>
             </div>
 			
@@ -46,12 +47,12 @@
                     <li>
                         <a class="hover-red">Typeless for teams</a>
                     </li>
-                    <!-- <li>
-                        <a class="hover-green" href="#">Pricing</a>
-                    </li> -->
-					<!-- <li>
-                        <a class="hover-yellow scroll" data-to="getintouch" href="#getintouch">Get in touch</a>
-                    </li> -->
+                    <li>
+                        <a class="hover-navy" href="#">Downloads</a>
+                    </li>
+					<li>
+                        <a class="hover-yellow scroll" data-to="getintouch" href="#getintouch">Book a demo</a>
+                    </li>
 					<li>
                         <a class="hover-green">Log in</a>
                     </li>
@@ -68,6 +69,8 @@
         <div class="row">
 			<div class="col-sm-9 col-xs-11">
 				<div class="sentence">Collaborate on contacts with people you trust.</div>
+				<div class="subline">Typeless helps you search, discover & acquire contacts easier & faster. <a>Learn more</a></div>
+				
 				<div class="get-started">
 					<button type="button" class="btn btn-primary btn-get-started">Try it now <i class="fa fa-chevron-circle-right"></i></button>
 					<div class="get-started-text">Private. Secure. No spam.</div>
@@ -79,9 +82,34 @@
 		
 		<div class="white-bg"></div>
 		
-		<div class="row">
-			<div class="col-xs-12">
-				hola
+		<div class="row" id="row-1" style="margin-top: 40px;">
+			<div class="col-sm-6">
+				<div class="title-small">Works with contacts from</div>
+				<div class="service-icons">
+					<img src="../img/logo-service-apple-circle.png" data-toggle="tooltip" data-placement="bottom" data-html="true" title="iOS<br>Coming June 2015"></img>
+					<img src="../img/logo-service-android-circle.png" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Android/Google"></img>
+					<img src="../img/logo-service-facebook-circle.png" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Facebook"></img>
+					<img src="../img/logo-service-linkedin-circle.png" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Linkedin"></img>
+					<img src="../img/logo-service-salesforce-circle.png" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Salesforce"></img>
+					<img src="../img/logo-service-outlook-circle.png" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Microsoft Outlook"></img>
+					<img src="../img/logo-service-office365-circle.png" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Microsoft Office 365"></img>
+				</div>
+			</div>
+			<div class="col-sm-6 trusted-with">
+				<div class="title-small">Trusted with</div>
+				<div class="number-contacts" id="number-contacts">3,001,345</div>
+				<div class="contacts">contacts</div>
+			</div>
+			<div class="col-xs-12 testimonials">
+				<!-- <div class="title-small">Used by people and companies to get contacts faster </div> -->
+			</div>
+			<div class="col-sm-8 col-md-10 ">
+				<div class="testimonial"><!-- <i class="fa fa-quote-left pull-left"></i> --><span class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</span></div>
+				
+			</div>
+			<div class="col-sm-4 col-md-2 author">
+				<img src="../img/a18.jpg" class="img-responsive img-circle">
+				Karen Pryce<br><strong>Sterling Cooper</strong><br>
 			</div>
 		</div>
 
@@ -199,6 +227,18 @@
 			}
 			
 			$('.year').text(new Date().getFullYear());
+			
+			$('[data-toggle="tooltip"]').tooltip();
+			
+			// add a random number from 1 to 9 every 5 seconds
+			t = 5000; // 5 seconds
+			setInterval(function(){ setContacts(Math.floor(Math.random()*9)+1); }, t);
+			
+			start = 3001345;
+			function setContacts (n) {
+				start = start + n;
+				document.getElementById("number-contacts").innerHTML = start.toLocaleString();
+			}
 			
 		});
 	</script>
