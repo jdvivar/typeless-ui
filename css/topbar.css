@@ -118,6 +118,12 @@
 	max-width:300px
 }
 
+.tb .tb-user .dropdown-menu > li > a {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform:uppercase;
+}
+
 .tb-user img {
 	width: 40px;
 	border: 1px solid transparent;
