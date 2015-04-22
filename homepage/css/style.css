@@ -67,11 +67,12 @@ a {
 	position: absolute;
 	left:0;
 	z-index: -1;
-	height: 70%;
+	height: 700px;
 }
 
 .navbar-default{
 	background-color: white;
+	/* border-width: 0; */
 }
 
 .navbar-nav>li>a {
@@ -148,8 +149,9 @@ a {
 }
 
 .btn-get-started:hover {
-	box-shadow: 0px 0px 0px 3px #bdc3c7 inset;
-	background-color: #56afff;
+	box-shadow: 0px 0px 0px 3px white inset;
+	/* background-color: #56afff; */
+	background-color: #007bea;
 }
 
 .get-started-text{
@@ -180,16 +182,16 @@ a {
 
 .feature-title {
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: 600;
 	text-transform:uppercase;
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
 
 .feature-description {
-	font-weight: 600;
-	color: #7f8c8d;
-	font-size: 13px;
+	font-weight: normal;
+	color: #666666;
+	font-size: 14px;
 	margin-bottom: 40px;
 }
 
@@ -244,11 +246,12 @@ a {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 	font-weight: 600;
-	/* opacity: .85; */
+	
 }
 
 .tooltip .tooltip-inner {
 	background-color: ;
+	opacity: .5;
 }
 
 .tooltip .tooltip-arrow {
@@ -279,14 +282,18 @@ a {
 	color: #e74c3c;
 }
 .contacts {
+	position: absolute;
 	font-weight: 200;
 	color:#e74c3c;
 	font-size: 24px;
 	margin-top: -10px;
+	margin-right: 15px;
+	right: 0;
 }
 
 .trusted-with {
 	text-align: right;
+	position:relative;
 }
 
 .testimonials {
@@ -295,7 +302,7 @@ a {
 
 .testimonial {
 	margin-top: 15px;
-	font-style: italic;
+	text-align: center;
 }
 
 .testimonial .quote{
@@ -305,32 +312,43 @@ a {
 	color: #666666;
 }
 
-.testimonial .fa-quote-left {
-	margin-top: 8px;
-	margin-right: 40px!important;
-	font-size: 24px;
-	color: #dddddd;
-}
-
 .author {
-	/* float: right; */
-	/* margin: 0 0 20px 20px; */
 	font-size: 14px;
 	text-transform:uppercase;
 	font-weight: 600;
-	text-align: right;
+	text-align: center;
 	margin-top:20px;
+	color: #666666;
 }
 
 .subline a {
-	color:#f1c40f;
+	/* color:#f1c40f; */
+	color: white;
 	display:inline-block;
-	border-bottom: 1px solid #f1c40f;
+	border-bottom: 1px solid white;
+	transition: all .5s;
 }
 
 .subline a:hover {
-	text-decoration: none;	
-	
+	text-decoration: none;
+	color: #f1c40f;
+	border-color: #f1c40f;
+}
+
+.works-with {
+	margin-top: 40px;
+}
+
+.trusted-with {
+	margin-top: 40px;
+}
+
+.step {
+	margin-top: 40px;
+}
+
+.step .row {
+	margin-top: 40px;
 }
 
 @media (min-width: 768px) {
@@ -339,8 +357,8 @@ a {
 	}
 	
 	.navbar-default{
-		//border: none;
-		opacity:.9;
+		/* border: none; */
+		/* opacity:.9; */
 	}
 	
 	.navbar-nav>li:last-child>a {
@@ -391,6 +409,7 @@ a {
 	.getintouch {
 		text-align: right;
 	}
+	
 }
 
 @media (max-width: 767px) {
@@ -460,11 +479,7 @@ a {
 		width: 40%;
 		margin-top:10px;
 	}
-	
-	.footer-bg {
-		height: 430px;
-	}
-	
+
 	.sentence {
 		font-size: 72px;
 		line-height: 80px;
@@ -487,11 +502,6 @@ a {
 		margin-top: 30px;
 	}
 	
-	.author img {
-		width:50%;
-		margin-left:50%;
-		height:auto;
-	}
 }
 
 @media (min-width:992px) and (max-width:1199px) {
@@ -519,11 +529,7 @@ a {
 		width: 50%;
 		margin-top:10px;
 	}
-	
-	.footer-bg {
-		height: 430px;
-	}
-	
+
 	.sentence {
 		font-size: 60px;
 		line-height: 72px;
@@ -546,11 +552,7 @@ a {
 		margin-top: 30px;
 	}
 	
-	.author img {
-		width:50%;
-		margin-left:50%;
-		height:auto;
-	}
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -581,11 +583,7 @@ a {
 		width: 66%;
 		margin-top:8px;
 	}
-	
-	.footer-bg {
-		height: 460px;
-	}
-	
+
 	.sentence {
 		font-size: 48px;
 		line-height: 56px;
@@ -607,13 +605,8 @@ a {
 		margin-bottom: 40px;
 		margin-top: 30px;
 	}
-
-	.author img {
-		width:50%;
-		margin-left:50%;
-		height:auto;
-	}
 	
+
 }
 
 @media (max-width: 767px) {
@@ -628,11 +621,7 @@ a {
 	}
 	
 	.feature-img {
-		width: 25%;
-	}
-	
-	.footer-bg {
-		height: 700px;
+		width: 50%;
 	}
 	
 	.sentence {
@@ -648,7 +637,7 @@ a {
 	
 	footer {
 		margin-bottom: 0px;
-		margin-top: 150px;
+		margin-top: 80px;
 	}
 	
 	.subline {
@@ -661,19 +650,21 @@ a {
 		text-align: left;
 	}
 	
-	.testimonials {
-		margin-top: 40px;
-	}
-	
-	.testimonial .quote{
-		font-size: 24px;
+	.testimonial {
+		text-align: left;
 	}
 	
 	.author {
 		text-align: left;
 	}
 	
-	.author img {
-		display: none;
+	.contacts {
+		margin-left: 15px;
+		left: 0;
 	}
+	
+	#getintouch {
+		margin-top: 40px;
+	}
+
 }
