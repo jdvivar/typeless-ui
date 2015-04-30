@@ -4,4 +4,6 @@
 <file name="bootstrap.js" server="ftp.danielvivar.com" local="130661318020000000" remote="130676006400000000" Dst="1" />
 <file name="jquery.js" server="ftp.danielvivar.com" local="130638043271394670" remote="130676006400000000" Dst="1" />
 <file name="npm.js" server="ftp.danielvivar.com" local="130661299420000000" remote="130676006400000000" Dst="1" />
+<file name="jquery.fullPage.min.js" server="ftp.danielvivar.com" local="130742595640000000" remote="130745859000000000" Dst="2" />
+<file name="jquery.fullPage.js" server="ftp.danielvivar.com" local="130742595640000000" remote="130745859600000000" Dst="2" />
 </dwsync>
