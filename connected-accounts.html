@@ -13,6 +13,8 @@
 
 	<link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
+	<script src="js/plugins/dropzone/dropzone.js"></script>
 
 </head>
 
@@ -236,6 +238,27 @@
 									</div>
 									<button class="pull-right btn btn btn-info text-uppercase text-700"><small>View contacts (930)</small></button>
 									
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-6 col-sm-12 account-box-linkedin m-t" style="">
+							
+							<div class="panel panel-account panel-warning">
+								<div class="panel-heading">
+									<strong>Linkedin account name</strong><span class="pull-right"><i class="fa fa-linkedin"></i> Linkedin</span>
+								</div>
+								<div class="panel-body">
+									Linkedin no longer supports account synchronisation for this account.
+									To solve this, follow this 3 simple steps:
+									<ol>
+										<li>Go to Linkedin export settings <a class="text-info">here</a></li>
+										<li>Download the .CSV file</li>
+										<li>Drop the file or click to select in the box below</li>										
+									</ol>
+									<div>
+										<form action="/upload-target" class="dropzone"></form>
+									</div>
 								</div>
 							</div>
 						</div>
