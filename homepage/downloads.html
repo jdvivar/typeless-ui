@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <title>Typeless. | Downloads</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+
+</head>
+
+<body class="" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100" style="display:none">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Loaded dinamically -->
+    </nav>
+
+	<!-- <div class="grayed-out">
+	</div> -->
+    
+    <div class="container downloads">
+
+		<div class="row">
+			<div class="col-sm-6 download">
+				<h2>Chrome extension for GMail</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive img-thumbnail" src="cr-ext-gmail-screenshot.png">
+					</div>
+					<div class="col-md-6">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+						<a role="button" class="btn" href="https://chrome.google.com/webstore/detail/typeless-contacts-for-gma/glggemdefgdemakpkekbbmjdpgljekhm" target="_blank">download</a><br>
+						<!-- <span class="version label label-default">v 1.3</span> -->
+						<!-- <span class="date label label-default"><i class="fa fa-calendar-o"></i> 20 APR 2015</span> -->
+					</div>				
+				</div>				
+			</div>
+			<div class="col-sm-6 download">
+				<h2>Chrome extension for Office 365</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive img-thumbnail" src="cr-ext-office365-screenshot.png">
+					</div>
+					<div class="col-md-6">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor incididunt.
+						</p>
+						<button role="button" class="btn disabled">coming soon</button><br>
+						<!-- <span class="version label label-default">v 0.5</span> -->
+						<!-- <span class="date label label-primary"><i class="fa fa-calendar-o"></i> 13 FEB 2015</span> -->
+					</div>				
+				</div>				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 download">
+				<h2>Outlook 2010/2013 app</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive img-thumbnail" src="app-outlook-screenshot.png">
+					</div>
+					<div class="col-md-6">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+						<a role="button" class="btn" href="https://typelessco.blob.core.windows.net/publish/setup.exe" target="_blank">download</a><br>
+						<!-- <span class="version label label-default">v 1.0</span> -->
+						<!-- <span class="date label label-default"><i class="fa fa-calendar-o"></i> 2 MAR 2015</span> -->
+					</div>				
+				</div>				
+			</div>
+			<div class="col-sm-6 download">
+				<h2>iOS app</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive img-thumbnail" src="ios-app-screenshot.png" style="width: 100%">
+					</div>
+					<div class="col-md-6">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor incididunt.
+						</p>
+						<button role="button" class="btn disabled">coming soon</button><br>
+						
+					</div>				
+				</div>				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 download">
+				<h2>Android app</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<img class="img-responsive img-thumbnail" src="android-app-screenshot.png">
+					</div>
+					<div class="col-md-6">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+						<button role="button" class="btn disabled">coming soon</button><br>
+						
+					</div>				
+				</div>				
+			</div>
+		</div>
+		
+
+        <footer class="footer">
+			<!-- Loaded dinamically -->
+        </footer>
+
+    </div>
+
+	<div class="footer-bg"></div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	
+	<script>
+		// transition
+            $("body").fadeIn(1000);
+	</script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+        $(document).ready(function() {
+		
+			// load common elements
+			$( "nav" ).load( "navbar.html", afterLoadingNav );
+			$( "footer" ).load( "footer.html" , function(){$( window ).resize();});
+			
+			function afterLoadingNav(){
+				$('nav ul li#downloads-link').addClass('active');
+			}
+			
+			// event/functions for scrolling
+			
+			$('.scroll').on('click', function(event){
+				event.preventDefault();
+				var sectionID = $(this).attr("data-to");
+				scrollToID('#'+sectionID, 750);
+			});
+			
+			function scrollToID(id, speed){
+				var offSet = $('body').css('padding-top').replace("px", "");
+				var targetOffset = $(id).offset().top - offSet;
+
+				$('html,body').animate({scrollTop:targetOffset}, speed);
+			}
+			
+			// Copyright year
+			$('.year').text(new Date().getFullYear());			
+			
+			// add tooltips
+			$('[data-toggle="tooltip"]').tooltip();
+
+			
+			// responsive footer function
+			$(function() {
+					
+				$(window).bind("load resize", function() {
+					//console.log($(document).width());
+					if ($(this).width() < 768) {
+						$('.footer-bg').css('height',$('footer').height()+40);
+					} else {
+						$('.footer-bg').css('height',$('footer').height()+130);
+					}
+				});
+			});
+			
+			
+			
+		});
+	</script>
+
+</body>
+
+</html>

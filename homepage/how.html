@@ -13,277 +13,227 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/jquery.fullPage.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
-
 </head>
 
-<body class="" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100">
+<body class="full" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100" style="display:none">
 
     <!-- Navigation -->
-	<div>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-		
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <i class="fa fa-bars fa-fw" style=""></i>
-                </button>
-                <a class="navbar-brand" href="./">
-					<img class="" alt="Typeless" src="../img/logo-complete-original.png"></img>
-					<!-- <img class="hidden-xs hidden-md hidden-lg" alt="Typeless" src="../img/logo-only-icon-320p.png"></img> -->
-				</a>
-            </div>
-			
-            <div class="collapse navbar-collapse" id="bs-navbar-collapse">
-               <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a class="hover-blue">How it works</a>
-                    </li>
-                    <li>
-                        <a class="hover-red">Typeless for teams</a>
-                    </li>
-                    <li>
-                        <a class="hover-navy">Downloads</a>
-                    </li>
-					<li>
-                        <a class="hover-yellow">Book a demo</a>
-                    </li>
-					<li>
-                        <a class="hover-green" href="../login.html">Log in</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+		<!-- Loaded dynamically -->
     </nav>
-
-	<!-- <div class="grayed-out">
-	</div> -->
-    
-    <div class="container">
-
-		<div class="row">
-			<div class="col-xs-12 step">
-				<h4>
-				<span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x" style="color:#2c3e50"></i>
-				  <i class="fa fa-stack-1x fa-inverse">1</i>
-				</span> Get your contacts in one place</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-					nisi ut aliquip ex ea commodo consequat.
-				</p>
-				<div class="row text-center">
-					<div class="col-sm-12 hidden-xs">
-						<img class="img-responsive hidden-xs" src="step1-how.png">
+	
+	<!-- section navigation buttons -->
+	
+	<!-- <a type="button" class="btn btn-link moveSection" onclick="$.fn.fullpage.moveSectionDown()" style="position:fixed;bottom:0px;right:5px;z-index:1"><i class="fa fa-angle-down"></i></a> -->
+	<!-- <a type="button" class="btn btn-link moveSection" onclick="$.fn.fullpage.moveSectionUp()" style="position:fixed;top:80px;right:5px;z-index:1"><i class="fa fa-angle-up"></i></a> -->
+	<!-- <button type="button" class="btn btn-white btn-circle btn-xl" onclick="$.fn.fullpage.moveSectionUp()" style="position:fixed;top:120px;left:50px;z-index:1"><i class="fa fa-chevron-up"></i></button> -->
+	
+	
+	<div id="fullpage">
+		<div class="section">
+			 <div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-10 col-xs-8">
+						<div class="step-title">Step 1</div>
+						<div class="step-sub">Unify your contacts</div>
 					</div>
-					<div class="col-xs-12 visible-xs text-center">
-						<img class="img-responsive" src="step1-how-xs.png">
+					<div class="col-lg-9 col-md-8 col-sm-10 col-xs-12">
+						<img class="step-img img-responsive" src="step1-how.png">
+						<div class="step-img-sub">Typeless works with all your online services to import, clean & update your contacts. Typeless also merges any duplicate contacts.</div>
 					</div>
 				</div>
-			</div>
+			 </div>
 		</div>
+		<div class="section">
+			 <div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-10 col-xs-12">
+						<div class="step-title">Step 2</div>
+						<div class="step-sub">Connect & share contacts</div>
+					</div>
+					<div class="col-lg-9 col-md-8 col-sm-10 col-xs-12">
+						<img class="step-img img-responsive" src="step2-how.png">
+						<div class="step-img-sub">Share contacts with trusted friends & colleagues using Typeless. Keep contact details private by only sharing names & job titles of your contacts.</div>
+					</div>
+				</div>
+			 </div>
+		</div>
+		<div class="section">
+			 <div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-10 col-xs-12">
+						<div class="step-title">Step 3</div>
+						<div class="step-sub">Search & request contacts</div>
+					</div>
+					<div class="col-lg-9 col-md-8 col-sm-10 col-xs-12">
+						<img class="step-img img-responsive" src="step3-how.png">
+						<div class="step-img-sub">Search all your contacts by name, job title, or company. Discover new contacts & request contact details from others.</div>
+					</div>
+				</div>
+			 </div>
+		</div>
+		<div class="section">
+			 <div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-10 col-xs-10">
+						<div class="step-title">Step 4</div>
+						<div class="step-sub">Get Typeless in your inbox</div>
+					</div>
+					<div class="col-lg-9 col-md-8 col-sm-10 col-xs-12">
+						<img class="step-img img-responsive" src="step4-how.png">
+						<div class="step-img-sub">Use all the power of Typeless within your inbox. Typeless is available for Gmail & Outlook & coming soon to your phone.</div>
+					</div>
+				</div>
+			 </div>
+		</div>
+		<div class="section">
+			 <div class="container">
+				<div class="col-xs-12 text-center">
+					<div class="get-started">
+						<a type="button" class="btn btn-primary btn-get-started" href="../signup.html">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></a>
+						<div class="get-started-text">Private. Secure. No spam.</div>
+					</div>
+				</div>
+			 </div>
+		</div>
+	</div>
 		
-		<div class="row">
-			<div class="col-xs-12 step">
-				<h4>
-				<span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x" style="color:#1abc9c"></i>
-				  <i class="fa fa-stack-1x fa-inverse">2</i>
-				</span> Share your contacts with others</h4>
-				<p>
-					At vero eos et accusamus et iusto odio dignissimos ducimus qui
-					blanditiis praesentium voluptatum deleniti atque corrupti quos
-					dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-					similique sunt in culpa qui officia deserunt mollitia animi, id est
-					laborum et dolorum fuga.
-				</p>
-				<div class="row text-center">
-					<div class="col-sm-12 hidden-xs">
-						<img class="img-responsive hidden-xs" src="step2-how.png">
-					</div>
-					<div class="col-xs-12 visible-xs text-center">
-						<img class="img-responsive" src="step2-how-xs.png">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 step">
-				<h4>
-				<span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x" style="color:#3498db"></i>
-				  <i class="fa fa-stack-1x fa-inverse">3</i>
-				</span> Search & request</h4>
-				<p>
-					Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-					ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-					explicabo.
-				</p>
-				<div class="row text-center">
-					<div class="col-sm-12 hidden-xs">
-						<img class="img-responsive hidden-xs" src="step3-how.png">
-					</div>
-					<div class="col-xs-12 visible-xs text-center">
-						<img class="img-responsive" src="step3-how-xs.png">
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-xs-12 step">
-				<h4>
-				<span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x" style="color:#e74c3c"></i>
-				  <i class="fa fa-stack-1x fa-inverse">4</i>
-				</span> All your contacts in your inbox</h4>
-				<p>
-					Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-					ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-					explicabo.
-				</p>
-				<div class="row text-center">
-					<div class="col-sm-12 hidden-xs">
-						<img class="img-responsive hidden-xs" src="step4-how.png">
-					</div>
-					<div class="col-xs-12 visible-xs text-center">
-						<img class="img-responsive" src="step4-how-xs.png">
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="container" style="display:none">
 
-		<div class="row">
-			
-		</div>
-		
-		<div class="row">
-			Features
-		</div>
-		
-		<div class="row text-center">
-			<div class="col-xs-6 col-md-3">
-				<img class="feature-img" src="../img/lock-icon.png"></img>
-				<div class="feature-title" style="color:#e74c3c">Secure.</div>
-				<div class="feature-description">All your data is encrypted on 1024 bit encryption (one of the strongest possible encryptions).</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<img class="feature-img" src="../img/safe-icon.png"></img>
-				<div class="feature-title" style="color:#7f8c8d">Private.</div>
-				<div class="feature-description">Typeless will not spam you or share your details with anyone without permission.</div>
-			</div>
-			<div class="col-xs-6 col-md-3 hidden-sm hidden-xs">
-				<img class="feature-img" src="../img/devices-icon.png"></img>
-				<div class="feature-title" style="color:#2c3e50">Everywhere.</div>
-				<div class="feature-description">On your phone, tablet or the web. On the road, by the beach. Typeless is always there.</div>
-			</div>
-			<div class="col-xs-6 col-md-3 hidden-sm hidden-xs">
-				<img class="feature-img" src="../img/clock-icon.png"></img>
-				<div class="feature-title" style="color:#f1c40f">Updated.</div>
-				<div class="feature-description">Typeless looks for & updates any new contact details of your friends. Always get in touch in one click.</div>
-			</div>
-		</div>
-		
-		<div class="row text-center hidden-md hidden-lg">
-			<div class="col-xs-6 col-md-3">
-				<img class="feature-img" src="../img/devices-icon.png"></img>
-				<div class="feature-title" style="color:#2c3e50">Everywhere.</div>
-				<div class="feature-description">On your phone, tablet or the web. On the road, by the beach. Typeless is always there.</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<img class="feature-img" src="../img/clock-icon.png"></img>
-				<div class="feature-title" style="color:#f1c40f">Updated.</div>
-				<div class="feature-description">Typeless looks for & updates any new contact details of your friends. Always get in touch in one click.</div>
-			</div>
-		</div>
+		<div class="row full-height " style="display:none">
+			<div id="carousel-steps" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators" style="display:none">
+				<li data-target="#carousel-steps" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-steps" data-slide-to="1"></li>
+				<li data-target="#carousel-steps" data-slide-to="2"></li>
+				<li data-target="#carousel-steps" data-slide-to="3"></li>
+			  </ol>
 
-        <footer class="footer">
-            <div class="row">
-                <div class="col-sm-4 aboutus">
-                    <div class="footer-title">About us</div>
-					
-					<p class="footer-p">
-						Typeless is a platform for professionals to collaborate on contacts.
-						Typeless imports, cleans & unifies all your contacts from multiple
-						sources including Gmail, Facebook, Outlook, Linkedin, Salesforce & many others.
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+				<div class="item active">
+				  <img src="step1-how.png">
+				  <div class="carousel-caption">
+					<h2 style="color:#3498db">1. All your contacts in one place</h2>
+					<p>
+						Typeless unifies, cleans & removes the duplicates in your contact data from existing
+						services like Gmail, iOS, Facebook, Linkedin, Salesforce & many more.
+						Typeless stays connected to these services, so that any new contacts you are get in
+						touch with on any of those services automatically gets added to your Typeless account.  
 					</p>
-					<p class="footer-p">
-						Use Typeless to connect & collaborate on contacts with people that you trust.
-						By giving & getting contacts with each other, you & your connections are able to
-						drastically increase the size of your contact book while also reducing the amount
-						of time it takes to get in touch with someone whose details you do not have.
-					</p>
-					
-                </div>
-				 <div class="col-sm-4 hidden-xs logo">
-                    <img src="../img/logo-only-icon-original.png"></img><br>
-                    <img src="../img/logo-only-letters-original.png"></img>
-                </div>
-				<div class="col-sm-4 getintouch" id="getintouch">
-                    <div class="footer-title">Get in touch</div>
-					<p class="footer-p">Drop us a message <a>here</a>.</p>
-					<p class="footer-p">
-						<strong>The Leathermarket</strong><br>
-						Weston St, London SE1 3ER<br>
-					</p>
-					<iframe style="margin-bottom: 15px; border: 1px solid rgba(1,1,1,.5)"width="100%" height="100px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20Leathermarket%2C%20Weston%20Street&key=AIzaSyB0ZZkNt-ghiIPjWtDUzzLg0G10459TRns"></iframe>
-                </div>
-            </div>
-			<div class="row">
-				<div class="col-sm-4 aboutus footer-2nd">
-					<p class="footer-small"><strong><span class="year">2015</span> &copy; TRIGMATIC LTD</strong></p>
-					<div class="footer-small"><a class="footer-link">PRIVACY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">ACCEPTABLE USE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">TERMS</a></div>
-                </div>
-				<div class="col-sm-4 blog footer-2nd">
-					<a><img src="../img/blog-icon.png" width="50px"></img></a>
+				  </div>
 				</div>
-				<div class="col-sm-4 getintouch footer-2nd">
-					<p class="footer-small"><strong>FOLLOW US ON</strong></p>
-					<p class="footer-small"><a class="footer-link">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">LINKEDIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">GOOGLE+</a></p>
+				<div class="item">
+				  <img src="step2-how.png">
+				  <div class="carousel-caption">
+					<h3 style="color:#1abc9c">2. Share your contacts with others</h3>
+					<p>
+						Share your contacts & get shared back in return. Set definitions of what you want to share
+						& how you want to share it. Typeless allows you to share only the name & job titles of your
+						contacts, so that the person receiving a share will need to ask you for any contact details.
+						Always stay in control. 
+					</p>
+				  </div>
 				</div>
+				<div class="item">
+				  <img src="step3-how.png">
+				  <div class="carousel-caption">
+					<h3 style="color:#f1c40f">3. Search & request the contacts details of your contacts' contacts.</h3>
+					<p>
+						Use Typeless's powerful search tools to discover new contacts. Search by names, job titles,
+						companies or any combination to find people you are looking for. When you find people you want
+						to contact, request their details from people you know.
+					</p>
+				  </div>
+				</div>
+				<div class="item">
+				  <img src="step4-how.png">
+				  <div class="carousel-caption">
+					<h3 style="color:#e74c3c">4. Get all your Typeless contacts & functionality in your inbox.</h3>
+					<p>
+						Get the Typeless apps for Gmail, Outlook or on your phone (coming soon). Use all the power of
+						Typeless within your inbox. Search for shared contacts & get details to compose emails or make
+						calls without leaving your inbox. 
+					</p>
+					<a class="btn btn-danger btn-sm">GO TO DOWNLOADS</a>
+				  </div>
+				</div>
+				
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-steps" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-steps" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			  </a>
 			</div>
-        </footer>
+		</div>
+	
+
+        <!-- <footer class="footer">
+		
+        </footer> -->
 
     </div>
 
-	<div class="footer-bg"></div>
+	<!-- <div class="footer-bg"></div> -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+	
+	<script>
+		// transition
+            $("body").fadeIn(1000);
+	</script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
+	<!-- FullPage plugin -->
+	<script src="js/jquery.fullPage.min.js"></script>
 	
 	<script>
         $(document).ready(function() {
+				
+			// load common elements
+			$( "nav" ).load( "navbar.html" , afterLoadingNav);
+			<!-- $( "footer" ).load( "footer.html" , function(){$( window ).resize();}); -->
+			
+			function afterLoadingNav(){
+				$('nav ul li#how-link').addClass('active');
+			}
 			
 			// event/functions for scrolling
-			
+			/*
 			$('.scroll').on('click', function(event){
 				event.preventDefault();
 				var sectionID = $(this).attr("data-to");
 				scrollToID('#'+sectionID, 750);
 			});
-			
+			*/
+			/*
 			function scrollToID(id, speed){
 				var offSet = $('body').css('padding-top').replace("px", "");
 				var targetOffset = $(id).offset().top - offSet;
 
 				$('html,body').animate({scrollTop:targetOffset}, speed);
 			}
+			*/
 			
 			// Copyright year
 			$('.year').text(new Date().getFullYear());			
 			
 			// add tooltips
-			$('[data-toggle="tooltip"]').tooltip();
+			//$('[data-toggle="tooltip"]').tooltip();
 
 			
 			// responsive footer function
@@ -296,10 +246,73 @@
 					} else {
 						$('.footer-bg').css('height',$('footer').height()+130);
 					}
+					
+					$('.full-height').css('height',$(this).height()-100);
+					
 				});
 			});
+
+			$('#fullpage').fullpage({
+				//Navigation
+				menu: true,
+				anchors:['step1', 'step2', 'step3', 'step4', 'signup'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Sign up!'],
+				showActiveTooltips: true,
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+
+				//Scrolling
+				css3: true,
+				scrollingSpeed: 700,
+				autoScrolling: true,
+				fitToSection: true,
+				scrollBar: false,
+				easing: 'easeInOutCubic',
+				easingcss3: 'ease',
+				loopBottom: false,
+				loopTop: false,
+				loopHorizontal: true,
+				continuousVertical: false,
+				normalScrollElements: '#element1, .element2',
+				scrollOverflow: false,
+				touchSensitivity: 15,
+				normalScrollElementTouchThreshold: 5,
+
+				//Accessibility
+				keyboardScrolling: true,
+				animateAnchor: true,
+				recordHistory: true,
+
+				//Design
+				controlArrows: true,
+				verticalCentered: true,
+				resize : false,
+				sectionsColor : ['#1abc9c', '#3498db', '#e74c3c', '#f1c40f', 'transparent'],
+				paddingTop: '100px',
+				paddingBottom: '10px',
+				fixedElements: '#header, .footer, nav',
+				responsive: 0,
+
+				//Custom selectors
+				sectionSelector: '.section',
+				slideSelector: '.slide',
+
+				//events
+				onLeave: function(index, nextIndex, direction){},
+				afterLoad: function(anchorLink, index){},
+				afterRender: function(){},
+				afterResize: function(){},
+				afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+				onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+			});
 			
+			/* Add up arrow	*/
+			$('#fp-nav').prepend('<a class="moveSection" onclick="$.fn.fullpage.moveSectionUp()"><i class="fa fa-chevron-up"></i></a>');
 			
+			/* Add down arrow */
+			$('#fp-nav').append('<a class="moveSection" onclick="$.fn.fullpage.moveSectionDown()"><i class="fa fa-chevron-down"></i></a>');
 			
 		});
 	</script>

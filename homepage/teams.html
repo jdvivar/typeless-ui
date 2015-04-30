@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <title>Typeless. | Typeless for Teams</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+
+</head>
+
+<body class="" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Loaded dinamically -->
+    </nav>
+
+	<!-- <div class="grayed-out">
+	</div> -->
+    
+    <div class="container">
+
+		<div class="row teams">
+			<div class="col-lg-3">
+				<p class="super text-red">
+					<span class="label label-default">COMING Q2'15</span>
+					Velit esse cillum dolore eu fugiat magna 
+				</p>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="row text">
+					<div class="col-sm-6 col-md-12">
+						<h5 class="text-red">Nostrud dolore</h5>
+						<p class="sub">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+						nisi ut aliquip ex ea commodo consequat.
+						</p>
+					</div>
+					<div class="col-sm-6 col-md-12">
+						<h5 class="text-red">Mollit anim</h5>
+						<p class="sub">
+						Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-6">
+				<img class="img-responsive img-thumbnail" src="teams-screenshot.png">
+			</div>
+		</div>
+
+        <footer class="footer">
+			<!-- Loaded dinamically -->
+        </footer>
+
+    </div>
+
+	<div class="footer-bg"></div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+        $(document).ready(function() {
+		
+			// load common elements
+			$( "nav" ).load( "navbar.html", afterLoadingNav );
+			$( "footer" ).load( "footer.html" , function(){$( window ).resize();});
+			
+			function afterLoadingNav(){
+				$('nav ul li:nth-child(2)').addClass('active');
+			}
+			// event/functions for scrolling
+			
+			$('.scroll').on('click', function(event){
+				event.preventDefault();
+				var sectionID = $(this).attr("data-to");
+				scrollToID('#'+sectionID, 750);
+			});
+			
+			function scrollToID(id, speed){
+				var offSet = $('body').css('padding-top').replace("px", "");
+				var targetOffset = $(id).offset().top - offSet;
+
+				$('html,body').animate({scrollTop:targetOffset}, speed);
+			}
+			
+			// Copyright year
+			$('.year').text(new Date().getFullYear());			
+			
+			// add tooltips
+			$('[data-toggle="tooltip"]').tooltip();
+
+			
+			// responsive footer function
+			$(function() {
+					
+				$(window).bind("load resize", function() {
+					//console.log($(document).width());
+					if ($(this).width() < 768) {
+						$('.footer-bg').css('height',$('footer').height()+40);
+					} else {
+						$('.footer-bg').css('height',$('footer').height()+130);
+					}
+				});
+			});
+			
+			
+			
+		});
+	</script>
+
+</body>
+
+</html>
