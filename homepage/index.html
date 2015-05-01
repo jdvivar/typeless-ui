@@ -3,37 +3,40 @@
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <title>Typeless. | Home</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- css loading before content -->
+	
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		
+		<style>
+		body {
+			display:none;
+			background-color: #f8f8f8!important;
+		}
+		</style>
 
 </head>
 
-<body class="full" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100" style="display:none">
+<body class="full" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100">
 
 	<span class="load-modal-here">
 		<!-- Loaded dinamically -->
 	</span>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<!-- loaded dinamically -->
     </nav>
 
-	<!-- <div class="grayed-out">
-	</div> -->
-    
-	
     <div class="container">
 
         <div class="row">
@@ -47,8 +50,6 @@
 				</div>
 			</div>
         </div>
-
-        <!-- <hr> -->
 		
 		<div class="white-bg"></div>
 		
@@ -85,46 +86,6 @@
 				
 		</div>
 
-        <div id="howitworks" style="display:none">
-			
-			<div class="row">
-				
-			</div>
-			
-			
-			<div class="row">
-				
-			</div>
-			
-			<div class="row">
-
-			</div>
-			
-			<div class="row text-center">
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<img class="feature-img" src="../img/lock-icon.png"></img>
-					<div class="feature-title" style="color:#e74c3c">Secure.</div>
-					<div class="feature-description">All your data is encrypted on 1024 bit encryption (one of the strongest possible encryptions).</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<img class="feature-img" src="../img/safe-icon.png"></img>
-					<div class="feature-title" style="color:#7f8c8d">Private.</div>
-					<div class="feature-description">Typeless will not spam you or share your details with anyone without permission.</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<img class="feature-img" src="../img/devices-icon.png"></img>
-					<div class="feature-title" style="color:#2c3e50">Everywhere.</div>
-					<div class="feature-description">On your phone, tablet or the web. On the road, by the beach. Typeless is always there.</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<img class="feature-img" src="../img/clock-icon.png"></img>
-					<div class="feature-title" style="color:#f1c40f">Updated.</div>
-					<div class="feature-description">Typeless looks for & updates any new contact details of your friends. Always get in touch in one click.</div>
-				</div>
-			</div>
-			
-        </div>
-		
 
         <footer class="footer">
             <!-- Loaded dinamically -->
@@ -133,28 +94,43 @@
     </div>
 
 	<div class="footer-bg"></div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 	
-	<script>
-		// transition
-            $("body").fadeIn(1000);
-	</script>
+	<!-- js loading after content -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		
+		<script>
+			// transition
+			$("body").fadeIn(1000);
+		</script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- Responsive footer -->
+		<script src="js/jquery.responsiveFooter.js"></script>
 	
+	<!-- document ready function -->
 	<script>
         $(document).ready(function() {
 		
 			// load common elements
-			$( "nav" ).load( "navbar.html" );
-			$( "footer" ).load( "footer.html" , function(){$( window ).resize();});
-			$( ".load-modal-here" ).load ("contact-modal.html");
+			$( "nav" ).load( "navbar.component" );
+			$( "footer" ).load( "footer.component" , afterLoadingFooter);
+			$( ".load-modal-here" ).load ("contact-modal.component");
+			
+			function afterLoadingFooter() {	
+			
+				// responsive footer function
+				responsiveFooter ();	
+				
+				// Copyright year
+				$('.year').text(new Date().getFullYear());	
+				
+			}
 			
 			// event/functions for scrolling
-			
+			/*
 			$('.scroll').on('click', function(event){
 				event.preventDefault();
 				var sectionID = $(this).attr("data-to");
@@ -167,9 +143,7 @@
 
 				$('html,body').animate({scrollTop:targetOffset}, speed);
 			}
-			
-			// Copyright year
-			$('.year').text(new Date().getFullYear());			
+			*/
 			
 			// add tooltips
 			$('[data-toggle="tooltip"]').tooltip();
@@ -187,19 +161,6 @@
 				start = start + n;
 				document.getElementById("number-contacts").innerHTML = start.toLocaleString();
 			}
-			
-			// responsive footer function
-			$(function() {
-					
-				$(window).bind("load resize", function() {
-					//console.log($(document).width());
-					if ($(this).width() < 768) {
-						$('.footer-bg').css('height',$('footer').height()+40);
-					} else {
-						$('.footer-bg').css('height',$('footer').height()+130);
-					}
-				});
-			});
 			
 			// change testimonial
 			

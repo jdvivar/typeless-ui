@@ -28,13 +28,13 @@
 			<strong>The Leathermarket</strong><br>
 			Weston St, London SE1 3ER<br>
 		</p>
-		<iframe style="margin-bottom: 15px; border: 1px solid rgba(1,1,1,.5)"width="100%" height="100px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20Leathermarket%2C%20Weston%20Street&key=AIzaSyB0ZZkNt-ghiIPjWtDUzzLg0G10459TRns"></iframe>
+		<iframe class="gmap" src="https://www.google.com/maps/embed/v1/place?q=The%20Leathermarket%2C%20Weston%20Street&key=AIzaSyB0ZZkNt-ghiIPjWtDUzzLg0G10459TRns"></iframe>
 	</div>
 </div>
 <div class="row">
 	<div class="col-sm-4 aboutus footer-2nd">
 		<p class="footer-small"><strong><span class="year">2015</span> &copy; TRIGMATIC LTD</strong></p>
-		<div class="footer-small"><a class="footer-link">PRIVACY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">ACCEPTABLE USE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">TERMS</a></div>
+		<div class="footer-small"><a class="footer-link" href="../privacy.html" target="_blank">PRIVACY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link" href="../acceptable-use.html" target="_blank">ACCEPTABLE USE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link" href="../terms.html" target="_blank">TERMS</a></div>
 	</div>
 	<div class="col-sm-4 blog footer-2nd">
 		<a><img src="../img/blog-icon.png" width="50px"></img></a>

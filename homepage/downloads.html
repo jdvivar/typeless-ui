@@ -3,32 +3,41 @@
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <title>Typeless. | Downloads</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- css loading before content -->
 
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	
+		<style>
+		body {
+			display:none;
+			background-color: #f8f8f8!important;
+		}
+		</style>
+	
 </head>
 
-<body class="" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100" style="display:none">
+<body class="" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100">
+
+	<span class="load-modal-here">
+		<!-- Loaded dinamically -->
+	</span>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <!-- Loaded dinamically -->
     </nav>
 
-	<!-- <div class="grayed-out">
-	</div> -->
-    
     <div class="container downloads">
 
 		<div class="row">
@@ -40,8 +49,13 @@
 					</div>
 					<div class="col-md-6">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.
+							<i class="fa fa-angle-right text-blue"></i> With Typeless you have all your contacts right in your Gmail inbox.
+						</p>
+						<p>
+							<i class="fa fa-angle-right text-blue"></i> Search by name, company or job title and see the profile of everyone who emails you.
+						</p>
+						<p>
+							<i class="fa fa-angle-right text-blue"></i> Share contacts with your friends and colleagues and request contact details.
 						</p>
 						<a role="button" class="btn" href="https://chrome.google.com/webstore/detail/typeless-contacts-for-gma/glggemdefgdemakpkekbbmjdpgljekhm" target="_blank">download</a><br>
 						<!-- <span class="version label label-default">v 1.3</span> -->
@@ -57,8 +71,10 @@
 					</div>
 					<div class="col-md-6">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt.
+							<i class="fa fa-angle-right text-blue"></i> If you are using Mail on Office 365 on the web you can use the Chrome extension for Office 365.
+						</p>
+						<p>
+							<i class="fa fa-angle-right text-blue"></i> It helps you to have all your contacts (and access to your friends and colleagues&apos; contacts) &mdash; even when you are on the go using a different computer.
 						</p>
 						<button role="button" class="btn disabled">coming soon</button><br>
 						<!-- <span class="version label label-default">v 0.5</span> -->
@@ -76,8 +92,12 @@
 					</div>
 					<div class="col-md-6">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.
+							<i class="fa fa-angle-right text-blue"></i> The Typeless Outlook App helps you to have all private and business contacts
+							right in your inbox.
+						</p>
+						<p>
+							<i class="fa fa-angle-right text-blue"></i> You can share your contacts with friends and colleagues inside
+							and outside your company and create a virtual contact network to get to people faster.
 						</p>
 						<a role="button" class="btn" href="https://typelessco.blob.core.windows.net/publish/setup.exe" target="_blank">download</a><br>
 						<!-- <span class="version label label-default">v 1.0</span> -->
@@ -89,12 +109,15 @@
 				<h2>iOS app</h2>
 				<div class="row">
 					<div class="col-md-6">
-						<img class="img-responsive img-thumbnail" src="ios-app-screenshot.png" style="width: 100%">
+						<img class="img-responsive img-thumbnail" src="ios-app-screenshot.png">
 					</div>
 					<div class="col-md-6">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt.
+							<i class="fa fa-angle-right text-blue"></i> Our iPhone app will enable you to have all your mobile phone contacts on iOS together with
+							all your other business and private contacts.
+						</p>
+						<p>
+							<i class="fa fa-angle-right text-blue"></i> It will enable you to sync seamlessly between the iPhone native contact app and the Typeless iPhone app.
 						</p>
 						<button role="button" class="btn disabled">coming soon</button><br>
 						
@@ -111,8 +134,12 @@
 					</div>
 					<div class="col-md-6">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua.
+							<i class="fa fa-angle-right text-blue"></i> Our Android app will help you to have all your local mobile phone contacts together with
+							all your other business and private contacts.
+						</p>
+						<p>
+							<i class="fa fa-angle-right text-blue"></i> It will also enable seamless syncing between the
+							native contacts app of Android and the Typeless Android app.
 						</p>
 						<button role="button" class="btn disabled">coming soon</button><br>
 						
@@ -129,65 +156,44 @@
     </div>
 
 	<div class="footer-bg"></div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 	
-	<script>
-		// transition
-            $("body").fadeIn(1000);
-	</script>
+	<!-- js loading after content -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		
+		<script>
+			// transition
+			$("body").fadeIn(1000);
+		</script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- Responsive footer -->
+		<script src="js/jquery.responsiveFooter.js"></script>
 	
+	<!-- document ready function -->
 	<script>
         $(document).ready(function() {
 		
 			// load common elements
-			$( "nav" ).load( "navbar.html", afterLoadingNav );
-			$( "footer" ).load( "footer.html" , function(){$( window ).resize();});
+			$( "nav" ).load( "navbar.component", afterLoadingNav );
+			$( "footer" ).load( "footer.component" , afterLoadingFooter);
+			$( ".load-modal-here" ).load ("contact-modal.component");
 			
 			function afterLoadingNav(){
+				// set downloads link active
 				$('nav ul li#downloads-link').addClass('active');
 			}
 			
-			// event/functions for scrolling
+			function afterLoadingFooter() {
+				// responsive footer function
+				responsiveFooter ();
 			
-			$('.scroll').on('click', function(event){
-				event.preventDefault();
-				var sectionID = $(this).attr("data-to");
-				scrollToID('#'+sectionID, 750);
-			});
-			
-			function scrollToID(id, speed){
-				var offSet = $('body').css('padding-top').replace("px", "");
-				var targetOffset = $(id).offset().top - offSet;
-
-				$('html,body').animate({scrollTop:targetOffset}, speed);
+				// Copyright year
+				$('.year').text(new Date().getFullYear());	
 			}
-			
-			// Copyright year
-			$('.year').text(new Date().getFullYear());			
-			
-			// add tooltips
-			$('[data-toggle="tooltip"]').tooltip();
 
-			
-			// responsive footer function
-			$(function() {
-					
-				$(window).bind("load resize", function() {
-					//console.log($(document).width());
-					if ($(this).width() < 768) {
-						$('.footer-bg').css('height',$('footer').height()+40);
-					} else {
-						$('.footer-bg').css('height',$('footer').height()+130);
-					}
-				});
-			});
-			
-			
 			
 		});
 	</script>

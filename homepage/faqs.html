@@ -3,32 +3,40 @@
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <title>Typeless. | FAQs</title>
+	
+	<!-- css loading before content -->
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
-
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		
+		<style>
+		body {
+			display:none;
+		}
+		</style>
+		
 </head>
 
-<body class="full" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100" style="display:none">
+<body class="full" data-spy="scroll" data-target="#bs-navbar-collapse" data-offset="100">
+
+	<span class="load-modal-here">
+		<!-- Loaded dinamically -->
+	</span>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <!-- Loaded dinamically -->
     </nav>
 
-	<!-- <div class="grayed-out">
-	</div> -->
-    
     <div class="container">
 	
 		<div class="row faqs masonry">
@@ -72,7 +80,7 @@
 						<p>Typeless data runs on 1024 bit encryption making it enterprise grade secure.</p>
 						<p>All the data between you and Typeless’ servers are <strong>SSL</strong> encrypted with <strong>1024-bit</strong> keys, making it one of the strongest encryptions possible. We are also ICO registered.
 						</p>
-						<p>If you need more info <a>contact us</a>.</p>
+						<p>If you need more info <a data-toggle="modal" data-target="#contact-modal">contact us</a>.</p>
 					</div>
 				</div>
 			</div>
@@ -154,7 +162,7 @@
 					<strong>Linkedin</strong>, <strong>Office 365</strong> and <strong>Salesforce</strong>. Typeless will support <strong>iOS</strong> contacts when the app will be available.
 					</p>
 					<p>
-					We are constantly adding new contact sources, so please <a>get in touch</a> if you didn’t find the one you use.
+					We are constantly adding new contact sources, so please <a data-toggle="modal" data-target="#contact-modal">get in touch</a> if you didn’t find the one you use.
 					</p>
 				</div>
 				
@@ -208,64 +216,44 @@
     </div>
 
 	<div class="footer-bg"></div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 	
-	<script>
-		// transition
-            $("body").fadeIn(1000);
-	</script>
+	<!-- js loading after content -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		
+		<script>
+			// transition
+			$("body").fadeIn(1000);
+		</script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- Responsive footer -->
+		<script src="js/jquery.responsiveFooter.js"></script>
 	
+	<!-- document ready function -->
 	<script>
         $(document).ready(function() {
 		
 			// load common elements
-			$( "nav" ).load( "navbar.html", afterLoadingNav );
-			$( "footer" ).load( "footer.html" , function(){$( window ).resize();});
+			$( "nav" ).load( "navbar.component", afterLoadingNav );
+			$( "footer" ).load( "footer.component" , afterLoadingFooter);
+			$( ".load-modal-here" ).load ("contact-modal.component");
 			
 			function afterLoadingNav(){
-				$('nav ul li#faqs-link').addClass('active');
-			}
-			// event/functions for scrolling
-			
-			$('.scroll').on('click', function(event){
-				event.preventDefault();
-				var sectionID = $(this).attr("data-to");
-				scrollToID('#'+sectionID, 750);
-			});
-			
-			function scrollToID(id, speed){
-				var offSet = $('body').css('padding-top').replace("px", "");
-				var targetOffset = $(id).offset().top - offSet;
-
-				$('html,body').animate({scrollTop:targetOffset}, speed);
+				// Set active faqs link
+				$('nav ul li#faqs-link').addClass('active');				
 			}
 			
-			// Copyright year
-			$('.year').text(new Date().getFullYear());			
+			function afterLoadingFooter() {
+				// responsive footer function
+				responsiveFooter ();
 			
-			// add tooltips
-			$('[data-toggle="tooltip"]').tooltip();
+				// Copyright year
+				$('.year').text(new Date().getFullYear());	
+			}
 
-			
-			// responsive footer function
-			$(function() {
-					
-				$(window).bind("load resize", function() {
-					//console.log($(document).width());
-					if ($(this).width() < 768) {
-						$('.footer-bg').css('height',$('footer').height()+40);
-					} else {
-						$('.footer-bg').css('height',$('footer').height()+130);
-					}
-				});
-			});
-			
-			
 			
 		});
 	</script>

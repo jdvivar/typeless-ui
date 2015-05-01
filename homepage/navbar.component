@@ -5,7 +5,7 @@
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
 			<span class="sr-only">Toggle navigation</span>
-			<i class="fa fa-bars fa-fw" style=""></i>
+			<i class="fa fa-bars fa-fw"></i>
 		</button>
 		<a class="navbar-brand" href="./">
 			<img class="" alt="Typeless" src="../img/logo-complete-original.png"></img>

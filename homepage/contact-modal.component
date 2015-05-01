@@ -9,7 +9,7 @@
         <textarea class="contact" placeholder="WRITE HERE ..." rows="3"></textarea>
       </div>
       <div class="modal-footer">
-		<div class="pull-left" style="width:45%;display:inline-block">
+		<div class="pull-left">
 			<select class="form-control">
 			  <option>General info</option>
 			  <option>Contact source suggestion</option>

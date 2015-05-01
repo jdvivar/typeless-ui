@@ -1,11 +1,5 @@
-/*!
- * Start Bootstrap - Heroic Features HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400);
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
  
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -404,46 +398,6 @@ a.moveSection:hover {
 	border-bottom: 1px solid #7f8c8d;
 }
 
-#carousel-steps {
-	top: 50%;
-	position: absolute;
-}
-
-#carousel-steps .carousel-control {
-	width: 5%;
-}
-
-#carousel-steps .carousel-inner .item {
-	padding-left: 5%;
-	padding-right: 5%;
-}
-
-#carousel-steps .carousel-caption {
-	color: black;
-	text-shadow: none;
-	top: 0;
-	text-align: left;
-}
-
-#carousel-steps .carousel-caption h5{
-	text-transform: uppercase;
-	font-weight:700;
-}
-
-#carousel-steps .carousel-indicators li{
-	border-color: #7f8c8d;
-}
-
-#carousel-steps .carousel-indicators li.active{
-	background-color: #7f8c8d;
-}
-
-#carousel-steps .carousel-control {
-	background: none;
-	text-shadow: none;
-	color: #7f8c8d;
-}
-
 .full-height {
 	position: relative;
 }
@@ -531,18 +485,19 @@ a.moveSection:hover {
 }
 
 .masonry {
-	 -moz-column-width: 360px;
-	 -webkit-column-width: 360px;
-	 -moz-column-gap: 30px;
-	 -webkit-column-gap: 30px;
-	 column-width:360px;
-	 column-gap:30px;
-	 margin-right: 0;
-	 margin-left: 0;
+	-moz-column-width: 360px;
+	-webkit-column-width: 360px;
+	-moz-column-gap: 30px;
+	-webkit-column-gap: 30px;
+	column-width:360px;
+	column-gap:30px;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .masonry .brick {
-	 display: inline-block;
+	display: inline-block;
+	width: 100%;
 }
 
 .text-blue {
@@ -639,6 +594,18 @@ textarea.contact{
 	border: none;
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+#contact-modal .modal-footer div.pull-left {
+	width:45%;
+	display:inline-block;
+}
+
+iframe.gmap {
+	margin-bottom: 15px;
+	border: 1px solid rgba(1,1,1,.5);
+	width: 100%;
+	height: 100px;
 }
 
 @media (min-width: 768px) {
