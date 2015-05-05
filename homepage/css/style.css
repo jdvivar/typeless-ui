@@ -529,8 +529,8 @@ a.moveSection:hover {
 	margin-bottom: 360px;
 }
 
-.teams h5 {
-	/* font-size: 12px; */
+.teams h2 {
+	font-size: 12px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -538,6 +538,7 @@ a.moveSection:hover {
 .teams .super {
 	font-size: 48px;
 	font-weight: 600;
+	margin-top: 0;
 }
 
 .teams .sub {
