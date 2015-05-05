@@ -41,6 +41,6 @@
 	</div>
 	<div class="col-sm-4 getintouch footer-2nd">
 		<p class="footer-small"><strong>FOLLOW US ON</strong></p>
-		<p class="footer-small"><a class="footer-link">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">LINKEDIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link">GOOGLE+</a></p>
+		<p class="footer-small"><a class="footer-link" href="http://twitter.com/typelessco" target="_blank">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link" href="http://www.facebook.com/typeless" target="_blank">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link" target="_blank" href="http://www.linkedin.com/company/3185089">LINKEDIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="footer-link" target="_blank" href="http://plus.google.com/u/0/114375737513637157920">GOOGLE+</a></p>
 	</div>
 </div>
