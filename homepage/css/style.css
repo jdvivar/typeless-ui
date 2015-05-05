@@ -72,7 +72,7 @@ a {
 .navbar-default{
 	background-color: white;
 	box-shadow: 0 0 5px 0 rgba(1,1,1,.5);
-	/* border-width: 0; */
+	border-width: 0;
 }
 
 .navbar-nav>li>a {
