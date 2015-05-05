@@ -10,6 +10,10 @@ a {
 	cursor: pointer;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  line-height: normal;
+}
+
 .full {
     /* background: url('../background.png') no-repeat center center fixed; */
     background: url('../bg-2.jpg') no-repeat center center fixed;
@@ -159,6 +163,7 @@ a {
 	text-transform:uppercase;
 	color:#f1c40f;
 	opacity: .85;
+	line-height: normal;
 }
 
 .btn-circle {
@@ -298,6 +303,7 @@ a.moveSection:hover {
 	font-weight: normal;
 	color: #666666;
 	font-size: 18px;
+	margin-top: 0;
 }
 
 .service-icons {
@@ -446,7 +452,6 @@ a.moveSection:hover {
 	font-size: 24px;
 	font-weight: 300;
 	color: white;
-	line-height: normal;
 }
 
 .row.faqs {
@@ -471,7 +476,6 @@ a.moveSection:hover {
 .faqs .panel-title {
 	font-size: 14px;
 	font-weight: 700;
-	line-height: 1.42;
 	text-transform: uppercase;
 }
 
