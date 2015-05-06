@@ -18,8 +18,8 @@
 		
 	</div>
 	 <div class="col-sm-4 hidden-xs logo">
-		<img src="../img/logo-only-icon-original.png"></img><br>
-		<img src="../img/logo-only-letters-original.png"></img>
+		<img src="../img/logo-only-icon-original.png" alt="Typeless original logo"></img><br>
+		<img src="../img/logo-only-letters-original.png" alt="Typeless only letters logo"></img>
 	</div>
 	<div class="col-sm-4 getintouch" id="getintouch">
 		<div class="footer-title">Get in touch</div>
