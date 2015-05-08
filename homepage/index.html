@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#" ">
 
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-
+	
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary">	
+	<meta name="twitter:site" content="@typelessco">
+	<meta name="twitter:title" content="Typeless. Collaborate on your contacts.">
+	<meta name="twitter:description" content="Typeless helps you search, discover & acquire contacts within your business easier & faster.">
+	<meta name="twitter:image:src" content="http://www.danielvivar.com/typeless/homepage/twitter-card.png">
+	
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Typeless. Collaborate on your contacts." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.danielvivar.com/typeless/homepage" />
+	<meta property="og:image" content="http://www.danielvivar.com/typeless/homepage/twitter-card.png" />
+	<meta property="og:description" content="Typeless helps you search, discover & acquire contacts within your business easier & faster." />
+	<meta property="og:site_name" content="Typeless." />
+	
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="Typeless. Collaborate on your contacts.">
+	<meta itemprop="description" content="Typeless helps you search, discover &amp; acquire contacts within your business easier &amp; faster.">
+	<meta itemprop="image" content="http://www.danielvivar.com/typeless/homepage/twitter-card.png">
+		
     <title>Typeless. | Home</title>
-	<meta name="description" content="Collaborate on your contacts.">
+	<meta name="description" content="Typeless helps you search, discover & acquire contacts within your business easier & faster.">
 
 	<!-- css loading before content -->
 	
@@ -36,17 +56,33 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<!-- loaded dinamically -->
     </nav>
+	
+	<div class="cookies alert alert-dismissible">This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies. See our <a>cookies policy</a> for more info. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	</div>
 
     <div class="container">
-
+		
         <div class="row">
-			<div class="col-lg-8 col-sm-9 col-xs-11">
+			
+			<div class="col-xs-12 text-center">
+			
 				<h1 class="sentence">Share contacts within your business</h1>
 				<h2 class="subline">Typeless helps you search, discover & acquire contacts within your business easier & faster&nbsp;&nbsp;&nbsp&nbsp;<a href="how.html">Learn more</a></h2>
 				
-				<div class="get-started">
-					<a type="button" class="btn btn-primary btn-get-started" href="../signup.html">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></a>
-					<div class="get-started-text">Private. Secure. No spam.</div>
+				<div class="get-started col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+					<div class="visible-xs">
+						<a type="button" class="btn btn-primary btn-get-started" href="../signup.html">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></a>
+						<div class="get-started-text">Private. Secure. No spam.</div>
+					</div>
+					<div class="hidden-xs">
+						<div class="input-group">
+						  <input type="text" class="form-control" placeholder="Enter your business e-mail address">
+						  <span class="input-group-btn">
+							<button class="btn btn-primary btn-get-started" type="button">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></button>
+						  </span>
+						</div>
+						<div class="get-started-text">Private. Secure. No spam.</div>
+					</div>
 				</div>
 			</div>
         </div>
@@ -195,6 +231,7 @@
 			function generateRandom (many) {
 				return (Math.floor(Math.random()*many)+1);
 			}
+			
 			
 			
 		});

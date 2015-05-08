@@ -133,6 +133,10 @@ a {
 	text-align: center;
 }
 
+.get-started input {
+	height: 58px;
+}
+
 .btn-get-started {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -141,15 +145,11 @@ a {
 	//border:solid 3px transparent!important;
 	border:none!important;
 	background-color: #0086FF;
-	transition: all .5s;
-	/* background-image: -webkit-linear-gradient(top, #38a2e9 0%, #318dcb 100%);
-	background-image:      -o-linear-gradient(top, #38a2e9 0%, #318dcb 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#38a2e9), to(#318dcb));
-	background-image:         linear-gradient(to bottom, #38a2e9 0%, #318dcb 100%); */
+	//transition: all .5s;
 }
 
 .btn-get-started:hover {
-	box-shadow: 0px 0px 0px 3px white inset;
+	box-shadow: 0px 0px 0px 1px white inset;
 	/* background-color: #56afff; */
 	background-color: #007bea;
 }
@@ -614,6 +614,17 @@ iframe.gmap {
 	height: 100px;
 }
 
+.cookies {
+	position: fixed;
+	bottom: 0;
+	background-color: #f9f9f9;
+	border: 1px solid #dddddd;
+	font-size: 12px;
+	font-weight: 600;
+	z-index: 1;
+	margin: 10px;
+}
+
 @media (min-width: 768px) {
 	body {
 		padding-top: 100px;
@@ -744,9 +755,9 @@ iframe.gmap {
 	}
 
 	.sentence {
-		font-size: 72px;
-		line-height: 80px;
-		margin-top: 30px;
+		font-size: 60px;
+		line-height: 60px;
+		margin-top: 100px;
 	}
 	
 	.get-started {
@@ -802,8 +813,14 @@ iframe.gmap {
 	}
 
 	.sentence {
-		font-size: 60px;
-		line-height: 72px;
+		font-size: 48px;
+		line-height: 48px;
+		margin-top: 60px;
+	}
+	
+	.subline {
+		font-size:16px;
+		margin-bottom: 40px;
 		margin-top: 30px;
 	}
 	
@@ -815,12 +832,6 @@ iframe.gmap {
 	footer {
 		margin-bottom: 50px;
 		margin-top: 150px;
-	}
-	
-	.subline {
-		font-size:18px;
-		margin-bottom: 40px;
-		margin-top: 30px;
 	}
 	
 	#carousel-steps .carousel-inner .item {
@@ -876,9 +887,15 @@ iframe.gmap {
 	}
 
 	.sentence {
-		font-size: 48px;
+		font-size: 42px;
 		line-height: 56px;
-		margin-top: 30px;
+		margin-top: 60px;
+	}
+	
+	.subline {
+		font-size:14px;
+		margin-bottom: 40px;
+		margin-top: 20px;
 	}
 	
 	.get-started {
@@ -889,12 +906,6 @@ iframe.gmap {
 	footer {
 		margin-bottom: 50px;
 		margin-top: 150px;
-	}
-	
-	.subline {
-		font-size:18px;
-		margin-bottom: 40px;
-		margin-top: 30px;
 	}
 	
 	#carousel-steps .carousel-inner .item {
