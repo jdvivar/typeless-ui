@@ -67,7 +67,7 @@
 			<div class="col-xs-12 text-center">
 			
 				<h1 class="sentence">Share contacts within your business</h1>
-				<h2 class="subline">Typeless helps you search, discover & acquire contacts within your business easier & faster&nbsp;&nbsp;&nbsp&nbsp;<a href="how.html">Learn more</a></h2>
+				<h2 class="subline">Search, discover, acquire & retain contacts within your business easier & faster&nbsp;&nbsp;&nbsp&nbsp;<br><a href="how.html">Learn more</a></h2>
 				
 				<div class="get-started col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
 					<div class="visible-xs">
@@ -111,11 +111,11 @@
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 testimonials">
 				<div class="testimonial">
 					<span class="quote">
-						"Esta es una frase completamente aleatoria y sin sentido alguno."
+						"It centralised all our company contacts. We now sell more, service better, hire easier, market faster & invoice quicker."
 					</span>
 				</div>
 				<div class="author">
-					Karen Pryce<br><strong>Sterling Cooper</strong><br>
+					Jozef Wallis<br><strong>Toothpick.com</strong><br>
 				</div>
 			</div>
 						
@@ -204,35 +204,34 @@
 				function(){
 					$('.testimonials').fadeOut('slow', setRandomTestimonial);
 					$('.testimonials').fadeIn('slow');
-			},8000);
+			},12000);
 			
 			before = 1;
 			function setRandomTestimonial (){
-				n = generateRandom(3)
+				n = generateRandom(2)
 				while (before == n)
-					n = generateRandom(3);
+					n = generateRandom(2);
 				before = n;
 				
 				switch(n) {
 					case 1:
-						$('.testimonials .quote').html('"Esta es una frase completamente aleatoria y sin sentido alguno."');
-						$('.testimonials .author').html('Karen Pryce<br><strong>CTO at Sterling Cooper</strong><br>');
+						$('.testimonials .quote').html('"It centralised all our company contacts. We now sell more, service better, hire easier, market faster & invoice quicker."');
+						$('.testimonials .author').html('Jozef Wallis<br><strong>Toothpick.com</strong><br>');
 						break;
 					case 2:
-						$('.testimonials .quote').html('"Otra frase sin sentido para parecer otra cita normal."');
-						$('.testimonials .author').html('Donald Draper<br><strong>ACME Ltd</strong><br>');
+						$('.testimonials .quote').html('"It’s helped us retain & centralise the contacts in our inboxes. Finally we have a process for retaining contacts when people leave."');
+						$('.testimonials .author').html('Toby Harwood<br><strong>Index Media Partners</strong><br>');
 						break;
-					case 3:
+					/*case 3:
 						$('.testimonials .quote').html('"Y otra tercera frase que debería parecer una cita aunque no lo es."');
 						$('.testimonials .author').html('Patrick Stanman<br><strong>Social Engineer at SLOC Productions</strong><br>');
+						break;*/
 				}
 			}
 			
 			function generateRandom (many) {
 				return (Math.floor(Math.random()*many)+1);
 			}
-			
-			
 			
 		});
 	</script>
