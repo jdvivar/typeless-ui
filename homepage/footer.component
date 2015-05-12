@@ -23,7 +23,7 @@
 	</div>
 	<div class="col-sm-4 getintouch" id="getintouch">
 		<div class="footer-title">Get in touch</div>
-		<p class="footer-p">Drop us a message <a data-toggle="modal" data-target="#contact-modal" >here</a>.</p>
+		<p class="footer-p">Drop us a message <a class="footer-link text-blue" data-toggle="modal" data-target="#contact-modal" >here</a>.</p>
 		<p class="footer-p">
 			<strong>The Leathermarket</strong><br>
 			Weston St, London SE1 3ER<br>

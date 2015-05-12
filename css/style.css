@@ -5459,7 +5459,7 @@ body.skin-3 {
   }
   .navbar-header {
     /* display: inline; */
-    float: left;
+    /* float: left; */
   }
   .sidebard-panel {
     z-index: 2;

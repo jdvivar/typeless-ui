@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#" ">
+<html class="homepage" lang="en" prefix="og: http://ogp.me/ns#" ">
 
 <head>
 
@@ -32,10 +32,14 @@
 
 	<!-- css loading before content -->
 	
+		
 		<!-- Bootstrap Core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-		<!-- Custom CSS -->
+		<!-- Allowing backward-compatibility with old css rules -->
+		<link href="../css/style.css" rel="stylesheet"> 
+
+		<!-- Custom CSS -->		
 		<link href="css/style.css" rel="stylesheet">
 		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 		
@@ -71,14 +75,14 @@
 				
 				<div class="get-started col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
 					<div class="visible-xs">
-						<a type="button" class="btn btn-primary btn-get-started" href="../signup.html">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></a>
+						<a type="button" class="btn btn-default btn-get-started" href="../signup.html">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></a>
 						<div class="get-started-text">Private. Secure. No spam.</div>
 					</div>
 					<div class="hidden-xs">
 						<div class="input-group">
 						  <input type="text" class="form-control" placeholder="Enter your business e-mail address">
 						  <span class="input-group-btn">
-							<button class="btn btn-primary btn-get-started" type="button">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></button>
+							<button class="btn btn-default btn-get-started" type="button">Try it now for FREE <i class="fa fa-chevron-circle-right"></i></button>
 						  </span>
 						</div>
 						<div class="get-started-text">Private. Secure. No spam.</div>
@@ -123,9 +127,7 @@
 		</div>
 
 
-        <footer class="footer">
-            <!-- Loaded dinamically -->
-        </footer>
+        <footer><!-- Loaded dinamically --></footer>
 
     </div>
 
