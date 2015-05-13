@@ -328,6 +328,7 @@ a.moveSection:hover {
 	font-weight: 200;
 	font-size: 48px;
 	color: #e74c3c;
+	margin-top: -15px;
 }
 .contacts {
 	position: absolute;
@@ -1023,15 +1024,18 @@ iframe.gmap {
 	
 	.step-title {
 		font-size: 36px;
+		margin-bottom:0;
+		margin-top: 10px;
 	}
 	
 	.step-sub {
 		font-size: 30px;
 		margin-bottom: 20px;
+		margin-top: 0;
 	}
 	
 	.step-img-sub {
-		font-size: 18px;
+		font-size: 16px;
 		margin-top: 20px;
 	}
 	
