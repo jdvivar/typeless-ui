@@ -35,6 +35,10 @@
 	<span id="modal-windows-4">
 		<!-- loaded dinamically -->
 	</span>
+	
+	<span id="modal-windows-5">
+		<!-- loaded dinamically -->
+	</span>
 
 	<div id="notify-wrapper">
 		<span class="m-t-sm" style="display:inline-block">
@@ -137,7 +141,7 @@
 							<div class="panel-body small text-center">
 								
 								<a id="add-account-facebook" class="btn btn-new-account m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Facebook account" style="background-color:#314a80"><img src="./img/logo-service-facebook-circle.png" width="40px"></a>
-								<a id="add-account-linkedin" class="btn btn-new-account m-l m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Linkedin account" style="background-color:rgb(15,126,184)"><img src="./img/logo-service-linkedin-circle.png" width="40px"></a>
+								<a id="add-account-linkedin" class="btn btn-new-account m-l m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Linkedin account" style="background-color:rgb(15,126,184)" data-toggle="modal" data-target="#linkedin-provisional-modal"><img src="./img/logo-service-linkedin-circle.png" width="40px"></a>
 								<a id="add-account-google" class="btn btn-new-account m-l m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Google account" style="background-color:#166cf2"><img src="./img/logo-service-google-circle.png" width="40px"></a>
 								<a id="add-account-salesforce" class="btn btn-new-account m-l m-r m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add a Salesforce account" style="background-color:white"><img src="./img/salesforce-logo-100.png" width="40px"></a>
 								<a id="add-account-office365" class="btn btn-new-account m-l m-t m-b" data-tooltip="tooltip" data-placement="bottom" title="Add an Office 365 account" style="background-color:#e73f24"><img src="./img/logo-service-office365-circle.png" width="40px"></a>
@@ -375,6 +379,7 @@
 			$( "#modal-windows-2" ).load( "components.html #connect-new-account-modal");
 			$( "#modal-windows-3" ).load( "components.html #get-typeless-gmail-modal", afterLoadingModal);
 			$( "#modal-windows-4" ).load( "components.html #get-typeless-outlook-modal", afterLoadingModal);
+			$( "#modal-windows-5" ).load( "components.html #linkedin-provisional-modal", afterLoadingModal);
 			
 			
 						
@@ -466,9 +471,11 @@
 			$('#add-account-facebook').click(function(){
 				$('.account-box-facebook').slideDown(1000);
 			});
+			/*
 			$('#add-account-linkedin').click(function(){
 				$('.account-box-linkedin').slideDown(1000);
 			});
+			*/
 			$('#add-account-google').click(function(){
 				$('.account-box-google').slideDown(1000);
 			});
