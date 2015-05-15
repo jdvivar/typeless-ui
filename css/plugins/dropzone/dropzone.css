@@ -177,7 +177,10 @@
   min-height: 150px;
   border: 2px dashed rgba(0, 0, 0, 0.3);
   background: white;
-  padding: 20px 20px; }
+  padding: 20px 20px;
+  font-size: 18px;
+  border-width: 3px;
+  font-weight: 300; }
   .dropzone.dz-clickable {
     cursor: pointer; }
     .dropzone.dz-clickable * {
@@ -187,15 +190,12 @@
   .dropzone.dz-started .dz-message {
     display: none; }
   .dropzone.dz-drag-hover {
-    border-style: solid; }
+	background-color: #f1f1f1; }
     .dropzone.dz-drag-hover .dz-message {
       opacity: 0.5; }
   .dropzone .dz-message {
     text-align: center;
-    margin: 2em 0;
-	font-size: 24px;
-	color: #7f8c8d;
-	}
+    margin: 2em 0; }
   .dropzone .dz-preview {
     position: relative;
     display: inline-block;
