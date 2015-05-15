@@ -1460,6 +1460,36 @@ have a fixed width and height (but it's not required).
 	margin-right:15px;
 }
 
+#exampleDropPane {
+	background-color: #f1f1f1;
+	border: 3px dashed #dddddd;
+	height:: 120px;
+	padding: 50px;
+	text-align: center;
+	font-size: 16px;
+	color: #999999;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+.video-modal {
+	width: 25%;
+	margin-left: 20px;
+	height: 100px;
+	background-color: #e74c3c;
+	float: right;
+	border-radius: 15px;
+	color: white;
+	text-align: center;
+	padding-top: 15px;
+	font-size: 48px;
+	cursor:pointer;
+}
+
+.video-modal:hover {
+	text-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
 /* STUFF ENDS */
 
 .nav > li > a {

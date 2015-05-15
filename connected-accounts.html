@@ -14,9 +14,11 @@
 	<link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 	
-    <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
-    <link href="css/plugins/dropzone/basic.css" rel="stylesheet">
-	<script src="js/plugins/dropzone/dropzone.js"></script>
+    <!-- <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet"> -->
+    <!-- <link href="css/plugins/dropzone/basic.css" rel="stylesheet"> -->
+	
+	<!-- <script src="js/plugins/dropzone/dropzone.js"></script> -->
+	<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 
 </head>
 
@@ -247,28 +249,7 @@
 								</div>
 							</div>
 						</div>
-						
-						<div class="col-lg-4 col-md-6 col-sm-12 account-box-linkedin m-t" style="">
-							
-							<div class="panel panel-account panel-warning">
-								<div class="panel-heading">
-									<strong>Linkedin account name</strong><span class="pull-right"><i class="fa fa-linkedin"></i> Linkedin</span>
-								</div>
-								<div class="panel-body">
-									Linkedin no longer supports account synchronisation for this account.
-									To solve this, follow this 3 simple steps:
-									<ol>
-										<li>Go to Linkedin export settings <a class="text-info">here</a></li>
-										<li>Download the .CSV file</li>
-										<li>Drop the file or click to select in the box below</li>										
-									</ol>
-									<div>
-										<form action="/file-upload" class="dropzone" id="#dropzone"></form>
-									</div>
-								</div>
-							</div>
-						</div>
-						
+												
 						<div class="col-lg-4 col-md-6 col-sm-12 account-box-office365 m-t" style="display:none">
 							<div class="panel panel-account panel-default">
 								<div class="panel-heading">
@@ -449,6 +430,41 @@
 					setTimeout(function(){$('#alert-added').fadeOut('slow');}, 5000);
 					
 				});
+				
+				/* filepicker */
+				
+				filepicker.makeDropPane($('#exampleDropPane')[0], {
+				  multiple: false,
+				  dragEnter: function() {
+					$("#exampleDropPane").html("Drop to upload").css({
+					  'backgroundColor': "#fafafa",
+					  'border': "3px solid #dddddd"
+					});
+				  },
+				  dragLeave: function() {
+					$("#exampleDropPane").html("Drop files here").css({
+					  'backgroundColor': "#f1f1f1",
+					  'border': "3px dashed #dddddd"
+					});
+				  },
+				  onSuccess: function(Blobs) {
+					$("#exampleDropPane").text("Done, see result below");
+					$("#localDropResult").text(JSON.stringify(Blobs));
+				  },
+				  onError: function(type, message) {
+					$("#localDropResult").text('('+type+') '+ message);
+				  },
+				  onProgress: function(percentage) {
+					$("#exampleDropPane").text("Uploading ("+percentage+"%)");
+				  }
+				});
+				
+				/* video */
+				$('#video').click(function(){
+					$(this).removeClass("video-modal");
+					$(this).html('<video width="100%" autoplay controls><source src="linkedin-export.mp4" type="video/mp4">Your browser does not support the video tag.</video>');
+				});
+				
 			};
 		
 			// give modal functionality to every disconnect button
@@ -507,7 +523,10 @@
 			$('#close-notification-2').click(function(){
 				$('.get-typeless-notification-2').slideUp('fast');
 			});
-	
+			
+			
+			
+			
         });
     </script>
 	
