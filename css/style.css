@@ -1478,7 +1478,7 @@ have a fixed width and height (but it's not required).
 	height: 100px;
 	background-color: #e74c3c;
 	float: right;
-	border-radius: 15px;
+	border-radius: 5px;
 	color: white;
 	text-align: center;
 	padding-top: 15px;
