@@ -1462,11 +1462,11 @@ have a fixed width and height (but it's not required).
 
 #exampleDropPane {
 	background-color: #f1f1f1;
-	border: 3px dashed #dddddd;
+	border: 10px dashed #dddddd;
 	height:: 120px;
 	padding: 50px;
 	text-align: center;
-	font-size: 16px;
+	font-size: 24px;
 	color: #999999;
 	margin-top: 20px;
 	border-radius: 5px;
