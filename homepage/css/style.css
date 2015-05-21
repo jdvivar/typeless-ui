@@ -345,6 +345,11 @@ a.moveSection:hover {
 	position:relative;
 }
 
+.security-badge {
+	text-align: right;
+	position:relative;
+}
+
 .testimonials {
 	margin-top: 40px;
 }
@@ -389,6 +394,10 @@ a.moveSection:hover {
 }
 
 .trusted-with {
+	margin-top: 40px;
+}
+
+.security-badge {
 	margin-top: 40px;
 }
 
@@ -997,6 +1006,10 @@ iframe.gmap {
 		margin-top: 30px;
 	}
 	.trusted-with {
+		margin-top: 40px;
+		text-align: left;
+	}
+	.security-badge {
 		margin-top: 40px;
 		text-align: left;
 	}
