@@ -42,11 +42,9 @@
 			$('.inlinesparkline').sparkline(); 
 			}
 		);
-		acc = document.URL.split("?")[1];
-		con = document.URL.split("?")[2];
-		sha = document.URL.split("?")[3];
-		mer = document.URL.split("?")[4];
-		name= document.URL.split("?")[5];
+		n1=30;
+		n2=20;
+		name="Rogier";
 		</script>
 	</head>
 	<body style="margin: 0; padding: 0; font-family: Open sans, Arial">
@@ -82,10 +80,10 @@
 						</tr>
 						<tr align="center" >
 							<td style="padding: 0 25px 25px 25px">
-								<span class="big-numbers" style="color:#999999;font-weight:300"><script>document.write(acc)</script></span>
+								<span class="big-numbers" style="color:#999999;font-weight:300">1</span>
 							</td>
 							<td style="padding: 0 25px 25px 25px">
-								<span class="big-numbers" style="color:#999999;font-weight:300"><script>document.write(con)</script></span>
+								<span class="big-numbers" style="color:#999999;font-weight:300">5,357</span>
 							</td>
 						</tr>
 						<tr align="center">
@@ -100,7 +98,7 @@
 							<td style="padding: 10px 25px 0 25px">
 								<span id="pie1"></span>
 								<script>
-									$("#pie1").sparkline([sha,100-sha], {
+									$("#pie1").sparkline([n1,100-n1], {
 										type: 'pie',
 										width: '100',
 										height: '100',
@@ -110,7 +108,7 @@
 							<td style="padding: 10px 25px 0 25px">
 								<span id="pie2"></span>
 								<script>
-									$("#pie2").sparkline([mer,100-mer], {
+									$("#pie2").sparkline([n2,100-n2], {
 										type: 'pie',
 										width: '100',
 										height: '100',
@@ -120,10 +118,10 @@
 						</tr>
 						<tr align="center" >
 							<td style="padding: 10px 25px 25px 25px">								
-								<span style="font-size:12px;text-transform:uppercase;font-weight:300">You own  <strong><script>document.write(sha)</script>%</strong>, the rest <strong><script>document.write(100-sha)</script>%</strong> are shared with you.</span>
+								<span style="font-size:12px;text-transform:uppercase;font-weight:300">You own  <strong><script>document.write(n1)</script>%</strong>, the rest <strong><script>document.write(100-n1)</script>%</strong> are shared with you.</span>
 							</td>
 							<td style="padding: 10px 25px 25px 25px">								
-								<span style="font-size:12px;text-transform:uppercase;font-weight:300"><strong><script>document.write(mer)</script>%</strong> of contacts have been merged.</span>
+								<span style="font-size:12px;text-transform:uppercase;font-weight:300"><strong><script>document.write(n2)</script>%</strong> of contacts have been merged.</span>
 							</td>
 						</tr>
 					</table>
