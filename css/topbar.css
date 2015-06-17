@@ -6,6 +6,7 @@
 	border-bottom:1px solid #e7eaec;
 	position: fixed;
 	z-index: 5;
+	width: 100%;
 }
 
 .tb .tb-left {
