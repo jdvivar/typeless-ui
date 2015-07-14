@@ -2,20 +2,95 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Typeless - Catch up</title>
+		<title>Typeless - Recently added contacts</title>
 		<meta name="viewport" content="width=device-width">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800' rel='stylesheet' type='text/css'>
 		<style>
+		
+			p,.text {
+				font-size: 1em;
+			}
+			
+			hr {
+				border-bottom-width: 0;
+			}
+			
 			.big-numbers {
 				font-size: 48px;
 			}
 			
-			.contact-box {
-				background-color: #f0f0f0;
-				box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.2);
-				border-radius: 3px;
+			.from {
+				
+				font-size: 13px;
+				color: #999999;
+				font-weight:600;
+			}
+			
+			.date {
+				text-transform: uppercase;
+				font-size: 13px;
+				color: #999999;
+				font-weight:600;
+				display: inline-block;
+			}
+			
+			.round-stat {
+				text-align:center;
+				min-width:110px;
+				min-height:110px;
+				display: table;
+				border-radius: 100%;
+			}
+			
+			.round-stat > div {
+				display: table-cell;
+				vertical-align:middle;
+				font-size: 30px;
+				color: white;
+				font-weight:lighter;
+			}
+			
+			.stat-title {
+				font-size:12px;
+				font-weight: bold;
+				position:relative;
+				left: 12px;
+			}
+			
+			tr.stat-titles > td {
+				padding: 0 5px;
+			}
+			
+			.user-img {
+				border-radius:100%;
+				//margin-right: 12px;
+			}
+			
+			table.feed {
+				width:100%;
+			}
+			
+			table.feed tr:not(:first-child) td {
+				padding-top: 20px;
 			}
 
+			table.feed a.view {
+				position: relative;
+				top: 10px;
+				text-decoration: none;
+				font-size:13px;
+				color:white;
+				color:#3498db;
+				padding: 2px 4px;
+				text-transform: uppercase;
+				border-radius: 3px;
+				border: 1px solid #3498db;
+			}
+			
+			table.stats {
+				width: 75%;
+			}
+			
 			@media screen and (max-width:768px) {
 			
 				table.wrapper > tbody > tr > td {
@@ -29,6 +104,29 @@
 				.big-numbers {
 					font-size:36px;
 				}
+				
+				p,.text {
+					font-size: 1.1em;
+				}
+				
+				table.stats {
+					width: 240px;
+				}
+				
+				.stat-title {
+					left:0;
+				}
+				
+				.round-stat {
+					min-width:90px;
+					min-height:90px;
+				}
+				
+				.round-stat > div {
+					font-size: 24px;
+				}
+				
+				
 				
 			}
 		</style>
@@ -53,6 +151,7 @@
 		<table class="container" align="center" border="0" cellpadding="100" cellspacing="0" width="" style="border-collapse: collapse;  box-shadow: 0px 1px 3px rgba(1,1,1,.2);max-width:600px">
 		 <tr>
 		  <td bgcolor="white">
+		  
 		   <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 			<tr>
 				<td bgcolor="white" align="center">
@@ -61,219 +160,146 @@
 				</td>
 			</tr>
 			<tr>
-				<td style="color:#666666;font-size:1em;padding: 25px 0">
-					Hi <script>document.write(name)</script>,<br><br>
-					Take a look at the contacts that were added to Typeless in the last 2 days. You have access to all of them.
-				</td>
-			</tr>
-			<tr>
-				<td >
-					<div style="text-transform:uppercase;font-size:16px;font-weight:700;color:#1abc9c">Your new contacts ...</div>
-					<div class="big-numbers" style="color:#999999;font-weight:300;text-align:center">24<!-- <script>document.write(news)</script> --></div>
+				<td style="color:#666666;padding: 25px 0">
+					<p>
+						Hi <script>document.write(name)</script>,<br><br>
+						Take a look at the contacts that were added to Typeless in the last 2 days. You have access to all of them.
+					</p>
 				</td>
 			</tr>
 		   </table>
-		   <table width="100%" cellpadding="20" cellspacing="10" style="margin-top:20px;table-layout:fixed;font-size:13px;" >
-			<tr >
-				<td align="center" class="contact-box">
-					<img style="border-radius:100%" width="50%" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNDYsIDIwNCwgMTEzKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC1zaXplOiAxNXB4OyI+RUE8L3RleHQ+PC9zdmc+" >
-					<p>
-						<strong>Eric Ashton</strong><br>
-						Fishmonger at Catch 'em all
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
-				</td>
-				<td align="center"  class="contact-box" >
-					
-					<img src="../img/a16.jpg" style="border-radius:100%" width="50%"/>
-					<p>
-						<strong>Tom Wood</strong><br>
-						CEO of Sequoia
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
-
-				</td>
-				<td align="center"  class="contact-box" >
-					<img style="border-radius:100%" width="50%" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTI3LCAxNDAsIDE0MSk7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtc2l6ZTogMTVweDsiPlNNPC90ZXh0Pjwvc3ZnPg==">
-					<p>
-						<strong>Sebastian Muller</strong><br>
-						
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
-				</td>
-			</tr>
-		   </table>
-		   <table style="margin-top:40px" width="100%">
-			<tr>
-				<td>
-					<div style="text-transform:uppercase;font-size:16px;font-weight:700;color:#3498db">New contacts in your Typeless network ...</div>
-					<div class="big-numbers" style="color:#999999;font-weight:300;text-align:center">389<!-- <script>document.write(news)</script> --></div>
-				</td>
-			</tr>
-		   </table>
-		   <table width="100%" cellpadding="15" style="margin-top:20px;table-layout:fixed;font-size:13px">
-			<tr >
-				<td align="center"  class="contact-box" >
-					<img src="../img/a12.jpg" style="border-radius:100%" width="50%"/>
-					<p>
-						<strong>Arnold Huttington</strong><br>
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
-				</td>
-				<td align="center"  class="contact-box" >
-					<img style="border-radius:100%" width="50%" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTU1LCA4OSwgMTgyKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC1zaXplOiAxNXB4OyI+TVI8L3RleHQ+PC9zdmc+">
-					<p>
-						<strong>Mykael Rhiveer</strong><br>
-						Sales Manager at Rustgem
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
-				</td>
-				<td align="center"  class="contact-box" >
-					<img style="border-radius:100%" width="50%" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTI3LCAxNDAsIDE0MSk7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtc2l6ZTogMTVweDsiPlNQPC90ZXh0Pjwvc3ZnPg==">
-					<p>
-						<strong>Sandro Prey</strong><br>
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
-				</td>
-			</tr>
 		   
-			<tr style="opacity:0.6">
-				<td align="center"  class="contact-box" >
-					<img src="../img/a10.jpg" style="border-radius:100%" width="50%"/>
-					<p>
-						<strong>Antoine D'Argent</strong><br>
-						Consultant at Riveira PLC
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
+		   <table class="stats" align="center" style="table-layout:fixed">
+			<tr>
+				<td align="center">
+					<div class="round-stat" style="background-color:#1abc9c">
+						<div>24</div>
+					</div>
 				</td>
-				<td align="center"  class="contact-box" >
-					<img src="../img/a23.jpg" style="border-radius:100%" width="50%"/>
-					<p>
-						<strong>Tiara Summers</strong><br>
-						Executive Assistant at Piazza Capital
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
+				<td align="center">
+					<div class="round-stat" style="background-color:#3498db">
+						<div>5,389</div>
+					</div>
 				</td>
-				<td align="center"  class="contact-box" >
-					<img style="border-radius:100%" width="50%" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTU1LCAxNjMsIDEyNik7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtc2l6ZTogMTVweDsiPldNPC90ZXh0Pjwvc3ZnPg==">
-					<p>
-						<strong>Will Margiloff</strong><br>
-						CEO at IgnitionOne
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
+				<td align="center">
+					<div class="round-stat" style="background-color:#2c3e50">
+						<div>413</div>
+					</div>
 				</td>
 			</tr>
-			<tr style="opacity:0.3">
-				<td align="center"  class="contact-box" >
-					<p>
-						<strong>Antoine D'Argent</strong><br>
-						Consultant at Riveira PLC
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
+			<tr class="stat-titles">
+				<td align="center">
+					<span class="stat-title" style="color:#1abc9c">NEW CONTACTS</span>
 				</td>
-				<td align="center"  class="contact-box" >
-					<p>
-						<strong>Tiara Summers</strong><br>
-						Executive Assistant at Piazza Capital
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
+				<td align="center">
+					<span class="stat-title" style="color:#3498db">NEW SHARED CONTACTS</span>
 				</td>
-				<td align="center"  class="contact-box" >
-					<p>
-						<strong>Will Margiloff</strong><br>
-						CEO at IgnitionOne
-					</p>
-					<a href="" target="_blank" style="color: white;  font-weight: 700;  text-decoration: none;  font-size: 12px;  background-color: #3498db;  padding: 5px 10px;  border-radius: 3px;">VIEW</a>
+				<td align="center">
+					<span class="stat-title" style="color:#2c3e50">TOTAL CONTACT NETWORK</span>
 				</td>
 			</tr>
 		   </table>
-		   <table style="margin-top:1000px">
+		   
+		   <div style="text-transform:uppercase;font-size:16px;font-weight:700;color:#1abc9c;margin:40px 0 20px 0;">Some of your new contacts ...</div>
+		   
+		   <table class="feed">
 			<tr>
+				<td align="center">
+					<img class="user-img" src="../img/a13.jpg" width="60px"/><br>
+					<a class="view" href="typeless.co">view</a>
+				</td>
 				<td>
-					<table class="block" align="center" border="0" cellpadding="0" cellspacing="0" width="" style="border-collapse: collapse;">
-						<tr align="center" >
-							<span style="text-transform:uppercase;font-size:13px;font-weight:700;color:#1abc9c">connected accounts</span>
-						</tr>
-						<tr align="center" >
-							
-							<td style="padding: 0 25px 0 25px">
-								<span class="big-numbers" style="color:#999999;font-weight:300"><script>document.write(news)</script></span>
-							</td>
-						</tr>
-						<tr align="center" >
-							
-							<td style="padding: 10px 20px 25px 20px">								
-								<span style="font-size:12px;text-transform:uppercase;font-weight:300">Added in the last 7 days.</span>
-							</td>
-						</tr>
-						<tr align="center">
-							<td style="padding: 25px 25px 0 25px">
-								<span style="text-transform:uppercase;font-size:13px;font-weight:700;color:#3498db">owned contacts</span>
-							</td>
-							<td style="padding: 25px 25px 0 25px">
-								<span style="text-transform:uppercase;font-size:13px;font-weight:700;color:#e74c3c">shared contacts</span>
-							</td>
-						</tr>
-						<tr align="center" >
-							<td style="padding: 0 25px 0 25px">
-								<span class="big-numbers" style="color:#999999;font-weight:300"><script>document.write(owned)</script></span>
-							</td>
-							<td style="padding: 0 25px 0 25px">
-								<span class="big-numbers" style="color:#999999;font-weight:300"><script>document.write(shared)</script></span>
-							</td>
-						</tr>
-						<tr align="center" >
-							<td style="padding: 10px 20px 25px 20px">								
-								<span style="font-size:12px;text-transform:uppercase;font-weight:300">Contacts you are the owner of.</span>
-							</td>
-							<td style="padding: 10px 20px 25px 20px">								
-								<span style="font-size:12px;text-transform:uppercase;font-weight:300">Contacts other people are sharing with you.</span>
-							</td>
-						</tr>
-						<tr align="center">
-							<td style="padding: 25px 25px 0 25px">
-								<span style="text-transform:uppercase;font-size:13px;font-weight:700;color:#e74c3c">merged contacts</span>
-							</td>
-							<td style="padding: 25px 25px 0 25px">
-								<span style="text-transform:uppercase;font-size:13px;font-weight:700;color:#1abc9c">incomplete contacts</span>
-							</td>
-						</tr>
-						
-						<tr align="center" >
-							<td style="padding: 0 25px 0 25px">
-								<!-- <span class="big-numbers" style="color:#999999;font-weight:300"><script>document.write(merged)</script></span> -->
-								<div style="margin-top: 20px;background-image: linear-gradient(to bottom,#ebebeb 0,#f5f5f5 100%);  height: 20px;  overflow: hidden;  background-color: #f5f5f5;  border-radius: 4px;  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);">
-									<div id="merged-bar" style="background-color: #e74c3c; background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);  background-size: 40px 40px;  float: left;  height: 100%;  font-size: 12px;  line-height: 20px;  color: #fff;  text-align: center;  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);  transition: width .6s ease;">
-									</div>
-								</div>
-								<script>$('#merged-bar').width(merged+"%");</script>
-								<script>document.write(merged)</script>%
-							</td>
-							<td style="padding: 0 25px 0 25px">
-								<div style="margin-top: 20px;background-image: linear-gradient(to bottom,#ebebeb 0,#f5f5f5 100%);  height: 20px;  overflow: hidden;  background-color: #f5f5f5;  border-radius: 4px;  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);">
-									<div id="incomplete-bar" style="background-color: #1abc9c; background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);  background-size: 40px 40px;  float: left;  height: 100%;  font-size: 12px;  line-height: 20px;  color: #fff;  text-align: center;  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);  transition: width .6s ease;">
-									</div>
-								</div>
-								<script>$('#incomplete-bar').width(incomplete+"%");</script>
-								<script>document.write(incomplete)</script>%
-							</td>
-						</tr>
-						<tr align="center" >
-							<td style="padding: 10px 20px 25px 20px">								
-								<span style="font-size:12px;text-transform:uppercase;font-weight:300">Typeless has merged these contacts for you.</span>
-							</td>
-							<td style="padding: 10px 20px 25px 20px">								
-								<span style="font-size:12px;text-transform:uppercase;font-weight:300">Contacts missing either a phone number or an e-mail address.</span>
-							</td>
-						</tr>
-					</table>
+					<span class="text"><strong>Aldo Zanon</strong><br>Account Manager at Typeless</span><br>
+					<span class="from">Google (satish@gmail.com)</span>
+					<span class="date">| 17th June</span>
+				</td>
+			</tr>
+					<!-- <hr> -->
+			<tr>
+				<td align="center">
+					<img class="user-img" src="../img/a18.jpg" width="60px"/><br>
+					<a class="view" href="typeless.co">view</a>
+				</td>
+				<td>
+					<!-- <a href="typeless.co">view</a> -->
+					<span class="text"><strong>Maria Smith</strong><br>Communications Director at HMRC</span><br>
+					<span class="from">Google (satish@gmail.com)</span>
+					<span class="date">| 14th June</span>
 				</td>
 			</tr>
 			<tr>
-				<td style="color:#666666;font-size:1em;padding: 25px 0">
-					I would also like to take this opportunity to remind you that if you have any questions, issues or feedback feel free to send me an e-mail.
+				<td align="center">
+					<img class="user-img" width="60px"src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTQ5LCAxNjUsIDE2Nik7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtc2l6ZTogMTVweDsiPlJSPC90ZXh0Pjwvc3ZnPg==">
+					<br>
+					<a class="view" href="typeless.co">view</a>
+				</td>
+				<td>
+					<!-- <a href="typeless.co">view</a> -->
+					<span class="text"><strong>Ronald Ramsay</strong></span><br>
+					<span class="from">Salesfore (satish@gmail.com)</span>
+					<span class="date">| 11th June</span>
+				</td>
+			</tr>
+		   </table>
+		   
+		   <div style="text-transform:uppercase;font-size:16px;font-weight:700;color:#3498db;margin:40px 0 20px 0;">Some of your new shared contacts ...</div>
+		   
+		    <table class="feed">
+			
+			<tr>
+				<td align="center">
+					<img class="user-img" src="../img/a8.jpg" width="60px"/>
+					<br>
+					<a class="view" href="typeless.co">view</a>
+				</td>
+				<td>
+					<!-- <a href="typeless.co">view</a> -->
+					<span class="text"><strong>Amanda Lei</strong><br>Creative Designer at AwithB</span><br>
+					<span class="from">From Michael Stephanblome</span>
+					<span class="date">| 1st June</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<img class="user-img" width="60px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjIsIDE2MCwgMTMzKTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC1zaXplOiAxNXB4OyI+QkQ8L3RleHQ+PC9zdmc+">
+					<br>
+					<a class="view" href="typeless.co">view</a>
+				</td>
+				<td>
+					<!-- <a href="typeless.co">view</a> -->
+					<span class="text"><strong>Benjamin Dell</strong><br>Copywriter at Sterling Cooper</span><br>
+					<span class="from">From Daniel Vivar</span>
+					<span class="date">| 10th June</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<img class="user-img" width="60px"src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHN0eWxlPSJ3aWR0aDogNDBweDsgaGVpZ2h0OiA0MHB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNDEsIDEyOCwgMTg1KTsiPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjUwJSIgeD0iNTAlIiBkeT0iMC4zNWVtIiBwb2ludGVyLWV2ZW50cz0iYXV0byIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkhlbHZldGljYU5ldWUtTGlnaHQsSGVsdmV0aWNhIE5ldWUgTGlnaHQsSGVsdmV0aWNhIE5ldWUsSGVsdmV0aWNhLCBBcmlhbCxMdWNpZGEgR3JhbmRlLCBzYW5zLXNlcmlmIiBzdHlsZT0iZm9udC1zaXplOiAxNXB4OyI+Sk08L3RleHQ+PC9zdmc+">
+					<br>
+					<a class="view" href="typeless.co">view</a>
+				</td>
+				<td>
+					<!-- <a href="typeless.co">view</a> -->
+					<span class="text"><strong>James Morrison</strong></span><br>
+					<span class="from">From Sarah Tompson</span>
+					<span class="date">| 8th June</span>
+				</td>
+			</tr>
+		   </table>
+		   
+		   <div style="text-transform:uppercase;font-size:16px;font-weight:700;color:#f1c40f;margin:40px 0 20px 0;">Your rank</div>
+		   <!-- <img src="badges-1.png"/> -->
+		   <img src="badges-2.png" width="100%"/>
+		   <!-- <img src="badges-3.png"/> -->
+		   
+		   <table style="">
+			<tr>
+				<td style="color:#666666;padding: 25px 0">
+					<p>I would also like to take this opportunity to remind you that if you have any questions, issues or feedback feel free to send me an e-mail.
 					<br><br>Best regards,<br>
+					</p>
 					<img src="http://prototypes.typeless.co/mail/aldo-zanon-signature.png" width="100"/>
+					<p>Aldo Zanon<br><span style="font-size:13px;font-weight:600">GROWTH MANAGER</span></p>
 				</td>
 			</tr>
 			
@@ -281,8 +307,8 @@
 				<td bgcolor="white" align="center">
 					<hr style="  border-color: #eeeeee;  border-style: solid;  border-width: 1px;"><br>
 					<img src="http://prototypes.typeless.co/mail/logo-complete-original.png" width="100"/><br>
-					<p style="color:#666666;font-weight:700;text-transform:uppercase;font-size:10px">The contact data cloud for business</p>
-					<p style="font-size:13px;color:#666666">Typeless © 2015<br>The Leathermarket<br>London SE1 3ER<br>United Kingdom</p>
+					<p style="color:#666666;font-weight:700;text-transform:uppercase;font-size:66%">The contact data cloud for business</p>
+					<p style="font-size:75%;color:#666666">Typeless © 2015<br>The Leathermarket<br>London SE1 3ER<br>United Kingdom</p>
 				</td>
 			</tr>
 		   </table>

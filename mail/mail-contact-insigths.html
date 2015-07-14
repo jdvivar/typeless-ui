@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Typeless - Contact insights</title>
+		<meta name="viewport" content="width=device-width">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800' rel='stylesheet' type='text/css'>
+		<style>
+			span.big-numbers {
+				font-size: 48px;
+			}
+			
+			p,.text {
+				font-size: 1em;
+			}
+			
+			.title {
+				font-size: 12px;
+				text-transform: uppercase;
+				//padding-bottom: 10px;
+			}
+			
+			.pc {
+				line-height: 2;
+				min-width: 50px;
+				text-align: center;
+				display:inline-block;
+				background-color: #3498db;
+				border-radius: 3px;
+				color: white;
+				margin: 5px 10px 5px 0;
+				font-weight: bold;
+			}
+			
+			.pc.blue {
+				background-color: #3498db
+			}
+			
+			.pc.green {
+				background-color: #1abc9c
+			}
+			
+			.pc.red {
+				background-color: #e74c3c
+			}
+			
+			.pc + a {
+				color: #666666;
+			}
+		
+			@media screen and (max-width:768px) {
+			
+				table.wrapper > tbody > tr > td {
+					padding: 12px;
+				}
+				
+				table.container > tbody > tr > td {
+					padding: 50px;
+				}
+				
+				span.big-numbers {
+					font-size:36px;
+				}
+				
+				p,.text {
+					font-size: 1.1em;
+				}
+				
+			}
+		</style>
+		
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+
+		<script type="text/javascript">
+			name 				= document.URL.split("?")[1];
+			connected		 	= document.URL.split("?")[2];
+			news 				= document.URL.split("?")[3];
+			owned 				= document.URL.split("?")[4];
+			shared 				= document.URL.split("?")[5];
+			merged 				= document.URL.split("?")[6];
+			incomplete			= document.URL.split("?")[7];
+		</script>
+		
+	</head>
+	<body style="margin: 0; padding: 0; font-family: Open sans, Arial">
+	 <table class="wrapper" border="0" cellspacing="0" cellpadding="100" width="100%" style="background-image:url('http://prototypes.typeless.co/mail/paper-bg.png')">
+	  <tr>
+	   <td>
+		<table class="container" align="center" border="0" cellpadding="100" cellspacing="0" width="" style="border-collapse: collapse;  box-shadow: 0px 1px 3px rgba(1,1,1,.2);max-width:600px">
+		 <tr>
+		  <td bgcolor="white">
+		   <table align="center" border="0" cellpadding="0" cellspacing="0" width="" style="border-collapse: collapse;">
+			<tr>
+				<td bgcolor="white" align="center">
+					<img src="http://prototypes.typeless.co/mail/logo-only-icon-original.png" width="50"/><br>
+					<img src="http://prototypes.typeless.co/mail/logo-only-letters-original.png" width="100" style="padding:10px 0 25px 0"/>
+				</td>
+			</tr>
+			<tr>
+				<td style="color:#666666;font-size:1em;padding: 25px 0">
+					Hi <script>document.write(name)</script>,<br><br>
+					We have collected some insights on the contacts that you have in Typeless.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table class="block" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout:fixed;">
+						<tr align="left" style="  vertical-align: top;">
+							<th>
+								<div class="title" style="color:#3498db">Where your contacts are from...</div>
+							</th>
+							<th>
+								<div class="title" style="color:#1abc9c">Where your contacts work...</div>
+							</th>
+						</tr>
+						<tr style="vertical-align: top;">
+							<td>
+								<div><span class="pc blue">76%</span><a href="#" title="Search in Typeless">United Kingdom</a></div>
+								<div><span class="pc blue">21%</span><a href="#" title="Search in Typeless">Germany</a></div>
+								<div><span class="pc blue">3%</span><a href="#" title="Search in Typeless">Italy</a></div>
+
+								
+								
+							</td>
+							<td>
+								<div><span class="pc green">29%</span><a href="#" title="Search in Typeless">eBay</a></div>
+								<div><span class="pc green">17%</span><a href="#" title="Search in Typeless">HSBC</a></div>
+								<div><span class="pc green">11%</span><a href="#" title="Search in Typeless">PayPal</a></div>
+								<div><span class="pc green">43%</span>+83 more</div>
+							</td>
+						</tr>
+						
+						
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table class="block" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout:fixed; margin-top:20px">
+						<tr align="left" style="  vertical-align: top;">
+							<th>
+								<div class="title" style="color:#e74c3c">What your contacts do...</div>
+							</th>
+						</tr>
+						<tr style="vertical-align: top;">
+							<td>
+								<p style="">Most of your contacts work as '<a href="#" style="color:#666666" title="Search in Typeless">Sales Manager</a>' (31%).<p></p> You also know people who work as '<a href="#" style="color:#666666" title="Search in Typeless">Marketing Manager</a>' (24%) and '<a href="#" style="color:#666666" title="Search in Typeless">Software Developer</a>' (16%).</p><p>The rest of your contacts (29%) have other 126 job titles.</p>
+							</td>
+						</tr>
+						
+						
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="color:#666666;font-size:1em;padding: 25px 0">
+					Feel free to let me know if you have any questions, feedback on Typeless or if there are any statistics in particular that you would like to receive as part of this weekly email.
+					<br><br>Best regards,<br>
+					<img src="http://prototypes.typeless.co/mail/aldo-zanon-signature.png" width="100"/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td bgcolor="white" align="center">
+					<hr style="  border-color: #eeeeee;  border-style: solid;  border-width: 1px;"><br>
+					<img src="http://prototypes.typeless.co/mail/logo-complete-original.png" width="100"/><br>
+					<p style="color:#666666;font-weight:700;text-transform:uppercase;font-size:10px">The contact data cloud for business</p>
+					<p style="font-size:13px;color:#666666">Typeless © 2015<br>The Leathermarket<br>London SE1 3ER<br>United Kingdom</p>
+				</td>
+			</tr>
+		   </table>
+		  </td>
+		 </tr>
+		</table>
+	   </td>
+	  </tr>
+	 </table>
+	</body>
+</html>
