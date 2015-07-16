@@ -675,10 +675,6 @@ iframe.gmap {
 	margin-top: 20px;
 }
 
-#afterfold {
-	margin-top: 40px;
-}
-
 .pitch-icon {
 	font-size: 60px;
 }
@@ -730,6 +726,32 @@ iframe.gmap {
 	float:left;
 	margin-right:10px;
 	margin-left: 20px;
+}
+
+hr {
+	border-color: #cccccc;
+}
+
+.post {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.post a {
+	border-bottom: 1px solid #3498db;
+}
+
+.post a:hover {
+	border-width: 2px;
+}
+
+.btn-sign-up {
+	font-size:12px!important;
+	font-weight:600;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1;
 }
 
 @media (min-width: 768px) {

@@ -33,6 +33,16 @@
 			<li id="login-link">
 				<a class="hover-green"  href="../login.html">Log in</a>
 			</li>
+			
+			<li id="signup-link" style="display:none">
+				<h3 style="position:absolute;margin-left:120px">Try it now for <strong style="color:#3498db">free</strong></h3>
+				<form class="navbar-form navbar-left" style="margin-top:32px;margin-left:15px">
+					<div class="form-group">
+					  <input type="text" class="form-control" placeholder="Your e-mail address">
+					</div>
+					<button type="submit" class="btn btn-info"><strong>GET STARTED</strong> <i class="fa fa-chevron-circle-right"></i></button>
+				</form>
+			</li>
 		</ul>
 	</div>
 </div>
