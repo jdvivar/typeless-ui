@@ -3,15 +3,21 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Browser detection</h4>
+        <h4 class="modal-title"><img src="chrome.png" width="12px"/> Hi there! We see you are not using the Chrome browser from Google.</h4>
       </div>
       <div class="modal-body">
-        You're not using Chrome
+        <p>We built Typeless to work best with the <strong>Google Chrome browser</strong>.</p>
+		<p>Chrome works just like your current browser except it's much faster, gives you a larger viewing area & developers love building websites for it.</p>
+		<p>Why don’t you install it and try it out?</p>
       </div>
-     <!--  <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
+      <div class="modal-footer">
+        <a type="button" class="btn btn-info pull-left" data-toggle="tooltip" data-placement="top" title="Takes you to another webpage" href="https://www.google.com/chrome/browser/desktop/" target="_blank"><img src="chrome.png" width="12px"/> Download Google Chrome</a>
+        <button type="button" class="btn btn-default pull-right" data-dismiss="modal" data-toggle="tooltip" data-placement="top" title="Some features may not work">No thanks</button>
+		<br>
+		<br>
+		<div class="pull-left small">Takes you to another webpage</div>
+		<div class="pull-right small">Some features may not work</div>
+	  </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

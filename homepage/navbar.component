@@ -15,6 +15,9 @@
 	
 	<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 		<ul class="nav navbar-nav navbar-right">
+			<li id="book-link">
+				<a class="hover-red" data-toggle="modal" data-target="#demo-modal">Book a demo</a>
+			</li>
 			<li id="how-link">
 				<a class="hover-blue" href="how.html">How it works</a>
 			</li>
@@ -24,9 +27,6 @@
 			<li id="downloads-link">
 			  <a href="downloads.html" class="hover-navy">Downloads</span></a>
 			</li>
-			<!-- <li id="book-link">
-				<a class="hover-yellow scroll" data-to="getintouch" href="#getintouch">Book a demo</a>
-			</li> -->
 			<li id="faqs-link">
 				<a class="hover-yellow" href="faqs.html">FAQs</a>
 			</li>
@@ -35,12 +35,12 @@
 			</li>
 			
 			<li id="signup-link" style="display:none">
-				<h3 style="position:absolute;margin-left:120px">Try it now for <strong style="color:#3498db">free</strong></h3>
-				<form class="navbar-form navbar-left" style="margin-top:32px;margin-left:15px">
+				<h3 style="position:absolute;margin-left:87px">Try it now for <strong style="color:#3498db">free</strong></h3>
+				<form class="navbar-form navbar-left" style="margin-top:32px;margin-left:70px">
 					<div class="form-group">
 					  <input type="text" class="form-control" placeholder="Your e-mail address">
 					</div>
-					<button type="submit" class="btn btn-info"><strong>GET STARTED</strong> <i class="fa fa-chevron-circle-right"></i></button>
+					<button type="submit" class="btn btn-primary" style="border:none;	background-image: -webkit-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);	background-image:      -o-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,134,255,1)), to(rgba(0,134,255,.8)));	background-image:         linear-gradient(to bottom, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);"><strong>GET STARTED</strong> <i class="fa fa-chevron-circle-right"></i></button>
 				</form>
 			</li>
 		</ul>

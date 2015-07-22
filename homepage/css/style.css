@@ -142,14 +142,28 @@ a {
 	margin-top: 15px;
 	//border:solid 3px transparent!important;
 	border:none!important;
-	background-image: -webkit-linear-gradient(top, #38a2e9 0%, #318dcb 100%);
-	background-image:      -o-linear-gradient(top, #38a2e9 0%, #318dcb 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#38a2e9), to(#318dcb));
-	background-image:         linear-gradient(to bottom, #38a2e9 0%, #318dcb 100%);
+	background-image: -webkit-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);
+	background-image:      -o-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,134,255,1)), to(rgba(0,134,255,.8)));
+	background-image:         linear-gradient(to bottom, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);
 }
 
 .btn-get-started:hover {
 	box-shadow: 0px 0px 0px 3px #bdc3c7 inset;
+}
+
+.btn-get-started-how {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 18px 36px;
+	//margin-top: 15px;
+	//border:solid 3px transparent!important;
+	border:none!important;
+	background-image: -webkit-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);
+	background-image:      -o-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,134,255,1)), to(rgba(0,134,255,.8)));
+	background-image:         linear-gradient(to bottom, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);
 }
 
 .get-started-text{
@@ -159,7 +173,7 @@ a {
 .subline {
 	/* font-weight:700; */
 	/* text-transform:uppercase; */
-	color:#999999;
+	color:#666666;
 	/* opacity: .85; */
 	line-height: normal;
 }
@@ -752,6 +766,34 @@ hr {
 	bottom: 20px;
 	right: 20px;
 	z-index: 1;
+}
+
+.alert.alert-info {
+	border-width:2px;
+	border-color: #3498db;
+	background-color: rgba(52,152,219,.1)
+}
+
+p.pitch {
+	font-size:16px;
+	font-weight:300;
+	color:#666666;
+}
+
+.modal .modal-title {
+	font-weight:600;
+}
+
+.modal .modal-homepage .modal-header{
+	background-color:#3498db;
+	color:white;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.modal .modal-homepage .modal-header .close{
+	color: white;
+	opacity: 1;
 }
 
 @media (min-width: 768px) {

@@ -1,46 +1,67 @@
 <div class="modal fade" id="vs-modal">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-homepage">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Typeless vs your CRM</h4>
       </div>
       <div class="modal-body">
+		<p>We love our CRM here at Typeless. But, it is built to help to structure our sales process.</p>
+		<p>Typeless on the other hand is built with the sole intention of making contacts better. At Typeless, we aggregate all the contacts in your business from different email accounts, apps & social networks.</p>
+		<div style="padding:15px;background-color:rgba(52,152,219,.2)">
+			<strong>Interesting facts*:</strong><br>
+			<i class="fa fa-angle-right" style="color:#3498db"></i> Less than 12% of companywide contacts end up in a CRM.<br>
+			<i class="fa fa-angle-right" style="color:#3498db"></i> Over 30% of CRM contacts are wrong, missing information or out-of-date.
+		</div>
+		
         <table class="table va-middle text-center" >
 		  <thead >
 			<tr >
 			  <th></th>
-			  <th style="text-align:center"><img src="../img/logo-complete-original.png" class="img-responsive" style="max-width:150px;display:inline-block"></th>
 			  <th style="text-align:center">Your CRM</th>
+			  <th style="text-align:center"><img src="../img/logo-only-icon-original.png" class="img-responsive" style="max-width:40px;display:inline-block"></th>
 			</tr>
 		  </thead>
 		  <tbody>
 		  
 			<tr>
-			  <td style="text-align:left">Feature 1</td>
-			  <td><i class="fa fa-check" style="color:#1abc9c"></i></td>
+			  <td style="text-align:left">Always updating your contacts </td>
 			  <td><i class="fa fa-close" style="color:#e74c3c"></i></td>
+			  <td><i class="fa fa-check" style="color:#1abc9c"></i></td>
 			</tr>
 		  
 			<tr>
-			  <td style="text-align:left">Feature 2</td>
+			  <td style="text-align:left">Imports contacts from all business apps</td>
+			  <td><i class="fa fa-close" style="color:#e74c3c"></i></td>
 			  <td><i class="fa fa-check" style="color:#1abc9c"></i></td>
-			  <td>Sometimes</td>
 			</tr>
 			
 			<tr>
-			  <td style="text-align:left">Feature 3</td>
-			  <td><i class="fa fa-check" style="color:#1abc9c"></i></td>
+			  <td style="text-align:left">Constant merging & deduplication of contacts</td>
 			  <td><i class="fa fa-close" style="color:#e74c3c"></i></td>
+			  <td><i class="fa fa-check" style="color:#1abc9c"></i></td>
+			</tr>
+			
+			<tr>
+			  <td style="text-align:left">Enables contact collaboration with entire company</td>
+			  <td><i class="fa fa-close" style="color:#e74c3c"></i></td>
+			  <td><i class="fa fa-check" style="color:#1abc9c"></i></td>
+			</tr>
+			
+			<tr>
+			  <td style="text-align:left">Insanely powerful contact search </td>
+			  <td><i class="fa fa-close" style="color:#e74c3c"></i></td>
+			  <td><i class="fa fa-check" style="color:#1abc9c"></i></td>
 			</tr>
 			
 		  </tbody>
 		</table>
+		<div class="small pull-left" style="font-size:10px">* Typeless Survey May-Jun 2015 (sample 14 companies). 467 users of Salesforce, Zoho, Bullhorn, Capsule & Lynkos.</div>
       </div>
-     <!--  <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
+     <div class="modal-footer">
+        <button type="button" class="btn btn-info small" data-dismiss="modal"><strong>CLOSE</strong></button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
