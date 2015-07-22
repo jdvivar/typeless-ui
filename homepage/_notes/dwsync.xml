@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="demo.html" server="ftp.danielvivar.com" local="130755766868514929" remote="130757951400000000" Dst="2" />
-<file name="index.html" server="ftp.danielvivar.com" local="130815376144881206" remote="130815198600000000" Dst="2" />
+<file name="index.html" server="ftp.danielvivar.com" local="130820353311552521" remote="130820193600000000" Dst="2" />
 <file name="index-first.html" server="ftp.danielvivar.com" local="130735633696351492" remote="130735746000000000" Dst="2" />
 <file name="bg-2.jpg" server="ftp.danielvivar.com" local="130736735236393042" remote="130739745600000000" Dst="2" />
-<file name="how.html" server="ftp.danielvivar.com" local="130767675030484658" remote="130767496800000000" Dst="2" />
+<file name="how.html" server="ftp.danielvivar.com" local="130820371799759143" remote="130820193600000000" Dst="2" />
 <file name="step1-how.png" server="ftp.danielvivar.com" local="130746946639820012" remote="130746766200000000" Dst="2" />
 <file name="step2-how.png" server="ftp.danielvivar.com" local="130746940751522371" remote="130746764400000000" Dst="2" />
 <file name="step1-how-xs.png" server="ftp.danielvivar.com" local="130742532860013558" remote="130742352600000000" Dst="2" />
@@ -25,8 +25,8 @@
 <file name="cr-ext-office365-screenshot.png" server="ftp.danielvivar.com" local="130748694079747579" remote="130748602200000000" Dst="2" />
 <file name="android-app-screenshot.png" server="ftp.danielvivar.com" local="130748794749813348" remote="130749250800000000" Dst="2" />
 <file name="contact-modal.component" server="ftp.danielvivar.com" local="130749461110788451" remote="130749291600000000" Dst="2" />
-<file name="footer.component" server="ftp.danielvivar.com" local="130759093264759135" remote="130758922800000000" Dst="2" />
-<file name="navbar.component" server="ftp.danielvivar.com" local="130815378141164521" remote="130815198600000000" Dst="2" />
+<file name="footer.component" server="ftp.danielvivar.com" local="130819668178586254" remote="130820103600000000" Dst="2" />
+<file name="navbar.component" server="ftp.danielvivar.com" local="130820317489414794" remote="130820166600000000" Dst="2" />
 <file name="bg-3.jpg" server="ftp.danielvivar.com" local="130754062459907491" remote="130753884000000000" Dst="2" />
 <file name="twitter-card.png" server="ftp.danielvivar.com" local="130754811879411887" remote="130754634600000000" Dst="2" />
 <file name="index-second.html" server="ftp.danielvivar.com" local="130813421434261794" remote="130814064000000000" Dst="2" />
@@ -39,6 +39,15 @@
 <file name="logo-toothpick.png" server="ftp.danielvivar.com" local="130813669855558082" remote="130814064000000000" Dst="2" />
 <file name="logo-index.png" server="ftp.danielvivar.com" local="130813669329634080" remote="130814064000000000" Dst="2" />
 <file name="screenshot-hp.png" server="ftp.danielvivar.com" local="130813437293950493" remote="130814064000000000" Dst="2" />
-<file name="vs-modal.component" server="ftp.danielvivar.com" local="130815198673521996" remote="130815021000000000" Dst="2" />
-<file name="browser-modal.component" server="ftp.danielvivar.com" local="130815223769025180" remote="130815082200000000" Dst="2" />
+<file name="vs-modal.component" server="ftp.danielvivar.com" local="130820352482334428" remote="130820193600000000" Dst="2" />
+<file name="browser-modal.component" server="ftp.danielvivar.com" local="130819618240385688" remote="130819438800000000" Dst="2" />
+<file name="and-many-more.png" server="ftp.danielvivar.com" local="130818787337806685" remote="130818607200000000" Dst="2" />
+<file name="author-toby-harwood.png" server="ftp.danielvivar.com" local="130819517082498524" remote="130819348200000000" Dst="2" />
+<file name="author-jozef-wallis.png" server="ftp.danielvivar.com" local="130819515874583352" remote="130819348200000000" Dst="2" />
+<file name="chrome.png" server="ftp.danielvivar.com" local="130819614238581975" remote="130819438800000000" Dst="2" />
+<file name="pacman.png" server="ftp.danielvivar.com" local="130819647648114649" remote="130819473600000000" Dst="2" />
+<file name="spaceship.png" server="ftp.danielvivar.com" local="130819653148292024" remote="130819473600000000" Dst="2" />
+<file name="safe.png" server="ftp.danielvivar.com" local="130819651678690709" remote="130819473600000000" Dst="2" />
+<file name="video-modal.component" server="ftp.danielvivar.com" local="130820284352495981" remote="130820127000000000" Dst="2" />
+<file name="demo-modal.component" server="ftp.danielvivar.com" local="130820351633690483" remote="130820193600000000" Dst="2" />
 </dwsync>
