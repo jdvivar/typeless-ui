@@ -807,6 +807,15 @@ p.pitch {
 	filter: brightness(2);
 }
 
+.table.table-pricing th {
+	font-size: 18px;
+}
+
+.table.table-pricing tr.price td {
+	font-size: 24px;
+	font-weight: lighter;
+}
+
 @media (min-width: 768px) {
 	body {
 		padding-top: 100px;
