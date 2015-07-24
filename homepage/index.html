@@ -288,7 +288,7 @@
         $(document).ready(function() {
 		
 			// load common elements
-			$( "nav" ).load( "navbar.component" );
+			$( "nav" ).load( "navbar.component",afterLoadingNavbar );
 			$( "footer" ).load( "footer.component" , afterLoadingFooter);
 			$( ".modal-1" ).load ("contact-modal.component");
 			$( ".modal-2" ).load ("vs-modal.component");
@@ -312,6 +312,10 @@
 				
 				$('[data-toggle="tooltip"]').tooltip();
 				
+			}
+			
+			function afterLoadingNavbar() {
+				updateNavbar();
 			}
 			
 			// event/functions for scrolling
@@ -384,9 +388,9 @@
 			
 			function updateNavbar (){
 				width 	= $(window).width();
-				console.log("width="+width);
+				//console.log("width="+width);
 				pos		= window.scrollY;
-				console.log("width="+pos);
+				//console.log("width="+pos);
 				
 				if (width<=768 && pos>650)
 					$('.btn-sign-up').show('slow');
@@ -413,8 +417,6 @@
 					
 				};
 			};
-			
-			updateNavbar();
 			
 		});
 	</script>
