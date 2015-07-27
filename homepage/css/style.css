@@ -816,6 +816,53 @@ p.pitch {
 	font-weight: lighter;
 }
 
+.table-pricing td {
+	padding-top:20px!important;
+	padding-bottom:20px!important;
+}
+
+.pricing-box {
+	border-radius:10px;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.1);
+}
+.pricing-box .top{
+	text-align: center;
+	background-color:white;
+	padding:20px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+
+.pricing-box.lunch .top{
+	background-color:#1abc9c;
+	color:white;
+}
+
+.pricing-box .top .btn-warning{
+	margin-top:20px;
+	margin-bottom:20px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,.2);
+}
+
+.pricing-box .top .btn-warning small{
+	font-weight:bolder;
+}
+
+.pricing-box .top p{
+	font-size:13px;
+}
+
+.pricing-box .bottom{
+	background-color:#eeeeee;
+	padding:20px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	color: #666666;
+	text-align: left;
+	font-size: 14px;
+	min-height: 180px;
+}
+
 @media (min-width: 768px) {
 	body {
 		padding-top: 100px;
@@ -1311,4 +1358,41 @@ p.pitch {
 	
 }
 
+}
+
+/* adding 5-ths support */
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }
