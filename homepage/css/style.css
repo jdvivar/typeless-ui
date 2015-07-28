@@ -807,8 +807,20 @@ p.pitch {
 	filter: brightness(2);
 }
 
+div.table-responsive{
+	box-shadow: 0px 2px 3px rgba(0,0,0,.1);
+	border-radius:10px;
+}
+
+.table.table-pricing {
+	margin-bottom:0;
+}
+
 .table.table-pricing th {
 	font-size: 18px;
+	font-weight:300;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 
 .table.table-pricing tr.price td {
@@ -821,14 +833,26 @@ p.pitch {
 	padding-bottom:20px!important;
 }
 
+.table-pricing tbody td:first-child {
+	background-color:#eeeeee;
+	font-weight: bolder;
+	color:#666666;
+	padding-left:15px;
+}
+
+.table-pricing tbody td:nth-child(4) {
+	background-color:rgba(26,188,156,.1)
+}
+
 .pricing-box {
 	border-radius:10px;
     box-shadow: 0px 2px 3px rgba(0,0,0,.1);
+	margin-bottom:40px;
 }
 .pricing-box .top{
 	text-align: center;
 	background-color:white;
-	padding:20px;
+	padding:5px 15px 15px 15px;
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
 }
@@ -839,8 +863,8 @@ p.pitch {
 }
 
 .pricing-box .top .btn-warning{
-	margin-top:20px;
-	margin-bottom:20px;
+	margin-top:15px;
+	margin-bottom:15px;
 	box-shadow: 0px 2px 2px rgba(0,0,0,.2);
 }
 
@@ -860,7 +884,7 @@ p.pitch {
 	color: #666666;
 	text-align: left;
 	font-size: 14px;
-	min-height: 180px;
+	/* min-height: 180px; */
 }
 
 @media (min-width: 768px) {
