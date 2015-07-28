@@ -887,6 +887,23 @@ div.table-responsive{
 	/* min-height: 180px; */
 }
 
+.sign-up-form  .form-control-feedback {
+	top: 17px;
+}
+
+#demo-modal.modal  .form-group.has-feedback .form-control-feedback {
+	top:10px;
+}
+
+.nav .form-group.has-feedback .form-control-feedback {
+	top:10px;
+}
+
+.nav > li.active {
+	border-left:none;
+	background-color:white;
+}
+
 @media (min-width: 768px) {
 	body {
 		padding-top: 100px;

@@ -37,8 +37,10 @@
 			<li id="signup-link" style="display:none">
 				<h3 style="position:absolute;margin-left:87px">Try it now for <strong style="color:#3498db">free</strong></h3>
 				<form class="navbar-form navbar-left" style="margin-top:32px;margin-left:70px">
-					<div class="form-group">
+					<div class="form-group has-feedback">
 					  <input type="text" class="form-control" placeholder="Your e-mail address">
+					  <!-- <i class="fa fa-times form-control-feedback"></i> -->
+					  <!-- <i class="fa fa-check form-control-feedback"></i> -->
 					</div>
 					<button type="submit" class="btn btn-primary" style="border:none;	background-image: -webkit-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);	background-image:      -o-linear-gradient(top, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,134,255,1)), to(rgba(0,134,255,.8)));	background-image:         linear-gradient(to bottom, rgba(0,134,255,1) 0%, rgba(0,134,255,.8) 100%);"><strong>GET STARTED</strong> <i class="fa fa-chevron-circle-right"></i></button>
 				</form>

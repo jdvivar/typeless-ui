@@ -7,22 +7,29 @@
       </div>
       <div class="modal-body">
         <form class="form-horizontal">
-		  <div class="form-group">
+		  <div class="form-group has-feedback">
 			<label for="inputEmail3" class="col-sm-3 control-label">Name</label>
 			<div class="col-sm-9">
-			  <input type="email" class="form-control" placeholder="Name">
+			  <input type="text" class="form-control" placeholder="Name">
+			  <!-- <i class="fa fa-times form-control-feedback"></i> -->
+			  <!-- <i class="fa fa-check form-control-feedback"></i> -->
 			</div>
 		  </div>
-		  <div class="form-group">
+		  <div class="form-group has-success has-feedback">
 			<label for="inputPassword3" class="col-sm-3 control-label">Phone number</label>
 			<div class="col-sm-9">
-			  <input type="password" class="form-control" placeholder="Phone number">
+			  <input type="tel" class="form-control" placeholder="Phone number">
+			  <!-- <i class="fa fa-times form-control-feedback"></i> -->
+			  <i class="fa fa-check form-control-feedback"></i>
 			</div>
 		  </div>		  
-		<div class="form-group">
+		<div class="form-group has-error has-feedback">
 			<label for="inputPassword3" class="col-sm-3 control-label">Email address</label>
 			<div class="col-sm-9">
-			  <input type="password" class="form-control" placeholder="Email address">
+			  <input type="email" class="form-control" placeholder="Email address">
+			  <i class="fa fa-times form-control-feedback"></i>
+			  <!-- <i class="fa fa-check form-control-feedback"></i> -->
+			  <p class="small text-danger">Error info</p>
 			</div>
 		  </div>		  
 		</form>
@@ -30,7 +37,7 @@
       <div class="modal-footer" >
         <!-- <button type="button" class="btn btn-default" data-dismiss="modal"><small>CANCEL</small></button> -->
 		<span class="small pull-left text-info" style="margin-right:20px;line-height:36px">Stress-free calls, no bombarding, no pushy sales people <i class="fa fa-smile-o"></i></span>
-        <button type="button" class="btn btn-info"><small><strong>GET IN TOUCH</strong></small></button>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ok-modal" data-dismiss="modal" ><small><strong>GET IN TOUCH</strong></small></button>
       </div>
     </div>
   </div>

@@ -73,6 +73,10 @@
 	<span class="modal-5">
 		<!-- Loaded dinamically -->
 	</span>
+	
+	<span class="modal-6">
+		<!-- Loaded dinamically -->
+	</span>
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<!-- loaded dinamically -->
@@ -105,7 +109,11 @@
 			<div class="col-xs-12 col-sm-4 col-md-offset-1 col-md-5">
 				<div class="sign-up-form" id="sign-up-form">
 					<div class="try">Try it now for <strong style="color:#3498db">free</strong></div>
-					<input type="text" class="form-control" placeholder="Your e-mail address">
+					<div class="form-group has-feedback">
+						<input type="text" class="form-control" placeholder="Your e-mail address">
+						<!-- <i class="fa fa-times form-control-feedback"></i> -->
+						<!-- <i class="fa fa-check form-control-feedback"></i> -->
+					</div>
 					<button type="button" class="btn btn-primary btn-get-started btn-block">Get Started <i class="fa fa-chevron-circle-right"></i></button>
 				</div>
 				<div class="text-right">
@@ -295,6 +303,7 @@
 			$( ".modal-3" ).load ("browser-modal.component", afterLoadingModal);
 			$( ".modal-4" ).load ("video-modal.component");
 			$( ".modal-5" ).load ("demo-modal.component");
+			$( ".modal-6" ).load ("ok-modal.component");
 			
 			function afterLoadingFooter() {	
 			
