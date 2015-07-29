@@ -82,7 +82,7 @@
 		<!-- loaded dinamically -->
     </nav>
 	
-	<button class="btn btn-info btn-circle btn-xl btn-sign-up scroll" style="display:none" data-to="sign-up-form"><i class="fa fa-chevron-up"></i><br>SIGN<br>UP</button>
+	<button class="btn btn-info btn-circle btn-xl btn-sign-up scroll-to" style="display:none" data-to="sign-up-form"><i class="fa fa-chevron-up"></i><br>SIGN<br>UP</button>
 	
 	<div class="cookies alert alert-dismissible">By using this website you consent to our use of cookies. For more info <a class="text-blue footer-link">click here</a>. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	</div>
@@ -138,7 +138,7 @@
 			
 		</div>
 		<div class="row text-center">
-			<button class="btn scroll btn-lg btn-circle animated pulse" data-to="afterfold" style="font-size:30px;color:#3498db;outline:none"><i class="fa fa-angle-double-down"></i></button>
+			<button class="btn scroll-to btn-lg btn-circle animated pulse" data-to="afterfold" style="font-size:30px;color:#3498db;outline:none"><i class="fa fa-angle-double-down"></i></button>
 		</div>
 		
 		<!-- <hr> -->
@@ -325,11 +325,16 @@
 			
 			function afterLoadingNavbar() {
 				updateNavbar();
+				
+				// login dropdown fix
+				$('.dropdown input, .dropdown label').click(function(e) {
+					e.stopPropagation();
+				});
 			}
 			
 			// event/functions for scrolling
 			
-			$('.scroll').on('click', function(event){
+			$('.scroll-to').on('click', function(event){
 				event.preventDefault();
 				var sectionID = $(this).attr("data-to");
 				scrollToID('#'+sectionID, 750);
@@ -426,6 +431,8 @@
 					
 				};
 			};
+			
+			
 			
 		});
 	</script>

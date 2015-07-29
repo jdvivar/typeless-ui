@@ -903,6 +903,37 @@ div.table-responsive{
 	border-left:none;
 	background-color:white;
 }
+#login-menu.dropdown-menu {
+	/* text-align:center; */
+	border-radius:5px;
+	padding: 20px 30px 0 30px;
+	min-width: 300px;
+}
+
+#login-menu.dropdown-menu  input:not([type="checkbox"]){
+	border-radius:3px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size:13px;
+	height:45px;
+}
+
+#login-menu.dropdown-menu label {
+	font-weight:600;
+	/* text-transform:uppercase; */
+	font-size:13px;
+	color: #666666;
+}
+
+#login-menu.dropdown-menu .security {
+	background-color: #eeeeee;
+	margin: 15px -30px 0 -30px;
+	padding: 15px 30px 15px 30px;
+	font-size:13px;
+	color: #999999;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
 
 @media (min-width: 768px) {
 	body {
@@ -941,6 +972,11 @@ div.table-responsive{
 	.hover-navy:hover, .hover-navy:active, .hover-navy:focus, .navbar-nav>li.active>.hover-navy {
 		box-shadow: inset #2c3e50 0 -5px 0 0;
 		color: #2c3e50!important;
+	}
+
+	.hover-orange:hover, .hover-orange:active, .hover-orange:focus, .navbar-nav>li.active>.hover-orange {
+		box-shadow: inset #e67e22 0 -5px 0 0;
+		color: #e67e22!important;
 	}
 	
 	.grayed-out {

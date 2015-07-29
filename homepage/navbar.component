@@ -28,10 +28,38 @@
 			  <a href="downloads.html" class="hover-navy">Downloads</span></a>
 			</li>
 			<li id="faqs-link">
-				<a class="hover-yellow" href="faqs.html">FAQs</a>
+				<a class="hover-orange" href="faqs.html">FAQs</a>
 			</li>
-			<li id="login-link">
-				<a class="hover-green"  href="../login.html">Log in</a>
+			<li class="dropdown" id="login-link">
+				<a class="hover-yellow dropdown-toggle scroll-to" href="#" data-toggle="dropdown" data-to="login-menu">Log in <a>
+				<div class="dropdown-menu" id="login-menu">
+					<!-- <div class="text-center" style="margin-bottom:30px"><img src="../img/logo-only-icon-original-120p.png" width="25%"></div> -->
+					<div class="form-group">
+					  <label class=""><i class="fa fa-angle-right text-info"></i> Your e-mail address</label>
+					  <input type="email" class="form-control" placeholder="">
+					</div>
+					<div class="form-group">
+					  <label class=""><i class="fa fa-angle-right text-info"></i> Your password</label>
+					  <input type="password" class="form-control" placeholder="">
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+							  <input type="checkbox"> Remember me
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						  <button type="submit" class="btn btn-info btn-block"><small><strong>LOG IN</strong></small></button>
+					</div>
+					<div style="margin-bottom:20px">
+						<a class="text-info">Forgot password?</a><br>
+						<a class="text-info">New to Typeless?</a>
+					</div>
+					<!-- <div class="security hidden-xs">
+						<i class="fa fa-lock"></i> We secure all data with enterprise level encryption.
+					</div> -->
+				</div>
 			</li>
 			
 			<li id="signup-link" style="display:none">
