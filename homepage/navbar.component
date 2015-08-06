@@ -50,7 +50,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						  <button type="submit" class="btn btn-info btn-block"><small><strong>LOG IN</strong></small></button>
+						  <a class="btn btn-info btn-block" style="color:white;font-size:13px" href="../contacts.html"><strong>LOG IN</strong></a>
 					</div>
 					<div style="margin-bottom:20px">
 						<a class="text-info">Forgot password?</a><br>

@@ -25,10 +25,10 @@
 		<div class="footer-title">Get in touch</div>
 		<p class="footer-p">Drop us a message <a class="footer-link text-blue" data-toggle="modal" data-target="#contact-modal" >here</a>.</p>
 		<p class="footer-p">
-			<strong>The Leathermarket</strong><br>
-			Weston St, London SE1 3ER<br>
+			<strong>The Stables</strong><br>
+			28 Britannia St, London WC1X 9JF<br>
 		</p>
-		<iframe class="gmap" src="https://www.google.com/maps/embed/v1/place?q=The%20Leathermarket%2C%20Weston%20Street&key=AIzaSyB0ZZkNt-ghiIPjWtDUzzLg0G10459TRns"></iframe>
+		<iframe class="gmap" src="https://www.google.com/maps/embed/v1/place?q=The%20Stables%2028%20Britannia%20St%20London%20WC1X%209JF%20Reino%20Unido&key=AIzaSyB0ZZkNt-ghiIPjWtDUzzLg0G10459TRns"></iframe>
 	</div>
 </div>
 <div class="row">
