@@ -1,0 +1,23 @@
+<div class="modal fade right" id="linkedin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-homepage modal-onboarding">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="modal-title text-600">Upload your Linkedin contacts</h3>
+			</div>
+			<div class="modal-body">
+				<div id="video" class="video-modal"><i class="fa fa-play-circle"/></div>
+				<div style="margin-top:20px">
+					<p><span class="text-info text-700">1 <i class="fa fa-angle-right"></i></span>&nbsp;&nbsp;&nbsp;Go to <a class="text-info" href="https://www.linkedin.com/people/export-settings" target="_blank">Linkedin Export <i class="fa fa-external-link"></i></a> and click on <strong>Export</strong></p>
+					<p><span class="text-info text-700">2 <i class="fa fa-angle-right"></i></span>&nbsp;&nbsp;&nbsp;Return here and drag the exported file in the area below:</p>
+				</div>
+				<br>
+				<div id="exampleDropPane">Drag file here</div>
+			</div>
+			<div class="modal-footer">
+				<a type="button" class="btn btn-invisible text-600 text-uppercase" data-dismiss="modal" data-toggle="modal" data-target="#onboarding-modal">Cancel</a>
+				<a type="button" class="btn btn-invisible text-600 text-uppercase text-info disabled">Continue</a>
+			</div>
+		</div>
+	</div>
+</div>

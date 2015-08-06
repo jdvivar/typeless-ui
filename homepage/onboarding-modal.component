@@ -1,0 +1,131 @@
+<div class="modal fade left" id="onboarding-modal" data-backdrop="static">
+  <div class="modal-dialog modal-homepage modal-onboarding modal-lg">
+    <div class="modal-content">
+	
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+		<a class="pull-right text-white" data-dismiss="modal"  data-toggle="modal" data-target="#onboarding-video-modal" style="margin-top:8px"><i class="fa fa-question-circle"></i> <span class="hidden-xs">What's this? Watch video</span></a>
+        <h2 class="modal-title">Hi Jhon, Welcome to Typeless</h2>
+      </div>
+	  
+      <div class="modal-body">
+	  
+		<div class="row">
+		
+			<div class="col-md-8">
+				<h2>Let’s start by importing your contacts into Typeless. This is a <span class="text-info"><strong>one-time</strong></span> setup process.</h2>
+				<h2>Choose an account to import contacts.</h2>
+				<span>Add as many accounts as you like, one at a time</span>
+			</div>
+			
+			<div class="col-md-4 hidden-sm hidden-xs">
+				<div class="chart text-center" data-percent="75"><span>75%</span></div>
+				<div class="text-center text-info" style="">Add another account to complete your profile</div>
+			</div>
+			
+			<div class="col-xs-12" style="margin-top:40px">
+			
+				<div class="col-xs-12 col-md-6">
+			
+					<button type="button" class="btn btn-default btn-block connect" style="background-color:#cacaca">
+						<img src="../img/logo-service-gmail-circle.png"/>
+						<span class="border"></span>
+						<span class="text">IMPORT FROM GMAIL / GOOGLE</span>
+					</button>
+					
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+				
+					<div class="status">
+						No accounts connected
+					</div>
+				
+				</div>
+				
+				<div class="col-xs-12 col-md-6 ">
+			
+					<button type="button" class="btn btn-default btn-block connect" style="background-color:#504c6a">
+						
+						<img src="../img/logo-service-outlook-circle.png"/>
+						<span class="border"></span>
+						<span class="text"><i class="fa fa-plus"></i> ADD ANOTHER ACCOUNT</span>
+					</button>
+					
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+				
+					<div class="status">
+						<strong>2</strong> accounts connected
+					</div>
+				
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+			
+					<button type="button" class="btn btn-default btn-block connect" style="background-color:rgb(15,126,184)" data-dismiss="modal"  data-toggle="modal" data-target="#linkedin-modal">
+						<img src="../img/logo-service-linkedin-circle.png"/>
+						<span class="border"></span>
+						<span class="text">IMPORT FROM LINKEDIN</span>
+					</button>
+					
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+				
+					<div class="status">
+						Oh snap! Couldn't connect, <a class="text-underline text-blue">try again</a>
+					</div>
+				
+				</div>
+				
+				<div class="col-xs-12 col-md-6 ">
+			
+					<button type="button" class="btn btn-default btn-block connect" style="background-color:#0f7eb8">
+						<img src="../img/logo-service-salesforce-circle.png"/>
+						<span class="border"></span>
+						<span class="text">IMPORT FROM SALESFORCE</span>
+					</button>
+					
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+				
+					<div class="status">
+						<i class="fa fa-refresh fa-spin text-blue"></i> Connecting
+					</div>
+				
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12" style="">
+			
+				<div class="col-xs-12 col-md-6">
+					<h2>Typeless is now taking care of:</h2>
+				</div>
+				
+				<div class="col-xs-12 col-md-6">
+					<h1 style="font-size:72px;margin-top:0">3,247</h1>
+					<h2 class="text-blue" style="margin-top:-20px">contacts</h2>
+				</div>
+				
+			</div>
+			
+		</div>
+	  </div>
+      <div class="modal-footer" style="">
+		<!-- button to show when number of accounts is 1 -->
+		<a role="button" class="skip" data-toggle="popover" title="Are you really sure?" data-content="Typeless works best with at least 2 accounts. Click again to skip anyway." data-placement="left" data-trigger="focus" tabindex="1" style="display:inline-block">
+			<button type="button" class="btn btn-info " data-dismiss="modal" disabled><small><strong>I'M DONE</strong></small></button>
+		</a>
+		
+		<!-- button to show when number of accounts is 0 -->
+		<!-- <a role="button" data-toggle="popover" title="Connect an account first" data-content="Please connect at least 1 account before continue." data-placement="left" data-trigger="focus" style="display:inline-block" tabindex="2">
+			<button type="button" class="btn btn-info " disabled><small><strong>I'M DONE</strong></small></button>
+		</a> -->
+      </div>
+    </div>
+  </div>
+</div>

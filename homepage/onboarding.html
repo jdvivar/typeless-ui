@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="homepage" lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary">	
+	<meta name="twitter:site" content="@typelessco">
+	<meta name="twitter:title" content="Typeless. Collaborate on your contacts.">
+	<meta name="twitter:description" content="Typeless helps you search, discover &amp; acquire contacts within your business easier &amp; faster.">
+	<meta name="twitter:image:src" content="http://www.danielvivar.com/typeless/homepage/twitter-card.png">
+	
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Typeless. Collaborate on your contacts." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.danielvivar.com/typeless/homepage" />
+	<meta property="og:image" content="http://www.danielvivar.com/typeless/homepage/twitter-card.png" />
+	<meta property="og:description" content="Typeless helps you search, discover &amp; acquire contacts within your business easier &amp; faster." />
+	<meta property="og:site_name" content="Typeless." />
+	
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="Typeless. Collaborate on your contacts.">
+	<meta itemprop="description" content="Typeless helps you search, discover &amp; acquire contacts within your business easier &amp; faster.">
+	<meta itemprop="image" content="http://www.danielvivar.com/typeless/homepage/twitter-card.png">
+		
+    <title>Typeless. | Onboarding</title>
+	<meta name="description" content="Typeless helps you search, discover &amp; acquire contacts within your business easier &amp; faster.">
+
+	<!-- css loading before content -->
+		
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Allowing backward-compatibility with old css rules -->
+		<link href="../css/style.css" rel="stylesheet"> 
+
+		<!-- Custom CSS -->		
+		<link href="css/style.css" rel="stylesheet">
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+		
+		<!-- Animations CSS -->
+		<link href="../css/animate.css" rel="stylesheet">
+		
+		<style>
+		body {
+			display:none;
+			background-color: #f8f8f8!important;
+		}
+		</style>
+
+</head>
+
+<body>
+
+	<span class="modal-1">
+		<!-- Loaded dinamically -->
+	</span>
+	
+	<span class="modal-2">
+		<!-- Loaded dinamically -->
+	</span>
+	
+	<span class="modal-3">
+		<!-- Loaded dinamically -->
+	</span>
+
+	<span class="modal-4">
+		<!-- Loaded dinamically -->
+	</span>
+	
+	<span class="modal-5">
+		<!-- Loaded dinamically -->
+	</span>
+	
+	<span class="modal-6">
+		<!-- Loaded dinamically -->
+	</span>
+
+    <div class="container">
+	
+    </div>
+	
+	<!-- js loading after content -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		
+		<script>
+			// transition
+			$("body").fadeIn(1000);
+		</script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- EayPIE -->
+		<script src="../js/plugins/easypiechart/jquery.easypiechart.js"></script>
+		
+	<!-- document ready function -->
+	<script>
+        $(document).ready(function() {
+		
+			// dinamic loading			
+			$( ".modal-1" ).load ("onboarding-modal.component", afterLoadingModal);
+			setTimeout(function(){ $( ".modal-2" ).load ("linkedin-modal.component", afterLoadingModal); }, 2000);
+			//$( ".modal-2" ).load ("linkedin-modal.component", afterLoadingModal);
+			setTimeout(function(){ $( ".modal-3" ).load ("onboarding-video-modal.component", afterLoadingModal); }, 2000);
+			//$( ".modal-3" ).load ("onboarding-video-modal.component", afterLoadingModal);
+			
+			function loadMainModal(){
+			
+				$('#onboarding-modal').modal();
+				
+			};
+			
+			function startChart(){
+			
+				$('.chart').easyPieChart({
+					barColor: '#3498db',
+					scaleColor: false,
+					lineWidth: '5',
+					size: 120,
+					animate: 2000,
+				});
+				
+			}
+			
+			function addEventChart (){
+			
+				$('#onboarding-modal').on('shown.bs.modal', function (e) {
+				
+					startChart();
+
+				});
+			
+			};
+			
+			function addSkipEvent() {
+			
+				
+				$('.skip').click(function(){
+				
+					self = $(this);
+										
+					// Enable button
+					self.children().removeAttr("disabled");
+					
+					// Enable modal backdrop
+					$('#onboarding-modal').attr('data-backdrop','false');
+					
+				});
+			
+			};
+			
+			
+			function afterLoadingModal() {
+				
+				//$('[data-toggle="tooltip"]').tooltip();
+				$('[data-toggle="popover"]').popover();
+				
+				loadMainModal();
+				
+				addEventChart();
+				
+				addSkipEvent();
+								
+			};
+			
+		});
+	</script>
+
+</body>
+
+</html>
