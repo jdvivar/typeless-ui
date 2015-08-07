@@ -34,28 +34,31 @@
 				<a class="hover-yellow dropdown-toggle scroll-to" href="#" data-toggle="dropdown" data-to="login-menu">Log in <a>
 				<div class="dropdown-menu" id="login-menu">
 					<!-- <div class="text-center" style="margin-bottom:30px"><img src="../img/logo-only-icon-original-120p.png" width="25%"></div> -->
-					<div class="form-group">
-					  <label class=""><i class="fa fa-angle-right text-info"></i> Your e-mail address</label>
-					  <input type="email" class="form-control" placeholder="">
-					</div>
-					<div class="form-group">
-					  <label class=""><i class="fa fa-angle-right text-info"></i> Your password</label>
-					  <input type="password" class="form-control" placeholder="">
-					</div>
-					<div class="form-group">
-						<div class="checkbox">
-							<label>
-							  <input type="checkbox"> Remember me
-							</label>
+					<form id="login">
+						<div class="form-group">
+						  <label class=""><i class="fa fa-angle-right text-info"></i> Your e-mail address</label>
+						  <input name="username" type="email" class="form-control" placeholder="">
 						</div>
-					</div>
-					<div class="form-group">
-						  <a class="btn btn-info btn-block" style="color:white;font-size:13px" href="../contacts.html"><strong>LOG IN</strong></a>
-					</div>
-					<div style="margin-bottom:20px">
-						<a class="text-info">Forgot password?</a><br>
-						<a class="text-info">New to Typeless?</a>
-					</div>
+						<div class="form-group">
+						  <label class=""><i class="fa fa-angle-right text-info"></i> Your password</label>
+						  <input name="password" type="password" class="form-control" placeholder="">
+						</div>
+						<div class="form-group">
+							<div class="checkbox">
+								<label>
+								  <input type="checkbox"> Remember me
+								</label>
+							</div>
+						</div>
+						
+						<!-- <a class="btn btn-info btn-block" style="color:white;font-size:13px" href="../contacts.html"><strong>LOG IN</strong></a> -->
+						<input type="submit" value="LOG IN" class="btn btn-info btn-block" style="color:white;font-size:13px;font-weight:600;margin-bottom:15px;">
+						
+						<div style="margin-bottom:20px">
+							<a class="text-info">Forgot password?</a><br>
+							<a class="text-info">New to Typeless?</a>
+						</div>
+					</form>
 					<!-- <div class="security hidden-xs">
 						<i class="fa fa-lock"></i> We secure all data with enterprise level encryption.
 					</div> -->
