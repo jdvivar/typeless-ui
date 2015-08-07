@@ -228,6 +228,14 @@
 				updateNavbar();
 				
 				$('#bs-navbar-collapse #contacts-link').show('slow');
+				
+				startCounting();
+				
+				setInterval(
+					function(){
+						$('#number-contacts').fadeOut('fast', stepCounting);
+						$('#number-contacts').fadeIn('fast');
+				},1500);
 			
 			}
 			
@@ -286,8 +294,37 @@
 			}
 			
 			function generateRandom (many) {
-				return (Math.floor(Math.random()*many)+1);
+				return generateRandom (1,many);
 			}
+			
+			// contacts counting up
+			// used definition:
+			//    start by 8,923,338
+			//    add a random number of contacts between 10 and 200 every second
+			
+			function generateRandom (min,max) {
+			
+				return Math.floor(Math.random()*(max-min))+min;
+				
+			}
+			
+			var numContacts;
+			
+			function startCounting(){
+			
+				numContacts = generateRandom (8000000,8500000);
+			
+				document.getElementById("number-contacts").innerHTML = numContacts.toLocaleString();
+			
+			};
+			
+			function stepCounting(){
+			
+				numContacts += generateRandom (10,200);
+				
+				document.getElementById("number-contacts").innerHTML = numContacts.toLocaleString();
+				
+			};
 			
 			// is Chrome?
 			

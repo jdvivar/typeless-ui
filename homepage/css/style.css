@@ -1522,6 +1522,19 @@ div.table-responsive{
 
 	}
 	
+	#login-menu.dropdown-menu {
+		
+		padding-left: 0;
+		min-width: 250px;
+	}
+	
+	#login-menu.dropdown-menu  input:not([type="checkbox"]){
+
+		height:42px;
+		
+	}
+
+	
 }
 
 @media (max-height: 479px) {
