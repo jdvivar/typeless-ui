@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="demo.html" server="ftp.danielvivar.com" local="130755766868514929" remote="130757951400000000" Dst="2" />
-<file name="index.html" server="ftp.danielvivar.com" local="130828292947537593" remote="130828113000000000" Dst="2" />
+<file name="index.html" server="ftp.danielvivar.com" local="130834257619670747" remote="130834079400000000" Dst="2" />
 <file name="index-first.html" server="ftp.danielvivar.com" local="130735633696351492" remote="130735746000000000" Dst="2" />
 <file name="bg-2.jpg" server="ftp.danielvivar.com" local="130736735236393042" remote="130739745600000000" Dst="2" />
-<file name="how.html" server="ftp.danielvivar.com" local="130825704496185203" remote="130825534800000000" Dst="2" />
+<file name="how.html" server="ftp.danielvivar.com" local="130833537784301393" remote="130834036800000000" Dst="2" />
 <file name="step1-how.png" server="ftp.danielvivar.com" local="130746946639820012" remote="130746766200000000" Dst="2" />
 <file name="step2-how.png" server="ftp.danielvivar.com" local="130746940751522371" remote="130746764400000000" Dst="2" />
 <file name="step1-how-xs.png" server="ftp.danielvivar.com" local="130742532860013558" remote="130742352600000000" Dst="2" />
@@ -14,9 +14,9 @@
 <file name="step4-how-xs.png" server="ftp.danielvivar.com" local="130741963699940434" remote="130741786800000000" Dst="2" />
 <file name="step4-how.png" server="ftp.danielvivar.com" local="130747708140155415" remote="130747531800000000" Dst="2" />
 <file name="bg-8.png" server="ftp.danielvivar.com" local="130742595282990278" remote="130742435400000000" Dst="2" />
-<file name="downloads.html" server="ftp.danielvivar.com" local="130758299776113851" remote="130758922800000000" Dst="2" />
+<file name="downloads.html" server="ftp.danielvivar.com" local="130833538294516220" remote="130834036200000000" Dst="2" />
 <file name="teams.html" server="ftp.danielvivar.com" local="130752974445511924" remote="130752823200000000" Dst="2" />
-<file name="faqs.html" server="ftp.danielvivar.com" local="130765190025026720" remote="130765684800000000" Dst="2" />
+<file name="faqs.html" server="ftp.danielvivar.com" local="130833538501087240" remote="130834036800000000" Dst="2" />
 <file name="step2-how-old.png" server="ftp.danielvivar.com" local="130746301201630794" remote="130746764400000000" Dst="2" />
 <file name="teams-screenshot.png" server="ftp.danielvivar.com" local="130748623261870658" remote="130748501400000000" Dst="2" />
 <file name="ios-app-screenshot.png" server="ftp.danielvivar.com" local="130748784689562711" remote="130748604600000000" Dst="2" />
@@ -26,7 +26,7 @@
 <file name="android-app-screenshot.png" server="ftp.danielvivar.com" local="130748794749813348" remote="130749250800000000" Dst="2" />
 <file name="contact-modal.component" server="ftp.danielvivar.com" local="130749461110788451" remote="130749291600000000" Dst="2" />
 <file name="footer.component" server="ftp.danielvivar.com" local="130831715591720062" remote="130831609200000000" Dst="2" />
-<file name="navbar.component" server="ftp.danielvivar.com" local="130827265632655950" remote="130827085800000000" Dst="2" />
+<file name="navbar.component" server="ftp.danielvivar.com" local="130833506765246400" remote="130834036800000000" Dst="2" />
 <file name="bg-3.jpg" server="ftp.danielvivar.com" local="130754062459907491" remote="130753884000000000" Dst="2" />
 <file name="twitter-card.png" server="ftp.danielvivar.com" local="130754811879411887" remote="130754634600000000" Dst="2" />
 <file name="index-second.html" server="ftp.danielvivar.com" local="130813421434261794" remote="130814064000000000" Dst="2" />
@@ -38,7 +38,7 @@
 <file name="logo-mosaic.png" server="ftp.danielvivar.com" local="130813670628469295" remote="130814064000000000" Dst="2" />
 <file name="logo-toothpick.png" server="ftp.danielvivar.com" local="130813669855558082" remote="130814064000000000" Dst="2" />
 <file name="logo-index.png" server="ftp.danielvivar.com" local="130813669329634080" remote="130814064000000000" Dst="2" />
-<file name="screenshot-hp.png" server="ftp.danielvivar.com" local="130813437293950493" remote="130814064000000000" Dst="2" />
+<file name="screenshot-hp.png" server="ftp.danielvivar.com" local="130833566174713227" remote="130834036800000000" Dst="2" />
 <file name="vs-modal.component" server="ftp.danielvivar.com" local="130820352482334428" remote="130820193600000000" Dst="2" />
 <file name="browser-modal.component" server="ftp.danielvivar.com" local="130819618240385688" remote="130819438800000000" Dst="2" />
 <file name="and-many-more.png" server="ftp.danielvivar.com" local="130818787337806685" remote="130818607200000000" Dst="2" />
@@ -48,18 +48,18 @@
 <file name="pacman.png" server="ftp.danielvivar.com" local="130819647648114649" remote="130819473600000000" Dst="2" />
 <file name="spaceship.png" server="ftp.danielvivar.com" local="130819653148292024" remote="130819473600000000" Dst="2" />
 <file name="safe.png" server="ftp.danielvivar.com" local="130819651678690709" remote="130819473600000000" Dst="2" />
-<file name="video-modal.component" server="ftp.danielvivar.com" local="130820284352495981" remote="130820127000000000" Dst="2" />
+<file name="video-modal.component" server="ftp.danielvivar.com" local="130834204198087050" remote="130834036800000000" Dst="2" />
 <file name="demo-modal.component" server="ftp.danielvivar.com" local="130825744402030447" remote="130825578600000000" Dst="2" />
 <file name="signup.html" server="ftp.danielvivar.com" local="130831055652209265" remote="130831609200000000" Dst="2" />
 <file name="chick.png" server="ftp.danielvivar.com" local="130821232604750291" remote="130821162000000000" Dst="2" />
-<file name="pricing.html" server="ftp.danielvivar.com" local="130828101365073176" remote="130827921600000000" Dst="2" />
+<file name="pricing.html" server="ftp.danielvivar.com" local="130833537584407797" remote="130834036800000000" Dst="2" />
 <file name="chick-hr-lg.png" server="ftp.danielvivar.com" local="130824851553871207" remote="130825302600000000" Dst="2" />
 <file name="chick-hr-md.png" server="ftp.danielvivar.com" local="130824854553735690" remote="130825302600000000" Dst="2" />
 <file name="grow.png" server="ftp.danielvivar.com" local="130825659760721337" remote="130825483200000000" Dst="2" />
 <file name="ok-modal.component" server="ftp.danielvivar.com" local="130825747496448288" remote="130825578600000000" Dst="2" />
 <file name="logo-grove.png" server="ftp.danielvivar.com" local="130828292197882139" remote="130828112400000000" Dst="2" />
 <file name="onboarding-modal.component" server="ftp.danielvivar.com" local="130833336196174042" remote="130833157200000000" Dst="2" />
-<file name="onboarding.html" server="ftp.danielvivar.com" local="130833285873704601" remote="130833148800000000" Dst="2" />
+<file name="onboarding.html" server="ftp.danielvivar.com" local="130833547696328732" remote="130834036800000000" Dst="2" />
 <file name="linkedin-modal.component" server="ftp.danielvivar.com" local="130832528887496219" remote="130833148800000000" Dst="2" />
-<file name="onboarding-video-modal.component" server="ftp.danielvivar.com" local="130832581668951094" remote="130833148800000000" Dst="2" />
+<file name="onboarding-video-modal.component" server="ftp.danielvivar.com" local="130833541895342532" remote="130834036800000000" Dst="2" />
 </dwsync>
