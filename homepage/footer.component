@@ -22,8 +22,8 @@
 		<img src="../img/logo-only-letters-original.png" alt="Typeless only letters logo"></img>
 	</div>
 	<div class="col-sm-4 getintouch" id="getintouch">
-		<div class="footer-title">Get in touch</div>
-		<p class="footer-p">Drop us a message <a class="footer-link text-blue" data-toggle="modal" data-target="#contact-modal" >here</a>.</p>
+		<div class="footer-title">Where we are</div>
+		<!-- <p class="footer-p">Drop us a message <a class="footer-link text-blue" data-toggle="modal" data-target="#contact-modal" >here</a>.</p> -->
 		<p class="footer-p">
 			<strong>The Stables</strong><br>
 			28 Britannia St, London WC1X 9JF<br>
