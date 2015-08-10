@@ -1,0 +1,85 @@
+/* Onboarding layout rules */
+
+@import url(http://fonts.googleapis.com/css?family=Delius);
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+@font-face {
+  font-family: 'arrows';
+  src: url('PWNewArrows.ttf');
+}
+
+.ol-arrow {
+	font-family: 'arrows';
+	position:relative;
+	font-size: 200%;
+}
+
+.mirror {
+	display: block;
+	-moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform:matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.mirror-down {
+	display: inline-block;
+	-moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.overlay {
+	position:absolute;
+	top: 0;
+	z-index:1000;
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	height: 100%;
+	font-family: 'Shadows into light', sans-serif;
+	font-size: 24px;
+	color:white;
+}
+
+.overlay > div{
+	position:absolute;
+	/* opacity: .3; */
+}
+
+.overlay > div:hover{
+	/* opacity:1; */
+}
+
+.overlay #o-1 {
+	left: 230px;
+	top: 40px;
+}
+
+.overlay #o-2 {
+    right: 400px;
+    top: 70px;
+}
+
+.overlay #o-3 {
+    right: 160px;
+    top: 70px;
+}
+.overlay #o-4 {
+    right: -10px;
+    top: 90px;
+}
+.overlay #o-5 {
+    left: 266px;
+    top: 100px;
+}
+.overlay #o-6{
+    left: 266px;
+    top: 171px;
+}
+.overlay #o-7{
+    left: 20px;
+    top: 262px;
+}
+.overlay #o-8{
+    right: 15px;
+    bottom: 70px;
+}
