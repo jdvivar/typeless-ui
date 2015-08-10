@@ -1019,6 +1019,8 @@ div.table-responsive{
     transform: translate3d(50%, 0, 0);
 }
 
+
+
 @media (min-width: 768px) {
 	body {
 		padding-top: 100px;
@@ -1082,6 +1084,7 @@ div.table-responsive{
 	.getintouch {
 		text-align: right;
 	}	
+
 }
 
 @media (max-width: 767px) {

@@ -31,7 +31,7 @@
 				<a class="hover-orange" href="faqs.html">FAQs</a>
 			</li>
 			<li class="dropdown" id="login-link">
-				<a class="hover-yellow dropdown-toggle scroll-to" href="#" data-toggle="dropdown" data-to="login-menu">Log in <a>
+				<a class="hover-yellow dropdown-toggle scroll-to" href="#" data-toggle="dropdown" data-to="login-menu">Log in<a>
 				<div class="dropdown-menu" id="login-menu">
 					<!-- <div class="text-center" style="margin-bottom:30px"><img src="../img/logo-only-icon-original-120p.png" width="25%"></div> -->
 					<form id="login">
@@ -64,6 +64,7 @@
 						<i class="fa fa-lock"></i> We secure all data with enterprise level encryption.
 					</div> -->
 				</div>
+				
 			</li>
 			
 			<li id="signup-link" style="display:none">
