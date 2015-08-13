@@ -33,6 +33,10 @@
 	
 	<span id="modal-windows-3">
 		<!-- loaded dinamically -->
+	</span>	
+	
+	<span id="modal-windows-4">
+		<!-- loaded dinamically -->
 	</span>
 	
 
@@ -131,7 +135,7 @@
 					<div class="row cards">
 						<div class="col-lg-3 col-md-4 col-sm-6 no-padding">
 							
-								<div class="contact-box m-r m-b" >
+								<div class="contact-box m-r m-b" data-toggle="modal" data-target="#contact-modal">
 									<div class="row no-margins">
 										
 										<div class="col-sm-10 no-padding">
@@ -1555,7 +1559,11 @@
 			$( "#modal-windows" ).load( "components.html #share-contacts-modal-regular", afterLoadingModal);
 			$( "#modal-windows-2" ).load( "components.html #new-contact-modal", afterLoadingModal);
 			$( "#modal-windows-3" ).load( "components.html #received-invitation-modal", afterLoadingModal);
+			$( "#modal-windows-4" ).load( "contact-modal.html", afterLoadingContactModal);
 			
+			
+			function afterLoadingContactModal(){
+			};
 						
 			// callback after loading navbar-top
 			function afterLoadingNavbarTop(){
@@ -1701,8 +1709,8 @@
 			
 			// Go to profile page if you click on box
 			$('.contact-box').click(function(){
-				console.log('click on .contact-box');
-				window.location = "profile.html";
+				<!-- console.log('click on .contact-box'); -->
+				<!-- window.location = "profile.html"; -->
 			});
 			
 			// Show more contact data when the badge is clicked

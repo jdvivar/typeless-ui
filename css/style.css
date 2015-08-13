@@ -1342,8 +1342,12 @@ mark {
     display: block;    
 }
 
-[contenteditable="true"]:focus {
+[contenteditable="true"] {
 	outline: 1px dashed gray;
+}
+
+[contenteditable="true"]:focus, [contenteditable="true"]:hover {
+	outline: 1px solid gray;
 }
 
 .alert.alert-google-style {
@@ -5533,4 +5537,80 @@ body.skin-3 {
   .welcome-message {
     display: none;
   }
+}
+
+/* contact modal styles */
+
+.modal-contact {
+	position:relative;
+}
+
+.modal-contact .list-group {
+	margin-bottom: 0;
+}
+
+.modal-contact .list-group-item:first-child  {
+	border-radius: 0;
+}
+
+.modal-contact .list-group-item {
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left: 20px;
+}
+
+.modal-contact .modal-body {
+	position:relative;
+	z-index:0;
+	overflow:hidden;
+}
+
+.modal-contact  .modal-body img {
+	width: 200px;
+	border-radius: 100px;
+}
+
+.modal-contact  .modal-body:hover .btn {
+	display:inline-block;
+}
+
+.modal-contact .modal-body .background {
+	position: absolute;
+    width: 120%;
+    height: 120%;
+	top: 0;
+	left:0;
+	z-index:-1;
+	background-size:100%;
+	background-position-y: 50%;
+	filter: blur(20px);
+	-moz-filter: blur(20px);
+	-webkit-filter: blur(20px);
+	overflow:hidden;
+	margin: -20px;
+}
+
+.modal-contact .list-group .list-group-item .name {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.modal-contact .btn {
+	font-weight: 600;
+	display:none;
+	margin-left: 15px;
+}
+
+.modal-contact .list-group .list-group-item:hover .btn {
+	display:inline-block;
+}
+
+.modal-contact .list-group .list-group-item .value{
+	color:black;
+}
+
+.modal-contact .list-group .list-group-item .value span {
+	width: 120px;
+	color: #999999;
+	font-weight:500;
 }
