@@ -5590,6 +5590,17 @@ body.skin-3 {
 	margin: -20px;
 }
 
+.modal-contact .list-group .list-group-item{
+	position:relative;
+}
+
+.modal-contact .list-group .list-group-item .buttons{
+	position:absolute;
+	top:0;
+	right:0;
+	margin:15px;
+}
+
 .modal-contact .list-group .list-group-item .name {
 	font-weight: 600;
 	text-transform: uppercase;
@@ -5607,10 +5618,26 @@ body.skin-3 {
 
 .modal-contact .list-group .list-group-item .value{
 	color:black;
+	font-size: 22px;
 }
 
 .modal-contact .list-group .list-group-item .value span {
 	width: 120px;
 	color: #999999;
 	font-weight:500;
+}
+
+#tools .search-filter {
+	line-height: 30px;
+    margin-right: 15px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+	transition: all 0.5s;
+	opacity: .6;
+}
+
+#tools .search-filter:hover,#tools .search-filter.active {
+	border-bottom: 3px solid #3498db;
+	opacity: 1;
 }

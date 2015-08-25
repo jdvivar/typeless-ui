@@ -30,7 +30,7 @@
 		</span>
 	</div>
 	
-	<nav class="navbar navbar-fixed-top white-bg" role="navigation" id="navbar-top">
+	<nav class="navbar navbar-fixed-top" role="navigation" id="navbar-top">
 		<!-- loaded dinamically -->
 	</nav>
 	
@@ -48,7 +48,7 @@
 
             	<span id="tools" style="">
 				
-					<div class="btn-group btn-outline m-t">
+					<!-- <div class="btn-group btn-outline m-t">
 						
 						<button class="btn btn btn-white active" type="button" id="toggle-list">All <span class="badge">35</span></button>
 						<button class="btn btn btn-white" type="button" id="toggle-cards">Names & e-mails <span class="badge ">32</span></button>
@@ -56,6 +56,14 @@
 						<button class="btn btn btn-white" type="button" id="toggle-cards">Companies <span class="badge">4</span></button>
 						<button class="btn btn btn-white" type="button" id="toggle-cards">Locations <span class="badge ">3</span></button>
 						
+					</div> -->
+					
+					<div class="m-t pull-left">
+						<a class="search-filter active">All <span class="badge badge-info">35</span></a>
+						<a class="search-filter">Names & e-mails <span class="badge badge-info">32</span></a>
+						<a class="search-filter">Job titles <span class="badge badge-info">5</span></a>
+						<a class="search-filter">Companies <span class="badge badge-info">4</span></a>
+						<a class="search-filter">Locations <span class="badge badge-info">3</span></a>
 					</div>
 					
 					
@@ -356,6 +364,13 @@
 			$('tr').click(function(){
 				window.location.assign("profile.html")
 			})
+			
+			//
+			
+			$('.search-filter').click(function(){
+				$('.search-filter').removeClass('active');
+				$(this).toggleClass('active');
+			});
 			
         });
     </script>
