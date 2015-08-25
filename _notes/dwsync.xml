@@ -12,7 +12,7 @@
 <file name="connected-accounts.html" server="ftp.danielvivar.com" local="130828293952936042" remote="130836795000000000" Dst="2" />
 <file name="sharing.html" server="ftp.danielvivar.com" local="130682126574618193" remote="130687088400000000" Dst="1" />
 <file name="index.html" server="ftp.danielvivar.com" local="130656442373989786" remote="130839199200000000" Dst="2" />
-<file name="search-results.html" server="ftp.danielvivar.com" local="130638043272785590" remote="130836797400000000" Dst="2" />
+<file name="search-results.html" server="ftp.danielvivar.com" local="130840249603894929" remote="130840069800000000" Dst="2" />
 <file name="welcome.html" server="ftp.danielvivar.com" local="130705671524677503" remote="130705530000000000" Dst="1" />
 <file name="settings.html" server="ftp.danielvivar.com" local="130724552916624443" remote="130724373600000000" Dst="2" />
 <file name="connecting-auth.html" server="ftp.danielvivar.com" local="130638043267902330" remote="130836797400000000" Dst="2" />
@@ -62,5 +62,6 @@
 <file name="linkedin-export.mp4" server="ftp.danielvivar.com" local="130765910746089347" remote="130765734000000000" Dst="2" />
 <file name="topbar-onboarding.html" server="ftp.danielvivar.com" local="130836974677798150" remote="130836795000000000" Dst="2" />
 <file name="profile-0815.html" server="ftp.danielvivar.com" local="130839383594807127" remote="130839208800000000" Dst="2" />
-<file name="contact-modal.html" server="ftp.danielvivar.com" local="130839350495096072" remote="130839199200000000" Dst="2" />
+<file name="contact-modal.html" server="ftp.danielvivar.com" local="130839509411516931" remote="130839330600000000" Dst="2" />
+<file name="add-detail-modal.html" server="ftp.danielvivar.com" local="130839388519004130" remote="130839210000000000" Dst="2" />
 </dwsync>
