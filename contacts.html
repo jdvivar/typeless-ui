@@ -1574,11 +1574,22 @@
 				$(function() {
 					
 					$(window).bind("load resize", function() {
+					
+						self = $(this);
+						
 						if ($(this).width() < 1044) {
 							document.getElementById("top-search").placeholder = "Search";
 						} else {
 							document.getElementById("top-search").placeholder = "Search for people, jobs, companies & more";
 						}
+						
+						$('.modal-contact .modal-details').css('overflow-y','scroll');
+						if (self.width() > 767) {
+							$('.modal-contact .modal-details').css('max-height',self.height()-435);
+						} else {
+							$('.modal-contact .modal-details').css('max-height',self.height()-400);
+						}
+						
 					});
 				});
 				

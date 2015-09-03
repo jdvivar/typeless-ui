@@ -5619,6 +5619,7 @@ body.skin-3 {
 .modal-contact .list-group .list-group-item .value{
 	color:black;
 	font-size: 22px;
+	display:inline-block;
 }
 
 .modal-contact .list-group .list-group-item .value span {
