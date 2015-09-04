@@ -42,9 +42,9 @@
 <file name="tw-favicon.ico" server="ftp.danielvivar.com" local="130638043271024414" remote="130836798600000000" Dst="2" />
 <file name="logo-typeless-express-non-square-inverse-transparent.png" server="ftp.danielvivar.com" local="130638043270283920" remote="130836798000000000" Dst="2" />
 <file name="logo-typeless-express-w200.png" server="ftp.danielvivar.com" local="130638043270293926" remote="130836798000000000" Dst="2" />
-<file name="logo-complete-1000p.png" server="ftp.danielvivar.com" local="130686523497667855" remote="130688968800000000" Dst="1" />
+<file name="logo-complete-1000p.png" server="ftp.danielvivar.com" local="130686523497667855" remote="130858417800000000" Dst="2" />
 <file name="logo-only-icon-320p.png" server="ftp.danielvivar.com" local="130638043270203875" remote="130836798000000000" Dst="2" />
-<file name="logo-complete-original.png" server="ftp.danielvivar.com" local="130686523638842250" remote="130688968800000000" Dst="1" />
+<file name="logo-complete-original.png" server="ftp.danielvivar.com" local="130686523638842250" remote="130858417800000000" Dst="2" />
 <file name="logo-only-icon-original.png" server="ftp.danielvivar.com" local="130638043270223875" remote="130836798000000000" Dst="2" />
 <file name="logo-only-letters-1000p.png" server="ftp.danielvivar.com" local="130638043270233899" remote="130836798000000000" Dst="2" />
 <file name="logo-only-letters-320p.png" server="ftp.danielvivar.com" local="130638043270243893" remote="130836798000000000" Dst="2" />
@@ -53,7 +53,7 @@
 <file name="devices-icon.png" server="ftp.danielvivar.com" local="130638043269913754" remote="130836798000000000" Dst="2" />
 <file name="clock-icon.png" server="ftp.danielvivar.com" local="130638043269823625" remote="130836798000000000" Dst="2" />
 <file name="lock-icon.png" server="ftp.danielvivar.com" local="130638043270053779" remote="130836798000000000" Dst="2" />
-<file name="logo-complete-600p.png" server="ftp.danielvivar.com" local="130686523172779472" remote="130688969400000000" Dst="1" />
+<file name="logo-complete-600p.png" server="ftp.danielvivar.com" local="130686523172779472" remote="130858417800000000" Dst="2" />
 <file name="logo-only-letters-original.png" server="ftp.danielvivar.com" local="130638043270273913" remote="130836798000000000" Dst="2" />
 <file name="safe-icon.png" server="ftp.danielvivar.com" local="130638043270934354" remote="130836798600000000" Dst="2" />
 <file name="socialbox-icon.png" server="ftp.danielvivar.com" local="130638043271014407" remote="130836798600000000" Dst="2" />
@@ -68,7 +68,7 @@
 <file name="logo_outlook.png" server="ftp.danielvivar.com" local="130638043270313944" remote="130836798000000000" Dst="2" />
 <file name="chrome-web-store-badge.png" server="ftp.danielvivar.com" local="130638043269803612" remote="130836798000000000" Dst="2" />
 <file name="landscape.png" server="ftp.danielvivar.com" local="130638043270023763" remote="130836798000000000" Dst="2" />
-<file name="logo-complete-400p.png" server="ftp.danielvivar.com" local="130686522871785364" remote="130688969400000000" Dst="1" />
+<file name="logo-complete-400p.png" server="ftp.danielvivar.com" local="130686522871785364" remote="130858417800000000" Dst="2" />
 <file name="enrich-facebook.png" server="ftp.danielvivar.com" local="130638043269923679" remote="130836798000000000" Dst="2" />
 <file name="enrich-google.png" server="ftp.danielvivar.com" local="130638043269943705" remote="130836798000000000" Dst="2" />
 <file name="balderton.png" server="ftp.danielvivar.com" local="130638320371260027" remote="130836798000000000" Dst="2" />
@@ -141,12 +141,12 @@
 <file name="pitch-title-bg-2.png" server="ftp.danielvivar.com" local="130680468106147854" remote="130836798000000000" Dst="2" />
 <file name="letters.png" server="ftp.danielvivar.com" local="130682152439509472" remote="130839199800000000" Dst="2" />
 <file name="getty-1.jpg" server="ftp.danielvivar.com" local="130681223823599711" remote="130839199800000000" Dst="2" />
-<file name="pattern-test.png" server="ftp.danielvivar.com" local="130688354237872838" remote="130688968800000000" Dst="1" />
-<file name="typeless-for-teams-test.png" server="ftp.danielvivar.com" local="130687425836721646" remote="130688968800000000" Dst="1" />
-<file name="microsoft-exchange-logo-100-inverted-blue.png" server="ftp.danielvivar.com" local="130687379532573117" remote="130688968800000000" Dst="1" />
-<file name="microsoft-exchange-logo-100-inverted-white.png" server="ftp.danielvivar.com" local="130687373831163205" remote="130688968800000000" Dst="1" />
-<file name="logo-complete-800p.png" server="ftp.danielvivar.com" local="130686523307049912" remote="130688969400000000" Dst="1" />
-<file name="arrow-hand-white.png" server="ftp.danielvivar.com" local="130683021786577761" remote="130688969400000000" Dst="1" />
+<file name="pattern-test.png" server="ftp.danielvivar.com" local="130688354237872838" remote="130858417800000000" Dst="2" />
+<file name="typeless-for-teams-test.png" server="ftp.danielvivar.com" local="130687425836721646" remote="130858417800000000" Dst="2" />
+<file name="microsoft-exchange-logo-100-inverted-blue.png" server="ftp.danielvivar.com" local="130687379532573117" remote="130858417800000000" Dst="2" />
+<file name="microsoft-exchange-logo-100-inverted-white.png" server="ftp.danielvivar.com" local="130687373831163205" remote="130858417800000000" Dst="2" />
+<file name="logo-complete-800p.png" server="ftp.danielvivar.com" local="130686523307049912" remote="130858417800000000" Dst="2" />
+<file name="arrow-hand-white.png" server="ftp.danielvivar.com" local="130683021786577761" remote="130858417800000000" Dst="2" />
 <file name="microsoft-office-logo-100-muted.png" server="ftp.danielvivar.com" local="130700224067390912" remote="130706314200000000" Dst="1" />
 <file name="microsoft-outlook-logo-original-muted.png" server="ftp.danielvivar.com" local="130700223081932580" remote="130704378000000000" Dst="1" />
 <file name="microsoft-exchange-logo-original-muted.png" server="ftp.danielvivar.com" local="130700220991560033" remote="130704378000000000" Dst="1" />
@@ -194,4 +194,8 @@
 <file name="security-badge.png" server="ftp.danielvivar.com" local="130766768722218325" remote="130766595600000000" Dst="2" />
 <file name="complaint.png" server="ftp.danielvivar.com" local="130830933479157976" remote="130830760800000000" Dst="2" />
 <file name="logo-service-bullhorn-circle.png" server="ftp.danielvivar.com" local="130767816617613167" remote="130836798000000000" Dst="2" />
+<file name="300x250-2.png" server="ftp.danielvivar.com" local="130858589538360759" remote="130858417800000000" Dst="2" />
+<file name="300x250-3.png" server="ftp.danielvivar.com" local="130858592047668198" remote="130858417800000000" Dst="2" />
+<file name="300x250-1.png" server="ftp.danielvivar.com" local="130858589455548820" remote="130858417800000000" Dst="2" />
+<file name="300x250-band.png" server="ftp.danielvivar.com" local="130858592595873285" remote="130858417800000000" Dst="2" />
 </dwsync>
